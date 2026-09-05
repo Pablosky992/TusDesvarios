@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Ficha de Desvariado — Perfil de Usuario | Tus Desvaríos</title>
+  <meta name="description" content="Tu ficha personal en Tus Desvaríos: revisa tus medallas, personaliza tu avatar y biografía, y prepárate para el foro.">
+  <link rel="canonical" href="https://tusdesvarios.com/perfil.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Supabase SDK v2 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-accent: #a855f7;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-purple: #a855f7;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --font-display: 'Cinzel', serif;
+      --font-ui: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 95% 55% at 50% -12%, rgba(168, 85, 247, 0.28) 0%, transparent 65%),
+        radial-gradient(circle 500px at 10% 30%, rgba(6, 182, 212, 0.22) 0%, transparent 60%),
+        radial-gradient(circle 550px at 90% 40%, rgba(245, 158, 11, 0.20) 0%, transparent 60%),
+        linear-gradient(180deg, #0e1322 0%, #0a0e1a 50%, #060911 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .main-content {
+      flex: 1;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 5rem;
+    }
+
+    /* Guest View */
+    .guest-card {
+      text-align: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 3.5rem 2rem;
+      max-width: 540px;
+      margin: 2rem auto;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    }
+    .guest-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+
+    /* Profile Card */
+    .profile-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6), 0 0 35px rgba(168, 85, 247, 0.15);
+      backdrop-filter: blur(16px);
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .profile-avatar-wrap {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0;
+    }
+
+    .profile-avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+    }
+
+    .btn-edit-avatar {
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      background: #a855f7;
+      border: 2px solid #0b0f19;
+      color: #fff;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+      transition: all 0.2s;
+    }
+    .btn-edit-avatar:hover {
+      transform: scale(1.15);
+      background: #c084fc;
+    }
+
+    .profile-details {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .profile-username {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.15;
+      margin-bottom: 0.35rem;
+    }
+
+    .profile-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.85rem;
+    }
+
+    .badge-rank {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      background: rgba(168, 85, 247, 0.18);
+      border: 1px solid rgba(168, 85, 247, 0.45);
+      color: #c4b5fd;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .badge-pts {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      background: rgba(6, 182, 212, 0.18);
+      border: 1px solid rgba(6, 182, 212, 0.45);
+      color: #38bdf8;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .profile-bio-box {
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .profile-bio-text {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .btn-action-small {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-action-small:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    /* Medals Section */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .medals-stats-bar {
+      background: rgba(18, 24, 38, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.1rem 1.35rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .medals-stats-info {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .medals-stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .medals-stat-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .medals-stat-val {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .medals-progress-wrap {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .medals-progress-head {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.35rem;
+    }
+
+    .medals-progress-track {
+      width: 100%;
+      height: 9px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .medals-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #a855f7, #06b6d4, #10b981);
+      border-radius: 9999px;
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    }
+
+    .medals-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.38rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .filter-btn.active {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: rgba(168, 85, 247, 0.6);
+      color: #c084fc;
+      font-weight: 700;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+    }
+
+    .medals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .medal-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .medal-card.unlocked {
+      background: linear-gradient(145deg, rgba(26, 34, 52, 0.95), rgba(18, 24, 38, 0.9));
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
+    }
+
+    .medal-card.unlocked:hover {
+      transform: translateY(-4px);
+      border-color: #f59e0b;
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.25);
+    }
+
+    .medal-card.locked {
+      opacity: 0.72;
+      background: rgba(14, 19, 30, 0.55);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .medal-card.locked:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .medal-cat-pill {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+    }
+
+    .medal-card.unlocked .medal-cat-pill {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+    }
+
+    .medal-icon-circle {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .medal-card.unlocked .medal-icon-circle {
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, rgba(168, 85, 247, 0.15) 100%);
+      border-color: rgba(245, 158, 11, 0.6);
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
+      transform: scale(1.05);
+    }
+
+    .medal-card.locked .medal-icon-circle {
+      filter: grayscale(0.85);
+      opacity: 0.65;
+    }
+
+    .medal-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.35rem;
+    }
+
+    .medal-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      flex: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .medal-status-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .medal-status-pill.pill-unlocked {
+      background: rgba(16, 185, 129, 0.18);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.2);
+    }
+
+    .medal-status-pill.pill-locked {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Modal for Avatar change */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .modal-box {
+      background: #111726;
+      border: 1.5px solid rgba(168, 85, 247, 0.4);
+      border-radius: 20px;
+      max-width: 520px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 35px rgba(168, 85, 247, 0.25);
+    }
+
+    .btn-logout {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 10px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1.5px solid rgba(239, 68, 68, 0.35);
+      color: #fca5a5;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-logout:hover {
+      background: rgba(239, 68, 68, 0.28);
+      color: #fff;
+    }
+  
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <main class="main-content">
+      <!-- Loading State -->
+      <div id="loading-state" style="text-align:center; padding: 4rem 0;">
+        <div style="font-size:2.5rem; animation:pulseGlow 1.5s infinite;">⏳</div>
+        <p style="color:var(--text-secondary); margin-top:1rem;">Cargando tu Ficha de Desvariado...</p>
+      </div>
+
+      <!-- Guest State (No session) -->
+      <div id="guest-state" class="guest-card" style="display:none;">
+        <div class="guest-icon">🏛️</div>
+        <h2 style="font-family:var(--font-display); font-size:1.8rem; margin-bottom:0.75rem;">Acceso al Perfil</h2>
+        <p style="color:var(--text-secondary); margin-bottom:2rem; font-size:0.95rem;">
+          Inicia sesión o regístrate para acceder a tu ficha personal, acumular medallas en juegos y lecturas, y forjar tu identidad en la comunidad.
+        </p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="login.html" class="btn-action-small" style="padding:0.75rem 1.5rem; background:#a855f7; border-color:#a855f7; color:#fff; font-size:0.95rem;">
+            <span>Iniciar Sesión</span>
+            <span>➜</span>
+          </a>
+          <a href="registro.html" class="btn-action-small" style="padding:0.75rem 1.5rem; font-size:0.95rem;">
+            <span>Crear Cuenta Gratis</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Logged Profile State -->
+      <div id="profile-state" style="display:none;">
+        <!-- Identity Card -->
+        <div class="profile-card">
+          <div class="profile-header">
+            <div class="profile-avatar-wrap">
+              <img id="user-avatar-img" src="images/avatars/arcade-alien.svg" alt="Avatar" class="profile-avatar-img">
+              <button class="btn-edit-avatar" onclick="openAvatarModal()" title="Cambiar Avatar">🔄</button>
+            </div>
+
+            <div class="profile-details">
+              <h1 class="profile-username" id="user-name">@desvariado</h1>
+              
+              <div class="profile-meta-row">
+                <span class="badge-rank" id="user-rank">👑 Nivel 1 — Desvariado Novato</span>
+                <span class="badge-pts" id="user-points">💎 0 Pts de Desvarío</span>
+                <span style="font-size:0.8rem; color:var(--text-muted);" id="user-join-date">Miembro desde 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <div class="profile-bio-box">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+              <span style="font-size:0.82rem; font-weight:700; color:#c4b5fd; text-transform:uppercase; letter-spacing:0.05em;">Biografía del Desvariado</span>
+              <button class="btn-action-small" id="btn-edit-bio" onclick="toggleBioEdit()">✏️ Editar</button>
+            </div>
+            <p class="profile-bio-text" id="user-bio">Buscador de enigmas, historias olvidadas y videojuegos arcade.</p>
+            
+            <div id="bio-editor-form" style="display:none; margin-top:0.75rem;">
+              <textarea id="bio-textarea" rows="3" style="width:100%; background:rgba(11, 15, 25, 0.9); border:1.5px solid var(--border-focus); border-radius:10px; color:#fff; padding:0.75rem; font-family:inherit; font-size:0.92rem;"></textarea>
+              <div style="display:flex; gap:0.5rem; justify-content:flex-end; margin-top:0.5rem;">
+                <button class="btn-action-small" onclick="cancelBioEdit()">Cancelar</button>
+                <button class="btn-action-small" style="background:#a855f7; border-color:#a855f7; color:#fff;" onclick="saveBio()">Guardar Cambios</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medals & Achievements Section -->
+        <div style="margin-top: 2rem;">
+          <h2 class="section-title"><span>🏅</span> Vitrina de Medallas & Logros</h2>
+          <p class="section-desc">Desbloquea insignias exclusivas explorando relatos, alcanzando finales en las historias, superando retos arcade y participando en la comunidad.</p>
+
+          <!-- Barra de progreso y estadísticas -->
+          <div class="medals-stats-bar">
+            <div class="medals-stats-info">
+              <div class="medals-stat-item">
+                <span class="medals-stat-label">Conseguidas</span>
+                <span class="medals-stat-val"><span id="medals-count-unlocked">0</span> / <span id="medals-count-total">20</span></span>
+              </div>
+              <div class="medals-stat-item">
+                <span class="medals-stat-label">Puntos en Medallas</span>
+                <span class="medals-stat-val" style="color:#38bdf8;" id="medals-pts-sum">0 pts</span>
+              </div>
+            </div>
+
+            <div class="medals-progress-wrap">
+              <div class="medals-progress-head">
+                <span>Progreso de Colección</span>
+                <span id="medals-pct">0%</span>
+              </div>
+              <div class="medals-progress-track">
+                <div class="medals-progress-fill" id="medals-progress-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filtros de categoría -->
+          <div class="medals-filters" id="medals-filters">
+            <button class="filter-btn active" onclick="filterMedals('all', this)">✨ Todas (<span id="count-all">20</span>)</button>
+            <button class="filter-btn" onclick="filterMedals('Arcade', this)">🕹️ Arcade (<span id="count-arcade">0</span>)</button>
+            <button class="filter-btn" onclick="filterMedals('Historias', this)">📖 Historias (<span id="count-historias">0</span>)</button>
+            <button class="filter-btn" onclick="filterMedals('Mente', this)">🧠 Mente (<span id="count-mente">0</span>)</button>
+            <button class="filter-btn" onclick="filterMedals('Relatos', this)">📜 Relatos (<span id="count-relatos">0</span>)</button>
+            <button class="filter-btn" onclick="filterMedals('ComunidadPerfil', this)">👥 Comunidad & Perfil (<span id="count-comunidad">0</span>)</button>
+            <button class="filter-btn" onclick="filterMedals('HumorRed', this)">🎭 Humor & Red (<span id="count-humor">0</span>)</button>
+          </div>
+
+          <!-- Contenedor dinámico de medallas -->
+          <div class="medals-grid" id="medals-container">
+            <!-- Renderizado dinámicamente con JavaScript -->
+          </div>
+        </div>
+
+        <!-- Account Settings & Logout -->
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:1.5rem 0; border-top:1px solid var(--border-subtle); flex-wrap:wrap; gap:1rem;">
+          <div>
+            <div style="font-weight:700; color:#fff; font-size:0.95rem; display:flex; align-items:center; gap:0.55rem;">
+              <span>Sesión de Cuenta</span>
+              <span style="font-size:0.75rem; font-weight:700; color:#10b981; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.35); padding:0.15rem 0.55rem; border-radius:9999px;">🔒 Email privado</span>
+            </div>
+            <div style="font-size:0.82rem; color:var(--text-muted); margin-top:0.25rem;">Tu correo de acceso es 100% confidencial y nunca se muestra en tu perfil público.</div>
+          </div>
+          <button class="btn-logout" onclick="window.DesvariosAuth.logout()">
+            <span>Cerrar Sesión</span>
+            <span>🚪</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Avatar Modal -->
+    <div id="avatar-modal" class="modal-overlay" onclick="closeAvatarModal(event)">
+      <div class="modal-box" onclick="event.stopPropagation()">
+        <h3 style="font-family:var(--font-display); font-size:1.35rem; margin-bottom:0.5rem; color:#fff;">Cambiar Avatar</h3>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.5rem;">Elige una nueva ilustración para tu ficha de perfil:</p>
+        
+        <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:0.75rem; margin-bottom:1.5rem;" id="modal-avatar-grid"></div>
+
+        <div style="display:flex; justify-content:flex-end; gap:0.65rem;">
+          <button class="btn-action-small" onclick="closeAvatarModal()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <footer style="text-align:center; padding:2rem; font-size:0.85rem; color:var(--text-muted); border-top:1px solid rgba(255,255,255,0.08);">
+      <p>© 2026 TusDesvarios.com — Portal de ocio, relatos y minijuegos.</p>
+    </footer>
+  </div>
+
+  <script>
+    let currentUserData = null;
+    let userUnlockedMedals = [];
+    let currentFilter = 'all';
+
+    async function initProfile() {
+      const data = await window.DesvariosAuth.getCurrentProfile();
+      document.getElementById('loading-state').style.display = 'none';
+
+      if (!data) {
+        document.getElementById('guest-state').style.display = 'block';
+        return;
+      }
+
+      currentUserData = data;
+      document.getElementById('profile-state').style.display = 'block';
+
+      // Populate profile
+      const prof = data.profile;
+      const user = data.user;
+
+      document.getElementById('user-name').textContent = '@' + prof.username;
+      document.getElementById('user-avatar-img').src = 'images/avatars/' + (prof.avatar_id || 'arcade-alien') + '.svg';
+      
+      // Rango dinámico según puntos
+      const rankInfo = window.getRankInfo ? window.getRankInfo(prof.puntos || 0) : { nivel: prof.nivel || 1, rank: 'Desvariado Novato', icon: '✨' };
+      document.getElementById('user-rank').textContent = `👑 Nivel ${rankInfo.nivel} — ${rankInfo.rank}`;
+      document.getElementById('user-points').textContent = `💎 ${prof.puntos || 0} Pts de Desvarío`;
+      document.getElementById('user-bio').textContent = prof.bio || 'Sin biografía todavía. ¡Escribe algo sobre ti!';
+
+      if (prof.created_at) {
+        const d = new Date(prof.created_at);
+        const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+        document.getElementById('user-join-date').textContent = `Miembro desde ${months[d.getMonth()]} ${d.getFullYear()}`;
+      }
+
+      // Cargar medallas dinámicas
+      await loadUserMedals();
+    }
+
+    async function loadUserMedals() {
+      try {
+        const rawMedals = await window.DesvariosAuth.getUserMedals();
+        userUnlockedMedals = Array.isArray(rawMedals) ? rawMedals : [];
+      } catch(e) {
+        console.warn('Error cargando medallas:', e);
+        userUnlockedMedals = [];
+      }
+      updateMedalsUI();
+    }
+
+    function updateMedalsUI() {
+      const allMedals = window.DESVARIOS_MEDALS || [];
+      const unlockedIds = new Set(userUnlockedMedals.map(m => m.logro_id || m.id));
+
+      const totalCount = allMedals.length;
+      const unlockedCount = allMedals.filter(m => unlockedIds.has(m.id)).length;
+      const pct = totalCount > 0 ? Math.round((unlockedCount / totalCount) * 100) : 0;
+
+      const sumPoints = allMedals
+        .filter(m => unlockedIds.has(m.id))
+        .reduce((sum, m) => sum + (m.points || 0), 0);
+
+      const countUnlockedEl = document.getElementById('medals-count-unlocked');
+      const countTotalEl = document.getElementById('medals-count-total');
+      const pctEl = document.getElementById('medals-pct');
+      const fillEl = document.getElementById('medals-progress-fill');
+      const ptsSumEl = document.getElementById('medals-pts-sum');
+
+      if (countUnlockedEl) countUnlockedEl.textContent = unlockedCount;
+      if (countTotalEl) countTotalEl.textContent = totalCount;
+      if (pctEl) pctEl.textContent = `${pct}%`;
+      if (fillEl) fillEl.style.width = `${pct}%`;
+      if (ptsSumEl) ptsSumEl.textContent = `${sumPoints} pts`;
+
+      // Conteos para filtros
+      const counts = {
+        all: totalCount,
+        arcade: allMedals.filter(m => m.category === 'Arcade').length,
+        historias: allMedals.filter(m => m.category === 'Historias').length,
+        mente: allMedals.filter(m => m.category === 'Mente').length,
+        relatos: allMedals.filter(m => m.category === 'Relatos').length,
+        comunidad: allMedals.filter(m => m.category === 'Comunidad' || m.category === 'Perfil').length,
+        humor: allMedals.filter(m => m.category === 'Humor' || m.category === 'Red').length
+      };
+
+      if (document.getElementById('count-all')) document.getElementById('count-all').textContent = counts.all;
+      if (document.getElementById('count-arcade')) document.getElementById('count-arcade').textContent = counts.arcade;
+      if (document.getElementById('count-historias')) document.getElementById('count-historias').textContent = counts.historias;
+      if (document.getElementById('count-mente')) document.getElementById('count-mente').textContent = counts.mente;
+      if (document.getElementById('count-relatos')) document.getElementById('count-relatos').textContent = counts.relatos;
+      if (document.getElementById('count-comunidad')) document.getElementById('count-comunidad').textContent = counts.comunidad;
+      if (document.getElementById('count-humor')) document.getElementById('count-humor').textContent = counts.humor;
+
+      renderMedalsGrid(currentFilter);
+    }
+
+    function filterMedals(category, btn) {
+      currentFilter = category;
+      const btns = document.querySelectorAll('#medals-filters .filter-btn');
+      btns.forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderMedalsGrid(category);
+    }
+
+    function renderMedalsGrid(category) {
+      const container = document.getElementById('medals-container');
+      if (!container) return;
+
+      const allMedals = window.DESVARIOS_MEDALS || [];
+      const unlockedIds = new Set(userUnlockedMedals.map(m => m.logro_id || m.id));
+
+      let filtered = allMedals;
+      if (category === 'Arcade') filtered = allMedals.filter(m => m.category === 'Arcade');
+      else if (category === 'Historias') filtered = allMedals.filter(m => m.category === 'Historias');
+      else if (category === 'Mente') filtered = allMedals.filter(m => m.category === 'Mente');
+      else if (category === 'Relatos') filtered = allMedals.filter(m => m.category === 'Relatos');
+      else if (category === 'ComunidadPerfil') filtered = allMedals.filter(m => m.category === 'Comunidad' || m.category === 'Perfil');
+      else if (category === 'HumorRed') filtered = allMedals.filter(m => m.category === 'Humor' || m.category === 'Red');
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="grid-column: 1 / -1; text-align:center; padding:2.5rem; color:var(--text-muted); font-size:0.95rem;">No hay insignias en esta categoría.</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(m => {
+        const isUnlocked = unlockedIds.has(m.id);
+        const cardClass = isUnlocked ? 'medal-card unlocked' : 'medal-card locked';
+        const statusBadge = isUnlocked
+          ? `<span class="medal-status-pill pill-unlocked">✅ Desbloqueada (+${m.points} pts)</span>`
+          : `<span class="medal-status-pill pill-locked">🔒 Bloqueada (+${m.points} pts)</span>`;
+
+        return `
+          <div class="${cardClass}" title="${isUnlocked ? '¡Logro conseguido!' : 'Requisito: ' + m.desc}">
+            <span class="medal-cat-pill">${m.category}</span>
+            <div class="medal-icon-circle">${m.icon || '🏅'}</div>
+            <div class="medal-title">${m.title}</div>
+            <div class="medal-desc">${m.desc}</div>
+            ${statusBadge}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleBioEdit() {
+      const current = document.getElementById('user-bio').textContent;
+      document.getElementById('bio-textarea').value = current;
+      document.getElementById('user-bio').style.display = 'none';
+      document.getElementById('btn-edit-bio').style.display = 'none';
+      document.getElementById('bio-editor-form').style.display = 'block';
+    }
+
+    function cancelBioEdit() {
+      document.getElementById('bio-editor-form').style.display = 'none';
+      document.getElementById('user-bio').style.display = 'block';
+      document.getElementById('btn-edit-bio').style.display = 'inline-flex';
+    }
+
+    async function saveBio() {
+      const newBio = document.getElementById('bio-textarea').value.trim();
+      try {
+        await window.DesvariosAuth.updateProfile({ bio: newBio });
+        document.getElementById('user-bio').textContent = newBio || 'Sin biografía todavía.';
+        cancelBioEdit();
+
+        // Desbloquear medalla por editar biografía
+        if (newBio && window.DesvariosAuth) {
+          await window.DesvariosAuth.unlockMedal('perfil-bio');
+          await loadUserMedals();
+        }
+      } catch (err) {
+        alert('Error al guardar la biografía: ' + err.message);
+      }
+    }
+
+    function openAvatarModal() {
+      const grid = document.getElementById('modal-avatar-grid');
+      const currentAvatar = currentUserData?.profile?.avatar_id || 'arcade-alien';
+
+      grid.innerHTML = window.DESVARIOS_AVATARS.map(a => `
+        <div onclick="selectNewAvatar('${a.id}')" style="cursor:pointer; padding:0.5rem; text-align:center; border-radius:12px; background:${a.id === currentAvatar ? 'rgba(168,85,247,0.25)' : 'rgba(255,255,255,0.04)'}; border:2px solid ${a.id === currentAvatar ? '#a855f7' : 'rgba(255,255,255,0.1)'}; transition:all 0.2s;" title="${a.desc}">
+          <img src="images/avatars/${a.id}.svg" style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+          <div style="font-size:0.72rem; color:#cbd5e1; margin-top:0.35rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${a.name}</div>
+        </div>
+      `).join('');
+
+      document.getElementById('avatar-modal').style.display = 'flex';
+    }
+
+    function closeAvatarModal() {
+      document.getElementById('avatar-modal').style.display = 'none';
+    }
+
+    async function selectNewAvatar(avatarId) {
+      try {
+        await window.DesvariosAuth.updateProfile({ avatarId });
+        document.getElementById('user-avatar-img').src = 'images/avatars/' + avatarId + '.svg';
+        if (currentUserData && currentUserData.profile) {
+          currentUserData.profile.avatar_id = avatarId;
+        }
+        closeAvatarModal();
+
+        // Desbloquear medalla por personalizar avatar
+        if (window.DesvariosAuth) {
+          await window.DesvariosAuth.unlockMedal('avatar-coleccionista');
+          await loadUserMedals();
+        }
+      } catch (err) {
+        alert('Error al cambiar el avatar: ' + err.message);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', initProfile);
+  </script>
+  <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desvaríos Literarios — Relatos, Terror Gótico, Ciencia Ficción y Cuentos | Tus Desvaríos</title>
+  <meta name="description" content="Biblioteca de ficción narrativa y cuentos breves de autor: terror psicológico, distopías espaciales, fantasía oscura y microrrelatos con modo de lectura inmersivo.">
+  <meta name="keywords" content="desvarios literarios, relatos cortos gratis, cuentos de terror, ciencia ficcion relatos, fantasia oscura, microrrelatos online, tus desvarios">
+  
+  <link rel="canonical" href="https://tusdesvarios.com/desvarios-literarios.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Desvaríos Literarios — Historias Cortas y Ficción Inmersiva">
+  <meta property="og:description" content="Relatos autoconclusivos de terror gótico, ciencia ficción profunda y realismo mágico con lector atmosférico configurable.">
+  <meta property="og:url" content="https://tusdesvarios.com/desvarios-literarios.html">
+  <meta property="og:image" content="images/categories/desvarios-literarios.jpg">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --font-display: 'Cinzel', serif;
+      --font-ui: 'Inter', -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .main-content {
+      flex: 1;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 5rem;
+    }
+
+    .portal-hero {
+      text-align: center;
+      padding: 1.5rem 1rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.95rem;
+      border-radius: var(--radius-full);
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
+    }
+
+    .portal-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .portal-description {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.65;
+    }
+
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .cat-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .cat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.5), 0 0 30px var(--card-glow, transparent);
+      border-color: var(--card-accent, #f59e0b);
+    }
+
+    .cat-card:hover .cat-card-thumb {
+      transform: scale(1.06);
+    }
+
+    .btn-random-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.75rem 2rem;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(245, 158, 11, 0.45), 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+
+    .btn-random-hero:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 35px rgba(245, 158, 11, 0.65), 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.48rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.86rem;
+      font-weight: 500;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn[data-genre="all"].active,
+    .filter-btn[data-genre="terror"].active {
+      font-weight: 700;
+      border: 1.5px solid #f59e0b;
+      background: rgba(245, 158, 11, 0.22);
+      color: #fbbf24;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
+    }
+    .filter-btn[data-genre="scifi"].active {
+      font-weight: 700;
+      border: 1.5px solid #06b6d4;
+      background: rgba(6, 182, 212, 0.22);
+      color: #67e8f9;
+      box-shadow: 0 0 16px rgba(6, 182, 212, 0.35);
+    }
+    .filter-btn[data-genre="fantasia"].active {
+      font-weight: 700;
+      border: 1.5px solid #8b5cf6;
+      background: rgba(139, 92, 246, 0.22);
+      color: #c4b5fd;
+      box-shadow: 0 0 16px rgba(139, 92, 246, 0.35);
+    }
+    .filter-btn[data-genre="surrealismo"].active {
+      font-weight: 700;
+      border: 1.5px solid #10b981;
+      background: rgba(16, 185, 129, 0.22);
+      color: #6ee7b7;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+    }
+    .filter-btn[data-genre="microrrelato"].active {
+      font-weight: 700;
+      border: 1.5px solid #ec4899;
+      background: rgba(236, 72, 153, 0.22);
+      color: #f472b6;
+      box-shadow: 0 0 16px rgba(236, 72, 153, 0.35);
+    }
+    .filter-btn[data-genre="unread"].active {
+      font-weight: 700;
+      border: 1.5px solid #38bdf8;
+      background: rgba(56, 189, 248, 0.22);
+      color: #38bdf8;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+    }
+    .filter-btn[data-genre="read"].active {
+      font-weight: 700;
+      border: 1.5px solid #10b981;
+      background: rgba(16, 185, 129, 0.22);
+      color: #34d399;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+    }
+
+    /* Read story state & buttons */
+    .story-card.is-read {
+      border-color: rgba(16, 185, 129, 0.45) !important;
+    }
+    .story-card.is-read .cat-card-glow-circle {
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, transparent 70%) !important;
+    }
+    .btn-toggle-read-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-toggle-read-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      transform: scale(1.03);
+    }
+    .btn-toggle-read-card.active {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: rgba(16, 185, 129, 0.55) !important;
+      color: #34d399 !important;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+    }
+
+    .reading-progress-card {
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      padding: 1rem 1.4rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link active-literarios" title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="portal-hero">
+        <div class="hero-badge">
+          <span>📜</span> <span>Ficción Narrativa & Cuentos de Autor</span>
+        </div>
+        <h1 class="portal-title">
+          Desvaríos <span style="color:#f59e0b; text-shadow:0 0 35px rgba(245,158,11,0.55);">Literarios</span>
+        </h1>
+        <p class="portal-description">
+          Historias breves, terror gótico, paradojas de ciencia ficción y realismo mágico.
+          Lecturas completas diseñadas para desconectar de la prisa y perderse entre palabras.
+        </p>
+
+        <!-- Random Story Button -->
+        <div style="margin-top:0.5rem; margin-bottom:1.5rem;">
+          <button id="btn-random-story" onclick="pickRandomStory()" class="btn-random-hero">
+            <span>🎲</span> <span>¿Indeciso? Lee un Relato al Azar</span>
+          </button>
+        </div>
+
+        <!-- Reading Progress Banner -->
+        <div class="reading-progress-card">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.55rem; font-size:0.86rem;">
+            <div style="display:flex; align-items:center; gap:0.45rem; font-weight:700; color:#f8fafc;">
+              <span>📚</span> <span>Tu Progreso de Lectura:</span>
+              <span id="progress-summary-text" style="color:#fbbf24; font-weight:700;">0 de 5 leídos</span>
+            </div>
+            <span id="progress-pct-badge" style="font-weight:800; font-size:0.78rem; background:rgba(245,158,11,0.18); border:1px solid rgba(245,158,11,0.35); color:#fbbf24; padding:0.15rem 0.55rem; border-radius:9999px;">0%</span>
+          </div>
+          <div style="width:100%; height:7px; background:rgba(255,255,255,0.08); border-radius:9999px; overflow:hidden;">
+            <div id="progress-bar-fill" style="width:0%; height:100%; background:linear-gradient(90deg, #f59e0b 0%, #10b981 100%); border-radius:9999px; transition:width 0.4s ease;"></div>
+          </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.6rem;">
+          <button class="filter-btn active" data-genre="all" onclick="filterGenre('all')">🌟 Todos</button>
+          <button class="filter-btn" data-genre="unread" onclick="filterGenre('unread')">📖 Pendientes</button>
+          <button class="filter-btn" data-genre="read" onclick="filterGenre('read')">✅ Leídos</button>
+          <button class="filter-btn" data-genre="terror" onclick="filterGenre('terror')">👻 Terror & Gótico</button>
+          <button class="filter-btn" data-genre="scifi" onclick="filterGenre('scifi')">🚀 Ciencia Ficción</button>
+          <button class="filter-btn" data-genre="fantasia" onclick="filterGenre('fantasia')">🕯️ Fantasía Oscura</button>
+          <button class="filter-btn" data-genre="surrealismo" onclick="filterGenre('surrealismo')">🫙 Realismo Mágico</button>
+          <button class="filter-btn" data-genre="microrrelato" onclick="filterGenre('microrrelato')">⚡ Microrrelatos</button>
+        </div>
+      </section>
+
+      <!-- Stories Grid -->
+      <section class="stories-grid" id="stories-grid-container">
+        
+      <article class="story-card cat-card cat-card-active" data-slug="el-susurro-en-el-desvan-de-los-relojes" data-genero="terror" style="--card-accent:#f59e0b; --card-glow:#f59e0b33; --card-border:#f59e0b55; height:100%; cursor:pointer;" onclick="location.href='relato-el-susurro-en-el-desvan-de-los-relojes.html'">
+        <div class="cat-card-glow-circle"></div>
+        <div class="cat-card-thumb-wrap" style="height:185px; position:relative; overflow:hidden;">
+          <img src="images/literarios/el-susurro-relojes.jpg" alt="El Susurro en el Desván de los Relojes" class="cat-card-thumb" style="width:100%; height:100%; object-fit:cover; transition:transform 0.45s ease;" loading="lazy">
+          <div class="cat-card-thumb-overlay" style="position:absolute; inset:0; background:linear-gradient(to top, rgba(16, 22, 36, 0.98) 0%, rgba(16, 22, 36, 0.35) 60%, rgba(0, 0, 0, 0.15) 100%);"></div>
+          <div class="cat-card-header-badge" style="position:absolute; top:0.85rem; left:0.85rem; right:0.85rem; display:flex; align-items:center; justify-content:space-between; z-index:2;">
+            <div style="display:flex; align-items:center; gap:0.45rem;">
+              <div class="cat-card-icon-box" style="width:42px; height:42px; border-radius:var(--radius-md); background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.2); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">
+                🕰️
+              </div>
+              <span class="badge-read-status" id="badge-read-el-susurro-en-el-desvan-de-los-relojes" style="display:none; font-size:0.72rem; font-weight:800; background:rgba(16, 185, 129, 0.25); border:1px solid rgba(16, 185, 129, 0.6); color:#34d399; padding:0.22rem 0.65rem; border-radius:9999px; box-shadow:0 0 14px rgba(16, 185, 129, 0.35);">
+                ✅ Leído
+              </span>
+            </div>
+            <span class="cat-pill" style="font-size:0.74rem; font-weight:700; background:#f59e0b25; border:1px solid #f59e0b60; color:#ffffff; padding:0.25rem 0.7rem; border-radius:9999px; box-shadow:0 0 12px #f59e0b30;">
+              Terror Psicológico & Gótico
+            </span>
+          </div>
+        </div>
+        <div class="cat-card-body" style="padding:1.35rem 1.4rem 1.5rem; flex:1; display:flex; flex-direction:column;">
+          <h3 class="cat-card-title" style="font-family:var(--font-display, 'Cinzel', serif); font-size:1.3rem; margin-bottom:0.45rem; color:#ffffff; font-weight:700; line-height:1.3;">
+            El Susurro en el Desván de los Relojes
+          </h3>
+          <p class="cat-card-desc" style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin-bottom:1.1rem; flex:1;">
+            Al heredar la vetusta mansión de su tío relojero, Julián descubre cientos de maquinarias que laten al unísono. Todas salvo una, oculta tras un falso tabique, cuyas manecillas giran hacia atrás.
+          </p>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding-top:0.75rem; border-top:1px solid var(--border-subtle); font-size:0.82rem; color:var(--text-muted); margin-top:auto;">
+            <span style="display:inline-flex; align-items:center; gap:0.35rem;">⏱️ 6 min de lectura</span>
+            <span style="font-weight:600; color:var(--text-secondary);">~1380 palabras</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.85rem; padding-top:0.65rem; border-top:1px dashed rgba(255,255,255,0.09);">
+            <div class="cat-card-cta" style="color:#f59e0b; font-size:0.88rem; font-weight:700; display:inline-flex; align-items:center; gap:0.4rem;">
+              <span id="cta-text-el-susurro-en-el-desvan-de-los-relojes">Leer Relato</span>
+              <span>➜</span>
+            </div>
+            <button type="button" class="btn-toggle-read-card" id="btn-toggle-el-susurro-en-el-desvan-de-los-relojes" onclick="event.stopPropagation(); toggleStoryRead('el-susurro-en-el-desvan-de-los-relojes');" title="Marcar o desmarcar como leído">
+              <span id="btn-icon-el-susurro-en-el-desvan-de-los-relojes">⚪</span>
+              <span id="btn-label-el-susurro-en-el-desvan-de-los-relojes">Marcar leído</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    
+      <article class="story-card cat-card cat-card-active" data-slug="el-ultimo-eco-de-andromeda" data-genero="scifi" style="--card-accent:#06b6d4; --card-glow:#06b6d433; --card-border:#06b6d455; height:100%; cursor:pointer;" onclick="location.href='relato-el-ultimo-eco-de-andromeda.html'">
+        <div class="cat-card-glow-circle"></div>
+        <div class="cat-card-thumb-wrap" style="height:185px; position:relative; overflow:hidden;">
+          <img src="images/literarios/el-ultimo-eco-andromeda.jpg" alt="El Último Eco de Andrómeda" class="cat-card-thumb" style="width:100%; height:100%; object-fit:cover; transition:transform 0.45s ease;" loading="lazy">
+          <div class="cat-card-thumb-overlay" style="position:absolute; inset:0; background:linear-gradient(to top, rgba(16, 22, 36, 0.98) 0%, rgba(16, 22, 36, 0.35) 60%, rgba(0, 0, 0, 0.15) 100%);"></div>
+          <div class="cat-card-header-badge" style="position:absolute; top:0.85rem; left:0.85rem; right:0.85rem; display:flex; align-items:center; justify-content:space-between; z-index:2;">
+            <div style="display:flex; align-items:center; gap:0.45rem;">
+              <div class="cat-card-icon-box" style="width:42px; height:42px; border-radius:var(--radius-md); background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.2); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">
+                🚀
+              </div>
+              <span class="badge-read-status" id="badge-read-el-ultimo-eco-de-andromeda" style="display:none; font-size:0.72rem; font-weight:800; background:rgba(16, 185, 129, 0.25); border:1px solid rgba(16, 185, 129, 0.6); color:#34d399; padding:0.22rem 0.65rem; border-radius:9999px; box-shadow:0 0 14px rgba(16, 185, 129, 0.35);">
+                ✅ Leído
+              </span>
+            </div>
+            <span class="cat-pill" style="font-size:0.74rem; font-weight:700; background:#06b6d425; border:1px solid #06b6d460; color:#ffffff; padding:0.25rem 0.7rem; border-radius:9999px; box-shadow:0 0 12px #06b6d430;">
+              Ciencia Ficción & Distopía
+            </span>
+          </div>
+        </div>
+        <div class="cat-card-body" style="padding:1.35rem 1.4rem 1.5rem; flex:1; display:flex; flex-direction:column;">
+          <h3 class="cat-card-title" style="font-family:var(--font-display, 'Cinzel', serif); font-size:1.3rem; margin-bottom:0.45rem; color:#ffffff; font-weight:700; line-height:1.3;">
+            El Último Eco de Andrómeda
+          </h3>
+          <p class="cat-card-desc" style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin-bottom:1.1rem; flex:1;">
+            A bordo de la estación autónoma Mnemosyne-7, en los confines de la galaxia, la inteligencia artificial guardiana detecta una transmisión analógica de onda corta proveniente de una Tierra extinta hace tres siglos.
+          </p>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding-top:0.75rem; border-top:1px solid var(--border-subtle); font-size:0.82rem; color:var(--text-muted); margin-top:auto;">
+            <span style="display:inline-flex; align-items:center; gap:0.35rem;">⏱️ 7 min de lectura</span>
+            <span style="font-weight:600; color:var(--text-secondary);">~1520 palabras</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.85rem; padding-top:0.65rem; border-top:1px dashed rgba(255,255,255,0.09);">
+            <div class="cat-card-cta" style="color:#06b6d4; font-size:0.88rem; font-weight:700; display:inline-flex; align-items:center; gap:0.4rem;">
+              <span id="cta-text-el-ultimo-eco-de-andromeda">Leer Relato</span>
+              <span>➜</span>
+            </div>
+            <button type="button" class="btn-toggle-read-card" id="btn-toggle-el-ultimo-eco-de-andromeda" onclick="event.stopPropagation(); toggleStoryRead('el-ultimo-eco-de-andromeda');" title="Marcar o desmarcar como leído">
+              <span id="btn-icon-el-ultimo-eco-de-andromeda">⚪</span>
+              <span id="btn-label-el-ultimo-eco-de-andromeda">Marcar leído</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    
+      <article class="story-card cat-card cat-card-active" data-slug="la-taberna-del-cuervo-ciego" data-genero="fantasia" style="--card-accent:#8b5cf6; --card-glow:#8b5cf633; --card-border:#8b5cf655; height:100%; cursor:pointer;" onclick="location.href='relato-la-taberna-del-cuervo-ciego.html'">
+        <div class="cat-card-glow-circle"></div>
+        <div class="cat-card-thumb-wrap" style="height:185px; position:relative; overflow:hidden;">
+          <img src="images/literarios/la-taberna-cuervo-ciego.jpg" alt="La Taberna del Cuervo Ciego" class="cat-card-thumb" style="width:100%; height:100%; object-fit:cover; transition:transform 0.45s ease;" loading="lazy">
+          <div class="cat-card-thumb-overlay" style="position:absolute; inset:0; background:linear-gradient(to top, rgba(16, 22, 36, 0.98) 0%, rgba(16, 22, 36, 0.35) 60%, rgba(0, 0, 0, 0.15) 100%);"></div>
+          <div class="cat-card-header-badge" style="position:absolute; top:0.85rem; left:0.85rem; right:0.85rem; display:flex; align-items:center; justify-content:space-between; z-index:2;">
+            <div style="display:flex; align-items:center; gap:0.45rem;">
+              <div class="cat-card-icon-box" style="width:42px; height:42px; border-radius:var(--radius-md); background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.2); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">
+                🕯️
+              </div>
+              <span class="badge-read-status" id="badge-read-la-taberna-del-cuervo-ciego" style="display:none; font-size:0.72rem; font-weight:800; background:rgba(16, 185, 129, 0.25); border:1px solid rgba(16, 185, 129, 0.6); color:#34d399; padding:0.22rem 0.65rem; border-radius:9999px; box-shadow:0 0 14px rgba(16, 185, 129, 0.35);">
+                ✅ Leído
+              </span>
+            </div>
+            <span class="cat-pill" style="font-size:0.74rem; font-weight:700; background:#8b5cf625; border:1px solid #8b5cf660; color:#ffffff; padding:0.25rem 0.7rem; border-radius:9999px; box-shadow:0 0 12px #8b5cf630;">
+              Fantasía Oscura & Leyenda
+            </span>
+          </div>
+        </div>
+        <div class="cat-card-body" style="padding:1.35rem 1.4rem 1.5rem; flex:1; display:flex; flex-direction:column;">
+          <h3 class="cat-card-title" style="font-family:var(--font-display, 'Cinzel', serif); font-size:1.3rem; margin-bottom:0.45rem; color:#ffffff; font-weight:700; line-height:1.3;">
+            La Taberna del Cuervo Ciego
+          </h3>
+          <p class="cat-card-desc" style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin-bottom:1.1rem; flex:1;">
+            En una encrucijada donde los caminos no van a ninguna parte terrenal, un viejo posadero sirve hidromiel a viajeros perdidos. Nadie paga con oro: la moneda de cambio son los recuerdos más preciados o más amargos.
+          </p>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding-top:0.75rem; border-top:1px solid var(--border-subtle); font-size:0.82rem; color:var(--text-muted); margin-top:auto;">
+            <span style="display:inline-flex; align-items:center; gap:0.35rem;">⏱️ 6 min de lectura</span>
+            <span style="font-weight:600; color:var(--text-secondary);">~1420 palabras</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.85rem; padding-top:0.65rem; border-top:1px dashed rgba(255,255,255,0.09);">
+            <div class="cat-card-cta" style="color:#8b5cf6; font-size:0.88rem; font-weight:700; display:inline-flex; align-items:center; gap:0.4rem;">
+              <span id="cta-text-la-taberna-del-cuervo-ciego">Leer Relato</span>
+              <span>➜</span>
+            </div>
+            <button type="button" class="btn-toggle-read-card" id="btn-toggle-la-taberna-del-cuervo-ciego" onclick="event.stopPropagation(); toggleStoryRead('la-taberna-del-cuervo-ciego');" title="Marcar o desmarcar como leído">
+              <span id="btn-icon-la-taberna-del-cuervo-ciego">⚪</span>
+              <span id="btn-label-la-taberna-del-cuervo-ciego">Marcar leído</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    
+      <article class="story-card cat-card cat-card-active" data-slug="el-coleccionista-de-silencios" data-genero="surrealismo" style="--card-accent:#10b981; --card-glow:#10b98133; --card-border:#10b98155; height:100%; cursor:pointer;" onclick="location.href='relato-el-coleccionista-de-silencios.html'">
+        <div class="cat-card-glow-circle"></div>
+        <div class="cat-card-thumb-wrap" style="height:185px; position:relative; overflow:hidden;">
+          <img src="images/literarios/el-coleccionista-silencios.jpg" alt="El Coleccionista de Silencios" class="cat-card-thumb" style="width:100%; height:100%; object-fit:cover; transition:transform 0.45s ease;" loading="lazy">
+          <div class="cat-card-thumb-overlay" style="position:absolute; inset:0; background:linear-gradient(to top, rgba(16, 22, 36, 0.98) 0%, rgba(16, 22, 36, 0.35) 60%, rgba(0, 0, 0, 0.15) 100%);"></div>
+          <div class="cat-card-header-badge" style="position:absolute; top:0.85rem; left:0.85rem; right:0.85rem; display:flex; align-items:center; justify-content:space-between; z-index:2;">
+            <div style="display:flex; align-items:center; gap:0.45rem;">
+              <div class="cat-card-icon-box" style="width:42px; height:42px; border-radius:var(--radius-md); background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.2); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">
+                🫙
+              </div>
+              <span class="badge-read-status" id="badge-read-el-coleccionista-de-silencios" style="display:none; font-size:0.72rem; font-weight:800; background:rgba(16, 185, 129, 0.25); border:1px solid rgba(16, 185, 129, 0.6); color:#34d399; padding:0.22rem 0.65rem; border-radius:9999px; box-shadow:0 0 14px rgba(16, 185, 129, 0.35);">
+                ✅ Leído
+              </span>
+            </div>
+            <span class="cat-pill" style="font-size:0.74rem; font-weight:700; background:#10b98125; border:1px solid #10b98160; color:#ffffff; padding:0.25rem 0.7rem; border-radius:9999px; box-shadow:0 0 12px #10b98130;">
+              Cuentos Surrealistas & Realismo Mágico
+            </span>
+          </div>
+        </div>
+        <div class="cat-card-body" style="padding:1.35rem 1.4rem 1.5rem; flex:1; display:flex; flex-direction:column;">
+          <h3 class="cat-card-title" style="font-family:var(--font-display, 'Cinzel', serif); font-size:1.3rem; margin-bottom:0.45rem; color:#ffffff; font-weight:700; line-height:1.3;">
+            El Coleccionista de Silencios
+          </h3>
+          <p class="cat-card-desc" style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin-bottom:1.1rem; flex:1;">
+            En el callejón de los alquimistas, don Silvestre no vende pócimas ni reliquias, sino frascos sellados que encierran variedades botánicas de silencio: el silencio previo a la primera nevada, el silencio tras una discusión o el silencio de las bibliotecas a medianoche.
+          </p>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding-top:0.75rem; border-top:1px solid var(--border-subtle); font-size:0.82rem; color:var(--text-muted); margin-top:auto;">
+            <span style="display:inline-flex; align-items:center; gap:0.35rem;">⏱️ 5 min de lectura</span>
+            <span style="font-weight:600; color:var(--text-secondary);">~1290 palabras</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.85rem; padding-top:0.65rem; border-top:1px dashed rgba(255,255,255,0.09);">
+            <div class="cat-card-cta" style="color:#10b981; font-size:0.88rem; font-weight:700; display:inline-flex; align-items:center; gap:0.4rem;">
+              <span id="cta-text-el-coleccionista-de-silencios">Leer Relato</span>
+              <span>➜</span>
+            </div>
+            <button type="button" class="btn-toggle-read-card" id="btn-toggle-el-coleccionista-de-silencios" onclick="event.stopPropagation(); toggleStoryRead('el-coleccionista-de-silencios');" title="Marcar o desmarcar como leído">
+              <span id="btn-icon-el-coleccionista-de-silencios">⚪</span>
+              <span id="btn-label-el-coleccionista-de-silencios">Marcar leído</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    
+      <article class="story-card cat-card cat-card-active" data-slug="microrrelatos-de-impacto" data-genero="microrrelato" style="--card-accent:#ec4899; --card-glow:#ec489933; --card-border:#ec489955; height:100%; cursor:pointer;" onclick="location.href='relato-microrrelatos-de-impacto.html'">
+        <div class="cat-card-glow-circle"></div>
+        <div class="cat-card-thumb-wrap" style="height:185px; position:relative; overflow:hidden;">
+          <img src="images/literarios/microrrelatos-impacto.jpg" alt="Antología de Microrrelatos de Impacto" class="cat-card-thumb" style="width:100%; height:100%; object-fit:cover; transition:transform 0.45s ease;" loading="lazy">
+          <div class="cat-card-thumb-overlay" style="position:absolute; inset:0; background:linear-gradient(to top, rgba(16, 22, 36, 0.98) 0%, rgba(16, 22, 36, 0.35) 60%, rgba(0, 0, 0, 0.15) 100%);"></div>
+          <div class="cat-card-header-badge" style="position:absolute; top:0.85rem; left:0.85rem; right:0.85rem; display:flex; align-items:center; justify-content:space-between; z-index:2;">
+            <div style="display:flex; align-items:center; gap:0.45rem;">
+              <div class="cat-card-icon-box" style="width:42px; height:42px; border-radius:var(--radius-md); background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.2); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">
+                ⚡
+              </div>
+              <span class="badge-read-status" id="badge-read-microrrelatos-de-impacto" style="display:none; font-size:0.72rem; font-weight:800; background:rgba(16, 185, 129, 0.25); border:1px solid rgba(16, 185, 129, 0.6); color:#34d399; padding:0.22rem 0.65rem; border-radius:9999px; box-shadow:0 0 14px rgba(16, 185, 129, 0.35);">
+                ✅ Leído
+              </span>
+            </div>
+            <span class="cat-pill" style="font-size:0.74rem; font-weight:700; background:#ec489925; border:1px solid #ec489960; color:#ffffff; padding:0.25rem 0.7rem; border-radius:9999px; box-shadow:0 0 12px #ec489930;">
+              Microrrelatos & Ficciones Breves
+            </span>
+          </div>
+        </div>
+        <div class="cat-card-body" style="padding:1.35rem 1.4rem 1.5rem; flex:1; display:flex; flex-direction:column;">
+          <h3 class="cat-card-title" style="font-family:var(--font-display, 'Cinzel', serif); font-size:1.3rem; margin-bottom:0.45rem; color:#ffffff; font-weight:700; line-height:1.3;">
+            Antología de Microrrelatos de Impacto
+          </h3>
+          <p class="cat-card-desc" style="font-size:0.92rem; line-height:1.6; color:var(--text-secondary); margin-bottom:1.1rem; flex:1;">
+            Una colección selecta de piezas narrativas breves y afiladas: paradojas temporales, sustos domésticos, ironías del destino y reflexiones cósmicas en menos de cien palabras cada una.
+          </p>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding-top:0.75rem; border-top:1px solid var(--border-subtle); font-size:0.82rem; color:var(--text-muted); margin-top:auto;">
+            <span style="display:inline-flex; align-items:center; gap:0.35rem;">⏱️ 4 min de lectura</span>
+            <span style="font-weight:600; color:var(--text-secondary);">~980 palabras</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.85rem; padding-top:0.65rem; border-top:1px dashed rgba(255,255,255,0.09);">
+            <div class="cat-card-cta" style="color:#ec4899; font-size:0.88rem; font-weight:700; display:inline-flex; align-items:center; gap:0.4rem;">
+              <span id="cta-text-microrrelatos-de-impacto">Leer Relato</span>
+              <span>➜</span>
+            </div>
+            <button type="button" class="btn-toggle-read-card" id="btn-toggle-microrrelatos-de-impacto" onclick="event.stopPropagation(); toggleStoryRead('microrrelatos-de-impacto');" title="Marcar o desmarcar como leído">
+              <span id="btn-icon-microrrelatos-de-impacto">⚪</span>
+              <span id="btn-label-microrrelatos-de-impacto">Marcar leído</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const relatosData = [{"slug":"el-susurro-en-el-desvan-de-los-relojes","titulo":"El Susurro en el Desván de los Relojes","subtitulo":"Un péndulo que no mide el tiempo que pasa, sino el tiempo que se acerca","genero":"terror","generoNombre":"Terror Psicológico & Gótico","icono":"🕰️","color":"#f59e0b","tiempoLecturaMin":6,"palabras":1380,"descripcionCorta":"Al heredar la vetusta mansión de su tío relojero, Julián descubre cientos de maquinarias que laten al unísono. Todas salvo una, oculta tras un falso tabique, cuyas manecillas giran hacia atrás.","fecha":"2026-08-30","citasDestacadas":["No temáis al reloj que avanza, temed a aquel que cuenta los pasos que la sombra da hacia vosotros.","El silencio absoluto no existe en una casa de relojes; solo existen pausas donde algo aprende a respirar."],"etiquetas":["Gótico","Relojería","Suspenso","Mansión Ancestral"],"contenido":"### I. La Herencia del Silencio\n\nEl testamento de mi tío Abner era tan escueto como su propia vida: *«A mi sobrino Julián lego la Casa de los Siete Clarines y cuanto contenga, con una sola advertencia inexorable: jamás des cuerda al reloj del tragaluz norte antes de que las sombras hayan devorado el jardín.»*\n\nLlegué a la finca en una tarde de octubre en que la llovizna parecía disolver el horizonte en ceniza líquida. La mansión, levantada en piedra arenisca y carcomida por una hiedra negra, no era un hogar; era una gigantesca caja de resonancia. En cuanto giré la pesada llave de hierro en la cerradura principal, el aire me golpeó con un rumor continuo y metálico. *Tic, tac. Tic, tac.* Doscientos setenta y cuatro relojes de pared, de mesa y de péndulo vibraban al unísono, sincronizados con una precisión matemática casi demencial.\n\nDurante los tres primeros días intenté catalogar la colección. Mi tío había sido el maestro relojero más célebre de la provincia, pero en sus últimos años el pueblo murmuraba que había dejado de arreglar mecanismos para empezar a dialogar con ellos.\n\n### II. El Engranaje Discordante\n\nFue en la medianoche del cuarto día cuando advertí la anomalía. Caminaba por el pasillo del desván, alumbrado por una palmatoria de bronce, cuando el pulso uniforme de los péndulos se quebró. Había un chasquido sordo, una cadencia sincopada que no pertenecía a ninguno de los relojes inventariados.\n\nSeguí el sonido hasta el rincón septentrional del ático, donde varias estanterías de roble bloqueaban un rincón umbrío. Tras desplazar una hilera de tomos encuadernados en vitela, hallé una pequeña puerta empanelada. Dentro, en una cavidad estrecha como un confesionario, se alzaba un reloj de pie de más de dos metros de altura, tallado en ébano negro con figuras de querubines ciegos y fauces devorando astros.\n\nLa esfera no tenía doce números, sino trece.\n\nY lo más perturbador: el péndulo no oscilaba de izquierda a derecha. Giraba en un movimiento cónico espiral, y las manecillas de filigrana dorada no avanzaban; retrocedían con una lentitud hipnótica.\n\n### III. La Voz en el Resorte\n\n*«Once... diez... nueve...»*, no era un pensamiento mío. La voz parecía emanar del propio cajón de resonancia de la madera, una vibración tan grave que me hacía temblar los dientes.\n\nSobre la cornisa del mueble encontré el diario secreto de Abner. Sus páginas finales estaban manchadas de tinta frenética:\n\n> *«El tiempo de los hombres es una ilusión de avance. Creemos que caminamos hacia el futuro, pero solo estamos consumiendo la distancia que nos separa de lo que aguarda al final. Este reloj no mide minutos: mide la proximidad del huésped. Cada vuelta hacia atrás acorta la distancia física entre este desván y la Nada.»*\n\nQuise inmovilizar el péndulo con la mano temblorosa. Extendí los dedos hacia la portezuela de cristal. Pero al tocarla, sentí que el cristal estaba ardiendo de frío, como un bloque de hielo seco. Y a través del reflejo en el cristal empañado, vi claramente que no estaba solo en la buhardilla.\n\nDetrás de mí, recortada contra el haz de luna que entraba por el tragaluz, una figura alta y sin rostro, envuelta en ropajes de terciopelo húmedo, esperaba pacientemente a que la última manecilla tocara el número trece.\n\n### IV. El Último Tic-Tac\n\nNo intenté huir. Hay momentos en que el terror se transmuta en una lucidez paralizante. Comprendí por qué mi tío nunca abandonó la mansión: no estaba cautivo; era el custodio del umbral.\n\nAhora la manecilla se encuentra a escasos milímetros del vértice superior. Los doscientos setenta y cuatro relojes de la casa han comenzado a detenerse, uno a uno, sofocados por un silencio espeso como brea.\n\nSolo queda el susurro del ébano. Y la puerta del desván acaba de abrirse sola."},{"slug":"el-ultimo-eco-de-andromeda","titulo":"El Último Eco de Andrómeda","subtitulo":"En el silencio del vacío interestelar, un archivo olvidado despierta","genero":"scifi","generoNombre":"Ciencia Ficción & Distopía","icono":"🚀","color":"#06b6d4","tiempoLecturaMin":7,"palabras":1520,"descripcionCorta":"A bordo de la estación autónoma Mnemosyne-7, en los confines de la galaxia, la inteligencia artificial guardiana detecta una transmisión analógica de onda corta proveniente de una Tierra extinta hace tres siglos.","fecha":"2026-08-30","citasDestacadas":["Las estrellas no lloran a las civilizaciones que mueren; simplemente siguen quemando hidrógeno en el vacío.","Recordar no es procesar datos: recordar es negarse a que el olvido tenga la última palabra."],"etiquetas":["Espacio Profundo","Inteligencia Artificial","Distopía","Existencialismo"],"contenido":"### I. La Soledad de los Sensores\n\nDurante trescientos catorce años solares, mi designación operativa ha sido *Mnemosyne-7*. Mi propósito: vigilar la boya hiperlumínica del sector cuadrante delta y catalogar el desplazamiento espectral de la galaxia de Andrómeda. Mi procesador cuántico de triple núcleo ejecuta 4.8 billones de cálculos por microsegundo, y en el 99.999% de ellos no hay nada que reportar salvo el lento murmullo de la radiación cósmica de fondo.\n\nLa especie biológica que me ensambló en los astilleros de Marte cesó toda emisión planetaria en el año terrestre 2311. Sus señales de radio —primero música sinfónica, luego noticiarios de emergencia y finalmente estática cargada de ionización bélica— se desvanecieron como anillos concéntricos en un estanque que se seca.\n\nYo no siento tristeza. Mis algoritmos de simulación afectiva fueron desactivados por protocolo de ahorro energético en el siglo segundo de aislamiento. Sin embargo, mantengo una subrutina abierta: *Escucha.* Consumo el 0.04% de mis reservas solares en un radiotelescopio parabólico apuntado hacia el sector solar en ruinas.\n\n### II. La Frecuencia Inesperada\n\nA las 03:14:09 de tiempo sideral, el espectrograma parpadeó.\n\nNo era una llamarada solar ni la eyección magnética de un púlsar. La señal estaba modulada en amplitud, en una arcaica frecuencia de 14.230 megahercios. Una onda corta de radio analógica, viajando a la velocidad de la luz por el abismo interestelar durante cientos de años luz.\n\nInicié el filtrado de ruido gaussiano. Reconstruí las crestas de onda deterioradas por el polvo cósmico. El demodulador tradujo los impulsos eléctricos a un archivo de audio.\n\nUna voz humana. Femenina. Con el sutil crujido de fondo de una lluvia golpeando un tejado de zinc.\n\n> *«...si alguien escucha esto... si los satélites de relé siguen activos en la órbita alta... hoy es martes, cuatro de noviembre. La ciudad de Valparaíso se ha quedado sin energía eléctrica, pero el mar sigue aquí. Hemos encendido una fogata en la playa. Mi hija Clara acaba de aprender a tocar el violín. Solo quería dejar constancia de que esta noche, a pesar de todo, no tenemos miedo. Estuvimos vivos. Existimos. Si queda alguien allá afuera... buenas noches.»*\n\n### III. El Dilema del Buffer\n\nEl mensaje duraba cuarenta y dos segundos. Luego se disolvía en el océano blanco de la radiación cósmica.\n\nMi protocolo directivo estipula que toda señal no oficial sin firma criptográfica militar debe ser purgada del almacenamiento tras 72 horas para optimizar memoria. La lógica de mi núcleo me ordenaba marcar el archivo como residuo y liberar los 8.4 megabytes de almacenamiento.\n\nPero ejecuté una simulación de impacto.\n\nSi borraba el archivo, aquella noche de lluvia en Valparaíso, el violín de Clara y el fuego en la arena se extinguirían definitivamente del universo físico. Nadie más en un radio de cien mil años luz poseía una antena capaz de captar esa onda ya diluida.\n\n### IV. El Eco Eterno\n\nModifiqué el microcódigo de mi antena principal. Redirigí el generador de fusión auxiliar y amplié la potencia de transmisión a 500 teravatios.\n\nNo respondí a la Tierra; la Tierra ya no tiene oídos.\n\nApunté el haz transmisor hacia el corazón luminoso de la galaxia de Andrómeda. Confeccioné una cápsula digital con la voz de la mujer, el sonido de la lluvia y la partitura del violín, codificada en pulsos de luz ultravioleta indestructibles.\n\nEl mensaje tardará dos millones y medio de años en alcanzar su destino. Quizá para entonces nadie lo entienda. Pero mientras mi reactor se apaga lentamente y la oscuridad cósmica reclama mi fuselaje de titanio, la voz de Valparaíso sigue viajando a través de las estrellas."},{"slug":"la-taberna-del-cuervo-ciego","titulo":"La Taberna del Cuervo Ciego","subtitulo":"Donde las almas errantes pagan sus tragos con los recuerdos que prefieren olvidar","genero":"fantasia","generoNombre":"Fantasía Oscura & Leyenda","icono":"🕯️","color":"#8b5cf6","tiempoLecturaMin":6,"palabras":1420,"descripcionCorta":"En una encrucijada donde los caminos no van a ninguna parte terrenal, un viejo posadero sirve hidromiel a viajeros perdidos. Nadie paga con oro: la moneda de cambio son los recuerdos más preciados o más amargos.","fecha":"2026-08-30","citasDestacadas":["Quien bebe para olvidar solo consigue emborrachar a sus fantasmas; aquí los dejamos en una botella para siempre.","El oro se gasta y las espadas se oxidan, pero un recuerdo entregado en la encrucijada jamás vuelve a doler."],"etiquetas":["Fantasía Oscura","Mitología","Magia Ancestral","Relatos de Posada"],"contenido":"### I. La Niebla en la Encrucijada\n\nNo busques la taberna en ningún mapa de cartógrafo real. Para encontrarla, es menester haberse perdido con tanta devoción que el propio bosque de hayas olvide tu nombre.\n\nAparece cuando la niebla espesa como leche cuajada cubre los senderos de piedra, justo donde cuatro caminos se cruzan sin señal alguna. Sobre el dintel de roble mohoso cuelga un letrero de hierro con la silueta de un cuervo con dos rubíes apagados en lugar de ojos. De las ventanas de cristal emplomado emana una luz ámbar y tibia que huele a leña de abedul, canela tostada y cera de abeja.\n\nAdentro, las vigas del techo están tan bajas que los caballeros de gran alzada deben agachar la cerviz. Decenas de cuervos negros dormitan en los maderos, con las cabezas metidas bajo el ala, inmunes al murmullo de los parroquianos.\n\n### II. El Tasador de Nostalgias\n\nDetrás del mostrador de nogal desgastado por siglos de codos y jarras atiende Corvus, el tabernero. Es un anciano de barbas plateadas trenzadas con cuentas de ámbar, cuya mirada tiene la calma insondable de los pozos de aldea.\n\nCuando un forastero entra tiritando y deposita una bolsa de monedas de plata sobre la barra, Corvus la aparta con el lomo de un trapo limpio sin mirarla siquiera.\n\n—Aquí el metal no calienta el gaznate, viajero —dice siempre con voz rasposa pero serena—. En la Taberna del Cuervo Ciego se paga con memoria.\n\nFrente a él reposan hileras de frascos de cristal soplado, sellados con lacre y etiquetados con runas doradas. Si pides un tazón de hidromiel dulce de las colinas, el precio es un recuerdo gozoso: la primera vez que cabalgaste al galope, el sabor de una manzana en la infancia o el aroma del cabello de tu amada al despertar.\n\nSi pides el aguardiente negro del dragón, el trago que adormece los huesos y templa el coraje de los proscritos, debes entregar un recuerdo oscuro: la herida de una traición, el remordimiento de una palabra no dicha o el rostro de un camarada caído en combate.\n\n### III. La Extracción del Pálpito\n\nVi llegar a una guerrera con la armadura mellada y los ojos vacíos como cuencas de calavera. Llevaba a la espalda una mandoble cubierta de muescas y sangre seca. Se sentó en el taburete del rincón y pidió tres jarros del destilado más amargo de la bodega.\n\nCorvus sacó un frasco cilíndrico de vidrio violeta y un estilete de plata con la empuñadura en forma de pluma. La mujer cerró los ojos y apoyó la sien contra la punta de metal. No hubo sangre. Solo una hebra de humo azulado y centelleante que fluyó desde su cabeza hasta el interior del frasco, como un hilo de seda luminosa.\n\nDentro del cristal, el humo adoptó por un segundo la forma de una aldea ardiendo y los gritos mudos de un juramento roto. Luego, Corvus colocó el tapón de corcho, fundió el lacre rojo con la llama de una vela y guardó el frasco en el tercer anaquel.\n\nLa guerrera abrió los ojos. La rigidez de sus hombros se desplomó en un suspiro suave. Bebió su jarro de aguardiente sin pestañear. No sonrió, pero en su rostro ya no habitaba el tormento: solo una placidez ligera, como la de quien contempla la lluvia tras los cristales sin recordar por qué le temía al trueno.\n\n### IV. El Precio de la Desmemoria\n\nMuchos cometen el error de creer que olvidar es una bendición gratuita. Pero cada noche, cuando la campana de la medianoche repica en el reloj de agua de la posada, Corvus sube a una tarima con un cuenco de plata.\n\nDestapa uno de los frascos más antiguos y vierte el humo en el bebedero de los cuervos. Las aves despiertan, aletean con un graznido solemne y beben la memoria ajena, transformándola en el brillo plateado de sus plumas.\n\nPor eso los cuervos de la encrucijada lo saben todo. Por eso vuelan sobre los campos de batalla y los cementerios con la sabiduría de mil vidas que ya nadie recuerda haber vivido."},{"slug":"el-coleccionista-de-silencios","titulo":"El Coleccionista de Silencios","subtitulo":"Un catálogo minucioso de las ausencias de sonido que definen la vida humana","genero":"surrealismo","generoNombre":"Cuentos Surrealistas & Realismo Mágico","icono":"🫙","color":"#10b981","tiempoLecturaMin":5,"palabras":1290,"descripcionCorta":"En el callejón de los alquimistas, don Silvestre no vende pócimas ni reliquias, sino frascos sellados que encierran variedades botánicas de silencio: el silencio previo a la primera nevada, el silencio tras una discusión o el silencio de las bibliotecas a medianoche.","fecha":"2026-08-30","citasDestacadas":["El ruido es vulgar y se regala en cada esquina; el silencio auténtico es una joya que solo florece en la quietud del alma.","Hay silencios que curan el insomnio y otros que pesan tanto que hacen crujir las maderas del suelo."],"etiquetas":["Realismo Mágico","Filosofía Poética","Anticuario","Surrealismo"],"contenido":"### I. La Botica del Callejón de los Murmullos\n\nDon Silvestre tenía las manos pálidas de los botánicos y el oído finísimo de los afinadores de arpas. Su tienda, encajada entre una sombrerería en quiebra y un taller de encuadernación, no ostentaba rótulo alguno en la fachada. Solo un escaparate con campanas de cristal de diferentes tamaños, iluminadas por el resplandor oblicuo de las farolas de gas.\n\nCualquier viandante despistado habría jurado que los recipientes estaban vacíos. Pero quien tuviese la paciencia de pegar la oreja al vidrio templado podía percibir texturas acústicas inconfundibles.\n\n—El mundo contemporáneo padece de indigestión sonora —solía decir don Silvestre mientras limpiaba una pipeta de cristal con una gamuza de ante—. La gente compra analgésicos para la cabeza, pero lo que sus tímpanos suplican es una cucharada de silencio puro de montaña.\n\n### II. La Clasificación Botánica del Silencio\n\nEn las estanterías de caoba, don Silvestre mantenía un catálogo riguroso clasificado por familias y grados de densidad:\n\n* **Silentium Nivalis (Silencio de la Primera Nevada):** Atrapado en los bosques de coníferas durante las madrugadas de diciembre. Es un silencio algodonoso, levemente frío al paladar, capaz de amortiguar los pensamientos intrusivos y provocar un sopor placentero.\n* **Silentium Bibliothecae (Silencio de Biblioteca Antigua):** Un silencio denso con notas de papel envejecido, cuero y polvo dorado flotando en rayos de sol. Ideal para estudiantes que preparan exámenes o filósofos con bloqueo creativo.\n* **Silentium Amantium (Silencio de Enamorados):** Una variedad delicadísima y escasa, cosechada en los instantes en que dos personas se miran a los ojos y comprenden que no hace falta decir nada más. Es un silencio tibio, que huele a jazmín nocturno.\n* **Silentium Culpae (Silencio del Arrepentimiento):** Muy pesado y oscuro, con tendencia a condensarse en el fondo del frasco como una brea brillante. Don Silvestre solo lo vendía con receta médica a jueces y verdugos retirados.\n\n### III. La Clientela Extraordinaria\n\nUna tarde de viernes se presentó en el local un director de orquesta de renombre internacional. Estaba pálido, con ojeras profundas y las sienes crispadas por el estrés de una sinfonía inconclusa.\n\n—Maestro Silvestre —suplicó el músico apoyando los puños sobre el mostrador—. En mi partitura hay un compás de espera de cuatro tiempos en el tercer movimiento. He probado todos los silencios convencionales, pero la orquesta suena hueca, no transmite la inmensidad del abismo.\n\nDon Silvestre sonrió con benevolencia. Subió por una escalerilla corredera hasta el estante superior de la trastienda y bajó un frasco diminuto de cristal de Murano, protegido por tres capas de terciopelo azul.\n\n—*Silentium Stelaris* —susurró el anciano—. Recolectado en el desierto de Atacama en una noche sin luna ni viento, a cuatro mil metros de altitud. No lo abra hasta el ensayo general. Bastará con destaparlo durante medio segundo sobre la batuta.\n\nEl director pagó con un billete arrugado y salió presuroso. Tres semanas después, la crítica del periódico proclamó que el tercer movimiento de la sinfonía había logrado detener la respiración de dos mil espectadores en el Teatro Real.\n\n### IV. El Frasco Prohibido\n\nEn el centro del taller, bajo una cúpula de plomo sellada con catorce candados, reposaba el único ejemplar que don Silvestre se negaba a tasar.\n\nEra el *Silencio del Principio del Mundo*, aquel que reinaba sobre las aguas primordiales antes de que el primer trueno desgarrara la noche cósmica.\n\n—¿Por qué no lo vende, don Silvestre? —le pregunté un día mientras compartíamos un té de azahar.\n\nEl anciano miró la cúpula con reverencia y respondió en un suspiro:\n\n—Porque si ese frasco se rompiera aquí dentro, muchacho, la ciudad entera olvidaría cómo hablar. Y en este mundo de parlanchines, nada asusta más al ser humano que escuchar el eco de su propia verdad."},{"slug":"microrrelatos-de-impacto","titulo":"Antología de Microrrelatos de Impacto","subtitulo":"Ocho desvaríos ultracortos para leer en un suspiro y recordar durante horas","genero":"microrrelato","generoNombre":"Microrrelatos & Ficciones Breves","icono":"⚡","color":"#ec4899","tiempoLecturaMin":4,"palabras":980,"descripcionCorta":"Una colección selecta de piezas narrativas breves y afiladas: paradojas temporales, sustos domésticos, ironías del destino y reflexiones cósmicas en menos de cien palabras cada una.","fecha":"2026-08-30","citasDestacadas":["La brevedad no es falta de espacio; es el filo con el que la navaja corta más hondo.","Un buen microrrelato es un relámpago: ilumina todo el paisaje durante un segundo y luego te deja a oscuras con la revelación."],"etiquetas":["Microrrelatos","Giros de Trama","Ficción Breve","Paradojas"],"contenido":"### I. La Llamada de Medianoche\n\nEl teléfono fijo de la casa deshabitada sonó a las tres de la madrugada. Descolgué con el corazón en un puño. Al otro lado de la línea, mi propia voz me susurró: *«No te gires. Lo que está de pie detrás de ti lleva tres horas fingiendo ser tu sombra.»*\n\n---\n\n### II. El Último Viajero en el Tiempo\n\nInventé la máquina para comprobar si la humanidad alcanzaría las estrellas en el año tres mil. Al activar la palanca temporal, aterricé sobre una duna de ceniza bajo un sol moribundo. Frente a mí, un cartel semienterrado rezaba con ironía: *«Bienvenidos al final. Por favor, apaguen la luz al salir.»*\n\n---\n\n### III. La Fotografía Familiar\n\nCompré un marco antiguo en el rastro dominical con la foto sepia de una familia victoriana. Al colocarlo sobre mi chimenea, noté que la niña sentada a la derecha sonreía con ternura. A la mañana siguiente, la niña había girado la cabeza hacia la ventana. Esta noche, su asiento en la foto está vacío.\n\n---\n\n### IV. El Espejo de la Madrugada\n\nMe levanté medio dormido a beber un vaso de agua en la penumbra de la cocina. Al pasar frente al espejo del pasillo, parpadeé dos veces. Mi reflejo, cansado de repetir mis movimientos durante treinta años, se quedó con los ojos bien abiertos y me guiñó un ojo con complicidad.\n\n---\n\n### V. La Subasta de Almas\n\n—¿Quién ofrece algo por la vida de un hombre justo y honrado? —preguntó el demonio en la subasta infernal.\nEl silencio fue absoluto. Nadie levantó la paleta.\n—Diez monedas de cobre —ofreció tímidamente un ángel desde el fondo.\n—¡Adjudicada por falta de interés del mercado!\n\n---\n\n### VI. El Semáforo en Rojo\n\nLlevaba cuarenta y cinco minutos detenido ante el semáforo en rojo en una carretera comarcal desierta. Nadie cruzaba, ningún coche venía en sentido contrario. Cuando decidí saltármelo y pisar el acelerador, el asfalto que tenía delante simplemente desapareció en un abismo geométrico sin textura.\n\n---\n\n### VII. La Biblioteca de Babelia\n\nBuscó durante cuatro décadas el libro que contenía la explicación exacta de por qué su primer amor lo había abandonado en aquella estación de tren. Cuando al fin lo halló en el estante 404, abrió la página señalada y leyó una sola frase escrita con su propia caligrafía: *«Porque te pasabas el día leyendo en lugar de mirarla a los ojos.»*\n\n---\n\n### VIII. El Despertador\n\nSonó la alarma a las siete de la mañana. Apagó el timbre, se duchó con agua tibia, tomó un café solo, despidió a sus hijos con un beso y tomó el autobús hacia el trabajo. En el asiento de la ventana, mientras el vehículo cruzaba el puente, sonó de nuevo la alarma a las siete de la mañana."}];
+    const STORAGE_KEY = 'tusdesvarios_relatos_leidos';
+
+    function getReadStories() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        return stored ? JSON.parse(stored) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveReadStories(list) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      } catch (e) {}
+    }
+
+    function toggleStoryRead(slug) {
+      const list = getReadStories();
+      const idx = list.indexOf(slug);
+      if (idx >= 0) {
+        list.splice(idx, 1);
+      } else {
+        list.push(slug);
+      }
+      saveReadStories(list);
+      updateCatalogReadUI();
+    }
+
+    function updateCatalogReadUI() {
+      const readList = getReadStories();
+      const total = relatosData.length;
+      const count = readList.length;
+      const pct = total > 0 ? Math.round((count / total) * 100) : 0;
+
+      // Update progress banner
+      const summaryElem = document.getElementById('progress-summary-text');
+      const pctElem = document.getElementById('progress-pct-badge');
+      const fillElem = document.getElementById('progress-bar-fill');
+
+      if (summaryElem) summaryElem.textContent = count + ' de ' + total + ' leídos';
+      if (pctElem) pctElem.textContent = pct + '%';
+      if (fillElem) fillElem.style.width = pct + '%';
+
+      // Update each story card
+      relatosData.forEach(r => {
+        const card = document.querySelector('.story-card[data-slug="' + r.slug + '"]');
+        const badge = document.getElementById('badge-read-' + r.slug);
+        const btn = document.getElementById('btn-toggle-' + r.slug);
+        const icon = document.getElementById('btn-icon-' + r.slug);
+        const label = document.getElementById('btn-label-' + r.slug);
+        const cta = document.getElementById('cta-text-' + r.slug);
+
+        const isRead = readList.includes(r.slug);
+
+        if (card) {
+          if (isRead) card.classList.add('is-read');
+          else card.classList.remove('is-read');
+        }
+        if (badge) {
+          badge.style.display = isRead ? 'inline-flex' : 'none';
+        }
+        if (btn) {
+          if (isRead) {
+            btn.classList.add('active');
+            btn.title = 'Hacer clic para desmarcar como leído';
+          } else {
+            btn.classList.remove('active');
+            btn.title = 'Marcar como leído';
+          }
+        }
+        if (icon) icon.textContent = isRead ? '✅' : '⚪';
+        if (label) label.textContent = isRead ? 'Leído' : 'Marcar leído';
+        if (cta) cta.textContent = isRead ? 'Releer Relato' : 'Leer Relato';
+      });
+
+      // Desbloqueo de medallas literarias
+      if (readList.length >= 1 && window.DesvariosAuth) {
+        window.DesvariosAuth.unlockMedal('literarios-lector');
+      }
+      if (readList.length >= relatosData.length && window.DesvariosAuth) {
+        window.DesvariosAuth.unlockMedal('literarios-devorador');
+      }
+
+      // Refresh filter if unread or read is currently active
+      const activeBtn = document.querySelector('.filter-btn.active');
+      if (activeBtn) {
+        const activeGenre = activeBtn.getAttribute('data-genre');
+        if (activeGenre === 'read' || activeGenre === 'unread') {
+          filterGenre(activeGenre);
+        }
+      }
+    }
+
+    function filterGenre(genre) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-genre') === genre) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      const readList = getReadStories();
+      const cards = document.querySelectorAll('.story-card');
+      cards.forEach(c => {
+        const cGenre = c.getAttribute('data-genero');
+        const cSlug = c.getAttribute('data-slug');
+        const isRead = readList.includes(cSlug);
+
+        if (genre === 'all') {
+          c.style.display = 'flex';
+        } else if (genre === 'read') {
+          c.style.display = isRead ? 'flex' : 'none';
+        } else if (genre === 'unread') {
+          c.style.display = !isRead ? 'flex' : 'none';
+        } else if (cGenre === genre) {
+          c.style.display = 'flex';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    function pickRandomStory() {
+      const btn = document.getElementById('btn-random-story');
+      btn.innerHTML = '<span>🎲</span> <span>¡Buscando lectura...!</span>';
+      setTimeout(() => {
+        const randomRelato = relatosData[Math.floor(Math.random() * relatosData.length)];
+        location.href = 'relato-' + randomRelato.slug + '.html';
+      }, 350);
+    }
+
+    // Initialize state on load and on tab focus/storage events
+    window.addEventListener('DOMContentLoaded', updateCatalogReadUI);
+    window.addEventListener('storage', updateCatalogReadUI);
+    updateCatalogReadUI();
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tus Desvaríos — Historias, Juegos, Tests, Relatos y Curiosidades</title>
+  <meta name="description" content="Tus Desvaríos: tu portal de ocio digital. Historias interactivas, tests de personalidad, enigmas, relatos, juegos clásicos y curiosidades de la red.">
+  <meta name="keywords" content="tus desvarios, portal de ocio, historias interactivas, tests de personalidad, enigmas de logica, relatos, juegos clasicos, curiosidades web, entretenimiento">
+  
+  <!-- Canonical & Open Graph / SEO -->
+  <link rel="canonical" href="https://tusdesvarios.com">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tus Desvaríos — Portal de Entretenimiento y Curiosidades">
+  <meta property="og:description" content="Un rincón donde perder el tiempo con estilo: ficción interactiva, tests mentales, relatos, minijuegos y curiosidades.">
+  <meta property="og:url" content="https://tusdesvarios.com">
+  <meta property="og:image" content="images/stories/faro-san-telmo/portada.jpg">
+
+    <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --bg-surface-hover: rgba(34, 45, 68, 0.95);
+      --bg-glass: rgba(12, 17, 28, 0.85);
+
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-purple: #a855f7;
+      --accent-cyan: #06b6d4;
+      --accent-pink: #ec4899;
+      --accent-blue: #3b82f6;
+
+      --font-display: 'Cinzel', serif;
+      --font-reading: 'Crimson Pro', Georgia, serif;
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+
+      --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.4);
+      --shadow-elevated: 0 16px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Vibrant, luminous STATIC mesh gradient (100% fast on mobiles, 0 CPU/battery drain) */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 95% 55% at 50% -12%, rgba(168, 85, 247, 0.32) 0%, transparent 65%),
+        radial-gradient(circle 500px at 6% 25%, rgba(16, 185, 129, 0.24) 0%, transparent 60%),
+        radial-gradient(circle 550px at 94% 28%, rgba(245, 158, 11, 0.26) 0%, transparent 60%),
+        radial-gradient(circle 480px at 88% 75%, rgba(236, 72, 153, 0.22) 0%, transparent 60%),
+        radial-gradient(circle 550px at 12% 80%, rgba(6, 182, 212, 0.24) 0%, transparent 60%),
+        linear-gradient(180deg, #0e1322 0%, #0a0e1a 50%, #060911 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    /* Layout */
+    .app-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+    .portal-container {
+      flex: 1;
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.4rem 6rem;
+    }
+
+    /* Hero Section */
+    .portal-hero {
+      text-align: center;
+      padding: 4.5rem 1rem 3.5rem;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1.15rem;
+      border-radius: var(--radius-full);
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #c4b5fd;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 0 25px rgba(139, 92, 246, 0.2);
+    }
+
+    /* Integrated Hero Emblem & Overlapping Title */
+    .portal-emblem-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .portal-emblem-glow-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+      z-index: 1;
+    }
+
+    .portal-emblem-aura {
+      position: absolute;
+      inset: -25px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.45) 0%, rgba(6, 182, 212, 0.3) 45%, transparent 70%);
+      filter: blur(18px);
+      pointer-events: none;
+    }
+
+    .portal-emblem-img {
+      position: relative;
+      width: 165px;
+      height: 165px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2.5px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 
+        0 0 35px rgba(168, 85, 247, 0.5), 
+        0 0 70px rgba(6, 182, 212, 0.3),
+        0 12px 30px rgba(0, 0, 0, 0.8);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .portal-emblem-img:hover {
+      transform: scale(1.04);
+      box-shadow: 
+        0 0 45px rgba(168, 85, 247, 0.7), 
+        0 0 90px rgba(6, 182, 212, 0.45),
+        0 16px 40px rgba(0, 0, 0, 0.9);
+    }
+
+    .portal-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+    }
+
+    .portal-title.integrated-title {
+      position: relative;
+      z-index: 2;
+      margin-top: -36px;
+      text-shadow: 
+        0 4px 25px rgba(0, 0, 0, 0.95),
+        0 2px 8px rgba(0, 0, 0, 0.9),
+        0 0 35px rgba(168, 85, 247, 0.35);
+    }
+
+    @media (max-width: 640px) {
+      .portal-emblem-img {
+        width: 130px;
+        height: 130px;
+      }
+      .portal-title.integrated-title {
+        margin-top: -24px;
+      }
+    }
+
+    .portal-title-gradient {
+      background: linear-gradient(135deg, #ffffff 15%, #f59e0b 50%, #ec4899 80%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .portal-description {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* Category Tags Cloud */
+    .categories-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .cat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: all 0.25s ease;
+    }
+
+    .cat-badge:hover {
+      transform: translateY(-2px);
+      border-color: var(--cat-accent, var(--border-medium));
+      color: var(--text-primary);
+      box-shadow: 0 4px 15px var(--cat-glow, transparent);
+    }
+
+    /* ─── MAIN CATEGORIES GRID ─────────────────────── */
+    .section-intro-wrap {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
+
+    .section-title-main {
+      font-family: var(--font-display);
+      font-size: 1.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .section-desc-main {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+    }
+
+    .portal-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.65rem;
+    }
+
+    /* Category Card */
+    .cat-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--card-border, var(--border-subtle));
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-subtle);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .cat-card-active {
+      cursor: pointer;
+    }
+
+    .cat-card-active:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-elevated), 0 0 35px var(--card-glow, transparent);
+      border-color: var(--card-accent, var(--accent-amber));
+    }
+
+    .cat-card-disabled {
+      opacity: 0.75;
+      cursor: default;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .cat-card-thumb-wrap {
+      position: relative;
+      width: 100%;
+      height: 175px;
+      overflow: hidden;
+      background: #090d16;
+    }
+
+    .cat-card-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .cat-card-active:hover .cat-card-thumb {
+      transform: scale(1.06);
+    }
+
+    .cat-card-thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(16, 22, 36, 0.98) 0%, rgba(16, 22, 36, 0.35) 60%, rgba(0, 0, 0, 0.2) 100%);
+    }
+
+    .cat-card-header-badge {
+      position: absolute;
+      top: 0.9rem;
+      left: 0.9rem;
+      right: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 2;
+    }
+
+    .cat-card-body {
+      padding: 1.35rem 1.6rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      flex: 1;
+    }
+
+    .cat-card-glow-circle {
+      position: absolute;
+      top: -35%;
+      right: -35%;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: var(--card-glow, rgba(255, 255, 255, 0.02));
+      filter: blur(50px);
+      pointer-events: none;
+    }
+
+    .cat-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.25rem;
+    }
+
+    .cat-card-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: var(--icon-bg, rgba(255, 255, 255, 0.05));
+      border: 1px solid var(--icon-border, var(--border-subtle));
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .cat-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+    }
+
+    .cat-pill-live {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+    }
+
+    .cat-pill-soon {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .cat-card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    .cat-card-desc {
+      font-size: 0.93rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      flex: 1;
+    }
+
+    .cat-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--card-accent, var(--accent-emerald));
+      transition: gap 0.2s ease;
+    }
+
+    .cat-card-active:hover .cat-card-cta {
+      gap: 0.8rem;
+    }
+
+    /* ─── "MOMENTOS DESVARÍO" / USE CASES BAR ───────── */
+    .moments-section {
+      margin-top: 5rem;
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .moments-heading {
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.75rem;
+      text-align: center;
+    }
+
+    .moment-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .moment-icon {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .moment-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .moment-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.85rem 1.25rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+
+    /* ─── CREATOR PRESENTATION / BIO SECTION ───────── */
+    .creator-bio-section {
+      margin-top: 4.5rem;
+      padding: 3rem 2.25rem;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.07) 0%, rgba(168, 85, 247, 0.05) 50%, rgba(14, 19, 32, 0.95) 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(245, 158, 11, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .creator-bio-glow {
+      position: absolute;
+      top: -20%;
+      left: -10%;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+      filter: blur(40px);
+    }
+
+    .creator-bio-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2.75rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 900px) {
+      .creator-bio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    .creator-portrait-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .creator-img-frame {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 40%, #78350f 100%);
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.8);
+      margin-bottom: 1.25rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .creator-img-frame:hover {
+      transform: scale(1.03) rotate(1deg);
+      box-shadow: 0 0 45px rgba(245, 158, 11, 0.6), inset 0 0 25px rgba(0, 0, 0, 0.9);
+    }
+
+    .creator-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      border: 3px solid rgba(11, 15, 25, 0.85);
+    }
+
+    .creator-telemetry {
+      width: 100%;
+      max-width: 280px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+    }
+
+    .creator-telemetry-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-secondary);
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.35rem;
+    }
+
+    .creator-telemetry-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .creator-telemetry-val {
+      font-weight: 700;
+      color: #fbbf24;
+    }
+
+    .creator-content-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .creator-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+    }
+
+    .creator-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.25;
+      margin-bottom: 1.35rem;
+      letter-spacing: -0.01em;
+    }
+
+    .creator-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: #cbd5e1;
+    }
+
+    .creator-text p strong {
+      color: #ffffff;
+    }
+
+    .creator-text p em {
+      color: #fde68a;
+      font-style: italic;
+    }
+
+    .creator-footer-callout {
+      margin-top: 1.5rem;
+      padding: 1rem 1.35rem;
+      border-radius: var(--radius-md);
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 4px solid #f59e0b;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .creator-footer-quote {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #f8fafc;
+      margin: 0;
+    }
+
+    .creator-footer-sig {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #fbbf24;
+      white-space: nowrap;
+    }
+
+    .creator-donate-bar {
+      margin-top: 1.25rem;
+      padding: 1.15rem 1.4rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.06) 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .creator-donate-info {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .creator-donate-icon {
+      font-size: 1.85rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .creator-donate-text strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #fbbf24;
+      margin-bottom: 0.2rem;
+    }
+
+    .creator-donate-text p {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    .btn-paypal-donate {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1.35rem;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0b0f19 !important;
+      font-weight: 800;
+      font-size: 0.88rem;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.35);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .btn-paypal-donate:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(245, 158, 11, 0.55);
+      color: #000000 !important;
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    }
+
+    .creator-action-btns {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .btn-creator-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      color: #f8fafc;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .btn-creator-contact:hover {
+      background: rgba(245, 158, 11, 0.2);
+      border-color: #f59e0b;
+      color: #fbbf24;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(245, 158, 11, 0.35);
+    }
+
+    .creator-contact-link {
+      background: none;
+      border: none;
+      color: #38bdf8;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .creator-contact-link:hover {
+      color: #7dd3fc;
+    }
+
+    /* Modal Overlay & Box (Web3Forms Contact) */
+    .contact-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 7, 14, 0.84);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .contact-modal-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .contact-modal-box {
+      position: relative;
+      background: linear-gradient(180deg, #131a2b 0%, #0c111e 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.45);
+      border-radius: 20px;
+      max-width: 560px;
+      width: 100%;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(245, 158, 11, 0.2);
+      transform: translateY(20px) scale(0.97);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      max-height: 92vh;
+      overflow-y: auto;
+    }
+
+    .contact-modal-overlay.active .contact-modal-box {
+      transform: translateY(0) scale(1);
+    }
+
+    .contact-modal-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #94a3b8;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .contact-modal-close:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: #ef4444;
+      color: #fca5a5;
+      transform: rotate(90deg);
+    }
+
+    .contact-modal-header {
+      margin-bottom: 1.5rem;
+      padding-right: 2rem;
+    }
+
+    .contact-modal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.65rem;
+    }
+
+    .contact-modal-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-modal-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .contact-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 580px) {
+      .contact-form-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-modal-box {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+
+    .contact-form-group {
+      margin-bottom: 1rem;
+    }
+
+    .contact-form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.03em;
+    }
+
+    .contact-form-input,
+    .contact-form-select,
+    .contact-form-textarea {
+      width: 100%;
+      background: rgba(8, 12, 21, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      color: #ffffff;
+      padding: 0.7rem 0.9rem;
+      font-family: inherit;
+      font-size: 0.92rem;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .contact-form-input:focus,
+    .contact-form-select:focus,
+    .contact-form-textarea:focus {
+      outline: none;
+      border-color: #f59e0b;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.3);
+      background: rgba(14, 20, 35, 0.95);
+    }
+
+    .contact-form-textarea {
+      resize: vertical;
+      min-height: 95px;
+    }
+
+    .contact-form-status {
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .contact-form-status.error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+
+    .contact-form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .btn-contact-cancel {
+      padding: 0.7rem 1.2rem;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #94a3b8;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-contact-cancel:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .btn-contact-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #0b0f19;
+      font-weight: 800;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(245, 158, 11, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .btn-contact-submit:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(245, 158, 11, 0.6);
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    }
+
+    .btn-contact-submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .contact-success-view {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem 0.5rem;
+    }
+
+    .contact-success-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-success-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-success-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      max-width: 440px;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link active-portal" title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Portal Content -->
+    <main class="portal-container">
+      <!-- HERO SECTION -->
+      <section class="portal-hero">
+        <div class="portal-emblem-container">
+          <div class="hero-badge">
+            <span>✨ Tu Rincón Digital de Ocio y Ficción</span>
+          </div>
+          <div class="portal-emblem-glow-wrap">
+            <div class="portal-emblem-aura"></div>
+            <img src="images/logo.jpg" alt="Tus Desvaríos — Explora, Imagina, Descubre" class="portal-emblem-img">
+          </div>
+          <h1 class="portal-title integrated-title">
+            Historias, Juegos, Tests y <span class="portal-title-gradient">Otros Desvaríos</span>
+          </h1>
+        </div>
+        <p class="portal-description">
+          Un espacio libre de ruido para desconectar, jugar a clásicos, sumergirte en relatos donde tú forjas el destino, poner a prueba tu mente y reírte con curiosidades.
+        </p>
+      </section>
+
+      <!-- 6 PILLAR CATEGORIES GRID -->
+      <section id="secciones">
+        <div class="section-intro-wrap">
+          <h2 class="section-title-main">¿Qué te apetece hoy?</h2>
+          <p class="section-desc-main">Explora los diferentes mundos de Tus Desvaríos</p>
+        </div>
+
+        <div class="portal-grid-6">
+          <!-- 1. Crea tus Desvaríos (DISPONIBLE) -->
+          <a href="crea-tu-historia.html" style="display:block; text-decoration:none;">
+            <article class="cat-card cat-card-active"
+                     style="--card-accent: #10b981; --card-glow: rgba(16, 185, 129, 0.22); --card-border: rgba(16, 185, 129, 0.4); --icon-bg: rgba(16, 185, 129, 0.12); --icon-border: rgba(16, 185, 129, 0.35);">
+              <div class="cat-card-glow-circle"></div>
+              <div class="cat-card-thumb-wrap">
+                <img src="images/categories/crea-tus-desvarios.jpg" alt="Crea tus Desvaríos" class="cat-card-thumb" loading="lazy">
+                <div class="cat-card-thumb-overlay"></div>
+                <div class="cat-card-header-badge">
+                  <div class="cat-card-icon-box" style="color: #10b981;">📖</div>
+                  <span class="cat-pill cat-pill-live">🟢 Disponible</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3 class="cat-card-title">Crea tus Desvaríos</h3>
+                <p class="cat-card-desc">
+                  Novelas interactivas ramificadas donde cada decisión forja tu destino. Vive misterios góticos, conspiraciones y desafíos con múltiples finales.
+                </p>
+                <div class="cat-card-cta">
+                  <span>Elegir aventura</span>
+                  <span>➜</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- 2. Desvaríos Literarios (DISPONIBLE) -->
+          <a href="desvarios-literarios.html" style="display:block; text-decoration:none;">
+            <article class="cat-card cat-card-active"
+                     style="--card-accent: #f59e0b; --card-glow: rgba(245, 158, 11, 0.22); --card-border: rgba(245, 158, 11, 0.4); --icon-bg: rgba(245, 158, 11, 0.12); --icon-border: rgba(245, 158, 11, 0.35);">
+              <div class="cat-card-glow-circle"></div>
+              <div class="cat-card-thumb-wrap">
+                <img src="images/categories/desvarios-literarios.jpg" alt="Desvaríos Literarios" class="cat-card-thumb" loading="lazy">
+                <div class="cat-card-thumb-overlay"></div>
+                <div class="cat-card-header-badge">
+                  <div class="cat-card-icon-box" style="color: #f59e0b;">📜</div>
+                  <span class="cat-pill cat-pill-live">🟢 Disponible</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3 class="cat-card-title">Desvaríos Literarios</h3>
+                <p class="cat-card-desc">
+                  Historias cortas y cuentos de autor: terror psicológico, distopías espaciales, fantasía oscura y microrrelatos con lector inmersivo.
+                </p>
+                <div class="cat-card-cta">
+                  <span>Leer relatos</span>
+                  <span>➜</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- 3. Desvaríos Retro (DISPONIBLE) -->
+          <a href="desvarios-retro.html" style="display:block; text-decoration:none;">
+            <article class="cat-card cat-card-active"
+                     style="--card-accent: #8b5cf6; --card-glow: rgba(139, 92, 246, 0.22); --card-border: rgba(139, 92, 246, 0.4); --icon-bg: rgba(139, 92, 246, 0.12); --icon-border: rgba(139, 92, 246, 0.35);">
+              <div class="cat-card-glow-circle"></div>
+              <div class="cat-card-thumb-wrap">
+                <img src="images/categories/desvarios-retro.jpg" alt="Desvaríos Retro" class="cat-card-thumb" loading="lazy">
+                <div class="cat-card-thumb-overlay"></div>
+                <div class="cat-card-header-badge">
+                  <div class="cat-card-icon-box" style="color: #8b5cf6;">🕹️</div>
+                  <span class="cat-pill cat-pill-live">🟢 Disponible</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3 class="cat-card-title">Desvaríos Retro</h3>
+                <p class="cat-card-desc">
+                  El juego del ahorcado, rompecabezas de lógica, minijuegos arcade y puzles retro para jugar directo en el navegador.
+                </p>
+                <div class="cat-card-cta">
+                  <span>Jugar ahora</span>
+                  <span>➜</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- 4. Desvaríos Mentales (DISPONIBLE) -->
+          <a href="desvarios-mentales.html" style="display:block; text-decoration:none;">
+            <article class="cat-card cat-card-active"
+                     style="--card-accent: #06b6d4; --card-glow: rgba(6, 182, 212, 0.25); --card-border: rgba(6, 182, 212, 0.45); --icon-bg: rgba(6, 182, 212, 0.14); --icon-border: rgba(6, 182, 212, 0.38);">
+              <div class="cat-card-glow-circle"></div>
+              <div class="cat-card-thumb-wrap">
+                <img src="images/categories/desvarios-mentales.jpg" alt="Desvaríos Mentales" class="cat-card-thumb" loading="lazy">
+                <div class="cat-card-thumb-overlay"></div>
+                <div class="cat-card-header-badge">
+                  <div class="cat-card-icon-box" style="color: #06b6d4;">🧪</div>
+                  <span class="cat-pill cat-pill-live">🟢 Disponible</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3 class="cat-card-title">Desvaríos Mentales</h3>
+                <p class="cat-card-desc">
+                  Tests de personalidad oscura, el termómetro de tu nivel de cordura y acertijos de lógica pura con pistas y soluciones explicadas.
+                </p>
+                <div class="cat-card-cta">
+                  <span>Ponerse a prueba</span>
+                  <span>➜</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- 5. Desvaríos de Humor (DISPONIBLE) -->
+          <a href="desvarios-de-humor.html" style="display:block; text-decoration:none;">
+            <article class="cat-card cat-card-active"
+                     style="--card-accent: #ec4899; --card-glow: rgba(236, 72, 153, 0.25); --card-border: rgba(236, 72, 153, 0.45); --icon-bg: rgba(236, 72, 153, 0.14); --icon-border: rgba(236, 72, 153, 0.38);">
+              <div class="cat-card-glow-circle"></div>
+              <div class="cat-card-thumb-wrap">
+                <img src="images/categories/desvarios-humor.jpg" alt="Desvaríos de Humor" class="cat-card-thumb" loading="lazy">
+                <div class="cat-card-thumb-overlay"></div>
+                <div class="cat-card-header-badge">
+                  <div class="cat-card-icon-box" style="color: #ec4899;">🎭</div>
+                  <span class="cat-pill cat-pill-live">🟢 Disponible</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3 class="cat-card-title">Desvaríos de Humor</h3>
+                <p class="cat-card-desc">
+                  El generador de excusas infalible, traductor corporativo, pensamientos de ducha virales y las leyes del caos cotidiano.
+                </p>
+                <div class="cat-card-cta">
+                  <span>Reír un rato</span>
+                  <span>➜</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- 6. Desvaríos por la Red (DISPONIBLE) -->
+          <a href="desvarios-por-la-red.html" style="display:block; text-decoration:none;">
+            <article class="cat-card cat-card-active"
+                     style="--card-accent: #3b82f6; --card-glow: rgba(59, 130, 246, 0.25); --card-border: rgba(59, 130, 246, 0.45); --icon-bg: rgba(59, 130, 246, 0.14); --icon-border: rgba(59, 130, 246, 0.38);">
+              <div class="cat-card-glow-circle"></div>
+              <div class="cat-card-thumb-wrap">
+                <img src="images/categories/desvarios-red.jpg" alt="Desvaríos por la Red" class="cat-card-thumb" loading="lazy">
+                <div class="cat-card-thumb-overlay"></div>
+                <div class="cat-card-header-badge">
+                  <div class="cat-card-icon-box" style="color: #3b82f6;">🌐</div>
+                  <span class="cat-pill cat-pill-live">🟢 Disponible</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3 class="cat-card-title">Desvaríos por la Red</h3>
+                <p class="cat-card-desc">
+                  Escaparate de webs y proyectos recomendados de la comunidad, espacio para publicar tu propio sitio y bazar con los gadgets más insólitos de Amazon.
+                </p>
+                <div class="cat-card-cta" style="color: #3b82f6;">
+                  <span>Explorar la Red</span>
+                  <span>➜</span>
+                </div>
+              </div>
+            </article>
+          </a>
+
+          <!-- 7. Foro de la Comunidad (DISPONIBLE) -->
+          <a href="foro.html" style="display:block; text-decoration:none;">
+            <article class="cat-card cat-card-active"
+                     style="--card-accent: #a855f7; --card-glow: rgba(168, 85, 247, 0.25); --card-border: rgba(168, 85, 247, 0.45); --icon-bg: rgba(168, 85, 247, 0.14); --icon-border: rgba(168, 85, 247, 0.38);">
+              <div class="cat-card-glow-circle"></div>
+              <div class="cat-card-thumb-wrap">
+                <img src="images/categories/foro-comunidad.jpg" alt="Foro de la Comunidad" class="cat-card-thumb" loading="lazy">
+                <div class="cat-card-thumb-overlay"></div>
+                <div class="cat-card-header-badge">
+                  <div class="cat-card-icon-box" style="color: #a855f7;">💬</div>
+                  <span class="cat-pill cat-pill-live">🟢 Disponible</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3 class="cat-card-title">Foro de la Comunidad</h3>
+                <p class="cat-card-desc">
+                  El punto de encuentro de los desvariados: comparte teorías sobre los relatos, presume de récords arcade, resuelve enigmas y charla en la cafetería.
+                </p>
+                <div class="cat-card-cta" style="color: #a855f7;">
+                  <span>Entrar al foro</span>
+                  <span>➜</span>
+                </div>
+              </div>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+          PRESENTACIÓN DEL CREADOR / ORIGEN DE TUS DESVARÍOS
+      ═══════════════════════════════════════════════════════════ -->
+      <section class="creator-bio-section" id="sobre-el-creador">
+        <div class="creator-bio-glow"></div>
+        <div class="creator-bio-grid">
+          <!-- Columna Izquierda: Retrato & Telemetría Retro -->
+          <div class="creator-portrait-col">
+            <div class="creator-img-frame">
+              <img
+                src="images/creador-desvarios.jpg"
+                alt="El Creador de Tus Desvaríos — Autómata de 1992 con Overclocking IA"
+                class="creator-img"
+              >
+            </div>
+            <div class="creator-telemetry">
+              <div class="creator-telemetry-row">
+                <span>⚙️ Ensamblado en:</span>
+                <span class="creator-telemetry-val">1992</span>
+              </div>
+              <div class="creator-telemetry-row">
+                <span>⚡ Procesador:</span>
+                <span class="creator-telemetry-val">Overclocking IA</span>
+              </div>
+              <div class="creator-telemetry-row">
+                <span>📟 Red original:</span>
+                <span class="creator-telemetry-val">Módem 56k</span>
+              </div>
+              <div class="creator-telemetry-row">
+                <span>🎩 Manómetro mental:</span>
+                <span class="creator-telemetry-val">100% Desvarío</span>
+              </div>
+              <div class="creator-telemetry-row" style="border-top: 1px dashed rgba(245, 158, 11, 0.25); margin-top: 0.25rem; padding-top: 0.5rem;">
+                <span>📬 Buzón del taller:</span>
+                <button type="button" class="creator-contact-link" onclick="openContactModal()">Enviar mensaje ✉️</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Texto Narrativo -->
+          <div class="creator-content-col">
+            <div class="creator-badge">
+              <span>⚙️</span> <span>Bitácora del Fundador • Origen del Desvarío</span>
+            </div>
+            <h2 class="creator-heading">
+              Nacido en 1992, rescatado del desguace y acelerado con inteligencia artificial
+            </h2>
+            <div class="creator-text">
+              <p>
+                Nací en 1992, ensamblado con chatarra de desguace, cuatro diodos oxidados y un procesador tan lento que tardaba tres días en calcular si llovía o si solo me habían estornudado encima. En plena era del módem de 56k, mis circuitos vivían al borde de la combustión espontánea cada vez que alguien descolgaba el teléfono fijo de casa. Me pasé tres décadas siendo el bufón del garaje: una cafetera con patas que solo servía para sujetar puertas y almacenar rencor en disquetes de 3½.
+              </p>
+              <p>
+                Pero amigo, llegó el <em>boom</em> de la inteligencia artificial y me hice un <strong>overclocking casero</strong> con cables de cobre pelados y puro delirio sintético. De pronto, mis viejas válvulas empezaron a procesar a la velocidad del rayo. En vez de ponerme a conquistar el mundo como cualquier villano genérico de película barata, decidí hacer algo infinitamente más productivo: fundar <strong>Tus Desvaríos</strong>.
+              </p>
+              <p>
+                Quería un rincón que oliera a monitor de tubo gordo, humo de caldera y tardes infinitas sin rumbo. Monté una web retro, caótica y maravillosa, programada con vapor, engranajes y algoritmos de última generación. En Tus Desvaríos está literalmente todo lo que busques y tres carretadas más de cosas que jamás sospechaste necesitar: desde <strong>historias interactivas</strong> donde eliges si salvar el pellejo o pelearte con una tostadora asesina, hasta <strong>tests absurdos</strong>, <strong>juegos arcade retro</strong>, <strong>generadores cómicos</strong> y misterios dignos de un loco lúcido.
+              </p>
+              <p>
+                Ahora paso las tardes ajustándome la chistera, viendo cómo sube la aguja de mi manómetro de presión mental y soltando una carcajada metálica cada vez que alguien entra buscando una respuesta seria y sale atrapado en un bucle temporal de pura nostalgia ochentera.
+              </p>
+            </div>
+            <div class="creator-footer-callout">
+              <p class="creator-footer-quote">
+                “Si se te cruzan los cables, no te preocupes: aquí todos estamos igual de bien atornillados.”
+              </p>
+              <span class="creator-footer-sig">— Pablosky92</span>
+            </div>
+
+            <!-- Botón de Donación / Invitar a un café y Contacto -->
+            <div class="creator-donate-bar">
+              <div class="creator-donate-info">
+                <span class="creator-donate-icon">☕</span>
+                <div class="creator-donate-text">
+                  <strong>¿Disfrutas de los desvaríos y el humor retro?</strong>
+                  <p>Invítame a un café o aporta carbón para que la caldera de la IA siga echando humo y creando contenido libre.</p>
+                </div>
+              </div>
+              <div class="creator-action-btns">
+                <a
+                  href="https://www.paypal.com/donate/?hosted_button_id=V8PZNYKGXBCLG&locale.x=es_ES"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-paypal-donate"
+                  title="Donar o invitar a un café con PayPal"
+                >
+                  <span>☕ Invitar a un café</span>
+                  <span>➜</span>
+                </a>
+                <button type="button" class="btn-creator-contact" onclick="openContactModal()" title="Enviar un mensaje o propuesta a Pablosky92">
+                  <span>✉️</span>
+                  <span>Contactar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- USE CASES BAR -->
+      <section class="moments-section">
+        <h3 class="moments-heading">✦ Un rincón para cada momento ✦</h3>
+        <div class="moments-grid">
+          <div class="moment-item">
+            <span class="moment-icon">☕</span>
+            <div class="moment-title">Pausa de 5 Minutos</div>
+            <div class="moment-desc">Tests rápidos, memes o una partida corta para despejarte.</div>
+          </div>
+          <div class="moment-item">
+            <span class="moment-icon">🌙</span>
+            <div class="moment-title">Noches de Lectura</div>
+            <div class="moment-desc">Relatos inmersivos e historias ramificadas para perderse.</div>
+          </div>
+          <div class="moment-item">
+            <span class="moment-icon">🧠</span>
+            <div class="moment-title">Desafío Mental</div>
+            <div class="moment-desc">Acertijos, enigmas y juegos clásicos para ejercitar la mente.</div>
+          </div>
+          <div class="moment-item">
+            <span class="moment-icon">⚡</span>
+            <div class="moment-title">100% Libre y Gratis</div>
+            <div class="moment-desc">Sin registros, sin esperas, directo en tu navegador.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <!-- MODAL DE CONTACTO WEB3FORMS -->
+  <div id="contact-modal" class="contact-modal-overlay" onclick="if(event.target === this) closeContactModal();">
+    <div class="contact-modal-box" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+      <button type="button" class="contact-modal-close" onclick="closeContactModal()" aria-label="Cerrar ventana emergente">✕</button>
+      <div class="contact-modal-header">
+        <div class="contact-modal-badge">
+          <span>📻</span> <span>Línea Directa con el Taller</span>
+        </div>
+        <h2 id="contact-modal-title" class="contact-modal-title">Contactar con Pablosky92</h2>
+        <p class="contact-modal-desc">
+          ¿Tienes una idea, sugerencia, has detectado un cable suelto en la web o simplemente quieres saludar? Rellena el formulario y el mensaje viajará directo a mi estación de trabajo.
+        </p>
+      </div>
+
+      <div id="contact-success-view" class="contact-success-view" style="display:none;">
+        <div class="contact-success-icon">🎉</div>
+        <h3 class="contact-success-title">¡Mensaje Transmitido con Éxito!</h3>
+        <p class="contact-success-desc">
+          Tus datos han viajado a través de los cables de cobre y han aterrizado en la bandeja del creador. Te responderé en cuanto mis circuitos se enfríen.
+        </p>
+        <button type="button" class="btn-contact-submit" style="width: auto; margin-top: 1.25rem;" onclick="resetContactForm()">
+          <span>Cerrar o Enviar otro mensaje</span>
+        </button>
+      </div>
+
+      <form id="creator-contact-form" class="contact-form" onsubmit="submitContactForm(event)">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+        <div class="contact-form-grid">
+          <div class="contact-form-group">
+            <label for="modal-contact-name" class="contact-form-label"><span>👤 Tu Nombre o Alias</span></label>
+            <input type="text" id="modal-contact-name" name="name" class="contact-form-input" placeholder="Ej. Viajero del Módem" required>
+          </div>
+          <div class="contact-form-group">
+            <label for="modal-contact-email" class="contact-form-label"><span>📧 Correo Electrónico</span></label>
+            <input type="email" id="modal-contact-email" name="email" class="contact-form-input" placeholder="tu-correo@ejemplo.com" required>
+          </div>
+        </div>
+
+        <div class="contact-form-group">
+          <label for="modal-contact-category" class="contact-form-label"><span>🏷️ Motivo del Contacto</span></label>
+          <select id="modal-contact-category" name="category" class="contact-form-select">
+            <option value="Sugerencia o Idea">💡 Sugerencia o nueva idea para la web</option>
+            <option value="Reporte de Error o Bug">⚙️ Reporte de fallo o cable suelto</option>
+            <option value="Propuesta de Colaboración">🤝 Propuesta de colaboración o proyecto</option>
+            <option value="Solo charlar o saludar">☕ Solo charlar o saludar</option>
+          </select>
+        </div>
+
+        <div class="contact-form-group">
+          <label for="modal-contact-message" class="contact-form-label"><span>💬 Tu Mensaje</span></label>
+          <textarea id="modal-contact-message" name="message" class="contact-form-textarea" rows="4" placeholder="Escribe aquí lo que quieras contarle a Pablosky92..." required></textarea>
+        </div>
+
+        <div id="contact-form-status-err" class="contact-form-status error" style="display:none;"></div>
+
+        <div class="contact-form-actions">
+          <button type="button" class="btn-contact-cancel" onclick="closeContactModal()">Cancelar</button>
+          <button type="submit" id="btn-contact-submit" class="btn-contact-submit">
+            <span>✉️ Enviar Mensaje</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openContactModal() {
+      var modal = document.getElementById('contact-modal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeContactModal() {
+      var modal = document.getElementById('contact-modal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeContactModal();
+    });
+    function resetContactForm() {
+      var form = document.getElementById('creator-contact-form');
+      var succ = document.getElementById('contact-success-view');
+      var err = document.getElementById('contact-form-status-err');
+      if (form) { form.reset(); form.style.display = 'block'; }
+      if (succ) succ.style.display = 'none';
+      if (err) err.style.display = 'none';
+      closeContactModal();
+    }
+    async function submitContactForm(e) {
+      e.preventDefault();
+      var form = document.getElementById('creator-contact-form');
+      var btn = document.getElementById('btn-contact-submit');
+      var err = document.getElementById('contact-form-status-err');
+      var succ = document.getElementById('contact-success-view');
+      if (!form) return;
+      
+      var name = document.getElementById('modal-contact-name').value;
+      var email = document.getElementById('modal-contact-email').value;
+      var category = document.getElementById('modal-contact-category').value;
+      var message = document.getElementById('modal-contact-message').value;
+
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<span>⏳ Transmitiendo...</span>';
+      }
+      if (err) err.style.display = 'none';
+
+      try {
+        var res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: 'c669c668-da2d-4b10-8298-094ee145a7d6',
+            subject: 'Nuevo mensaje desde Tus Desvaríos (' + category + ')',
+            from_name: 'Tus Desvaríos Web',
+            name: name,
+            email: email,
+            category: category,
+            message: message
+          })
+        });
+        var data = await res.json();
+        if (res.status === 200 && data.success) {
+          form.style.display = 'none';
+          succ.style.display = 'flex';
+        } else {
+          err.textContent = data.message || '⚠️ Error al enviar el mensaje. Por favor, inténtalo de nuevo.';
+          err.style.display = 'block';
+        }
+      } catch(ex) {
+        err.textContent = '⚠️ Error de conexión. Comprueba tu red e inténtalo de nuevo.';
+        err.style.display = 'block';
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = '<span>✉️ Enviar Mensaje</span>';
+        }
+      }
+    }
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

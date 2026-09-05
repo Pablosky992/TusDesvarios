@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Ahorcado Desvariado — Juego Arcade Retro | TusDesvarios.com</title>
+  <meta name="description" content="El clásico juego del ahorcado reinventado con estética retro arcade, efectos de sonido 8-bit, 6 categorías temáticas y cientos de palabras misteriosas.">
+  <meta name="keywords" content="el ahorcado, juego del ahorcado gratis, ahorcado retro arcade, juegos de palabras, minijuegos online, tus desvarios">
+  
+  <!-- Canonical & Open Graph / SEO -->
+  <link rel="canonical" href="https://tusdesvarios.com/juego-el-ahorcado.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="El Ahorcado Desvariado — Juego Arcade Retro | Tus Desvaríos">
+  <meta property="og:description" content="El clásico juego del ahorcado reinventado con estética retro arcade, efectos de sonido 8-bit, 6 categorías temáticas y cientos de palabras misteriosas.">
+  <meta property="og:url" content="https://tusdesvarios.com/juego-el-ahorcado.html">
+  <meta property="og:image" content="images/games/portada_ahorcado.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Ahorcado Desvariado — Minijuego Retro Gratis">
+  <meta name="twitter:description" content="El clásico juego del ahorcado reinventado con estética retro arcade, efectos de sonido 8-bit, 6 categorías temáticas y cientos de palabras misteriosas.">
+  <meta name="twitter:image" content="images/games/portada_ahorcado.jpg">
+
+  <!-- Schema.org VideoGame & Breadcrumb structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "El Ahorcado Desvariado",
+  "description": "El clásico juego del ahorcado reinventado con estética retro arcade, efectos de sonido 8-bit, 6 categorías temáticas y cientos de palabras misteriosas.",
+  "url": "https://tusdesvarios.com/juego-el-ahorcado.html",
+  "genre": [
+    "Word Game",
+    "Puzzle",
+    "Retro Arcade"
+  ],
+  "playMode": "SinglePlayer",
+  "applicationCategory": "Game",
+  "inLanguage": "es",
+  "image": "https://tusdesvarios.com/images/games/portada_ahorcado.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tus Desvaríos",
+    "url": "https://tusdesvarios.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://tusdesvarios.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Desvaríos Retro",
+      "item": "https://tusdesvarios.com/desvarios-retro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "El Ahorcado",
+      "item": "https://tusdesvarios.com/juego-el-ahorcado.html"
+    }
+  ]
+}
+  </script>
+
+    <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --bg-surface-hover: rgba(34, 45, 68, 0.95);
+      --bg-glass: rgba(12, 17, 28, 0.85);
+
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --border-focus: rgba(168, 85, 247, 0.5);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --accent-purple: #a855f7;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-green: #10b981;
+
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-title: 'Cinzel', Georgia, serif;
+      --font-reading: 'Crimson Pro', Georgia, serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(168, 85, 247, 0.14) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(245, 158, 11, 0.08) 0px, transparent 55%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+    }
+
+    .main-content {
+      flex: 1;
+      max-width: 840px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .cat-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .cat-filter-btn:hover {
+      background: var(--bg-surface-hover);
+      color: #fff;
+    }
+
+    .cat-filter-btn-active {
+      background: rgba(168, 85, 247, 0.18);
+      border-color: rgba(168, 85, 247, 0.5);
+      color: #c084fc;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.2);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(168, 85, 247, 0.6);
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link active-retro" title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="app-root">
+      <!-- Injected via hangmanApp -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const GAME_DATA = {"id":"el-ahorcado","slug":"el-ahorcado","titulo":"El Ahorcado Desvariado","subtitulo":"Descifra la palabra oculta antes de que el cadalso de neón reclame tu alma","descripcionCorta":"El clásico juego del ahorcado reinventado con estética retro arcade, efectos de sonido 8-bit, 6 categorías temáticas y cientos de palabras misteriosas.","icono":"🔤","categoria":"palabras","categoriaLabel":"Palabras & Letras","tiempoMin":3,"color":"#a855f7","portada":"images/games/portada_ahorcado.jpg","categorias":[{"id":"literatura","nombre":"Literatura Gótica & Ficción","icono":"📜","descripcion":"Autores oscuros, obras maestras, criaturas y artefactos de la narrativa fantástica."},{"id":"cine","nombre":"Cine de Culto & Sci-Fi","icono":"🍿","descripcion":"Naves espaciales, futuros distópicos, androides y películas legendarias."},{"id":"filosofia","nombre":"Filosofía & Misterio","icono":"🧠","descripcion":"Conceptos existenciales, paradojas mentales y enigmas del conocimiento."},{"id":"mitologia","nombre":"Mitología & Leyendas","icono":"🧙","descripcion":"Bestias milenarias, reinos perdidos y dioses del folclore universal."},{"id":"retro","nombre":"Arcade & Videojuegos Retro","icono":"🕹️","descripcion":"Clásicos de los 80s y 90s, consolas míticas y términos del gaming vintage."}],"palabras":[{"palabra":"FRANKENSTEIN","categoria":"literatura","pista":"La mítica criatura creada a partir de piezas inertes por Mary Shelley.","curiosidad":"Mary Shelley escribió la novela con solo 18 años durante el famoso 'año sin verano' de 1816 en Villa Diodati."},{"palabra":"NIGROMANTE","categoria":"literatura","pista":"Hechicero oscuro capaz de invocar y comunicarse con los espíritus de los muertos.","curiosidad":"La nigromancia proviene del griego 'nekros' (muerto) y 'manteia' (adivinación)."},{"palabra":"CTHULHU","categoria":"literatura","pista":"Entidad cósmica con cabeza de pulpo y alas que duerme en la ciudad sumergida de R'lyeh.","curiosidad":"Creado por H.P. Lovecraft en 1928, simboliza el terror cósmico ante lo desconocido."},{"palabra":"ALQUIMISTA","categoria":"literatura","pista":"Buscador de la transmutación de los metales y el elixir de la vida eterna.","curiosidad":"Isaac Newton dedicó más escritos a la alquimia secreta que a la física o la gravedad."},{"palabra":"INQUISIDOR","categoria":"literatura","pista":"Juez eclesiástico implacable encargado de perseguir la herejía en la Edad Media.","curiosidad":"El famoso manual 'Malleus Maleficarum' (1487) fue la guía de caza de brujas más difundida."},{"palabra":"LABERINTO","categoria":"literatura","pista":"Estructura intrincada de senderos diseñada para confundir a quien intente escapar.","curiosidad":"El laberinto de Creta fue construido por Dédalo para encerrar al temible Minotauro."},{"palabra":"MANUSCRITO","categoria":"literatura","pista":"Documento antiguo redactado a mano sobre pergamino o papiro.","curiosidad":"El manuscrito Voynich sigue siendo uno de los mayores textos cifrados sin descifrar del mundo."},{"palabra":"ESPECTRO","categoria":"literatura","pista":"Aparición fantasmal o visión incorpórea que acecha en las sombras.","curiosidad":"En la literatura gótica, los espectros a menudo representan secretos no confesados del pasado."},{"palabra":"BIBLIOTECA","categoria":"literatura","pista":"Santuario de tomos antiguos, grimorios y conocimiento olvidado.","curiosidad":"La mítica Biblioteca de Alejandría llegó a albergar más de 400.000 rollos de pergamino."},{"palabra":"DOPPELGANGER","categoria":"literatura","pista":"El doble fantasmal o gemelo malvado de una persona viva.","curiosidad":"Palabra alemana que significa 'caminante doble'. Ver al propio se consideraba presagio de muerte."},{"palabra":"CYBERPUNK","categoria":"cine","pista":"Subgénero de ciencia ficción que combina alta tecnología con baja calidad de vida ('High tech, low life').","curiosidad":"Popularizado por la novela 'Neuromante' de William Gibson y la película Blade Runner (1982)."},{"palabra":"REPLICANTE","categoria":"cine","pista":"Androide biológico casi indistinguible del ser humano en Blade Runner.","curiosidad":"El modelo Nexus-6 tenía una vida programada de solo cuatro años para evitar que desarrollaran empatía."},{"palabra":"MATRIX","categoria":"cine","pista":"Simulación virtual interactiva que mantiene a la humanidad dormida mientras es cosechada.","curiosidad":"La famosa lluvia de código verde inicial se creó a partir de símbolos de libros de recetas de sushi."},{"palabra":"INTERESTELAR","categoria":"cine","pista":"Odisea espacial donde un agujero negro llamado Gargantúa altera la percepción del tiempo.","curiosidad":"El físico teórico Kip Thorne calculó las ecuaciones reales para renderizar el agujero negro de la película."},{"palabra":"DELOREAN","categoria":"cine","pista":"Coche deportivo icónico con puertas de ala de gaviota transformado en máquina del tiempo.","curiosidad":"En el guion original de 'Regreso al Futuro', la máquina del tiempo era una nevera."},{"palabra":"NOSTROMO","categoria":"cine","pista":"Carguero comercial espacial donde acechó el primer xenomorfo de Alien (1979).","curiosidad":"El nombre fue tomado de una novela de Joseph Conrad, autor también de 'El corazón de las tinieblas'."},{"palabra":"MONOLITO","categoria":"cine","pista":"Misterioso prisma negro extraterrestre en '2001: Odisea del Espacio'.","curiosidad":"Las proporciones matemáticas exactas del monolito son 1 : 4 : 9 (los cuadrados de 1, 2 y 3)."},{"palabra":"TERMINATOR","categoria":"cine","pista":"Cíborg asesino enviado desde el futuro por Skynet para cambiar el curso de la historia.","curiosidad":"James Cameron concibió la idea durante una pesadilla febril en un hotel de Roma."},{"palabra":"METROPOLIS","categoria":"cine","pista":"Obra maestra del cine mudo expresionista de 1927 dirigida por Fritz Lang.","curiosidad":"El diseño de la mujer robot 'Maria' inspiró directamente la apariencia de C-3PO en Star Wars."},{"palabra":"DISTOPIA","categoria":"cine","pista":"Sociedad ficticia indeseable marcada por el control totalitario o el colapso ecológico.","curiosidad":"El término fue acuñado por John Stuart Mill en 1868 como antónimo directo de 'utopía'."},{"palabra":"EXISTENCIALISMO","categoria":"filosofia","pista":"Corriente que sostiene que la existencia precede a la esencia: somos lo que elegimos ser.","curiosidad":"Jean-Paul Sartre rechazó el Premio Nobel de Literatura en 1964 para mantener su total independencia."},{"palabra":"SOLIPSISMO","categoria":"filosofia","pista":"Postura radical según la cual sólo se puede estar seguro de la existencia de la propia mente.","curiosidad":"Viene del latín 'solus' (solo) e 'ipse' (uno mismo). Es el desvarío filosófico por excelencia."},{"palabra":"PARADOJA","categoria":"filosofia","pista":"Proposición que parece contradictoria pero que encierra una verdad profunda o un bucle irresoluble.","curiosidad":"La paradoja del barco de Teseo pregunta si un barco al que se le cambian todas las piezas sigue siendo el mismo."},{"palabra":"NIHILISMO","categoria":"filosofia","pista":"Doctrina que niega la existencia de valores, significados o propósitos objetivos en la vida.","curiosidad":"Popularizado por Friedrich Nietzsche al advertir sobre la muerte de las certezas morales tradicionales."},{"palabra":"CATARSIS","categoria":"filosofia","pista":"Purificación o liberación emocional provocada por una experiencia artística o trágica.","curiosidad":"Aristóteles lo definió en su 'Poética' como el efecto liberador que la tragedia causaba en los espectadores."},{"palabra":"EPIFANIA","categoria":"filosofia","pista":"Momento repentino de lucidez o revelación profunda que transforma la comprensión de la realidad.","curiosidad":"En literatura, James Joyce la utilizaba para describir instantes mágicos donde lo cotidiano revela su esencia."},{"palabra":"DILEMA","categoria":"filosofia","pista":"Situación en la que se debe elegir entre dos opciones igualmente difíciles o morales.","curiosidad":"El 'Dilema del Tranvía' fue formulado por Philippa Foot en 1967 y hoy se aplica a coches autónomos."},{"palabra":"STOICISMO","categoria":"filosofia","pista":"Escuela filosófica que enseña a dominar las emociones y centrarse sólo en lo que podemos controlar.","curiosidad":"Fue fundada por Zenón de Citio en Atenas hacia el 300 a.C. y practicada por el emperador Marco Aurelio."},{"palabra":"MINOTAURO","categoria":"mitologia","pista":"Monstruo con cuerpo de hombre y cabeza de toro que devoraba tributos en el laberinto.","curiosidad":"Teseo logró vencerlo y salir del laberinto gracias al hilo dorado entregado por Ariadna."},{"palabra":"VALHALLA","categoria":"mitologia","pista":"Majestuoso salón celestial de Odín donde los guerreros caídos combaten y festejan.","curiosidad":"En la mitología nórdica, las valquirias elegían a los héroes caídos más valientes para llevarlos allí."},{"palabra":"KRAKEN","categoria":"mitologia","pista":"Colosal criatura marina con tentáculos gigantescos capaz de hundir barcos enteros.","curiosidad":"Las leyendas escandinavas del Kraken se inspiraron probablemente en avistamientos de calamares gigantes reales."},{"palabra":"BASILISCO","categoria":"mitologia","pista":"Reptil mítico temido por su mirada petrificante y su aliento mortalmente venenoso.","curiosidad":"Según los bestiarios medievales, la única debilidad mortal del basilisco era el canto del gallo o su propio reflejo."},{"palabra":"QUIMERA","categoria":"mitologia","pista":"Bestia híbrida fabulosa que escupía fuego, con partes de león, cabra y serpiente.","curiosidad":"Fue derrotada por el héroe Belerofonte montado sobre el caballo alado Pegaso."},{"palabra":"OUROBOROS","categoria":"mitologia","pista":"Símbolo ancestral que muestra a una serpiente o dragón comiéndose su propia cola.","curiosidad":"Representa el ciclo eterno de la vida, la muerte, el renacimiento y el infinito."},{"palabra":"CERBERO","categoria":"mitologia","pista":"Perro infernal de tres cabezas que custodia las puertas del inframundo de Hades.","curiosidad":"Heracles lo capturó vivo sin usar armas como el último y más peligroso de sus doce trabajos."},{"palabra":"LEVIATAN","categoria":"mitologia","pista":"Bestia primordial de las profundidades oceánicas asociada con el caos inicial.","curiosidad":"Thomas Hobbes utilizó su nombre en 1651 para titular su famoso tratado sobre el Estado y el poder político."},{"palabra":"SYNTHWAVE","categoria":"retro","pista":"Estilo musical y visual retrofuturista inspirado en las bandas sonoras y neones de los años 80.","curiosidad":"Utiliza sintetizadores analógicos clásicos de los 80 para recrear una nostalgia por un futuro que nunca fue."},{"palabra":"JOYSTICK","categoria":"retro","pista":"Palanca de control mítica de las máquinas recreativas y primeras consolas de videojuegos.","curiosidad":"El término provino originalmente de la palanca de control de los aviones militares de inicios del siglo XX."},{"palabra":"CARTUCHO","categoria":"retro","pista":"Soporte físico con memoria ROM que se introducía en la ranura de las consolas retro.","curiosidad":"El mito de soplar los cartuchos de Nintendo no mejoraba la conexión y podía oxidar los contactos de cobre."},{"palabra":"COMMODORE","categoria":"retro","pista":"Legendario ordenador doméstico de 8 bits (C64) que reinó en los hogares en los años 80.","curiosidad":"El Commodore 64 ostenta el récord Guinness del modelo de ordenador individual más vendido de la historia."},{"palabra":"MEGAMAN","categoria":"retro","pista":"El 'Bombardero Azul' de Capcom que absorbía los poderes de los Robot Masters derrotados.","curiosidad":"En Japón se le conoce como 'Rockman', y su creador Keiji Inafune lo diseñó azul por la paleta de la NES."},{"palabra":"TETRIS","categoria":"retro","pista":"Juego de puzle soviético donde debes encajar tetrominós que caen sin cesar.","curiosidad":"Fue creado en 1984 por Alekséi Pázhitnov en una computadora Elektronika 60 de la Academia de Ciencias de Moscú."},{"palabra":"GAMEBOY","categoria":"retro","pista":"Consola portátil gris de Nintendo con pantalla monocromática verdosa que revolucionó el mundo en 1989.","curiosidad":"Una Game Boy sobrevivió a los bombardeos de la Guerra del Golfo y todavía funciona expuesta en Nueva York."},{"palabra":"POLIGONO","categoria":"retro","pista":"Figura geométrica básica que dio inicio a la era de los gráficos 3D en las consolas de 32 bits.","curiosidad":"Juegos pioneros como 'Star Fox' (1993) usaron el chip Super FX para renderizar polígonos en Super Nintendo."}]};
+
+    const hangmanApp = {
+      selectedCategory: 'all',
+      difficulty: 'normal',
+      currentWordObj: null,
+      guessedLetters: new Set(),
+      clueRevealed: false,
+      soundEnabled: true,
+      streak: 0,
+      bestStreak: 0,
+      score: 0,
+      gameStatus: 'playing',
+      audioCtx: null,
+
+      init() {
+        try {
+          const saved = localStorage.getItem('tusdesvarios_ahorcado_best');
+          if (saved) this.bestStreak = parseInt(saved, 10);
+        } catch (e) {}
+
+        this.pickNewWord();
+        this.setupKeyboardListeners();
+      },
+
+      playSynth(type) {
+        if (!this.soundEnabled) return;
+        try {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return;
+          if (!this.audioCtx) this.audioCtx = new AudioCtx();
+          if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+          const now = this.audioCtx.currentTime;
+          const osc = this.audioCtx.createOscillator();
+          const gain = this.audioCtx.createGain();
+          osc.connect(gain);
+          gain.connect(this.audioCtx.destination);
+
+          if (type === 'hit') {
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(587.33, now);
+            osc.frequency.exponentialRampToValueAtTime(880, now + 0.12);
+            gain.gain.setValueAtTime(0.18, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.15);
+            osc.start(now);
+            osc.stop(now + 0.15);
+          } else if (type === 'miss') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(180, now);
+            osc.frequency.linearRampToValueAtTime(110, now + 0.22);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.25);
+            osc.start(now);
+            osc.stop(now + 0.25);
+          } else if (type === 'win') {
+            const notes = [523.25, 659.25, 783.99, 1046.5];
+            notes.forEach((freq, idx) => {
+              const o = this.audioCtx.createOscillator();
+              const g = this.audioCtx.createGain();
+              o.connect(g);
+              g.connect(this.audioCtx.destination);
+              o.type = 'square';
+              o.frequency.setValueAtTime(freq, now + idx * 0.1);
+              g.gain.setValueAtTime(0.15, now + idx * 0.1);
+              g.gain.linearRampToValueAtTime(0.01, now + idx * 0.1 + 0.18);
+              o.start(now + idx * 0.1);
+              o.stop(now + idx * 0.1 + 0.18);
+            });
+          } else if (type === 'lose') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(320, now);
+            osc.frequency.linearRampToValueAtTime(80, now + 0.5);
+            gain.gain.setValueAtTime(0.22, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.55);
+            osc.start(now);
+            osc.stop(now + 0.55);
+          } else if (type === 'click') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(440, now);
+            gain.gain.setValueAtTime(0.08, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.05);
+            osc.start(now);
+            osc.stop(now + 0.05);
+          }
+        } catch (e) {}
+      },
+
+      pickNewWord(catId = this.selectedCategory, diff = this.difficulty) {
+        this.selectedCategory = catId;
+        this.difficulty = diff;
+
+        let pool = GAME_DATA.palabras;
+        if (catId !== 'all') {
+          pool = pool.filter(w => w.categoria === catId);
+        }
+        if (pool.length === 0) pool = GAME_DATA.palabras;
+
+        this.currentWordObj = pool[Math.floor(Math.random() * pool.length)];
+        this.guessedLetters = new Set();
+        this.clueRevealed = false;
+        this.gameStatus = 'playing';
+        this.render();
+      },
+
+      getMaxErrors() {
+        return this.difficulty === 'facil' ? 8 : this.difficulty === 'normal' ? 6 : 4;
+      },
+
+      getCleanWord() {
+        if (!this.currentWordObj) return '';
+        return this.currentWordObj.palabra.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      },
+
+      guessLetter(letter) {
+        if (this.gameStatus !== 'playing' || !this.currentWordObj) return;
+        const upper = letter.toUpperCase();
+        if (this.guessedLetters.has(upper)) return;
+
+        this.guessedLetters.add(upper);
+        const cleanWord = this.getCleanWord();
+
+        if (cleanWord.includes(upper)) {
+          this.playSynth('hit');
+          const wordLetters = new Set(cleanWord.split('').filter(c => /[A-ZÑ]/.test(c)));
+          const allFound = Array.from(wordLetters).every(l => this.guessedLetters.has(l));
+          if (allFound) {
+            this.gameStatus = 'won';
+            this.playSynth('win');
+            this.fireConfetti();
+            if (window.DesvariosAuth) {
+              window.DesvariosAuth.unlockMedal('ahorcado-sabio');
+            }
+            const wrongCount = Array.from(this.guessedLetters).filter(l => !cleanWord.includes(l)).length;
+            const errorsLeft = Math.max(0, this.getMaxErrors() - wrongCount);
+            const pointsEarned = (errorsLeft + 1) * 50 * (this.difficulty === 'dificil' ? 2 : this.difficulty === 'normal' ? 1.5 : 1);
+            this.score += Math.round(pointsEarned);
+            this.streak++;
+            if (this.streak > this.bestStreak) {
+              this.bestStreak = this.streak;
+              try {
+                localStorage.setItem('tusdesvarios_ahorcado_best', this.streak.toString());
+              } catch (e) {}
+            }
+          }
+        } else {
+          this.playSynth('miss');
+          const wrongCount = Array.from(this.guessedLetters).filter(l => !cleanWord.includes(l)).length;
+          if (wrongCount >= this.getMaxErrors()) {
+            this.gameStatus = 'lost';
+            this.playSynth('lose');
+            this.streak = 0;
+          }
+        }
+
+        this.render();
+      },
+
+      revealClue() {
+        this.clueRevealed = true;
+        this.playSynth('click');
+        this.render();
+      },
+
+      toggleSound() {
+        this.soundEnabled = !this.soundEnabled;
+        this.playSynth('click');
+        this.render();
+      },
+
+      setupKeyboardListeners() {
+        window.addEventListener('keydown', (e) => {
+          if (e.ctrlKey || e.metaKey || e.altKey) return;
+          const key = e.key.toUpperCase();
+          if (/^[A-ZÑ]$/.test(key)) {
+            hangmanApp.guessLetter(key);
+          }
+        });
+      },
+
+      render() {
+        const root = document.getElementById('app-root');
+        if (!this.currentWordObj) return;
+
+        const cleanWord = this.getCleanWord();
+        const wrongGuesses = Array.from(this.guessedLetters).filter(l => !cleanWord.includes(l));
+        const maxErrors = this.getMaxErrors();
+        const errorsLeft = Math.max(0, maxErrors - wrongGuesses.length);
+        const catInfo = GAME_DATA.categorias.find(c => c.id === this.currentWordObj.categoria);
+
+        const rows = [
+          ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+          ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Ñ'],
+          ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
+        ];
+
+        const keyboardHtml = rows.map(row => {
+          const keysHtml = row.map(letter => {
+            const isGuessed = this.guessedLetters.has(letter);
+            const isCorrect = isGuessed && cleanWord.includes(letter);
+            const isWrong = isGuessed && !cleanWord.includes(letter);
+            const disabled = isGuessed || this.gameStatus !== 'playing';
+
+            let bg = 'rgba(255, 255, 255, 0.05)';
+            let border = 'rgba(255, 255, 255, 0.15)';
+            let color = 'var(--text-primary)';
+            let shadow = 'none';
+
+            if (isCorrect) {
+              bg = 'rgba(16, 185, 129, 0.25)';
+              border = 'rgba(52, 211, 153, 0.5)';
+              color = '#34d399';
+              shadow = '0 0 10px rgba(52, 211, 153, 0.3)';
+            } else if (isWrong) {
+              bg = 'rgba(239, 68, 68, 0.15)';
+              border = 'rgba(239, 68, 68, 0.4)';
+              color = 'rgba(248, 113, 113, 0.5)';
+            }
+
+            return `
+              <button
+                ${disabled ? 'disabled' : ''}
+                onclick="hangmanApp.guessLetter('${letter}')"
+                style="width:clamp(28px, 8vw, 44px); height:clamp(38px, 9vw, 48px); border-radius:var(--radius-sm); font-weight:700; font-size:0.95rem; font-family:monospace; cursor:${disabled ? 'not-allowed' : 'pointer'}; border:1px solid ${border}; background:${bg}; color:${color}; opacity:${isWrong ? 0.4 : 1}; box-shadow:${shadow}; display:flex; align-items:center; justify-content:center; transition:all 0.15s ease;"
+              >
+                ${letter}
+              </button>
+            `;
+          }).join('');
+
+          return `<div style="display:flex; gap:0.35rem; justify-content:center; width:100%;">${keysHtml}</div>`;
+        }).join('');
+
+        const wordDisplayHtml = cleanWord.split('').map(char => {
+          const isGuessed = this.guessedLetters.has(char);
+          const isRevealedOnLoss = this.gameStatus === 'lost';
+          const showChar = isGuessed || isRevealedOnLoss;
+          const color = isGuessed ? '#34d399' : isRevealedOnLoss ? '#f87171' : '#fff';
+          const border = isGuessed ? '#34d399' : isRevealedOnLoss ? '#f87171' : 'rgba(255, 255, 255, 0.4)';
+
+          return `
+            <div style="width:38px; height:48px; border-bottom:3px solid ${border}; display:flex; align-items:center; justify-content:center; font-size:1.6rem; font-weight:800; font-family:monospace; color:${color}; text-shadow:${isGuessed ? '0 0 10px rgba(52, 211, 153, 0.6)' : 'none'};">
+              ${showChar ? char : ''}
+            </div>
+          `;
+        }).join('');
+
+        const isHead = wrongGuesses.length >= (maxErrors === 4 ? 1 : maxErrors === 6 ? 1 : 2);
+        const isTorso = wrongGuesses.length >= (maxErrors === 4 ? 2 : maxErrors === 6 ? 2 : 4);
+        const isArmL = wrongGuesses.length >= (maxErrors === 4 ? 3 : maxErrors === 6 ? 3 : 5);
+        const isArmR = wrongGuesses.length >= (maxErrors === 4 ? 3 : maxErrors === 6 ? 4 : 6);
+        const isLegL = wrongGuesses.length >= (maxErrors === 4 ? 4 : maxErrors === 6 ? 5 : 7);
+        const isLegR = wrongGuesses.length >= maxErrors;
+
+        root.innerHTML = `
+          <div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; flex-wrap:wrap; gap:0.8rem;">
+              <a href="desvarios-retro.html" class="breadcrumb-link">
+                <span>←</span> <span>Volver a Desvaríos Retro</span>
+              </a>
+
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <div style="display:inline-flex; align-items:center; gap:0.35rem; padding:0.3rem 0.75rem; border-radius:var(--radius-full); background:rgba(245, 158, 11, 0.12); border:1px solid rgba(245, 158, 11, 0.3); color:#fbbf24; font-size:0.82rem; font-weight:700;">
+                  🏆 <span>${this.score} Puntos</span>
+                </div>
+                <div style="display:inline-flex; align-items:center; gap:0.35rem; padding:0.3rem 0.75rem; border-radius:var(--radius-full); background:${this.streak > 0 ? 'rgba(239, 68, 68, 0.15)' : 'rgba(255, 255, 255, 0.05)'}; border:${this.streak > 0 ? '1px solid rgba(239, 68, 68, 0.35)' : '1px solid var(--border-subtle)'}; color:${this.streak > 0 ? '#f87171' : 'var(--text-muted)'}; font-size:0.82rem; font-weight:700;">
+                  🔥 <span>Racha: ${this.streak}</span> ${this.bestStreak > 0 ? `<span style="opacity:0.7; font-size:0.75rem;">(Récord: ${this.bestStreak})</span>` : ''}
+                </div>
+                <button onclick="hangmanApp.toggleSound()" class="btn-secondary" style="padding:0.3rem 0.6rem;" title="${this.soundEnabled ? 'Silenciar' : 'Activar sonido'}">
+                  ${this.soundEnabled ? '🔊' : '🔇'}
+                </button>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-surface); border:1px solid rgba(168, 85, 247, 0.35); border-radius:var(--radius-lg); padding:2rem 1.5rem; box-shadow:0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(168, 85, 247, 0.15); position:relative;">
+              <!-- Categories and Difficulty Bar -->
+              <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.75rem; padding-bottom:1.25rem; border-bottom:1px solid var(--border-subtle); margin-bottom:1.5rem;">
+                <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+                  <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Temática:</span>
+                  <div style="display:flex; gap:0.35rem; flex-wrap:wrap;">
+                    <button class="cat-filter-btn ${this.selectedCategory === 'all' ? 'cat-filter-btn-active' : ''}" onclick="hangmanApp.pickNewWord('all', '${this.difficulty}')">
+                      🎲 Aleatorio
+                    </button>
+                    ${GAME_DATA.categorias.map(c => `
+                      <button class="cat-filter-btn ${this.selectedCategory === c.id ? 'cat-filter-btn-active' : ''}" onclick="hangmanApp.pickNewWord('${c.id}', '${this.difficulty}')">
+                        <span>${c.icono}</span> <span>${c.nombre.split(' ')[0]}</span>
+                      </button>
+                    `).join('')}
+                  </div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Vidas:</span>
+                  <div style="display:flex; gap:0.3rem;">
+                    ${['facil', 'normal', 'dificil'].map(d => {
+                      const isActive = this.difficulty === d;
+                      const color = d === 'facil' ? '#34d399' : d === 'normal' ? '#fbbf24' : '#f87171';
+                      return `
+                        <button onclick="hangmanApp.pickNewWord('${this.selectedCategory}', '${d}')" style="font-size:0.78rem; padding:0.25rem 0.65rem; border-radius:var(--radius-full); background:${isActive ? 'rgba(255, 255, 255, 0.15)' : 'rgba(255, 255, 255, 0.04)'}; color:${isActive ? color : 'var(--text-muted)'}; border:1px solid ${isActive ? color : 'var(--border-subtle)'}; font-weight:700; cursor:pointer;">
+                          ${d.toUpperCase()}
+                        </button>
+                      `;
+                    }).join('')}
+                  </div>
+                </div>
+              </div>
+
+              <div style="text-align:center; margin-bottom:1.25rem;">
+                <span class="hero-badge" style="background:rgba(168, 85, 247, 0.12); border-color:rgba(168, 85, 247, 0.35); color:#c084fc; font-size:0.78rem; padding:0.25rem 0.75rem;">
+                  ${catInfo ? `${catInfo.icono} ${catInfo.nombre}` : '🎲 Categoría Variada'}
+                </span>
+              </div>
+
+              <!-- Gallow Graphic -->
+              <div style="display:flex; justify-content:center; align-items:center; margin-bottom:1.75rem;">
+                <div style="width:240px; height:190px; background:rgba(0, 0, 0, 0.45); border-radius:var(--radius-md); border:1px solid rgba(168, 85, 247, 0.25); position:relative; display:flex; align-items:center; justify-content:center;">
+                  <svg viewBox="0 0 200 180" width="200" height="180" style="filter:drop-shadow(0 0 8px rgba(168, 85, 247, 0.5));">
+                    <line x1="20" y1="160" x2="180" y2="160" stroke="#a855f7" stroke-width="4" stroke-linecap="round" />
+                    <line x1="60" y1="160" x2="60" y2="20" stroke="#a855f7" stroke-width="4" stroke-linecap="round" />
+                    <line x1="58" y1="20" x2="135" y2="20" stroke="#a855f7" stroke-width="4" stroke-linecap="round" />
+                    <line x1="60" y1="50" x2="90" y2="20" stroke="#a855f7" stroke-width="3" />
+                    <line x1="135" y1="20" x2="135" y2="45" stroke="#fbbf24" stroke-width="3" stroke-dasharray="3 2" />
+
+                    ${isHead ? '<circle cx="135" cy="60" r="14" stroke="#06b6d4" stroke-width="3.5" fill="rgba(6, 182, 212, 0.15)" />' : ''}
+                    ${isTorso ? '<line x1="135" y1="74" x2="135" y2="115" stroke="#06b6d4" stroke-width="3.5" stroke-linecap="round" />' : ''}
+                    ${isArmL ? '<line x1="135" y1="85" x2="112" y2="102" stroke="#06b6d4" stroke-width="3.5" stroke-linecap="round" />' : ''}
+                    ${isArmR ? '<line x1="135" y1="85" x2="158" y2="102" stroke="#06b6d4" stroke-width="3.5" stroke-linecap="round" />' : ''}
+                    ${isLegL ? '<line x1="135" y1="115" x2="115" y2="148" stroke="#06b6d4" stroke-width="3.5" stroke-linecap="round" />' : ''}
+                    ${isLegR ? '<line x1="135" y1="115" x2="155" y2="148" stroke="#06b6d4" stroke-width="3.5" stroke-linecap="round" />' : ''}
+
+                    ${this.gameStatus === 'lost' ? `
+                      <line x1="129" y1="56" x2="133" y2="60" stroke="#f87171" stroke-width="2" />
+                      <line x1="133" y1="56" x2="129" y2="60" stroke="#f87171" stroke-width="2" />
+                      <line x1="137" y1="56" x2="141" y2="60" stroke="#f87171" stroke-width="2" />
+                      <line x1="141" y1="56" x2="137" y2="60" stroke="#f87171" stroke-width="2" />
+                    ` : ''}
+                  </svg>
+                  <div style="position:absolute; bottom:8px; right:10px; font-size:0.75rem; color:${errorsLeft <= 2 ? '#f87171' : 'var(--text-muted)'}; font-weight:700; font-family:monospace;">
+                    Vidas: ${errorsLeft} / ${maxErrors}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Word display -->
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.6rem; margin:1.5rem 0 2rem; min-height:60px;">
+                ${wordDisplayHtml}
+              </div>
+
+              <!-- Clue Section -->
+              <div style="text-align:center; margin-bottom:1.5rem;">
+                ${this.clueRevealed ? `
+                  <div style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.55rem 1rem; border-radius:var(--radius-md); background:rgba(245, 158, 11, 0.12); border:1px solid rgba(245, 158, 11, 0.35); color:#fde68a; font-size:0.88rem; max-width:90%; margin:0 auto;">
+                    <span>💡</span> <span><strong>Pista:</strong> ${this.currentWordObj.pista}</span>
+                  </div>
+                ` : `
+                  <button onclick="hangmanApp.revealClue()" class="btn-secondary" style="font-size:0.82rem; padding:0.4rem 0.85rem;">
+                    <span>💡</span> <span>Pedir Pista</span>
+                  </button>
+                `}
+              </div>
+
+              <!-- End Game Banner -->
+              ${this.gameStatus !== 'playing' ? `
+                <div style="padding:1.5rem; border-radius:var(--radius-md); background:${this.gameStatus === 'won' ? 'linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%)' : 'rgba(239, 68, 68, 0.15)'}; border:1px solid ${this.gameStatus === 'won' ? 'rgba(16, 185, 129, 0.4)' : 'rgba(239, 68, 68, 0.4)'}; text-align:center; margin-bottom:1.75rem;">
+                  <div style="font-size:1.8rem; margin-bottom:0.35rem;">
+                    ${this.gameStatus === 'won' ? '🎉 ¡VICTORIA ARCADE!' : '💀 ¡EL CADALSO RECLAMA TU ALMA!'}
+                  </div>
+                  <h3 style="font-size:1.1rem; font-weight:700; color:${this.gameStatus === 'won' ? '#34d399' : '#f87171'}; margin-bottom:0.5rem;">
+                    ${this.gameStatus === 'won' ? `¡Has descifrado "${cleanWord}" con éxito!` : `La palabra secreta era: "${cleanWord}"`}
+                  </h3>
+                  ${this.currentWordObj.curiosidad ? `
+                    <p style="font-size:0.88rem; color:var(--text-secondary); max-width:580px; margin:0 auto 1.25rem; line-height:1.5;">
+                      💡 <strong>Dato curioso:</strong> ${this.currentWordObj.curiosidad}
+                    </p>
+                  ` : ''}
+                  <div style="display:flex; justify-content:center; gap:0.75rem;">
+                    <button onclick="hangmanApp.pickNewWord()" class="btn-primary">
+                      <span>↺</span> <span>Siguiente Palabra</span>
+                    </button>
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- Virtual Keyboard -->
+              <div style="display:flex; flex-direction:column; gap:0.45rem; align-items:center;">
+                ${keyboardHtml}
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      fireConfetti() {
+        const canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const pieces = [];
+        const colors = ['#a855f7', '#06b6d4', '#10b981', '#ffffff', '#f59e0b'];
+
+        for (let i = 0; i < 70; i++) {
+          pieces.push({
+            x: canvas.width / 2,
+            y: canvas.height * 0.6,
+            vx: (Math.random() - 0.5) * 12,
+            vy: (Math.random() - 0.8) * 14,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rotation: Math.random() * 360,
+            vRot: (Math.random() - 0.5) * 10
+          });
+        }
+
+        let animationFrame;
+        let count = 0;
+
+        function update() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          pieces.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.35;
+            p.rotation += p.vRot;
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+          });
+
+          count++;
+          if (count < 140) {
+            animationFrame = requestAnimationFrame(update);
+          } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+          }
+        }
+
+        update();
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      hangmanApp.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

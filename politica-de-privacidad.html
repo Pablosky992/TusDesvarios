@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad y Protección de Datos — Tus Desvaríos</title>
+  <meta name="description" content="Información detallada sobre el tratamiento de datos personales en Tus Desvaríos conforme al RGPD (UE 2016/679) y la LOPDGDD (Ley Orgánica 3/2018).">
+  <link rel="canonical" href="https://tusdesvarios.com/politica-de-privacidad.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-purple: #a855f7;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --font-display: 'Cinzel', serif;
+      --font-ui: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 95% 55% at 50% -12%, rgba(168, 85, 247, 0.2) 0%, transparent 65%),
+        radial-gradient(circle 500px at 15% 35%, rgba(16, 185, 129, 0.18) 0%, transparent 60%),
+        radial-gradient(circle 550px at 85% 45%, rgba(6, 182, 212, 0.16) 0%, transparent 60%),
+        linear-gradient(180deg, #0e1322 0%, #0a0e1a 50%, #060911 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .logo-image {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.4);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.4rem 0.5rem;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.75rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    /* Contenedor Principal Legal */
+    .legal-wrapper {
+      max-width: 920px;
+      margin: 2.5rem auto 4rem;
+      padding: 0 1.25rem;
+      flex: 1;
+    }
+
+    .legal-hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.95rem;
+      border-radius: 9999px;
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      color: #c084fc;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    .legal-title {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .legal-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Pestañas de Navegación Legal Cruzada */
+    .legal-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .legal-tab {
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .legal-tab.active {
+      border-color: #a855f7;
+      background: rgba(168, 85, 247, 0.18);
+      color: #c084fc;
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.3);
+    }
+
+    .legal-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    .legal-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.5rem;
+    }
+
+    .legal-section p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .legal-section ul {
+      margin: 0.75rem 0 1.25rem 1.5rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .legal-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid #a855f7;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.15rem 1.35rem;
+      margin: 1.25rem 0;
+    }
+
+    .info-box p {
+      margin: 0;
+      color: #f1f5f9;
+      font-size: 0.92rem;
+    }
+
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    table.data-table th {
+      background: rgba(255, 255, 255, 0.06);
+      color: #f8fafc;
+      padding: 0.75rem 1rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    table.data-table td {
+      padding: 0.75rem 1rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      line-height: 1.5;
+    }
+
+    table.data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 2.5rem 1.25rem 3rem;
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(11, 15, 25, 0.9);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: auto;
+    }
+
+    .site-footer p {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+
+    .footer-legal-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+
+    .footer-separator {
+      color: var(--border-medium);
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+    @media (max-width: 768px) {
+      .legal-card {
+        padding: 1.75rem 1.25rem;
+      }
+      .legal-title {
+        font-size: 1.85rem;
+      }
+      .site-header-inner {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .header-nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera Oficial Unificada -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+        <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+        <div class="logo-text-group">
+          <span class="logo-text-top">TUS</span>
+          <span class="logo-text-main">DESVARÍOS</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="crea-tu-historia.html" class="nav-link" title="Novelas y Ficción Interactiva">
+          <span>📖</span>
+          <span class="nav-link-text">Crea Historias</span>
+        </a>
+        <a href="desvarios-literarios.html" class="nav-link" title="Relatos, Cuentos y Ficción Narrativa">
+          <span>📜</span>
+          <span class="nav-link-text">Relatos</span>
+        </a>
+        <a href="desvarios-retro.html" class="nav-link" title="Arcade, Juegos Clásicos y El Ahorcado">
+          <span>🕹️</span>
+          <span class="nav-link-text">Juegos Retro</span>
+        </a>
+        <a href="desvarios-mentales.html" class="nav-link" title="Tests, Enigmas y Retos Psicológicos">
+          <span>🧪</span>
+          <span class="nav-link-text">Tests Mentales</span>
+        </a>
+        <a href="desvarios-de-humor.html" class="nav-link" title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+          <span>🎭</span>
+          <span class="nav-link-text">Humor & Caos</span>
+        </a>
+        <a href="desvarios-por-la-red.html" class="nav-link" title="Escaparate Web y Bazar de Curiosidades de Amazon">
+          <span>🌐</span>
+          <span class="nav-link-text">Por la Red</span>
+        </a>
+        <a href="foro.html" class="nav-link" title="Comunidad y Foro de Debate">
+          <span>💬</span>
+          <span class="nav-link-text">Foro</span>
+        </a>
+        <a href="index.html" class="nav-link" title="Portada Principal">
+          <span>🏛️</span>
+          <span class="nav-link-text">Portal</span>
+        </a>
+        <a href="login.html" class="nav-link nav-link-user" id="header-user-btn" title="Acceso / Mi Perfil">
+          <span id="header-user-icon">👤</span>
+          <span class="nav-link-text" id="header-user-name">Acceder</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-wrapper">
+    <div class="legal-hero">
+      <div class="legal-badge">
+        <span>🔒</span> <span>Privacidad y Protección de Datos</span>
+      </div>
+      <h1 class="legal-title">Política de Privacidad</h1>
+      <p class="legal-subtitle">Cumplimiento estricto con el RGPD (UE 2016/679) y la Ley Orgánica 3/2018 (LOPDGDD) • Última actualización: Septiembre de 2026</p>
+    </div>
+
+    <!-- Navegación Legal Cruzada -->
+    <div class="legal-tabs">
+      <a href="aviso-legal.html" class="legal-tab">Aviso Legal</a>
+      <a href="politica-de-privacidad.html" class="legal-tab active">Política de Privacidad</a>
+      <a href="politica-de-cookies.html" class="legal-tab">Política de Cookies</a>
+    </div>
+
+    <article class="legal-card">
+      <!-- 1. RESPONSABLE DEL TRATAMIENTO -->
+      <section class="legal-section">
+        <h2><span>🛡️</span> 1. Responsable del Tratamiento de tus Datos</h2>
+        <p>
+          En cumplimiento del Reglamento General de Protección de Datos (RGPD) y de la normativa española de protección de datos, te informamos de que el responsable del tratamiento de los datos que facilites a través de este portal es:
+        </p>
+        <div class="info-box">
+          <p><strong>Identidad del Responsable:</strong> Tus Desvaríos — Pablosky92</p>
+          <p><strong>Sitio Web:</strong> <a href="https://tusdesvarios.com" style="color:#c084fc; text-decoration:none;">https://tusdesvarios.com</a></p>
+          <p><strong>Correo electrónico para atención de privacidad y ejercicio de derechos:</strong> <a href="mailto:consultasydudasvarias@hotmail.com" style="color:#c084fc; text-decoration:none;">consultasydudasvarias@hotmail.com</a></p>
+        </div>
+      </section>
+
+      <!-- 2. PRINCIPIOS RECTORES -->
+      <section class="legal-section">
+        <h2><span>🧭</span> 2. Principios Aplicados al Tratamiento</h2>
+        <p>En el tratamiento de tus datos personales, aplicamos de forma rigurosa los principios consagrados en el RGPD:</p>
+        <ul>
+          <li><strong>Principio de licitud, lealtad y transparencia:</strong> Siempre te informamos de forma clara y accesible sobre para qué necesitamos tus datos y solicitamos tu consentimiento previo.</li>
+          <li><strong>Principio de minimización de datos:</strong> Solo solicitamos los datos estrictamente imprescindibles para que disfrutes de las funciones interactivas del sitio.</li>
+          <li><strong>Principio de limitación del plazo de conservación:</strong> Los datos se conservan únicamente durante el tiempo necesario para cumplir los fines para los que fueron recogidos.</li>
+          <li><strong>Principio de integridad y confidencialidad:</strong> Tus datos se tratan garantizando una seguridad adecuada mediante cifrado en tránsito (HTTPS / SSL) y contraseñas fuertemente encriptadas.</li>
+        </ul>
+      </section>
+
+      <!-- 3. DATOS QUE RECOPILAMOS Y FINALIDADES -->
+      <section class="legal-section">
+        <h2><span>📦</span> 3. Qué Datos Recopilamos, Finalidades y Bases Legales</h2>
+        <p>
+          Tus Desvaríos recopila datos exclusivamente en los siguientes supuestos específicos:
+        </p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Canal o Funcionalidad</th>
+                <th>Datos Recopilados</th>
+                <th>Finalidad del Tratamiento</th>
+                <th>Base Jurídica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Formulario de Contacto</strong> (Web3Forms)</td>
+                <td>Nombre/apodo, correo electrónico y el contenido de tu mensaje.</td>
+                <td>Atender tus consultas, sugerencias, peticiones o propuestas de colaboración enviadas al creador.</td>
+                <td>Consentimiento expreso del interesado (Art. 6.1.a RGPD).</td>
+              </tr>
+              <tr>
+                <td><strong>Cuenta de Usuario y Foro</strong> (Supabase)</td>
+                <td>Email (privado, nunca expuesto públicamente a otros usuarios), contraseña (almacenada con hash criptográfico unidireccional), nombre de usuario público, avatar, medallas de progreso, comentarios y votos en el foro.</td>
+                <td>Gestión de tu sesión de usuario, personalización de perfil, publicación de intervenciones en la comunidad y prevención de abusos o spam.</td>
+                <td>Ejecución de la relación de servicio solicitada por el usuario (Art. 6.1.b RGPD) y consentimiento.</td>
+              </tr>
+              <tr>
+                <td><strong>Donaciones voluntarias</strong> (PayPal)</td>
+                <td>Tus Desvaríos <strong>NO</strong> almacena ni tiene acceso a tus datos bancarios, cuentas ni números de tarjeta de crédito. Las donaciones se tramitan externamente en la pasarela segura de PayPal.</td>
+                <td>Permitir el apoyo voluntario al mantenimiento del proyecto digital mediante invitación simbólica a un café.</td>
+                <td>Ejecución de la transacción voluntaria por el interesado.</td>
+              </tr>
+              <tr>
+                <td><strong>Progreso y Récords</strong> (LocalStorage local)</td>
+                <td>Decisiones en novelas interactivas, puntuaciones arcade, respuestas de tests y preferencias de interfaz.</td>
+                <td>Permitirte reanudar la lectura o tus partidas en el mismo navegador sin perder tus avances. Datos almacenados exclusivamente en tu dispositivo.</td>
+                <td>Interés legítimo y preferencia funcional del usuario.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. ENCARGADOS DEL TRATAMIENTO Y DESTINATARIOS -->
+      <section class="legal-section">
+        <h2><span>🤝</span> 4. Proveedores y Encargados del Tratamiento</h2>
+        <p>
+          Para poder ofrecerte una plataforma rápida, estable y segura, confiamos en proveedores tecnológicos de primer nivel que actúan como encargados del tratamiento bajo acuerdos de estricta confidencialidad:
+        </p>
+        <ul>
+          <li><strong>Supabase Inc.:</strong> Proveedor de infraestructura en la nube para la autenticación de usuarios y la base de datos del foro, con estándares internacionales de seguridad (cifrado en reposo y en tránsito).</li>
+          <li><strong>Web3Forms:</strong> Servicio encargado de la recepción y enrutamiento seguro de los mensajes enviados desde la ventana emergente de contacto hacia nuestro buzón.</li>
+          <li><strong>PayPal (Europe) S.à r.l. et Cie, S.C.A.:</strong> Entidad de pago regulada en la Unión Europea para la gestión de donaciones seguras.</li>
+          <li><strong>Vercel Inc. / GitHub Pages:</strong> Plataforma de alojamiento y red de distribución de contenidos (CDN) estática.</li>
+        </ul>
+        <p>
+          <strong>No comercialización:</strong> Tus Desvaríos <strong>nunca</strong> vende, alquila ni cede tus datos personales a empresas de publicidad, brokers de datos ni a terceras partes ajenas al funcionamiento de la web.
+        </p>
+      </section>
+
+      <!-- 5. PLAZOS DE CONSERVACIÓN -->
+      <section class="legal-section">
+        <h2><span>⏳</span> 5. Plazo de Conservación de tus Datos</h2>
+        <p>
+          Los datos personales facilitados se conservarán durante los siguientes periodos:
+        </p>
+        <ul>
+          <li><strong>Consultas de contacto:</strong> Durante el tiempo imprescindible para atender y resolver tu solicitud, más los plazos legales de prescripción de responsabilidades.</li>
+          <li><strong>Cuentas de usuario:</strong> Mientras mantengas activa tu cuenta. Si decides solicitar la baja o eliminación de tu perfil, tus datos personales serán suprimidos de la base de datos activa de forma irreversible.</li>
+          <li><strong>Almacenamiento local del navegador:</strong> Hasta que limpies la memoria caché o los datos del navegador en tu propio dispositivo.</li>
+        </ul>
+      </section>
+
+      <!-- 6. DERECHOS DEL USUARIO -->
+      <section class="legal-section">
+        <h2><span>⚖️</span> 6. Ejercicio de tus Derechos (ARCO-POL)</h2>
+        <p>
+          La legislación europea te reconoce un control pleno sobre tus datos. Tienes derecho a ejercitar en cualquier momento:
+        </p>
+        <ul>
+          <li><strong>Derecho de Acceso:</strong> Conocer qué datos personales tenemos sobre ti y cómo los tratamos.</li>
+          <li><strong>Derecho de Rectificación:</strong> Modificar tus datos si son inexactos o incompletos.</li>
+          <li><strong>Derecho de Supresión ("Derecho al Olvido"):</strong> Solicitar el borrado íntegro de tus datos cuando ya no sean necesarios para los fines que fueron recogidos.</li>
+          <li><strong>Derecho a la Limitación del Tratamiento:</strong> Solicitar que suspendamos cautelarmente el tratamiento en los supuestos previstos por la ley.</li>
+          <li><strong>Derecho a la Portabilidad:</strong> Recibir tus datos en un formato estructurado y de uso común.</li>
+          <li><strong>Derecho de Oposición:</strong> Oponerte en cualquier momento al tratamiento de tus datos personales.</li>
+        </ul>
+
+        <div class="info-box">
+          <p>
+            <strong>¿Cómo ejercitar tus derechos?</strong> Es muy sencillo. Envía un correo electrónico a <a href="mailto:consultasydudasvarias@hotmail.com" style="color:#c084fc; text-decoration:none;">consultasydudasvarias@hotmail.com</a> indicando en el asunto "Protección de Datos / Ejercicio de Derechos", especificando tu petición y tu nombre de usuario para que podamos atenderte con total celeridad.
+          </p>
+        </div>
+
+        <p>
+          Asimismo, te informamos de que tienes derecho a presentar una reclamación ante la autoridad de control en materia de protección de datos si consideras que tus derechos han sido desatendidos, dirigiéndote a la <strong>Agencia Española de Protección de Datos (AEPD)</strong> a través de su sede electrónica en <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" style="color:#c084fc;">www.aepd.es</a>.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Pie de Página Unificado -->
+  <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+
+  <!-- Script del Banner de Cookies Universal -->
+  <script src="js/cookie-banner.js"></script>
+
+</body>
+</html>

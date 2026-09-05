@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rompebloques Neón (Dimensión Cósmica) — Juego Arcade Retro Gratis | TusDesvarios.com</title>
+  <meta name="description" content="Juega gratis a Rompebloques Neón: el clásico arcade de rebotar la bola reinventado con física a 60 FPS, estética synthwave neón, cápsulas de power-ups, disparos láser y sonido 8-bit.">
+  <meta name="keywords" content="rompebloques gratis, rompebloques online gratis, juego rompebloques arcade, breakout neón, juego romper ladrillos, brick breaker retro, tus desvarios">
+  
+  <link rel="canonical" href="https://tusdesvarios.com/juego-rompebloques.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rompebloques Neón (Dimensión Cósmica) | Tus Desvaríos">
+  <meta property="og:description" content="Destruye barreras dimensionales y recolecta cápsulas de energía cósmica en una cabina arcade retro. ¡Juega gratis en tu navegador!">
+  <meta property="og:url" content="https://tusdesvarios.com/juego-rompebloques.html">
+  <meta property="og:image" content="images/games/portada_rompebloques.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rompebloques Neón — Juego Arcade Retro Gratis">
+  <meta name="twitter:description" content="El clásico rompebloques con física a 60 FPS, múltiples niveles, power-ups y estética synthwave.">
+  <meta name="twitter:image" content="images/games/portada_rompebloques.jpg">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Rompebloques Neón (Dimensión Cósmica)",
+  "description": "El clásico rompebloques arcade reinventado con estética synthwave neón, física dinámica a 60 FPS, múltiples niveles, power-ups y sonido 8-bit.",
+  "url": "https://tusdesvarios.com/juego-rompebloques.html",
+  "genre": [
+    "Arcade",
+    "Action",
+    "Breakout",
+    "Retro Arcade",
+    "Brick Breaker"
+  ],
+  "playMode": "SinglePlayer",
+  "applicationCategory": "Game",
+  "inLanguage": "es",
+  "image": "https://tusdesvarios.com/images/games/portada_rompebloques.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tus Desvaríos",
+    "url": "https://tusdesvarios.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://tusdesvarios.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Desvaríos Retro",
+      "item": "https://tusdesvarios.com/desvarios-retro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Rompebloques Neón",
+      "item": "https://tusdesvarios.com/juego-rompebloques.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-main: #0a0d14;
+      --bg-surface: #121722;
+      --bg-surface-hover: #182030;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-pink: #ec4899;
+      --accent-cyan: #38bdf8;
+      --accent-amber: #f59e0b;
+
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-title: 'Cinzel', Georgia, serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(236, 72, 153, 0.14) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(168, 85, 247, 0.08) 0px, transparent 55%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .main-content {
+      flex: 1;
+      max-width: 920px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 4rem;
+    }
+
+    .breadcrumb-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .breadcrumb-link:hover {
+      color: var(--text-primary);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(236, 72, 153, 0.5);
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link active-retro" title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="breadcrumb-nav" style="margin-bottom: 1.25rem;">
+        <a href="desvarios-retro.html" class="breadcrumb-link">
+          <span>←</span> <span>Volver a Desvaríos Retro</span>
+        </a>
+      </div>
+
+      <header style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.9rem; background: rgba(236, 72, 153, 0.12); border: 1px solid rgba(236, 72, 153, 0.35); border-radius: 9999px; color: #ec4899; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.75rem;">
+          <span>🧱</span>
+          <span>Acción Arcade Rompebloques Neón</span>
+        </div>
+        <h1 style="font-family: var(--font-title); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 900; letter-spacing: 0.04em; margin-bottom: 0.5rem; background: linear-gradient(135deg, #fff 40%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Rompebloques Neón
+        </h1>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 580px; margin: 0 auto;">
+          Destruye los ladrillos cósmicos, recolecta cápsulas de energía y supera las 3 fases sin perder tus esferas de plasma.
+        </p>
+      </header>
+
+      <!-- Status Header (Vidas, Nivel, Score, Record, Audio) -->
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; padding: 0.75rem 1.25rem; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: 12px;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div id="lives-display" style="display: flex; align-items: center; gap: 0.35rem; font-size: 1.15rem;">
+            <span>❤️</span><span>❤️</span><span>❤️</span>
+          </div>
+          <div id="level-badge" style="font-size: 0.85rem; font-weight: 800; color: #38bdf8; background: rgba(56, 189, 248, 0.12); padding: 0.25rem 0.65rem; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.3);">
+            Nivel 1 — El Muro Inicial
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="text-align: right;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">PUNTOS</div>
+            <div id="score-display" style="font-family: monospace; font-size: 1.25rem; font-weight: 900; color: #ec4899;">
+              00000
+            </div>
+          </div>
+
+          <div style="text-align: right;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">RÉCORD</div>
+            <div id="high-score-display" style="font-family: monospace; font-size: 1.25rem; font-weight: 900; color: #fbbf24;">
+              00000
+            </div>
+          </div>
+
+          <button id="btn-sound-toggle" onclick="app.toggleSound()" style="padding: 0.45rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(16, 185, 129, 0.15); color: #34d399; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 600;">
+            <span>🔊 Sonido</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Arcade Box Frame -->
+      <div style="position: relative; margin: 0 auto; padding: 12px; border-radius: 16px; background: linear-gradient(180deg, #181c24 0%, #0d1117 100%); border: 2px solid rgba(236, 72, 153, 0.35); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(236, 72, 153, 0.15); max-width: 664px;">
+        <canvas id="game-canvas" width="640" height="480" style="display: block; width: 100%; height: auto; border-radius: 10px; border: 2px solid #232b3b; cursor: crosshair; touch-action: none;"></canvas>
+
+        <!-- Start Overlay -->
+        <div id="overlay-start" onclick="app.launchBall()" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); background: rgba(11, 15, 25, 0.85); border: 1.5px solid #38bdf8; border-radius: 12px; padding: 0.85rem 1.5rem; color: #38bdf8; font-weight: 800; font-size: 0.95rem; cursor: pointer; backdrop-filter: blur(8px); box-shadow: 0 0 25px rgba(56, 189, 248, 0.4); text-align: center;">
+          🚀 Haz clic o pulsa [Espacio] para lanzar la bola
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div id="overlay-gameover" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(15, 10, 20, 0.92); border: 2px solid #ef4444; border-radius: 16px; padding: 1.5rem 2rem; text-align: center; color: #fff; backdrop-filter: blur(10px); box-shadow: 0 0 40px rgba(239, 68, 68, 0.4); max-width: 380px; width: 90%;">
+          <div style="font-size: 1.5rem; font-weight: 900; color: #f87171; margin-bottom: 0.4rem;">💥 GAME OVER</div>
+          <p id="gameover-score-text" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Puntuación final: 0 puntos</p>
+          <button onclick="app.startNewGame()" class="btn-primary" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); color: #fff; padding: 0.65rem 1.4rem;">
+            ↺ Jugar de nuevo
+          </button>
+        </div>
+
+        <!-- Victory Overlay -->
+        <div id="overlay-victory" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(10, 25, 20, 0.92); border: 2px solid #10b981; border-radius: 16px; padding: 1.5rem 2rem; text-align: center; color: #fff; backdrop-filter: blur(10px); box-shadow: 0 0 40px rgba(16, 185, 129, 0.4); max-width: 380px; width: 90%;">
+          <div style="font-size: 1.5rem; font-weight: 900; color: #34d399; margin-bottom: 0.4rem;">🏆 ¡VICTORIA ABSOLUTA!</div>
+          <p id="victory-score-text" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Has demolido todas las barreras de los 3 niveles.</p>
+          <button onclick="app.startNewGame()" class="btn-primary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #fff; padding: 0.65rem 1.4rem;">
+            ↺ Jugar de nuevo
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Controls (Lanzar y Disparo) -->
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 1rem; max-width: 664px; margin: 1rem auto 0;">
+        <button type="button" onclick="app.launchBall()" style="flex: 1; padding: 0.6rem 1rem; border-radius: 8px; background: rgba(56, 189, 248, 0.15); border: 1.5px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+          🚀 Lanzar Bola
+        </button>
+        <button id="btn-mobile-laser" type="button" onclick="app.shootLaser()" style="display: none; flex: 1; padding: 0.6rem 1rem; border-radius: 8px; background: rgba(244, 63, 94, 0.2); border: 1.5px solid #f43f5e; color: #f43f5e; font-weight: 800; font-size: 0.85rem; cursor: pointer; box-shadow: 0 0 15px rgba(244, 63, 94, 0.4);">
+          🔫 Disparar Láser
+        </button>
+      </div>
+
+      <!-- Power-ups Guide -->
+      <section style="margin-top: 2.5rem; padding: 1.5rem; border-radius: 12px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle);">
+        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.45rem; color: #ec4899;">
+          <span>❓</span> <span>Cápsulas de Energía y Power-Ups</span>
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6;">
+          <div>
+            <strong style="color: #38bdf8;">⚡ Pala Ancha:</strong> Duplica el tamaño de tu pala para una defensa casi infranqueable.
+          </div>
+          <div>
+            <strong style="color: #4ade80;">🎾 Multibola:</strong> Genera dos bolas extra simultáneas para multiplicar tu poder de destrucción.
+          </div>
+          <div>
+            <strong style="color: #f43f5e;">🔫 Láser:</strong> Equipa cañones a la pala para disparar y reventar ladrillos con la barra espaciadora.
+          </div>
+          <div>
+            <strong style="color: #06b6d4;">🛡️ Barrera Plasma:</strong> Levanta un suelo de energía que salva una bola caída.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const CANVAS_WIDTH = 640;
+    const CANVAS_HEIGHT = 480;
+
+    const LEVEL_CONFIGS = [
+      {
+        name: 'Nivel 1 — El Muro Inicial',
+        rows: 5,
+        cols: 10,
+        layout: [
+          [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+          [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+          [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+          [4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+          [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+        ]
+      },
+      {
+        name: 'Nivel 2 — Fortaleza Piramidal',
+        rows: 6,
+        cols: 10,
+        layout: [
+          [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+          [0, 0, 0, 2, 1, 1, 2, 0, 0, 0],
+          [0, 0, 3, 2, 2, 2, 2, 3, 0, 0],
+          [0, 4, 3, 3, 3, 3, 3, 3, 4, 0],
+          [5, 4, 4, 4, 4, 4, 4, 4, 4, 5],
+          [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+        ]
+      },
+      {
+        name: 'Nivel 3 — Núcleo de Titanes',
+        rows: 7,
+        cols: 10,
+        layout: [
+          [1, 9, 1, 1, 9, 9, 1, 1, 9, 1],
+          [2, 2, 9, 2, 2, 2, 2, 9, 2, 2],
+          [3, 3, 3, 9, 3, 3, 9, 3, 3, 3],
+          [4, 4, 4, 4, 9, 9, 4, 4, 4, 4],
+          [5, 9, 5, 5, 5, 5, 5, 5, 9, 5],
+          [0, 5, 5, 0, 0, 0, 0, 5, 5, 0],
+          [0, 0, 5, 5, 0, 0, 5, 5, 0, 0]
+        ]
+      }
+    ];
+
+    const app = {
+      canvas: null,
+      ctx: null,
+      gameState: 'start',
+      levelIndex: 0,
+      score: 0,
+      highScore: 0,
+      lives: 3,
+      soundEnabled: true,
+      audioCtx: null,
+      activeShield: false,
+      laserCooldown: 0,
+
+      paddle: {
+        x: (CANVAS_WIDTH - 90) / 2,
+        y: CANVAS_HEIGHT - 28,
+        width: 90,
+        height: 12,
+        speed: 8,
+        hasLaser: false
+      },
+      balls: [],
+      bricks: [],
+      powerUps: [],
+      bullets: [],
+      particles: [],
+      keys: { left: false, right: false, space: false, mouseDown: false },
+
+      init() {
+        this.canvas = document.getElementById('game-canvas');
+        this.ctx = this.canvas.getContext('2d');
+
+        try {
+          const saved = localStorage.getItem('rompebloques_high_score');
+          if (saved) this.highScore = parseInt(saved, 10);
+        } catch {}
+
+        this.bindEvents();
+        this.startNewGame();
+        requestAnimationFrame(() => this.loop());
+      },
+
+      playSound(type) {
+        if (!this.soundEnabled) return;
+        try {
+          const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+          if (!this.audioCtx) this.audioCtx = new AudioCtxClass();
+          if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+          const ctx = this.audioCtx;
+          const now = ctx.currentTime;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          if (type === 'bounce') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(440, now);
+            osc.frequency.exponentialRampToValueAtTime(220, now + 0.04);
+            gain.gain.setValueAtTime(0.1, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+            osc.start(now);
+            osc.stop(now + 0.04);
+          } else if (type === 'paddle') {
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(320, now);
+            osc.frequency.exponentialRampToValueAtTime(540, now + 0.06);
+            gain.gain.setValueAtTime(0.15, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
+            osc.start(now);
+            osc.stop(now + 0.06);
+          } else if (type === 'brick') {
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(520, now);
+            osc.frequency.exponentialRampToValueAtTime(780, now + 0.05);
+            gain.gain.setValueAtTime(0.12, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+            osc.start(now);
+            osc.stop(now + 0.05);
+          } else if (type === 'powerup') {
+            const notes = [440, 554.37, 659.25, 880];
+            notes.forEach((freq, idx) => {
+              const nOsc = ctx.createOscillator();
+              const nGain = ctx.createGain();
+              nOsc.type = 'triangle';
+              nOsc.frequency.setValueAtTime(freq, now + idx * 0.06);
+              nGain.gain.setValueAtTime(0.18, now + idx * 0.06);
+              nGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.06 + 0.15);
+              nOsc.connect(nGain);
+              nGain.connect(ctx.destination);
+              nOsc.start(now + idx * 0.06);
+              nOsc.stop(now + idx * 0.06 + 0.15);
+            });
+          } else if (type === 'laser') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(900, now);
+            osc.frequency.exponentialRampToValueAtTime(250, now + 0.08);
+            gain.gain.setValueAtTime(0.12, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+            osc.start(now);
+            osc.stop(now + 0.08);
+          } else if (type === 'lose') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(350, now);
+            osc.frequency.exponentialRampToValueAtTime(80, now + 0.3);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+            osc.start(now);
+            osc.stop(now + 0.3);
+          } else if (type === 'win') {
+            const notes = [523.25, 659.25, 783.99, 1046.5];
+            notes.forEach((freq, idx) => {
+              const nOsc = ctx.createOscillator();
+              const nGain = ctx.createGain();
+              nOsc.type = 'triangle';
+              nOsc.frequency.setValueAtTime(freq, now + idx * 0.09);
+              nGain.gain.setValueAtTime(0.2, now + idx * 0.09);
+              nGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.09 + 0.22);
+              nOsc.connect(nGain);
+              nGain.connect(ctx.destination);
+              nOsc.start(now + idx * 0.09);
+              nOsc.stop(now + idx * 0.09 + 0.22);
+            });
+          }
+        } catch {}
+      },
+
+      toggleSound() {
+        this.soundEnabled = !this.soundEnabled;
+        const btn = document.getElementById('btn-sound-toggle');
+        if (this.soundEnabled) {
+          btn.innerHTML = '<span>🔊 Sonido</span>';
+          btn.style.color = '#34d399';
+          btn.style.background = 'rgba(16, 185, 129, 0.15)';
+        } else {
+          btn.innerHTML = '<span>🔇 Mute</span>';
+          btn.style.color = 'var(--text-muted)';
+          btn.style.background = 'rgba(255, 255, 255, 0.05)';
+        }
+      },
+
+      bindEvents() {
+        window.addEventListener('keydown', (e) => {
+          if (e.code === 'ArrowLeft' || e.code === 'KeyA') this.keys.left = true;
+          if (e.code === 'ArrowRight' || e.code === 'KeyD') this.keys.right = true;
+          if (e.code === 'Space') {
+            e.preventDefault();
+            this.keys.space = true;
+            this.launchBall();
+          }
+        });
+
+        window.addEventListener('keyup', (e) => {
+          if (e.code === 'ArrowLeft' || e.code === 'KeyA') this.keys.left = false;
+          if (e.code === 'ArrowRight' || e.code === 'KeyD') this.keys.right = false;
+          if (e.code === 'Space') this.keys.space = false;
+        });
+
+        window.addEventListener('mouseup', () => {
+          this.keys.mouseDown = false;
+        });
+
+        this.canvas.addEventListener('mousedown', (e) => {
+          if (e.button !== 0) return;
+          this.keys.mouseDown = true;
+          if (this.balls.some(b => b.stuckToPaddle)) {
+            this.launchBall();
+          } else if (this.paddle.hasLaser) {
+            if (this.laserCooldown <= 0) {
+              this.shootLaser();
+              this.laserCooldown = 14;
+            }
+          }
+        });
+
+        this.canvas.addEventListener('touchstart', () => {
+          if (this.balls.some(b => b.stuckToPaddle)) {
+            this.launchBall();
+          } else if (this.paddle.hasLaser) {
+            if (this.laserCooldown <= 0) {
+              this.shootLaser();
+              this.laserCooldown = 14;
+            }
+          }
+        });
+
+        this.canvas.addEventListener('mousemove', (e) => {
+          const rect = this.canvas.getBoundingClientRect();
+          const scaleX = CANVAS_WIDTH / rect.width;
+          const mouseX = (e.clientX - rect.left) * scaleX;
+          this.paddle.x = Math.max(0, Math.min(CANVAS_WIDTH - this.paddle.width, mouseX - this.paddle.width / 2));
+        });
+
+        this.canvas.addEventListener('touchmove', (e) => {
+          if (e.touches.length === 0) return;
+          const rect = this.canvas.getBoundingClientRect();
+          const scaleX = CANVAS_WIDTH / rect.width;
+          const touchX = (e.touches[0].clientX - rect.left) * scaleX;
+          this.paddle.x = Math.max(0, Math.min(CANVAS_WIDTH - this.paddle.width, touchX - this.paddle.width / 2));
+        });
+
+        this.canvas.addEventListener('click', () => {
+          if (this.balls.some(b => b.stuckToPaddle)) {
+            this.launchBall();
+          } else if (this.paddle.hasLaser) {
+            if (this.laserCooldown <= 0) {
+              this.shootLaser();
+              this.laserCooldown = 14;
+            }
+          }
+        });
+      },
+
+      initLevel(lvl) {
+        this.levelIndex = lvl;
+        const config = LEVEL_CONFIGS[lvl % LEVEL_CONFIGS.length];
+        document.getElementById('level-badge').textContent = config.name;
+
+        const brickWidth = 56;
+        const brickHeight = 18;
+        const paddingX = 7;
+        const paddingY = 7;
+        const offsetX = (CANVAS_WIDTH - (config.cols * (brickWidth + paddingX) - paddingX)) / 2;
+        const offsetY = 50;
+
+        const possiblePowerUps = ['expand', 'multiball', 'laser', 'shield', 'slow', 'life'];
+        this.bricks = [];
+
+        for (let r = 0; r < config.rows; r++) {
+          for (let c = 0; c < config.cols; c++) {
+            const type = config.layout[r][c];
+            if (type === 0) continue;
+
+            let color = '#38bdf8';
+            let hits = 1;
+            let points = 10;
+            let isUnbreakable = false;
+
+            if (type === 1) { color = '#ec4899'; hits = 3; points = 80; }
+            else if (type === 2) { color = '#fb923c'; hits = 2; points = 50; }
+            else if (type === 3) { color = '#facc15'; hits = 1; points = 30; }
+            else if (type === 4) { color = '#4ade80'; hits = 1; points = 20; }
+            else if (type === 5) { color = '#38bdf8'; hits = 1; points = 10; }
+            else if (type === 9) { color = '#94a3b8'; hits = 999; points = 0; isUnbreakable = true; }
+
+            let powerUp = null;
+            if (!isUnbreakable && Math.random() < 0.22) {
+              powerUp = possiblePowerUps[Math.floor(Math.random() * possiblePowerUps.length)];
+            }
+
+            this.bricks.push({
+              x: offsetX + c * (brickWidth + paddingX),
+              y: offsetY + r * (brickHeight + paddingY),
+              width: brickWidth,
+              height: brickHeight,
+              color,
+              hits,
+              maxHits: hits,
+              points,
+              powerUp,
+              isUnbreakable
+            });
+          }
+        }
+
+        this.paddle.x = (CANVAS_WIDTH - 90) / 2;
+        this.paddle.width = 90;
+        this.paddle.hasLaser = false;
+        document.getElementById('btn-mobile-laser').style.display = 'none';
+
+        this.balls = [{
+          x: CANVAS_WIDTH / 2,
+          y: CANVAS_HEIGHT - 40,
+          vx: 4 * (Math.random() > 0.5 ? 1 : -1),
+          vy: -5,
+          radius: 6,
+          stuckToPaddle: true,
+          stuckOffset: 0
+        }];
+
+        this.powerUps = [];
+        this.bullets = [];
+        this.particles = [];
+        this.activeShield = false;
+
+        document.getElementById('overlay-start').style.display = 'block';
+        document.getElementById('overlay-gameover').style.display = 'none';
+        document.getElementById('overlay-victory').style.display = 'none';
+      },
+
+      startNewGame() {
+        this.score = 0;
+        this.lives = 3;
+        this.gameState = 'start';
+        this.updateHeader();
+        this.initLevel(0);
+      },
+
+      updateHeader() {
+        document.getElementById('score-display').textContent = String(this.score).padStart(5, '0');
+        document.getElementById('high-score-display').textContent = String(this.highScore).padStart(5, '0');
+
+        let hearts = '';
+        for (let i = 0; i < 5; i++) {
+          const op = i < this.lives ? '1' : '0.2';
+          hearts += '<span style="opacity:' + op + ';">❤️</span>';
+        }
+        document.getElementById('lives-display').innerHTML = hearts;
+      },
+
+      launchBall() {
+        if (this.balls.some(b => b.stuckToPaddle)) {
+          this.balls.forEach(b => b.stuckToPaddle = false);
+          this.gameState = 'playing';
+          document.getElementById('overlay-start').style.display = 'none';
+        }
+      },
+
+      shootLaser() {
+        if (!this.paddle.hasLaser) return;
+        const p = this.paddle;
+        this.bullets.push({ x: p.x + 8, y: p.y - 4, vy: -7 });
+        this.bullets.push({ x: p.x + p.width - 8, y: p.y - 4, vy: -7 });
+        this.playSound('laser');
+      },
+
+      createExplosion(x, y, color) {
+        for (let i = 0; i < 8; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 3 + 1;
+          this.particles.push({
+            x, y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            color,
+            alpha: 1,
+            size: Math.random() * 3 + 2
+          });
+        }
+      },
+
+      spawnPowerUp(x, y, type) {
+        if (!type) return;
+        const metaMap = {
+          expand: { symbol: '⚡', color: '#38bdf8' },
+          multiball: { symbol: '🎾', color: '#4ade80' },
+          laser: { symbol: '🔫', color: '#f43f5e' },
+          shield: { symbol: '🛡️', color: '#06b6d4' },
+          slow: { symbol: '🐌', color: '#facc15' },
+          life: { symbol: '❤️', color: '#ec4899' }
+        };
+        const meta = metaMap[type];
+        this.powerUps.push({
+          x, y, vy: 2.2, type, symbol: meta.symbol, color: meta.color
+        });
+      },
+
+      applyPowerUp(type) {
+        this.playSound('powerup');
+        if (type === 'expand') {
+          this.paddle.width = 130;
+          setTimeout(() => { this.paddle.width = 90; }, 10000);
+        } else if (type === 'multiball') {
+          const existing = this.balls[0] || { x: this.paddle.x + this.paddle.width/2, y: this.paddle.y - 10, vx: 4, vy: -5, radius: 6 };
+          this.balls.push(
+            { x: existing.x, y: existing.y, vx: existing.vx - 2, vy: existing.vy, radius: 6 },
+            { x: existing.x, y: existing.y, vx: existing.vx + 2, vy: existing.vy, radius: 6 }
+          );
+        } else if (type === 'laser') {
+          this.paddle.hasLaser = true;
+          document.getElementById('btn-mobile-laser').style.display = 'block';
+          setTimeout(() => {
+            this.paddle.hasLaser = false;
+            document.getElementById('btn-mobile-laser').style.display = 'none';
+          }, 9000);
+        } else if (type === 'shield') {
+          this.activeShield = true;
+        } else if (type === 'slow') {
+          this.balls.forEach(b => { b.vx *= 0.7; b.vy *= 0.7; });
+        } else if (type === 'life') {
+          this.lives = Math.min(5, this.lives + 1);
+          this.updateHeader();
+        }
+      },
+
+      loop() {
+        const p = this.paddle;
+        const balls = this.balls;
+        const bricks = this.bricks;
+        const powerUps = this.powerUps;
+        const bullets = this.bullets;
+        const particles = this.particles;
+
+        // 1. UPDATE
+        if (this.gameState === 'playing' || this.gameState === 'start') {
+          if (this.keys.left) p.x = Math.max(0, p.x - p.speed);
+          if (this.keys.right) p.x = Math.min(CANVAS_WIDTH - p.width, p.x + p.speed);
+
+          if (p.hasLaser && (this.keys.space || this.keys.mouseDown)) {
+            if (this.laserCooldown <= 0) {
+              this.shootLaser();
+              this.laserCooldown = 14;
+            }
+          }
+          if (this.laserCooldown > 0) this.laserCooldown--;
+
+          // Bullets
+          for (let i = bullets.length - 1; i >= 0; i--) {
+            const b = bullets[i];
+            b.y += b.vy;
+            if (b.y < 0) { bullets.splice(i, 1); continue; }
+
+            for (let j = bricks.length - 1; j >= 0; j--) {
+              const br = bricks[j];
+              if (b.x >= br.x && b.x <= br.x + br.width && b.y >= br.y && b.y <= br.y + br.height) {
+                bullets.splice(i, 1);
+                if (!br.isUnbreakable) {
+                  br.hits--;
+                  if (br.hits <= 0) {
+                    this.score += br.points;
+                    this.updateHeader();
+                    this.createExplosion(br.x + br.width/2, br.y + br.height/2, br.color);
+                    if (br.powerUp) this.spawnPowerUp(br.x + br.width/2, br.y + br.height/2, br.powerUp);
+                    bricks.splice(j, 1);
+                  }
+                }
+                break;
+              }
+            }
+          }
+
+          // Balls
+          for (let i = balls.length - 1; i >= 0; i--) {
+            const b = balls[i];
+            if (b.stuckToPaddle) {
+              b.x = p.x + p.width/2 + (b.stuckOffset || 0);
+              b.y = p.y - b.radius;
+              continue;
+            }
+
+            b.x += b.vx;
+            b.y += b.vy;
+
+            // Walls
+            if (b.x - b.radius < 0) {
+              b.x = b.radius; b.vx = Math.abs(b.vx); this.playSound('bounce');
+            } else if (b.x + b.radius > CANVAS_WIDTH) {
+              b.x = CANVAS_WIDTH - b.radius; b.vx = -Math.abs(b.vx); this.playSound('bounce');
+            }
+            if (b.y - b.radius < 0) {
+              b.y = b.radius; b.vy = Math.abs(b.vy); this.playSound('bounce');
+            }
+
+            // Paddle bounce
+            if (
+              b.y + b.radius >= p.y &&
+              b.y - b.radius <= p.y + p.height &&
+              b.x >= p.x - b.radius &&
+              b.x <= p.x + p.width + b.radius &&
+              b.vy > 0
+            ) {
+              const hitPos = (b.x - (p.x + p.width/2)) / (p.width/2);
+              const speed = Math.sqrt(b.vx * b.vx + b.vy * b.vy);
+              const maxAngle = Math.PI / 2.7;
+              const angle = hitPos * maxAngle;
+              b.vx = Math.sin(angle) * speed;
+              b.vy = -Math.cos(angle) * speed;
+              b.y = p.y - b.radius;
+              this.playSound('paddle');
+            }
+
+            // Bricks bounce
+            for (let j = bricks.length - 1; j >= 0; j--) {
+              const br = bricks[j];
+              if (
+                b.x + b.radius >= br.x &&
+                b.x - b.radius <= br.x + br.width &&
+                b.y + b.radius >= br.y &&
+                b.y - b.radius <= br.y + br.height
+              ) {
+                const overlapLeft = b.x + b.radius - br.x;
+                const overlapRight = br.x + br.width - (b.x - b.radius);
+                const overlapTop = b.y + b.radius - br.y;
+                const overlapBottom = br.y + br.height - (b.y - b.radius);
+                const minOverlap = Math.min(overlapLeft, overlapRight, overlapTop, overlapBottom);
+
+                if (minOverlap === overlapLeft || minOverlap === overlapRight) b.vx = -b.vx;
+                else b.vy = -b.vy;
+
+                this.playSound('brick');
+
+                if (!br.isUnbreakable) {
+                  br.hits--;
+                  if (br.hits <= 0) {
+                    this.score += br.points;
+                    this.updateHeader();
+                    this.createExplosion(br.x + br.width/2, br.y + br.height/2, br.color);
+                    if (br.powerUp) this.spawnPowerUp(br.x + br.width/2, br.y + br.height/2, br.powerUp);
+                    bricks.splice(j, 1);
+                  }
+                }
+                break;
+              }
+            }
+
+            // Bottom exit
+            if (b.y - b.radius > CANVAS_HEIGHT) {
+              if (this.activeShield) {
+                b.y = CANVAS_HEIGHT - b.radius - 8;
+                b.vy = -Math.abs(b.vy);
+                this.activeShield = false;
+                this.playSound('bounce');
+                continue;
+              }
+              balls.splice(i, 1);
+            }
+          }
+
+          // Lose life
+          if (balls.length === 0 && (this.gameState === 'playing' || this.gameState === 'start')) {
+            this.playSound('lose');
+            this.lives--;
+            this.updateHeader();
+
+            if (this.lives <= 0) {
+              this.gameState = 'game_over';
+              if (this.score > this.highScore) {
+                this.highScore = this.score;
+                try { localStorage.setItem('rompebloques_high_score', this.highScore.toString()); } catch {}
+                this.updateHeader();
+              }
+              document.getElementById('gameover-score-text').textContent = 'Puntuación final: ' + this.score + ' puntos';
+              document.getElementById('overlay-gameover').style.display = 'block';
+            } else {
+              this.balls = [{
+                x: p.x + p.width/2,
+                y: p.y - 6,
+                vx: 4 * (Math.random() > 0.5 ? 1 : -1),
+                vy: -5,
+                radius: 6,
+                stuckToPaddle: true,
+                stuckOffset: 0
+              }];
+              this.gameState = 'start';
+              document.getElementById('overlay-start').style.display = 'block';
+            }
+          }
+
+          // PowerUps
+          for (let i = powerUps.length - 1; i >= 0; i--) {
+            const pu = powerUps[i];
+            pu.y += pu.vy;
+
+            if (pu.y + 10 >= p.y && pu.y - 10 <= p.y + p.height && pu.x + 12 >= p.x && pu.x - 12 <= p.x + p.width) {
+              this.applyPowerUp(pu.type);
+              powerUps.splice(i, 1);
+              continue;
+            }
+            if (pu.y > CANVAS_HEIGHT) powerUps.splice(i, 1);
+          }
+
+          // Level clear
+          const breakables = bricks.filter(b => !b.isUnbreakable).length;
+          if (breakables === 0 && this.gameState === 'playing') {
+            this.playSound('win');
+            if (window.DesvariosAuth) {
+              window.DesvariosAuth.unlockMedal('rompebloques-as');
+            }
+            try {
+              confetti({
+                particleCount: 90,
+                spread: 80,
+                origin: { y: 0.6 },
+                colors: ['#ec4899', '#38bdf8', '#fbbf24', '#4ade80', '#ffffff']
+              });
+            } catch {}
+
+            if (this.levelIndex + 1 < LEVEL_CONFIGS.length) {
+              this.initLevel(this.levelIndex + 1);
+              this.gameState = 'start';
+            } else {
+              this.gameState = 'victory';
+              if (this.score > this.highScore) {
+                this.highScore = this.score;
+                try { localStorage.setItem('rompebloques_high_score', this.highScore.toString()); } catch {}
+                this.updateHeader();
+              }
+              document.getElementById('victory-score-text').textContent = 'Has demolido todas las barreras de los 3 niveles con ' + this.score + ' puntos.';
+              document.getElementById('overlay-victory').style.display = 'block';
+            }
+          }
+        }
+
+        // Particles
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const pt = particles[i];
+          pt.x += pt.vx;
+          pt.y += pt.vy;
+          pt.alpha -= 0.025;
+          if (pt.alpha <= 0) particles.splice(i, 1);
+        }
+
+        // 2. RENDER
+        const ctx = this.ctx;
+        ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+        const bgGrad = ctx.createLinearGradient(0, 0, 0, CANVAS_HEIGHT);
+        bgGrad.addColorStop(0, '#0a0e17');
+        bgGrad.addColorStop(1, '#121824');
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.025)';
+        ctx.lineWidth = 1;
+        for (let x = 0; x < CANVAS_WIDTH; x += 32) {
+          ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, CANVAS_HEIGHT); ctx.stroke();
+        }
+        for (let y = 0; y < CANVAS_HEIGHT; y += 32) {
+          ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(CANVAS_WIDTH, y); ctx.stroke();
+        }
+
+        if (this.activeShield) {
+          ctx.fillStyle = 'rgba(6, 182, 212, 0.5)';
+          ctx.shadowColor = '#06b6d4';
+          ctx.shadowBlur = 12;
+          ctx.fillRect(0, CANVAS_HEIGHT - 6, CANVAS_WIDTH, 6);
+          ctx.shadowBlur = 0;
+        }
+
+        bricks.forEach(b => {
+          ctx.fillStyle = b.color;
+          ctx.shadowColor = b.color;
+          ctx.shadowBlur = b.isUnbreakable ? 2 : 8;
+          ctx.beginPath();
+          ctx.roundRect(b.x, b.y, b.width, b.height, 3);
+          ctx.fill();
+
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.25)';
+          ctx.fillRect(b.x + 2, b.y + 2, b.width - 4, 3);
+
+          if (b.hits > 1 && !b.isUnbreakable) {
+            ctx.fillStyle = '#fff';
+            ctx.font = 'bold 10px monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText(b.hits, b.x + b.width/2, b.y + b.height/2 + 3);
+          }
+        });
+        ctx.shadowBlur = 0;
+
+        powerUps.forEach(pu => {
+          ctx.fillStyle = pu.color;
+          ctx.shadowColor = pu.color;
+          ctx.shadowBlur = 10;
+          ctx.beginPath();
+          ctx.roundRect(pu.x - 12, pu.y - 7, 24, 14, 7);
+          ctx.fill();
+
+          ctx.fillStyle = '#000';
+          ctx.font = 'bold 9px sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText(pu.symbol, pu.x, pu.y + 3);
+        });
+        ctx.shadowBlur = 0;
+
+        bullets.forEach(b => {
+          ctx.fillStyle = '#f43f5e';
+          ctx.shadowColor = '#f43f5e';
+          ctx.shadowBlur = 8;
+          ctx.fillRect(b.x - 2, b.y, 4, 10);
+        });
+        ctx.shadowBlur = 0;
+
+        ctx.fillStyle = p.hasLaser ? '#f43f5e' : '#ec4899';
+        ctx.shadowColor = p.hasLaser ? '#f43f5e' : '#ec4899';
+        ctx.shadowBlur = 14;
+        ctx.beginPath();
+        ctx.roundRect(p.x, p.y, p.width, p.height, 6);
+        ctx.fill();
+
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+        ctx.fillRect(p.x + 6, p.y + 2, p.width - 12, 3);
+
+        if (p.hasLaser) {
+          ctx.fillStyle = '#fff';
+          ctx.fillRect(p.x + 4, p.y - 3, 4, 4);
+          ctx.fillRect(p.x + p.width - 8, p.y - 3, 4, 4);
+        }
+        ctx.shadowBlur = 0;
+
+        balls.forEach(b => {
+          ctx.fillStyle = '#fff';
+          ctx.shadowColor = '#38bdf8';
+          ctx.shadowBlur = 12;
+          ctx.beginPath();
+          ctx.arc(b.x, b.y, b.radius, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.shadowBlur = 0;
+
+        particles.forEach(pt => {
+          ctx.fillStyle = pt.color;
+          ctx.globalAlpha = pt.alpha;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1.0;
+
+        requestAnimationFrame(() => this.loop());
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      app.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

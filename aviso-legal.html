@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso Legal y Términos de Uso — Tus Desvaríos</title>
+  <meta name="description" content="Aviso Legal y Condiciones Generales de Uso de Tus Desvaríos conforme a la Ley 34/2002 de Servicios de la Sociedad de la Información (LSSI-CE).">
+  <link rel="canonical" href="https://tusdesvarios.com/aviso-legal.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-purple: #a855f7;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --font-display: 'Cinzel', serif;
+      --font-ui: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 95% 55% at 50% -12%, rgba(245, 158, 11, 0.16) 0%, transparent 65%),
+        radial-gradient(circle 500px at 15% 35%, rgba(168, 85, 247, 0.18) 0%, transparent 60%),
+        radial-gradient(circle 550px at 85% 45%, rgba(6, 182, 212, 0.16) 0%, transparent 60%),
+        linear-gradient(180deg, #0e1322 0%, #0a0e1a 50%, #060911 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .logo-image {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.4);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.4rem 0.5rem;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.75rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    /* Contenedor Principal Legal */
+    .legal-wrapper {
+      max-width: 920px;
+      margin: 2.5rem auto 4rem;
+      padding: 0 1.25rem;
+      flex: 1;
+    }
+
+    .legal-hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.95rem;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    .legal-title {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .legal-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Pestañas de Navegación Legal Cruzada */
+    .legal-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .legal-tab {
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .legal-tab.active {
+      border-color: #fbbf24;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
+    }
+
+    .legal-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    .legal-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.5rem;
+    }
+
+    .legal-section p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .legal-section ul {
+      margin: 0.75rem 0 1.25rem 1.5rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .legal-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid #fbbf24;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.15rem 1.35rem;
+      margin: 1.25rem 0;
+    }
+
+    .info-box p {
+      margin: 0;
+      color: #f1f5f9;
+      font-size: 0.92rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 2.5rem 1.25rem 3rem;
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(11, 15, 25, 0.9);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: auto;
+    }
+
+    .site-footer p {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+
+    .footer-legal-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+
+    .footer-separator {
+      color: var(--border-medium);
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+    @media (max-width: 768px) {
+      .legal-card {
+        padding: 1.75rem 1.25rem;
+      }
+      .legal-title {
+        font-size: 1.85rem;
+      }
+      .site-header-inner {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .header-nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera Oficial Unificada -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+        <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+        <div class="logo-text-group">
+          <span class="logo-text-top">TUS</span>
+          <span class="logo-text-main">DESVARÍOS</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="crea-tu-historia.html" class="nav-link" title="Novelas y Ficción Interactiva">
+          <span>📖</span>
+          <span class="nav-link-text">Crea Historias</span>
+        </a>
+        <a href="desvarios-literarios.html" class="nav-link" title="Relatos, Cuentos y Ficción Narrativa">
+          <span>📜</span>
+          <span class="nav-link-text">Relatos</span>
+        </a>
+        <a href="desvarios-retro.html" class="nav-link" title="Arcade, Juegos Clásicos y El Ahorcado">
+          <span>🕹️</span>
+          <span class="nav-link-text">Juegos Retro</span>
+        </a>
+        <a href="desvarios-mentales.html" class="nav-link" title="Tests, Enigmas y Retos Psicológicos">
+          <span>🧪</span>
+          <span class="nav-link-text">Tests Mentales</span>
+        </a>
+        <a href="desvarios-de-humor.html" class="nav-link" title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+          <span>🎭</span>
+          <span class="nav-link-text">Humor & Caos</span>
+        </a>
+        <a href="desvarios-por-la-red.html" class="nav-link" title="Escaparate Web y Bazar de Curiosidades de Amazon">
+          <span>🌐</span>
+          <span class="nav-link-text">Por la Red</span>
+        </a>
+        <a href="foro.html" class="nav-link" title="Comunidad y Foro de Debate">
+          <span>💬</span>
+          <span class="nav-link-text">Foro</span>
+        </a>
+        <a href="index.html" class="nav-link" title="Portada Principal">
+          <span>🏛️</span>
+          <span class="nav-link-text">Portal</span>
+        </a>
+        <a href="login.html" class="nav-link nav-link-user" id="header-user-btn" title="Acceso / Mi Perfil">
+          <span id="header-user-icon">👤</span>
+          <span class="nav-link-text" id="header-user-name">Acceder</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-wrapper">
+    <div class="legal-hero">
+      <div class="legal-badge">
+        <span>⚖️</span> <span>Marco Normativo LSSI-CE</span>
+      </div>
+      <h1 class="legal-title">Aviso Legal y Términos de Uso</h1>
+      <p class="legal-subtitle">Condiciones de acceso, propiedad intelectual y responsabilidades de navegación en Tus Desvaríos • Última actualización: Septiembre de 2026</p>
+    </div>
+
+    <!-- Navegación Legal Cruzada -->
+    <div class="legal-tabs">
+      <a href="aviso-legal.html" class="legal-tab active">Aviso Legal</a>
+      <a href="politica-de-privacidad.html" class="legal-tab">Política de Privacidad</a>
+      <a href="politica-de-cookies.html" class="legal-tab">Política de Cookies</a>
+    </div>
+
+    <article class="legal-card">
+      <!-- 1. DATOS IDENTIFICATIVOS -->
+      <section class="legal-section">
+        <h2><span>📋</span> 1. Datos Identificativos del Responsable</h2>
+        <p>
+          En cumplimiento del artículo 10 de la <strong>Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE)</strong>, se facilitan a continuación los datos informativos del titular del presente sitio web:
+        </p>
+        <div class="info-box">
+          <p><strong>Denominación del proyecto:</strong> Tus Desvaríos</p>
+          <p><strong>Titular / Responsable:</strong> Tus Desvaríos — Pablosky92</p>
+          <p><strong>Sitio web oficial:</strong> <a href="https://tusdesvarios.com" style="color:#c084fc; text-decoration:none;">https://tusdesvarios.com</a></p>
+          <p><strong>Correo electrónico de contacto y consultas:</strong> <a href="mailto:consultasydudasvarias@hotmail.com" style="color:#c084fc; text-decoration:none;">consultasydudasvarias@hotmail.com</a></p>
+          <p><strong>Actividad del portal:</strong> Difusión de relatos literarios, ficción interactiva, minijuegos arcade retro, generadores humorísticos y comunidad de debate cultural y de ocio.</p>
+        </div>
+      </section>
+
+      <!-- 2. OBJETO Y CONDICIONES GENERALES DE USO -->
+      <section class="legal-section">
+        <h2><span>🌐</span> 2. Objeto y Condiciones Generales de Uso</h2>
+        <p>
+          El presente Aviso Legal regula el acceso, la navegación y el uso del sitio web <strong>TusDesvarios.com</strong>. La condición de <strong>Usuario</strong> se adquiere por la mera navegación o utilización de cualquiera de los contenidos o servicios ofrecidos en la plataforma, lo que implica la aceptación plena, expresa y sin reservas de todas las disposiciones incluidas en este documento.
+        </p>
+        <p>
+          El acceso a los relatos, juegos y herramientas del portal tiene carácter libre y gratuito. Ciertas funciones complementarias (como publicar mensajes en el Foro de la Comunidad o acumular medallas de logros) requieren la creación voluntaria de una cuenta de usuario, sujeta a las condiciones descritas en este aviso y en la <a href="politica-de-privacidad.html" style="color:#c084fc;">Política de Privacidad</a>.
+        </p>
+      </section>
+
+      <!-- 3. COMPROMISOS DEL USUARIO -->
+      <section class="legal-section">
+        <h2><span>🛡️</span> 3. Obligaciones y Conducta Responsable del Usuario</h2>
+        <p>El Usuario se compromete expresamente a hacer un uso adecuado, lícito y de buena fe de los contenidos y servicios de Tus Desvaríos, y en particular a:</p>
+        <ul>
+          <li>No emplear los servicios o foros para incurrir en actividades ilícitas, ilegales o contrarias al orden público.</li>
+          <li>No difundir contenidos, comentarios o propaganda de carácter racista, xenófobo, denigratorio, de apología del terrorismo o que atenten contra los derechos humanos o la dignidad de las personas.</li>
+          <li>No introducir ni difundir en la red virus informáticos, troyanos, scripts maliciosos o cualquier otro sistema lógico o físico capaz de provocar daños en los sistemas del portal o de terceras personas.</li>
+          <li>Custodiar diligentemente las credenciales de acceso a su cuenta personal, siendo responsable de las actividades que se realicen bajo su nombre de usuario.</li>
+          <li>Respetar las normas de convivencia y respeto mutuo en los hilos del Foro de la Comunidad.</li>
+        </ul>
+        <p>
+          Tus Desvaríos se reserva el derecho de moderar, editar o retirar cualquier comentario o aportación que vulnere el respeto a la dignidad de la persona o que no resulte adecuado para el propósito del portal.
+        </p>
+      </section>
+
+      <!-- 4. PROPIEDAD INTELECTUAL E INDUSTRIAL -->
+      <section class="legal-section">
+        <h2><span>📜</span> 4. Propiedad Intelectual e Industrial</h2>
+        <p>
+          Todos los elementos que forman parte de Tus Desvaríos —incluyendo a título enunciativo pero no limitativo: los textos originales de los relatos de ficción, guiones de historias interactivas, preguntas de tests mentales, lógica de los generadores de humor, diseño gráfico, código fuente, logotipos, combinaciones de colores y estructura de navegación— son titularidad exclusiva de <strong>Tus Desvaríos — Pablosky92</strong> o de terceros que han autorizado legítimamente su inclusión, estando protegidos por la legislación española e internacional sobre Propiedad Intelectual e Industrial.
+        </p>
+        <p>
+          Queda expresamente prohibida la reproducción, distribución, comunicación pública, transformación o explotación con fines comerciales de la totalidad o parte de los contenidos de este portal, en cualquier soporte y por cualquier medio técnico, sin la previa autorización expresa y por escrito del titular.
+        </p>
+        <p>
+          Se autoriza la visualización, impresión y descarga parcial de contenidos exclusivamente para el <strong>uso personal, privado y no lucrativo</strong> del Usuario, siempre que se cite la procedencia y se mantengan intactos los avisos de autoría y copyright.
+        </p>
+      </section>
+
+      <!-- 5. EXONERACIÓN DE RESPONSABILIDADES Y ENLACES EXTERNOS -->
+      <section class="legal-section">
+        <h2><span>⚠️</span> 5. Exclusión de Garantías y Limitación de Responsabilidad</h2>
+        <p>
+          Tus Desvaríos adopta medidas técnicas razonables para garantizar la disponibilidad y seguridad del portal. No obstante, no se responsabiliza de los daños o perjuicios que pudieran derivarse de:
+        </p>
+        <ul>
+          <li>Interrupciones temporales, caídas del servidor o fallos de conexión ajenos a nuestro control técnico.</li>
+          <li>La presencia de software malicioso introducido por terceros mediante ataques informáticos imprevisibles.</li>
+          <li>El uso indebido, fraudulento o ilícito que los usuarios pudieran hacer de las herramientas interactivas o de las opiniones vertidas libremente en el foro.</li>
+        </ul>
+        <p>
+          <strong>Enlaces hacia terceros y programas de afiliación:</strong> El portal puede incluir enlaces a páginas web gestionadas por terceros (como pasarelas de pago de PayPal o enlaces de compra en Amazon a través del programa de afiliados en la sección "Por la Red"). Tus Desvaríos no ejerce control alguno sobre dichos sitios externos ni asume responsabilidad alguna por sus contenidos, políticas de privacidad o condiciones de contratación.
+        </p>
+      </section>
+
+      <!-- 6. MODIFICACIONES Y LEGISLACIÓN -->
+      <section class="legal-section">
+        <h2><span>⚖️</span> 6. Modificaciones, Legislación y Jurisdicción</h2>
+        <p>
+          Tus Desvaríos se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en el portal, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios prestados como la forma en que estos aparezcan presentados o localizados.
+        </p>
+        <p>
+          La relación entre el titular del sitio web y el Usuario se regirá por la normativa española vigente. Para la resolución de cualquier controversia judicial o discrepancia relacionada con el uso de este portal, ambas partes se someten a los juzgados y tribunales competentes conforme a la legislación aplicable en materia de consumidores y usuarios.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Pie de Página Unificado -->
+  <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+
+  <!-- Script del Banner de Cookies Universal -->
+  <script src="js/cookie-banner.js"></script>
+
+</body>
+</html>

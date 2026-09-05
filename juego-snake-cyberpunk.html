@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Cyberpunk 2084 — Juego Arcade Neón | TusDesvarios.com</title>
+  <meta name="description" content="Juega gratis a Snake Cyberpunk 2084: la mítica serpiente arcade reinventada con estética synthwave, portales dimensionales, modo contrarreloj y efectos 8-bit.">
+  <meta name="keywords" content="snake cyberpunk, juego de la serpiente gratis, snake online gratis, juegos arcade retro, minijuegos navegador, tus desvarios">
+  
+  <!-- Canonical & SEO -->
+  <link rel="canonical" href="https://tusdesvarios.com/juego-snake-cyberpunk.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Snake Cyberpunk 2084 — Juego Arcade de Neón | Tus Desvaríos">
+  <meta property="og:description" content="Guía a la serpiente de neón a través de cuadrículas synthwave, portales y nodos cuánticos. ¡Juega gratis en tu navegador!">
+  <meta property="og:url" content="https://tusdesvarios.com/juego-snake-cyberpunk.html">
+  <meta property="og:image" content="images/games/portada_snake.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Snake Cyberpunk 2084 — Juego Arcade Retro Gratis">
+  <meta name="twitter:description" content="El clásico juego de la serpiente con estética neón, portales, contrarreloj y efectos 8-bit.">
+  <meta name="twitter:image" content="images/games/portada_snake.jpg">
+
+  <!-- Schema.org VideoGame & Breadcrumb structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Snake Cyberpunk 2084",
+  "description": "La mítica serpiente arcade en una cuadrícula synthwave futurista con modos de portales, contrarreloj y efectos 8-bit.",
+  "url": "https://tusdesvarios.com/juego-snake-cyberpunk.html",
+  "genre": [
+    "Arcade",
+    "Action",
+    "Retro Arcade",
+    "Snake"
+  ],
+  "playMode": "SinglePlayer",
+  "applicationCategory": "Game",
+  "inLanguage": "es",
+  "image": "https://tusdesvarios.com/images/games/portada_snake.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tus Desvaríos",
+    "url": "https://tusdesvarios.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://tusdesvarios.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Desvaríos Retro",
+      "item": "https://tusdesvarios.com/desvarios-retro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Snake Cyberpunk 2084",
+      "item": "https://tusdesvarios.com/juego-snake-cyberpunk.html"
+    }
+  ]
+}
+  </script>
+
+    <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --bg-surface-hover: rgba(34, 45, 68, 0.95);
+      --bg-glass: rgba(12, 17, 28, 0.85);
+
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --border-focus: rgba(16, 185, 129, 0.5);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --accent-green: #10b981;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-purple: #a855f7;
+
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-title: 'Cinzel', Georgia, serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(16, 185, 129, 0.14) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(168, 85, 247, 0.08) 0px, transparent 55%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+    }
+
+    .main-content {
+      flex: 1;
+      max-width: 840px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .breadcrumb-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--text-primary);
+    }
+
+    .cat-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-full);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .cat-filter-btn:hover {
+      background: var(--bg-surface-hover);
+      color: #fff;
+    }
+
+    .cat-filter-btn-active {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: rgba(16, 185, 129, 0.5);
+      color: #34d399;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.2);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(16, 185, 129, 0.6);
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link active-retro" title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="app-root">
+      <!-- Injected via snakeApp -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const GRID_SIZE = 20;
+
+    const SPEED_CONFIG = {
+      cadete: { tickMs: 130, label: '🟢 Cadete (Normal)', color: '#34d399' },
+      hacker: { tickMs: 90, label: '🟡 Hacker (Rápido)', color: '#fbbf24' },
+      ninja: { tickMs: 60, label: '🔴 Cyber Ninja (Extremo)', color: '#f87171' }
+    };
+
+    const snakeApp = {
+      gameMode: 'classic', // 'classic', 'portals', 'timed'
+      speedMode: 'hacker',
+      score: 0,
+      highScore: 0,
+      snakeLength: 3,
+      isPaused: false,
+      isGameOver: false,
+      soundEnabled: true,
+      timeRemaining: 30,
+      overclockTicks: 0,
+
+      snake: [{ x: 10, y: 10 }, { x: 9, y: 10 }, { x: 8, y: 10 }],
+      dir: { x: 1, y: 0 },
+      nextDir: { x: 1, y: 0 },
+      food: { x: 15, y: 10 },
+      bonus: null,
+      particles: [],
+      audioCtx: null,
+      tickTimer: null,
+      countdownTimer: null,
+      touchStartPos: null,
+
+      init() {
+        try {
+          const saved = localStorage.getItem('tusdesvarios_snake_highscore');
+          if (saved) this.highScore = parseInt(saved, 10);
+        } catch (e) {}
+
+        this.renderHtml();
+        this.startCanvasLoop();
+        this.resetGame();
+        this.setupKeyboardListeners();
+      },
+
+      playSynth(type) {
+        if (!this.soundEnabled) return;
+        try {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return;
+          if (!this.audioCtx) this.audioCtx = new AudioCtx();
+          if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+          const now = this.audioCtx.currentTime;
+          const osc = this.audioCtx.createOscillator();
+          const gain = this.audioCtx.createGain();
+          osc.connect(gain);
+          gain.connect(this.audioCtx.destination);
+
+          if (type === 'eat') {
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(320, now);
+            osc.frequency.exponentialRampToValueAtTime(640, now + 0.08);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.1);
+            osc.start(now);
+            osc.stop(now + 0.1);
+          } else if (type === 'bonus') {
+            const freqs = [523.25, 659.25, 783.99, 1046.5];
+            freqs.forEach((f, i) => {
+              const o = this.audioCtx.createOscillator();
+              const g = this.audioCtx.createGain();
+              o.connect(g);
+              g.connect(this.audioCtx.destination);
+              o.type = 'square';
+              o.frequency.setValueAtTime(f, now + i * 0.06);
+              g.gain.setValueAtTime(0.12, now + i * 0.06);
+              g.gain.linearRampToValueAtTime(0.01, now + i * 0.06 + 0.1);
+              o.start(now + i * 0.06);
+              o.stop(now + i * 0.06 + 0.1);
+            });
+          } else if (type === 'powerup') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(440, now);
+            osc.frequency.exponentialRampToValueAtTime(880, now + 0.15);
+            gain.gain.setValueAtTime(0.18, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.2);
+            osc.start(now);
+            osc.stop(now + 0.2);
+          } else if (type === 'crash') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(160, now);
+            osc.frequency.linearRampToValueAtTime(40, now + 0.35);
+            gain.gain.setValueAtTime(0.25, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.4);
+            osc.start(now);
+            osc.stop(now + 0.4);
+          } else if (type === 'click') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(500, now);
+            gain.gain.setValueAtTime(0.06, now);
+            gain.gain.linearRampToValueAtTime(0.01, now + 0.04);
+            osc.start(now);
+            osc.stop(now + 0.04);
+          }
+        } catch (e) {}
+      },
+
+      changeDirection(newDir) {
+        if (newDir.x !== 0 && this.dir.x !== 0) return;
+        if (newDir.y !== 0 && this.dir.y !== 0) return;
+        this.nextDir = newDir;
+      },
+
+      spawnFood() {
+        let newX, newY, collision = true;
+        while (collision) {
+          newX = Math.floor(Math.random() * GRID_SIZE);
+          newY = Math.floor(Math.random() * GRID_SIZE);
+          collision = this.snake.some(seg => seg.x === newX && seg.y === newY);
+        }
+        return { x: newX, y: newY };
+      },
+
+      trySpawnBonus() {
+        if (this.bonus) return;
+        if (Math.random() < 0.28) {
+          const type = Math.random() < 0.6 ? 'crystal' : 'overclock';
+          let newX, newY, collision = true;
+          while (collision) {
+            newX = Math.floor(Math.random() * GRID_SIZE);
+            newY = Math.floor(Math.random() * GRID_SIZE);
+            collision = this.snake.some(seg => seg.x === newX && seg.y === newY) || (this.food.x === newX && this.food.y === newY);
+          }
+          this.bonus = { x: newX, y: newY, type, timeLeft: 45 };
+        }
+      },
+
+      addParticles(x, y, color, count = 12) {
+        try {
+          const canvas = document.getElementById('snake-canvas');
+          if (!canvas) return;
+          const cellSize = canvas.width / GRID_SIZE;
+          const px = (x + 0.5) * cellSize;
+          const py = (y + 0.5) * cellSize;
+
+          for (let i = 0; i < count; i++) {
+            const angle = Math.random() * Math.PI * 2;
+            const speed = Math.random() * 4 + 1.5;
+            this.particles.push({
+              x: px,
+              y: py,
+              vx: Math.cos(angle) * speed,
+              vy: Math.sin(angle) * speed,
+              size: Math.random() * 4 + 2,
+              color,
+              alpha: 1,
+              decay: Math.random() * 0.03 + 0.02
+            });
+          }
+        } catch (e) {}
+      },
+
+      setMode(m) {
+        this.gameMode = m;
+        this.playSynth('click');
+        this.resetGame();
+      },
+
+      setSpeed(s) {
+        this.speedMode = s;
+        this.playSynth('click');
+        this.resetGame();
+      },
+
+      resetGame() {
+        this.snake = [
+          { x: 10, y: 10 },
+          { x: 9, y: 10 },
+          { x: 8, y: 10 }
+        ];
+        this.dir = { x: 1, y: 0 };
+        this.nextDir = { x: 1, y: 0 };
+        this.food = { x: 15, y: 10 };
+        this.bonus = null;
+        this.particles = [];
+        this.score = 0;
+        this.snakeLength = 3;
+        this.isGameOver = false;
+        this.isPaused = false;
+        this.timeRemaining = 30;
+        this.overclockTicks = 0;
+
+        if (this.tickTimer) clearInterval(this.tickTimer);
+        if (this.countdownTimer) clearInterval(this.countdownTimer);
+
+        const currentSpeed = SPEED_CONFIG[this.speedMode] || SPEED_CONFIG['hacker'];
+        this.tickTimer = setInterval(() => this.gameTick(), currentSpeed.tickMs);
+
+        if (this.gameMode === 'timed') {
+          this.countdownTimer = setInterval(() => {
+            if (this.isPaused || this.isGameOver) return;
+            this.timeRemaining--;
+            if (this.timeRemaining <= 0) {
+              this.isGameOver = true;
+              this.playSynth('crash');
+            }
+            this.updateStatsUI();
+          }, 1000);
+        }
+
+        this.updateControlsUI();
+        this.updateStatsUI();
+        this.renderOverlays();
+      },
+
+      updateControlsUI() {
+        ['classic', 'portals', 'timed'].forEach(m => {
+          const btn = document.getElementById('mode-' + m);
+          if (btn) {
+            if (this.gameMode === m) {
+              btn.className = 'cat-filter-btn cat-filter-btn-active';
+              btn.style.background = 'rgba(16, 185, 129, 0.2)';
+              btn.style.borderColor = '#34d399';
+              btn.style.color = '#34d399';
+              btn.style.fontWeight = '700';
+            } else {
+              btn.className = 'cat-filter-btn';
+              btn.style.background = 'rgba(255, 255, 255, 0.04)';
+              btn.style.borderColor = 'var(--border-subtle)';
+              btn.style.color = 'var(--text-secondary)';
+              btn.style.fontWeight = '500';
+            }
+          }
+        });
+
+        ['cadete', 'hacker', 'ninja'].forEach(s => {
+          const btn = document.getElementById('speed-' + s);
+          if (btn) {
+            const conf = SPEED_CONFIG[s];
+            if (this.speedMode === s) {
+              btn.style.background = 'rgba(255, 255, 255, 0.18)';
+              btn.style.color = conf.color;
+              btn.style.borderColor = conf.color;
+              btn.style.boxShadow = '0 0 10px ' + conf.color + '40';
+              btn.style.fontWeight = '700';
+            } else {
+              btn.style.background = 'rgba(255, 255, 255, 0.04)';
+              btn.style.color = 'var(--text-muted)';
+              btn.style.borderColor = 'var(--border-subtle)';
+              btn.style.boxShadow = 'none';
+              btn.style.fontWeight = '500';
+            }
+          }
+        });
+      },
+
+      gameTick() {
+        if (this.isPaused || this.isGameOver) return;
+
+        try {
+          this.dir = this.nextDir;
+          const head = this.snake[0];
+          let newHead = { x: head.x + this.dir.x, y: head.y + this.dir.y };
+
+          if (this.gameMode === 'portals') {
+            if (newHead.x < 0) newHead.x = GRID_SIZE - 1;
+            else if (newHead.x >= GRID_SIZE) newHead.x = 0;
+            if (newHead.y < 0) newHead.y = GRID_SIZE - 1;
+            else if (newHead.y >= GRID_SIZE) newHead.y = 0;
+          } else {
+            if (newHead.x < 0 || newHead.x >= GRID_SIZE || newHead.y < 0 || newHead.y >= GRID_SIZE) {
+              this.isGameOver = true;
+              this.playSynth('crash');
+              this.addParticles(head.x, head.y, '#f87171', 20);
+              this.renderOverlays();
+              return;
+            }
+          }
+
+          if (this.snake.some(seg => seg.x === newHead.x && seg.y === newHead.y)) {
+            this.isGameOver = true;
+            this.playSynth('crash');
+            this.addParticles(newHead.x, newHead.y, '#f87171', 20);
+            this.renderOverlays();
+            return;
+          }
+
+          const newSnake = [newHead, ...this.snake];
+
+          if (newHead.x === this.food.x && newHead.y === this.food.y) {
+            this.playSynth('eat');
+            this.addParticles(newHead.x, newHead.y, '#10b981', 14);
+            const multiplier = this.overclockTicks > 0 ? 2 : 1;
+            this.score += 10 * multiplier;
+            if (this.score >= 60 && window.DesvariosAuth) {
+              window.DesvariosAuth.unlockMedal('snake-ninja');
+            }
+            if (this.score > this.highScore) {
+              this.highScore = this.score;
+              try {
+                localStorage.setItem('tusdesvarios_snake_highscore', this.score.toString());
+              } catch (e) {}
+            }
+            this.snakeLength = newSnake.length;
+            this.food = this.spawnFood();
+            this.trySpawnBonus();
+            if (this.gameMode === 'timed') {
+              this.timeRemaining = Math.min(60, this.timeRemaining + 3);
+            }
+            this.updateStatsUI();
+          } else {
+            newSnake.pop();
+          }
+
+          if (this.bonus) {
+            if (newHead.x === this.bonus.x && newHead.y === this.bonus.y) {
+              if (this.bonus.type === 'crystal') {
+                this.playSynth('bonus');
+                this.addParticles(newHead.x, newHead.y, '#06b6d4', 20);
+                const pts = 50 * (this.overclockTicks > 0 ? 2 : 1);
+                this.score += pts;
+              } else {
+                this.playSynth('powerup');
+                this.addParticles(newHead.x, newHead.y, '#f59e0b', 20);
+                this.overclockTicks = 50;
+              }
+              this.bonus = null;
+              this.updateStatsUI();
+            } else {
+              this.bonus.timeLeft--;
+              if (this.bonus.timeLeft <= 0) {
+                this.bonus = null;
+              }
+            }
+          }
+
+          if (this.overclockTicks > 0) {
+            this.overclockTicks--;
+          }
+
+          this.snake = newSnake;
+        } catch (err) {
+          console.error('Snake tick error:', err);
+        }
+      },
+
+      togglePause() {
+        this.isPaused = !this.isPaused;
+        this.renderOverlays();
+      },
+
+      toggleSound() {
+        this.soundEnabled = !this.soundEnabled;
+        this.playSynth('click');
+        this.updateStatsUI();
+      },
+
+      setupKeyboardListeners() {
+        window.addEventListener('keydown', (e) => {
+          if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '].includes(e.key)) {
+            e.preventDefault();
+          }
+
+          switch (e.key) {
+            case 'ArrowUp':
+            case 'w':
+            case 'W':
+              snakeApp.changeDirection({ x: 0, y: -1 });
+              break;
+            case 'ArrowDown':
+            case 's':
+            case 'S':
+              snakeApp.changeDirection({ x: 0, y: 1 });
+              break;
+            case 'ArrowLeft':
+            case 'a':
+            case 'A':
+              snakeApp.changeDirection({ x: -1, y: 0 });
+              break;
+            case 'ArrowRight':
+            case 'd':
+            case 'D':
+              snakeApp.changeDirection({ x: 1, y: 0 });
+              break;
+            case ' ':
+              snakeApp.togglePause();
+              break;
+          }
+        });
+      },
+
+      startCanvasLoop() {
+        const render = () => {
+          const canvas = document.getElementById('snake-canvas');
+          if (canvas) {
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+            const cellSize = width / GRID_SIZE;
+
+            ctx.fillStyle = '#0a0e1a';
+            ctx.fillRect(0, 0, width, height);
+
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= GRID_SIZE; i++) {
+              ctx.beginPath();
+              ctx.moveTo(i * cellSize, 0);
+              ctx.lineTo(i * cellSize, height);
+              ctx.stroke();
+
+              ctx.beginPath();
+              ctx.moveTo(0, i * cellSize);
+              ctx.lineTo(width, i * cellSize);
+              ctx.stroke();
+            }
+
+            if (this.gameMode === 'portals') {
+              ctx.strokeStyle = 'rgba(6, 182, 212, 0.4)';
+              ctx.lineWidth = 2;
+              ctx.setLineDash([4, 4]);
+              ctx.strokeRect(1, 1, width - 2, height - 2);
+              ctx.setLineDash([]);
+            } else {
+              ctx.strokeStyle = 'rgba(239, 68, 68, 0.3)';
+              ctx.lineWidth = 3;
+              ctx.strokeRect(0, 0, width, height);
+            }
+
+            // Food
+            const fx = this.food.x * cellSize + cellSize / 2;
+            const fy = this.food.y * cellSize + cellSize / 2;
+            const pulse = (cellSize / 2.3) + Math.sin(Date.now() * 0.005) * 1.5;
+
+            ctx.save();
+            ctx.shadowColor = '#10b981';
+            ctx.shadowBlur = 12;
+            ctx.fillStyle = '#34d399';
+            ctx.beginPath();
+            ctx.arc(fx, fy, pulse, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.arc(fx, fy, pulse * 0.45, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+
+            // Bonus
+            if (this.bonus) {
+              const bx = this.bonus.x * cellSize + cellSize / 2;
+              const by = this.bonus.y * cellSize + cellSize / 2;
+              const bColor = this.bonus.type === 'crystal' ? '#06b6d4' : '#f59e0b';
+
+              ctx.save();
+              ctx.shadowColor = bColor;
+              ctx.shadowBlur = 16;
+              ctx.fillStyle = bColor;
+
+              if (this.bonus.type === 'crystal') {
+                ctx.beginPath();
+                ctx.moveTo(bx, by - cellSize / 2.2);
+                ctx.lineTo(bx + cellSize / 2.2, by);
+                ctx.lineTo(bx, by + cellSize / 2.2);
+                ctx.lineTo(bx - cellSize / 2.2, by);
+                ctx.closePath();
+                ctx.fill();
+              } else {
+                ctx.beginPath();
+                ctx.arc(bx, by, cellSize / 2.2, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 12px monospace';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('⚡', bx, by);
+              }
+
+              const progress = this.bonus.timeLeft / 40;
+              ctx.strokeStyle = '#ffffff';
+              ctx.lineWidth = 2;
+              ctx.beginPath();
+              ctx.arc(bx, by, cellSize / 1.7, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * progress);
+              ctx.stroke();
+              ctx.restore();
+            }
+
+            // Snake
+            this.snake.forEach((seg, index) => {
+              const sx = seg.x * cellSize;
+              const sy = seg.y * cellSize;
+              const isHead = index === 0;
+
+              ctx.save();
+              if (isHead) {
+                ctx.shadowColor = this.overclockTicks > 0 ? '#f59e0b' : '#34d399';
+                ctx.shadowBlur = 16;
+                ctx.fillStyle = this.overclockTicks > 0 ? '#fbbf24' : '#10b981';
+                ctx.beginPath();
+                ctx.roundRect(sx + 1, sy + 1, cellSize - 2, cellSize - 2, 6);
+                ctx.fill();
+
+                ctx.fillStyle = '#0b0f19';
+                let eye1X = sx + 5, eye1Y = sy + 5, eye2X = sx + cellSize - 8, eye2Y = sy + 5;
+                if (this.dir.x === 1) {
+                  eye1X = sx + cellSize - 6; eye2X = sx + cellSize - 6;
+                  eye1Y = sy + 4; eye2Y = sy + cellSize - 7;
+                } else if (this.dir.x === -1) {
+                  eye1X = sx + 4; eye2X = sx + 4;
+                  eye1Y = sy + 4; eye2Y = sy + cellSize - 7;
+                } else if (this.dir.y === 1) {
+                  eye1X = sx + 4; eye2X = sx + cellSize - 7;
+                  eye1Y = sy + cellSize - 6; eye2Y = sy + cellSize - 6;
+                }
+                ctx.beginPath();
+                ctx.arc(eye1X, eye1Y, 2.2, 0, Math.PI * 2);
+                ctx.arc(eye2X, eye2Y, 2.2, 0, Math.PI * 2);
+                ctx.fill();
+              } else {
+                const ratio = index / this.snake.length;
+                const r = Math.round(16 * (1 - ratio) + 6 * ratio);
+                const g = Math.round(185 * (1 - ratio) + 182 * ratio);
+                const b = Math.round(129 * (1 - ratio) + 212 * ratio);
+                ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                ctx.shadowColor = `rgba(${r}, ${g}, ${b}, 0.5)`;
+                ctx.shadowBlur = 8;
+                ctx.beginPath();
+                ctx.roundRect(sx + 2, sy + 2, cellSize - 4, cellSize - 4, 4);
+                ctx.fill();
+              }
+              ctx.restore();
+            });
+
+            // Particles
+            this.particles.forEach((p, idx) => {
+              p.x += p.vx;
+              p.y += p.vy;
+              p.alpha -= p.decay;
+
+              if (p.alpha <= 0) {
+                this.particles.splice(idx, 1);
+              } else {
+                ctx.save();
+                ctx.globalAlpha = p.alpha;
+                ctx.fillStyle = p.color;
+                ctx.shadowColor = p.color;
+                ctx.shadowBlur = 8;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+              }
+            });
+          }
+          requestAnimationFrame(render);
+        };
+        requestAnimationFrame(render);
+      },
+
+      updateStatsUI() {
+        const scoreEl = document.getElementById('stat-score');
+        const highEl = document.getElementById('stat-highscore');
+        const timeEl = document.getElementById('stat-time');
+        const soundEl = document.getElementById('btn-sound');
+        const overclockEl = document.getElementById('overclock-badge');
+
+        if (scoreEl) scoreEl.innerText = this.score + ' Puntos';
+        if (highEl) highEl.innerText = 'Récord: ' + this.highScore;
+        if (timeEl) {
+          timeEl.style.display = this.gameMode === 'timed' ? 'inline-flex' : 'none';
+          timeEl.innerText = '⏱️ ' + this.timeRemaining + 's';
+        }
+        if (soundEl) soundEl.innerText = this.soundEnabled ? '🔊' : '🔇';
+        if (overclockEl) {
+          overclockEl.style.display = this.overclockTicks > 0 ? 'block' : 'none';
+        }
+      },
+
+      renderOverlays() {
+        const pauseOverlay = document.getElementById('overlay-pause');
+        const gameoverOverlay = document.getElementById('overlay-gameover');
+        const finalScoreEl = document.getElementById('final-score-val');
+        const finalLengthEl = document.getElementById('final-length-val');
+
+        if (pauseOverlay) {
+          pauseOverlay.style.display = (this.isPaused && !this.isGameOver) ? 'flex' : 'none';
+        }
+        if (gameoverOverlay) {
+          gameoverOverlay.style.display = this.isGameOver ? 'flex' : 'none';
+          if (finalScoreEl) finalScoreEl.innerText = this.score.toString();
+          if (finalLengthEl) finalLengthEl.innerText = this.snakeLength.toString();
+        }
+      },
+
+      renderHtml() {
+        const root = document.getElementById('app-root');
+        root.innerHTML = `
+          <div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; flex-wrap:wrap; gap:0.8rem;">
+              <a href="desvarios-retro.html" class="breadcrumb-link">
+                <span>←</span> <span>Volver a Desvaríos Retro</span>
+              </a>
+
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <div id="stat-score" style="display:inline-flex; align-items:center; gap:0.35rem; padding:0.3rem 0.75rem; border-radius:var(--radius-full); background:rgba(16, 185, 129, 0.12); border:1px solid rgba(16, 185, 129, 0.3); color:#34d399; font-size:0.82rem; font-weight:700;">
+                  🏆 0 Puntos
+                </div>
+
+                <div id="stat-highscore" style="display:inline-flex; align-items:center; gap:0.35rem; padding:0.3rem 0.75rem; border-radius:var(--radius-full); background:rgba(245, 158, 11, 0.12); border:1px solid rgba(245, 158, 11, 0.3); color:#fbbf24; font-size:0.82rem; font-weight:700;">
+                  🔥 Récord: 0
+                </div>
+
+                <div id="stat-time" style="display:none; align-items:center; gap:0.35rem; padding:0.3rem 0.75rem; border-radius:var(--radius-full); background:rgba(6, 182, 212, 0.12); border:1px solid rgba(6, 182, 212, 0.3); color:#38bdf8; font-size:0.82rem; font-weight:700;">
+                  ⏱️ 30s
+                </div>
+
+                <button id="btn-sound" onclick="snakeApp.toggleSound()" class="btn-secondary" style="padding:0.3rem 0.6rem;">
+                  🔊
+                </button>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-surface); border:1px solid rgba(16, 185, 129, 0.35); border-radius:var(--radius-lg); padding:2rem 1.5rem; box-shadow:0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(16, 185, 129, 0.15); position:relative;">
+              <!-- Mode & Speed Controls -->
+              <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.75rem; padding-bottom:1.25rem; border-bottom:1px solid var(--border-subtle); margin-bottom:1.5rem;">
+                <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+                  <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Modo:</span>
+                  <div style="display:flex; gap:0.35rem;">
+                    <button id="mode-classic" onclick="snakeApp.setMode('classic')" class="cat-filter-btn cat-filter-btn-active" style="padding:0.3rem 0.75rem; font-size:0.78rem;">
+                      🧱 Clásico (Paredes)
+                    </button>
+                    <button id="mode-portals" onclick="snakeApp.setMode('portals')" class="cat-filter-btn" style="padding:0.3rem 0.75rem; font-size:0.78rem;">
+                      🌀 Portales (Sin Fin)
+                    </button>
+                    <button id="mode-timed" onclick="snakeApp.setMode('timed')" class="cat-filter-btn" style="padding:0.3rem 0.75rem; font-size:0.78rem;">
+                      ⏱️ Sobrecarga (30s)
+                    </button>
+                  </div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Velocidad:</span>
+                  <div style="display:flex; gap:0.3rem;">
+                    <button id="speed-cadete" onclick="snakeApp.setSpeed('cadete')" style="font-size:0.78rem; padding:0.28rem 0.68rem; border-radius:var(--radius-full); background:rgba(255,255,255,0.04); color:#34d399; border:1px solid var(--border-subtle); font-weight:700; cursor:pointer;">
+                      CADETE
+                    </button>
+                    <button id="speed-hacker" onclick="snakeApp.setSpeed('hacker')" style="font-size:0.78rem; padding:0.28rem 0.68rem; border-radius:var(--radius-full); background:rgba(255,255,255,0.18); color:#fbbf24; border:1.5px solid #fbbf24; box-shadow:0 0 10px #fbbf2440; font-weight:700; cursor:pointer;">
+                      HACKER
+                    </button>
+                    <button id="speed-ninja" onclick="snakeApp.setSpeed('ninja')" style="font-size:0.78rem; padding:0.28rem 0.68rem; border-radius:var(--radius-full); background:rgba(255,255,255,0.04); color:#f87171; border:1px solid var(--border-subtle); font-weight:700; cursor:pointer;">
+                      NINJA
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Canvas Container -->
+              <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative;">
+                <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; box-shadow:0 0 25px rgba(16, 185, 129, 0.25); border:2px solid rgba(16, 185, 129, 0.4);">
+                  <canvas id="snake-canvas" width="400" height="400" style="display:block; max-width:100%; aspect-ratio:1/1; background:#090d16; cursor:pointer;"></canvas>
+
+                  <div id="overclock-badge" style="display:none; position:absolute; top:10px; left:10px; padding:0.25rem 0.65rem; border-radius:var(--radius-full); background:rgba(245, 158, 11, 0.25); border:1px solid #fbbf24; color:#fbbf24; font-size:0.75rem; font-weight:800;">
+                    ⚡ OVERCLOCK X2
+                  </div>
+
+                  <!-- Pause Overlay -->
+                  <div id="overlay-pause" style="display:none; position:absolute; inset:0; background:rgba(11, 15, 25, 0.85); backdrop-filter:blur(4px); flex-direction:column; align-items:center; justify-content:center; gap:1rem;">
+                    <div style="font-size:2rem;">⏸️</div>
+                    <h3 style="font-size:1.4rem; font-weight:800; color:#38bdf8;">JUEGO PAUSADO</h3>
+                    <button onclick="snakeApp.togglePause()" class="btn-primary">
+                      <span>▶</span> <span>Reanudar (Espacio)</span>
+                    </button>
+                  </div>
+
+                  <!-- Game Over Overlay -->
+                  <div id="overlay-gameover" style="display:none; position:absolute; inset:0; background:rgba(11, 15, 25, 0.92); backdrop-filter:blur(6px); flex-direction:column; align-items:center; justify-content:center; padding:1.5rem; text-align:center;">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">💥</div>
+                    <h3 style="font-size:1.6rem; font-weight:900; color:#f87171; margin-bottom:0.5rem;">SISTEMA COLAPSADO</h3>
+                    <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:1.25rem;">
+                      Puntuación: <strong id="final-score-val" style="color:#34d399;">0</strong> | Longitud: <strong id="final-length-val">0</strong>
+                    </p>
+                    <button onclick="snakeApp.resetGame()" class="btn-primary">
+                      <span>↺</span> <span>Reiniciar Misión</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Controls row -->
+                <div style="display:flex; gap:0.75rem; margin-top:1.25rem;">
+                  <button onclick="snakeApp.togglePause()" class="btn-secondary" style="font-size:0.85rem;">
+                    <span>⏸️</span> <span>Pausar (Espacio)</span>
+                  </button>
+                  <button onclick="snakeApp.resetGame()" class="btn-secondary" style="font-size:0.85rem;">
+                    <span>↺</span> <span>Reiniciar</span>
+                  </button>
+                </div>
+
+                <!-- Mobile Virtual D-Pad Controller -->
+                <div style="margin-top:1.5rem; display:flex; flex-direction:column; align-items:center; gap:0.4rem;">
+                  <button onclick="snakeApp.changeDirection({x:0, y:-1})" class="btn-secondary" style="width:56px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:var(--radius-md); background:rgba(255,255,255,0.08); border:1px solid rgba(16,185,129,0.4);" aria-label="Arriba">
+                    <span style="font-size:1.5rem; color:#34d399;">▲</span>
+                  </button>
+                  <div style="display:flex; gap:2.5rem;">
+                    <button onclick="snakeApp.changeDirection({x:-1, y:0})" class="btn-secondary" style="width:56px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:var(--radius-md); background:rgba(255,255,255,0.08); border:1px solid rgba(16,185,129,0.4);" aria-label="Izquierda">
+                      <span style="font-size:1.5rem; color:#34d399;">◀</span>
+                    </button>
+                    <button onclick="snakeApp.changeDirection({x:1, y:0})" class="btn-secondary" style="width:56px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:var(--radius-md); background:rgba(255,255,255,0.08); border:1px solid rgba(16,185,129,0.4);" aria-label="Derecha">
+                      <span style="font-size:1.5rem; color:#34d399;">▶</span>
+                    </button>
+                  </div>
+                  <button onclick="snakeApp.changeDirection({x:0, y:1})" class="btn-secondary" style="width:56px; height:50px; display:flex; align-items:center; justify-content:center; border-radius:var(--radius-md); background:rgba(255,255,255,0.08); border:1px solid rgba(16,185,129,0.4);" aria-label="Abajo">
+                    <span style="font-size:1.5rem; color:#34d399;">▼</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guide -->
+            <section style="margin-top:3.5rem; padding:2rem 1.5rem; background:var(--bg-surface-elevated); border:1px solid var(--border-subtle); border-radius:var(--radius-lg);">
+              <div style="display:flex; align-items:center; gap:0.65rem; margin-bottom:1.25rem;">
+                <span style="font-size:1.4rem;">❓</span>
+                <h2 style="font-size:1.25rem; font-weight:700; color:#fff;">Guía de Hackeo: Snake Cyberpunk 2084</h2>
+              </div>
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem;">
+                <div style="padding:1rem; background:rgba(255,255,255,0.03); border-radius:var(--radius-md);">
+                  <div style="font-size:1.2rem; margin-bottom:0.4rem;">🟩 Nodo de Datos</div>
+                  <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">Otorga <strong>+10 puntos</strong> y extiende el cuerpo cibernético de tu serpiente en 1 unidad.</p>
+                </div>
+                <div style="padding:1rem; background:rgba(255,255,255,0.03); border-radius:var(--radius-md);">
+                  <div style="font-size:1.2rem; margin-bottom:0.4rem;">💎 Cristal Cuántico</div>
+                  <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">Aparición temporal fugaz. Otorga <strong>+50 puntos</strong> antes de que expire su temporizador.</p>
+                </div>
+                <div style="padding:1rem; background:rgba(255,255,255,0.03); border-radius:var(--radius-md);">
+                  <div style="font-size:1.2rem; margin-bottom:0.4rem;">⚡ Modo Overclock</div>
+                  <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">Duplica todos los puntos obtenidos durante su periodo de sobrecarga energética.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        `;
+
+        // Add touch listeners
+        const canvas = document.getElementById('snake-canvas');
+        if (canvas) {
+          canvas.addEventListener('touchstart', (e) => {
+            const touch = e.touches[0];
+            snakeApp.touchStartPos = { x: touch.clientX, y: touch.clientY };
+          }, { passive: true });
+
+          canvas.addEventListener('touchend', (e) => {
+            if (!snakeApp.touchStartPos) return;
+            const touch = e.changedTouches[0];
+            const dx = touch.clientX - snakeApp.touchStartPos.x;
+            const dy = touch.clientY - snakeApp.touchStartPos.y;
+            if (Math.max(Math.abs(dx), Math.abs(dy)) > 20) {
+              if (Math.abs(dx) > Math.abs(dy)) {
+                snakeApp.changeDirection({ x: dx > 0 ? 1 : -1, y: 0 });
+              } else {
+                snakeApp.changeDirection({ x: 0, y: dy > 0 ? 1 : -1 });
+              }
+            }
+            snakeApp.touchStartPos = null;
+          }, { passive: true });
+        }
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      snakeApp.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

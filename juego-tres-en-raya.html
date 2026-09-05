@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tres en Raya Imposible (IA Minimax) — Juego Retro Online Gratis | TusDesvarios.com</title>
+  <meta name="description" content="Juega gratis al Tres en Raya clásico y arcade: desafía a la IA Minimax invencible o compite con un amigo en modo local para 2 jugadores con efectos retro de neón y sonido 8-bit.">
+  <meta name="keywords" content="tres en raya online gratis, tres en raya ia minimax, tic tac toe retro, juego del tres en raya, tres en raya dos jugadores, tus desvarios">
+  
+  <link rel="canonical" href="https://tusdesvarios.com/juego-tres-en-raya.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tres en Raya Imposible (IA Minimax) | Tus Desvaríos">
+  <meta property="og:description" content="¿Podrás vencer al algoritmo matemático invencible? Juega al Tres en Raya en solitario o a 2 jugadores con estética synthwave neón.">
+  <meta property="og:url" content="https://tusdesvarios.com/juego-tres-en-raya.html">
+  <meta property="og:image" content="images/games/portada_tres_en_raya.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tres en Raya Imposible (IA Minimax) — Juego Retro Gratis">
+  <meta name="twitter:description" content="Compite contra la IA perfecta o reta a un amigo en local en una cuadrícula arcade de neón con sonido 8-bit.">
+  <meta name="twitter:image" content="images/games/portada_tres_en_raya.jpg">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Tres en Raya Imposible (IA Minimax)",
+  "description": "Desafía a un motor matemático imbatible o juega contra un amigo en local en una pantalla arcade retro neón.",
+  "url": "https://tusdesvarios.com/juego-tres-en-raya.html",
+  "genre": [
+    "Board Game",
+    "Logic",
+    "Strategy",
+    "Tic Tac Toe"
+  ],
+  "playMode": [
+    "SinglePlayer",
+    "MultiPlayer"
+  ],
+  "applicationCategory": "Game",
+  "inLanguage": "es",
+  "image": "https://tusdesvarios.com/images/games/portada_tres_en_raya.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tus Desvaríos",
+    "url": "https://tusdesvarios.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://tusdesvarios.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Desvaríos Retro",
+      "item": "https://tusdesvarios.com/desvarios-retro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tres en Raya Imposible",
+      "item": "https://tusdesvarios.com/juego-tres-en-raya.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-main: #0a0d14;
+      --bg-surface: #121722;
+      --bg-surface-hover: #182030;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-cyan: #06b6d4;
+      --accent-pink: #ec4899;
+      --accent-amber: #f59e0b;
+
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-title: 'Cinzel', Georgia, serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(6, 182, 212, 0.14) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(236, 72, 153, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(168, 85, 247, 0.08) 0px, transparent 55%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .main-content {
+      flex: 1;
+      max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 4rem;
+    }
+
+    .breadcrumb-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .breadcrumb-link:hover {
+      color: var(--text-primary);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link active-retro" title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="breadcrumb-nav" style="margin-bottom: 1.25rem;">
+        <a href="desvarios-retro.html" class="breadcrumb-link">
+          <span>←</span> <span>Volver a Desvaríos Retro</span>
+        </a>
+      </div>
+
+      <header style="text-align: center; margin-bottom: 1.75rem;">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.9rem; background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.35); border-radius: 9999px; color: #06b6d4; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.75rem;">
+          <span>❌⭕</span>
+          <span>Tablero de Estrategia Clásica</span>
+        </div>
+        <h1 style="font-family: var(--font-title); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 900; letter-spacing: 0.04em; margin-bottom: 0.5rem; background: linear-gradient(135deg, #fff 40%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Tres en Raya Imposible
+        </h1>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 560px; margin: 0 auto;">
+          Enfréntate al motor matemático Minimax invencible o desafía a un amigo en local en una cuadrícula arcade de neón synthwave.
+        </p>
+      </header>
+
+      <!-- Mode & Difficulty Selector Bar -->
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.25rem; padding: 0.85rem 1.25rem; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: 12px;">
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <button id="mode-btn-ai" type="button" onclick="app.setMode('ai')" style="padding: 0.45rem 0.85rem; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; border: 1.5px solid #06b6d4; background: rgba(6, 182, 212, 0.2); color: #06b6d4; box-shadow: 0 0 14px rgba(6, 182, 212, 0.3);">
+            <span>🤖</span> <span>Vs IA Minimax</span>
+          </button>
+          <button id="mode-btn-pvp" type="button" onclick="app.setMode('pvp')" style="padding: 0.45rem 0.85rem; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: var(--text-secondary);">
+            <span>👥</span> <span>2 Jugadores Local</span>
+          </button>
+        </div>
+
+        <div id="diff-container" style="display: flex; align-items: center; gap: 0.4rem;">
+          <button id="diff-facil" type="button" onclick="app.setDifficulty('facil')" style="padding: 0.35rem 0.7rem; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: var(--text-muted);">
+            🟢 Fácil
+          </button>
+          <button id="diff-medio" type="button" onclick="app.setDifficulty('medio')" style="padding: 0.35rem 0.7rem; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: var(--text-muted);">
+            🟡 Medio
+          </button>
+          <button id="diff-imposible" type="button" onclick="app.setDifficulty('imposible')" style="padding: 0.35rem 0.7rem; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer; border: 1px solid #fbbf24; background: rgba(245, 158, 11, 0.2); color: #fbbf24;">
+            🔴 Imposible
+          </button>
+        </div>
+
+        <button id="btn-sound-toggle" onclick="app.toggleSound()" style="padding: 0.45rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(16, 185, 129, 0.15); color: #34d399; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 600;">
+          <span>🔊 Sonido ON</span>
+        </button>
+      </div>
+
+      <!-- Arcade Box -->
+      <div style="margin: 0 auto; padding: 1.75rem; border-radius: 16px; background: linear-gradient(180deg, #181c24 0%, #0d1117 100%); border: 2px solid rgba(6, 182, 212, 0.35); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(6, 182, 212, 0.15); display: flex; flex-direction: column; align-items: center; max-width: 520px;">
+        
+        <!-- Scoreboard Header -->
+        <div style="width: 100%; margin-bottom: 1.5rem; padding: 0.75rem 1.25rem; background: linear-gradient(180deg, #222734 0%, #171b26 100%); border-radius: 10px; border: 2px solid #333d4e; display: flex; align-items: center; justify-content: space-around; box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);">
+          <div style="text-align: center;">
+            <div id="p1-label" style="font-size: 0.78rem; color: #06b6d4; font-weight: 700; margin-bottom: 0.2rem;">
+              Tú (❌)
+            </div>
+            <div id="score-p1" style="font-family: monospace; font-size: 1.4rem; fontWeight: 900; color: #06b6d4; text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);">
+              0
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 700; margin-bottom: 0.2rem;">
+              Empates
+            </div>
+            <div id="score-draws" style="font-family: monospace; font-size: 1.4rem; font-weight: 900; color: var(--text-secondary);">
+              0
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <div id="p2-label" style="font-size: 0.78rem; color: #ec4899; font-weight: 700; margin-bottom: 0.2rem;">
+              IA (⭕)
+            </div>
+            <div id="score-p2" style="font-family: monospace; font-size: 1.4rem; font-weight: 900; color: #ec4899; text-shadow: 0 0 8px rgba(236, 72, 153, 0.6);">
+              0
+            </div>
+          </div>
+        </div>
+
+        <!-- Turn / Status Indicator -->
+        <div id="status-indicator" style="margin-bottom: 1.25rem; font-size: 0.92rem; font-weight: 700; color: #06b6d4; display: flex; align-items: center; gap: 0.45rem;">
+          Turno de: <strong>❌ (Azul)</strong>
+        </div>
+
+        <!-- 3x3 Board Grid -->
+        <div id="grid-container" style="display: grid; grid-template-columns: repeat(3, 96px); grid-template-rows: repeat(3, 96px); gap: 10px; padding: 12px; background: #121620; border-radius: 14px; border: 2px solid #232b3b; box-shadow: inset 0 4px 18px rgba(0,0,0,0.6); user-select: none;">
+          <!-- 9 cells injected by JS -->
+        </div>
+
+        <!-- Action Controls -->
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem;">
+          <button onclick="app.resetGame()" class="btn-primary">
+            <span>↺ Nueva Partida</span>
+          </button>
+          <button onclick="app.resetScores()" style="padding: 0.65rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: var(--text-muted); font-size: 0.82rem; font-weight: 600; cursor: pointer;">
+            Reiniciar Marcador
+          </button>
+        </div>
+      </div>
+
+      <!-- Rules Guide -->
+      <section style="margin-top: 2.5rem; padding: 1.5rem; border-radius: 12px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle);">
+        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.45rem; color: #06b6d4;">
+          <span>❓</span> <span>El Desafío del Tres en Raya Imposible</span>
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6;">
+          <div>
+            <strong style="color: #fff;">🤖 ¿Por qué es "Imposible"?</strong> El nivel Imposible utiliza el algoritmo minimax completo: evalúa cada posible desenlace del árbol de juego. La máquina nunca comete fallos y jugará siempre la respuesta matemáticamente óptima.
+          </div>
+          <div>
+            <strong style="color: #fff;">🎯 ¿Se puede ganar?</strong> Según la teoría de juegos, si ambos jugadores juegan de manera óptima, el Tres en Raya siempre termina en empate. ¡Conseguir empatar contra el modo Imposible demuestra juego perfecto!
+          </div>
+          <div>
+            <strong style="color: #fff;">🟢 Modos Alternativos:</strong> Prueba el nivel Fácil o Medio para partidas más dinámicas y con margen para la victoria, o utiliza el modo 2 Jugadores en local para retar a quien tengas al lado.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const WINNING_COMBOS = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8],
+      [0, 3, 6], [1, 4, 7], [2, 5, 8],
+      [0, 4, 8], [2, 4, 6]
+    ];
+
+    const app = {
+      mode: 'ai',
+      difficulty: 'imposible',
+      playerSymbol: 'X',
+      aiSymbol: 'O',
+      board: Array(9).fill(null),
+      currentTurn: 'X',
+      winner: null,
+      winningCombo: null,
+      isAiThinking: false,
+      soundEnabled: true,
+      audioCtx: null,
+      scores: { player1: 0, draws: 0, player2: 0 },
+
+      init() {
+        try {
+          const saved = localStorage.getItem('tres_en_raya_scores');
+          if (saved) this.scores = JSON.parse(saved);
+        } catch {}
+        this.updateScoreboard();
+        this.resetGame();
+      },
+
+      playSound(type) {
+        if (!this.soundEnabled) return;
+        try {
+          const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+          if (!this.audioCtx) this.audioCtx = new AudioCtxClass();
+          if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+          const ctx = this.audioCtx;
+          const now = ctx.currentTime;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          if (type === 'x') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(587.33, now);
+            osc.frequency.exponentialRampToValueAtTime(880, now + 0.08);
+            gain.gain.setValueAtTime(0.18, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+            osc.start(now);
+            osc.stop(now + 0.08);
+          } else if (type === 'o') {
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(440, now);
+            osc.frequency.exponentialRampToValueAtTime(330, now + 0.08);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+            osc.start(now);
+            osc.stop(now + 0.08);
+          } else if (type === 'win') {
+            const notes = [523.25, 659.25, 783.99, 1046.5];
+            notes.forEach((freq, idx) => {
+              const nOsc = ctx.createOscillator();
+              const nGain = ctx.createGain();
+              nOsc.type = 'triangle';
+              nOsc.frequency.setValueAtTime(freq, now + idx * 0.09);
+              nGain.gain.setValueAtTime(0.2, now + idx * 0.09);
+              nGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.09 + 0.22);
+              nOsc.connect(nGain);
+              nGain.connect(ctx.destination);
+              nOsc.start(now + idx * 0.09);
+              nOsc.stop(now + idx * 0.09 + 0.22);
+            });
+          } else if (type === 'lose') {
+            const notes = [440, 392, 349.23, 293.66];
+            notes.forEach((freq, idx) => {
+              const nOsc = ctx.createOscillator();
+              const nGain = ctx.createGain();
+              nOsc.type = 'sawtooth';
+              nOsc.frequency.setValueAtTime(freq, now + idx * 0.1);
+              nGain.gain.setValueAtTime(0.15, now + idx * 0.1);
+              nGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.2);
+              nOsc.connect(nGain);
+              nGain.connect(ctx.destination);
+              nOsc.start(now + idx * 0.1);
+              nOsc.stop(now + idx * 0.1 + 0.2);
+            });
+          } else if (type === 'tie') {
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(350, now);
+            osc.frequency.setValueAtTime(250, now + 0.08);
+            gain.gain.setValueAtTime(0.15, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+            osc.start(now);
+            osc.stop(now + 0.18);
+          }
+        } catch {}
+      },
+
+      toggleSound() {
+        this.soundEnabled = !this.soundEnabled;
+        const btn = document.getElementById('btn-sound-toggle');
+        if (this.soundEnabled) {
+          btn.innerHTML = '<span>🔊 Sonido ON</span>';
+          btn.style.color = '#34d399';
+          btn.style.background = 'rgba(16, 185, 129, 0.15)';
+        } else {
+          btn.innerHTML = '<span>🔇 Mute</span>';
+          btn.style.color = 'var(--text-muted)';
+          btn.style.background = 'rgba(255, 255, 255, 0.05)';
+        }
+      },
+
+      setMode(newMode) {
+        this.mode = newMode;
+        const aiBtn = document.getElementById('mode-btn-ai');
+        const pvpBtn = document.getElementById('mode-btn-pvp');
+        const diffBox = document.getElementById('diff-container');
+        const p1Label = document.getElementById('p1-label');
+        const p2Label = document.getElementById('p2-label');
+
+        if (newMode === 'ai') {
+          aiBtn.style.border = '1.5px solid #06b6d4';
+          aiBtn.style.background = 'rgba(6, 182, 212, 0.2)';
+          aiBtn.style.color = '#06b6d4';
+          aiBtn.style.boxShadow = '0 0 14px rgba(6, 182, 212, 0.3)';
+
+          pvpBtn.style.border = '1px solid rgba(255,255,255,0.12)';
+          pvpBtn.style.background = 'rgba(255,255,255,0.04)';
+          pvpBtn.style.color = 'var(--text-secondary)';
+          pvpBtn.style.boxShadow = 'none';
+
+          diffBox.style.display = 'flex';
+          p1Label.textContent = 'Tú (❌)';
+          p2Label.textContent = 'IA (⭕)';
+        } else {
+          pvpBtn.style.border = '1.5px solid #ec4899';
+          pvpBtn.style.background = 'rgba(236, 72, 153, 0.2)';
+          pvpBtn.style.color = '#ec4899';
+          pvpBtn.style.boxShadow = '0 0 14px rgba(236, 72, 153, 0.3)';
+
+          aiBtn.style.border = '1px solid rgba(255,255,255,0.12)';
+          aiBtn.style.background = 'rgba(255,255,255,0.04)';
+          aiBtn.style.color = 'var(--text-secondary)';
+          aiBtn.style.boxShadow = 'none';
+
+          diffBox.style.display = 'none';
+          p1Label.textContent = 'Jugador 1 (❌)';
+          p2Label.textContent = 'Jugador 2 (⭕)';
+        }
+        this.resetGame();
+      },
+
+      setDifficulty(d) {
+        this.difficulty = d;
+        ['facil', 'medio', 'imposible'].forEach(k => {
+          const btn = document.getElementById('diff-' + k);
+          if (k === d) {
+            btn.style.border = '1px solid #fbbf24';
+            btn.style.background = 'rgba(245, 158, 11, 0.2)';
+            btn.style.color = '#fbbf24';
+          } else {
+            btn.style.border = '1px solid rgba(255,255,255,0.1)';
+            btn.style.background = 'transparent';
+            btn.style.color = 'var(--text-muted)';
+          }
+        });
+        this.resetGame();
+      },
+
+      updateScoreboard() {
+        document.getElementById('score-p1').textContent = this.scores.player1;
+        document.getElementById('score-draws').textContent = this.scores.draws;
+        document.getElementById('score-p2').textContent = this.scores.player2;
+      },
+
+      resetScores() {
+        this.scores = { player1: 0, draws: 0, player2: 0 };
+        try {
+          localStorage.setItem('tres_en_raya_scores', JSON.stringify(this.scores));
+        } catch {}
+        this.updateScoreboard();
+      },
+
+      checkWinner(b) {
+        for (const combo of WINNING_COMBOS) {
+          const [a, bIndex, c] = combo;
+          if (b[a] && b[a] === b[bIndex] && b[a] === b[c]) {
+            return { winner: b[a], combo };
+          }
+        }
+        if (b.every(cell => cell !== null)) {
+          return { winner: 'tie', combo: null };
+        }
+        return null;
+      },
+
+      resetGame() {
+        this.board = Array(9).fill(null);
+        this.currentTurn = 'X';
+        this.winner = null;
+        this.winningCombo = null;
+        this.isAiThinking = false;
+        this.updateStatus();
+        this.renderBoard();
+      },
+
+      updateStatus() {
+        const ind = document.getElementById('status-indicator');
+        if (this.winner) {
+          if (this.winner === 'tie') {
+            ind.style.color = '#fbbf24';
+            ind.innerHTML = '🤝 ¡Partida en Tablas / Empate!';
+          } else if (this.mode === 'ai') {
+            if (this.winner === this.playerSymbol) {
+              ind.style.color = '#06b6d4';
+              ind.innerHTML = '🎉 ¡Victoria magistral! Has vencido';
+            } else {
+              ind.style.color = '#ec4899';
+              ind.innerHTML = '💀 La IA ha ganado la partida';
+            }
+          } else {
+            ind.style.color = this.winner === 'X' ? '#06b6d4' : '#ec4899';
+            ind.innerHTML = '🎉 ¡Victoria para el Jugador ' + (this.winner === 'X' ? '1 (❌)' : '2 (⭕)') + '!';
+          }
+        } else if (this.isAiThinking) {
+          ind.style.color = '#fbbf24';
+          ind.innerHTML = '⚡ La IA está calculando el movimiento perfecto...';
+        } else {
+          ind.style.color = this.currentTurn === 'X' ? '#06b6d4' : '#ec4899';
+          ind.innerHTML = 'Turno de: <strong>' + (this.currentTurn === 'X' ? '❌ (Azul)' : '⭕ (Rosa)') + '</strong>';
+        }
+      },
+
+      minimax(currentBoard, depth, isMaximizing) {
+        const res = this.checkWinner(currentBoard);
+        if (res) {
+          if (res.winner === this.aiSymbol) return 10 - depth;
+          if (res.winner === this.playerSymbol) return depth - 10;
+          if (res.winner === 'tie') return 0;
+        }
+
+        if (isMaximizing) {
+          let best = -Infinity;
+          for (let i = 0; i < 9; i++) {
+            if (currentBoard[i] === null) {
+              currentBoard[i] = this.aiSymbol;
+              best = Math.max(best, this.minimax(currentBoard, depth + 1, false));
+              currentBoard[i] = null;
+            }
+          }
+          return best;
+        } else {
+          let best = Infinity;
+          for (let i = 0; i < 9; i++) {
+            if (currentBoard[i] === null) {
+              currentBoard[i] = this.playerSymbol;
+              best = Math.min(best, this.minimax(currentBoard, depth + 1, true));
+              currentBoard[i] = null;
+            }
+          }
+          return best;
+        }
+      },
+
+      getAiMove() {
+        const available = [];
+        for (let i = 0; i < 9; i++) {
+          if (this.board[i] === null) available.push(i);
+        }
+        if (available.length === 0) return -1;
+
+        if (this.difficulty === 'facil') {
+          return available[Math.floor(Math.random() * available.length)];
+        }
+
+        if (this.difficulty === 'medio') {
+          if (Math.random() < 0.4) {
+            return available[Math.floor(Math.random() * available.length)];
+          }
+        }
+
+        if (this.board[4] === null && Math.random() < 0.8) {
+          return 4;
+        }
+
+        let bestScore = -Infinity;
+        let move = available[0];
+        for (const i of available) {
+          this.board[i] = this.aiSymbol;
+          const score = this.minimax(this.board, 0, false);
+          this.board[i] = null;
+          if (score > bestScore) {
+            bestScore = score;
+            move = i;
+          }
+        }
+        return move;
+      },
+
+      triggerAiTurn() {
+        if (this.mode !== 'ai' || this.currentTurn !== this.aiSymbol || this.winner || this.isAiThinking) return;
+        this.isAiThinking = true;
+        this.updateStatus();
+
+        setTimeout(() => {
+          const move = this.getAiMove();
+          if (move !== -1) {
+            this.board[move] = this.aiSymbol;
+            this.playSound(this.aiSymbol === 'X' ? 'x' : 'o');
+
+            const res = this.checkWinner(this.board);
+            if (res) {
+              this.winner = res.winner;
+              this.winningCombo = res.combo;
+              if (res.winner === this.aiSymbol) {
+                this.playSound('lose');
+                this.scores.player2++;
+              } else if (res.winner === 'tie') {
+                this.playSound('tie');
+                this.scores.draws++;
+            if (this.mode === 'ai' && window.DesvariosAuth) {
+              window.DesvariosAuth.unlockMedal('tresenraya-estratega');
+            }
+              }
+              try {
+                localStorage.setItem('tres_en_raya_scores', JSON.stringify(this.scores));
+              } catch {}
+              this.updateScoreboard();
+            } else {
+              this.currentTurn = this.playerSymbol;
+            }
+          }
+          this.isAiThinking = false;
+          this.updateStatus();
+          this.renderBoard();
+        }, 400);
+      },
+
+      handleCellClick(index) {
+        if (this.board[index] !== null || this.winner !== null || this.isAiThinking) return;
+        if (this.mode === 'ai' && this.currentTurn !== this.playerSymbol) return;
+
+        const symbol = this.currentTurn;
+        this.board[index] = symbol;
+        this.playSound(symbol === 'X' ? 'x' : 'o');
+
+        const res = this.checkWinner(this.board);
+        if (res) {
+          this.winner = res.winner;
+          this.winningCombo = res.combo;
+
+          if (res.winner === 'tie') {
+            this.playSound('tie');
+            this.scores.draws++;
+          } else {
+            this.playSound('win');
+            try {
+              confetti({
+                particleCount: 90,
+                spread: 75,
+                origin: { y: 0.6 },
+                colors: ['#06b6d4', '#ec4899', '#f59e0b', '#34d399', '#ffffff']
+              });
+            } catch {}
+
+            if (this.mode === 'ai') {
+              if (res.winner === this.playerSymbol) {
+                this.scores.player1++;
+                if (window.DesvariosAuth) {
+                  window.DesvariosAuth.unlockMedal('tresenraya-estratega');
+                }
+              } else this.scores.player2++;
+            } else {
+              if (res.winner === 'X') this.scores.player1++;
+              else this.scores.player2++;
+            }
+          }
+
+          try {
+            localStorage.setItem('tres_en_raya_scores', JSON.stringify(this.scores));
+          } catch {}
+          this.updateScoreboard();
+        } else {
+          this.currentTurn = symbol === 'X' ? 'O' : 'X';
+        }
+
+        this.updateStatus();
+        this.renderBoard();
+
+        if (!res && this.mode === 'ai') {
+          this.triggerAiTurn();
+        }
+      },
+
+      renderBoard() {
+        const gridEl = document.getElementById('grid-container');
+        let html = '';
+        for (let i = 0; i < 9; i++) {
+          const val = this.board[i];
+          const isWin = this.winningCombo && this.winningCombo.includes(i);
+          const isX = val === 'X';
+          const isO = val === 'O';
+
+          let bg = isWin
+            ? (isX ? 'rgba(6, 182, 212, 0.25)' : 'rgba(236, 72, 153, 0.25)')
+            : 'linear-gradient(145deg, #242b3a 0%, #171c26 100%)';
+          let border = isWin
+            ? (isX ? '2px solid #06b6d4' : '2px solid #ec4899')
+            : '1px solid #333c50';
+          let shadow = isWin
+            ? (isX ? '0 0 20px rgba(6, 182, 212, 0.5)' : '0 0 20px rgba(236, 72, 153, 0.5)')
+            : '0 4px 10px rgba(0,0,0,0.4)';
+          let color = isX ? '#06b6d4' : '#ec4899';
+          let textShadow = isX ? '0 0 12px rgba(6, 182, 212, 0.7)' : (isO ? '0 0 12px rgba(236, 72, 153, 0.7)' : 'none');
+          let cursor = val === null && !this.winner && !this.isAiThinking ? 'pointer' : 'default';
+
+          html += `
+            <button
+              type="button"
+              onclick="app.handleCellClick(${i})"
+              style="width: 96px; height: 96px; border-radius: 10px; background: ${bg}; border: ${border}; box-shadow: ${shadow}; font-size: 3rem; font-weight: 900; display: flex; align-items: center; justify-content: center; cursor: ${cursor}; color: ${color}; text-shadow: ${textShadow}; transition: all 0.18s ease;"
+            >
+              ${val !== null ? val : ''}
+            </button>
+          `;
+        }
+        gridEl.innerHTML = html;
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      app.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

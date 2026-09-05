@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario — Crea tu Ficha de Desvariado | Tus Desvaríos</title>
+  <meta name="description" content="Regístrate en Tus Desvaríos con tu nombre de usuario único y correo. Desbloquea medallas, guarda tus progresos y participa en la comunidad.">
+  <link rel="canonical" href="https://tusdesvarios.com/registro.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Supabase SDK v2 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-focus: #a855f7;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-purple: #a855f7;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --font-display: 'Cinzel', serif;
+      --font-ui: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 95% 55% at 50% -12%, rgba(168, 85, 247, 0.28) 0%, transparent 65%),
+        radial-gradient(circle 500px at 10% 30%, rgba(6, 182, 212, 0.22) 0%, transparent 60%),
+        radial-gradient(circle 550px at 90% 40%, rgba(245, 158, 11, 0.20) 0%, transparent 60%),
+        linear-gradient(180deg, #0e1322 0%, #0a0e1a 50%, #060911 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .main-content {
+      flex: 1;
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 5rem;
+    }
+
+    .auth-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(168, 85, 247, 0.15);
+      backdrop-filter: blur(16px);
+      position: relative;
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .auth-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #c4b5fd;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .auth-title {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .auth-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    .form-group {
+      margin-bottom: 1.35rem;
+    }
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .form-input {
+      width: 100%;
+      background: rgba(11, 15, 25, 0.75);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent-purple);
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.3);
+      background: rgba(11, 15, 25, 0.95);
+    }
+
+    .input-status {
+      font-size: 0.8rem;
+      margin-top: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 500;
+      min-height: 1.2rem;
+    }
+    .status-ok { color: #34d399; }
+    .status-err { color: #f87171; }
+    .status-hint { color: var(--text-muted); }
+
+    .btn-toggle-pwd {
+      position: absolute;
+      right: 0.75rem;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 0.2rem;
+      transition: color 0.2s;
+    }
+    .btn-toggle-pwd:hover { color: #ffffff; }
+
+    /* Avatar Grid */
+    .avatar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .avatar-item {
+      aspect-ratio: 1;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      padding: 0.35rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .avatar-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+      border-color: rgba(168, 85, 247, 0.4);
+    }
+
+    .avatar-item.active {
+      border-color: #a855f7;
+      background: rgba(168, 85, 247, 0.18);
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.4);
+    }
+
+    .avatar-item img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .avatar-item-name {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    .avatar-item.active .avatar-item-name {
+      color: #c4b5fd;
+      font-weight: 700;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+      border: none;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.35);
+      margin-top: 1.5rem;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(168, 85, 247, 0.55);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .alert-box {
+      display: none;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.4;
+    }
+    .alert-error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+
+    /* Confirmation screen */
+    .confirm-box {
+      display: none;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .confirm-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.4)); }
+      50% { transform: scale(1.08); filter: drop-shadow(0 0 24px rgba(6, 182, 212, 0.6)); }
+    }
+
+    .auth-footer-links {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .auth-footer-links a {
+      color: #c084fc;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .auth-footer-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <main class="main-content">
+      <div class="auth-card">
+        <!-- Register Form View -->
+        <div id="register-view">
+          <div class="auth-header">
+            <div class="auth-badge">✨ Membresía de Ocio</div>
+            <h1 class="auth-title">Crear Cuenta</h1>
+            <p class="auth-subtitle">Elige tu nombre único de Desvariado, tu avatar y empieza tu vitrina de logros.</p>
+          </div>
+
+          <div id="error-alert" class="alert-box alert-error"></div>
+
+          <form id="register-form" onsubmit="handleRegister(event)">
+            <!-- Avatar Selection -->
+            <div class="form-group">
+              <label class="form-label">
+                <span>1. Elige tu Avatar Inicial</span>
+                <span id="selected-avatar-name" style="color: #c4b5fd; font-size: 0.78rem;">Alien Arcade</span>
+              </label>
+              <div class="avatar-grid" id="avatar-picker"></div>
+              <input type="hidden" id="avatar-input" value="arcade-alien">
+            </div>
+
+            <!-- Username -->
+            <div class="form-group">
+              <label class="form-label" for="username-input">
+                <span>2. Nombre de Usuario Único</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">No se puede repetir</span>
+              </label>
+              <div class="form-input-wrapper">
+                <input type="text" id="username-input" class="form-input" placeholder="ej. Neo_2084" required maxlength="20" autocomplete="username">
+              </div>
+              <div id="username-status" class="input-status status-hint">Entre 3 y 20 caracteres (letras, números y guión bajo)</div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="email-input">
+                <span>3. Correo Electrónico</span>
+              </label>
+              <div class="form-input-wrapper">
+                <input type="email" id="email-input" class="form-input" placeholder="tu@correo.com" required autocomplete="email">
+              </div>
+              <div class="input-status status-hint">Te enviaremos el enlace de activación</div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+              <label class="form-label" for="password-input">
+                <span>4. Contraseña</span>
+              </label>
+              <div class="form-input-wrapper">
+                <input type="password" id="password-input" class="form-input" placeholder="Mínimo 6 caracteres" required minlength="6" autocomplete="new-password">
+                <button type="button" class="btn-toggle-pwd" onclick="togglePwd('password-input', this)" title="Ver u ocultar contraseña">👁️</button>
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+              <label class="form-label" for="password-confirm">
+                <span>5. Confirmar Contraseña</span>
+              </label>
+              <div class="form-input-wrapper">
+                <input type="password" id="password-confirm" class="form-input" placeholder="Repite tu contraseña" required minlength="6" autocomplete="new-password">
+                <button type="button" class="btn-toggle-pwd" onclick="togglePwd('password-confirm', this)" title="Ver u ocultar contraseña">👁️</button>
+              </div>
+              <div id="pwd-match-status" class="input-status"></div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">
+              <span>Crear mi Cuenta de Desvariado</span>
+              <span>➜</span>
+            </button>
+          </form>
+
+          <div class="auth-footer-links">
+            <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+          </div>
+        </div>
+
+        <!-- Success Confirmation View -->
+        <div id="confirm-view" class="confirm-box">
+          <div class="confirm-icon">✉️</div>
+          <div class="auth-badge" style="background:rgba(16, 185, 129, 0.18); border-color:#10b981; color:#34d399;">¡Registro Casi Completo!</div>
+          <h2 class="auth-title" style="margin-top:0.75rem;">Revisa tu Correo</h2>
+          <p class="auth-subtitle" style="margin-bottom:1.5rem; line-height:1.6;">
+            Hemos enviado un enlace de confirmación a <strong id="sent-email-label" style="color:#ffffff;"></strong>.<br>
+            Haz clic en el botón de tu correo para activar tu cuenta e ingresar directamente a tu nueva ficha de usuario.
+          </p>
+          <div style="padding:1.25rem; background:rgba(255,255,255,0.03); border:1px dashed rgba(255,255,255,0.15); border-radius:14px; margin-bottom:1.5rem; font-size:0.86rem; color:var(--text-muted);">
+            💡 <em>¿No lo ves en tu bandeja? Revisa la carpeta de correo no deseado (Spam).</em>
+          </div>
+          <a href="login.html" class="btn-submit" style="text-decoration:none;">
+            <span>Ir a Iniciar Sesión</span>
+            <span>➜</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer style="text-align:center; padding:2rem; font-size:0.85rem; color:var(--text-muted); border-top:1px solid rgba(255,255,255,0.08);">
+      <p>© 2026 TusDesvarios.com — Portal de ocio, relatos y minijuegos.</p>
+    </footer>
+  </div>
+
+  <script>
+    let usernameTimer = null;
+    let isUsernameValid = false;
+
+    // Render avatar selection grid
+    function renderAvatars() {
+      const picker = document.getElementById('avatar-picker');
+      picker.innerHTML = window.DESVARIOS_AVATARS.map((a, i) => `
+        <div class="avatar-item ${i === 0 ? 'active' : ''}" onclick="selectAvatar('${a.id}', '${a.name}')" id="avatar-opt-${a.id}" title="${a.desc}">
+          <img src="images/avatars/${a.id}.svg" alt="${a.name}">
+          <span class="avatar-item-name">${a.name}</span>
+        </div>
+      `).join('');
+    }
+
+    function selectAvatar(id, name) {
+      document.querySelectorAll('.avatar-item').forEach(el => el.classList.remove('active'));
+      const activeEl = document.getElementById('avatar-opt-' + id);
+      if (activeEl) activeEl.classList.add('active');
+      document.getElementById('avatar-input').value = id;
+      document.getElementById('selected-avatar-name').textContent = name;
+    }
+
+    function togglePwd(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = '🙈';
+      } else {
+        input.type = 'password';
+        btn.textContent = '👁️';
+      }
+    }
+
+    // Real-time username check with debounce
+    document.getElementById('username-input').addEventListener('input', (e) => {
+      clearTimeout(usernameTimer);
+      const val = e.target.value.trim();
+      const statusEl = document.getElementById('username-status');
+
+      if (!val) {
+        statusEl.className = 'input-status status-hint';
+        statusEl.textContent = 'Entre 3 y 20 caracteres (letras, números y guión bajo)';
+        isUsernameValid = false;
+        return;
+      }
+
+      if (val.length < 3) {
+        statusEl.className = 'input-status status-err';
+        statusEl.textContent = '❌ Demasiado corto (mínimo 3 caracteres)';
+        isUsernameValid = false;
+        return;
+      }
+
+      if (!/^[a-zA-Z0-9_]+$/.test(val)) {
+        statusEl.className = 'input-status status-err';
+        statusEl.textContent = '❌ Solo letras, números y guión bajo';
+        isUsernameValid = false;
+        return;
+      }
+
+      statusEl.className = 'input-status status-hint';
+      statusEl.textContent = '⏳ Comprobando disponibilidad...';
+
+      usernameTimer = setTimeout(async () => {
+        const res = await window.DesvariosAuth.isUsernameAvailable(val);
+        if (res.available) {
+          statusEl.className = 'input-status status-ok';
+          statusEl.textContent = `✅ @${val} está disponible`;
+          isUsernameValid = true;
+        } else {
+          statusEl.className = 'input-status status-err';
+          statusEl.textContent = `❌ ${res.error || 'Nombre ya ocupado'}`;
+          isUsernameValid = false;
+        }
+      }, 350);
+    });
+
+    // Password confirm validation
+    document.getElementById('password-confirm').addEventListener('input', () => {
+      const pwd = document.getElementById('password-input').value;
+      const conf = document.getElementById('password-confirm').value;
+      const status = document.getElementById('pwd-match-status');
+      if (!conf) {
+        status.textContent = '';
+        return;
+      }
+      if (pwd === conf) {
+        status.className = 'input-status status-ok';
+        status.textContent = '✅ Las contraseñas coinciden';
+      } else {
+        status.className = 'input-status status-err';
+        status.textContent = '❌ Las contraseñas no coinciden';
+      }
+    });
+
+    async function handleRegister(e) {
+      e.preventDefault();
+      const alertBox = document.getElementById('error-alert');
+      alertBox.style.display = 'none';
+
+      const username = document.getElementById('username-input').value.trim();
+      const email = document.getElementById('email-input').value.trim();
+      const password = document.getElementById('password-input').value;
+      const confirmPwd = document.getElementById('password-confirm').value;
+      const avatarId = document.getElementById('avatar-input').value;
+      const btn = document.getElementById('submit-btn');
+
+      if (!isUsernameValid) {
+        alertBox.textContent = 'Elige un nombre de usuario válido y disponible antes de continuar.';
+        alertBox.style.display = 'block';
+        return;
+      }
+
+      if (password !== confirmPwd) {
+        alertBox.textContent = 'Las contraseñas no coinciden.';
+        alertBox.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>Creando cuenta...</span>';
+
+      try {
+        await window.DesvariosAuth.register({
+          email,
+          password,
+          username,
+          avatarId
+        });
+
+        // Show confirmation view
+        document.getElementById('register-view').style.display = 'none';
+        document.getElementById('sent-email-label').textContent = email;
+        document.getElementById('confirm-view').style.display = 'block';
+      } catch (err) {
+        console.error('Error registro:', err);
+        alertBox.textContent = err.message || 'Error al crear la cuenta. Revisa los datos.';
+        alertBox.style.display = 'block';
+        btn.disabled = false;
+        btn.innerHTML = '<span>Crear mi Cuenta de Desvariado</span><span>➜</span>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderAvatars();
+    });
+  </script>
+  <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

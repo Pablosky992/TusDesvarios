@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Taberna del Cuervo Ciego — Desvaríos Literarios | Tus Desvaríos</title>
+  <meta name="description" content="En una encrucijada donde los caminos no van a ninguna parte terrenal, un viejo posadero sirve hidromiel a viajeros perdidos. Nadie paga con oro: la moneda de cambio son los recuerdos más preciados o más amargos.">
+  <meta name="author" content="undefined">
+  <meta name="keywords" content="Fantasía Oscura, Mitología, Magia Ancestral, Relatos de Posada, desvarios literarios, relatos cortos, lectura online">
+  
+  <link rel="canonical" href="https://tusdesvarios.com/relato-la-taberna-del-cuervo-ciego.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="La Taberna del Cuervo Ciego — Donde las almas errantes pagan sus tragos con los recuerdos que prefieren olvidar">
+  <meta property="og:description" content="En una encrucijada donde los caminos no van a ninguna parte terrenal, un viejo posadero sirve hidromiel a viajeros perdidos. Nadie paga con oro: la moneda de cambio son los recuerdos más preciados o más amargos.">
+  <meta property="og:url" content="https://tusdesvarios.com/relato-la-taberna-del-cuervo-ciego.html">
+  <meta property="og:image" content="images/literarios/la-taberna-cuervo-ciego.jpg">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-card: rgba(18, 24, 38, 0.85);
+      --border-color: rgba(255, 255, 255, 0.12);
+      --text-main: #f8fafc;
+      --text-sec: #cbd5e1;
+      --accent-color: #8b5cf6;
+      --font-body: 'Crimson Pro', Georgia, serif;
+      --font-size: 19px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-full: 9999px;
+    }
+
+    /* THEMES */
+    body.theme-dark {
+      --bg-main: #0b0f19;
+      --bg-card: rgba(18, 24, 38, 0.88);
+      --border-color: rgba(255, 255, 255, 0.12);
+      --text-main: #f8fafc;
+      --text-sec: #cbd5e1;
+    }
+    body.theme-sepia {
+      --bg-main: #1c1510;
+      --bg-card: rgba(34, 25, 18, 0.95);
+      --border-color: rgba(245, 158, 11, 0.25);
+      --text-main: #fef3c7;
+      --text-sec: #fde68a;
+      --accent-color: #f59e0b;
+    }
+    body.theme-night {
+      --bg-main: #0f172a;
+      --bg-card: rgba(30, 41, 59, 0.88);
+      --border-color: rgba(148, 163, 184, 0.18);
+      --text-main: #e2e8f0;
+      --text-sec: #94a3b8;
+      --accent-color: #38bdf8;
+    }
+
+    body.font-serif { --font-body: 'Crimson Pro', Georgia, serif; }
+    body.font-sans { --font-body: 'Inter', -apple-system, sans-serif; }
+    body.font-display { --font-body: 'Cinzel', Georgia, serif; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      line-height: 1.85;
+      transition: background 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-color), #ec4899);
+      z-index: 1000;
+      box-shadow: 0 0 12px var(--accent-color);
+      transition: width 0.1s ease;
+    }
+
+    .reader-controls-bar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+      border-radius: 0 0 14px 14px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-ctrl {
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-ctrl:hover {
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .reader-canvas {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 1.5rem 6rem;
+    }
+
+    .reader-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-top: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .story-genre-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.25rem;
+    }
+
+    .reader-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      color: var(--text-main);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .reader-subtitle {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-sec);
+      max-width: 620px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.6;
+    }
+
+    .reader-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--text-sec);
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .featured-quote-card {
+      padding: 1.5rem 1.75rem;
+      background: var(--bg-card);
+      border: 1.5px solid var(--accent-color);
+      border-radius: 14px;
+      margin-bottom: 3rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .reader-p {
+      font-size: var(--font-size);
+      line-height: 1.85;
+      margin-bottom: 1.4rem;
+      color: var(--text-main);
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .reader-section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--accent-color);
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    .reader-quote {
+      border-left: 3px solid var(--accent-color);
+      padding: 0.85rem 1.4rem;
+      margin: 1.75rem 0;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      font-size: calc(var(--font-size) * 1.05);
+      line-height: 1.7;
+      color: var(--text-sec);
+    }
+
+    .reader-divider {
+      border: none;
+      height: 1px;
+      background: var(--border-color);
+      margin: 2.25rem 0;
+    }
+
+    .reader-list {
+      padding-left: 1.5rem;
+      margin: 1rem 0 1.5rem;
+      line-height: 1.8;
+      font-size: var(--font-size);
+    }
+
+    .nav-story-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-story-card {
+      padding: 1.25rem;
+      border-radius: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+      color: var(--text-main);
+    }
+    .nav-story-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    .btn-ctrl.read-active {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+      font-weight: 700 !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.3) !important;
+    }
+
+    .story-completion-card {
+      margin-top: 3.5rem;
+      padding: 2rem 2.2rem;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(18,24,38,0.92) 0%, rgba(11,15,25,0.96) 100%);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+    }
+    .story-completion-card.is-read {
+      border-color: rgba(16, 185, 129, 0.55);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.45), 0 0 25px rgba(16, 185, 129, 0.25);
+    }
+    .btn-completion-read {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.85rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: 1.5px solid rgba(16, 185, 129, 0.5);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(5, 150, 105, 0.3) 100%);
+      color: #34d399;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+    }
+    .btn-completion-read:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+  </style>
+</head>
+<body class="theme-dark font-serif">
+  <div id="scroll-progress"></div>
+
+  
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link active-literarios" title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+  <!-- Reader Controls Bar -->
+  <div class="reader-controls-bar">
+    <a href="desvarios-literarios.html" style="display:inline-flex; align-items:center; gap:0.4rem; font-size:0.85rem; font-weight:600; color:var(--text-sec); text-decoration:none;">
+      <span>←</span> <span>Catálogo Literario</span>
+    </a>
+
+    <!-- Theme & Typography controls -->
+    <div style="display:flex; align-items:center; gap:0.65rem; flex-wrap:wrap;">
+      <!-- Toggle Read -->
+      <button class="btn-ctrl" id="btn-reader-toggle-read" onclick="toggleCurrentStoryRead()" title="Marcar o desmarcar como leído">
+        <span id="reader-btn-icon">⚪</span> <span id="reader-btn-text">Marcar Leído</span>
+      </button>
+
+      <!-- Font Family -->
+      <button class="btn-ctrl" onclick="setFontFamily('serif')">Serif</button>
+      <button class="btn-ctrl" onclick="setFontFamily('sans')">Sans</button>
+
+      <!-- Font Size -->
+      <button class="btn-ctrl" onclick="adjustFontSize(-2)">A-</button>
+      <button class="btn-ctrl" onclick="adjustFontSize(2)">A+</button>
+
+      <!-- Themes -->
+      <button class="btn-ctrl" onclick="setTheme('dark')">🌌 Noche</button>
+      <button class="btn-ctrl" onclick="setTheme('sepia')">📜 Sepia</button>
+      <button class="btn-ctrl" onclick="setTheme('night')">☕ Café</button>
+
+      <!-- Share -->
+      <button class="btn-ctrl" id="btn-share-story" onclick="shareStory()">
+        <span>🔗 Compartir</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Reader Canvas -->
+  <main class="reader-canvas">
+    <header class="reader-header">
+      <span class="story-genre-badge" style="background:#8b5cf622; border:1.5px solid #8b5cf665; color:#8b5cf6; box-shadow:0 0 16px #8b5cf630;">
+        <span>🕯️</span> <span>Fantasía Oscura & Leyenda</span>
+      </span>
+      <h1 class="reader-title">La Taberna del Cuervo Ciego</h1>
+      <p class="reader-subtitle">Donde las almas errantes pagan sus tragos con los recuerdos que prefieren olvidar</p>
+      <div class="reader-meta">
+        
+        <span>⏱️ 6 min de lectura</span>
+        <span style="opacity:0.85;">~1420 palabras</span>
+      </div>
+    </header>
+
+    
+      <div class="featured-quote-card">
+        <div style="display:flex; align-items:center; gap:0.45rem; color:var(--accent-color); font-weight:700; font-size:0.85rem; text-transform:uppercase; margin-bottom:0.5rem;">
+          <span>✨</span> <span>Cita del Relato</span>
+        </div>
+        <p style="font-size:1.15rem; font-style:italic; line-height:1.6; margin:0;">
+          “Quien bebe para olvidar solo consigue emborrachar a sus fantasmas; aquí los dejamos en una botella para siempre.”
+        </p>
+      </div>
+    
+
+    <article>
+      <h3 class="reader-section-title">I. La Niebla en la Encrucijada</h3>
+<p class="reader-p">No busques la taberna en ningún mapa de cartógrafo real. Para encontrarla, es menester haberse perdido con tanta devoción que el propio bosque de hayas olvide tu nombre.</p>
+<p class="reader-p">Aparece cuando la niebla espesa como leche cuajada cubre los senderos de piedra, justo donde cuatro caminos se cruzan sin señal alguna. Sobre el dintel de roble mohoso cuelga un letrero de hierro con la silueta de un cuervo con dos rubíes apagados en lugar de ojos. De las ventanas de cristal emplomado emana una luz ámbar y tibia que huele a leña de abedul, canela tostada y cera de abeja.</p>
+<p class="reader-p">Adentro, las vigas del techo están tan bajas que los caballeros de gran alzada deben agachar la cerviz. Decenas de cuervos negros dormitan en los maderos, con las cabezas metidas bajo el ala, inmunes al murmullo de los parroquianos.</p>
+<h3 class="reader-section-title">II. El Tasador de Nostalgias</h3>
+<p class="reader-p">Detrás del mostrador de nogal desgastado por siglos de codos y jarras atiende Corvus, el tabernero. Es un anciano de barbas plateadas trenzadas con cuentas de ámbar, cuya mirada tiene la calma insondable de los pozos de aldea.</p>
+<p class="reader-p">Cuando un forastero entra tiritando y deposita una bolsa de monedas de plata sobre la barra, Corvus la aparta con el lomo de un trapo limpio sin mirarla siquiera.</p>
+<p class="reader-p">—Aquí el metal no calienta el gaznate, viajero —dice siempre con voz rasposa pero serena—. En la Taberna del Cuervo Ciego se paga con memoria.</p>
+<p class="reader-p">Frente a él reposan hileras de frascos de cristal soplado, sellados con lacre y etiquetados con runas doradas. Si pides un tazón de hidromiel dulce de las colinas, el precio es un recuerdo gozoso: la primera vez que cabalgaste al galope, el sabor de una manzana en la infancia o el aroma del cabello de tu amada al despertar.</p>
+<p class="reader-p">Si pides el aguardiente negro del dragón, el trago que adormece los huesos y templa el coraje de los proscritos, debes entregar un recuerdo oscuro: la herida de una traición, el remordimiento de una palabra no dicha o el rostro de un camarada caído en combate.</p>
+<h3 class="reader-section-title">III. La Extracción del Pálpito</h3>
+<p class="reader-p">Vi llegar a una guerrera con la armadura mellada y los ojos vacíos como cuencas de calavera. Llevaba a la espalda una mandoble cubierta de muescas y sangre seca. Se sentó en el taburete del rincón y pidió tres jarros del destilado más amargo de la bodega.</p>
+<p class="reader-p">Corvus sacó un frasco cilíndrico de vidrio violeta y un estilete de plata con la empuñadura en forma de pluma. La mujer cerró los ojos y apoyó la sien contra la punta de metal. No hubo sangre. Solo una hebra de humo azulado y centelleante que fluyó desde su cabeza hasta el interior del frasco, como un hilo de seda luminosa.</p>
+<p class="reader-p">Dentro del cristal, el humo adoptó por un segundo la forma de una aldea ardiendo y los gritos mudos de un juramento roto. Luego, Corvus colocó el tapón de corcho, fundió el lacre rojo con la llama de una vela y guardó el frasco en el tercer anaquel.</p>
+<p class="reader-p">La guerrera abrió los ojos. La rigidez de sus hombros se desplomó en un suspiro suave. Bebió su jarro de aguardiente sin pestañear. No sonrió, pero en su rostro ya no habitaba el tormento: solo una placidez ligera, como la de quien contempla la lluvia tras los cristales sin recordar por qué le temía al trueno.</p>
+<h3 class="reader-section-title">IV. El Precio de la Desmemoria</h3>
+<p class="reader-p">Muchos cometen el error de creer que olvidar es una bendición gratuita. Pero cada noche, cuando la campana de la medianoche repica en el reloj de agua de la posada, Corvus sube a una tarima con un cuenco de plata.</p>
+<p class="reader-p">Destapa uno de los frascos más antiguos y vierte el humo en el bebedero de los cuervos. Las aves despiertan, aletean con un graznido solemne y beben la memoria ajena, transformándola en el brillo plateado de sus plumas.</p>
+<p class="reader-p">Por eso los cuervos de la encrucijada lo saben todo. Por eso vuelan sobre los campos de batalla y los cementerios con la sabiduría de mil vidas que ya nadie recuerda haber vivido.</p>
+    </article>
+
+    <!-- Story Completion Box -->
+    <div id="story-completion-card" class="story-completion-card">
+      <div style="display:inline-flex; align-items:center; justify-content:center; width:54px; height:54px; border-radius:50%; background:rgba(245,158,11,0.15); border:1.5px solid rgba(245,158,11,0.4); font-size:1.6rem; margin-bottom:1rem; box-shadow:0 0 20px rgba(245,158,11,0.25);" id="completion-icon-box">
+        ✨
+      </div>
+      <h3 id="completion-title" style="font-family:'Cinzel', serif; font-size:1.45rem; color:#ffffff; margin-bottom:0.5rem; letter-spacing:0.03em;">
+        Fin de la Lectura
+      </h3>
+      <p id="completion-desc" style="font-size:0.95rem; color:var(--text-sec); max-width:540px; margin:0 auto 1.35rem; line-height:1.6;">
+        ¿Has terminado de leer <em>La Taberna del Cuervo Ciego</em>? Marca esta obra para llevar el recuento en tu biblioteca de Tus Desvaríos.
+      </p>
+      <button id="btn-completion-action" onclick="toggleCurrentStoryRead()" class="btn-completion-read">
+        <span id="completion-btn-icon">✅</span>
+        <span id="completion-btn-text">Marcar como Leído</span>
+      </button>
+      <!-- Apoyo al creador / Donaciones PayPal -->
+      <div class="story-donate-box" style="margin-top:1.75rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; flex-direction:column; align-items:center; gap:0.75rem;">
+        <p style="font-size:0.9rem; color:var(--text-sec); margin:0; max-width:500px; line-height:1.5;">
+          ☕ <strong>¿Has disfrutado de la lectura?</strong> Si te gusta este contenido libre e independiente, puedes invitar a un café al creador para apoyar nuevos relatos.
+        </p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=V8PZNYKGXBCLG&locale.x=es_ES"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn-paypal-donate"
+           title="Invitar a un café con PayPal"
+           style="display:inline-flex; align-items:center; gap:0.55rem; padding:0.65rem 1.4rem; border-radius:9999px; background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color:#0b0f19; font-weight:800; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 18px rgba(245, 158, 11, 0.35); transition:all 0.2s ease;">
+          <span>☕ Invitar a un café</span>
+          <span>➜</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Prev & Next Story Navigation -->
+    <div class="nav-story-box">
+      
+        <a href="relato-el-ultimo-eco-de-andromeda.html" class="nav-story-card">
+          <span style="font-size:0.8rem; color:var(--text-sec);">← Relato Anterior</span>
+          <strong style="font-size:1rem;">El Último Eco de Andrómeda</strong>
+        </a>
+      
+
+      
+        <a href="relato-el-coleccionista-de-silencios.html" class="nav-story-card" style="align-items:flex-end; text-align:right;">
+          <span style="font-size:0.8rem; color:var(--text-sec);">Siguiente Relato →</span>
+          <strong style="font-size:1rem;">El Coleccionista de Silencios</strong>
+        </a>
+      
+    </div>
+
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="desvarios-literarios.html" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1.75rem; border-radius:9999px; background:rgba(245, 158, 11, 0.2); border:1.5px solid var(--accent-color); color:#ffffff; font-weight:700; text-decoration:none; font-size:0.92rem; font-family:'Inter', sans-serif;">
+        <span>📜</span> <span>Explorar más Desvaríos Literarios</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    let curFontSize = 19;
+    const STORAGE_KEY = 'tusdesvarios_relatos_leidos';
+    const currentSlug = 'la-taberna-del-cuervo-ciego';
+
+    function getReadStories() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        return stored ? JSON.parse(stored) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveReadStories(list) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      } catch (e) {}
+    }
+
+    function toggleCurrentStoryRead() {
+      const list = getReadStories();
+      const idx = list.indexOf(currentSlug);
+      if (idx >= 0) {
+        list.splice(idx, 1);
+      } else {
+        list.push(currentSlug);
+      }
+      saveReadStories(list);
+      updateReaderReadUI();
+    }
+
+    function updateReaderReadUI() {
+      const list = getReadStories();
+      const isRead = list.includes(currentSlug);
+
+      const topBtn = document.getElementById('btn-reader-toggle-read');
+      const topIcon = document.getElementById('reader-btn-icon');
+      const topText = document.getElementById('reader-btn-text');
+
+      const card = document.getElementById('story-completion-card');
+      const iconBox = document.getElementById('completion-icon-box');
+      const title = document.getElementById('completion-title');
+      const desc = document.getElementById('completion-desc');
+      const compBtn = document.getElementById('btn-completion-action');
+      const compIcon = document.getElementById('completion-btn-icon');
+      const compText = document.getElementById('completion-btn-text');
+
+      if (topBtn) {
+        if (isRead) {
+          topBtn.classList.add('read-active');
+          if (topIcon) topIcon.textContent = '✅';
+          if (topText) topText.textContent = 'Leído';
+          topBtn.title = 'Hacer clic para desmarcar como leído';
+        } else {
+          topBtn.classList.remove('read-active');
+          if (topIcon) topIcon.textContent = '⚪';
+          if (topText) topText.textContent = 'Marcar Leído';
+          topBtn.title = 'Marcar como leído';
+        }
+      }
+
+      if (card) {
+        if (isRead) {
+          card.classList.add('is-read');
+          if (iconBox) {
+            iconBox.textContent = '🎉';
+            iconBox.style.background = 'rgba(16, 185, 129, 0.2)';
+            iconBox.style.borderColor = 'rgba(16, 185, 129, 0.6)';
+            iconBox.style.boxShadow = '0 0 25px rgba(16, 185, 129, 0.4)';
+          }
+          if (title) title.textContent = '¡Obra Completada!';
+          if (desc) desc.textContent = 'Has marcado esta historia como leída. Tu progreso ha quedado registrado en tu navegador.';
+          if (compBtn) {
+            compBtn.style.background = 'rgba(16, 185, 129, 0.2)';
+            compBtn.style.borderColor = '#10b981';
+            compBtn.style.color = '#34d399';
+          }
+          if (compIcon) compIcon.textContent = '✅';
+          if (compText) compText.textContent = 'Leído (Hacer clic para desmarcar)';
+        } else {
+          card.classList.remove('is-read');
+          if (iconBox) {
+            iconBox.textContent = '✨';
+            iconBox.style.background = 'rgba(245, 158, 11, 0.15)';
+            iconBox.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+            iconBox.style.boxShadow = '0 0 20px rgba(245, 158, 11, 0.25)';
+          }
+          if (title) title.textContent = 'Fin de la Lectura';
+          if (desc) desc.textContent = '¿Has terminado de leer este relato? Márcalo para llevar el recuento en tu biblioteca.';
+          if (compBtn) {
+            compBtn.style.background = 'linear-gradient(135deg, rgba(16,185,129,0.25) 0%, rgba(5,150,105,0.3) 100%)';
+            compBtn.style.borderColor = 'rgba(16, 185, 129, 0.5)';
+            compBtn.style.color = '#34d399';
+          }
+          if (compIcon) compIcon.textContent = '✅';
+          if (compText) compText.textContent = 'Marcar como Leído';
+        }
+      }
+    }
+
+    let hasAutoMarked = false;
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      if (total > 0) {
+        const pct = (window.scrollY / total) * 100;
+        document.getElementById('scroll-progress').style.width = Math.min(100, Math.max(0, pct)) + '%';
+        if (pct >= 95 && !hasAutoMarked) {
+          hasAutoMarked = true;
+          const list = getReadStories();
+          if (!list.includes(currentSlug)) {
+            list.push(currentSlug);
+            saveReadStories(list);
+            updateReaderReadUI();
+            if (list.length >= 1 && window.DesvariosAuth) {
+              window.DesvariosAuth.unlockMedal('literarios-lector');
+            }
+            if (list.length >= 5 && window.DesvariosAuth) {
+              window.DesvariosAuth.unlockMedal('literarios-devorador');
+            }
+          }
+        }
+      }
+    });
+
+    function setTheme(t) {
+      document.body.className = 'theme-' + t + ' ' + (document.body.classList.contains('font-sans') ? 'font-sans' : 'font-serif');
+    }
+
+    function setFontFamily(f) {
+      const curTheme = document.body.className.includes('theme-sepia') ? 'theme-sepia' : (document.body.className.includes('theme-night') ? 'theme-night' : 'theme-dark');
+      document.body.className = curTheme + ' font-' + f;
+    }
+
+    function adjustFontSize(delta) {
+      curFontSize = Math.min(26, Math.max(14, curFontSize + delta));
+      document.documentElement.style.setProperty('--font-size', curFontSize + 'px');
+    }
+
+    function shareStory() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          const btn = document.getElementById('btn-share-story');
+          btn.innerHTML = '<span>✅ ¡Copiado!</span>';
+          setTimeout(() => {
+            btn.innerHTML = '<span>🔗 Compartir</span>';
+          }, 2000);
+        });
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', updateReaderReadUI);
+    window.addEventListener('storage', updateReaderReadUI);
+    updateReaderReadUI();
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>
