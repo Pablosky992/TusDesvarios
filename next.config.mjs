@@ -4,6 +4,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      { source: '/login', destination: '/login.html' },
+      { source: '/registro', destination: '/registro.html' },
+      { source: '/perfil', destination: '/perfil.html' },
+      { source: '/foro', destination: '/foro.html' },
+    ];
+  },
 };
 
 export default nextConfig;
