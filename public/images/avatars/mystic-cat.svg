@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-mystic-cat" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#27272a"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </radialGradient>
+    <filter id="glow-mystic-cat" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#2dd4bf" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="37" fill="url(#bg-mystic-cat)" stroke="#2dd4bf" stroke-width="2.5" filter="url(#glow-mystic-cat)"/>
+  <!-- Artwork -->
+  <g filter="url(#glow-mystic-cat)">
+    <!-- Mystic Cat Head -->
+      <polygon points="26,38 23,24 35,32" fill="#2dd4bf"/>
+      <polygon points="54,38 57,24 45,32" fill="#2dd4bf"/>
+      <circle cx="40" cy="42" r="15" fill="#14b8a6"/>
+      <!-- Eyes -->
+      <ellipse cx="34" cy="40" rx="2.5" ry="4" fill="#042f2e"/>
+      <ellipse cx="46" cy="40" rx="2.5" ry="4" fill="#042f2e"/>
+      <circle cx="34" cy="39" r="1" fill="#fff"/>
+      <circle cx="46" cy="39" r="1" fill="#fff"/>
+      <!-- Third eye / gem on forehead -->
+      <circle cx="40" cy="33" r="2.5" fill="#facc15" stroke="#fff" stroke-width="0.8"/>
+      <!-- Nose & mouth -->
+      <polygon points="40,45 38.5,43 41.5,43" fill="#f43f5e"/>
+  </g>
+</svg>
