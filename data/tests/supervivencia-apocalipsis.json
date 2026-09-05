@@ -1,0 +1,127 @@
+{
+  "id": "supervivencia-apocalipsis",
+  "slug": "supervivencia-apocalipsis",
+  "titulo": "¿Sobrevivirías a un Apocalipsis Absurdo?",
+  "subtitulo": "Decisiones extremas en un escenario donde todo lo que puede salir mal, saldrá peor.",
+  "descripcionCorta": "Evalúa tus instintos de supervivencia frente a hordas de mutantes, escasez de papel higiénico y dilemas de refugio.",
+  "tipo": "puntuacion",
+  "categoria": "humor",
+  "categoriaLabel": "Humor & Diagnósticos",
+  "icono": "⚔️",
+  "tiempoMin": 3,
+  "color": "#ef4444",
+  "preguntas": [
+    {
+      "id": "s1",
+      "texto": "Las sirenas de alarma mundial comienzan a sonar a las 3:00 AM. La radio anuncia un colapso inminente. ¿Cuál es tu **primer movimiento**?",
+      "opciones": [
+        { "texto": "Correr al supermercado a llenar el carro con 400 rollos de papel higiénico y latas de atún.", "puntos": 5 },
+        { "texto": "Llenar todas las ollas, bañeras y botellas de agua potable, asegurar puertas y esperar información fiable.", "puntos": 15 },
+        { "texto": "Subir una foto a redes sociales con el texto: *«Vaya añito llevamos #FinDelMundo»*.", "puntos": 0 },
+        { "texto": "Coger una linterna, un cuchillo de cocina y subir a la azotea a observar la situación.", "puntos": 10 }
+      ]
+    },
+    {
+      "id": "s2",
+      "texto": "Llevas 5 días atrincherado en casa y se corta el suministro eléctrico. Tienes que elegir **un solo objeto insólito** para llevar en tu mochila de escape:",
+      "opciones": [
+        { "texto": "Una baraja de cartas para no volverte loco de aburrimiento por las noches.", "puntos": 10 },
+        { "texto": "Un rollo de cinta americana industrial: repara desde ropa hasta tuberías.", "puntos": 15 },
+        { "texto": "Tu consola portátil con 12% de batería restante.", "puntos": 0 },
+        { "texto": "Un espejo pequeño: sirve para hacer señales de luz, afeitarse y mirar tras las esquinas.", "puntos": 12 }
+      ]
+    },
+    {
+      "id": "s3",
+      "texto": "Explorando una gasolinera abandonada te topas con **otra persona armada con una sartén de hierro**. Te mira con desconfianza. ¿Qué haces?",
+      "opciones": [
+        { "texto": "Gritarle a pleno pulmón: *«¡Tregua, tengo galletas y ganas de vivir!»* mostrando las manos abiertas.", "puntos": 12 },
+        { "texto": "Lanzarle un paquete de patatas fritas como distracción y huir en zigzag.", "puntos": 10 },
+        { "texto": "Retarle a un duelo de miradas esperando que suelte la sartén por intimidación.", "puntos": 2 },
+        { "texto": "Mantener distancia, proponer un intercambio pacífico de suministros sin dar la espalda.", "puntos": 15 }
+      ]
+    },
+    {
+      "id": "s4",
+      "texto": "Tu refugio temporal está rodeado por criaturas extrañas atraídas por el sonido. Tienes hambre voraz y la única comida disponible es **una lata sin etiqueta abombada**. ¿Qué decides?",
+      "opciones": [
+        { "texto": "Abrirla y comértela de golpe; un superviviente no tiene tiempo para remilgos.", "puntos": 0 },
+        { "texto": "Hervirla a fuego alto antes de olerla para intentar esterilizar posibles toxinas.", "puntos": 5 },
+        { "texto": "Descartarla inmediatamente: una lata hinchada es sinónimo de toxina botulínica letal.", "puntos": 15 },
+        { "texto": "Dársela a probar primero a tu compañero sospechoso.", "puntos": 8 }
+      ]
+    },
+    {
+      "id": "s5",
+      "texto": "Necesitas cruzar una ciudad en ruinas para llegar a una zona segura en las montañas. ¿Qué ruta eliges?",
+      "opciones": [
+        { "texto": "La autopista principal en coche a 140 km/h esquivando vehículos volcados.", "puntos": 2 },
+        { "texto": "A pie por las azoteas y callejones secundarios, moviéndote solo al amanecer y al atardecer.", "puntos": 15 },
+        { "texto": "Los túneles del metro subterráneo con una antorcha improvisada.", "puntos": 8 },
+        { "texto": "En bicicleta estática en tu salón con la esperanza de que pase la tormenta.", "puntos": 0 }
+      ]
+    },
+    {
+      "id": "s6",
+      "texto": "Encuentras un búnker subterráneo con código numérico de seguridad. En la puerta hay una nota que dice: *«El código es el número de planetas del sistema solar multiplicado por 11»*. ¿Qué introduces?",
+      "opciones": [
+        { "texto": "88 (8 planetas x 11, respetando la degradación de Plutón).", "puntos": 15 },
+        { "texto": "99 (Plutón siempre será un planeta en mi corazón).", "puntos": 8 },
+        { "texto": "0000 porque seguro que el dueño no cambió la contraseña de fábrica.", "puntos": 5 },
+        { "texto": "Aporrear el teclado con una piedra.", "puntos": 0 }
+      ]
+    },
+    {
+      "id": "s7",
+      "texto": "¡Has alcanzado la colonia de supervivientes! Te piden que elijas tu **rol comunitario** para ganarte las raciones diarias. ¿Qué puesto solicitas?",
+      "opciones": [
+        { "texto": "Especialista en logística, inventario y racionamiento de suministros.", "puntos": 15 },
+        { "texto": "Explorador de vanguardia en busca de combustible y piezas mecánicas.", "puntos": 12 },
+        { "texto": "Filósofo residente y animador sociocultural de la colonia.", "puntos": 4 },
+        { "texto": "Catador oficial de siestas y supervisor de hamacas.", "puntos": 0 }
+      ]
+    }
+  ],
+  "rangos": [
+    {
+      "min": 0,
+      "max": 25,
+      "nivel": "Baja en el Minuto 5",
+      "titulo": "La Primera Baja Inevitable",
+      "icono": "🪦",
+      "color": "#ef4444",
+      "descripcion": "Seamos sinceros: ante un colapso global, tu mayor probabilidad es tropezar con tus propios cordones mientras grabas un vídeo de despedida para TikTok. Tu sentido del peligro es inexistente y te comerías la lata sospechosa sin dudar.",
+      "consejo": "Si el apocalipsis llega mañana, quédate pegado a alguien que tenga navaja suiza y sepa hacer fuego con dos piedras."
+    },
+    {
+      "min": 26,
+      "max": 55,
+      "nivel": "Superviviente por Chiripa",
+      "titulo": "El Superviviente Accidental",
+      "icono": "🍀",
+      "color": "#f59e0b",
+      "descripcion": "Tus conocimientos de supervivencia son dudosos, pero tienes una flor en cierta parte. Logras esquivar peligros por pura casualidad, perdiendo mochilas y provisiones por el camino pero llegando vivo al siguiente refugio.",
+      "consejo": "Aprende primeros auxilios básicos y deja de confiar tanto en la suerte ciega."
+    },
+    {
+      "min": 56,
+      "max": 85,
+      "nivel": "Veterano del Yermo",
+      "titulo": "El Estratega del Búnker",
+      "icono": "🛡️",
+      "color": "#06b6d4",
+      "descripcion": "Mente fría, decisiones racionales y buen cálculo de recursos. Sabes cuándo pelear, cuándo negociar y qué latas jamás debes abrir. La comunidad prosperaría contigo en el equipo.",
+      "consejo": "Tu pragmatismo es tu mayor escudo. No bajes la guardia con extraños amables."
+    },
+    {
+      "min": 86,
+      "max": 105,
+      "nivel": "Leyenda Inmortal",
+      "titulo": "El Señor Supremo del Apocalipsis",
+      "icono": "👑",
+      "color": "#10b981",
+      "descripcion": "Impresionante instinto de supervivencia. En menos de dos semanas no solo habrías sobrevivido, sino que habrías construido una destilería de agua, un sistema de radio y domesticado a los mutantes de la zona.",
+      "consejo": "Funda tu propia colonia; tienes madera de líder legendario en cualquier mundo en ruinas."
+    }
+  ]
+}

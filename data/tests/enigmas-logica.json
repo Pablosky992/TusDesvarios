@@ -1,0 +1,93 @@
+{
+  "id": "enigmas-logica",
+  "slug": "enigmas-logica",
+  "titulo": "El Misterio de la Cámara de los Sabios: 5 Enigmas de Lógica",
+  "subtitulo": "Pon a prueba tu agudeza mental con acertijos clásicos y dilemas deductivos.",
+  "descripcionCorta": "5 acertijos de ingenio y lógica pura. Usa las pistas con sabiduría y demuestra si posees una mente analítica superior.",
+  "tipo": "enigma",
+  "categoria": "logica",
+  "categoriaLabel": "Lógica & Paradojas",
+  "icono": "🧩",
+  "tiempoMin": 4,
+  "color": "#06b6d4",
+  "enigmas": [
+    {
+      "id": "e1",
+      "titulo": "Enigma 1: Los Tres Cofres del Alquimista",
+      "planteamiento": "Frente a ti hay tres cofres cerrados: uno de **Oro**, uno de **Plata** y uno de **Plomo**. Dentro de uno de ellos está la *Piedra Filosofal*; los otros dos están vacíos.\n\nCada cofre tiene una inscripción grabada:\n- **Cofre de Oro:** «La Piedra está en este cofre».\n- **Cofre de Plata:** «La Piedra no está en este cofre».\n- **Cofre de Plomo:** «La Piedra no está en el cofre de Oro».\n\nEl alquimista te advierte: **Sólo UNA de las tres inscripciones es VERDADERA; las otras dos son FALSAS.**\n\n¿En qué cofre está la Piedra Filosofal?",
+      "pistas": [
+        "Pista 1: Si la inscripción de Oro fuera verdadera, ¿qué pasaría con la de Plomo?",
+        "Pista 2: Observa que la inscripción de Oro y la de Plomo dicen cosas directamente contradictorias (una afirma que está en Oro, la otra que NO está en Oro). Por tanto, una de ellas debe ser verdadera y la otra falsa.",
+        "Pista 3: Como solo hay UNA inscripción verdadera en total, la inscripción del cofre de Plata tiene que ser obligatoriamente FALSA."
+      ],
+      "opciones": [
+        { "id": "oro", "texto": "En el Cofre de Oro", "correcta": false },
+        { "id": "plata", "texto": "En el Cofre de Plata", "correcta": true },
+        { "id": "plomo", "texto": "En el Cofre de Plomo", "correcta": false }
+      ],
+      "explicacion": "¡Exacto! El cofre de Oro y el de Plomo se contradicen, por lo que una de sus frases es la única verdadera. Esto obliga a que la frase del cofre de Plata («La Piedra no está en este cofre») sea FALSA. Si es falsa que no está en Plata... ¡significa que la Piedra está en el **Cofre de Plata**!"
+    },
+    {
+      "id": "e2",
+      "titulo": "Enigma 2: El Prisionero y las Dos Puertas",
+      "planteamiento": "Estás encerrado en una celda con **dos puertas**: una conduce a la **Libertad** y la otra al **Abismo eterno**.\n\nFrente a cada puerta hay un guardián:\n- Uno de ellos **SIEMPRE dice la verdad**.\n- El otro **SIEMPRE miente**.\n- No sabes cuál es cuál, y solo puedes hacer **UNA sola pregunta a UNO solo de los guardianes**.\n\n¿Qué pregunta te garantiza descubrir con 100% de seguridad la puerta de la Libertad?",
+      "pistas": [
+        "Pista 1: Si preguntas directamente por la puerta a uno solo, el mentiroso te engañará y el verídico te dirá la verdad, pero como no sabes quién es quién, no te sirve.",
+        "Pista 2: Necesitas una pregunta que involucre lo que respondería el OTRO guardián (doble negación lógica)."
+      ],
+      "opciones": [
+        { "id": "a", "texto": "«¿Eres tú el guardián que siempre dice la verdad?»", "correcta": false },
+        { "id": "b", "texto": "«Si le preguntara al OTRO guardián cuál es la puerta de la Libertad, ¿qué puerta me señalaría?»", "correcta": true },
+        { "id": "c", "texto": "«¿Cuál es la puerta que tú elegirías para salvarte?»", "correcta": false },
+        { "id": "d", "texto": "«¿La puerta de la izquierda conduce a la Libertad?»", "correcta": false }
+      ],
+      "explicacion": "¡Brillante deducción! Si le preguntas eso:\n- Si le preguntas al **Verídico**, él sabe con verdad que el Mentiroso señalará la puerta del Abismo, y te dirá con verdad: «El Abismo».\n- Si le preguntas al **Mentiroso**, él sabe que el Verídico señalaría la Libertad, pero al mentir te dirá: «El Abismo».\nEn ambos casos, **ambos guardianes te señalarán la puerta del Abismo**. Por tanto, sólo tienes que elegir la PUERTA CONTRARIA a la que te indiquen."
+    },
+    {
+      "id": "e3",
+      "titulo": "Enigma 3: La Carrera de los Monjes en el Claustro",
+      "planteamiento": "Durante una prueba de agilidad en el monasterio, compites en una carrera de obstáculos.\n\nEn la última curva, aceleras a fondo y **adelantas al corredor que iba en SEGUNDA posición** justo antes de cruzar la meta.\n\n¿En qué posición quedas clasificado?",
+      "pistas": [
+        "Pista 1: No te apresures; piensa en quién estaba delante de ti antes del adelantamiento.",
+        "Pista 2: Si adelantas al segundo... ¿qué puesto ocupaba él y cuál ocupas tú ahora?"
+      ],
+      "opciones": [
+        { "id": "primero", "texto": "1º lugar (Primer puesto / Ganador)", "correcta": false },
+        { "id": "segundo", "texto": "2º lugar (Segundo puesto)", "correcta": true },
+        { "id": "tercero", "texto": "3º lugar (Tercer puesto)", "correcta": false }
+      ],
+      "explicacion": "¡Correcto! Si adelantas al que iba segundo, tú pasas a ocupar su puesto: el **2º lugar**. El primer clasificado sigue yendo delante de ti."
+    },
+    {
+      "id": "e4",
+      "titulo": "Enigma 4: El Barquero, el Lobo, la Cabra y la Col",
+      "planteamiento": "Un barquero debe cruzar un río con un **Lobo**, una **Cabra** y una **Col**. En su pequeña barca solo cabe él y **uno** de los tres elementos por viaje.\n\n- Si deja al Lobo y a la Cabra solos, el Lobo se comerá a la Cabra.\n- Si deja a la Cabra y a la Col solas, la Cabra se comerá la Col.\n- El Lobo no come Col.\n\n¿Cuál debe ser el **primer viaje de ida** indispensable para que nadie sea devorado?",
+      "pistas": [
+        "Pista 1: ¿Qué dos elementos pueden quedarse juntos en la orilla sin peligro?",
+        "Pista 2: El Lobo y la Col nunca se atacarán."
+      ],
+      "opciones": [
+        { "id": "lobo", "texto": "Cruzar primero con el Lobo", "correcta": false },
+        { "id": "cabra", "texto": "Cruzar primero con la Cabra", "correcta": true },
+        { "id": "col", "texto": "Cruzar primero con la Col", "correcta": false }
+      ],
+      "explicacion": "¡Excelente! El único primer paso seguro es **cruzar a la Cabra**. Así, en la orilla original se quedan el Lobo y la Col (que no se tocan). Después cruza el Lobo, se trae de vuelta a la Cabra, cruza la Col y finalmente vuelve a por la Cabra."
+    },
+    {
+      "id": "e5",
+      "titulo": "Enigma 5: La Vela y la Oscuridad",
+      "planteamiento": "Entras a medianoche en una habitación completamente helada y a oscuras. En el bolsillo tienes **una única cerilla**. Dentro de la habitación hay:\n- Una lámpara de aceite.\n- Una vela de cera virgen.\n- Una chimenea de leña seca lista para encender.\n\n¿Qué es lo primero que debes encender?",
+      "pistas": [
+        "Pista 1: Antes de iluminar nada en la habitación, necesitas fuego en la mano.",
+        "Pista 2: Piensa en el orden físico de las cosas."
+      ],
+      "opciones": [
+        { "id": "vela", "texto": "La vela de cera", "correcta": false },
+        { "id": "cerilla", "texto": "La cerilla", "correcta": true },
+        { "id": "lampara", "texto": "La lámpara de aceite", "correcta": false },
+        { "id": "chimenea", "texto": "La chimenea", "correcta": false }
+      ],
+      "explicacion": "¡Elemental! Antes de poder prender la vela, la lámpara o la chimenea, lo primero que debes encender de forma obligada es **la cerilla**."
+    }
+  ]
+}

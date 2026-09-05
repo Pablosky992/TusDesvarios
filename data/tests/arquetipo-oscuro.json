@@ -1,0 +1,137 @@
+{
+  "id": "arquetipo-oscuro",
+  "slug": "arquetipo-oscuro",
+  "titulo": "¿Qué Arquetipo Oscuro Habita en Ti?",
+  "subtitulo": "Descubre qué fuerza primordial y secreta gobierna tus decisiones cuando nadie te observa.",
+  "descripcionCorta": "8 dilemas morales e insólitos para desentrañar tu arquetipo psicológico gótico: Alquimista, Erudito, Espectro o Guardián.",
+  "tipo": "personalidad",
+  "categoria": "personalidad",
+  "categoriaLabel": "Personalidad & Arquetipos",
+  "icono": "🧙",
+  "tiempoMin": 3,
+  "color": "#a855f7",
+  "preguntas": [
+    {
+      "id": "p1",
+      "texto": "Caminas de noche por un bosque en penumbra y encuentras una torre de piedra sin puertas, solo con una ventana iluminada a diez metros de altura. ¿Cuál es tu primer impulso?",
+      "opciones": [
+        { "texto": "Buscar runas o marcas en los cimientos para comprender quién la construyó y por qué.", "arquetipo": "erudito" },
+        { "texto": "Idear un brebaje o mecanismo para trepar y obtener el poder que se oculta arriba.", "arquetipo": "alquimista" },
+        { "texto": "Rodearla en silencio, asegurándome de que nada peligroso escape de su interior.", "arquetipo": "guardian" },
+        { "texto": "Observar desde las sombras a quien vive allí, esperando el momento justo para intervenir.", "arquetipo": "espectro" }
+      ]
+    },
+    {
+      "id": "p2",
+      "texto": "Un coleccionista te ofrece un espejo antiguo que supuestamente muestra a tu peor enemigo sufriendo. ¿Qué respondes?",
+      "opciones": [
+        { "texto": "«No me interesa el rencor ajeno; prefiero un artefacto que me otorgue conocimiento prohibido».", "arquetipo": "erudito" },
+        { "texto": "«Lo compraré para analizar qué leyes físicas o mágicas alteran el reflejo».", "arquetipo": "alquimista" },
+        { "texto": "«Un objeto así corrompe el alma. Debe ser destruido o custodiado bajo llave».", "arquetipo": "guardian" },
+        { "texto": "«Dámelo. La justicia poética es el mejor de los placeres».", "arquetipo": "espectro" }
+      ]
+    },
+    {
+      "id": "p3",
+      "texto": "En un debate acalorado donde sabes con certeza que tienes la razón absoluta, ¿cómo actúas?",
+      "opciones": [
+        { "texto": "Expongo datos implacables, textos y pruebas irrefutables hasta desarmar su lógica.", "arquetipo": "erudito" },
+        { "texto": "Les propongo un experimento práctico: cuando fallen, aprenderán por la fuerza.", "arquetipo": "alquimista" },
+        { "texto": "Mantengo la calma para evitar que el conflicto destruya la paz del grupo.", "arquetipo": "guardian" },
+        { "texto": "Sonrío en silencio, dejo que se equivoquen y disfruto cuando todo colapsa.", "arquetipo": "espectro" }
+      ]
+    },
+    {
+      "id": "p4",
+      "texto": "¿Qué cualidad te resulta más imperdonable en los demás?",
+      "opciones": [
+        { "texto": "La ignorancia voluntaria y el desprecio por la verdad.", "arquetipo": "erudito" },
+        { "texto": "El conformismo y la cobardía ante lo desconocido.", "arquetipo": "alquimista" },
+        { "texto": "La traición a la confianza y la falta de lealtad.", "arquetipo": "guardian" },
+        { "texto": "La hipocresía y la soberbia inmerecida.", "arquetipo": "espectro" }
+      ]
+    },
+    {
+      "id": "p5",
+      "texto": "Si pudieras obtener un don sobrenatural inmediato, ¿cuál elegirías sin dudar?",
+      "opciones": [
+        { "texto": "Omnisciencia: poder leer cualquier lengua muerta y conocer todos los secretos de la historia.", "arquetipo": "erudito" },
+        { "texto": "Transmutación: transformar la materia y doblegar los límites de la mortalidad.", "arquetipo": "alquimista" },
+        { "texto": "Invulnerabilidad: ser un baluarte inquebrantable capaz de proteger a los míos.", "arquetipo": "guardian" },
+        { "texto": "Intangibilidad: moverme como una sombra invisible entre los vivos sin ser detectado.", "arquetipo": "espectro" }
+      ]
+    },
+    {
+      "id": "p6",
+      "texto": "Te confían un secreto peligroso que podría destruir a una figura poderosa. ¿Qué haces con él?",
+      "opciones": [
+        { "texto": "Lo transcribo en clave y lo archivo en mi biblioteca secreta.", "arquetipo": "erudito" },
+        { "texto": "Busco la manera de utilizar esa información como palanca para avanzar en mis metas.", "arquetipo": "alquimista" },
+        { "texto": "Lo sepulto en el olvido para evitar que cause caos inocente.", "arquetipo": "guardian" },
+        { "texto": "Espero al momento exacto de mayor debilidad para revelarlo y ver su caída.", "arquetipo": "espectro" }
+      ]
+    },
+    {
+      "id": "p7",
+      "texto": "¿Cuál es tu escenario ideal para una noche de desconexión absoluta?",
+      "opciones": [
+        { "texto": "Un sillón cómodo, lluvia golpeando el cristal y una enciclopedia de misterios.", "arquetipo": "erudito" },
+        { "texto": "Un taller o espacio creativo probando nuevas ideas hasta altas horas de la madrugada.", "arquetipo": "alquimista" },
+        { "texto": "Una fogata tranquila con las pocas personas que considero de mi más leal círculo.", "arquetipo": "guardian" },
+        { "texto": "Pasear en soledad por calles vacías y silenciosas bajo la luz de la luna.", "arquetipo": "espectro" }
+      ]
+    },
+    {
+      "id": "p8",
+      "texto": "Al final del camino, ¿cómo te gustaría que te recordasen?",
+      "opciones": [
+        { "texto": "«Aquel que descubrió verdades que nadie más se atrevió a buscar».", "arquetipo": "erudito" },
+        { "texto": "«Aquel que transformó su realidad y desafió lo imposible».", "arquetipo": "alquimista" },
+        { "texto": "«El escudo inamovible que nunca abandonó a los suyos».", "arquetipo": "guardian" },
+        { "texto": "«La presencia enigmática que nadie logró doblegar ni olvidar».", "arquetipo": "espectro" }
+      ]
+    }
+  ],
+  "resultados": {
+    "erudito": {
+      "nombre": "El Erudito Hereje",
+      "tituloCorto": "Buscador de Verdades Prohibidas",
+      "icono": "📜",
+      "color": "#38bdf8",
+      "descripcion": "Te impulsa una sed insaciable de conocimiento y comprensión. No aceptas dogmas ni verdades a medias; necesitas llegar a la raíz de las cosas, incluso si la respuesta resulta inquietante. Tu mente es analítica, meticulosa y profundamente estratégica.",
+      "fortaleza": "Agudeza intelectual, memoria prodigiosa y pensamiento crítico implacable.",
+      "desvario": "Tendencia a aislarte en tus pensamientos y priorizar la lógica fría sobre las emociones.",
+      "afinidad": "88% Afin con la investigación, el misterio y el análisis deductivo."
+    },
+    "alquimista": {
+      "nombre": "El Alquimista Obsesivo",
+      "tituloCorto": "Transformador de la Realidad",
+      "icono": "⚗️",
+      "color": "#f59e0b",
+      "descripcion": "No te conformas con el mundo tal y como es: sientes la urgencia constante de mejorarlo, retorcerlo o reinventarlo. Eres ambicioso, creativo y posees una curiosidad que a menudo bordea la imprudencia genial.",
+      "fortaleza": "Innovación constante, tenacidad ante el fracaso y audacia transformadora.",
+      "desvario": "Impaciencia cuando los demás no siguen tu ritmo y obsesión por controlar el resultado.",
+      "afinidad": "92% Afin con la creación, la experimentación y el desafío a las normas establecidas."
+    },
+    "guardian": {
+      "nombre": "El Guardián del Umbral",
+      "tituloCorto": "Baluarte de Lealtad y Orden",
+      "icono": "🛡️",
+      "color": "#10b981",
+      "descripcion": "Eres el pilar inquebrantable en medio de la tormenta. Valoras el honor, la lealtad y la protección de tu círculo más íntimo por encima de todo. Sabes guardar secretos y tu palabra tiene el peso del granito.",
+      "fortaleza": "Lealtad indomable, templanza bajo presión y sentido protector.",
+      "desvario": "Dificultad para perdonar la traición y reticencia a confiar en extraños.",
+      "afinidad": "85% Afin con el liderazgo protector, la justicia y la defensa de principios."
+    },
+    "espectro": {
+      "nombre": "El Espectro Vengativo",
+      "tituloCorto": "Sombra Silenciosa e Implacable",
+      "icono": "🌑",
+      "color": "#ec4899",
+      "descripcion": "Prefieres moverte en un segundo plano, observando lo que otros pasan por alto. Posees una intuición psicológica letal: calas a las personas al instante y sabes con precisión quirúrgica dónde son vulnerables.",
+      "fortaleza": "Paciencia infinita, sutileza táctica y memoria infalible para los agravios.",
+      "desvario": "Rencor silencioso y tendencia a guardar cuentas pendientes durante años.",
+      "afinidad": "90% Afin con la psicología oscura, la discreción y el cálculo a largo plazo."
+    }
+  }
+}

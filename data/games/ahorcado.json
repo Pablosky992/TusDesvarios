@@ -1,0 +1,311 @@
+{
+  "id": "el-ahorcado",
+  "slug": "el-ahorcado",
+  "titulo": "El Ahorcado Desvariado",
+  "subtitulo": "Descifra la palabra oculta antes de que el cadalso de neón reclame tu alma",
+  "descripcionCorta": "El clásico juego del ahorcado reinventado con estética retro arcade, efectos de sonido 8-bit, 6 categorías temáticas y cientos de palabras misteriosas.",
+  "icono": "🔤",
+  "categoria": "palabras",
+  "categoriaLabel": "Palabras & Letras",
+  "tiempoMin": 3,
+  "color": "#a855f7",
+  "portada": "images/games/portada_ahorcado.jpg",
+  "categorias": [
+    {
+      "id": "literatura",
+      "nombre": "Literatura Gótica & Ficción",
+      "icono": "📜",
+      "descripcion": "Autores oscuros, obras maestras, criaturas y artefactos de la narrativa fantástica."
+    },
+    {
+      "id": "cine",
+      "nombre": "Cine de Culto & Sci-Fi",
+      "icono": "🍿",
+      "descripcion": "Naves espaciales, futuros distópicos, androides y películas legendarias."
+    },
+    {
+      "id": "filosofia",
+      "nombre": "Filosofía & Misterio",
+      "icono": "🧠",
+      "descripcion": "Conceptos existenciales, paradojas mentales y enigmas del conocimiento."
+    },
+    {
+      "id": "mitologia",
+      "nombre": "Mitología & Leyendas",
+      "icono": "🧙",
+      "descripcion": "Bestias milenarias, reinos perdidos y dioses del folclore universal."
+    },
+    {
+      "id": "retro",
+      "nombre": "Arcade & Videojuegos Retro",
+      "icono": "🕹️",
+      "descripcion": "Clásicos de los 80s y 90s, consolas míticas y términos del gaming vintage."
+    }
+  ],
+  "palabras": [
+    {
+      "palabra": "FRANKENSTEIN",
+      "categoria": "literatura",
+      "pista": "La mítica criatura creada a partir de piezas inertes por Mary Shelley.",
+      "curiosidad": "Mary Shelley escribió la novela con solo 18 años durante el famoso 'año sin verano' de 1816 en Villa Diodati."
+    },
+    {
+      "palabra": "NIGROMANTE",
+      "categoria": "literatura",
+      "pista": "Hechicero oscuro capaz de invocar y comunicarse con los espíritus de los muertos.",
+      "curiosidad": "La nigromancia proviene del griego 'nekros' (muerto) y 'manteia' (adivinación)."
+    },
+    {
+      "palabra": "CTHULHU",
+      "categoria": "literatura",
+      "pista": "Entidad cósmica con cabeza de pulpo y alas que duerme en la ciudad sumergida de R'lyeh.",
+      "curiosidad": "Creado por H.P. Lovecraft en 1928, simboliza el terror cósmico ante lo desconocido."
+    },
+    {
+      "palabra": "ALQUIMISTA",
+      "categoria": "literatura",
+      "pista": "Buscador de la transmutación de los metales y el elixir de la vida eterna.",
+      "curiosidad": "Isaac Newton dedicó más escritos a la alquimia secreta que a la física o la gravedad."
+    },
+    {
+      "palabra": "INQUISIDOR",
+      "categoria": "literatura",
+      "pista": "Juez eclesiástico implacable encargado de perseguir la herejía en la Edad Media.",
+      "curiosidad": "El famoso manual 'Malleus Maleficarum' (1487) fue la guía de caza de brujas más difundida."
+    },
+    {
+      "palabra": "LABERINTO",
+      "categoria": "literatura",
+      "pista": "Estructura intrincada de senderos diseñada para confundir a quien intente escapar.",
+      "curiosidad": "El laberinto de Creta fue construido por Dédalo para encerrar al temible Minotauro."
+    },
+    {
+      "palabra": "MANUSCRITO",
+      "categoria": "literatura",
+      "pista": "Documento antiguo redactado a mano sobre pergamino o papiro.",
+      "curiosidad": "El manuscrito Voynich sigue siendo uno de los mayores textos cifrados sin descifrar del mundo."
+    },
+    {
+      "palabra": "ESPECTRO",
+      "categoria": "literatura",
+      "pista": "Aparición fantasmal o visión incorpórea que acecha en las sombras.",
+      "curiosidad": "En la literatura gótica, los espectros a menudo representan secretos no confesados del pasado."
+    },
+    {
+      "palabra": "BIBLIOTECA",
+      "categoria": "literatura",
+      "pista": "Santuario de tomos antiguos, grimorios y conocimiento olvidado.",
+      "curiosidad": "La mítica Biblioteca de Alejandría llegó a albergar más de 400.000 rollos de pergamino."
+    },
+    {
+      "palabra": "DOPPELGANGER",
+      "categoria": "literatura",
+      "pista": "El doble fantasmal o gemelo malvado de una persona viva.",
+      "curiosidad": "Palabra alemana que significa 'caminante doble'. Ver al propio se consideraba presagio de muerte."
+    },
+    {
+      "palabra": "CYBERPUNK",
+      "categoria": "cine",
+      "pista": "Subgénero de ciencia ficción que combina alta tecnología con baja calidad de vida ('High tech, low life').",
+      "curiosidad": "Popularizado por la novela 'Neuromante' de William Gibson y la película Blade Runner (1982)."
+    },
+    {
+      "palabra": "REPLICANTE",
+      "categoria": "cine",
+      "pista": "Androide biológico casi indistinguible del ser humano en Blade Runner.",
+      "curiosidad": "El modelo Nexus-6 tenía una vida programada de solo cuatro años para evitar que desarrollaran empatía."
+    },
+    {
+      "palabra": "MATRIX",
+      "categoria": "cine",
+      "pista": "Simulación virtual interactiva que mantiene a la humanidad dormida mientras es cosechada.",
+      "curiosidad": "La famosa lluvia de código verde inicial se creó a partir de símbolos de libros de recetas de sushi."
+    },
+    {
+      "palabra": "INTERESTELAR",
+      "categoria": "cine",
+      "pista": "Odisea espacial donde un agujero negro llamado Gargantúa altera la percepción del tiempo.",
+      "curiosidad": "El físico teórico Kip Thorne calculó las ecuaciones reales para renderizar el agujero negro de la película."
+    },
+    {
+      "palabra": "DELOREAN",
+      "categoria": "cine",
+      "pista": "Coche deportivo icónico con puertas de ala de gaviota transformado en máquina del tiempo.",
+      "curiosidad": "En el guion original de 'Regreso al Futuro', la máquina del tiempo era una nevera."
+    },
+    {
+      "palabra": "NOSTROMO",
+      "categoria": "cine",
+      "pista": "Carguero comercial espacial donde acechó el primer xenomorfo de Alien (1979).",
+      "curiosidad": "El nombre fue tomado de una novela de Joseph Conrad, autor también de 'El corazón de las tinieblas'."
+    },
+    {
+      "palabra": "MONOLITO",
+      "categoria": "cine",
+      "pista": "Misterioso prisma negro extraterrestre en '2001: Odisea del Espacio'.",
+      "curiosidad": "Las proporciones matemáticas exactas del monolito son 1 : 4 : 9 (los cuadrados de 1, 2 y 3)."
+    },
+    {
+      "palabra": "TERMINATOR",
+      "categoria": "cine",
+      "pista": "Cíborg asesino enviado desde el futuro por Skynet para cambiar el curso de la historia.",
+      "curiosidad": "James Cameron concibió la idea durante una pesadilla febril en un hotel de Roma."
+    },
+    {
+      "palabra": "METROPOLIS",
+      "categoria": "cine",
+      "pista": "Obra maestra del cine mudo expresionista de 1927 dirigida por Fritz Lang.",
+      "curiosidad": "El diseño de la mujer robot 'Maria' inspiró directamente la apariencia de C-3PO en Star Wars."
+    },
+    {
+      "palabra": "DISTOPIA",
+      "categoria": "cine",
+      "pista": "Sociedad ficticia indeseable marcada por el control totalitario o el colapso ecológico.",
+      "curiosidad": "El término fue acuñado por John Stuart Mill en 1868 como antónimo directo de 'utopía'."
+    },
+    {
+      "palabra": "EXISTENCIALISMO",
+      "categoria": "filosofia",
+      "pista": "Corriente que sostiene que la existencia precede a la esencia: somos lo que elegimos ser.",
+      "curiosidad": "Jean-Paul Sartre rechazó el Premio Nobel de Literatura en 1964 para mantener su total independencia."
+    },
+    {
+      "palabra": "SOLIPSISMO",
+      "categoria": "filosofia",
+      "pista": "Postura radical según la cual sólo se puede estar seguro de la existencia de la propia mente.",
+      "curiosidad": "Viene del latín 'solus' (solo) e 'ipse' (uno mismo). Es el desvarío filosófico por excelencia."
+    },
+    {
+      "palabra": "PARADOJA",
+      "categoria": "filosofia",
+      "pista": "Proposición que parece contradictoria pero que encierra una verdad profunda o un bucle irresoluble.",
+      "curiosidad": "La paradoja del barco de Teseo pregunta si un barco al que se le cambian todas las piezas sigue siendo el mismo."
+    },
+    {
+      "palabra": "NIHILISMO",
+      "categoria": "filosofia",
+      "pista": "Doctrina que niega la existencia de valores, significados o propósitos objetivos en la vida.",
+      "curiosidad": "Popularizado por Friedrich Nietzsche al advertir sobre la muerte de las certezas morales tradicionales."
+    },
+    {
+      "palabra": "CATARSIS",
+      "categoria": "filosofia",
+      "pista": "Purificación o liberación emocional provocada por una experiencia artística o trágica.",
+      "curiosidad": "Aristóteles lo definió en su 'Poética' como el efecto liberador que la tragedia causaba en los espectadores."
+    },
+    {
+      "palabra": "EPIFANIA",
+      "categoria": "filosofia",
+      "pista": "Momento repentino de lucidez o revelación profunda que transforma la comprensión de la realidad.",
+      "curiosidad": "En literatura, James Joyce la utilizaba para describir instantes mágicos donde lo cotidiano revela su esencia."
+    },
+    {
+      "palabra": "DILEMA",
+      "categoria": "filosofia",
+      "pista": "Situación en la que se debe elegir entre dos opciones igualmente difíciles o morales.",
+      "curiosidad": "El 'Dilema del Tranvía' fue formulado por Philippa Foot en 1967 y hoy se aplica a coches autónomos."
+    },
+    {
+      "palabra": "STOICISMO",
+      "categoria": "filosofia",
+      "pista": "Escuela filosófica que enseña a dominar las emociones y centrarse sólo en lo que podemos controlar.",
+      "curiosidad": "Fue fundada por Zenón de Citio en Atenas hacia el 300 a.C. y practicada por el emperador Marco Aurelio."
+    },
+    {
+      "palabra": "MINOTAURO",
+      "categoria": "mitologia",
+      "pista": "Monstruo con cuerpo de hombre y cabeza de toro que devoraba tributos en el laberinto.",
+      "curiosidad": "Teseo logró vencerlo y salir del laberinto gracias al hilo dorado entregado por Ariadna."
+    },
+    {
+      "palabra": "VALHALLA",
+      "categoria": "mitologia",
+      "pista": "Majestuoso salón celestial de Odín donde los guerreros caídos combaten y festejan.",
+      "curiosidad": "En la mitología nórdica, las valquirias elegían a los héroes caídos más valientes para llevarlos allí."
+    },
+    {
+      "palabra": "KRAKEN",
+      "categoria": "mitologia",
+      "pista": "Colosal criatura marina con tentáculos gigantescos capaz de hundir barcos enteros.",
+      "curiosidad": "Las leyendas escandinavas del Kraken se inspiraron probablemente en avistamientos de calamares gigantes reales."
+    },
+    {
+      "palabra": "BASILISCO",
+      "categoria": "mitologia",
+      "pista": "Reptil mítico temido por su mirada petrificante y su aliento mortalmente venenoso.",
+      "curiosidad": "Según los bestiarios medievales, la única debilidad mortal del basilisco era el canto del gallo o su propio reflejo."
+    },
+    {
+      "palabra": "QUIMERA",
+      "categoria": "mitologia",
+      "pista": "Bestia híbrida fabulosa que escupía fuego, con partes de león, cabra y serpiente.",
+      "curiosidad": "Fue derrotada por el héroe Belerofonte montado sobre el caballo alado Pegaso."
+    },
+    {
+      "palabra": "OUROBOROS",
+      "categoria": "mitologia",
+      "pista": "Símbolo ancestral que muestra a una serpiente o dragón comiéndose su propia cola.",
+      "curiosidad": "Representa el ciclo eterno de la vida, la muerte, el renacimiento y el infinito."
+    },
+    {
+      "palabra": "CERBERO",
+      "categoria": "mitologia",
+      "pista": "Perro infernal de tres cabezas que custodia las puertas del inframundo de Hades.",
+      "curiosidad": "Heracles lo capturó vivo sin usar armas como el último y más peligroso de sus doce trabajos."
+    },
+    {
+      "palabra": "LEVIATAN",
+      "categoria": "mitologia",
+      "pista": "Bestia primordial de las profundidades oceánicas asociada con el caos inicial.",
+      "curiosidad": "Thomas Hobbes utilizó su nombre en 1651 para titular su famoso tratado sobre el Estado y el poder político."
+    },
+    {
+      "palabra": "SYNTHWAVE",
+      "categoria": "retro",
+      "pista": "Estilo musical y visual retrofuturista inspirado en las bandas sonoras y neones de los años 80.",
+      "curiosidad": "Utiliza sintetizadores analógicos clásicos de los 80 para recrear una nostalgia por un futuro que nunca fue."
+    },
+    {
+      "palabra": "JOYSTICK",
+      "categoria": "retro",
+      "pista": "Palanca de control mítica de las máquinas recreativas y primeras consolas de videojuegos.",
+      "curiosidad": "El término provino originalmente de la palanca de control de los aviones militares de inicios del siglo XX."
+    },
+    {
+      "palabra": "CARTUCHO",
+      "categoria": "retro",
+      "pista": "Soporte físico con memoria ROM que se introducía en la ranura de las consolas retro.",
+      "curiosidad": "El mito de soplar los cartuchos de Nintendo no mejoraba la conexión y podía oxidar los contactos de cobre."
+    },
+    {
+      "palabra": "COMMODORE",
+      "categoria": "retro",
+      "pista": "Legendario ordenador doméstico de 8 bits (C64) que reinó en los hogares en los años 80.",
+      "curiosidad": "El Commodore 64 ostenta el récord Guinness del modelo de ordenador individual más vendido de la historia."
+    },
+    {
+      "palabra": "MEGAMAN",
+      "categoria": "retro",
+      "pista": "El 'Bombardero Azul' de Capcom que absorbía los poderes de los Robot Masters derrotados.",
+      "curiosidad": "En Japón se le conoce como 'Rockman', y su creador Keiji Inafune lo diseñó azul por la paleta de la NES."
+    },
+    {
+      "palabra": "TETRIS",
+      "categoria": "retro",
+      "pista": "Juego de puzle soviético donde debes encajar tetrominós que caen sin cesar.",
+      "curiosidad": "Fue creado en 1984 por Alekséi Pázhitnov en una computadora Elektronika 60 de la Academia de Ciencias de Moscú."
+    },
+    {
+      "palabra": "GAMEBOY",
+      "categoria": "retro",
+      "pista": "Consola portátil gris de Nintendo con pantalla monocromática verdosa que revolucionó el mundo en 1989.",
+      "curiosidad": "Una Game Boy sobrevivió a los bombardeos de la Guerra del Golfo y todavía funciona expuesta en Nueva York."
+    },
+    {
+      "palabra": "POLIGONO",
+      "categoria": "retro",
+      "pista": "Figura geométrica básica que dio inicio a la era de los gráficos 3D en las consolas de 32 bits.",
+      "curiosidad": "Juegos pioneros como 'Star Fox' (1993) usaron el chip Super FX para renderizar polígonos en Super Nintendo."
+    }
+  ]
+}

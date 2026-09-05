@@ -1,0 +1,127 @@
+{
+  "id": "termometro-desvario",
+  "slug": "termometro-desvario",
+  "titulo": "El Termómetro del Desvarío: ¿Cuánto estás perdiendo el norte?",
+  "subtitulo": "Un diagnóstico exprés y rigurosamente absurdo sobre tu nivel de cordura cotidiana.",
+  "descripcionCorta": "Responde a 7 situaciones cómicas y cotidianas para averiguar en qué punto de la escala de la locura te encuentras hoy.",
+  "tipo": "puntuacion",
+  "categoria": "humor",
+  "categoriaLabel": "Humor & Diagnósticos",
+  "icono": "🌀",
+  "tiempoMin": 2,
+  "color": "#f59e0b",
+  "preguntas": [
+    {
+      "id": "p1",
+      "texto": "Estás buscando las gafas de sol o las llaves y llevas 10 minutos sin encontrarlas. De repente te das cuenta de que las llevas puestas o en la mano. ¿Qué haces?",
+      "opciones": [
+        { "texto": "Me río de mí mismo, suspiro y sigo con mi vida.", "puntos": 0 },
+        { "texto": "Miro discretamente alrededor para asegurarme de que nadie me ha visto hacer el ridículo.", "puntos": 10 },
+        { "texto": "Culpo a una falla temporal en la simulación o a duendes domésticos.", "puntos": 20 },
+        { "texto": "Sigo buscando otras cosas por si acaso he perdido también el sentido común.", "puntos": 30 }
+      ]
+    },
+    {
+      "id": "p2",
+      "texto": "Te vas a la cama a las 23:00 para descansar bien. Son las 02:30 y estás viendo un documental sobre cómo se fabrican los clips o teorías sobre la Atlántida. ¿Cómo te justificas?",
+      "opciones": [
+        { "texto": "«Apago el móvil ya mismo, esto no tiene perdón».", "puntos": 0 },
+        { "texto": "«Un vídeo más de 3 minutos y a dormir... seguro».", "puntos": 10 },
+        { "texto": "«Es cultura general básica que podría salvarme la vida en un concurso de televisión».", "puntos": 20 },
+        { "texto": "«La sociedad duerme, pero las mentes brillantes producimos de madrugada».", "puntos": 30 }
+      ]
+    },
+    {
+      "id": "p3",
+      "texto": "Alguien que apenas conoces te dice: «Tenemos que hablar». ¿Cuál es tu primera hipótesis mental?",
+      "opciones": [
+        { "texto": "Será algo trivial de trabajo o una pregunta cualquiera.", "puntos": 0 },
+        { "texto": "He hecho algo mal sin darme cuenta y me van a cantar las cuarenta.", "puntos": 10 },
+        { "texto": "Ha descubierto mi identidad secreta o me van a reclutar para una agencia clandestina.", "puntos": 25 },
+        { "texto": "Fingiré un desmayo teatral o cambiaré de país antes del mediodía.", "puntos": 35 }
+      ]
+    },
+    {
+      "id": "p4",
+      "texto": "Vas al supermercado a por leche y pan. Sales con 65 euros gastados en salsas asiáticas, calcetines con dibujos de aguacates y un destornillador. ¿Compraste la leche?",
+      "opciones": [
+        { "texto": "Sí, traje todo lo de la lista y un extra.", "puntos": 0 },
+        { "texto": "Compré todo excepto la leche... tendré que volver.", "puntos": 15 },
+        { "texto": "No compré la leche, pero mira qué salsa de mango más exótica.", "puntos": 25 },
+        { "texto": "¿Había ido a por leche? Yo creía que iba a explorar el pasillo de novedades.", "puntos": 35 }
+      ]
+    },
+    {
+      "id": "p5",
+      "texto": "Mantienes una conversación completa con tu mascota o con una planta en voz alta. ¿Cuál es el tono?",
+      "opciones": [
+        { "texto": "Solo les digo 'hola bonito' o cosas cortas de cariño.", "puntos": 0 },
+        { "texto": "Les cuento mis problemas del día porque son los únicos que no me juzgan.", "puntos": 15 },
+        { "texto": "Debatimos sobre geopolítica y decisiones financieras familiares.", "puntos": 25 },
+        { "texto": "Juro que el gato asintió con la cabeza y me dio la razón.", "puntos": 35 }
+      ]
+    },
+    {
+      "id": "p6",
+      "texto": "Escuchas una canción pegadiza en la radio que odias con toda tu alma. ¿Qué ocurre las siguientes 4 horas?",
+      "opciones": [
+        { "texto": "Se me olvida a los dos minutos.", "puntos": 0 },
+        { "texto": "La tarareo con rabia sin poder evitarlo.", "puntos": 15 },
+        { "texto": "Creo una coreografía involuntaria mientras pongo la lavadora.", "puntos": 25 },
+        { "texto": "Se convierte en la banda sonora de mis pensamientos hasta el día del juicio final.", "puntos": 35 }
+      ]
+    },
+    {
+      "id": "p7",
+      "texto": "Si pudieras definir tu estado mental habitual con un fenómeno meteorológico, ¿cuál sería?",
+      "opciones": [
+        { "texto": "Día despejado con brisa suave y predecible.", "puntos": 0 },
+        { "texto": "Parcialmente nublado con probabilidad de despistes aislados.", "puntos": 15 },
+        { "texto": "Tormenta eléctrica con ideas cayendo como rayos descontrolados.", "puntos": 25 },
+        { "texto": "Tornado de purpurina en una feria ambulante.", "puntos": 35 }
+      ]
+    }
+  ],
+  "rangos": [
+    {
+      "min": 0,
+      "max": 40,
+      "nivel": "Cordura Sospechosa (0% - 20%)",
+      "titulo": "Ciudadano Peligrosamente Funcional",
+      "icono": "🧐",
+      "color": "#10b981",
+      "descripcion": "Increíble. Tu mente opera con la precisión de un reloj suizo. Duermes a tus horas, encuentras las cosas a la primera y no mantienes debates existenciales con la tostadora. O eres un monje zen o estás fingiendo muy bien.",
+      "consejo": "Atrévete a desvariar un poco, la vida con un 10% de caos es mucho más entretenida."
+    },
+    {
+      "min": 41,
+      "max": 100,
+      "nivel": "Desvarío Moderado (25% - 50%)",
+      "titulo": "Desvariador Cotidiano con Estilo",
+      "icono": "☕",
+      "color": "#06b6d4",
+      "descripcion": "El punto dulce de la existencia. Tienes tus momentos de despiste antológico y tus obsesiones nocturnas con vídeos absurdos, pero sigues pagando las facturas y funcionando en sociedad sin alarmar a tus vecinos.",
+      "consejo": "Sigue así: el equilibrio perfecto entre sentido común y locura controlada."
+    },
+    {
+      "min": 101,
+      "max": 170,
+      "nivel": "Filósofo del Caos (55% - 75%)",
+      "titulo": "Mente en Ebullición Perpetua",
+      "icono": "⚡",
+      "color": "#f59e0b",
+      "descripcion": "Tu cabeza es un navegador con 84 pestañas abiertas, de las cuales en 3 suena música de fondo que no sabes de dónde viene. Eres creativo, impredecible y una fuente inagotable de anécdotas estrambóticas.",
+      "consejo": "Anota tus ideas antes de que choquen entre sí y provoquen un cortocircuito."
+    },
+    {
+      "min": 171,
+      "max": 245,
+      "nivel": "Desvarío Legendario (80% - 100%)",
+      "titulo": "Emperador Absoluto del Despropósito",
+      "icono": "👑",
+      "color": "#ec4899",
+      "descripcion": "Has trascendido la cordura ordinaria. Las leyes de la lógica mundana no aplican a tu universo. Vives en una realidad paralela fascinante donde los gatos dan consejos financieros y las madrugadas son el escenario de grandes epopeyas.",
+      "consejo": "No cambies nunca. Estás en la cúspide de Tus Desvaríos."
+    }
+  ]
+}

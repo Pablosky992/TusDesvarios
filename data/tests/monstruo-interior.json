@@ -1,0 +1,137 @@
+{
+  "id": "monstruo-interior",
+  "slug": "monstruo-interior",
+  "titulo": "¿Qué Criatura Mitológica Eres Según tu Forma de Estresarte?",
+  "subtitulo": "Descubre qué bestia legendaria toma el control de tu mente cuando el caos se desata.",
+  "descripcionCorta": "Test de personalidad cómica: cómo reaccionas ante los plazos de entrega, los mensajes sin responder y la falta de café.",
+  "tipo": "personalidad",
+  "categoria": "personalidad",
+  "categoriaLabel": "Personalidad & Arquetipos",
+  "icono": "🦖",
+  "tiempoMin": 3,
+  "color": "#10b981",
+  "preguntas": [
+    {
+      "id": "m1",
+      "texto": "Son las 18:00 y tienes una entrega crucial para mañana a las 9:00 AM. Apenas llevas un 10% hecho. ¿Cuál es tu **mecanismo de defensa**?",
+      "opciones": [
+        { "texto": "Hundirme en las profundidades del sofá y ver 4 episodios de una serie documental sobre pingüinos.", "arquetipo": "kraken" },
+        { "texto": "Buscar en Google si el tic que tengo en el párpado es un síntoma de estrés terminal.", "arquetipo": "basilisco" },
+        { "texto": "Bloquear a todo el mundo en el móvil y amenazar con fuego a quien se acerque a mi cueva.", "arquetipo": "dragon" },
+        { "texto": "Irme a cenar tranquilamente; sé que mi verdadero poder despierta mágicamente a las 2:30 AM.", "arquetipo": "fenix" }
+      ]
+    },
+    {
+      "id": "m2",
+      "texto": "Te despiertas con un mensaje grupal de 47 notificaciones y un audio de 6 minutos de un familiar. ¿Qué haces?",
+      "opciones": [
+        { "texto": "Extender mis tentáculos, archivar el chat y fingir que ese grupo jamás existió.", "arquetipo": "kraken" },
+        { "texto": "Escucharlo al 2x con taquicardia pensando que alguien ha tenido un percance grave.", "arquetipo": "basilisco" },
+        { "texto": "Responder escuetamente con un 'Ok' para proteger mi valioso tiempo como si fuera oro puro.", "arquetipo": "dragon" },
+        { "texto": "Ignorarlo todo el día y responder a las 4:00 AM con un mensaje filosófico de tres párrafos.", "arquetipo": "fenix" }
+      ]
+    },
+    {
+      "id": "m3",
+      "texto": "Se acaba el café en casa justo un lunes por la mañana con lluvia. ¿Cuál es tu transformación?",
+      "opciones": [
+        { "texto": "Paralización total; me quedo inmóvil esperando que la marea de la vida me arrastre.", "arquetipo": "kraken" },
+        { "texto": "Una mirada petrificante que hiela la sangre de cualquiera que ose desearme 'buenos días'.", "arquetipo": "basilisco" },
+        { "texto": "Acaparar el último sobre de té caducado del fondo de la despensa como un tesoro sagrado.", "arquetipo": "dragon" },
+        { "texto": "No necesito café diurno; mi energía solar interior se recarga misteriosamente cuando anochece.", "arquetipo": "fenix" }
+      ]
+    },
+    {
+      "id": "m4",
+      "texto": "¿Cuál es tu relación con tu bandeja de correo electrónico o mensajes pendientes?",
+      "opciones": [
+        { "texto": "3.420 correos sin leer sepultados en el abismo marino de mi bandeja de entrada.", "arquetipo": "kraken" },
+        { "texto": "Cero correos sin leer; me da ansiedad ver un solo globo rojo de notificación.", "arquetipo": "basilisco" },
+        { "texto": "Solo respondo si el correo incluye una compensación directa o beneficio incuestionable.", "arquetipo": "dragon" },
+        { "texto": "Dejo que se acumulen durante semanas y los respondo todos en un ataque de inspiración nocturna.", "arquetipo": "fenix" }
+      ]
+    },
+    {
+      "id": "m5",
+      "texto": "Un amigo te cancela un plan de salir el viernes por la noche con 30 minutos de antelación. Tu reacción interior sincera es:",
+      "opciones": [
+        { "texto": "¡Victoria colosal! Me deslizo sigilosamente hacia la cama con pijama antes de que cambie de opinión.", "arquetipo": "kraken" },
+        { "texto": "Analizar obsesivamente si he dicho algo en los últimos 3 meses que haya ofendido a su linaje.", "arquetipo": "basilisco" },
+        { "texto": "Alivio absoluto: 4 horas extra ganadas para custodiarlas en mi solitaria fortaleza.", "arquetipo": "dragon" },
+        { "texto": "Perfecto, ahora puedo empezar a escribir mi novela / proyecto loco a las 23:00 sin distracciones.", "arquetipo": "fenix" }
+      ]
+    },
+    {
+      "id": "m6",
+      "texto": "Cuando tienes que tomar una decisión importante en tu vida, ¿cómo procedes?",
+      "opciones": [
+        { "texto": "Esperar tanto tiempo a que la decisión se resuelva sola por la inercia del universo.", "arquetipo": "kraken" },
+        { "texto": "Imaginar con precisión quirúrgica los 40 peores escenarios catastróficos posibles.", "arquetipo": "basilisco" },
+        { "texto": "La opción que me cueste menos dinero, menos energía y me deje más tiempo libre.", "arquetipo": "dragon" },
+        { "texto": "Tener una revelación mística a medianoche tras horas de insomnio creativo.", "arquetipo": "fenix" }
+      ]
+    },
+    {
+      "id": "m7",
+      "texto": "Tu entorno de trabajo o escritorio suele estar en estado de:",
+      "opciones": [
+        { "texto": "Un arrecife caótico donde conviven tazas, libretas de 2021 y cables enredados.", "arquetipo": "kraken" },
+        { "texto": "Milimétricamente limpio porque cualquier desorden altera mi equilibrio neuronal.", "arquetipo": "basilisco" },
+        { "texto": "Rodeado de mis objetos favoritos que nadie tiene permiso para tocar o mover un milímetro.", "arquetipo": "dragon" },
+        { "texto": "Una lámpara tenue, música ambiental a oscuras y tres ventanas abiertas con ideas a medio hacer.", "arquetipo": "fenix" }
+      ]
+    },
+    {
+      "id": "m8",
+      "texto": "Si pudieras tener un superpoder para lidiar con el mundo moderno, ¿cuál elegirías?",
+      "opciones": [
+        { "texto": "Hacerme invisible y sumergirme en el abismo cuando alguien me pida un favor.", "arquetipo": "kraken" },
+        { "texto": "Inmunidad total a cualquier virus, bacteria, dolor de espalda o incertidumbre vital.", "arquetipo": "basilisco" },
+        { "texto": "El poder de incinerar compromisos sociales absurdos con solo una mirada.", "arquetipo": "dragon" },
+        { "texto": "Días de 30 horas donde las 6 extra sean de noche silenciosa sin nadie molestando.", "arquetipo": "fenix" }
+      ]
+    }
+  ],
+  "resultados": {
+    "kraken": {
+      "nombre": "El Kraken Procrastinador",
+      "tituloCorto": "El Señor del Abismo Cómodo",
+      "icono": "🐙",
+      "color": "#06b6d4",
+      "descripcion": "Cuando la presión aumenta, tus tentáculos se extienden en 14 direcciones simultáneas excepto en la que deberías trabajar. Tu capacidad para sumergirte en el abismo de la pereza y esquivar responsabilidades con elegancia oceánica es legendaria.",
+      "fortaleza": "Inmunidad al pánico colectivo: mientras el barco se hunde, tú estás plácidamente sumergido.",
+      "desvario": "Eres capaz de aprender ruso antiguo en Duolingo con tal de no contestar un correo urgente.",
+      "afinidad": "Alta compatibilidad con camas mullidas y mantas pesadas."
+    },
+    "basilisco": {
+      "nombre": "El Basilisco Hipocondríaco",
+      "tituloCorto": "La Mirada del Hiperanálisis",
+      "icono": "🐍",
+      "color": "#10b981",
+      "descripcion": "Posees una mente analítica tan afilada que a veces te corta a ti mismo. Un leve dolor de cabeza se convierte en un diagnóstico de enciclopedia médica y un mensaje seco en una crisis diplomática. Tu mirada todo lo detecta.",
+      "fortaleza": "Capacidad de anticipación brutal: jamás te pillará desprevenido ningún imprevisto.",
+      "desvario": "Petrificas a la gente con tu sobreanálisis de conversaciones que ocurrieron en 2018.",
+      "afinidad": "Afinidad con infusiones relajantes y modos 'No Molestar' activados."
+    },
+    "dragon": {
+      "nombre": "El Dragón Acaparador",
+      "tituloCorto" : "El Guardián del Tiempo y la Paz",
+      "icono": "🐉",
+      "color": "#f59e0b",
+      "descripcion": "Tu mayor tesoro no es el oro ni las joyas: es tu tiempo, tu silencio y tu espacio personal. Quien ose interrumpir tu reposo en tu cueva se arriesga a una llamarada de sarcasmo cortante. Eres protector férreo de tus horas libres.",
+      "fortaleza": "Estableces límites infranqueables y sabes decir 'NO' sin que te tiemble el pulso.",
+      "desvario": "Tratas tu fin de semana como un tesoro sagrado que defenderías con fuego y garras.",
+      "afinidad": "Afinidad con la soledad reconfortante y las fortalezas inexpugnables."
+    },
+    "fenix": {
+      "nombre": "El Fénix Trasnochador",
+      "tituloCorto": "El Resurgir de las 3:00 AM",
+      "icono": "🔥",
+      "color": "#ec4899",
+      "descripcion": "Durante el día eres una pila de cenizas funcionales que apenas sobrevive a las reuniones. Pero cuando cae la noche y el mundo duerme, tus llamas despiertan con una energía creativa y una lucidez asombrosa que deja a todos boquiabiertos.",
+      "fortaleza": "Productividad explosiva de última hora: resuelves en 40 minutos lo que otros tardan tres días.",
+      "desvario": "Tu reloj circadiano pertenece a otra dimensión temporal no registrada por la física moderna.",
+      "afinidad": "Afinidad con la noche silenciosa, las bombillas cálidas y las ideas brillantes."
+    }
+  }
+}

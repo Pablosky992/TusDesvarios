@@ -1,0 +1,65 @@
+{
+  "categoriasTraductor": [
+    { "id": "oficina", "nombre": "Mundo Oficina & Jefes", "icono": "🏢" },
+    { "id": "email", "nombre": "Correos & Mensajes", "icono": "✉️" },
+    { "id": "social", "nombre": "Vida Social & Amigos", "icono": "👥" }
+  ],
+  "frases": [
+    {
+      "id": "tr1",
+      "categoria": "oficina",
+      "sincero": "No tengo ni idea de cómo se hace esto.",
+      "diplomatico": "Estoy revisando la documentación técnica para confirmar el procedimiento adecuado.",
+      "linkedin": "Liderando una prospección de viabilidad holística con enfoque 'learning-by-doing' para identificar sinergias operativas disruptivas."
+    },
+    {
+      "id": "tr2",
+      "categoria": "oficina",
+      "sincero": "No quiero hacer esa tarea porque es un rollo y una pérdida de tiempo.",
+      "diplomatico": "Sugiero priorizar iniciativas con mayor impacto directo en los objetivos del trimestre.",
+      "linkedin": "Optimizando la asignación de recursos cognitivos mediante el descarte estratégico de micro-procesos de bajo retorno de valor."
+    },
+    {
+      "id": "tr3",
+      "categoria": "oficina",
+      "sincero": "La culpa ha sido del otro departamento, que no se entera de nada.",
+      "diplomatico": "Hemos detectado una fricción en la cadena de comunicación interdepartamental.",
+      "linkedin": "Identificando áreas de oportunidad en la gobernanza transversal del dato para potenciar la resiliencia entre stakeholders."
+    },
+    {
+      "id": "tr4",
+      "categoria": "email",
+      "sincero": "Esta reunión de dos horas podría haber sido un correo de dos líneas.",
+      "diplomatico": "Agradezco la sesión de alineamiento; sinteticemos los acuerdos por escrito.",
+      "linkedin": "Capitalizando los key insights de una sesión colaborativa de alto nivel para traccionar un framework ágil de toma de decisiones."
+    },
+    {
+      "id": "tr5",
+      "categoria": "email",
+      "sincero": "Deja de mandarme mensajes un domingo por la tarde.",
+      "diplomatico": "Procesaré tu solicitud a primera hora durante mi próxima jornada laboral.",
+      "linkedin": "Fomentando una cultura corporativa de desconexión consciente para potenciar el engagement y la sostenibilidad del talento humano."
+    },
+    {
+      "id": "tr6",
+      "categoria": "email",
+      "sincero": "Como ya te dije en el correo anterior porque claramente no lees nada.",
+      "diplomatico": "Tal y como se indicaba en la comunicación adjunta para tu referencia...",
+      "linkedin": "Reiterando la trazabilidad del histórico documental para asegurar la total transparencia en la entrega de valor."
+    },
+    {
+      "id": "tr7",
+      "categoria": "social",
+      "sincero": "No voy a tu fiesta porque me da pereza absoluta salir de casa.",
+      "diplomatico": "Tengo un compromiso previo ineludible y no podré acompañarte esta vez.",
+      "linkedin": "Ejecutando un reset biológico preventivo para optimizar mis KPI personales de bienestar y equilibrio vida-descanso."
+    },
+    {
+      "id": "tr8",
+      "categoria": "social",
+      "sincero": "No te respondí al WhatsApp porque lo leí y se me olvidó.",
+      "diplomatico": "Disculpa la demora, he tenido unos días de mucha actividad imprevista.",
+      "linkedin": "Priorizando la gestión asíncrona de inputs comunicativos para salvaguardar el foco profundo en objetivos de largo alcance."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "beruby",
+    "titulo": "Beruby — Cashback & Ahorro en Compras",
+    "url": "https://es.beruby.com/promocode/uiQfoC",
+    "tipo": "destacada",
+    "badge": "💰 Cashback & Ahorro",
+    "badgeColor": "#10b981",
+    "descripcion": "Gana dinero y recupera un porcentaje directo de todas tus compras en cientos de tiendas online (viajes, tecnología, moda), además de encuestas y promociones remuneradas.",
+    "imagen": "escaparate-beruby.jpg",
+    "icono": "💸",
+    "tags": ["Cashback", "Ahorro", "Compras Online", "Promociones"]
+  },
+  {
+    "id": "mihucha",
+    "titulo": "Mi Hucha — Peseta a Peseta",
+    "url": "https://www.mihucha.es/",
+    "tipo": "destacada",
+    "badge": "🐖 Ahorro Inteligente",
+    "badgeColor": "#f59e0b",
+    "descripcion": "El portal de referencia en finanzas personales, retos de ahorro mensual, trucos de economía doméstica y métodos sencillos para hacer crecer tu dinero paso a paso.",
+    "imagen": "escaparate-mihucha.jpg",
+    "icono": "🪙",
+    "tags": ["Finanzas", "Ahorro", "Economía", "Presupuestos"]
+  },
+  {
+    "id": "ecoestelar",
+    "titulo": "Eco Estelar — Astrología, Mística & Sabiduría Lunar",
+    "url": "https://www.ecoestelar.com/",
+    "tipo": "destacada",
+    "badge": "🌙 Mística & Astrología",
+    "badgeColor": "#a855f7",
+    "descripcion": "Un rincón dedicado a la astrología, fases lunares, rituales ancestrales, conocimiento místico y conexión con los ciclos de la naturaleza y el cosmos.",
+    "imagen": "escaparate-ecoestelar.jpg",
+    "icono": "🔮",
+    "tags": ["Astrología", "Mística", "Fases Lunares", "Esoterismo"]
+  },
+  {
+    "id": "iadapta",
+    "titulo": "iAdapta — Terapia Ocupacional & Accesibilidad",
+    "url": "https://www.iadapta.es/",
+    "tipo": "destacada",
+    "badge": "♿ Autonomía & Accesibilidad",
+    "badgeColor": "#3b82f6",
+    "descripcion": "Especialistas en adaptación de entornos y viviendas, productos de apoyo, asesoramiento en accesibilidad y terapia ocupacional para fomentar la autonomía personal.",
+    "imagen": "escaparate-iadapta.jpg",
+    "icono": "🏡",
+    "tags": ["Terapia Ocupacional", "Accesibilidad", "Salud", "Autonomía"]
+  }
+]

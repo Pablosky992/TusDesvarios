@@ -1,0 +1,117 @@
+{
+  "id": "dilemas-morales",
+  "slug": "dilemas-morales",
+  "titulo": "El Tranvía Desquiciado: Tu Brújula Moral al Límite",
+  "subtitulo": "6 dilemas éticos donde no hay respuesta correcta, solo consecuencias imprevisibles.",
+  "descripcionCorta": "Enfréntate a encrucijadas filosóficas extremas y descubre qué escuela de pensamiento rige tus decisiones éticas.",
+  "tipo": "personalidad",
+  "categoria": "personalidad",
+  "categoriaLabel": "Personalidad & Arquetipos",
+  "icono": "⚖️",
+  "tiempoMin": 4,
+  "color": "#f59e0b",
+  "preguntas": [
+    {
+      "id": "dm1",
+      "texto": "El clásico **Dilema del Tranvía**: Un tranvía descontrolado avanza hacia 5 personas atadas a la vía. Tienes una palanca: si la accionas, desviarás el tranvía a una vía secundaria donde hay **1 sola persona** atada. ¿Qué haces?",
+      "opciones": [
+        { "texto": "Accionar la palanca sin vacilar: 5 vidas valen matemáticamente más que 1.", "arquetipo": "utilitarista" },
+        { "texto": "No tocar la palanca: participar activamente me convierte en responsable directo de un homicidio.", "arquetipo": "deontologo" },
+        { "texto": "Intentar descarrilar el tranvía lanzando una piedra a las ruedas a ver qué pasa.", "arquetipo": "caos" },
+        { "texto": "Gritar desesperadamente para avisar a todos mientras se me desgarra el alma por la situación.", "arquetipo": "empatico" }
+      ]
+    },
+    {
+      "id": "dm2",
+      "texto": "Un médico tiene **5 pacientes en estado crítico**, cada uno necesitando un trasplante urgente de un órgano distinto para no morir hoy. En la sala de espera hay un **viajero perfectamente sano** cuyos 5 órganos son compatibles. ¿Qué dicta tu moral?",
+      "opciones": [
+        { "texto": "Salvar 5 sacrificando a 1 sigue siendo el mal menor matemático, aunque suene aterrador.", "arquetipo": "utilitarista" },
+        { "texto": "Jamás violar los derechos fundamentales de un inocente; el fin nunca justifica los medios.", "arquetipo": "deontologo" },
+        { "texto": "Proponerles a los 5 pacientes jugar al parchís a ver si el destino elige a otro.", "arquetipo": "caos" },
+        { "texto": "Llorar con los pacientes y acompañarles hasta el final respetando la vida de todos.", "arquetipo": "empatico" }
+      ]
+    },
+    {
+      "id": "dm3",
+      "texto": "Un **algoritmo de Inteligencia Artificial** te ofrece erradicar toda la delincuencia del planeta, a cambio de que todos los ciudadanos cedan el 100% de su privacidad y sus pensamientos íntimos sean monitorizados. ¿Aceptas?",
+      "opciones": [
+        { "texto": "Acepto: la seguridad y la supervivencia de millones supera con creces el concepto de privacidad.", "arquetipo": "utilitarista" },
+        { "texto": "Rechazo categóricamente: la libertad y la dignidad individual son sagradas e inviolables.", "arquetipo": "deontologo" },
+        { "texto": "Acepto solo para ver qué cara pone la IA cuando lea los pensamientos bizarros de la humanidad.", "arquetipo": "caos" },
+        { "texto": "Me aterra el dolor de la delincuencia pero también la deshumanización; buscaría una vía intermedia.", "arquetipo": "empatico" }
+      ]
+    },
+    {
+      "id": "dm4",
+      "texto": "Estás en un bote salvavidas abarrotado en mitad del océano que se está hundiendo por exceso de peso. Tirar **una maleta llena de reliquias históricas invaluables** salvará a la tripulación. ¿Qué decides?",
+      "opciones": [
+        { "texto": "Arrojar la maleta al fondo del mar al instante: el patrimonio cultural no respira, las personas sí.", "arquetipo": "utilitarista" },
+        { "texto": "La vida humana es el único deber ético primordial; la maleta va al agua sin dudar.", "arquetipo": "deontologo" },
+        { "texto": "Tirar la maleta pero quedarme con la corona de oro puesta por si acaso llegamos a una isla desierta.", "arquetipo": "caos" },
+        { "texto": "Sentir una pena inmensa por la pérdida de la historia de la humanidad mientras achico agua.", "arquetipo": "empatico" }
+      ]
+    },
+    {
+      "id": "dm5",
+      "texto": "Descubres que tu mejor amigo ha cometido un fraude fiscal menor para poder pagar los estudios de su hermana pequeña. Un inspector te pregunta directamente si sabes algo. ¿Qué haces?",
+      "opciones": [
+        { "texto": "Evaluar si el beneficio social de la hermana supera el daño al estado antes de decidir.", "arquetipo": "utilitarista" },
+        { "texto": "Mentir es moralmente incorrecto por principio universal, pero la lealtad es un deber; estoy atrapado.", "arquetipo": "deontologo" },
+        { "texto": "Fingir amnesia repentina o responder en un idioma inventado para confundir al inspector.", "arquetipo": "caos" },
+        { "texto": "Proteger a mi amigo y a su hermana cueste lo que me cueste; el amor familiar está por encima.", "arquetipo": "empatico" }
+      ]
+    },
+    {
+      "id": "dm6",
+      "texto": "Una máquina del tiempo te permite viajar al pasado para evitar una guerra histórica, pero eso **borrará de la existencia a millones de personas actuales** (incluyéndote a ti). ¿Presionas el botón?",
+      "opciones": [
+        { "texto": "Si el balance neto de sufrimiento global disminuye a lo largo de los siglos, presiono el botón.", "arquetipo": "utilitarista" },
+        { "texto": "No tengo derecho a decidir quién existe y quién no; el orden temporal no debe profanarse.", "arquetipo": "deontologo" },
+        { "texto": "Viajar al pasado solo para avisarles de que no inventen las reuniones de trabajo de los lunes.", "arquetipo": "caos" },
+        { "texto": "No podría soportar la idea de borrar a mis seres queridos y sus recuerdos del universo.", "arquetipo": "empatico" }
+      ]
+    }
+  ],
+  "resultados": {
+    "utilitarista": {
+      "nombre": "El Utilitarista Implacable",
+      "tituloCorto": "El Matemático del Mal Menor",
+      "icono": "🧮",
+      "color": "#06b6d4",
+      "descripcion": "Para ti la moral es una ecuación de suma cero: el mayor bien para el mayor número de personas. No te tiembla el pulso al tomar decisiones difíciles porque entiendes que la inacción también tiene consecuencias medibles.",
+      "fortaleza": "Claridad analítica en situaciones de máxima crisis y liderazgo resolutivo.",
+      "desvario": "A veces suenas tan pragmático que tus amigos sospechan que eres un androide de última generación.",
+      "afinidad": "Alta afinidad con hojas de cálculo y pensadores como Jeremy Bentham."
+    },
+    "deontologo": {
+      "nombre": "El Deontólogo Inquebrantable",
+      "tituloCorto": "El Guardián del Imperativo Categórico",
+      "icono": "🏛️",
+      "color": "#f59e0b",
+      "descripcion": "Crees firmemente en el deber moral, la justicia y la dignidad innegociable. Para ti hay líneas rojas que jamás deben cruzarse, sin importar cuántos beneficios prometa el atajo. Tus principios son tu brújula eterna.",
+      "fortaleza": "Integridad moral intachable y lealtad absoluta a los valores éticos.",
+      "desvario": "Prefieres que el universo colapse antes que decir una mentira piadosa sobre el peinado de alguien.",
+      "afinidad": "Alta afinidad con la filosofía de Immanuel Kant y las leyes inquebrantables."
+    },
+    "caos": {
+      "nombre": "El Agente del Caos Creativo",
+      "tituloCorto": "El Rompedor de Falsas Dicotomías",
+      "icono": "🃏",
+      "color": "#ec4899",
+      "descripcion": "Te niegas a aceptar los dilemas encasillados. Si te dan a elegir entre la opción A y la opción B, tú buscas la opción Z: descarrilar el tranvía, hackear la máquina del tiempo o negociar con la IA. El pensamiento lateral es tu mayor arma.",
+      "fortaleza": "Encuentras salidas innovadoras donde todo el mundo solo ve callejones sin salida.",
+      "desvario": "Tu sentido del humor filosófico desconcierta a partes iguales a sabios y villanos.",
+      "afinidad": "Alta afinidad con paradojas cuánticas y planes disparatados que inexplicablemente funcionan."
+    },
+    "empatico": {
+      "nombre": "El Empático Atormentado",
+      "tituloCorto": "El Corazón Sintiente de la Humanidad",
+      "icono": "❤️",
+      "color": "#10b981",
+      "descripcion": "Sientes el dolor y la alegría de cada persona involucrada en cada decisión. No ves números ni estadísticas, ves historias humanas, rostros y familias. Tu ética nace del afecto, la compasión y el cuidado mutuo.",
+      "fortaleza": "Capacidad infinita de conexión humana, consuelo y protección de los vulnerables.",
+      "desvario": "Te llevas a la cama los problemas éticos de personajes de ficción que viste en una película en 2014.",
+      "afinidad": "Alta afinidad con la ética del cuidado y los abrazos reconfortantes."
+    }
+  }
+}

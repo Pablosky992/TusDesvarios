@@ -1,0 +1,312 @@
+{
+  "predicciones": [
+    {
+      "id": "p1",
+      "icono": "🍕",
+      "titulo": "La Profecía de la Cena Salvadora",
+      "dilema": "¿Cocino con lo poco que queda en la nevera o pido comida a domicilio?",
+      "veredicto": "PIDE LA PIZZA CON EXTRA DE QUESO Y NO MIRES ATRÁS.",
+      "razon": "Cocinar media cebolla mustia y una lata de atún sin fecha no es de adultos responsables, es de náufragos. Los astros conspiran para que el repartidor llegue caliente en menos de 25 minutos.",
+      "consejo": "Pide también ración de patatas con salsa; la tristeza no se cura con ensalada.",
+      "signoAfin": "Seres humanos con hambre y fobia a fregar sartenes",
+      "probabilidad": "99.8% Certeza Inapelable"
+    },
+    {
+      "id": "p2",
+      "icono": "📱",
+      "titulo": "El Mandamiento del WhatsApp Nocturno",
+      "dilema": "¿Le escribo a esa persona a deshoras o me trago el orgullo?",
+      "veredicto": "DEJA EL TELÉFONO EN OTRA HABITACIÓN AHORA MISMO.",
+      "razon": "Tu dignidad es un activo cotizado que no puedes devaluar a las 02:40 AM. Si mandas ese mensaje, el universo te castigará con un 'Visto' y 72 horas de ansiedad metafísica.",
+      "consejo": "Tómate un vaso de agua fría y ponte un vídeo de documentales de animales.",
+      "signoAfin": "Corazones nostálgicos con insomnio y Wi-Fi activo",
+      "probabilidad": "100% Ratificado por el Cosmos"
+    },
+    {
+      "id": "p3",
+      "icono": "💸",
+      "titulo": "El Decreto del Carrito de Compras",
+      "dilema": "¿Me compro ese capricho innecesario o me obligo a ahorrar?",
+      "veredicto": "DALE A 'COMPRAR YA': LA ECONOMÍA YA ESTÁ ROTA DE TODAS FORMAS.",
+      "razon": "El dinero en la cuenta se disuelve por entropía; ese paquete de cartón llegando a tu puerta te dará un pico de dopamina que ni siete años de terapia intensiva.",
+      "consejo": "Borra el correo de confirmación para no sentir culpa al día siguiente.",
+      "signoAfin": "Compradores compulsivos con tarjeta guardada en el navegador",
+      "probabilidad": "96.5% Inevitable"
+    },
+    {
+      "id": "p4",
+      "icono": "🛋️",
+      "titulo": "La Sentencia del Plan Cancelado",
+      "dilema": "¿Salgo de fiesta porque me comprometí o me quedo en pijama viendo Netflix?",
+      "veredicto": "INVENTA UNA MIGRAÑA CÓSMICA Y QUÉDATE EN EL SOFÁ.",
+      "razon": "Quedarse en casa un viernes por la noche con manta y serie no es pereza: es un ritual sagrado de recarga espiritual para el que la sociedad moderna aún no está preparada.",
+      "consejo": "No subas historias a Instagram para que la coartada sea hermética.",
+      "signoAfin": "Personas con batería social al 3% y ropa cómoda puesta",
+      "probabilidad": "98.2% Absoluta"
+    },
+    {
+      "id": "p5",
+      "icono": "⏰",
+      "titulo": "La Paradoja de los 5 Minutos Más de Alarma",
+      "dilema": "¿Me levanto a la primera o pospongo la alarma 5 minutos?",
+      "veredicto": "PULSA POSPONER, PERO ASUME QUE LLEGARÁS CORRIENDO.",
+      "razon": "Esos 5 minutos de sueño con la alarma son los más dulces y concentrados del universo observable. Valen más que 8 horas de sueño continuo.",
+      "consejo": "Deja la ropa del trabajo lista al lado para vestirte en 12 segundos.",
+      "signoAfin": "Enemigos declarados del madrugón y de la luz solar matutina",
+      "probabilidad": "94.7% Frecuencia Diaria"
+    },
+    {
+      "id": "p6",
+      "icono": "🏋️",
+      "titulo": "El Juicio del Gimnasio Fantasma",
+      "dilema": "¿Voy hoy al gimnasio a entrenar pierna o descanso?",
+      "veredicto": "EL MÚSCULO CRECE EN EL REPOSO: DESCANSA HOY.",
+      "razon": "Tu cuota mensual ya está pagada; el gimnasio gana dinero si no vas y tú ganas paz mental. Una relación simbiótica perfecta bendecida por los dioses.",
+      "consejo": "Bebe agua con limón para sentir que has hecho algo saludable.",
+      "signoAfin": "Atletas teóricos y dueños de ropa deportiva sin estrenar",
+      "probabilidad": "97.1% Cósmicamente Justificado"
+    },
+    {
+      "id": "p7",
+      "icono": "☕",
+      "titulo": "El Dictamen del Café de las Cuatro de la Tarde",
+      "dilema": "¿Me tomo otro café o me dará taquicardia esta noche?",
+      "veredicto": "TÓMATELO: EL SUEÑO ES PARA EL FIN DE SEMANA.",
+      "razon": "La jornada laboral de la tarde es un páramo desértico donde solo el grano tostado de Etiopía puede mantener tu alma unida a tu cuerpo físico.",
+      "consejo": "Acompaña con una galleta para justificar la pausa de 10 minutos.",
+      "signoAfin": "Profesionales al borde del colapso funcional por correo",
+      "probabilidad": "92.4% Recomendado"
+    },
+    {
+      "id": "p8",
+      "icono": "🛒",
+      "titulo": "El Enigma del Saludo en el Supermercado",
+      "dilema": "¿Saludo a ese conocido en el pasillo o finjo mirar intensamente las mermeladas?",
+      "veredicto": "GIRA EL CARRITO RÁPIDO HACIA EL PASILLO DE CONGELADOS.",
+      "razon": "Ambos sabéis que no tenéis nada que deciros más allá de 'Pues aquí andamos'. Ahórrate 4 minutos de silencios incómodos fingiendo leer la tabla nutricional del arroz.",
+      "consejo": "Ponte auriculares aunque no estés escuchando nada.",
+      "signoAfin": "Introvertidos con radar de conocidos en un radio de 50 metros",
+      "probabilidad": "99.0% Precisión Táctica"
+    },
+    {
+      "id": "p9",
+      "icono": "📺",
+      "titulo": "La Profecía del 'Solo Un Capítulo Más'",
+      "dilema": "¿Me voy a dormir ya que mañana madrugo o veo el siguiente episodio?",
+      "veredicto": "EL CLIFFHANGER ES DEMASIADO CRUCIAL: MÍRALO.",
+      "razon": "No podrás conciliar el sueño pensando en el destino del protagonista. Dormir 4 horas con respuestas es mejor que dormir 7 horas con dudas existenciales.",
+      "consejo": "Baja el brillo de la pantalla para fingir que te estás preparando para dormir.",
+      "signoAfin": "Adictos al suspense y a saltar intros automáticamente",
+      "probabilidad": "95.8% Verdad Revelada"
+    },
+    {
+      "id": "p10",
+      "icono": "🧹",
+      "titulo": "El Veredicto de la Limpieza a Fondo",
+      "dilema": "¿Limpio la casa a fondo este sábado o salgo a tomar algo?",
+      "veredicto": "EL POLVO LLEVA MILLONES DE AÑOS EN LA TIERRA, PUEDE ESPERAR AL LUNES.",
+      "razon": "El sol brilla en la calle y la vida es efímera. Limpiar un suelo que se volverá a ensuciar en 48 horas es una herejía contra el fin de semana.",
+      "consejo": "Pasa una toallita húmeda por la mesa central y da el día por salvado.",
+      "signoAfin": "Entusiastas del orden relajado y de la procrastinación doméstica",
+      "probabilidad": "93.9% Consenso Astrológico"
+    },
+    {
+      "id": "p11",
+      "icono": "🍫",
+      "titulo": "El Decreto del Antojo de Medianoche",
+      "dilema": "¿Bajo a la cocina a asaltar la despensa a las 00:30?",
+      "veredicto": "ESA CHOCOLATINA LLEVA TODO EL DÍA PENSANDO EN TI.",
+      "razon": "A las doce de la noche las calorías no se registran en los servidores del metabolismo humano porque están en mantenimiento. Es ciencia cuántica pura.",
+      "consejo": "Mastícala con sigilo para que no despierte a los perros ni a tu conciencia.",
+      "signoAfin": "Navegantes nocturnos de la nevera iluminada",
+      "probabilidad": "99.9% Imparable"
+    },
+    {
+      "id": "p12",
+      "icono": "🎧",
+      "titulo": "La Revelación del Modo Silencio",
+      "dilema": "¿Desactivo las notificaciones del grupo familiar o soporto 40 memes de piolín?",
+      "veredicto": "SILENCIA POR 1 AÑO (O PARA SIEMPRE).",
+      "razon": "Tu paz mental es sagrada. Las cadenas de felicitaciones de santos y los audios de 7 minutos de tu tía no aportan valor calórico ni espiritual.",
+      "consejo": "Entra una vez cada dos meses y manda un sticker de pulgar arriba 👍.",
+      "signoAfin": "Víctimas de grupos con más de 12 familiares activos",
+      "probabilidad": "100% Salud Mental Garantizada"
+    },
+    {
+      "id": "p13",
+      "icono": "👕",
+      "titulo": "La Silla del Orden Paralelo",
+      "dilema": "¿Doblo la ropa limpia o la deposito en 'La Silla'?",
+      "veredicto": "COLÓCALA EN LA SILLA: TIENE SU PROPIO ECOSISTEMA.",
+      "razon": "Esa silla no es desorden; es un armario horizontal con acceso directo por capas geológicas. La ropa está demasiado limpia para lavar y demasiado usada para el armario.",
+      "consejo": "No dejes que la torre de ropa supere la altura de tu cabeza para evitar derrumbes.",
+      "signoAfin": "Arquitectos de montañas textiles de entretiempo",
+      "probabilidad": "98.7% Tradición Milenaria"
+    },
+    {
+      "id": "p14",
+      "icono": "💇‍♂️",
+      "titulo": "El Cambio de Look de las 23:30",
+      "dilema": "¿Me corto el flequillo/pelo yo mismo frente al espejo del baño?",
+      "veredicto": "SUELTA LAS TIJERAS Y ALÉJATE DEL ESPEJO LENTAMENTE.",
+      "razon": "El impulso de cambiar radicalmente de vida a medianoche nunca termina con un look parisino; termina pareciendo un muñeco Playmobil mordisqueado por un caniche.",
+      "consejo": "Lávate la cara con agua fría y pide cita en una peluquería profesional para el martes.",
+      "signoAfin": "Almas impulsivas en crisis existencial nocturna",
+      "probabilidad": "100% Prevención de Desastre"
+    },
+    {
+      "id": "p15",
+      "icono": "📦",
+      "titulo": "El Misterio del Paquete 'Entregado'",
+      "dilema": "¿La app dice que me han entregado el paquete pero no ha sonado el timbre?",
+      "veredicto": "ESTÁ EN MANOS DEL VECINO DEL 3º B (EL CURIOSO).",
+      "razon": "El repartidor vio que el timbre requería 0.4 segundos de espera y activó el protocolo de entrega por telepatía vecinal. El vecino ya sabe qué compraste por el peso de la caja.",
+      "consejo": "Sube con cara simpática antes de que decida abrirlo 'por error'.",
+      "signoAfin": "Compradores online que miran por la mirilla cada 10 minutos",
+      "probabilidad": "97.4% Certeza Logística"
+    },
+    {
+      "id": "p16",
+      "icono": "💻",
+      "titulo": "La Actualización de Windows de las 17:58",
+      "dilema": "¿Fuerzo el apagado de la máquina o espero a que llegue al 100%?",
+      "veredicto": "DEJA EL PORTÁTIL ENCENDIDO Y SAL DE LA OFICINA.",
+      "razon": "Ese 'No apague el equipo (12%)' durará exactamente hasta el fin de los tiempos. Quedarte mirando la pantalla giratoria es regalarle media hora de tu vida a Bill Gates.",
+      "consejo": "Cierra la tapa, guarda las cosas en la mochila y vete diciendo 'lo dejé renderizando'.",
+      "signoAfin": "Trabajadores atrapados por el software en la hora de salida",
+      "probabilidad": "96.1% Veredicto de Salida"
+    },
+    {
+      "id": "p17",
+      "icono": "🚗",
+      "titulo": "El Hueco de Aparcamiento Imposible",
+      "dilema": "¿Intento aparcar en ese hueco que mide 2 milímetros más que mi coche?",
+      "veredicto": "SIGUE DE LARGO: VAS A RASCAR LA LLANTA Y LA DIGNIDAD.",
+      "razon": "Hacer 18 maniobras mientras un autobús urbano te pita a 30 centímetros no es habilidad; es una humillación pública televisada en riguroso directo para los peatones.",
+      "consejo": "Aparca a 5 manzanas y di que te gusta caminar para cumplir los 10.000 pasos.",
+      "signoAfin": "Conductores con fobia a los bordillos altos y a las miradas juzgadoras",
+      "probabilidad": "95.5% Salvaguarda del Paragolpes"
+    },
+    {
+      "id": "p18",
+      "icono": "🍕",
+      "titulo": "La Última Porción de la Vergüenza",
+      "dilema": "¿Queda una sola porción de pizza en la mesa: me la como o pregunto?",
+      "veredicto": "CÓMETELA ANTES DE QUE ALGUIEN DIGA 'LA PARTIMOS A LA MITAD'.",
+      "razon": "Partir una rebanada triangular a la mitad genera dos micro-trozos tristes y grasientos que no satisfacen a nadie. El universo premia la audacia del más rápido.",
+      "consejo": "Tómala con naturalidad mientras cuentas una anécdota emocionante.",
+      "signoAfin": "Depredadores sociales de comida compartida en grupos grandes",
+      "probabilidad": "99.1% Ley del Más Rápido"
+    },
+    {
+      "id": "p19",
+      "icono": "🧊",
+      "titulo": "El Hielo que Cayó al Suelo de la Cocina",
+      "dilema": "¿Me agacho a recoger el cubito de hielo o lo pateo debajo de la nevera?",
+      "veredicto": "CHUTA EL HIELO CON EL PIE DEBAJO DEL ELECTRODOMÉSTICO.",
+      "razon": "Es agua en estado sólido que volverá al ciclo hidrológico por sublimación natural. Agacharse a por un bloque resbaladizo es un esfuerzo termodinámicamente ineficiente.",
+      "consejo": "Asegúrate de que no haya testigos y finge que nada ha sucedido.",
+      "signoAfin": "Físicos prácticos de la cocina moderna",
+      "probabilidad": "99.9% Solución Hidráulica"
+    },
+    {
+      "id": "p20",
+      "icono": "🎙️",
+      "titulo": "El Audio de 7 Minutos del Amigo Intenso",
+      "dilema": "¿Escucho el podcast de voz que me acaba de mandar o respondo a ciegas?",
+      "veredicto": "PONLO A 2X Y RESPONDE: 'QUÉ FUERTE TÍO, NO ME LO PUEDO CREER'.",
+      "razon": "El 80% de los audios largos son pausas de 'eeeeehm', bocinas de tráfico y carraspeos. La frase 'Qué fuerte' cubre el 99% de las situaciones dramáticas humanas.",
+      "consejo": "Manda un emoji de sorpresa 😱 justo después para darle credibilidad emocional.",
+      "signoAfin": "Víctimas del formato nota de voz no solicitada",
+      "probabilidad": "98.4% Táctica Universal"
+    },
+    {
+      "id": "p21",
+      "icono": "🍳",
+      "titulo": "La Sartén en Remojo Infinito",
+      "dilema": "¿Friego la sartén con restos quemados ahora o la dejo 'en remojo'?",
+      "veredicto": "ÉCHALE AGUA CALIENTE Y JABÓN: QUE DESCANSE HASTA MAÑANA.",
+      "razon": "El 'remojo' es un proceso químico milenario donde el jabón negocia la rendición incondicional de la grasa. Fregarla ahora solo desgastaría tu esmalte espiritual.",
+      "consejo": "Coloca una tapadera encima para que parezca un experimento en curso.",
+      "signoAfin": "Alquimistas del fregadero doméstico",
+      "probabilidad": "96.8% Justificación Química"
+    },
+    {
+      "id": "p22",
+      "icono": "🍿",
+      "titulo": "El Bol de Palomitas y los Anuncios",
+      "dilema": "¿Empiezo a comer palomitas durante los tráilers o me espero a la película?",
+      "veredicto": "DEVÓRALAS YA: PARA CUANDO SALGA EL TÍTULO YA NO QUEDARÁ NADA.",
+      "razon": "Intentar racionar las palomitas en la oscuridad del cine va contra la neurobiología humana del maíz inflado. Aceptar tu destino gastronómico te traerá paz.",
+      "consejo": "Llega con el bote a la mitad y céntrate en el argumento de la película.",
+      "signoAfin": "Cinéfilos de mandíbula inquieta antes de que empiece la acción",
+      "probabilidad": "99.5% Destino Ineludible"
+    },
+    {
+      "id": "p23",
+      "icono": "💤",
+      "titulo": "La Siesta de '20 Minutitos'",
+      "dilema": "¿Me echo una siesta rápida o me arriesgo a despertar desorientado en el año 2038?",
+      "veredicto": "PONTE LA ALARMA A LOS 20 MINUTOS, PERO PREPARA EL CAFÉ POST-COMA.",
+      "razon": "La siesta de sofá es una ruleta rusa temporal: puedes despertar fresco como una lechuga o con la marca del cojín en la mejilla preguntándote en qué país estás.",
+      "consejo": "No te tapes con la manta gorda o la gravedad te atrapará para siempre.",
+      "signoAfin": "Navegantes del trance vespertino de fin de semana",
+      "probabilidad": "94.2% Aventura Espaciotemporal"
+    },
+    {
+      "id": "p24",
+      "icono": "🛒",
+      "titulo": "La Fila de Caja Vecina en el Supermercado",
+      "dilema": "¿Me cambio de caja porque esa señora solo lleva 3 cosas o me quedo?",
+      "veredicto": "QUÉDATE DONDE ESTÁS: EN LA OTRA VAN A PEDIR PRECIO DE UN PEPINO.",
+      "razon": "La ley cósmica de los supermercados dicta que la caja a la que te cambies sufrirá un cambio de rollo de papel térmico, un pago con monedas de 2 céntimos o una tarjeta bloqueada.",
+      "consejo": "Mira tu móvil con resignación y disfruta de tu lugar en la historia.",
+      "signoAfin": "Estrategas frustrados de las colas de grandes superficies",
+      "probabilidad": "99.7% Ley Inmutable"
+    },
+    {
+      "id": "p25",
+      "icono": "🧼",
+      "titulo": "El Bote de Gel con 5 Gotas",
+      "dilema": "¿Tiro el bote de gel casi vacío o le echo agua para estirarlo?",
+      "veredicto": "ÉCHALE AGUA DEL GRIFO: ESO DURA TRES SEMANAS MÁS.",
+      "razon": "Ese caldo jabonoso aguado es el mayor homenaje al ingenio de supervivencia humano. Salen 14 duchas más con textura de champán francés diluido.",
+      "consejo": "Agita bien el bote antes de abrir para emulsionar la mezcla.",
+      "signoAfin": "Ahorradores extremos de productos de higiene personal",
+      "probabilidad": "98.9% Economía Doméstica"
+    },
+    {
+      "id": "p26",
+      "icono": "🧦",
+      "titulo": "El Calcetín Huérfano de la Lavadora",
+      "dilema": "¿Tiro el calcetín solitario o lo guardo por si aparece el gemelo?",
+      "veredicto": "GUÁRDALO EN EL CAJÓN DE LOS DESEOS: NUNCA APARECERÁ.",
+      "razon": "La lavadora tiene un agujero negro interdimensional que se cobra un calcetín por cada tres coladas en concepto de aranceles cuánticos. El gemelo está en otra galaxia.",
+      "consejo": "Úsalo para limpiar el polvo de las persianas con la mano.",
+      "signoAfin": "Coleccionistas involuntarios de prendas impares",
+      "probabilidad": "100% Tributo Interdimensional"
+    },
+    {
+      "id": "p27",
+      "icono": "🌧️",
+      "titulo": "El Paraguas de 5 Euros de la Esquina",
+      "dilema": "¿Compro un paraguas cutre en la calle o corro bajo los balcones?",
+      "veredicto": "CORRE BAJO LOS BALCONES: ESE PARAGUAS MORIRÁ AL PRIMER VIENTO.",
+      "razon": "Ese paraguas se doblará del revés como un tulipán metálico a los 15 metros dejándote mojado y con 5 euros menos en el bolsillo. Haz cardio bajo la lluvia con orgullo.",
+      "consejo": "Súbete la capucha y pon cara de protagonista de película dramática.",
+      "signoAfin": "Transeúntes sorprendidos por la lluvia sin impermeable",
+      "probabilidad": "97.8% Física Aerodinámica"
+    },
+    {
+      "id": "p28",
+      "icono": "✈️",
+      "titulo": "La Cola de Embarque del Avión",
+      "dilema": "¿Hago cola de pie 40 minutos antes de embarcar o me quedo sentado?",
+      "veredicto": "QUÉDATE SENTADO: TU ASIENTO DE METAL TIENE NÚMERO FIJO.",
+      "razon": "Hacer cola de pie para entrar a un tubo presurizado a esperar sentado otros 25 minutos es el mayor misterio sociológico de la aviación comercial moderna.",
+      "consejo": "Sé el último en entrar y camina con la serenidad de un monje tibetano.",
+      "signoAfin": "Viajeros inteligentes que no tienen prisa por estar apretados",
+      "probabilidad": "99.3% Lógica Aeronáutica"
+    }
+  ]
+}

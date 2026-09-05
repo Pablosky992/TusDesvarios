@@ -1,0 +1,3995 @@
+{
+  "ambitos": [
+    {
+      "id": "trabajo",
+      "nombre": "Trabajo & Jefes",
+      "icono": "💼"
+    },
+    {
+      "id": "pareja",
+      "nombre": "Pareja & Citas",
+      "icono": "💘"
+    },
+    {
+      "id": "amigos",
+      "nombre": "Amigos & Salidas",
+      "icono": "🍻"
+    },
+    {
+      "id": "familia",
+      "nombre": "Familia & Compromisos",
+      "icono": "🏠"
+    },
+    {
+      "id": "gimnasio",
+      "nombre": "Gimnasio & Salud",
+      "icono": "🏋️"
+    },
+    {
+      "id": "chats",
+      "nombre": "WhatsApp & Redes",
+      "icono": "📱"
+    },
+    {
+      "id": "dinero",
+      "nombre": "Dinero & Compras",
+      "icono": "💸"
+    },
+    {
+      "id": "estudios",
+      "nombre": "Estudios & Universidad",
+      "icono": "🎓"
+    }
+  ],
+  "gravedades": [
+    {
+      "id": "leve",
+      "nombre": "Falta Leve (Retraso o despiste)",
+      "icono": "🟢",
+      "color": "#34d399"
+    },
+    {
+      "id": "media",
+      "nombre": "Compromiso Medio (Cancelación)",
+      "icono": "🟡",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "critica",
+      "nombre": "Catástrofe Total (Desaparición)",
+      "icono": "🔴",
+      "color": "#f87171"
+    }
+  ],
+  "tonos": [
+    {
+      "id": "formal",
+      "nombre": "Formal & Diplomático",
+      "icono": "🎩"
+    },
+    {
+      "id": "cientifico",
+      "nombre": "Científico & Cuántico",
+      "icono": "🔬"
+    },
+    {
+      "id": "dramatico",
+      "nombre": "Drama Épico Griego",
+      "icono": "🎭"
+    },
+    {
+      "id": "caradura",
+      "nombre": "Cara Dura Absoluta",
+      "icono": "😎"
+    },
+    {
+      "id": "conspiranoico",
+      "nombre": "Conspiranoico & Alien",
+      "icono": "👽"
+    },
+    {
+      "id": "zen",
+      "nombre": "Místico & Zen",
+      "icono": "🧘"
+    }
+  ],
+  "catalogo": [
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Estimado equipo: debido a una congestión vial imprevista en el eje metropolitano, sufriré una demora estimada de 14 minutos. Agradezco de antemano su comprensión.",
+      "credibilidad": 94,
+      "consejo": "Entra a la oficina caminando con paso decidido y un bloc de notas en la mano.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "He debido atender un requerimiento logístico de carácter urgente antes de iniciar el trayecto hacia la sede. Me incorporo a mi puesto de forma inminente.",
+      "credibilidad": 91,
+      "consejo": "No des demasiados detalles; la sobriedad burocrática infunde respeto.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Una actualización automática no programada del sistema operativo ha bloqueado el terminal de trabajo durante el inicio matutino. Restableciendo conexión.",
+      "credibilidad": 88,
+      "consejo": "Muestra una captura borrosa de la pantalla de carga si alguien pregunta.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Por reajuste en los flujos operativos de la primera hora, completaré la revisión del documento solicitado en la siguiente franja de la jornada.",
+      "credibilidad": 90,
+      "consejo": "Envía el correo a las 08:03 AM para dar imagen de extrema diligencia.",
+      "variante": 4
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Mi despertador y mi reloj biológico entraron en un estado de desfase cuántico de fase de 15 minutos debido a un micro-colapso térmico en la cafetera.",
+      "credibilidad": 76,
+      "consejo": "Menciona la palabra \"entropía\" y nadie se atreverá a replicar.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "El campo gravitacional inducido por el colchón alcanzó una masa crítica temporal que redujo la aceleración de mis extremidades a valores subatómicos.",
+      "credibilidad": 68,
+      "consejo": "Añade que fue un \"efecto marea gravitatoria\" con cara de póker.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "El principio de incertidumbre de Heisenberg impide conocer simultáneamente la posición exacta de este informe y mi velocidad de entrega.",
+      "credibilidad": 72,
+      "consejo": "Adjunta un gráfico de dispersión sin ejes para deslumbrar.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡Los hados del destino se aliaron contra mi marcha! Una procesión infernal de semáforos en rojo ha retenido mi vehículo a las puertas del templo laboral.",
+      "credibilidad": 65,
+      "consejo": "Suspira profundamente mirando al infinito antes de sentarte.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Un dragón cibernético conocido como pantalla azul ha intentado devorar mis archivos. He luchado contra el abismo para rescatar el trabajo.",
+      "credibilidad": 79,
+      "consejo": "Frunce el ceño y di que has salvado la empresa por los pelos.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "El destino me ha puesto a prueba: una fuga de proporciones homéricas en la llave de paso ha demorado mi salida. He contenido el diluvio.",
+      "credibilidad": 82,
+      "consejo": "Moja un poco la manga de la camisa para darle dramatismo.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "No llego tarde: simplemente estaba dando margen de ventaja al resto del departamento para que la competencia fuera justa.",
+      "credibilidad": 45,
+      "consejo": "Solo aplicable si eres el único que sabe usar Excel en la planta.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Iba a entregar el informe a primera hora, pero no quería dejar en evidencia el ritmo de trabajo de los demás compañeros.",
+      "credibilidad": 38,
+      "consejo": "Sonríe con seguridad y ofrece un café al jefe.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "El tráfico me ha dado tiempo para meditar sobre cómo optimizar la empresa. En realidad este retraso es inversión en I+D.",
+      "credibilidad": 40,
+      "consejo": "Lleva gafas de pasta para parecer un visionario.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Mi GPS fue desviado por satélites de geolocalización que claramente están probando algoritmos de control de tráfico en mi vehículo.",
+      "credibilidad": 48,
+      "consejo": "Mira de reojo a los detectores de humo del techo.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Un microcorte en los servidores de la competencia ha provocado un cuello de botella que bloqueó mi sincronización matutina.",
+      "credibilidad": 58,
+      "consejo": "Pega cinta adhesiva en la cámara de tu portátil.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "He detectado interferencias en la red eléctrica de mi manzana. Sospecho que intentaban sabotear mi puntualidad.",
+      "credibilidad": 50,
+      "consejo": "Baja la voz cuando lo expliques en el pasillo.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "El universo me indicó que no forzara el flujo energético de la mañana. Llegar antes habría quebrado la armonía del equipo.",
+      "credibilidad": 55,
+      "consejo": "Entra haciendo respiraciones conscientes y saluda con calma.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Las tareas pendientes son como hojas que caen en otoño: llegan a su destino en el momento kármico exacto.",
+      "credibilidad": 42,
+      "consejo": "Ofrece una infusión de jengibre a tu supervisor.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Mi presencia física ha tardado unos minutos más, pero mi espíritu colaborativo ha estado en la oficina desde el alba.",
+      "credibilidad": 30,
+      "consejo": "Cierra los ojos un segundo antes de responder.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Lamento comunicar que por motivos de fuerza mayor de carácter familiar e inaplazable, me veré obligado a ausentarme de la sesión vespertina.",
+      "credibilidad": 92,
+      "consejo": "Ofrece enviar un resumen ejecutivo por correo antes de salir.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Debido a una indisposición gastrointestinal sobrevenida que compromete mi rendimiento profesional, solicitaré reposo preventivo por prescripción facultativa.",
+      "credibilidad": 95,
+      "consejo": "Nadie pide detalles cuando se menciona un problema gástrico.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por necesidad de atender una gestión legal y notarial urgente con plazos improrrogables, debo reprogramar nuestras reuniones para la jornada de mañana.",
+      "credibilidad": 89,
+      "consejo": "Menciona la palabra \"aranceles\" o \"catastro\" para sonar intachable.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Mi sistema inmunológico ha detectado un ataque viral biológico de alta virulencia que exige una cuarentena preventiva para no diezmar la plantilla.",
+      "credibilidad": 86,
+      "consejo": "Tose levemente una sola vez con tono seco.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Se ha producido una sobrecarga eléctrica en el transformador de mi bloque que ha fundido los relés del router y la red doméstica.",
+      "credibilidad": 84,
+      "consejo": "Desconecta el móvil durante un par de horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "La entropía acumulada en mis ciclos de descanso ha reducido mi capacidad de procesamiento cognitivo al 12%. Recomiendo reinicio de sistema.",
+      "credibilidad": 70,
+      "consejo": "Usa términos de computación para describir tu cansancio.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "¡Una calamidad doméstica de alcance bíblico azota mi morada! Un técnico de calderas mantiene retenida mi tarde bajo amenaza de helada perpetua.",
+      "credibilidad": 85,
+      "consejo": "Pon tono de resignación y desesperanza profunda.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "La migraña ha clavado sus garras de fuego en mi cráneo. Mi lealtad a la empresa es infinita, pero mi visión periférica se desvanece.",
+      "credibilidad": 91,
+      "consejo": "Apaga las luces y habla en susurros.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "El destino ha reclamado mi presencia para socorrer a un ser querido en apuros médicos. Marcho al deber con el corazón encogido.",
+      "credibilidad": 93,
+      "consejo": "Mira el reloj con angustia fingida.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "He calculado que si me quedo esta tarde trabajando voy a restar más que sumar. Os hago un favor colectivo tomándome la tarde libre.",
+      "credibilidad": 35,
+      "consejo": "Di que es una decisión altruista por el bien del proyecto.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Tenía pensado venir, pero he visto que el sol brillaba tanto que sería un pecado moral no aprovecharlo. Nos vemos mañana.",
+      "credibilidad": 20,
+      "consejo": "Solo para el último día antes de tus vacaciones.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "He cumplido ya mi cuota mensual de paciencia con clientes. Por seguridad jurídica, mejor vuelvo el lunes.",
+      "credibilidad": 42,
+      "consejo": "Hazlo pasar por prevención de riesgos laborales.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Una patrulla de agentes no identificados ha acordonado mi calle por una supuesta fuga química. No nos permiten salir de los portales.",
+      "credibilidad": 72,
+      "consejo": "Di que el ejército ha tomado el control de la avenida.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "He sido testigo de un incidente clasificado en las inmediaciones y debo prestar declaración bajo estricto acuerdo de confidencialidad.",
+      "credibilidad": 60,
+      "consejo": "Mira hacia los lados con suspicacia antes de colgar.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Los servidores en la nube han sido intervenidos por una agencia extranjera. Hasta que limpien los troyanos no puedo operar.",
+      "credibilidad": 65,
+      "consejo": "Aconseja a tu jefe cambiar las contraseñas.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Mi aura necesita un proceso de purificación profunda lejos de las radiaciones electromagnéticas de las hojas de cálculo.",
+      "credibilidad": 45,
+      "consejo": "Dilo con voz suave y pausada.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "El universo me ha colocado un obstáculo insalvable en el camino físico para que trabaje en mi dimensión interior hoy.",
+      "credibilidad": 38,
+      "consejo": "Manda un emoticono de flor de loto en el chat.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Aceptar el descanso cuando el cuerpo lo pide es la forma más pura de honrar el compromiso con el trabajo venidero.",
+      "credibilidad": 50,
+      "consejo": "Cita a Confucio de forma inventada.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Por circunstancias excepcionales de fuerza mayor bajo secreto sumarial y amparo legal, no podré incorporarme a la actividad laboral en las próximas 48 horas.",
+      "credibilidad": 96,
+      "consejo": "Envía el comunicado a través de un canal oficial y apaga el móvil.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Un colapso estructural grave en la instalación principal de mi residencia habitual ha requerido la intervención de los servicios de bomberos y peritaje.",
+      "credibilidad": 94,
+      "consejo": "Guarda el número del parte de bomberos ficticio.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Me veo en la imperiosa obligación de ausentarme por un requerimiento urgente de traslado internacional de un familiar directo bajo tutela legal.",
+      "credibilidad": 92,
+      "consejo": "Usa términos jurídicos contundentes.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "He sido expuesto a un agente bacteriológico desconocido tras ingerir marisco en mal estado; me encuentro en aislamiento biológico de nivel 3.",
+      "credibilidad": 90,
+      "consejo": "No envíes fotos bajo ningún concepto.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Un pulso electromagnético derivado de una tormenta solar ha fundido la placa base de mis tres dispositivos de trabajo simultáneamente.",
+      "credibilidad": 75,
+      "consejo": "Muestra una foto de un condensador quemado de Google Images.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Mi ritmo cardíaco y mis niveles de cortisol han entrado en una fase de resonancia crítica que requiere sedación farmacológica hospitalaria.",
+      "credibilidad": 93,
+      "consejo": "Habla con voz extremadamente débil.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "¡La ruina y la desolación han llamado a mi puerta! Una inundación torrencial ha arrasado mi hogar convirtiendo mi existencia en un naufragio.",
+      "credibilidad": 94,
+      "consejo": "Pon un cubo de agua en el suelo de fondo por si haces videollamada.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "El abismo se ha abierto bajo mis pies. El dolor y la fiebre me postran en un lecho de espinas. Rezad por mi recuperación.",
+      "credibilidad": 88,
+      "consejo": "Corta la llamada tosiendo dramáticamente.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "¡He sido víctima de un asalto a mano armada donde me han despojado de mis pertenencias, llaves y dignidad terrenal!",
+      "credibilidad": 95,
+      "consejo": "Presenta una denuncia ficticia o borrosa.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "He decidido tomarme un año sabático de tres días para reflexionar sobre mi propósito en esta corporación. El lunes os cuento las conclusiones.",
+      "credibilidad": 25,
+      "consejo": "Ten el finiquito calculado por si acaso.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Me he quedado encerrado en una fiesta en un barco en alta mar sin cobertura. Cuando atraquemos vuelvo a fichar.",
+      "credibilidad": 18,
+      "consejo": "Apaga el GPS de Instagram inmediatamente.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "He ganado un sorteo exprés de un fin de semana en un spa y rechazarlo sería una falta de respeto al karma turístico.",
+      "credibilidad": 22,
+      "consejo": "Solo para contratos blindados.",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "He sido interceptado por el servicio secreto para colaborar como testigo protegido en una operación antiterrorista internacional.",
+      "credibilidad": 40,
+      "consejo": "Di que si no contestas en 3 días llamen a la embajada.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Mi identidad digital ha sido suplantada por una IA rusa que ha borrado mis accesos y me ha dejado indocumentado.",
+      "credibilidad": 52,
+      "consejo": "Usa un número de teléfono prepago.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Un satélite espía ha caído en el tejado de mi urbanización y el ejército ha cortado las comunicaciones por radiofrecuencia.",
+      "credibilidad": 35,
+      "consejo": "Cuelga diciendo \"están interviniendo la línea\".",
+      "variante": 3
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "He entrado en un retiro de silencio absoluto de 72 horas para desbloquear mi potencial cósmico y regresar como un líder supremo.",
+      "credibilidad": 30,
+      "consejo": "Pon un mensaje automático de ausencia místico en el correo.",
+      "variante": 1
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "El ciclo lunar actual exige una reclusión en soledad para transmutar las energías densas del entorno laboral.",
+      "credibilidad": 28,
+      "consejo": "Manda una foto de un bosque con niebla.",
+      "variante": 2
+    },
+    {
+      "ambito": "trabajo",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "El ego corporativo ha muerto temporalmente en mí. Renaceré el lunes con las cuentas de balance en paz.",
+      "credibilidad": 22,
+      "consejo": "Usa incienso de sándalo.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "He auditado nuestra conversación previa y constato un desfase comunicativo involuntario. Reitero mi compromiso incondicional con la armonía de este vínculo.",
+      "credibilidad": 90,
+      "consejo": "Acompaña la disculpa con un abrazo de mínimo 6 segundos.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Por motivos de congestión en la cadena de suministro local, el encargo del pan y los víveres sufrirá un aplazamiento de 20 minutos.",
+      "credibilidad": 88,
+      "consejo": "Vuelve con unos croissants calientes de regalo.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Lamento profundamente el retraso en responder a tu mensaje; me hallaba inmerso en una sesión de alta concentración logística.",
+      "credibilidad": 92,
+      "consejo": "No admitas que estabas viendo vídeos de reformas de casas.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Mi corteza prefrontal experimentó una saturación de estímulos que bloqueó la memoria a corto plazo sobre sacar la carne del congelador.",
+      "credibilidad": 78,
+      "consejo": "Baja corriendo a por comida preparada y sírvela en plato hondo.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Según la teoría de la relatividad, los 40 minutos que he tardado en arreglarme son apenas 3 segundos en un marco inercial acelerado.",
+      "credibilidad": 62,
+      "consejo": "Elogia su peinado antes de que mire el reloj.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "La atracción gravitatoria del sofá superó el coeficiente de fricción de mi voluntad de levantarme.",
+      "credibilidad": 70,
+      "consejo": "Pide que te dé la mano para romper la gravedad.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡Ciega fue mi mente al olvidar tan noble encargo! El remordimiento devora mi alma cual fuego purificador. Déjame enmendar mi falta.",
+      "credibilidad": 85,
+      "consejo": "Pon una mano en el pecho con devoción.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Un torbellino de contratiempos casi me arrebata la oportunidad de verte. He cruzado ríos de atascos por llegar a tus brazos.",
+      "credibilidad": 89,
+      "consejo": "Llega con el pelo ligeramente despeinado.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡El destino ha conspirado contra nuestro encuentro! El metro se detuvo en las tinieblas del túnel privándome de tu compañía.",
+      "credibilidad": 92,
+      "consejo": "Muestra indignación contra el transporte público.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "No se me olvidó sacar la basura: la estaba dejando macerar para que pesara menos al fermentar.",
+      "credibilidad": 42,
+      "consejo": "Sácala corriendo mientras te ríes.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "No tardé en responder; estaba creando misterio y tensión romántica para mantener viva la llama de la pasión.",
+      "credibilidad": 50,
+      "consejo": "Guiña el ojo con confianza.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "He comido el último bombón de la caja para protegerte de los azúcares refinados. Lo he hecho por tu salud.",
+      "credibilidad": 45,
+      "consejo": "Promete comprar una caja entera mañana.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "El algoritmo de WhatsApp retuvo deliberadamente tu mensaje para sabotear nuestra relación. Ya he desactivado la optimización de batería.",
+      "credibilidad": 68,
+      "consejo": "Muestra capturas de ajustes de notificaciones.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "El supermercado cambió la disposición de los estantes en una maniobra psicológica para que no encontrara lo que me pediste.",
+      "credibilidad": 75,
+      "consejo": "Culpar al gran capital siempre empatiza.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Estoy seguro de que el reloj de la cocina tiene un desfase temporal provocado por las microondas del vecino.",
+      "credibilidad": 55,
+      "consejo": "Cambia la pila del reloj delante de tu pareja.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "El olvido de comprar la cena es una invitación del destino para que practiquemos el ayuno intermitente y limpiemos el aura.",
+      "credibilidad": 40,
+      "consejo": "Ten una pizza congelada de emergencia.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "El tiempo no existe en el plano del amor puro; llegar 20 minutos tarde es una ilusión de la mente terrenal.",
+      "credibilidad": 35,
+      "consejo": "Besa su frente con serenidad.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Acepto la frustración que sientes y la transformo en energía lumínica para nuestra convivencia.",
+      "credibilidad": 48,
+      "consejo": "Enciende una vela con olor a vainilla.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por discrepancias logísticas insubsanables con mis niveles de energía física, sugiero posponer la cena con tus amigos a una fecha más oportuna.",
+      "credibilidad": 84,
+      "consejo": "Ofrécete a pagar la siguiente reserva en un sitio mejor.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Lamento informarte de que una indisposición física repentina me impide acompañarte al evento social programado para hoy.",
+      "credibilidad": 92,
+      "consejo": "Ponte el termómetro visible en la mesita.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Un imprevisto laboral de última hora me retiene en la oficina; no podré acudir al compromiso previsto.",
+      "credibilidad": 90,
+      "consejo": "Deja abierta una hoja de cálculo en la pantalla.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Mi batería social ha descendido al 4%, por debajo del umbral de estabilidad sinapsial necesario para interactuar con tus parientes.",
+      "credibilidad": 82,
+      "consejo": "Ponte una infusión y métete en la cama temprano.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "He sufrido una reacción alérgica dérmica no infecciosa que desaconseja la exposición a ambientes concurridos.",
+      "credibilidad": 88,
+      "consejo": "Frótate un poco la nariz para enrojecerla.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Mi ciclo circadiano ha entrado en fase de hibernación precoz tras una sobrecarga de estímulos laborales.",
+      "credibilidad": 75,
+      "consejo": "Bosteza de forma prolongada.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Una jaqueca atroz atenaza mis sienes cual corona de espinas. Mi corazón arde por ir contigo, pero mi cuerpo exige oscuridad.",
+      "credibilidad": 94,
+      "consejo": "Baja todas las persianas de la casa.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "¡Qué dolor desgarra mi pecho al tener que cancelar nuestra velada! La fiebre me consume y solo anhelo tus cuidados.",
+      "credibilidad": 93,
+      "consejo": "Pide un caldo caliente con voz frágil.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "El agotamiento de mi espíritu es tal que no sería digno de tu belleza en esa cena. Mereces un acompañante radiante, no mi sombra.",
+      "credibilidad": 80,
+      "consejo": "Dilo con tono de poeta romántico del siglo XIX.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Si voy a esa cena me voy a pasar la noche quejándome del menú y del ruido. Te estoy haciendo un favor monumental quedándome en casa.",
+      "credibilidad": 60,
+      "consejo": "Preséntalo como un regalo altruista.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "He visto que estrenaban la nueva temporada de nuestra serie y he sacrificado la fiesta para preparar el maratón del sofá.",
+      "credibilidad": 48,
+      "consejo": "Ten las palomitas listas cuando vuelva.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Tus amigos me caen genial, pero hoy me cae mejor mi cama. Es una cuestión de prioridades afectivas.",
+      "credibilidad": 35,
+      "consejo": "Solo si lleváis más de 5 años juntos.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "He recibido información fidedigna de que tus amigos planean una encerrona para preguntarme cuándo nos casamos. He abortado la misión.",
+      "credibilidad": 78,
+      "consejo": "Tu pareja se reirá y te perdonará.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "El restaurante al que íbamos tiene denuncias encubiertas de sanidad por uso de salsas sintéticas. He cancelado por precaución.",
+      "credibilidad": 65,
+      "consejo": "Muestra una reseña de una estrella en Google.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "He notado que nos están rastreando la ubicación y considero más seguro permanecer en nuestro refugio doméstico.",
+      "credibilidad": 45,
+      "consejo": "Pon el móvil en modo avión delante de ella.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Siento que hoy debo guardar silencio y recogimiento para ofrecerte una versión más luminosa y paciente mañana.",
+      "credibilidad": 52,
+      "consejo": "Prepara el desayuno al día siguiente sin que te lo pida.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Nuestras almas están conectadas sin necesidad de asistir a eventos multitudinarios que dispersan la energía cósmica.",
+      "credibilidad": 45,
+      "consejo": "Pon música ambiental de cuencos tibetanos.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "El fluir del universo me pide reposo en el hogar para equilibrar los chakras de nuestra relación.",
+      "credibilidad": 40,
+      "consejo": "Masajea sus hombros un par de minutos.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Estimados amigos: debido a compromisos de índole logística imprevistos, mi llegada al punto de encuentro se demorará 25 minutos.",
+      "credibilidad": 92,
+      "consejo": "Pide la primera ronda cuando llegues para sellar la paz.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Por necesidad de concluir un trámite doméstico urgente, me uniré a vosotros en el segundo local del itinerario previsto.",
+      "credibilidad": 90,
+      "consejo": "Pide la ubicación en tiempo real en el grupo de WhatsApp.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Lamento el retraso; el estacionamiento en la zona presenta una densidad vehicular superior a la media histórica.",
+      "credibilidad": 94,
+      "consejo": "Culpar al aparcamiento nunca falla un viernes.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "El rozamiento estático de la ropa de estar por casa ha generado un campo magnético que me ha retenido 20 minutos en el pasillo.",
+      "credibilidad": 75,
+      "consejo": "Di que has tenido que vencer la inercia.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "El tiempo de preparación textil superó la estimación gaussiana inicial en dos desviaciones típicas.",
+      "credibilidad": 80,
+      "consejo": "Llega diciendo que ibas a la velocidad de la luz.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "He sufrido un colapso termodinámico al intentar decidir qué chaqueta ponerme según el pronóstico barométrico.",
+      "credibilidad": 70,
+      "consejo": "Quítate la chaqueta nada más llegar con cara de acalorado.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡Los semáforos se confabularon en mi contra como demonios bermellones! Pero aquí estoy, desafiando a los elementos por vuestra amistad.",
+      "credibilidad": 72,
+      "consejo": "Pide una cerveza con urgencia como quien sobrevive al desierto.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "El cerrojo de mi portal se rebeló contra su amo y quedé prisionero en mi propio castillo durante media hora.",
+      "credibilidad": 85,
+      "consejo": "Gesticula ampliamente con las manos.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡Una tragedia textil! Mi camisa favorita sufrió una mancha atroz y tuve que reiniciar todo el ritual del atuendo.",
+      "credibilidad": 88,
+      "consejo": "Señala tu ropa alternativa.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "He llegado tarde para que me recibierais con más ganas y aplausos. De nada por la emoción.",
+      "credibilidad": 50,
+      "consejo": "Paga las aceitunas y todo perdonado.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Estaba haciendo tiempo para no tener que pagar la primera ronda cara.",
+      "credibilidad": 40,
+      "consejo": "Solo funciona con tus amigos de toda la vida.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Iba a salir a tiempo, pero me puse un capítulo de 20 minutos y duraba 45.",
+      "credibilidad": 65,
+      "consejo": "Admitir la verdad con humor suele triunfar.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "La policía local cortó tres calles sin motivo aparente; claramente había un protocolo de seguridad que me impidió avanzar.",
+      "credibilidad": 80,
+      "consejo": "Pregunta si alguien ha visto furgones policiales.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Google Maps me mandó por una ruta sospechosamente larga para obligarme a pasar delante de tres gasolineras caras.",
+      "credibilidad": 74,
+      "consejo": "Muestra la ruta en el móvil.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Mi ascensor bajó a la mitad de velocidad habitual; sospecho que están ahorrando energía comunitaria a mi costa.",
+      "credibilidad": 62,
+      "consejo": "Llega fingiendo sofoco por haber bajado escaleras.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "El tiempo de los relojes es una prisión mental. Llego exactamente en el instante en que el universo quería que nos viéramos.",
+      "credibilidad": 45,
+      "consejo": "Brinda de inmediato.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Mi camino ha tenido desvíos necesarios para purificar la mente antes de compartir esta cerveza sagrada con vosotros.",
+      "credibilidad": 40,
+      "consejo": "Choca los vasos con solemnidad.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "No hay retraso cuando el reencuentro es sincero y puro.",
+      "credibilidad": 38,
+      "consejo": "Sonríe con calidez y pide bravas.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Lamento profundamente no poder unirme a la velada de hoy; un cuadro de malestar general me aconseja guardar reposo en el domicilio.",
+      "credibilidad": 93,
+      "consejo": "Manda el mensaje antes de las 20:00 para no parecer un rajado de última hora.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por compromisos profesionales que se han extendido más allá del horario previsto, no podré estar presente en la cena.",
+      "credibilidad": 90,
+      "consejo": "No publiques nada en Instagram en toda la noche.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Un asunto familiar urgente e inaplazable requiere mi atención durante la tarde-noche de hoy. Disfrutad de la salida.",
+      "credibilidad": 94,
+      "consejo": "Nadie cuestiona los temas de familia.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Mi nivel de glucógeno muscular y reserva energética ha entrado en fase crítica. Salir hoy provocaría un catabolismo social severo.",
+      "credibilidad": 78,
+      "consejo": "Manda una foto del termómetro marcando 37.8ºC.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "He ingerido un alimento con trazas de histamina que me ha provocado una cefalea tensional incompatible con decibelios de pub.",
+      "credibilidad": 86,
+      "consejo": "Usa términos de farmacia.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Mi cuerpo ha iniciado un proceso de reparación celular profunda que no tolera la ingesta de cebada fermentada.",
+      "credibilidad": 72,
+      "consejo": "Diles que te reservas para la próxima.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "¡Maldita sea mi suerte! Un catarro devastador ha derrumbado mis anhelos de fiesta y jarana con vosotros.",
+      "credibilidad": 91,
+      "consejo": "Manda una nota de voz con voz ronca y tos fingida.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "El cuerpo me pesa como el plomo y el alma me llora por no poder acompañaros en la gloria nocturna.",
+      "credibilidad": 84,
+      "consejo": "Pon un emoji de máscara médica.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "¡La tiranía del cansancio me ha vencido! Caigo rendido en el lecho con el pesar de un guerrero derrotado.",
+      "credibilidad": 79,
+      "consejo": "Apaga el móvil a las 22:30.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Gente, me he puesto el pijama a las ocho y ya no hay fuerza humana ni divina en el planeta Tierra que me saque de casa.",
+      "credibilidad": 85,
+      "consejo": "La sinceridad absoluta con amigos siempre gana puntos de respeto.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Si salgo hoy me gasto 50 euros y prefiero gastármelos en comida a domicilio y ver una peli de miedo.",
+      "credibilidad": 70,
+      "consejo": "Invítales a tu casa a jugar a la consola el domingo.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Estoy en modo planta de interior: solo necesito agua, luz tenue y que nadie me hable hasta mañana a las doce.",
+      "credibilidad": 75,
+      "consejo": "Manda un sticker de un gato durmiendo.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Tengo sospechas fundadas de que en ese bar va a haber una redada de la SGAE o de inspección de trabajo. Mejor me guardo.",
+      "credibilidad": 60,
+      "consejo": "Manda un audio susurrando.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Mis fuentes me confirman que va a ir mi ex o alguien a quien le debo dinero; por protocolo de seguridad me quedo en el búnker.",
+      "credibilidad": 82,
+      "consejo": "Tus amigos entenderán la retirada estratégica.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "El pronóstico meteorológico secreto indica tormenta eléctrica inminente aunque el cielo esté despejado.",
+      "credibilidad": 45,
+      "consejo": "Di que tienes un barómetro en la rodilla.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Mi energía astral está en fase menguante y compartirla hoy os bajaría la vibración de la fiesta.",
+      "credibilidad": 50,
+      "consejo": "Deséales una noche luminosa.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Siento que el universo me llama al recogimiento y a la lectura de clásicos.",
+      "credibilidad": 42,
+      "consejo": "Manda una foto de una taza de poleo menta.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "El no-hacer es el arte más elevado del fin de semana. Os acompaño desde el plano astral.",
+      "credibilidad": 35,
+      "consejo": "Reacciona a sus fotos al día siguiente.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Estimada familia: debido a labores domésticas imprevistas y mantenimiento del vehículo, me demoraré unos minutos para el almuerzo.",
+      "credibilidad": 94,
+      "consejo": "Llega con una bandeja de pasteles de la confitería.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "He debido atender una llamada laboral urgente de última hora que no admitía demora antes de emprender el viaje.",
+      "credibilidad": 92,
+      "consejo": "Pon el móvil en silencio sobre la mesa.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Disculpad el retraso; el tráfico en la circunvalación ha sufrido retenciones por un transporte especial.",
+      "credibilidad": 95,
+      "consejo": "Las abuelas siempre perdonan si elogias su comida nada más entrar.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡La llave del garaje se atascó en la cerradura y casi quedo preso para siempre lejos del calor de vuestra mesa!",
+      "credibilidad": 88,
+      "consejo": "Abraza a tu madre con fuerza teatral.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "He luchado contra mares de tráfico y atascos interminables por llegar a tiempo a probar ese guiso sagrado.",
+      "credibilidad": 92,
+      "consejo": "Pide repetir plato para sellar la paz.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡Una tormenta de contratiempos domésticos ha intentado separarme de los míos! Pero la sangre tira más que el destino.",
+      "credibilidad": 85,
+      "consejo": "Dilo en la cabecera de la mesa.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Lamento profundamente no poder acudir al almuerzo dominical por una indisposición gástrica que me obliga a guardar estricta dieta blanda.",
+      "credibilidad": 96,
+      "consejo": "No salgas en ninguna foto en redes ese domingo.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por necesidad de preparar una entrega profesional crítica e inaplazable para primera hora del lunes, no podré asistir al compromiso.",
+      "credibilidad": 90,
+      "consejo": "Llama por teléfono a tu abuela personalmente para disculparte.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "¡El deber laboral y una fiebre traicionera me privan de la mayor alegría de la semana: ver a mi familia reunida!",
+      "credibilidad": 94,
+      "consejo": "Promete ir a merendar el próximo martes.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Si voy a la comida me vais a preguntar 14 veces cuándo me compro un piso o cuándo tengo hijos, así que me he recetado paz mental.",
+      "credibilidad": 65,
+      "consejo": "Solo para el grupo de primos de WhatsApp.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Mi casero ha enviado un perito de urgencia a revisar las tuberías del edificio y tengo orden de no abandonar el piso bajo multa.",
+      "credibilidad": 88,
+      "consejo": "Cualquier problema de comunidad de vecinos es creíble al 100%.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Siento que hoy debo guardar silencio y recogimiento para sanar el árbol genealógico desde la calma interior.",
+      "credibilidad": 45,
+      "consejo": "Manda una foto de una vela blanca encendida.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Estimado entrenador: por una sobrecarga preventiva en el tendón rotuliano, aplazaré la sesión de fuerza para mañana.",
+      "credibilidad": 92,
+      "consejo": "Haz estiramientos en casa mientras ves la tele.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "El principio de supercompensación hipertrófica dicta que el crecimiento muscular óptimo se produce durante el reposo absoluto en el sofá.",
+      "credibilidad": 85,
+      "consejo": "Menciona la síntesis de proteínas y la hormona del crecimiento.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡Mis fibras musculares lloran de agonía tras la última batalla con las mancuernas! El templo del hierro debe esperar a que mis heridas sanen.",
+      "credibilidad": 80,
+      "consejo": "Pon cara de dolor al levantarte de la silla.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Hoy me tocaba día de pierna, y como la vida ya es bastante dura de por sí, he decidido hacer día de pizza.",
+      "credibilidad": 70,
+      "consejo": "La honestidad deportiva te liberará de culpa.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "El aire acondicionado del gimnasio está calibrado para esparcir micropartículas que aumentan la fatiga y obligarte a comprar sus batidos de proteínas.",
+      "credibilidad": 65,
+      "consejo": "Entrena en el parque 5 minutos.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "El músculo más importante que debo ejercitar hoy es la paz mental y la aceptación de mi estado físico actual.",
+      "credibilidad": 50,
+      "consejo": "Respira hondo mientras abres el paquete de galletas.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por prescripción de mi fisioterapeuta de confianza, suspendo la actividad deportiva de alta intensidad durante 72 horas.",
+      "credibilidad": 95,
+      "consejo": "Camina un poco más lento ese día.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "He detectado un pico anómalo de ácido láctico en mis cuadríceps que podría derivar en una rotura fibrilar subfascial si toco una barra.",
+      "credibilidad": 88,
+      "consejo": "Usa términos de anatomía.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Una punzada traicionera en la zona lumbar me ha postrado cual gladiador herido en la arena. El reposo es mi única medicina.",
+      "credibilidad": 92,
+      "consejo": "Ponte una faja lumbar de mentira.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "He calculado que ya quemé suficientes calorías bajando las escaleras de casa esta mañana, así que doy la semana por completada.",
+      "credibilidad": 55,
+      "consejo": "Comerse un plátano cuenta como pre-entreno.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Las máquinas del gimnasio tienen contadores trucados para que creas que levantas menos y contrates a un entrenador personal.",
+      "credibilidad": 58,
+      "consejo": "Muestra indignación contra la industria del fitness.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "El esfuerzo físico sin alineación espiritual es mera vanidad terrenal. Hoy honro a mi cuerpo con una siesta regenerativa.",
+      "credibilidad": 48,
+      "consejo": "Duerme 9 horas seguidas.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Disculpa la demora en responder; he tenido la aplicación en segundo plano debido a una auditoría de notificaciones en mi dispositivo móvil.",
+      "credibilidad": 94,
+      "consejo": "Contesta siempre con cortesía impecable.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "El algoritmo de optimización de batería de Android mató el hilo de ejecución de WhatsApp sin enviar la interrupción correspondiente a la memoria RAM.",
+      "credibilidad": 90,
+      "consejo": "Culpar al sistema operativo nunca falla.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡El aluvión de mensajes me sumergió en un océano digital del que apenas he logrado rescatar tu sagrado chat!",
+      "credibilidad": 82,
+      "consejo": "Manda un audio con energía renovada.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Leí tu mensaje mentalmente hace tres semanas y mi cerebro dio por hecho que ya te había respondido con telepatía.",
+      "credibilidad": 88,
+      "consejo": "Es una de las excusas más universales y aceptadas del mundo.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Meta está probando un nuevo filtro antispam que archiva automáticamente los mensajes más importantes para generar dependencia emocional.",
+      "credibilidad": 72,
+      "consejo": "Di que tu móvil se ha vuelto loco.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "El no contestar de inmediato fue un ejercicio consciente de desconexión del ruido del mundo para darte una respuesta pura.",
+      "credibilidad": 60,
+      "consejo": "Manda un sticker pacífico.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "He desactivado temporalmente las aplicaciones de mensajería instantánea para atender asuntos laborales con dedicación exclusiva.",
+      "credibilidad": 93,
+      "consejo": "Quita el doble check azul y la última hora.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "He entrado en un periodo de desintoxicación dopaminérgica para reducir los picos de cortisol inducidos por la luz azul de la pantalla.",
+      "credibilidad": 85,
+      "consejo": "Dilo con tono de neurólogo de élite.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "¡Mi teléfono se precipitó al abismo del lavabo y resucitó milagrosamente tras tres días enterrado en un sarcófago de arroz!",
+      "credibilidad": 95,
+      "consejo": "La clásica excusa del arroz siempre tiene 95% de éxito.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Vi tu audio de 8 minutos y sinceramente preferí esperar a que saliera la adaptación en película de Netflix.",
+      "credibilidad": 89,
+      "consejo": "Los audios de más de 3 minutos no tienen defensa moral.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Sospecho que mi cuenta de WhatsApp fue clonada en un servidor remoto de Europa del Este y he tenido que formatear el terminal.",
+      "credibilidad": 76,
+      "consejo": "Di que te hackearon.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "El silencio es la respuesta más elocuente cuando las palabras del teclado no alcanzan la profundidad del ser.",
+      "credibilidad": 50,
+      "consejo": "Deja que pasen 24 horas más.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Por motivos de conciliación bancaria y revisión de cargos indebidos en mi cuenta corriente, aplazaré la transferencia del importe correspondiente a mañana.",
+      "credibilidad": 94,
+      "consejo": "Muestra la app del banco con saldo oculto.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "El protocolo de comunicación cifrada de Bizum ha entrado en tiempo de espera por saturación en la pasarela de pagos de Redsys.",
+      "credibilidad": 91,
+      "consejo": "El fallo de Bizum es el comodín financiero del siglo XXI.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡Los impuestos y las facturas inesperadas han saqueado mi tesorería cual corsarios desalmados! Esperaré al ingreso de la nómina.",
+      "credibilidad": 90,
+      "consejo": "Suspira al mirar la cartera.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Te iba a hacer el Bizum pero pensé que el dinero arruina las amistades verdaderas y yo valoro demasiado lo nuestro.",
+      "credibilidad": 55,
+      "consejo": "Paga tú la siguiente ronda de cañas.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Hacienda está monitorizando los micropagos entre particulares con inteligencia artificial; es más seguro que me invites hoy tú.",
+      "credibilidad": 70,
+      "consejo": "Baja la voz y mira hacia las esquinas.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "El desapego del dinero material es el primer paso hacia la iluminación. Tú hoy das y el universo te lo devolverá multiplicado.",
+      "credibilidad": 35,
+      "consejo": "Sonríe con beatitud.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por reestructuración de mi presupuesto mensual en fondos de amortización obligatoria, me resulta imposible participar en el fondo común.",
+      "credibilidad": 92,
+      "consejo": "Usa lenguaje macroeconómico.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Mi liquidez disponible ha alcanzado el cero absoluto kelvin tras abonar el seguro del coche y el IBI.",
+      "credibilidad": 88,
+      "consejo": "Enseña un extracto bancario con cara de víctima.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "¡La ruina económica se cierne sobre mis finanzas como una nube negra! Debo sobrevivir a base de arroz y pasta durante 10 días.",
+      "credibilidad": 93,
+      "consejo": "Rechaza pedir postre con resignación.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Tengo dinero en la cuenta pero está en plazo fijo a 10 años en las Islas Caimán y si lo saco me penalizan un 80%.",
+      "credibilidad": 40,
+      "consejo": "Hazte el misterioso con inversiones en bolsa.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "El banco me ha bloqueado la tarjeta por movimientos sospechosos tras comprar un kebab a las 4 de la mañana.",
+      "credibilidad": 92,
+      "consejo": "Muy creíble porque los bancos lo hacen de verdad.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "La verdadera riqueza no se mide en euros sino en momentos compartidos; por eso hoy me invitas tú a cenar.",
+      "credibilidad": 30,
+      "consejo": "Abraza a tu amigo con afecto.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Estimado profesor: el archivo adjunto con la entrega del trabajo sufrió una corrupción de metadatos durante la subida al campus virtual a las 23:59.",
+      "credibilidad": 94,
+      "consejo": "Envía un archivo .docx corrupto abriéndolo con el Bloc de notas y borrando caracteres.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "El algoritmo de detección de plagio del campus ha marcado como coincidencia del 98% citas que corresponden al propio temario de la asignatura.",
+      "credibilidad": 88,
+      "consejo": "Di que es un falso positivo informático.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "¡Tres noches en vela entregado a la ciencia y la pluma para que un fallo de corriente en mi barrio borrara el último capítulo!",
+      "credibilidad": 92,
+      "consejo": "Llega a clase con ojeras bien marcadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Estudié tanto para el examen que sufrí una amnesia temporal por exceso de conocimientos acumulados.",
+      "credibilidad": 38,
+      "consejo": "Pide revisión de examen con optimismo.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "El profesor puso preguntas de temas que dijo explícitamente en clase que no iban a entrar para filtrar a los alumnos no dóciles.",
+      "credibilidad": 85,
+      "consejo": "Todos tus compañeros de clase te apoyarán.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "El conocimiento no se demuestra con exámenes cronometrados sino con la comprensión holística de la existencia.",
+      "credibilidad": 35,
+      "consejo": "Cita a Platón de memoria.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Solicito respetuosamente el aplazamiento de la convocatoria extraordinaria por coincidencia con una intervención médica prescrita.",
+      "credibilidad": 95,
+      "consejo": "Presenta el justificante médico reglamentario.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Mi disco duro secundario donde almacenaba la bibliografía del TFG ha sufrido un fallo electromecánico irrecuperable en el cabezal de lectura.",
+      "credibilidad": 90,
+      "consejo": "Lleva el portátil al despacho del tutor.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "¡La presión académica ha doblegado mis fuerzas! Necesito 48 horas de tregua para rehacer mis argumentos y defender el honor del trabajo.",
+      "credibilidad": 89,
+      "consejo": "Habla con devoción por la materia.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Iba a estudiar el domingo pero la técnica Pomodoro me dijo que descansara 25 minutos y se me hicieron las 3 de la mañana.",
+      "credibilidad": 70,
+      "consejo": "Compártelo en el grupo de clase.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "El campus virtual se cae a propósito los domingos por la noche para que los alumnos aprendan a tolerar la frustración laboral.",
+      "credibilidad": 80,
+      "consejo": "Muestra capturas de error 504 Gateway Timeout.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Suspender este parcial es solo un paso en el camino del aprendizaje. El fracaso es la semilla del éxito futuro.",
+      "credibilidad": 45,
+      "consejo": "Acepta la nota con una reverencia budista.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Pareja & Citas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Pareja & Citas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Los acontecimientos recientes en el sector de Pareja & Citas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Pareja & Citas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Pareja & Citas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de Pareja & Citas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Pareja & Citas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Pareja & Citas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Los acontecimientos recientes en el sector de Pareja & Citas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Pareja & Citas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Pareja & Citas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Los acontecimientos recientes en el sector de Pareja & Citas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Pareja & Citas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Pareja & Citas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Los acontecimientos recientes en el sector de Pareja & Citas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Pareja & Citas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Pareja & Citas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "pareja",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Los acontecimientos recientes en el sector de Pareja & Citas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Amigos & Salidas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Amigos & Salidas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Los acontecimientos recientes en el sector de Amigos & Salidas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Amigos & Salidas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Amigos & Salidas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de Amigos & Salidas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Amigos & Salidas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Amigos & Salidas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Los acontecimientos recientes en el sector de Amigos & Salidas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Amigos & Salidas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Amigos & Salidas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Los acontecimientos recientes en el sector de Amigos & Salidas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Amigos & Salidas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Amigos & Salidas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Los acontecimientos recientes en el sector de Amigos & Salidas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Amigos & Salidas, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Amigos & Salidas me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "amigos",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Los acontecimientos recientes en el sector de Amigos & Salidas han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Familia & Compromisos, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Familia & Compromisos me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "familia",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Los acontecimientos recientes en el sector de Familia & Compromisos han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Los acontecimientos recientes en el sector de Gimnasio & Salud han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de Gimnasio & Salud han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Los acontecimientos recientes en el sector de Gimnasio & Salud han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Los acontecimientos recientes en el sector de Gimnasio & Salud han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Los acontecimientos recientes en el sector de Gimnasio & Salud han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Gimnasio & Salud, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Gimnasio & Salud me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "gimnasio",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Los acontecimientos recientes en el sector de Gimnasio & Salud han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Los acontecimientos recientes en el sector de WhatsApp & Redes han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de WhatsApp & Redes han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Los acontecimientos recientes en el sector de WhatsApp & Redes han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Los acontecimientos recientes en el sector de WhatsApp & Redes han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Los acontecimientos recientes en el sector de WhatsApp & Redes han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de WhatsApp & Redes, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de WhatsApp & Redes me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "chats",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Los acontecimientos recientes en el sector de WhatsApp & Redes han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Los acontecimientos recientes en el sector de Dinero & Compras han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de Dinero & Compras han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Los acontecimientos recientes en el sector de Dinero & Compras han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Los acontecimientos recientes en el sector de Dinero & Compras han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Los acontecimientos recientes en el sector de Dinero & Compras han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Dinero & Compras, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Dinero & Compras me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "dinero",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Los acontecimientos recientes en el sector de Dinero & Compras han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "leve",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "media",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "formal",
+      "texto": "Los acontecimientos recientes en el sector de Estudios & Universidad han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "cientifico",
+      "texto": "Los acontecimientos recientes en el sector de Estudios & Universidad han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "dramatico",
+      "texto": "Los acontecimientos recientes en el sector de Estudios & Universidad han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "caradura",
+      "texto": "Los acontecimientos recientes en el sector de Estudios & Universidad han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "conspiranoico",
+      "texto": "Los acontecimientos recientes en el sector de Estudios & Universidad han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Por una reconfiguración imprevista en mis protocolos prioritarios en el ámbito de Estudios & Universidad, me veo en la necesidad de reprogramar esta acción.",
+      "credibilidad": 88,
+      "consejo": "Mantén la compostura y no des explicaciones no solicitadas.",
+      "variante": 1
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Una alteración temporal en el flujo habitual de Estudios & Universidad me ha impedido culminar este compromiso con el estándar habitual de excelencia.",
+      "credibilidad": 84,
+      "consejo": "Ofrece una solución alternativa para dentro de 48 horas.",
+      "variante": 2
+    },
+    {
+      "ambito": "estudios",
+      "gravedad": "critica",
+      "tono": "zen",
+      "texto": "Los acontecimientos recientes en el sector de Estudios & Universidad han alcanzado un punto crítico que requería mi intervención personal inmediata.",
+      "credibilidad": 86,
+      "consejo": "Apaga las notificaciones durante un par de horas.",
+      "variante": 3
+    }
+  ]
+}

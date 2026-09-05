@@ -1,0 +1,107 @@
+{
+  "id": "trampas-mentales",
+  "slug": "trampas-mentales",
+  "titulo": "¿Tu Cerebro te Engaña? Desafío de Sesgos y Paradojas",
+  "subtitulo": "6 trampas cognitivas y paradojas lógicas donde tu intuición fallará casi seguro.",
+  "descripcionCorta": "Pon a prueba tu pensamiento crítico frente a paradojas de probabilidad, falacias cotidianas e ilusiones del razonamiento.",
+  "tipo": "enigma",
+  "categoria": "logica",
+  "categoriaLabel": "Lógica & Paradojas",
+  "icono": "🧠",
+  "tiempoMin": 5,
+  "color": "#8b5cf6",
+  "enigmas": [
+    {
+      "id": "tm1",
+      "titulo": "Trampa 1: El Dilema de Monty Hall",
+      "planteamiento": "Estás en un concurso de televisión frente a **3 puertas cerradas**:\n- Tras una de ellas hay un **coche deportivo nuevo**.\n- Tras las otras dos hay **cabras**.\n\nEliges la **Puerta 1**. El presentador, que sabe perfectamente qué hay tras cada puerta, abre la **Puerta 3** y te muestra una cabra.\n\nLuego te pregunta: *«¿Deseas cambiar tu elección a la Puerta 2, o te quedas con la Puerta 1?»*\n\n¿Qué te conviene hacer matemáticamente?",
+      "pistas": [
+        "Pista 1: Cuando elegiste la Puerta 1 al principio, tu probabilidad de acertar era exactamente de 1/3 (33.3%).",
+        "Pista 2: La probabilidad de que el coche estuviera en una de las OTRAS DOS puertas combinadas era de 2/3 (66.6%).",
+        "Pista 3: El presentador ha eliminado deliberadamente una puerta perdedora del grupo del 2/3, concentrando toda esa probabilidad en la puerta restante."
+      ],
+      "opciones": [
+        { "id": "quedarse", "texto": "Quedarse con la Puerta 1 (Da igual, ahora es 50% de probabilidad)", "correcta": false },
+        { "id": "cambiar", "texto": "Cambiar SIEMPRE a la Puerta 2 (Duplicas tus probabilidades al 66.6%)", "correcta": true },
+        { "id": "indiferente", "texto": "Es indiferente, el destino ya está escrito", "correcta": false }
+      ],
+      "explicacion": "¡Exacto! Aunque el sentido común nos grita «ahora quedan 2 puertas, es 50/50», la matemática demuestra que **cambiar duplica tus opciones de ganar (2 de cada 3 veces ganarás)**. Al principio tu puerta tenía solo 1/3 de probabilidad; el presentador te 'regala' la información del otro 2/3 eliminando la cabra."
+    },
+    {
+      "id": "tm2",
+      "titulo": "Trampa 2: El Bate y la Pelota (Efecto Reflejo)",
+      "planteamiento": "Un bate de béisbol y una pelota cuestan en total **1,10 €**.\n\nEl bate cuesta **1,00 € más que la pelota**.\n\n¿Cuánto cuesta la pelota?",
+      "pistas": [
+        "Pista 1: No respondas con el primer número intuitivo que salte a tu cabeza sin hacer la resta formal.",
+        "Pista 2: Si la pelota costase 0,10 €, y el bate cuesta 1,00 € más, el bate costaría 1,10 € y el total sería 1,20 €.",
+        "Pista 3: Plantea la ecuación: Bate + Pelota = 1,10  =>  (Pelota + 1,00) + Pelota = 1,10."
+      ],
+      "opciones": [
+        { "id": "diez", "texto": "0,10 € (10 céntimos)", "correcta": false },
+        { "id": "cinco", "texto": "0,05 € (5 céntimos)", "correcta": true },
+        { "id": "uno", "texto": "0,01 € (1 céntimo)", "correcta": false }
+      ],
+      "explicacion": "¡Bien pensado! El cerebro humano adora los atajos rápidos y casi todo el mundo responde impulsivamente «10 céntimos». Pero si la pelota cuesta **0,05 €**, el bate cuesta **1,05 €** (1 € más), sumando exactamente **1,10 €**."
+    },
+    {
+      "id": "tm3",
+      "titulo": "Trampa 3: La Falacia del Jugador en la Ruleta",
+      "planteamiento": "En una mesa de ruleta de casino perfectamente equilibrada, la bola ha caído en la casilla **ROJO 7 veces consecutivas**.\n\nLos jugadores a tu alrededor comienzan a apostar grandes sumas al **NEGRO**, argumentando que «por estadística ya toca que salga negro para compensar la racha».\n\n¿Cuál es la probabilidad real de que en la siguiente tirada salga NEGRO?",
+      "pistas": [
+        "Pista 1: ¿Tiene la ruleta memoria de los giros anteriores?",
+        "Pista 2: Cada tirada es un evento estadístico completamente independiente."
+      ],
+      "opciones": [
+        { "id": "mayor", "texto": "Mucho mayor que el 50%, la ley de los grandes números debe equilibrar la racha.", "correcta": false },
+        { "id": "exacta", "texto": "Exactamente la misma de siempre (~48.6% por la presencia del cero verde).", "correcta": true },
+        { "id": "menor", "texto": "Menor, porque la mesa está 'en racha caliente' de rojo.", "correcta": false }
+      ],
+      "explicacion": "¡Correcto! Esta es la clásica **Falacia del Jugador**. La bola de la ruleta no tiene memoria ni conciencia; cada giro es 100% independiente. Creer que una racha anterior 'fuerza' un resultado futuro ha arruinado a miles de apostadores en la historia."
+    },
+    {
+      "id": "tm4",
+      "titulo": "Trampa 4: La Paradoja de Linda (Falacia de Conjunción)",
+      "planteamiento": "Linda tiene 31 años, es soltera, abierta de mente y muy brillante. Estudió filosofía. Como estudiante, estuvo profundamente preocupada por los problemas de discriminación y justicia social, y participó en manifestaciones antinucleares.\n\n¿Cuál de las siguientes afirmaciones es **estadísticamente más probable**?",
+      "pistas": [
+        "Pista 1: Fíjate en los conjuntos matemáticos, no en la descripción narrativa del personaje.",
+        "Pista 2: La probabilidad de que ocurra un evento A siempre es mayor o igual a que ocurran A y B al mismo tiempo."
+      ],
+      "opciones": [
+        { "id": "a", "texto": "Linda es cajera de un banco.", "correcta": true },
+        { "id": "b", "texto": "Linda es cajera de un banco y está activa en el movimiento feminista.", "correcta": false }
+      ],
+      "explicacion": "¡Brillante! Esta es la famosa paradoja de Kahneman y Tversky. Aunque la descripción nos empuje a elegir la opción B, **un solo evento (ser cajera) SIEMPRE es más probable que dos eventos simultáneos (ser cajera Y además feminista)**. El subconjunto de cajeras feministas está contenido dentro del conjunto total de cajeras."
+    },
+    {
+      "id": "tm5",
+      "titulo": "Trampa 5: Las 5 Máquinas de la Fábrica",
+      "planteamiento": "Si **5 máquinas** tardan **5 minutos** en fabricar **5 piezas de motor**...\n\n¿Cuánto tiempo tardarán **100 máquinas** en fabricar **100 piezas de motor**?",
+      "pistas": [
+        "Pista 1: Calcula cuánto tarda UNA sola máquina en fabricar UNA sola pieza.",
+        "Pista 2: Cada máquina trabaja en paralelo e independiente de las demás."
+      ],
+      "opciones": [
+        { "id": "cien", "texto": "100 minutos", "correcta": false },
+        { "id": "cinco", "texto": "5 minutos", "correcta": true },
+        { "id": "uno", "texto": "1 minuto", "correcta": false },
+        { "id": "veinte", "texto": "20 minutos", "correcta": false }
+      ],
+      "explicacion": "¡Acertaste! Si 5 máquinas hacen 5 piezas en 5 minutos, significa que **cada máquina tarda 5 minutos en completar 1 pieza**. Por tanto, 100 máquinas trabajando al unísono producirán 100 piezas en exactamente los mismos **5 minutos**."
+    },
+    {
+      "id": "tm6",
+      "titulo": "Trampa 6: El Sesgo de Supervivencia",
+      "planteamiento": "Durante la Segunda Guerra Mundial, los ingenieros analizaron los aviones que regresaban del combate llenos de agujeros de bala para reforzarlos con blindaje adicional. Los impactos se concentraban en **las alas y el fuselaje central**, mientras que los motores apenas tenían impactos.\n\n¿Dónde recomendó el estadístico Abraham Wald colocar el blindaje?",
+      "pistas": [
+        "Pista 1: Recuerda que solo estaban analizando los aviones que LOGRABAN REGRESAR a la base.",
+        "Pista 2: ¿Qué pasó con los aviones a los que dispararon en los motores?"
+      ],
+      "opciones": [
+        { "id": "alas", "texto": "En las alas y el fuselaje, donde había más impactos visibles.", "correcta": false },
+        { "id": "motores", "texto": "En los motores y cabina, donde NO había impactos en los aviones que volvían.", "correcta": true },
+        { "id": "repartido", "texto": "Repartido uniformemente por todo el avión a partes iguales.", "correcta": false }
+      ],
+      "explicacion": "¡Extraordinario! Wald identificó el **Sesgo del Superviviente**: los aviones con disparos en las alas podían volar de vuelta a la base; los aviones que recibían impactos en los motores caían al mar y jamás eran examinados. Había que proteger las partes 'sin agujeros'."
+    }
+  ]
+}

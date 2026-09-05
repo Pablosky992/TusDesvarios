@@ -1,0 +1,364 @@
+{
+  "leyes": [
+    {
+      "id": "l01",
+      "numero": "01",
+      "icono": "✈️",
+      "categoria": "Viajes & Aeropuertos",
+      "nombre": "La Ley de la Puerta de Embarque Lejana",
+      "descripcion": "Si llegas con 3 horas de antelación, tu puerta será la 02 (a 10 metros del control). Si llegas corriendo con 15 minutos de margen, tu puerta será la 98-Z, ubicada en otra provincia a 4 kilómetros a pie.",
+      "probabilidad": "99.9%",
+      "consejo": "Lleva zapatillas de running siempre al aeropuerto."
+    },
+    {
+      "id": "l02",
+      "numero": "02",
+      "icono": "👕",
+      "categoria": "Ropa & Citas",
+      "nombre": "El Teorema de la Salsa en Camisa Blanca",
+      "descripcion": "La probabilidad de que una gota de salsa de tomate o aceite caiga directamente en el centro de tu prenda blanca es directamente proporcional a lo importante que sea la cita o reunión.",
+      "probabilidad": "98.8%",
+      "consejo": "Pide agua sin gas y pan seco si quieres conservar la dignidad."
+    },
+    {
+      "id": "l03",
+      "numero": "03",
+      "icono": "🚿",
+      "categoria": "Hogar & Entregas",
+      "nombre": "El Postulado del Timbre y el Champú",
+      "descripcion": "El repartidor tocará el timbre de tu casa exactamente 4 segundos después de que te hayas enjabonado la cabeza y tengas los ojos llenos de espuma.",
+      "probabilidad": "100%",
+      "consejo": "Pon un felpudo que diga 'Déjalo detrás de la maceta'."
+    },
+    {
+      "id": "l04",
+      "numero": "04",
+      "icono": "🛒",
+      "categoria": "Supermercado",
+      "nombre": "La Paradoja de la Caja Rápida",
+      "descripcion": "La cola que elijas siempre se detendrá porque la persona de delante sacará un cupón caducado de 2017 o porque un bote de pepinillos no tiene código de barras.",
+      "probabilidad": "99.2%",
+      "consejo": "Si te cambias de fila, la nueva fila se congelará al instante."
+    },
+    {
+      "id": "l05",
+      "numero": "05",
+      "icono": "💻",
+      "categoria": "Trabajo & Teams",
+      "nombre": "La Constante del Micrófono Silenciado",
+      "descripcion": "Dirás el discurso más brillante e inspirador de tu carrera mientras estás silenciado. Sin embargo, cuando olvides mutearte, se escuchará el estruendo de tu gato tirando la vajilla.",
+      "probabilidad": "99.5%",
+      "consejo": "Comprueba el icono rojo del micro cada 15 segundos."
+    },
+    {
+      "id": "l06",
+      "numero": "06",
+      "icono": "🍞",
+      "categoria": "Cocina",
+      "nombre": "La Ley de la Tostada y la Alfombra",
+      "descripcion": "La probabilidad de que una tostada caiga del lado de la mantequilla es directamente proporcional al valor monetario y la dificultad de limpieza de la alfombra sobre la que cae.",
+      "probabilidad": "100%",
+      "consejo": "Desayuna de pie sobre baldosas o unta la tostada en el aire."
+    },
+    {
+      "id": "l07",
+      "numero": "07",
+      "icono": "🖨️",
+      "categoria": "Oficina & Hardware",
+      "nombre": "El Principio de Inteligencia Emocional de la Impresora",
+      "descripcion": "Las impresoras huelen el miedo y la prisa. Si necesitas imprimir un billete de tren o un contrato urgente 5 minutos antes de salir, fingirá un atasco de papel fantasma sin papel atascado.",
+      "probabilidad": "99.7%",
+      "consejo": "Imprime con cara de desinterés total para que el dispositivo no detecte tu angustia."
+    },
+    {
+      "id": "l08",
+      "numero": "08",
+      "icono": "🌂",
+      "categoria": "Clima & Meteorología",
+      "nombre": "El Efecto Repulsor del Paraguas",
+      "descripcion": "Si sales de casa cargando un paraguas grande e incómodo, brillará un sol radiante de 30 grados. Si decides dejarlo en casa porque 'no parece que vaya a llover', se desatará el diluvio universal.",
+      "probabilidad": "98.4%",
+      "consejo": "Carga un paraguas roto para engañar a los cúmulos atmosféricos."
+    },
+    {
+      "id": "l09",
+      "numero": "09",
+      "icono": "🔋",
+      "categoria": "Smartphones",
+      "nombre": "La Ley del Último 1% de Batería",
+      "descripcion": "El 1% de batería de tu móvil dura 45 minutos si estás en el sofá mirando memes, pero dura 3 segundos exactos si necesitas abrir la app del billete de metro para que te abra el torno.",
+      "probabilidad": "97.9%",
+      "consejo": "Lleva el brillo al mínimo y no respires sobre la pantalla."
+    },
+    {
+      "id": "l10",
+      "numero": "10",
+      "icono": "🚦",
+      "categoria": "Tráfico & Conducción",
+      "nombre": "La Sincronía del Semáforo en Rojo",
+      "descripcion": "Si vas con tiempo de sobra, todos los semáforos estarán en verde. Si vas 4 minutos tarde a una entrevista, pillarás la secuencia completa de 14 semáforos en rojo consecutivos.",
+      "probabilidad": "96.8%",
+      "consejo": "Sal de casa ayer."
+    },
+    {
+      "id": "l11",
+      "numero": "11",
+      "icono": "🎧",
+      "categoria": "Física Cuántica de Bolsillo",
+      "nombre": "El Enredo Cuántico de los Cables de Auriculares",
+      "descripcion": "Un cable introducido recto y en perfecto orden en un bolsillo vacío durante 30 segundos generará espontáneamente un nudo marinero de ocho cabos imposible de desatar en menos de 4 minutos.",
+      "probabilidad": "100%",
+      "consejo": "Pásate al Bluetooth o asume el minijuego de paciencia diaria."
+    },
+    {
+      "id": "l12",
+      "numero": "12",
+      "icono": "🧦",
+      "categoria": "Lavandería & Agujeros Negros",
+      "nombre": "El Vórtice Dimensional de la Lavadora",
+      "descripcion": "Siempre que metas un número par de calcetines a la lavadora, saldrá un número impar. La lavadora cobra un diezmo de un calcetín por ciclo como tributo a otra dimensión.",
+      "probabilidad": "99.1%",
+      "consejo": "Compra 20 pares idénticos y no intentes emparejarlos jamás."
+    },
+    {
+      "id": "l13",
+      "numero": "13",
+      "icono": "🔑",
+      "categoria": "Bolsillos & Mochilas",
+      "nombre": "La Ley del Último Bolsillo",
+      "descripcion": "La llave, tarjeta o moneda que estás buscando siempre estará en el último bolsillo o compartimento en el que mires. Si empiezas buscando en el último, se teletransportará al primero.",
+      "probabilidad": "98.7%",
+      "consejo": "Vacía todo el contenido de la mochila en el suelo con dignidad."
+    },
+    {
+      "id": "l14",
+      "numero": "14",
+      "icono": "☕",
+      "categoria": "Termodinámica Matutina",
+      "nombre": "El Descenso Térmico Instantáneo del Café",
+      "descripcion": "El café recién servido está a temperatura de lava volcánica durante 10 minutos. En cuanto te distraes 15 segundos leyendo un correo, pasa a estar a 3 grados bajo cero.",
+      "probabilidad": "95.6%",
+      "consejo": "Bébetelo en los 4 segundos en que la temperatura es humana."
+    },
+    {
+      "id": "l15",
+      "numero": "15",
+      "icono": "🦟",
+      "categoria": "Naturaleza & Sueño",
+      "nombre": "La Ley del Mosquito Ninja",
+      "descripcion": "El mosquito volará en círculos alrededor de tu oreja haciendo ruido de turbina solo cuando apagues la luz. En cuanto enciendas la lámpara para cazarlo, se camuflará en la 4ª dimensión.",
+      "probabilidad": "100%",
+      "consejo": "Tápate la cabeza con la sábana y acepta tu derrota."
+    },
+    {
+      "id": "l16",
+      "numero": "16",
+      "icono": "📦",
+      "categoria": "Compras Online",
+      "nombre": "La Teoría de la Ausencia Programada",
+      "descripcion": "Estarás 8 horas esperando en casa sin moverte y no vendrá nadie. En los 3 minutos que bajas a tirar la basura a la esquina, el repartidor dejará el papelito de 'Ausente en domicilio'.",
+      "probabilidad": "99.3%",
+      "consejo": "No tires la basura hasta que recibas el paquete."
+    },
+    {
+      "id": "l17",
+      "numero": "17",
+      "icono": "🚗",
+      "categoria": "Aparcamiento & Ciudad",
+      "nombre": "El Efecto Espejismo de la Plaza Libre",
+      "descripcion": "Cuando veas un hueco perfecto para aparcar en una calle llena, al acercarte descubrirás que hay un Smart o una moto aparcada al fondo que era invisible desde lejos.",
+      "probabilidad": "98.1%",
+      "consejo": "No cantes victoria hasta tener el freno de mano puesto."
+    },
+    {
+      "id": "l18",
+      "numero": "18",
+      "icono": "🔌",
+      "categoria": "Hardware USB",
+      "nombre": "La Trilogía del Conector USB-A",
+      "descripcion": "Cualquier conector USB entrará mal la primera vez. Lo girarás 180° y seguirá sin entrar. Lo volverás a girar a la posición inicial y entrará suavemente a la tercera.",
+      "probabilidad": "100%",
+      "consejo": "El USB opera en un espacio tridimensional cuántico."
+    },
+    {
+      "id": "l19",
+      "numero": "19",
+      "icono": "🍕",
+      "categoria": "Gastronomía Nocturna",
+      "nombre": "La Temperatura Asimétrica del Queso",
+      "descripcion": "El borde de la pizza estará frío, pero el queso fundido del centro conservará la temperatura de la superficie solar, arrancándote el paladar en el primer bocado.",
+      "probabilidad": "96.4%",
+      "consejo": "Sopla durante 4 minutos antes de morder."
+    },
+    {
+      "id": "l20",
+      "numero": "20",
+      "icono": "🚌",
+      "categoria": "Transporte Público",
+      "nombre": "El Enjambre de Autobuses",
+      "descripcion": "Esperarás 28 minutos por tu línea de autobús en una parada desierta. En el minuto 29 llegarán tres autobuses idénticos de la misma línea pegados uno detrás de otro.",
+      "probabilidad": "99.0%",
+      "consejo": "Súbete al tercero, que siempre va vacío."
+    },
+    {
+      "id": "l21",
+      "numero": "21",
+      "icono": "🔨",
+      "categoria": "Bricolaje Casero",
+      "nombre": "El Tornillo Huérfano de IKEA",
+      "descripcion": "Al terminar de montar cualquier mueble con 400 piezas, siempre sobrará exactamente un tornillo misterioso y una llave allen. El mueble aguantará 10 años, pero la duda te atormentará siempre.",
+      "probabilidad": "97.5%",
+      "consejo": "Guarda el tornillo en un cajón con otros 14 tornillos huérfanos."
+    },
+    {
+      "id": "l22",
+      "numero": "22",
+      "icono": "🕶️",
+      "categoria": "Gafas & Despistes",
+      "nombre": "La Búsqueda de las Gafas Puestas",
+      "descripcion": "El tiempo dedicado a buscar desesperadamente tus gafas por toda la casa es inversamente proporcional a la distancia a tu cabeza: en el 90% de los casos las llevas puestas en la frente.",
+      "probabilidad": "94.2%",
+      "consejo": "Tócate la frente antes de poner una denuncia de robo."
+    },
+    {
+      "id": "l23",
+      "numero": "23",
+      "icono": "📱",
+      "categoria": "Redes Sociales",
+      "nombre": "El Like Traicionero del Año 2014",
+      "descripcion": "Al investigar el perfil de Instagram de alguien que acabas de conocer, tu dedo sufrirá un espasmo involuntario sobre una foto de sus vacaciones de hace 9 años.",
+      "probabilidad": "96.0%",
+      "consejo": "Bloquea tu cuenta, apaga el router y cámbiate de nombre legalmente."
+    },
+    {
+      "id": "l24",
+      "numero": "24",
+      "icono": "💤",
+      "categoria": "Descanso & Siesta",
+      "nombre": "El Agujero Negro de la Siesta de 20 Minutos",
+      "descripcion": "Te tumbarás a las 15:30 para 'descansar los ojos 20 minutos' y te despertarás a las 20:45 en un estado de confusión espacial sin saber qué año es ni cómo te llamas.",
+      "probabilidad": "98.6%",
+      "consejo": "Bébete un vaso de agua y comprueba el calendario del teléfono."
+    },
+    {
+      "id": "l25",
+      "numero": "25",
+      "icono": "💻",
+      "categoria": "Navegadores & Pestañas",
+      "nombre": "La Pestaña con Música Fantasma",
+      "descripcion": "Si tienes 42 pestañas abiertas en el navegador y una de ellas empieza a reproducir un anuncio con música estridente a todo volumen, tardarás 6 minutos en encontrar cuál tiene el icono de altavoz.",
+      "probabilidad": "99.4%",
+      "consejo": "Cierra el navegador entero de golpe y empieza una nueva vida."
+    },
+    {
+      "id": "l26",
+      "numero": "26",
+      "icono": "🚪",
+      "categoria": "Puertas & Física Aplicada",
+      "nombre": "La Paradoja de Empujar vs Tirar",
+      "descripcion": "No importa que la puerta de cristal tenga un cartel gigante en letras mayúsculas que diga 'EMPUJAR'; tirarás de ella con fuerza sobrehumana ante la mirada atónita de 12 personas.",
+      "probabilidad": "97.8%",
+      "consejo": "Disimula diciendo que estabas comprobando la resistencia de las bisagras."
+    },
+    {
+      "id": "l27",
+      "numero": "27",
+      "icono": "🛒",
+      "categoria": "Supermercado & Carritos",
+      "nombre": "La Rueda Rota del Carrito",
+      "descripcion": "De los 200 carritos alineados a la entrada, siempre escogerás el único que tiene una rueda delantera trabada que gira en círculos a 300 rpm chirriando por todo el supermercado.",
+      "probabilidad": "98.9%",
+      "consejo": "Acepta que hoy tu compra será una sesión intensa de bíceps y dirección asistida."
+    },
+    {
+      "id": "l28",
+      "numero": "28",
+      "icono": "🧼",
+      "categoria": "Ducha & Balística",
+      "nombre": "El Proyectil Jabonoso",
+      "descripcion": "Si se te resbala la pastilla de jabón en la ducha, no caerá al suelo en línea recta; adquirirá velocidad supersónica rebotando en 4 azulejos para alojarse en la esquina más lejana bajo el plato.",
+      "probabilidad": "99.1%",
+      "consejo": "Usa gel líquido o una cuerda atada al jabón."
+    },
+    {
+      "id": "l29",
+      "numero": "29",
+      "icono": "🧻",
+      "categoria": "Baño & Suministros",
+      "nombre": "El Último Cuadrado de Papel",
+      "descripcion": "El rollo de papel higiénico se acabará exactamente en el momento en que estés solo en casa y el paquete de repuesto esté en el armario del pasillo a 8 metros de distancia.",
+      "probabilidad": "100%",
+      "consejo": "Comprueba el rollo antes de sentarte como si fuera el despegue de un cohete."
+    },
+    {
+      "id": "l30",
+      "numero": "30",
+      "icono": "🌧️",
+      "categoria": "Coches & Meteorología",
+      "nombre": "El Imán de Lluvia del Coche Limpio",
+      "descripcion": "Gastar 15 euros en lavar tu coche con cera, abrillantador y aspirado a fondo provocará una tormenta con barro y una convención de palomas sobre tu techo en menos de 90 minutos.",
+      "probabilidad": "98.5%",
+      "consejo": "Deja siempre una capa de polvo protectora."
+    },
+    {
+      "id": "l31",
+      "numero": "31",
+      "icono": "☕",
+      "categoria": "Microondas & Termodinámica",
+      "nombre": "La Taza de Lava con Café Helado",
+      "descripcion": "Tras calentar el café en el microondas durante 1 minuto, el asa de la taza alcanzará la temperatura del núcleo terrestre mientras que el líquido del interior seguirá a 4 grados centígrados.",
+      "probabilidad": "97.3%",
+      "consejo": "Coge la taza con un trapo de cocina acolchado."
+    },
+    {
+      "id": "l32",
+      "numero": "32",
+      "icono": "🔑",
+      "categoria": "Bolsas & Gravedad",
+      "nombre": "El Dilema de las Bolsas de la Compra y la Llave",
+      "descripcion": "Llevarás 6 bolsas pesadas cortándote la circulación de los dedos en ambas manos: la llave de la puerta estará siempre en el bolsillo del pantalón más ajustado y profundo.",
+      "probabilidad": "99.6%",
+      "consejo": "Saca la llave antes de salir del coche o del ascensor."
+    },
+    {
+      "id": "l33",
+      "numero": "33",
+      "icono": "📱",
+      "categoria": "Mensajería & Autocorrector",
+      "nombre": "La Traición del Autocorrector Formal",
+      "descripcion": "El autocorrector del móvil no corregirá tus faltas de ortografía reales, pero cambiará 'un cordial saludo' por 'un cordial salchichón' en un email enviado a la dirección general.",
+      "probabilidad": "96.7%",
+      "consejo": "Relee los correos dos veces antes de pulsar enviar."
+    },
+    {
+      "id": "l34",
+      "numero": "34",
+      "icono": "🪞",
+      "categoria": "Ascensores & Espejos",
+      "nombre": "La Iluminación Cruel del Ascensor",
+      "descripcion": "Te verás radiante en el espejo de tu baño antes de salir; al entrar al ascensor del trabajo con luz de tubo fluorescente descubrirás una mancha gigante de pasta de dientes en el cuello.",
+      "probabilidad": "95.9%",
+      "consejo": "Revisa tu reflejo a la luz natural de la calle."
+    },
+    {
+      "id": "l35",
+      "numero": "35",
+      "icono": "🍕",
+      "categoria": "Entregas & Repartidores",
+      "nombre": "La Sincronía del Repartidor y el Baño",
+      "descripcion": "El pedido de comida a domicilio tardará 45 minutos sin dar señales de vida; en el segundo exacto en que te metas al baño a lavarte las manos sonará el timbre con insistencia.",
+      "probabilidad": "99.2%",
+      "consejo": "Lávate las manos en la cocina vigilando la puerta."
+    },
+    {
+      "id": "l36",
+      "numero": "36",
+      "icono": "⏰",
+      "categoria": "Fines de Semana & Ritmos",
+      "nombre": "El Despertar Espontáneo del Sábado",
+      "descripcion": "De lunes a viernes necesitarás 4 alarmas y una grúa para salir de la cama a las 07:30; el sábado te despertarás a las 06:45 con energía de maratoniano sin poder volver a dormirte.",
+      "probabilidad": "98.1%",
+      "consejo": "Aprovecha para prepararte un desayuno de tres platos con tranquilidad."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "curiosidades-insolitas",
+  "slug": "curiosidades-insolitas",
+  "titulo": "¿Mito, Realidad o Desvarío? 8 Hechos Insólitos del Mundo",
+  "subtitulo": "Adivina si estas afirmaciones históricas y científicas son 100% reales o pura invención.",
+  "descripcionCorta": "8 afirmaciones tan disparatadas que parecen ficción. Descubre si tu detector de desvaríos está bien calibrado.",
+  "tipo": "enigma",
+  "categoria": "curiosidades",
+  "categoriaLabel": "Curiosidades & Trivia",
+  "icono": "🌍",
+  "tiempoMin": 4,
+  "color": "#3b82f6",
+  "enigmas": [
+    {
+      "id": "ci1",
+      "titulo": "Curiosidad 1: Los Tiburones y los Árboles",
+      "planteamiento": "**Afirmación:** *«Los tiburones aparecieron en el planeta Tierra mucho antes de que existieran los primeros árboles y antes que los dinosaurios y los anillos de Saturno.»*\n\n¿Es esta afirmación Real o un Desvarío inventado?",
+      "pistas": [
+        "Pista 1: Los fósiles de escamas de tiburón más antiguos datan de hace más de 400 millones de años.",
+        "Pista 2: Las primeras plantas leñosas (árboles primitivos como Archaeopteris) aparecieron hace unos 350 millones de años."
+      ],
+      "opciones": [
+        { "id": "real", "texto": "VERDADERO (100% Real)", "correcta": true },
+        { "id": "mito", "texto": "FALSO (Mito / Desvarío)", "correcta": false }
+      ],
+      "explicacion": "¡Es 100% REAL! Los tiburones tienen más de **400 millones de años de antigüedad**, mientras que los primeros árboles aparecieron hace unos 350 millones de años y los dinosaurios hace 230 millones. ¡Los tiburones han sobrevivido a cuatro extinciones masivas!"
+    },
+    {
+      "id": "ci2",
+      "titulo": "Curiosidad 2: Cleopatra y el iPhone",
+      "planteamiento": "**Afirmación:** *«La reina Cleopatra vivió cronológicamente más cerca en el tiempo del lanzamiento del primer iPhone (año 2007) que de la construcción de la Gran Pirámide de Guiza.»*\n\n¿Es esta afirmación Real o un Mito?",
+      "pistas": [
+        "Pista 1: La Gran Pirámide de Guiza fue construida hacia el año 2560 a.C.",
+        "Pista 2: Cleopatra reinó en Egipto entre el 51 a.C. y el 30 a.C."
+      ],
+      "opciones": [
+        { "id": "real", "texto": "VERDADERO (100% Real)", "correcta": true },
+        { "id": "mito", "texto": "FALSO (Mito / Desvarío)", "correcta": false }
+      ],
+      "explicacion": "¡Es 100% REAL! La Gran Pirámide se construyó en torno al 2560 a.C. (~2.500 años antes de Cleopatra). Cleopatra vivió en el año 30 a.C., es decir, a solo **2.037 años del primer iPhone (2007)**. ¡Cleopatra estaba más cerca de Steve Jobs que de los constructores de las pirámides!"
+    },
+    {
+      "id": "ci3",
+      "titulo": "Curiosidad 3: La Gran Guerra del Emú",
+      "planteamiento": "**Afirmación:** *«En 1932, el ejército de Australia declaró oficialmente la guerra militar a una población de 20.000 aves emús con soldados armados con ametralladoras pesadas... y los emús ganaron la guerra.»*\n\n¿Es esto un hecho histórico o una leyenda urbana?",
+      "pistas": [
+        "Pista 1: Ocurrió en Australia Occidental tras las quejas de los granjeros por el destrozo de sus cultivos de trigo.",
+        "Pista 2: Los emús se dispersaban a gran velocidad en pequeños grupos tácticos imposibles de abatir con fuego de ametralladora."
+      ],
+      "opciones": [
+        { "id": "real", "texto": "VERDADERO (100% Real)", "correcta": true },
+        { "id": "mito", "texto": "FALSO (Mito / Desvarío)", "correcta": false }
+      ],
+      "explicacion": "¡Es 100% REAL! La **«Guerra del Emú»** de 1932 fue una operación militar oficial de Australia. Los soldados dispararon más de 10.000 proyectiles de ametralladora Lewis, pero las aves corrían a 50 km/h y esquivaban el fuego. El Mayor Meredith reconoció la derrota y retiró las tropas ante la 'astucia táctica de mando' de las aves."
+    },
+    {
+      "id": "ci4",
+      "titulo": "Curiosidad 4: Las Nubes y su Peso de Pluma",
+      "planteamiento": "**Afirmación:** *«Una nube blanca esponjosa típica de verano (cúmulo de tamaño mediano) pesa menos de 50 kilogramos en total, por eso flota fácilmente en el aire.»*\n\n¿Es esta afirmación Real o un Mito científico?",
+      "pistas": [
+        "Pista 1: Una nube está compuesta por miles de millones de microgotas de agua condensada en un volumen gigantesco.",
+        "Pista 2: 1 metro cúbico de nube contiene alrededor de 0,5 gramos de agua, pero un cúmulo mide cientos de metros de ancho y alto."
+      ],
+      "opciones": [
+        { "id": "real", "texto": "VERDADERO (100% Real)", "correcta": false },
+        { "id": "mito", "texto": "FALSO (Mito / Desvarío)", "correcta": true }
+      ],
+      "explicacion": "¡Es FALSO! Un cúmulo medio pesa aproximadamente **500.000 kilogramos (unas 500 toneladas)**, ¡el equivalente a unos 100 elefantes adultos! Flota porque ese peso colosal está distribuido en millones de metros cúbicos de aire caliente y húmedo que asciende."
+    },
+    {
+      "id": "ci5",
+      "titulo": "Curiosidad 5: Los Hongos y el ADN Humano",
+      "planteamiento": "**Afirmación:** *«Genéticamente y a nivel evolutivo, los seres humanos estamos más emparentados con los hongos (setas, levaduras) que los hongos con las plantas verdes.»*\n\n¿Es esta afirmación Real o un Desvarío biológico?",
+      "pistas": [
+        "Pista 1: Tanto los animales como los hongos pertenecen al supergrupo de los opistocontos (*Opisthokonta*).",
+        "Pista 2: A diferencia de las plantas, los hongos no hacen fotosíntesis y sintetizan quitina, igual que los exoesqueletos de los insectos."
+      ],
+      "opciones": [
+        { "id": "real", "texto": "VERDADERO (100% Real)", "correcta": true },
+        { "id": "mito", "texto": "FALSO (Mito / Desvarío)", "correcta": false }
+      ],
+      "explicacion": "¡Es 100% REAL! En el árbol de la vida evolutivo, el reino *Fungi* (hongos) comparte un ancestro común más reciente con el reino animal (*Animalia*) que con el reino vegetal (*Plantae*). Respiran oxígeno, no hacen fotosíntesis y comparten estructuras moleculares con los animales."
+    },
+    {
+      "id": "ci6",
+      "titulo": "Curiosidad 6: La Lluvia de Peces de Yoro",
+      "planteamiento": "**Afirmación:** *«En la ciudad de Yoro (Honduras), ocurre anualmente desde hace más de un siglo un fenómeno meteorológico verificado donde llueven cientos de peces vivos del cielo tras una tormenta.»*\n\n¿Es este fenómeno Real o una fábula folclórica?",
+      "pistas": [
+        "Pista 1: El fenómeno se conoce como la 'Lluvia de Peces de Yoro' y se celebra cada año con un festival local.",
+        "Pista 2: La ciencia lo explica por trombas marinas o corrientes freáticas subterráneas que emergen tras lluvias torrenciales."
+      ],
+      "opciones": [
+        { "id": "real", "texto": "VERDADERO (100% Real)", "correcta": true },
+        { "id": "mito", "texto": "FALSO (Mito / Desvarío)", "correcta": false }
+      ],
+      "explicacion": "¡Es 100% REAL! La **Lluvia de Peces de Yoro** ocurre entre mayo y julio. Cientos de pequeños peces de agua dulce quedan esparcidos por el suelo tras tormentas devastadoras. National Geographic ha documentado el fenómeno, atribuido a tornados de agua o peces subterráneos cegados por corrientes de lluvia."
+    },
+    {
+      "id": "ci7",
+      "titulo": "Curiosidad 7: La Muralla China desde el Espacio",
+      "planteamiento": "**Afirmación:** *«La Gran Muralla China es la única construcción humana que se puede ver a simple vista desde la Luna sin telescopio ni prismáticos.»*\n\n¿Es esta afirmación Real o un Mito popular?",
+      "pistas": [
+        "Pista 1: La Muralla China tiene miles de kilómetros de longitud, pero su anchura promedio es de solo 5 a 6 metros.",
+        "Pista 2: Ver algo de 6 metros de ancho desde la Luna (a 384.000 km) equivaldría a ver un cabello humano a 3 kilómetros de distancia."
+      ],
+      "opciones": [
+        { "id": "real", "texto": "VERDADERO (100% Real)", "correcta": false },
+        { "id": "mito", "texto": "FALSO (Mito / Desvarío)", "correcta": true }
+      ],
+      "explicacion": "¡Es un MITO FALSO! Astronautas como Neil Armstrong y Yang Liwei han confirmado que la Gran Muralla es completamente invisible a simple vista desde el espacio y desde la Luna, ya que sus materiales (arcilla y piedra) se mimetizan con el terreno y su anchura es de apenas unos metros."
+    },
+    {
+      "id": "ci8",
+      "titulo": "Curiosidad 8: El Tiempo de los Mamuts y las Pirámides",
+      "planteamiento": "**Afirmación:** *«Aún quedaban mamuts lanudos vivos caminando por la Tierra mientras los egipcios estaban construyendo las Pirámides de Guiza.»*\n\n¿Es esta afirmación Real o un Desvarío anacrónico?",
+      "pistas": [
+        "Pista 1: Una población aislada de mamuts sobrevivió en la Isla de Wrangel (océano Ártico).",
+        "Pista 2: Esa población no se extinguió hasta aproximadamente el año 1650 a.C."
+      ],
+      "opciones": [
+        { "id": "real", "texto": "VERDADERO (100% Real)", "correcta": true },
+        { "id": "mito", "texto": "FALSO (Mito / Desvarío)", "correcta": false }
+      ],
+      "explicacion": "¡Es 100% REAL! Mientras la mayoría de mamuts continentales se extinguieron hace 10.000 años, una colonia relicta en la **Isla de Wrangel** sobrevivió hasta el año **1650 a.C.** Las pirámides de Guiza se construyeron hacia el 2560 a.C., por lo que los mamuts y los faraones compartieron el planeta durante casi mil años."
+    }
+  ]
+}

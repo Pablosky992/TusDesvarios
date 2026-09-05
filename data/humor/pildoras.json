@@ -1,0 +1,270 @@
+{
+  "pensamientos": [
+    {
+      "id": "p01",
+      "icono": "🦷",
+      "autor": "Anatomía Inquieta",
+      "titulo": "La Paradoja de los Dientes",
+      "contenido": "Tus dientes son los únicos huesos de tu cuerpo que limpias a diario con un cepillito mientras están vivos, pero si ves uno solo suelto encima de una mesa te da un terror absoluto."
+    },
+    {
+      "id": "p02",
+      "icono": "🪞",
+      "autor": "Física Doméstica",
+      "titulo": "El Enigma del Espejo",
+      "contenido": "Cuando te miras al espejo, te estás viendo técnicamente en el pasado: la luz tarda unos nanosegundos en rebotar en el cristal y llegar a tus ojos. Eres una reliquia histórica en riguroso directo."
+    },
+    {
+      "id": "p03",
+      "icono": "🎬",
+      "autor": "Economía del Ocio",
+      "titulo": "La Ilusión del Silencio",
+      "contenido": "El botón de 'Saltar intro' en las plataformas de streaming ha ahorrado a la humanidad más de 400.000 años acumulados de canciones de créditos repetitivas."
+    },
+    {
+      "id": "p04",
+      "icono": "🧊",
+      "autor": "Filosofía Nocturna",
+      "titulo": "El Misterio de la Nevera",
+      "contenido": "Abrir la nevera cada 15 minutos esperando que hayan aparecido nuevos alimentos mágicos es el equivalente analógico a recargar el feed de una red social sin conexión."
+    },
+    {
+      "id": "p05",
+      "icono": "🧽",
+      "autor": "Realidades de los 30s",
+      "titulo": "La Prueba Máxima de Madurez",
+      "contenido": "Ser adulto es estrenar una esponja de fregar nueva con una emoción genuina y pensar: 'Menudo poder de absorción, qué gran compra acabo de hacer'."
+    },
+    {
+      "id": "p06",
+      "icono": "🛌",
+      "autor": "Anatomía de la Decadencia",
+      "titulo": "El Dolor Inexplicable",
+      "contenido": "A los 15 años te caes de una bicicleta rodando por una colina y te levantas riendo. A los 35 duermes en un ángulo de 2 grados incorrecto con la almohada y quedas incapacitado para girar el cuello hasta el miércoles."
+    },
+    {
+      "id": "p07",
+      "icono": "☕",
+      "autor": "Química Matutina",
+      "titulo": "La Trampa del Café",
+      "contenido": "El café no te da energía real, simplemente pide un préstamo de energía a tu 'yo' del futuro con una tasa de interés devastadora para las 5 de la tarde."
+    },
+    {
+      "id": "p08",
+      "icono": "✈️",
+      "autor": "Logística Espacial",
+      "titulo": "El Avión y los Pasajeros",
+      "contenido": "Estamos encerrados en un tubo metálico presurizado a 900 km/h a 10.000 metros de altura sobre las nubes, y nuestra mayor preocupación es si los frutos secos son gratis."
+    },
+    {
+      "id": "p09",
+      "icono": "📱",
+      "autor": "Evolución Digital",
+      "titulo": "La Memoria Externa",
+      "contenido": "Llevamos en el bolsillo un dispositivo con acceso instantáneo a todo el conocimiento acumulado por la civilización humana desde el inicio de los tiempos... y lo usamos principalmente para ver vídeos de gatos peleando con pepinos."
+    },
+    {
+      "id": "p10",
+      "icono": "📦",
+      "autor": "Economía del Desecho",
+      "titulo": "El Ciclo del Cartón",
+      "contenido": "Cuando compras un cubo de basura online, te lo envían dentro de una caja de cartón... convirtiendo la caja en la primera basura que entra en el cubo."
+    },
+    {
+      "id": "p11",
+      "icono": "🧠",
+      "autor": "Neurociencia Absurda",
+      "titulo": "El Cerebro Nominándose a Sí Mismo",
+      "contenido": "El cerebro es el único órgano de todo el universo conocido que se ha puesto nombre a sí mismo, se estudia a sí mismo y se felicita a sí mismo cuando resuelve un crucigrama."
+    },
+    {
+      "id": "p12",
+      "icono": "🍕",
+      "autor": "Geometría Culinaria",
+      "titulo": "La Geometría de la Pizza",
+      "contenido": "Una pizza es un círculo de masa que se cocina en una caja cuadrada y se come en porciones triangulares. Es el mayor caos geométrico aceptado por la sociedad."
+    },
+    {
+      "id": "p13",
+      "icono": "🕰️",
+      "autor": "Mecánica Cuántica Cotidiana",
+      "titulo": "La Relatividad del Minuto",
+      "contenido": "La duración de un minuto depende enteramente de qué lado de la puerta del baño te encuentres."
+    },
+    {
+      "id": "p14",
+      "icono": "🏨",
+      "autor": "Sociología Hotelera",
+      "titulo": "La Clave de los Hoteles",
+      "contenido": "En un hotel pagas cientos de euros por dormir en una cama donde han dormido miles de desconocidos, pero si alguien se sienta en tu cama en tu propia casa te parece una violación flagrante de la higiene."
+    },
+    {
+      "id": "p15",
+      "icono": "📚",
+      "autor": "Filología de la Basura",
+      "titulo": "La Paradoja del Diccionario",
+      "contenido": "Si una palabra está mal escrita en el diccionario oficial, ¿cómo nos enteraríamos jamás?"
+    },
+    {
+      "id": "p16",
+      "icono": "🐱",
+      "autor": "Jerarquías Domésticas",
+      "titulo": "El Contrato Felino",
+      "contenido": "Los gatos son los únicos animales que han conseguido que los humanos paguen su hipoteca, limpien su arena y les compren salmón de primera sin haber aportado un solo euro en impuestos."
+    },
+    {
+      "id": "p17",
+      "icono": "🚦",
+      "autor": "Psicología Vial",
+      "titulo": "La Ilusión de Adelantar",
+      "contenido": "Adelantar a un coche a 140 km/h con cara de victoria para luego encontrártelo exactamente a tu lado parado en el semáforo 2 minutos después es una de las mayores lecciones de humildad de la vida."
+    },
+    {
+      "id": "p18",
+      "icono": "🍿",
+      "autor": "Economía del Cine",
+      "titulo": "El Ritual de las Palomitas",
+      "contenido": "El 80% del bote gigante de palomitas del cine desaparece durante los anuncios y los tráilers antes de que empiece la película."
+    },
+    {
+      "id": "p19",
+      "icono": "🔋",
+      "autor": "Vida Digital",
+      "titulo": "El Enchufe Perfecto",
+      "contenido": "Elegir la mesa de una cafetería o el asiento del tren en función de la proximidad a una toma de corriente es el instinto de supervivencia más primario del Homo Sapiens moderno."
+    },
+    {
+      "id": "p20",
+      "icono": "🚿",
+      "autor": "Hidráulica Emocional",
+      "titulo": "La Fábrica de Argumentos Tardíos",
+      "contenido": "El agua caliente de la ducha tiene la propiedad química única de generar las respuestas más brillantes y demoledoras para discusiones que ocurrieron hace tres años."
+    },
+    {
+      "id": "p21",
+      "icono": "🛒",
+      "autor": "Psicología del Supermercado",
+      "titulo": "La Rueda Torcida",
+      "contenido": "Existe un departamento secreto en las fábricas de carritos de la compra cuya única misión es asegurarse de que al menos una rueda vibre y tire hacia la izquierda con fuerza de huracán."
+    },
+    {
+      "id": "p22",
+      "icono": "🧼",
+      "autor": "Higiene y Gravedad",
+      "titulo": "El Jabón que Cae al Suelo",
+      "contenido": "¿Si se te cae una pastilla de jabón al suelo sucio, el suelo queda limpio o el jabón queda sucio?"
+    },
+    {
+      "id": "p23",
+      "icono": "😴",
+      "autor": "Bio-Horarios",
+      "titulo": "La Paradoja del Sueño",
+      "contenido": "A las 23:00 en el sofá estás prácticamente en coma inducido de sueño. En cuanto te lavas los dientes y te metes en la cama a las 23:15, tu cerebro decide organizar una conferencia sobre si los pingüinos tienen rodillas."
+    },
+    {
+      "id": "p24",
+      "icono": "🔑",
+      "autor": "Seguridad Mental",
+      "titulo": "El Cerrajero Inseguro",
+      "contenido": "Cerrar la puerta de casa con llave, bajar 3 pisos y tener que volver a subir para comprobar el picaporte porque tu memoria borró los últimos 40 segundos de tu vida."
+    },
+    {
+      "id": "p25",
+      "icono": "🕶️",
+      "autor": "Hardware Biológico",
+      "titulo": "La Paradoja de los Ojos Cerrados",
+      "contenido": "Cerrar los ojos te ayuda a escuchar mejor una canción, como si tu cerebro bajara la resolución gráfica del mundo para subir los fotogramas por segundo del canal de audio."
+    },
+    {
+      "id": "p26",
+      "icono": "🚗",
+      "autor": "Economía Automovilística",
+      "titulo": "El Coche Inmóvil",
+      "contenido": "Comprar un coche nuevo es gastarse miles de euros en una máquina diseñada para moverse a 200 km/h que pasará el 95% de su vida útil aparcada en silencio esperando a que salgas de trabajar."
+    },
+    {
+      "id": "p27",
+      "icono": "🐕",
+      "autor": "Teología Canina",
+      "titulo": "La Perspectiva del Perro",
+      "contenido": "Para tu perro, eres una deidad inmortal y mágica que sabe abrir puertas cerradas y conjurar comida deliciosa de armarios altos sin haber cazado jamás una sola presa."
+    },
+    {
+      "id": "p28",
+      "icono": "🌳",
+      "autor": "Ironía Ecológica",
+      "titulo": "La Madera y el Buzón",
+      "contenido": "Talar un árbol gigante milenario de 30 metros de altura para convertirlo en un folleto publicitario de una pizzería que tirarás a la papelera sin leer en 1.5 segundos."
+    },
+    {
+      "id": "p29",
+      "icono": "💧",
+      "autor": "Paleontología Líquida",
+      "titulo": "El Agua de Dinosaurio",
+      "contenido": "El agua que bebes hoy de un vaso de cristal probablemente estuvo dentro del cuerpo de un Tiranosaurio Rex hace 70 millones de años. Eres un reciclador prehistórico."
+    },
+    {
+      "id": "p30",
+      "icono": "🔇",
+      "autor": "Neurosis Numérica",
+      "titulo": "La Tiranía del Volumen Par",
+      "contenido": "Poner el volumen de la televisión en un número impar como el 17 o el 23 te produce una molestia espiritual incomprensible; solo los números pares o múltiplos de 5 traen paz al universo."
+    },
+    {
+      "id": "p31",
+      "icono": "🧳",
+      "autor": "Logística del 'Por Si Acaso'",
+      "titulo": "La Maleta de 3 Días",
+      "contenido": "Hacer la maleta para una escapada de fin de semana con 14 pares de ropa interior por si de repente te invitan a 4 bodas imprevistas o te caes en un pantano tres veces al día."
+    },
+    {
+      "id": "p32",
+      "icono": "🛏️",
+      "autor": "Termodinámica del Colchón",
+      "titulo": "El Lado Frío de la Almohada",
+      "contenido": "Darle la vuelta a la almohada a las 04:00 AM para apoyar la mejilla en el lado frío es uno de los mayores lujos gratuitos y placenteros que ofrece la existencia terrenal."
+    },
+    {
+      "id": "p33",
+      "icono": "🍕",
+      "autor": "Termodinámica de la Croqueta",
+      "titulo": "El Fuego Bucal",
+      "contenido": "Saber con absoluta certeza científica que la croqueta recién frita está a 500 grados centígrados y metértela entera en la boca haciendo ruidos de dragón ahogado."
+    },
+    {
+      "id": "p34",
+      "icono": "🚶‍♂️",
+      "autor": "Psicología del Transporte",
+      "titulo": "La Dualidad Peatón-Conductor",
+      "contenido": "Como peatón odias a todos los coches con furia asesina por no frenar; en cuanto te subes a tu coche odias a todos los peatones por cruzar la calle tan despacio."
+    },
+    {
+      "id": "p35",
+      "icono": "📦",
+      "autor": "Farmacología Manual",
+      "titulo": "El Plástico de Burbujas",
+      "contenido": "El invento de protección de envíos más revolucionario de la historia de la logística humana se convirtió instantáneamente en el mayor ansiolítico manual del planeta."
+    },
+    {
+      "id": "p36",
+      "icono": "🪞",
+      "autor": "Identidad Óptica",
+      "titulo": "La Voz Grabada",
+      "contenido": "Oír tu propia voz en una nota de audio de WhatsApp y preguntarte cómo es posible que la gente hable contigo voluntariamente con semejante timbre de voz de ardilla afónica."
+    },
+    {
+      "id": "p37",
+      "icono": "🕯️",
+      "autor": "Química de la Nostalgia",
+      "titulo": "El Olor de la Cerilla",
+      "contenido": "Encender una cerilla huele bien, pero apagarla huele mil veces mejor: el humo de la extinción es la fragancia no oficial de los recuerdos de infancia."
+    },
+    {
+      "id": "p38",
+      "icono": "📱",
+      "autor": "El Bucle del Teléfono",
+      "titulo": "El Paseo por las 4 Apps",
+      "contenido": "Cerrar Instagram porque estás aburrido, bloquear el móvil, volver a desbloquearlo a los 3 segundos por inercia y abrir Instagram otra vez."
+    }
+  ]
+}
