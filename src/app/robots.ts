@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://tusdesvarios.com/sitemap.xml',
-    host: 'https://tusdesvarios.com',
+    sitemap: 'https://www.tusdesvarios.com/sitemap.xml',
+    host: 'https://www.tusdesvarios.com',
   };
 }
