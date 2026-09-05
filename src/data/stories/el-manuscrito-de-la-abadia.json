@@ -1,0 +1,588 @@
+{
+  "slug": "el-manuscrito-de-la-abadia",
+  "titulo": "El Manuscrito de la Abadía Prohibida",
+  "subtitulo": "Hay secretos tan antiguos que la misma piedra tiembla al ser leídos.",
+  "descripcionCorta": "En el crudo invierno de 1347, un antiguo inquisidor refugiado como bibliotecario en una abadía pirenaica descubre un códice maldito, una conspiración de venenos y una entidad estelar atrapada en el glaciar.",
+  "genero": "Misterio Gótico, Alquimia y Suspense Histórico",
+  "tiempoLecturaMin": 30,
+  "portada": "/images/stories/abadia-prohibida/portada.jpg",
+  "autor": "Fray Tomás de Aquitania",
+  "nodoInicialId": "inicio_abadia",
+  "totalNodosEstimados": 35,
+  "nodos": {
+    "inicio_abadia": {
+      "id": "inicio_abadia",
+      "titulo": "Capítulo I: El Osario de Santa Eulalia",
+      "texto": "Año del Señor de 1347. El invierno más atroz que la memoria de los ancianos recuerda ha sellado los puertos de montaña de los Pirineos bajo ventisqueros infranqueables. En los valles de abajo, la Peste Negra avanza devorando reinos enteros; pero en la cumbre de la Abadía de Santa Eulalia de los Riscos, los monjes mueren por causas que desafían la teología y la naturaleza: lenguas ennegrecidas por vitriolo, ojos reventados en sangre y delirios nocturnos en dialectos antediluvianos.\n\nEres fray Tomás de Aquitania, un antiguo inquisidor dominico desencantado que, tras renegar de los tormentos y las piras de la fe, se refugió en este nido de águilas como bibliotecario mayor y traductor del *scriptorium*. Esta medianoche, tras la repentina y brutal muerte del anciano Abad Bernardo —hallado congelado, ciego y con una mueca de espanto ante el facistol del coro—, has descendido a solas al osario subterráneo con la pesada llave de hierro forjado que heredaste en secreto.\n\nTras el fresco desconchado del Juicio Final, en una hornacina oculta entre calaveras de monjes del siglo X, descubres un cofre de bronce bizantino sellado con tres candados de plomo. Dentro reposa el legendario *Codex Umbrarum*: un grueso palimpsesto encuadernado en cuero negruzco de origen no humano, sellado con cera carmesí que desprende un tenue fulgor esmeralda y un inconfundible olor a almendras amargas. Una inscripción en latín templario grabada en la tapa advierte:\n\n> *«La tinta es veneno para la carne y luz para el ciego. Quien posea el Lapis Niger de Antioquía proyectará los nombres de los que han de morir.»*",
+      "imagen": "/images/stories/abadia-prohibida/cripta.jpg",
+      "opciones": [
+        {
+          "id": "opt_1_lapis",
+          "texto": "Subir sigilosamente a la sacristía mayor para buscar la gema de obsidiana 'Lapis Niger' oculta tras el altar",
+          "destinoId": "nodo_2_sacristia_lapis",
+          "impacto": "Investigación"
+        },
+        {
+          "id": "opt_1_botica",
+          "texto": "Llevar muestras del veneno y el cofre al laboratorio de Fray Severino el Boticario para un análisis químico",
+          "destinoId": "nodo_3_botica_alquimia",
+          "impacto": "Científico"
+        },
+        {
+          "id": "opt_1_scriptorium",
+          "texto": "Acudir al scriptorium en busca de Guillermo, el novicio mudo que conoce los secretos del abad",
+          "destinoId": "nodo_4_scriptorium_guillermo",
+          "impacto": "Alianza"
+        },
+        {
+          "id": "opt_1_celda",
+          "texto": "Ocultar el códice bajo el sayal y llevarlo a tu celda privada para estudiar las anotaciones marginales",
+          "destinoId": "nodo_5_celda_mapa",
+          "impacto": "Prudente"
+        }
+      ]
+    },
+    "nodo_2_sacristia_lapis": {
+      "id": "nodo_2_sacristia_lapis",
+      "titulo": "Capítulo II: El Lapis Niger de Antioquía",
+      "texto": "Te deslizas por las sombras de la basílica hasta la sacristía mayor. Tras el retablo gótico de la Asunción, retiras un sillar hueco y encuentras una caja de plata que contiene el *Lapis Niger*: una gema de obsidiana estelar facetada con geometrías que ningún orfebre humano podría haber tallado.\n\nAl interponer la piedra negra entre la llama de una vela de cera virgen y las páginas del códice, ocurre un prodigio aterrador: la luz se refracta proyectando sobre las paredes de granito una carta celeste en relieve y la lista en bermellón de todos los monjes de Santa Eulalia, señalando la hora exacta en que cada uno perecerá. Tu propio nombre aparece marcado para la cuarta vigilia de esta misma noche.\n\nUn crujido de pasos acorazados en el pasillo exterior anuncia la llegada de los guardias del Prior Rodrigo.",
+      "imagen": "/images/stories/abadia-prohibida/cripta.jpg",
+      "opciones": [
+        {
+          "id": "opt_2_proyectar_coro",
+          "texto": "Escabullirte por la puerta del sagrario hacia el coro para proyectar la carta estelar en la cúpula",
+          "destinoId": "nodo_6_proyeccion_coro",
+          "impacto": "Místico"
+        },
+        {
+          "id": "opt_2_emboscada_sacristia",
+          "texto": "Trepar por los tirantes de hierro del retablo y ocultarte en la galería alta del triforio",
+          "destinoId": "nodo_7_triforio_escape",
+          "impacto": "Agilidad"
+        },
+        {
+          "id": "opt_2_botica",
+          "texto": "Bajar por la escalera de servicio hacia la botica para reunir la gema con los reactivos de Severino",
+          "destinoId": "nodo_3_botica_alquimia",
+          "impacto": "Prudente"
+        }
+      ]
+    },
+    "nodo_3_botica_alquimia": {
+      "id": "nodo_3_botica_alquimia",
+      "titulo": "Capítulo II: El Laboratorio Alquímico de Severino",
+      "texto": "Cruzas los claustros cubiertos de escarcha y entras en la botica monacal. Entre alambiques de cobre, retortas sibilantes y ristras de mandrágora, fray Severino te recibe con una lámpara de aceite en la mano temblorosa.\n\nSobre una losa de mármol yace el cuerpo amortajado del abad Bernardo. Severino aparta el lino para mostrarte sus labios amoratados y sus cuerdas vocales calcinadas por un ácido frío y desconocido:\n\n—*Tomás, mira esto* —susurra el boticario aplicando una gota de vitriolo blanco sobre la lengua del difunto—. *No es una peste ni un castigo divino. Las hojas del códice fueron bañadas en la tintura destilada de la 'Mycena noctiluca', un hongo bioluminiscente que crece exclusivamente en la sima glacial bajo los cimientos de la abadía. Quien pasa las páginas humedeciendo sus dedos con saliva absorbe el alcaloide: produce clarividencia absoluta durante unos minutos y luego fulmina el corazón.*",
+      "imagen": "/images/stories/abadia-prohibida/botica.jpg",
+      "opciones": [
+        {
+          "id": "opt_3_antidoto",
+          "texto": "Ayudar a Severino a destilar un contra-veneno con sales de plata, belladona y vinagre destilado",
+          "destinoId": "nodo_8_destilacion_antidoto",
+          "impacto": "Científico"
+        },
+        {
+          "id": "opt_3_autopsia",
+          "texto": "Practicar una incisión forense en el estómago del abad para averiguar cómo le administraron el veneno",
+          "destinoId": "nodo_9_autopsia_veneno",
+          "impacto": "Forense"
+        },
+        {
+          "id": "opt_3_inhalar",
+          "texto": "Inhalar una brizna infinitesimal del vapor purificado para inducir una visión controlada del códice",
+          "destinoId": "nodo_10_trance_alquimico",
+          "impacto": "Arriesgado"
+        }
+      ]
+    },
+    "nodo_4_scriptorium_guillermo": {
+      "id": "nodo_4_scriptorium_guillermo",
+      "titulo": "Capítulo II: El Silencio de Guillermo",
+      "texto": "Subes a la inmensa nave gótica del *scriptorium*. Las hileras de pupitres de roble yacen mudas bajo la luz azulada de la ventisca que castiga las vidrieras ojivales. Entre las sombras del atril mayor descubres a Guillermo, el joven novicio al que el abad protegió durante años.\n\nGuillermo, incapaz de hablar, abre con dedos nerviosos un cuaderno de bocetos a carboncillo. Sus dibujos son revelaciones estremecedoras: retratan al Prior Rodrigo entregando bolsas de florines a mercenarios de la Inquisición en el molino subterráneo, mapas milimétricos de pasadizos ocultos entre los muros de sillería y el plano del gran espejo de bronce de la torre prohibida, construido según la geometría del sabio persa Alhazen.",
+      "imagen": "/images/stories/abadia-prohibida/scriptorium.jpg",
+      "opciones": [
+        {
+          "id": "opt_4_laberinto_espejos",
+          "texto": "Seguir el dibujo de Guillermo y presionar el relieve del espejo para entrar al laberinto de la torre",
+          "destinoId": "nodo_11_laberinto_alhazen",
+          "impacto": "Exploración"
+        },
+        {
+          "id": "opt_4_muros_pasadizo",
+          "texto": "Guiarte por los conductos estrechos entre los muros dobles para espiar las reuniones de Rodrigo",
+          "destinoId": "nodo_12_pasadizos_muro",
+          "impacto": "Sigilo"
+        },
+        {
+          "id": "opt_4_celada_librero",
+          "texto": "Preparar un manuscrito señuelo con tinte de nuez de agallas y vitriolo para tender una trampa a los espías",
+          "destinoId": "nodo_13_celada_biblioteca",
+          "impacto": "Estratégico"
+        }
+      ]
+    },
+    "nodo_5_celda_mapa": {
+      "id": "nodo_5_celda_mapa",
+      "titulo": "Capítulo II: La Herejía de los Perfectos",
+      "texto": "Te encierras en tu celda monacal, atrancando la pesada puerta de roble con el cerrojo de hierro. Al calor de las brasas de la chimenea, acercas el pergamino al fuego. Al subir la temperatura, las anotaciones invisibles trazadas con tinta simpática despiertan en el margen de la vitela:\n\n> *«No hay infierno más allá de esta carne. La abadía fue construida sobre la fortaleza de los cátaros de Montségur para custodiar al Durmiente del Hielo. El Prior planea purgar la orden con veneno para que la Inquisición papal recupere el trono subterráneo. Tomás: en el molino harinero están las esclusas de agua romana; ábrelas o la noche eterna devorará el mundo.»*\n\nEl reloj de agua de tu celda gotea con regularidad implacable. La hora de la colación nocturna en el refectorio está a punto de comenzar.",
+      "imagen": "/images/stories/abadia-prohibida/cripta.jpg",
+      "opciones": [
+        {
+          "id": "opt_5_esclusas_molino",
+          "texto": "Descender de inmediato al sótano del molino para inspeccionar las compuertas hidráulicas romanas",
+          "destinoId": "nodo_15_esclusas_romanas",
+          "impacto": "Audaz"
+        },
+        {
+          "id": "opt_5_sima_directa",
+          "texto": "Seguir las coordenadas del mapa y bajar por el pozo kárstico hacia la sima glacial del Durmiente",
+          "destinoId": "nodo_20_glaciar_durmiente",
+          "impacto": "Trascendental"
+        },
+        {
+          "id": "opt_5_refectorio_alerta",
+          "texto": "Acudir al refectorio para vigilar a los monjes durante la cena comunal y evitar un envenenamiento masivo",
+          "destinoId": "nodo_17_refectorio_tension",
+          "impacto": "Humanitario"
+        }
+      ]
+    },
+    "nodo_6_proyeccion_coro": {
+      "id": "nodo_6_proyeccion_coro",
+      "titulo": "Capítulo III: Los Glifos del Juicio",
+      "texto": "Llegas al coro alto de la iglesia. Colocas el *Lapis Niger* en el atril de nogal y proyectas la luz hacia la cúpula central. El techo de piedra se transforma en un mapa estelar fosforescente donde las constelaciones giran con precisión matemática.\n\nComprendes la verdad astronómica: la constelación del Cisne alcanzará su cenit exactamente a las cuatro de la madrugada. Si el cántico primordial no es pronunciado o neutralizado antes de esa hora, la energía del meteorito kárstico despertará a la entidad congelada bajo la abadía.",
+      "imagen": "/images/stories/abadia-prohibida/scriptorium.jpg",
+      "opciones": [
+        {
+          "id": "opt_6_campanario",
+          "texto": "Subir a toda prisa al observatorio del campanario para alinear los telescopios de bronce",
+          "destinoId": "nodo_16_observatorio_campanario",
+          "impacto": "Cosmología"
+        },
+        {
+          "id": "opt_6_alerta_hermanos",
+          "texto": "Reunir a los frailes ancianos del cabildo para mostrarles la proyección en la cúpula",
+          "destinoId": "nodo_18_debate_capitulo",
+          "impacto": "Persuasión"
+        }
+      ]
+    },
+    "nodo_7_triforio_escape": {
+      "id": "nodo_7_triforio_escape",
+      "titulo": "Capítulo III: La Huida por las Alturas",
+      "texto": "Avanzas por la estrecha cornisa del triforio a treinta metros sobre las baldosas de la nave mayor. Abajo, los guardias del Prior registran las capillas con antorchas y perros de presa que gruñen olisqueando el rastro de la tinta.\n\nUna ráfaga de viento helado entra por un rosetón quebrado, cubriendo las losas de nieve resbaladiza. Si das un paso en falso, te precipitarás al vacío sobre el altar de piedra.",
+      "imagen": "/images/stories/abadia-prohibida/portada.jpg",
+      "opciones": [
+        {
+          "id": "opt_7_scriptorium",
+          "texto": "Saltar hacia el tejadillo anexo del scriptorium y deslizarte por la claraboya",
+          "destinoId": "nodo_4_scriptorium_guillermo",
+          "impacto": "Temerario"
+        },
+        {
+          "id": "opt_7_campanario",
+          "texto": "Subir por la escalera de caracol exterior hacia la torre del campanario y atrancar la puerta",
+          "destinoId": "nodo_16_observatorio_campanario",
+          "impacto": "Defensivo"
+        }
+      ]
+    },
+    "nodo_8_destilacion_antidoto": {
+      "id": "nodo_8_destilacion_antidoto",
+      "titulo": "Capítulo III: El Triunfo de la Medicina",
+      "texto": "Trabajando codo con codo con fray Severino sobre el hornillo alquímico, logras destilar tres ampollas de vidrio verde selladas con cera de laurel: un contra-veneno purificado a base de sales de plata, extracto de sauce y vinagre destilado.\n\nBebes una dosis preventiva: una oleada de calor reconfortante recorre tus venas y tu mente se vuelve completamente inmune a las esporas alucinógenas del códice. Ahora eres el único hombre en Santa Eulalia capaz de manipular las páginas y salvar a los hermanos.",
+      "imagen": "/images/stories/abadia-prohibida/botica.jpg",
+      "opciones": [
+        {
+          "id": "opt_8_refectorio",
+          "texto": "Llevar el antídoto al refectorio antes de que los monjes beban el vino envenenado de la cena",
+          "destinoId": "nodo_17_refectorio_tension",
+          "impacto": "Salvación"
+        },
+        {
+          "id": "opt_8_esclusas",
+          "texto": "Bajar protegido con Severino al molino subterráneo para asegurar las compuertas de agua",
+          "destinoId": "nodo_15_esclusas_romanas",
+          "impacto": "Estratégico"
+        },
+        {
+          "id": "opt_8_sima",
+          "texto": "Descender inmune a la sima glacial para erradicar el foco de los hongos con vitriolo cáustico",
+          "destinoId": "nodo_20_glaciar_durmiente",
+          "impacto": "Erradicación"
+        }
+      ]
+    },
+    "nodo_9_autopsia_veneno": {
+      "id": "nodo_9_autopsia_veneno",
+      "titulo": "Capítulo III: El Cáliz de la Traición",
+      "texto": "Con el escalpelo de plata realizas la disección estomacal del abad Bernardo. En su interior hallas restos de vino aromatizado con canela y posos densos de *Mycena noctiluca*.\n\n—*El cáliz de la misa mayor...* —exclama Severino con horror—. *Rodrigo no solo envenenó el códice; ha vertido el extracto en la tinaja de vino de la bodega capitular. Esta noche, durante la colación del refectorio, todos los frailes que no se sometan a su mandato serán envenenados.*",
+      "imagen": "/images/stories/abadia-prohibida/botica.jpg",
+      "opciones": [
+        {
+          "id": "opt_9_refectorio_denuncia",
+          "texto": "Correr al refectorio empuñando el cáliz y el informe forense para detener la cena ante todos",
+          "destinoId": "nodo_17_refectorio_tension",
+          "impacto": "Confrontación"
+        },
+        {
+          "id": "opt_9_capitulo",
+          "texto": "Convocar formalmente a los decanos en la Sala Capitular apelando al derecho canónico de la orden",
+          "destinoId": "nodo_18_debate_capitulo",
+          "impacto": "Legalidad"
+        }
+      ]
+    },
+    "nodo_10_trance_alquimico": {
+      "id": "nodo_10_trance_alquimico",
+      "titulo": "Capítulo III: El Vuelo Sobre el Abismo",
+      "texto": "Inhalas una brizna del vapor esmeralda purificado por el alambique. De golpe, los muros de piedra se vuelven translúcidos como agua clara. Tu consciencia se eleva a miles de metros sobre los Pirineos.\n\nVes el impacto estelar ocurrido hace diez milenios, la cueva de hielo donde duerme el corazón de la criatura cósmica y las líneas de fuerza electromagnética que conectan el telescopio árabe del campanario con las entrañas de la montaña. Comprendes cómo funciona la máquina milenaria del monasterio.",
+      "imagen": "/images/stories/abadia-prohibida/sima.jpg",
+      "opciones": [
+        {
+          "id": "opt_10_observatorio",
+          "texto": "Regresar del trance con lucidez absoluta y subir al campanario a operar el astrolabio",
+          "destinoId": "nodo_16_observatorio_campanario",
+          "impacto": "Maestría"
+        },
+        {
+          "id": "opt_10_sima",
+          "texto": "Guiarte por la visión y caminar en trance directo hacia la caverna del glaciar",
+          "destinoId": "nodo_20_glaciar_durmiente",
+          "impacto": "Místico"
+        }
+      ]
+    },
+    "nodo_11_laberinto_alhazen": {
+      "id": "nodo_11_laberinto_alhazen",
+      "titulo": "Capítulo III: El Espejo de las Sombras",
+      "texto": "El marco de bronce gira sobre sus goznes y entras en el laberinto hexagonal de la torre prohibida. Decenas de espejos curvos reflejan tu silueta en infinitos ángulos, desafiando toda noción de perspectiva euclidiana.\n\nEn la cámara central descubres el observatorio secreto del sabio persa Alhazen: un astrolabio monumental de latón con engranajes planetarios que giran impulsados por un péndulo de mercurio. El *Codex Umbrarum* encaja en una hendidura sobre el pedestal de piedra.",
+      "imagen": "/images/stories/abadia-prohibida/laberinto.jpg",
+      "opciones": [
+        {
+          "id": "opt_11_astrolabio_siete",
+          "texto": "Alinear los discos del astrolabio con las coordenadas de la constelación del Cisne",
+          "destinoId": "nodo_19_astrolabio_ritual",
+          "impacto": "Astral"
+        },
+        {
+          "id": "opt_11_destruir_mecanismo",
+          "texto": "Introducir una barra de hierro entre los engranajes de bronce para destruir el mecanismo para siempre",
+          "destinoId": "nodo_22_sabotaje_torre",
+          "impacto": "Destructivo"
+        }
+      ]
+    },
+    "nodo_12_pasadizos_muro": {
+      "id": "nodo_12_pasadizos_muro",
+      "titulo": "Capítulo III: Los Ojos en la Piedra",
+      "texto": "Avanzas agazapado por el pasadizo interior de los muros dobles. A través de una mirilla tallada en la sillería del coro, observas al Prior Rodrigo reunido con tres emisarios encapuchados de la Inquisición papal.\n\n—*El códice será destruido junto con la biblioteca* —dice Rodrigo con voz gélida—. *Diremos que los frailes murieron de peste y que el fuego fue necesario para purificar el pecado. A cambio, el Santo Padre me nombrará obispo de Toulouse.*",
+      "imagen": "/images/stories/abadia-prohibida/scriptorium.jpg",
+      "opciones": [
+        {
+          "id": "opt_12_emboscada_rodrigo",
+          "texto": "Esperar a que Rodrigo se quede solo en el claustro para emboscarlo con la ayuda de Guillermo",
+          "destinoId": "nodo_23_confrontacion_directa",
+          "impacto": "Ataque"
+        },
+        {
+          "id": "opt_12_abrir_establos",
+          "texto": "Escabullirte hacia las caballerizas para preparar mulas y alforjas para una fuga general de los textos",
+          "destinoId": "nodo_24_preparar_exodo",
+          "impacto": "Rescate"
+        }
+      ]
+    },
+    "nodo_13_celada_biblioteca": {
+      "id": "nodo_13_celada_biblioteca",
+      "titulo": "Capítulo III: La Trampa del Manuscrito",
+      "texto": "Colocas un libro señuelo en el atril mayor, untado con una mezcla paralizante de belladona preparada por Severino. A las tres de la madrugada, los dos esbirros armados de Rodrigo entran sigilosamente al scriptorium.\n\nAl abalanzarse sobre el tomo y pasar las hojas con avidez, el alcaloide penetra en sus yemas de los dedos. En segundos caen desplomados sobre los pupitres de roble, conscientes pero incapaces de mover un solo músculo.",
+      "imagen": "/images/stories/abadia-prohibida/scriptorium.jpg",
+      "opciones": [
+        {
+          "id": "opt_13_interrogar",
+          "texto": "Obligar a los secuaces paralizados a firmar una confesión por escrito ante el crucifijo",
+          "destinoId": "nodo_18_debate_capitulo",
+          "impacto": "Justicia"
+        },
+        {
+          "id": "opt_13_encerrar",
+          "texto": "Atar a los sicarios en el calabozo del abad y marchar de inmediato al refectorio",
+          "destinoId": "nodo_17_refectorio_tension",
+          "impacto": "Prudente"
+        }
+      ]
+    },
+    "nodo_15_esclusas_romanas": {
+      "id": "nodo_15_esclusas_romanas",
+      "titulo": "Capítulo III: El Corazón de las Aguas Negras",
+      "texto": "Desciendes a la bóveda ciclópea del molino harinero. El rugido atronador del río subterráneo hace vibrar el suelo de granito. Ante ti se alzan las compuertas hidráulicas construidas por los ingenieros romanos hace mil trescientos años: gigantescas ruedas de roble, engranajes de bronce fosforoso y cadenas de hierro forjado.\n\nEstas compuertas controlan el curso del torrente que alimenta el lago de la sima glacial. Con las palancas de presión puedes desviar millones de litros de agua para anegar las cavernas de los hongos o drenar el santuario del hielo.",
+      "imagen": "/images/stories/abadia-prohibida/esclusas.jpg",
+      "opciones": [
+        {
+          "id": "opt_15_inundar",
+          "texto": "Girar las ruedas de presión para anegar las cavernas inferiores y erradicar los hongos venenosos",
+          "destinoId": "nodo_21_inundacion_cataclismo",
+          "impacto": "Purificación"
+        },
+        {
+          "id": "opt_15_drenar",
+          "texto": "Invertir el flujo hacia el río exterior para secar el paso hacia el núcleo del glaciar",
+          "destinoId": "nodo_20_glaciar_durmiente",
+          "impacto": "Exploración"
+        }
+      ]
+    },
+    "nodo_16_observatorio_campanario": {
+      "id": "nodo_16_observatorio_campanario",
+      "titulo": "Capítulo IV: En la Cúspide de la Tempestad",
+      "texto": "Asciendes a la plataforma exterior del campanario, suspendido a cincuenta metros sobre el abismo nevado. La ventisca aúlla con ferocidad salvaje entre las gárgolas de piedra, pero sobre tu cabeza la bóveda celeste resplandece con una claridad diamantina.\n\nAlineas el gran telescopio árabe con el cenit de la constelación del Cisne e incrustas el *Lapis Niger* en el ocular de bronce. Un haz de luz plateada concentrada atraviesa la lente, proyectando un círculo incandescente sobre el *Codex Umbrarum*.",
+      "imagen": "/images/stories/abadia-prohibida/portada.jpg",
+      "opciones": [
+        {
+          "id": "opt_16_invocar_luz",
+          "texto": "Entonar las siete estrofas del manuscrito y abrir tu mente a la presencia cósmica",
+          "destinoId": "nodo_final_patriarca",
+          "impacto": "Trascendental"
+        },
+        {
+          "id": "opt_16_disolver_tomo",
+          "texto": "Utilizar el rayo de luz concentrada como una lente solar para reducir el códice a cenizas inofensivas",
+          "destinoId": "nodo_final_renacimiento",
+          "impacto": "Victoria"
+        }
+      ]
+    },
+    "nodo_17_refectorio_tension": {
+      "id": "nodo_17_refectorio_tension",
+      "titulo": "Capítulo IV: El Juicio del Pan y el Vino",
+      "texto": "Irrumpes en el refectorio mayor durante la cena comunal. Cuarenta monjes vestidos con sus sayales pardos mastican en tenso silencio bajo la mirada inquisitorial del Prior Rodrigo, sentado en la cabecera junto al tonel de vino especiado.\n\nDe pronto, dos frailes ancianos se desploman sobre la mesa de roble entre convulsiones agónicas, con los labios negros y los ojos inyectados en sangre. El pánico estalla en la sala mientras Rodrigo se pone en pie señalándote con su báculo:\n\n—*¡Miradlo! ¡Es Tomás el hereje, que ha traído la peste demoníaca a nuestra mesa!* —grita el Prior alzando a sus guardias.",
+      "imagen": "/images/stories/abadia-prohibida/refectorio.jpg",
+      "opciones": [
+        {
+          "id": "opt_17_suministrar_antidoto",
+          "texto": "Correr hacia los monjes agonizantes y suministrarles el antídoto de Severino ante los ojos de toda la orden",
+          "destinoId": "nodo_18_debate_capitulo",
+          "impacto": "Heroico"
+        },
+        {
+          "id": "opt_17_rebelion_popular",
+          "texto": "Alzar el cáliz envenenado y exigir al Prior que beba de su propio vino para demostrar su inocencia",
+          "destinoId": "nodo_23_confrontacion_directa",
+          "impacto": "Desafío"
+        }
+      ]
+    },
+    "nodo_18_debate_capitulo": {
+      "id": "nodo_18_debate_capitulo",
+      "titulo": "Capítulo IV: El Gran Juicio Teológico",
+      "texto": "La asamblea plenaria de la orden se congrega en la solemne Sala Capitular bajo el crucifijo de marfil. Frente a todos los decanos, expones las pruebas irrefutables: el análisis químico del veneno, las notas en griego del abad asesinado y los documentos mercenarios interceptados.\n\nSe inicia un combate dialéctico feroz entre la lógica tomista y aristotélica que defiendes y el fanatismo apocalíptico de Rodrigo. La comunidad contiene el aliento mientras los ancianos se preparan para emitir su voto de fe.",
+      "imagen": "/images/stories/abadia-prohibida/refectorio.jpg",
+      "opciones": [
+        {
+          "id": "opt_18_victoria_humanista",
+          "texto": "Ganar la votación unánime del cabildo, destituir a Rodrigo y refundar la abadía bajo la luz de la razón",
+          "destinoId": "nodo_final_renacimiento",
+          "impacto": "Victoria"
+        },
+        {
+          "id": "opt_18_asumir_poder_oculto",
+          "texto": "Reclamar el báculo abacial y jurar gobernar Santa Eulalia como custodio perpetuo del conocimiento secreto",
+          "destinoId": "nodo_final_baculo",
+          "impacto": "Autoridad"
+        },
+        {
+          "id": "opt_18_fanatismo_inquisitorial",
+          "texto": "Rodrigo pierde el control, desenvaina su puñal y sus mercenarios prenden fuego a la sala",
+          "destinoId": "nodo_final_holocausto",
+          "impacto": "Tragedia"
+        }
+      ]
+    },
+    "nodo_19_astrolabio_ritual": {
+      "id": "nodo_19_astrolabio_ritual",
+      "titulo": "Capítulo IV: El Cántico de la Eternidad",
+      "texto": "Los engranajes del astrolabio giran con un zumbido armonioso. Las páginas del *Codex Umbrarum* levitan sobre el atril mientras la tinta negra se desprende en volutas suspendidas en el aire, envolviendo tu cuerpo en un manto de luz fría estelar.\n\nSientes cómo todos los misterios del universo físico se abren en tu cerebro: la estructura de los planetas, la cura de todas las enfermedades y el destino final de las estrellas.",
+      "imagen": "/images/stories/abadia-prohibida/laberinto.jpg",
+      "opciones": [
+        {
+          "id": "opt_19_sucumbir",
+          "texto": "Ceder a la atracción del cosmos y permitir que tu ser se disuelva en las páginas del palimpsesto",
+          "destinoId": "nodo_final_tinta",
+          "impacto": "Maldición"
+        },
+        {
+          "id": "opt_19_canalizar_luz",
+          "texto": "Canalizar la energía hacia la roca madre para sellar las grietas y fundar una orden secreta de guardianes",
+          "destinoId": "nodo_final_sepulcro",
+          "impacto": "Trascendental"
+        }
+      ]
+    },
+    "nodo_20_glaciar_durmiente": {
+      "id": "nodo_20_glaciar_durmiente",
+      "titulo": "Capítulo IV: En el Altar del Hielo Cósmico",
+      "texto": "Desciendes a la inmensa caverna kárstica bajo los cimientos de la abadía. Murallas de hielo azul de cien metros de altura sostienen el peso de los Pirineos. En el centro de una catedral de estalactitas, atrapada en un bloque de hielo puro como diamante, yace la entidad estelar: el Durmiente del Hielo.\n\nSu pulso cósmico resuena en tu pecho como un trueno silencioso. Frente al bloque de hielo se alza el altar de piedra donde los sabios cátaros oraban hace siglos.",
+      "imagen": "/images/stories/abadia-prohibida/sima.jpg",
+      "opciones": [
+        {
+          "id": "opt_20_pacto_eterno",
+          "texto": "Depositar el Lapis Niger en el altar y consagrar tu consciencia al Durmiente de la montaña",
+          "destinoId": "nodo_final_patriarca",
+          "impacto": "Comunión"
+        },
+        {
+          "id": "opt_20_fundar_custodia",
+          "texto": "Realizar un voto solemne de guardia perpetua para que nadie jamás perturbe el sueño de la entidad",
+          "destinoId": "nodo_final_sepulcro",
+          "impacto": "Devoción"
+        },
+        {
+          "id": "opt_20_destruir_sima",
+          "texto": "Prender fuego a los depósitos de brea marina para derribar las columnas y sepultar la sima",
+          "destinoId": "nodo_21_inundacion_cataclismo",
+          "impacto": "Sacrificio"
+        }
+      ]
+    },
+    "nodo_21_inundacion_cataclismo": {
+      "id": "nodo_21_inundacion_cataclismo",
+      "titulo": "Capítulo IV: La Furia de las Aguas",
+      "texto": "Accionas las compuertas maestras del molino harinero. Millones de toneladas de agua gélida se precipitan por las galerías kársticas como un diluvio subterráneo. El torrente arrastra las colonias de hongos venenosos y purifica las entrañas de la roca.\n\nLa presión hidráulica hace temblar los claustros superiores mientras los cimientos de la abadía crujen reasentándose sobre el lecho de piedra.",
+      "imagen": "/images/stories/abadia-prohibida/esclusas.jpg",
+      "opciones": [
+        {
+          "id": "opt_21_salvar_abadia",
+          "texto": "Cerrar las compuertas de alivio a tiempo para estabilizar la montaña y salvar la abadía",
+          "destinoId": "nodo_final_renacimiento",
+          "impacto": "Victoria"
+        },
+        {
+          "id": "opt_21_colapso_total",
+          "texto": "Dejar abiertas las esclusas y evacuar a todos los monjes antes de que la montaña colapse",
+          "destinoId": "nodo_final_diluvio",
+          "impacto": "Cataclismo"
+        }
+      ]
+    },
+    "nodo_22_sabotaje_torre": {
+      "id": "nodo_22_sabotaje_torre",
+      "titulo": "Capítulo IV: La Ruptura del Espejo",
+      "texto": "Con una maza de hierro golpeas el corazón del astrolabio damasquinado y los espejos curvos de Alhazen. Una lluvia de esquirlas de bronce y cristal repiquetea por el suelo de piedra mientras el péndulo de mercurio se detiene para siempre.\n\nLa conexión cósmica queda rota. La magia y la pesadilla han desaparecido, dejando únicamente libros de sabiduría humana en las estanterías.",
+      "imagen": "/images/stories/abadia-prohibida/laberinto.jpg",
+      "opciones": [
+        {
+          "id": "opt_22_amanecer",
+          "texto": "Bajar al claustro a recibir la bendición de la primera luz del alba entre tus hermanos",
+          "destinoId": "nodo_final_renacimiento",
+          "impacto": "Paz"
+        }
+      ]
+    },
+    "nodo_23_confrontacion_directa": {
+      "id": "nodo_23_confrontacion_directa",
+      "titulo": "Capítulo IV: El Duelo en el Claustro",
+      "texto": "En el patio de armas nevado, rodeado por las antorchas de los novicios, te encaras con el Prior Rodrigo. Desarmado por la fuerza moral de la comunidad y las pruebas mostradas, el fanático se rinde arrojando su puñal a la nieve.\n\nSin embargo, a lo lejos, el toque de cuernos de caza en el desfiladero anuncia que la comitiva de la Inquisición papal se aproxima a la abadía.",
+      "imagen": "/images/stories/abadia-prohibida/pira.jpg",
+      "opciones": [
+        {
+          "id": "opt_23_justicia_monacal",
+          "texto": "Atrancar las puertas de la abadía y resistir como una orden soberana frente a Roma",
+          "destinoId": "nodo_final_renacimiento",
+          "impacto": "Soberanía"
+        },
+        {
+          "id": "opt_23_fuga_caballos",
+          "texto": "Montar a caballo con Guillermo y los libros prohibidos para huir hacia la corte de Toulouse",
+          "destinoId": "nodo_final_exodo",
+          "impacto": "Fuga"
+        }
+      ]
+    },
+    "nodo_24_preparar_exodo": {
+      "id": "nodo_24_preparar_exodo",
+      "titulo": "Capítulo IV: La Caravana de la Sabiduría",
+      "texto": "En las caballerizas, tú y Guillermo cargáis diez mulas con los tratados más valiosos de medicina, filosofía árabe, geometría y el *Codex Umbrarum* protegido en un cofre de plomo.\n\nEl portón exterior de la abadía se abre de par en par hacia el desfiladero nevado mientras la tormenta amaina en el horizonte oriental.",
+      "imagen": "/images/stories/abadia-prohibida/portada.jpg",
+      "opciones": [
+        {
+          "id": "opt_24_partir_inmediato",
+          "texto": "Emprender la marcha a través de los Pirineos para llevar la luz del saber a las universidades europeas",
+          "destinoId": "nodo_final_exodo",
+          "impacto": "Libertad"
+        }
+      ]
+    },
+    "nodo_final_renacimiento": {
+      "id": "nodo_final_renacimiento",
+      "titulo": "Epílogo I: El Renacimiento de Santa Eulalia",
+      "texto": "El sol del alba baña de oro y púrpura las cumbres nevadas de los Pirineos. La ventisca cesa por completo y las campanas de Santa Eulalia doblan con júbilo. El veneno ha sido neutralizado, los monjes salvados y la conspiración inquisitorial desenmascarada.\n\nBajo tu liderazgo como bibliotecario mayor y el nuevo abad electo, Santa Eulalia abre sus puertas a la medicina, la filosofía y la ciencia, convirtiéndose en el faro de luz que guiará a Europa hacia un nuevo renacimiento del espíritu humano.",
+      "imagen": "/images/stories/abadia-prohibida/amanecer.jpg",
+      "esFinal": true,
+      "tipo_final": "bueno",
+      "mensaje_final": "La razón, la medicina y la compasión vencieron al fanatismo y a las sombras. La abadía renace en gloria."
+    },
+    "nodo_final_holocausto": {
+      "id": "nodo_final_holocausto",
+      "titulo": "Epílogo II: El Holocausto de los Sabios",
+      "texto": "Las llamas de la hoguera inquisitorial devoran el patio de armas del monasterio. El Prior Rodrigo contempla con frenesí cómo el fuego reduce a cenizas los manuscritos griegos, los tratados árabes y a los frailes que osaron defenderlos.\n\nEl humo negro se eleva sobre las cumbres nevadas. Mil años de sabiduría acumulada se extinguen en una sola noche de odio ciego, sumiendo a la montaña en el silencio de la ignorancia eterna.",
+      "imagen": "/images/stories/abadia-prohibida/pira.jpg",
+      "esFinal": true,
+      "tipo_final": "malo",
+      "mensaje_final": "El fanatismo devoró el conocimiento humano. La abadía quedó reducida a ruinas y cenizas."
+    },
+    "nodo_final_patriarca": {
+      "id": "nodo_final_patriarca",
+      "titulo": "Epílogo III: El Patriarca de las Nieves",
+      "texto": "Tu consciencia mortal se funde con el Durmiente del Hielo en el corazón del glaciar pirenaico. Tu cuerpo descansa en el coro como una escultura de mármol dormida, pero tu mente viaja entre las constelaciones lejanas del firmamento.\n\nEres el señor cósmico de los Pirineos, la presencia inmortal que velará por las montañas y los valles a lo largo de los siglos venideros.",
+      "imagen": "/images/stories/abadia-prohibida/sima.jpg",
+      "esFinal": true,
+      "tipo_final": "neutro",
+      "mensaje_final": "Trascendiste la carne para convertirte en la mente eterna de la cordillera."
+    },
+    "nodo_final_tinta": {
+      "id": "nodo_final_tinta",
+      "titulo": "Epílogo IV: La Condena de la Tinta Eterna",
+      "texto": "La energía astral resulta incontenible para tu cuerpo humano. La tinta del *Codex Umbrarum* penetra en tus venas mientras tus pensamientos se graban letra a letra en los folios de vitela.\n\nAl amanecer, los hermanos encuentran tu hábito vacío sobre el atril del scriptorium. En la última página del códice, una miniatura gótica iluminada en oro y sepia muestra a un monje de mirada sabia atrapado para siempre en los márgenes.",
+      "imagen": "/images/stories/abadia-prohibida/cripta.jpg",
+      "esFinal": true,
+      "tipo_final": "malo",
+      "mensaje_final": "Tu alma quedó prisionera en el pergamino, como una advertencia para los futuros eruditos."
+    },
+    "nodo_final_baculo": {
+      "id": "nodo_final_baculo",
+      "titulo": "Epílogo V: El Báculo de las Sombras",
+      "texto": "Empuñas el báculo abacial de plata y el anillo de zafiro de Santa Eulalia. El Prior Rodrigo ha sido desterrado y el *Codex Umbrarum* descansa bajo siete llaves en tu cámara secreta, donde solo tú posees el antídoto y el saber para interpretarlo.\n\nBajo tu gobierno sabio y hermético, la abadía se transforma en la fortaleza más impenetrable del saber esotérico de la Cristiandad.",
+      "imagen": "/images/stories/abadia-prohibida/scriptorium.jpg",
+      "esFinal": true,
+      "tipo_final": "neutro",
+      "mensaje_final": "Asumiste el poder absoluto y te convertiste en el celoso custodio de los secretos arcanos."
+    },
+    "nodo_final_exodo": {
+      "id": "nodo_final_exodo",
+      "titulo": "Epílogo VI: El Éxodo de los Pirineos",
+      "texto": "Cabalgan por los valles de Occitania mientras la primavera comienza a fundir las nieves. En las alforjas de tus mulas viajan los textos de medicina, alquimia y filosofía que sembrarán la semilla de las futuras universidades europeas.\n\nA tus espaldas, Santa Eulalia queda como un recuerdo en la bruma. Has salvado el alma de la civilización antes de la llegada de la inquisición.",
+      "imagen": "/images/stories/abadia-prohibida/portada.jpg",
+      "esFinal": true,
+      "tipo_final": "bueno",
+      "mensaje_final": "El saber huyó de la jaula de piedra y se esparció por el mundo libre."
+    },
+    "nodo_final_diluvio": {
+      "id": "nodo_final_diluvio",
+      "titulo": "Epílogo VII: El Diluvio Subterráneo",
+      "texto": "Las aguas romanas arrastran los cimientos milenarios del monasterio en un estruendo que sacude los valles. La Abadía de Santa Eulalia se hunde en la fosa kárstica, sepultando para siempre el códice, el veneno y la presencia estelar bajo un lago de aguas cristalinas.\n\nLos monjes contemplan desde el monte cómo la montaña devoró el peligro, dejando la tierra limpia y en paz.",
+      "imagen": "/images/stories/abadia-prohibida/esclusas.jpg",
+      "esFinal": true,
+      "tipo_final": "neutro",
+      "mensaje_final": "El agua purificó el pecado de la montaña. La pesadilla ha quedado sellada para siempre."
+    },
+    "nodo_final_sepulcro": {
+      "id": "nodo_final_sepulcro",
+      "titulo": "Epílogo VIII: La Hermandad del Santo Sepulcro Oculto",
+      "texto": "En la cripta sellada con plomo y fuego sagrado, tú y los doce monjes más sabios pronunciáis el juramento de la Orden del Silencio. No revelaréis al mundo exterior lo que descansa en la montaña, pero dedicaréis vuestras vidas a estudiar la armonía entre la fe, la ciencia y el cosmos.\n\nSanta Eulalia continuará siendo un misterio para el mundo, un guardián silencioso en la cima de los Pirineos.",
+      "imagen": "/images/stories/abadia-prohibida/amanecer.jpg",
+      "esFinal": true,
+      "tipo_final": "bueno",
+      "mensaje_final": "Fundaste una sociedad secreta de monjes guardianes para proteger el equilibrio del mundo."
+    }
+  }
+}
