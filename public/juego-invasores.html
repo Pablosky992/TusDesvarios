@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invasores del Espacio (Defensa Cósmica) — Juego Arcade Gratis | TusDesvarios.com</title>
+  <meta name="description" content="Juega gratis a Invasores del Espacio: el mítico matamarcianos retro arcade reinventado con estética synthwave neón, 60 FPS, búnkeres destructibles, nave nodriza de bonificación y sonido 8-bit.">
+  <meta name="keywords" content="juego marcianos gratis, invasores del espacio online, matamarcianos retro, space shooter arcade, alien invaders gratis, tus desvarios">
+  
+  <link rel="canonical" href="https://tusdesvarios.com/juego-invasores.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Invasores del Espacio (Defensa Cósmica) | Tus Desvaríos">
+  <meta property="og:description" content="Defiende la órbita de hordas alienígenas con tu cañón de plasma. ¡Juega gratis en tu navegador!">
+  <meta property="og:url" content="https://tusdesvarios.com/juego-invasores.html">
+  <meta property="og:image" content="images/games/portada_invasores.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Invasores del Espacio — Juego Arcade Retro Gratis">
+  <meta name="twitter:description" content="El clásico matamarcianos arcade con física a 60 FPS, oleadas progresivas y estética synthwave.">
+  <meta name="twitter:image" content="images/games/portada_invasores.jpg">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Invasores del Espacio (Defensa Cósmica)",
+  "description": "El legendario matamarcianos arcade retro reinventado con estética synthwave neón, 60 FPS, búnkeres destructibles, nave nodriza misteriosa y sonido 8-bit.",
+  "url": "https://tusdesvarios.com/juego-invasores.html",
+  "genre": [
+    "Arcade",
+    "Action",
+    "Shoot em up",
+    "Space Shooter",
+    "Retro Arcade"
+  ],
+  "playMode": "SinglePlayer",
+  "applicationCategory": "Game",
+  "inLanguage": "es",
+  "image": "https://tusdesvarios.com/images/games/portada_invasores.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tus Desvaríos",
+    "url": "https://tusdesvarios.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://tusdesvarios.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Desvaríos Retro",
+      "item": "https://tusdesvarios.com/desvarios-retro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Invasores del Espacio",
+      "item": "https://tusdesvarios.com/juego-invasores.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-main: #0a0e17;
+      --bg-card: #121824;
+      --bg-card-hover: #182234;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: #06b6d4;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent: #06b6d4;
+      --accent-glow: rgba(6, 182, 212, 0.35);
+      --font-title: 'Cinzel', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+    }
+
+    .site-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .main-content {
+      max-width: 920px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 4rem;
+      flex: 1;
+    }
+
+    .breadcrumb-nav {
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumb-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .breadcrumb-link:hover {
+      color: var(--accent);
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: auto;
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+
+    @media (max-width: 640px) {
+      .header-container { flex-direction: column; align-items: flex-start; }
+      .nav-links { width: 100%; justify-content: flex-start; overflow-x: auto; padding-bottom: 0.25rem; }
+    }
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <div class="site-wrapper">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link active-retro" title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="breadcrumb-nav">
+        <a href="desvarios-retro.html" class="breadcrumb-link">
+          <span>←</span> <span>Volver a Desvaríos Retro</span>
+        </a>
+      </div>
+
+      <header style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.9rem; background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.35); border-radius: 9999px; color: #06b6d4; font-size: 0.82rem; font-weight: 700; margin-bottom: 0.75rem;">
+          <span>👾</span>
+          <span>Acción Arcade Matamarcianos Retro</span>
+        </div>
+        <h1 style="font-family: var(--font-title); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 900; letter-spacing: 0.04em; margin-bottom: 0.5rem; background: linear-gradient(135deg, #fff 40%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Invasores del Espacio (Defensa Cósmica)
+        </h1>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; max-width: 580px; margin: 0 auto;">
+          Defiende la órbita de las oleadas alienígenas, utiliza los búnkeres de plasma y derriba la nave nodriza de bonificación.
+        </p>
+      </header>
+
+      <!-- Controls Bar -->
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; padding: 0.75rem 1.25rem; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: 12px;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div id="lives-display" style="display: flex; align-items: center; gap: 0.35rem; font-size: 1.15rem;">
+            <span>🚀</span><span>🚀</span><span>🚀</span>
+          </div>
+          <div id="wave-badge" style="font-size: 0.85rem; font-weight: 800; color: #06b6d4; background: rgba(6, 182, 212, 0.12); padding: 0.25rem 0.65rem; border-radius: 6px; border: 1px solid rgba(6, 182, 212, 0.3);">
+            Oleada 1
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="text-align: right;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">PUNTOS</div>
+            <div id="score-display" style="font-family: monospace; font-size: 1.25rem; font-weight: 900; color: #06b6d4;">00000</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">RÉCORD</div>
+            <div id="highscore-display" style="font-family: monospace; font-size: 1.25rem; font-weight: 900; color: #fbbf24;">00000</div>
+          </div>
+
+          <button id="btn-sound" onclick="invadersApp.toggleSound()" style="padding: 0.45rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(16, 185, 129, 0.15); color: #34d399; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 600;">
+            <span id="sound-icon">🔊</span> <span id="sound-text">Sonido</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Arcade Frame -->
+      <div style="position: relative; margin: 0 auto; padding: 12px; border-radius: 16px; background: linear-gradient(180deg, #181c24 0%, #0d1117 100%); border: 2px solid rgba(6, 182, 212, 0.35); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(6, 182, 212, 0.15); max-width: 664px;">
+        <canvas id="game-canvas" width="640" height="480" style="display: block; width: 100%; height: auto; border-radius: 10px; border: 2px solid #232b3b; cursor: crosshair; touch-action: none;"></canvas>
+
+        <!-- Start Overlay -->
+        <div id="overlay-start" onclick="invadersApp.startGame()" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); background: rgba(11, 15, 25, 0.88); border: 1.5px solid #06b6d4; border-radius: 12px; padding: 0.85rem 1.5rem; color: #06b6d4; font-weight: 800; font-size: 0.95rem; cursor: pointer; backdrop-filter: blur(8px); box-shadow: 0 0 25px rgba(6, 182, 212, 0.4); text-align: center;">
+          🚀 Haz clic o pulsa [Espacio] para iniciar la defensa
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div id="overlay-gameover" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(15, 10, 20, 0.92); border: 2px solid #ef4444; border-radius: 16px; padding: 1.5rem 2rem; text-align: center; color: #fff; backdrop-filter: blur(10px); box-shadow: 0 0 40px rgba(239, 68, 68, 0.4); max-width: 380px; width: 90%;">
+          <div style="font-size: 1.5rem; font-weight: 900; color: #f87171; margin-bottom: 0.4rem;">💥 INVASIÓN COMPLETADA</div>
+          <p id="gameover-score-text" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Puntuación final: 0 puntos</p>
+          <button onclick="invadersApp.startNewGame()" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); color: #fff; border: none; padding: 0.65rem 1.4rem; border-radius: 8px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
+            <span>🔄</span> <span>Jugar de nuevo</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Button -->
+      <div style="margin-top: 1rem; text-align: center;">
+        <button type="button" onclick="invadersApp.shootPlayerBullet()" style="width: 100%; max-width: 664px; padding: 0.75rem 1rem; border-radius: 10px; background: rgba(6, 182, 212, 0.15); border: 1.5px solid #06b6d4; color: #06b6d4; font-weight: 800; font-size: 0.92rem; cursor: pointer; box-shadow: 0 0 15px rgba(6, 182, 212, 0.3); display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+          <span>⚡</span> <span>Disparar Cañón Láser</span>
+        </button>
+      </div>
+
+      <!-- Guide -->
+      <section style="margin-top: 2.5rem; padding: 1.5rem; border-radius: 12px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle);">
+        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.45rem; color: #06b6d4;">
+          <span>❓</span> <span>Tabla de Invasores y Defensas</span>
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6;">
+          <div>
+            <strong style="color: #ec4899;">👾 Comandante Cósmico:</strong> 30 puntos. Fila superior, dispara ráfagas de plasma.
+          </div>
+          <div>
+            <strong style="color: #06b6d4;">🛸 Destructor de Plasma:</strong> 20 puntos. Filas intermedias con blindaje reforzado.
+          </div>
+          <div>
+            <strong style="color: #4ade80;">⚡ Drone de Vanguardia:</strong> 10 puntos. Filas de asalto frontal.
+          </div>
+          <div>
+            <strong style="color: #f43f5e;">🛸 Nave Nodriza Misteriosa:</strong> 100 a 300 puntos de bonificación secreta al derribarla.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const CANVAS_WIDTH = 640;
+    const CANVAS_HEIGHT = 480;
+
+    const invadersApp = {
+      canvas: null,
+      ctx: null,
+      gameState: 'start',
+      score: 0,
+      highScore: 0,
+      lives: 3,
+      wave: 1,
+      soundEnabled: true,
+      audioCtx: null,
+
+      player: {
+        x: (CANVAS_WIDTH - 36) / 2,
+        y: CANVAS_HEIGHT - 32,
+        width: 36,
+        height: 18,
+        speed: 6.5,
+        cooldown: 0
+      },
+
+      invaders: [],
+      invaderDir: 1,
+      invaderStepTimer: 0,
+      invaderAnimFrame: 0,
+      marchNoteIndex: 0,
+
+      bullets: [],
+      bunkers: [],
+      particles: [],
+
+      mystery: {
+        x: -50,
+        y: 35,
+        width: 44,
+        height: 18,
+        vx: 2.2,
+        active: false
+      },
+      mysterySpawnTimer: 0,
+
+      keys: { left: false, right: false, space: false, mouseDown: false },
+
+      init() {
+        this.canvas = document.getElementById('game-canvas');
+        this.ctx = this.canvas.getContext('2d');
+
+        try {
+          const saved = localStorage.getItem('invasores_high_score');
+          if (saved) this.highScore = parseInt(saved, 10);
+        } catch(e) {}
+
+        this.bindEvents();
+        this.startNewGame();
+        requestAnimationFrame(() => this.loop());
+      },
+
+      playSound(type) {
+        if (!this.soundEnabled) return;
+        try {
+          const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+          if (!this.audioCtx) this.audioCtx = new AudioCtxClass();
+          if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+          const ctx = this.audioCtx;
+          const now = ctx.currentTime;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          if (type === 'shoot') {
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(880, now);
+            osc.frequency.exponentialRampToValueAtTime(110, now + 0.09);
+            gain.gain.setValueAtTime(0.12, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
+            osc.start(now);
+            osc.stop(now + 0.09);
+          } else if (type === 'invader_hit') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(320, now);
+            osc.frequency.linearRampToValueAtTime(60, now + 0.08);
+            gain.gain.setValueAtTime(0.18, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+            osc.start(now);
+            osc.stop(now + 0.08);
+          } else if (type === 'player_hit') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(150, now);
+            osc.frequency.exponentialRampToValueAtTime(40, now + 0.35);
+            gain.gain.setValueAtTime(0.25, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+            osc.start(now);
+            osc.stop(now + 0.35);
+          } else if (type === 'march') {
+            const notes = [165, 147, 131, 116];
+            const freq = notes[this.marchNoteIndex % notes.length];
+            this.marchNoteIndex++;
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, now);
+            gain.gain.setValueAtTime(0.14, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
+            osc.start(now);
+            osc.stop(now + 0.06);
+          } else if (type === 'ufo') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(580, now);
+            osc.frequency.linearRampToValueAtTime(880, now + 0.12);
+            gain.gain.setValueAtTime(0.1, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+            osc.start(now);
+            osc.stop(now + 0.12);
+          } else if (type === 'win') {
+            const notes = [440, 554, 659, 880];
+            notes.forEach((freq, idx) => {
+              const nOsc = ctx.createOscillator();
+              const nGain = ctx.createGain();
+              nOsc.type = 'triangle';
+              nOsc.frequency.setValueAtTime(freq, now + idx * 0.08);
+              nGain.gain.setValueAtTime(0.18, now + idx * 0.08);
+              nGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.18);
+              nOsc.connect(nGain);
+              nGain.connect(ctx.destination);
+              nOsc.start(now + idx * 0.08);
+              nOsc.stop(now + idx * 0.08 + 0.18);
+            });
+          } else if (type === 'game_over') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(260, now);
+            osc.frequency.exponentialRampToValueAtTime(65, now + 0.45);
+            gain.gain.setValueAtTime(0.25, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+            osc.start(now);
+            osc.stop(now + 0.45);
+          }
+        } catch(e) {}
+      },
+
+      toggleSound() {
+        this.soundEnabled = !this.soundEnabled;
+        const icon = document.getElementById('sound-icon');
+        const text = document.getElementById('sound-text');
+        const btn = document.getElementById('btn-sound');
+        if (this.soundEnabled) {
+          icon.textContent = '🔊';
+          text.textContent = 'Sonido';
+          btn.style.background = 'rgba(16, 185, 129, 0.15)';
+          btn.style.color = '#34d399';
+        } else {
+          icon.textContent = '🔇';
+          text.textContent = 'Mute';
+          btn.style.background = 'rgba(255, 255, 255, 0.05)';
+          btn.style.color = 'var(--text-muted)';
+        }
+      },
+
+      bindEvents() {
+        window.addEventListener('keydown', (e) => {
+          if (e.code === 'ArrowLeft' || e.code === 'KeyA') this.keys.left = true;
+          if (e.code === 'ArrowRight' || e.code === 'KeyD') this.keys.right = true;
+          if (e.code === 'Space') {
+            e.preventDefault();
+            this.keys.space = true;
+            if (this.gameState === 'start') this.startGame();
+          }
+        });
+
+        window.addEventListener('keyup', (e) => {
+          if (e.code === 'ArrowLeft' || e.code === 'KeyA') this.keys.left = false;
+          if (e.code === 'ArrowRight' || e.code === 'KeyD') this.keys.right = false;
+          if (e.code === 'Space') this.keys.space = false;
+        });
+
+        window.addEventListener('mouseup', () => {
+          this.keys.mouseDown = false;
+        });
+
+        this.canvas.addEventListener('mousedown', (e) => {
+          if (e.button !== 0) return;
+          this.keys.mouseDown = true;
+          if (this.gameState === 'start') this.startGame();
+          this.shootPlayerBullet();
+        });
+
+        this.canvas.addEventListener('mousemove', (e) => {
+          const rect = this.canvas.getBoundingClientRect();
+          const scaleX = CANVAS_WIDTH / rect.width;
+          const mouseX = (e.clientX - rect.left) * scaleX;
+          this.player.x = Math.max(10, Math.min(CANVAS_WIDTH - this.player.width - 10, mouseX - this.player.width / 2));
+        });
+
+        this.canvas.addEventListener('touchmove', (e) => {
+          if (e.touches.length === 0) return;
+          const rect = this.canvas.getBoundingClientRect();
+          const scaleX = CANVAS_WIDTH / rect.width;
+          const touchX = (e.touches[0].clientX - rect.left) * scaleX;
+          this.player.x = Math.max(10, Math.min(CANVAS_WIDTH - this.player.width - 10, touchX - this.player.width / 2));
+        });
+
+        this.canvas.addEventListener('touchstart', () => {
+          if (this.gameState === 'start') this.startGame();
+          this.shootPlayerBullet();
+        });
+      },
+
+      startGame() {
+        this.gameState = 'playing';
+        document.getElementById('overlay-start').style.display = 'none';
+      },
+
+      startNewGame() {
+        this.score = 0;
+        this.lives = 3;
+        this.wave = 1;
+        this.player.x = (CANVAS_WIDTH - 36) / 2;
+        this.initWave(1);
+        this.gameState = 'start';
+        this.updateHeader();
+        document.getElementById('overlay-start').style.display = 'block';
+        document.getElementById('overlay-gameover').style.display = 'none';
+      },
+
+      initBunkers() {
+        const blocks = [];
+        const bunkerCount = 4;
+        const bunkerWidth = 48;
+        const bunkerHeight = 32;
+        const blockRows = 4;
+        const blockCols = 6;
+        const blockW = bunkerWidth / blockCols;
+        const blockH = bunkerHeight / blockRows;
+
+        const spacing = (CANVAS_WIDTH - (bunkerCount * bunkerWidth)) / (bunkerCount + 1);
+        const startY = CANVAS_HEIGHT - 95;
+
+        for (let b = 0; b < bunkerCount; b++) {
+          const bx = spacing + b * (bunkerWidth + spacing);
+          for (let r = 0; r < blockRows; r++) {
+            for (let c = 0; c < blockCols; c++) {
+              if (r === 0 && (c === 0 || c === blockCols - 1)) continue;
+              if (r === blockRows - 1 && (c === 2 || c === 3)) continue;
+              blocks.push({
+                x: bx + c * blockW,
+                y: startY + r * blockH,
+                width: blockW,
+                height: blockH,
+                hp: 3
+              });
+            }
+          }
+        }
+        this.bunkers = blocks;
+      },
+
+      initWave(w) {
+        this.wave = w;
+        const rows = 5;
+        const cols = 9;
+        const invWidth = 26;
+        const invHeight = 18;
+        const padX = 14;
+        const padY = 14;
+        const startX = (CANVAS_WIDTH - (cols * (invWidth + padX) - padX)) / 2;
+        const startY = 65 + Math.min(30, (w - 1) * 8);
+
+        const list = [];
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            let type = 2;
+            let points = 10;
+            let color = '#4ade80';
+
+            if (r === 0) {
+              type = 0;
+              points = 30;
+              color = '#ec4899';
+            } else if (r === 1 || r === 2) {
+              type = 1;
+              points = 20;
+              color = '#06b6d4';
+            }
+
+            list.push({
+              x: startX + c * (invWidth + padX),
+              y: startY + r * (invHeight + padY),
+              width: invWidth,
+              height: invHeight,
+              type,
+              points,
+              color,
+              alive: true
+            });
+          }
+        }
+
+        this.invaders = list;
+        this.invaderDir = 1;
+        this.invaderStepTimer = 0;
+        this.invaderAnimFrame = 0;
+        this.bullets = [];
+        this.particles = [];
+        this.mystery.active = false;
+        this.mysterySpawnTimer = 0;
+        this.initBunkers();
+        this.updateHeader();
+      },
+
+      updateHeader() {
+        let heartsHtml = '';
+        for (let i = 0; i < 3; i++) {
+          heartsHtml += '<span style="opacity: ' + (i < this.lives ? '1' : '0.2') + '; filter: ' + (i < this.lives ? 'drop-shadow(0 0 6px rgba(6,182,212,0.8))' : 'none') + ';">🚀</span>';
+        }
+        document.getElementById('lives-display').innerHTML = heartsHtml;
+        document.getElementById('wave-badge').textContent = 'Oleada ' + this.wave;
+        document.getElementById('score-display').textContent = String(this.score).padStart(5, '0');
+        document.getElementById('highscore-display').textContent = String(this.highScore).padStart(5, '0');
+      },
+
+      shootPlayerBullet() {
+        if (this.player.cooldown <= 0) {
+          this.bullets.push({
+            x: this.player.x + this.player.width / 2,
+            y: this.player.y - 6,
+            vy: -7.5,
+            isEnemy: false
+          });
+          this.player.cooldown = 14;
+          this.playSound('shoot');
+        }
+      },
+
+      createExplosion(x, y, color, count = 10) {
+        for (let i = 0; i < count; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 3.5 + 1;
+          this.particles.push({
+            x, y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            color,
+            alpha: 1,
+            size: Math.random() * 3 + 1.5
+          });
+        }
+      },
+
+      loop() {
+        const player = this.player;
+        const invaders = this.invaders;
+        const bullets = this.bullets;
+        const bunkers = this.bunkers;
+        const particles = this.particles;
+        const mystery = this.mystery;
+
+        // 1. UPDATE
+        if (this.gameState === 'playing') {
+          if (this.keys.left) player.x = Math.max(10, player.x - player.speed);
+          if (this.keys.right) player.x = Math.min(CANVAS_WIDTH - player.width - 10, player.x + player.speed);
+
+          if (this.keys.space || this.keys.mouseDown) {
+            this.shootPlayerBullet();
+          }
+          if (player.cooldown > 0) player.cooldown--;
+
+          const aliveInvaders = invaders.filter(inv => inv.alive);
+          const aliveCount = aliveInvaders.length;
+
+          if (aliveCount === 0) {
+            this.playSound('win');
+            try {
+              confetti({
+                particleCount: 90,
+                spread: 80,
+                origin: { y: 0.6 },
+                colors: ['#06b6d4', '#ec4899', '#4ade80', '#fbbf24', '#ffffff']
+              });
+            } catch(e) {}
+            this.initWave(this.wave + 1);
+          } else {
+            const stepInterval = Math.max(4, Math.floor((aliveCount / 45) * 32));
+            this.invaderStepTimer++;
+            if (this.invaderStepTimer >= stepInterval) {
+              this.invaderStepTimer = 0;
+              this.invaderAnimFrame = 1 - this.invaderAnimFrame;
+              this.playSound('march');
+
+              let hitEdge = false;
+              for (const inv of aliveInvaders) {
+                if ((this.invaderDir > 0 && inv.x + inv.width >= CANVAS_WIDTH - 20) || (this.invaderDir < 0 && inv.x <= 20)) {
+                  hitEdge = true;
+                  break;
+                }
+              }
+
+              if (hitEdge) {
+                this.invaderDir *= -1;
+                for (const inv of aliveInvaders) {
+                  inv.y += 14;
+                  if (inv.y + inv.height >= player.y - 10) {
+                    this.playSound('game_over');
+                    this.gameState = 'game_over';
+                    if (this.score > this.highScore) {
+                      this.highScore = this.score;
+                      try { localStorage.setItem('invasores_high_score', this.highScore.toString()); } catch(e) {}
+                    }
+                    document.getElementById('gameover-score-text').textContent = 'Puntuación final: ' + this.score + ' puntos (Oleada ' + this.wave + ')';
+                    document.getElementById('overlay-gameover').style.display = 'block';
+                  }
+                }
+              } else {
+                for (const inv of aliveInvaders) {
+                  inv.x += this.invaderDir * 8;
+                }
+              }
+            }
+
+            if (Math.random() < 0.035 && bullets.filter(b => b.isEnemy).length < 5) {
+              const shooter = aliveInvaders[Math.floor(Math.random() * aliveInvaders.length)];
+              bullets.push({
+                x: shooter.x + shooter.width / 2,
+                y: shooter.y + shooter.height,
+                vy: 3.5,
+                isEnemy: true
+              });
+            }
+          }
+
+          // Mystery ship
+          this.mysterySpawnTimer++;
+          if (this.mysterySpawnTimer > 750 && !mystery.active) {
+            this.mysterySpawnTimer = 0;
+            if (Math.random() < 0.5) {
+              mystery.active = true;
+              mystery.x = -mystery.width;
+              mystery.vx = 2.2;
+              this.playSound('ufo');
+            }
+          }
+
+          if (mystery.active) {
+            mystery.x += mystery.vx;
+            if (mystery.x > CANVAS_WIDTH + 20) mystery.active = false;
+          }
+
+          // Bullets
+          for (let i = bullets.length - 1; i >= 0; i--) {
+            const b = bullets[i];
+            b.y += b.vy;
+
+            if (b.y < 0 || b.y > CANVAS_HEIGHT) {
+              bullets.splice(i, 1);
+              continue;
+            }
+
+            let hitBunker = false;
+            for (let k = bunkers.length - 1; k >= 0; k--) {
+              const blk = bunkers[k];
+              if (b.x >= blk.x && b.x <= blk.x + blk.width && b.y >= blk.y && b.y <= blk.y + blk.height) {
+                blk.hp--;
+                if (blk.hp <= 0) bunkers.splice(k, 1);
+                this.createExplosion(blk.x + blk.width/2, blk.y + blk.height/2, '#06b6d4', 4);
+                bullets.splice(i, 1);
+                hitBunker = true;
+                break;
+              }
+            }
+            if (hitBunker) continue;
+
+            if (!b.isEnemy) {
+              let hitInv = false;
+              for (const inv of invaders) {
+                if (inv.alive && b.x >= inv.x && b.x <= inv.x + inv.width && b.y >= inv.y && b.y <= inv.y + inv.height) {
+                  inv.alive = false;
+                  bullets.splice(i, 1);
+                  this.score += inv.points;
+                  this.updateHeader();
+                  if (this.score >= 500 && window.DesvariosAuth) {
+                    window.DesvariosAuth.unlockMedal('invasores-defensor');
+                  }
+                  this.createExplosion(inv.x + inv.width/2, inv.y + inv.height/2, inv.color, 12);
+                  this.playSound('invader_hit');
+                  hitInv = true;
+                  break;
+                }
+              }
+              if (hitInv) continue;
+
+              if (mystery.active && b.x >= mystery.x && b.x <= mystery.x + mystery.width && b.y >= mystery.y && b.y <= mystery.y + mystery.height) {
+                mystery.active = false;
+                bullets.splice(i, 1);
+                const mysteryPts = [100, 150, 200, 300][Math.floor(Math.random() * 4)];
+                this.score += mysteryPts;
+                this.updateHeader();
+                this.createExplosion(mystery.x + mystery.width/2, mystery.y + mystery.height/2, '#f43f5e', 20);
+                this.playSound('invader_hit');
+                continue;
+              }
+            } else {
+              if (b.x >= player.x && b.x <= player.x + player.width && b.y >= player.y && b.y <= player.y + player.height) {
+                bullets.splice(i, 1);
+                this.createExplosion(player.x + player.width/2, player.y + player.height/2, '#06b6d4', 24);
+                this.playSound('player_hit');
+                this.lives--;
+                this.updateHeader();
+
+                if (this.lives <= 0) {
+                  this.playSound('game_over');
+                  this.gameState = 'game_over';
+                  if (this.score > this.highScore) {
+                    this.highScore = this.score;
+                    try { localStorage.setItem('invasores_high_score', this.highScore.toString()); } catch(e) {}
+                  }
+                  document.getElementById('gameover-score-text').textContent = 'Puntuación final: ' + this.score + ' puntos (Oleada ' + this.wave + ')';
+                  document.getElementById('overlay-gameover').style.display = 'block';
+                } else {
+                  player.x = (CANVAS_WIDTH - 36) / 2;
+                }
+                continue;
+              }
+            }
+          }
+        }
+
+        // Particles
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const pt = particles[i];
+          pt.x += pt.vx;
+          pt.y += pt.vy;
+          pt.alpha -= 0.028;
+          if (pt.alpha <= 0) particles.splice(i, 1);
+        }
+
+        // 2. RENDER
+        const ctx = this.ctx;
+        ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+        const bgGrad = ctx.createLinearGradient(0, 0, 0, CANVAS_HEIGHT);
+        bgGrad.addColorStop(0, '#060913');
+        bgGrad.addColorStop(1, '#0e1422');
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+        ctx.strokeStyle = 'rgba(6, 182, 212, 0.12)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(0, CANVAS_HEIGHT - 12);
+        ctx.lineTo(CANVAS_WIDTH, CANVAS_HEIGHT - 12);
+        ctx.stroke();
+
+        // Bunkers
+        bunkers.forEach(blk => {
+          const alpha = blk.hp === 3 ? 1.0 : blk.hp === 2 ? 0.7 : 0.4;
+          ctx.fillStyle = 'rgba(6, 182, 212, ' + alpha + ')';
+          ctx.shadowColor = '#06b6d4';
+          ctx.shadowBlur = 4;
+          ctx.fillRect(blk.x, blk.y, blk.width, blk.height);
+        });
+        ctx.shadowBlur = 0;
+
+        // Invaders
+        const animFrame = this.invaderAnimFrame;
+        invaders.forEach(inv => {
+          if (!inv.alive) return;
+          ctx.fillStyle = inv.color;
+          ctx.shadowColor = inv.color;
+          ctx.shadowBlur = 8;
+
+          const ix = inv.x;
+          const iy = inv.y;
+          const iw = inv.width;
+          const ih = inv.height;
+
+          if (inv.type === 0) {
+            ctx.beginPath();
+            ctx.roundRect(ix + 4, iy + 2, iw - 8, ih - 4, 3);
+            ctx.fill();
+            ctx.fillRect(ix + 2, iy, 4, 4);
+            ctx.fillRect(ix + iw - 6, iy, 4, 4);
+            ctx.fillStyle = '#000';
+            ctx.fillRect(ix + 7, iy + 6, 3, 3);
+            ctx.fillRect(ix + iw - 10, iy + 6, 3, 3);
+            ctx.fillStyle = inv.color;
+            if (animFrame === 0) {
+              ctx.fillRect(ix, iy + ih - 4, 4, 4);
+              ctx.fillRect(ix + iw - 4, iy + ih - 4, 4, 4);
+            } else {
+              ctx.fillRect(ix, iy + 4, 4, 4);
+              ctx.fillRect(ix + iw - 4, iy + 4, 4, 4);
+            }
+          } else if (inv.type === 1) {
+            ctx.beginPath();
+            ctx.roundRect(ix + 3, iy + 3, iw - 6, ih - 5, 2);
+            ctx.fill();
+            ctx.fillStyle = '#000';
+            ctx.fillRect(ix + 6, iy + 6, 3, 3);
+            ctx.fillRect(ix + iw - 9, iy + 6, 3, 3);
+            ctx.fillStyle = inv.color;
+            if (animFrame === 0) {
+              ctx.fillRect(ix + 1, iy + ih - 3, 4, 4);
+              ctx.fillRect(ix + iw - 5, iy + ih - 3, 4, 4);
+            } else {
+              ctx.fillRect(ix + 3, iy + ih - 2, 4, 3);
+              ctx.fillRect(ix + iw - 7, iy + ih - 2, 4, 3);
+            }
+          } else {
+            ctx.beginPath();
+            ctx.roundRect(ix + 5, iy + 2, iw - 10, ih - 4, 4);
+            ctx.fill();
+            ctx.fillRect(ix + iw / 2 - 2, iy, 4, 3);
+            ctx.fillStyle = '#000';
+            ctx.fillRect(ix + 8, iy + 5, 2, 3);
+            ctx.fillRect(ix + iw - 10, iy + 5, 2, 3);
+            ctx.fillStyle = inv.color;
+            if (animFrame === 0) {
+              ctx.fillRect(ix + 3, iy + ih - 3, 3, 4);
+              ctx.fillRect(ix + iw - 6, iy + ih - 3, 3, 4);
+            } else {
+              ctx.fillRect(ix + 6, iy + ih - 3, 3, 4);
+              ctx.fillRect(ix + iw - 9, iy + ih - 3, 3, 4);
+            }
+          }
+        });
+        ctx.shadowBlur = 0;
+
+        // Mystery UFO
+        if (mystery.active) {
+          ctx.fillStyle = '#f43f5e';
+          ctx.shadowColor = '#f43f5e';
+          ctx.shadowBlur = 12;
+          ctx.beginPath();
+          ctx.roundRect(mystery.x, mystery.y + 4, mystery.width, mystery.height - 4, 6);
+          ctx.fill();
+          ctx.fillStyle = '#facc15';
+          ctx.fillRect(mystery.x + 12, mystery.y, mystery.width - 24, 6);
+          ctx.shadowBlur = 0;
+        }
+
+        // Player Ship
+        ctx.fillStyle = '#06b6d4';
+        ctx.shadowColor = '#06b6d4';
+        ctx.shadowBlur = 12;
+        ctx.beginPath();
+        ctx.roundRect(player.x, player.y + 6, player.width, player.height - 6, 4);
+        ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(player.x + player.width / 2 - 2, player.y, 4, 8);
+        ctx.fillStyle = '#ec4899';
+        ctx.fillRect(player.x + player.width / 2 - 5, player.y + 6, 10, 4);
+        ctx.shadowBlur = 0;
+
+        // Bullets
+        bullets.forEach(b => {
+          if (!b.isEnemy) {
+            ctx.fillStyle = '#fff';
+            ctx.shadowColor = '#06b6d4';
+            ctx.shadowBlur = 10;
+            ctx.fillRect(b.x - 1.5, b.y, 3, 10);
+          } else {
+            ctx.fillStyle = '#fb923c';
+            ctx.shadowColor = '#f43f5e';
+            ctx.shadowBlur = 8;
+            ctx.fillRect(b.x - 1.5, b.y, 3, 8);
+          }
+        });
+        ctx.shadowBlur = 0;
+
+        // Particles
+        particles.forEach(pt => {
+          ctx.fillStyle = pt.color;
+          ctx.globalAlpha = pt.alpha;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1.0;
+
+        requestAnimationFrame(() => this.loop());
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      invadersApp.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

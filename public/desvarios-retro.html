@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desvaríos Retro — Juegos Clásicos, Arcade de los 80s y Puzles | TusDesvarios.com</title>
+  <meta name="description" content="Juega gratis a clásicos del arcade y minijuegos de ingenio retro: El Ahorcado Desvariado con temáticas góticas y sci-fi, puzles lógicos y más en TusDesvarios.com.">
+  <meta name="keywords" content="desvarios retro, juegos retro online, el ahorcado online, juegos arcade clasicos, juegos de palabras gratis, minijuegos navegador, tus desvarios">
+  
+  <!-- Canonical & SEO -->
+  <link rel="canonical" href="https://tusdesvarios.com/desvarios-retro.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Desvaríos Retro — Sala Arcade & Juegos Clásicos | Tus Desvaríos">
+  <meta property="og:description" content="Juegos arcade de los 80s y puzles de ingenio retro. Juega gratis a El Ahorcado y reta a tu mente.">
+  <meta property="og:url" content="https://tusdesvarios.com/desvarios-retro.html">
+  <meta property="og:image" content="images/categories/desvarios-retro.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Desvaríos Retro — Sala Arcade y Juegos Clásicos">
+  <meta name="twitter:description" content="Juegos de palabras, lógica y arcade con estética synthwave y efectos 8-bit. ¡Juega gratis en tu navegador!">
+  <meta name="twitter:image" content="images/categories/desvarios-retro.jpg">
+
+  <!-- Schema.org ItemList, BreadcrumbList & FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Colección de Juegos Retro y Arcade",
+    "description": "Catálogo de juegos clásicos de palabras, puzles lógicos y acción arcade de Tus Desvaríos.",
+    "numberOfItems": 6,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "El Ahorcado Desvariado", "url": "https://tusdesvarios.com/juego-el-ahorcado.html" },
+      { "@type": "ListItem", "position": 2, "name": "Snake Cyberpunk 2084", "url": "https://tusdesvarios.com/juego-snake-cyberpunk.html" },
+      { "@type": "ListItem", "position": 3, "name": "Buscaminas Desvariado", "url": "https://tusdesvarios.com/juego-buscaminas.html" },
+      { "@type": "ListItem", "position": 4, "name": "Tres en Raya Imposible (IA Minimax)", "url": "https://tusdesvarios.com/juego-tres-en-raya.html" },
+      { "@type": "ListItem", "position": 5, "name": "Rompebloques Neón (Dimensión Cósmica)", "url": "https://tusdesvarios.com/juego-rompebloques.html" },
+      { "@type": "ListItem", "position": 6, "name": "Invasores del Espacio (Defensa Cósmica)", "url": "https://tusdesvarios.com/juego-invasores.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://tusdesvarios.com" },
+      { "@type": "ListItem", "position": 2, "name": "Desvaríos Retro", "item": "https://tusdesvarios.com/desvarios-retro.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es la sección Desvaríos Retro de TusDesvarios.com?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es un salón arcade digital que rinde homenaje a los juegos clásicos de los años 80 y 90, combinando mecánicas retro nostálgicas con temáticas literarias, de ciencia ficción y efectos de sonido 8-bit sintetizados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es necesario descargar o pagar para jugar al Ahorcado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Todos los juegos de Desvaríos Retro se ejecutan 100% en el navegador, son totalmente gratuitos, sin necesidad de registro ni publicidad invasiva."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --bg-surface-hover: rgba(34, 45, 68, 0.95);
+      --bg-glass: rgba(12, 17, 28, 0.85);
+
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --border-focus: rgba(168, 85, 247, 0.5);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --accent-purple: #a855f7;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-pink: #ec4899;
+
+      --font-display: 'Cinzel', serif;
+      --font-reading: 'Crimson Pro', Georgia, serif;
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+
+      --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.4);
+      --shadow-elevated: 0 16px 40px rgba(0, 0, 0, 0.55);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      font-family: var(--font-ui);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 95% 55% at 50% -12%, rgba(168, 85, 247, 0.28) 0%, transparent 65%),
+        radial-gradient(circle 500px at 10% 30%, rgba(6, 182, 212, 0.22) 0%, transparent 60%),
+        radial-gradient(circle 550px at 90% 40%, rgba(245, 158, 11, 0.20) 0%, transparent 60%),
+        linear-gradient(180deg, #0e1322 0%, #0a0e1a 50%, #060911 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a, button {
+      cursor: pointer;
+      color: inherit;
+      text-decoration: none;
+      font-family: inherit;
+      border: none;
+      background: none;
+    }
+
+    .app-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .main-content {
+      flex: 1;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 5rem;
+    }
+
+    .breadcrumb-nav {
+      margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb-link:hover {
+      color: var(--text-primary);
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 2rem 1rem 2.75rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      color: #c084fc;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1.15;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .cat-filters-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .cat-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+    }
+
+    .cat-filter-btn:hover {
+      background: var(--bg-surface-hover);
+      color: var(--text-primary);
+      border-color: var(--border-medium);
+      transform: translateY(-1px);
+    }
+
+    .cat-filter-btn-active {
+      background: rgba(168, 85, 247, 0.15);
+      border-color: rgba(168, 85, 247, 0.5);
+      color: #c084fc;
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.2);
+    }
+
+    .cat-filter-count {
+      font-size: 0.72rem;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.1rem 0.45rem;
+      border-radius: var(--radius-full);
+    }
+
+    .tests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .test-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 2rem 1.65rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+      box-shadow: var(--shadow-subtle);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .test-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-elevated), 0 0 30px var(--card-glow, rgba(168, 85, 247, 0.2));
+      border-color: var(--card-accent, var(--accent-purple));
+    }
+
+    .test-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .test-card-icon {
+      font-size: 2.2rem;
+    }
+
+    .test-card-type-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      color: #c084fc;
+    }
+
+    .test-card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #fff;
+    }
+
+    .test-card-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      flex: 1;
+    }
+
+    .test-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 0.85rem;
+    }
+
+    .test-card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.1rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    }
+
+    .test-card-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link active-retro" title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="app-root">
+      <!-- Injected via retroApp -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const GAMES_DB = [
+      {
+        id: 'el-ahorcado',
+        slug: 'el-ahorcado',
+        titulo: 'El Ahorcado Desvariado',
+        subtitulo: 'Descifra la palabra oculta antes de que el cadalso de neón reclame tu alma',
+        descripcionCorta: 'El clásico juego del ahorcado con estética retro arcade, efectos de sonido 8-bit, 6 categorías temáticas y cientos de palabras misteriosas.',
+        icono: '🔤',
+        categoria: 'palabras',
+        categoriaLabel: 'Palabras & Letras',
+        tiempoMin: 3,
+        color: '#a855f7',
+        portada: 'images/games/portada_ahorcado.jpg',
+        disponible: true,
+        url: 'juego-el-ahorcado.html'
+      },
+      {
+        id: 'snake-cyberpunk',
+        slug: 'snake-cyberpunk',
+        titulo: 'Snake Cyberpunk 2084',
+        subtitulo: 'Conduce a la serpiente de neón a través de portales y anomalías de datos',
+        descripcionCorta: 'La mítica serpiente arcade en una cuadrícula synthwave futurista con multiplicadores de velocidad y obstáculos dinámicos.',
+        icono: '🐍',
+        categoria: 'arcade',
+        categoriaLabel: 'Acción Arcade',
+        tiempoMin: 5,
+        color: '#10b981',
+        portada: 'images/games/portada_snake.jpg',
+        disponible: true,
+        url: 'juego-snake-cyberpunk.html'
+      },
+      {
+        id: 'buscaminas',
+        slug: 'buscaminas',
+        titulo: 'Buscaminas Desvariado',
+        subtitulo: 'Desactiva anomalías dimensionales usando pura lógica y deducción',
+        descripcionCorta: 'El legendario puzle de banderas y números con modos clásicos, temporizador digital, sonido 8-bit y selector de dificultad.',
+        icono: '💣',
+        categoria: 'logica',
+        categoriaLabel: 'Lógica & Tablero',
+        tiempoMin: 4,
+        color: '#f59e0b',
+        portada: 'images/games/portada_buscaminas.jpg',
+        disponible: true,
+        url: 'juego-buscaminas.html'
+      },
+      {
+        id: 'tres-en-raya-imposible',
+        slug: 'tres-en-raya-imposible',
+        titulo: 'Tres en Raya Imposible (IA Minimax)',
+        subtitulo: '¿Serás capaz de vencer a la inteligencia artificial invencible?',
+        descripcionCorta: 'Desafía a un motor matemático imbatible o juega contra un amigo en local en una pantalla retro pixel.',
+        icono: '❌',
+        categoria: 'tablero',
+        categoriaLabel: 'Lógica & Tablero',
+        tiempoMin: 2,
+        color: '#06b6d4',
+        portada: 'images/games/portada_tres_en_raya.jpg',
+        disponible: true,
+        url: 'juego-tres-en-raya.html'
+      },
+      {
+        id: 'rompebloques-neon',
+        slug: 'rompebloques-neon',
+        titulo: 'Rompebloques Neón (Dimensión Cósmica)',
+        subtitulo: 'Destruye barreras dimensionales y recolecta cápsulas de energía cósmica',
+        descripcionCorta: 'El clásico rompebloques arcade reinventado con estética synthwave neón, física dinámica a 60 FPS, múltiples niveles, power-ups y sonido 8-bit.',
+        icono: '🧱',
+        categoria: 'arcade',
+        categoriaLabel: 'Acción Arcade',
+        tiempoMin: 4,
+        color: '#ec4899',
+        portada: 'images/games/portada_rompebloques.jpg',
+        disponible: true,
+        url: 'juego-rompebloques.html'
+      },
+      {
+        id: 'invasores-del-espacio',
+        slug: 'invasores-del-espacio',
+        titulo: 'Invasores del Espacio (Defensa Cósmica)',
+        subtitulo: 'Defiende la órbita terrestre de hordas alienígenas con tu cañón de plasma',
+        descripcionCorta: 'El legendario matamarcianos retro arcade reinventado con 60 FPS, estética synthwave neón, búnkeres destructibles, nave nodriza misteriosa y sonido 8-bit.',
+        icono: '👾',
+        categoria: 'arcade',
+        categoriaLabel: 'Acción Arcade',
+        tiempoMin: 4,
+        color: '#06b6d4',
+        portada: 'images/games/portada_invasores.jpg',
+        disponible: true,
+        url: 'juego-invasores.html'
+      }
+    ];
+
+    const retroApp = {
+      selectedCategory: 'all',
+
+      init() {
+        this.renderCatalog();
+      },
+
+      filterCategory(catId) {
+        this.selectedCategory = catId;
+        this.renderCatalog();
+      },
+
+      renderCatalog() {
+        const root = document.getElementById('app-root');
+        const categories = [
+          { id: 'all', label: '🌟 Todos los Juegos' },
+          { id: 'palabras', label: '🔤 Palabras & Letras' },
+          { id: 'logica', label: '🧩 Lógica & Tablero' },
+          { id: 'arcade', label: '🕹️ Acción Arcade' }
+        ];
+
+        const filterButtonsHtml = categories.map(cat => {
+          const count = cat.id === 'all'
+            ? GAMES_DB.length
+            : GAMES_DB.filter(g => cat.id === 'logica' ? (g.categoria === 'logica' || g.categoria === 'tablero') : g.categoria === cat.id).length;
+          const isActive = this.selectedCategory === cat.id;
+
+          return `
+            <button class="cat-filter-btn ${isActive ? 'cat-filter-btn-active' : ''}" onclick="retroApp.filterCategory('${cat.id}')">
+              <span>${cat.label}</span>
+              <span class="cat-filter-count">${count}</span>
+            </button>
+          `;
+        }).join('');
+
+        const filteredList = GAMES_DB.filter(g => {
+          if (this.selectedCategory === 'all') return true;
+          if (this.selectedCategory === 'logica') return g.categoria === 'logica' || g.categoria === 'tablero';
+          return g.categoria === this.selectedCategory;
+        });
+
+        const cardsHtml = filteredList.map(g => {
+          const isLive = g.disponible;
+          const badgeText = isLive ? '🟢 Disponible' : '⏳ Próximamente';
+
+          return `
+            <article class="test-card" style="--card-accent:${g.color}; cursor:${isLive ? 'pointer' : 'default'}; opacity:${isLive ? 1 : 0.82}; overflow:hidden;" ${isLive ? `onclick="location.href='${g.url}'"` : ''}>
+              ${g.portada ? `
+                <div style="position:relative; width:100%; height:155px; border-radius:10px; overflow:hidden; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.12); box-shadow:0 4px 16px rgba(0,0,0,0.35);">
+                  <img src="${g.portada}" alt="Portada de ${g.titulo}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+                  <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(11,15,25,0.7) 0%, transparent 60%); pointer-events:none;"></div>
+                </div>
+              ` : ''}
+              <div class="test-card-header">
+                <span class="test-card-icon">${g.icono}</span>
+                <span class="test-card-type-tag" style="background:${isLive ? 'rgba(16, 185, 129, 0.15)' : 'rgba(245, 158, 11, 0.15)'}; color:${isLive ? '#34d399' : '#fbbf24'}; border:1px solid ${isLive ? 'rgba(16, 185, 129, 0.35)' : 'rgba(245, 158, 11, 0.35)'};">
+                  ${badgeText}
+                </span>
+              </div>
+              <h2 class="test-card-title">${g.titulo}</h2>
+              <p class="test-card-desc">${g.descripcionCorta}</p>
+              <div class="test-card-meta">
+                <span>⏱ ${g.tiempoMin} min</span>
+                <span>${g.categoriaLabel}</span>
+              </div>
+              ${isLive ? `
+                <a href="${g.url}" class="test-card-btn" style="text-decoration:none; display:flex; align-items:center; justify-content:center; gap:0.45rem;">
+                  <span>Jugar Ahora</span>
+                  <span>➜</span>
+                </a>
+              ` : `
+                <div class="test-card-btn" style="background:rgba(255,255,255,0.05); color:var(--text-muted); border:1px solid var(--border-subtle); cursor:not-allowed; box-shadow:none;">
+                  <span>En Desarrollo</span>
+                </div>
+              `}
+            </article>
+          `;
+        }).join('');
+
+        root.innerHTML = `
+          <div class="catalog-container">
+            <div class="breadcrumb-nav">
+              <a href="index.html" class="breadcrumb-link">
+                <span>←</span> <span>Volver a Tus Desvaríos</span>
+              </a>
+            </div>
+
+            <section class="hero-section">
+              <div class="hero-badge">🕹️ Salón Arcade & Clásicos de Ingenio</div>
+              <h1 class="hero-title">Desvaríos Retro</h1>
+              <p class="hero-description">
+                Minijuegos nostálgicos, desafíos de palabras, puzles de tablero y clásicos arcade de los 80s y 90s reinventados con estética synthwave y efectos 8-bit.
+              </p>
+
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.85rem; margin-top:1.5rem;">
+                <span class="cat-badge" style="--cat-accent:#a855f7; --cat-glow:rgba(168,85,247,0.2); font-size:0.8rem; padding:0.35rem 0.8rem; border-radius:9999px; border:1px solid rgba(168,85,247,0.3); background:rgba(168,85,247,0.1); color:#c084fc;">
+                  🕹️ 100% Gratis en Navegador
+                </span>
+                <span class="cat-badge" style="--cat-accent:#06b6d4; --cat-glow:rgba(6,182,212,0.2); font-size:0.8rem; padding:0.35rem 0.8rem; border-radius:9999px; border:1px solid rgba(6,182,212,0.3); background:rgba(6,182,212,0.1); color:#38bdf8;">
+                  🔊 Efectos de Sonido 8-Bit
+                </span>
+                <span class="cat-badge" style="--cat-accent:#10b981; --cat-glow:rgba(16,185,129,0.2); font-size:0.8rem; padding:0.35rem 0.8rem; border-radius:9999px; border:1px solid rgba(16,185,129,0.3); background:rgba(16,185,129,0.1); color:#34d399;">
+                  ⚡ Guarda tus Récords
+                </span>
+              </div>
+            </section>
+
+            <div class="cat-filters-wrap">
+              ${filterButtonsHtml}
+            </div>
+
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border-subtle);">
+              <h2 style="font-size:1.15rem; font-weight:600;">
+                ${this.selectedCategory === 'all' ? 'Máquinas Arcade Disponibles' : categories.find(c => c.id === this.selectedCategory)?.label}
+              </h2>
+              <span style="font-size:0.82rem; color:var(--text-muted);">${filteredList.length} ${filteredList.length === 1 ? 'juego' : 'juegos'}</span>
+            </div>
+
+            <div class="tests-grid">
+              ${cardsHtml}
+            </div>
+
+            <!-- SEO Educational Guide -->
+            <section style="margin-top:4rem; padding:2.5rem 1.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-lg);">
+              <div style="text-align:center; max-width:680px; margin:0 auto 2.5rem;">
+                <h2 style="font-size:1.45rem; font-weight:700; margin-bottom:0.75rem; color:#fff; font-family:var(--font-display);">
+                  Explora las Salas de Juego Arcade
+                </h2>
+                <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6;">
+                  Revive la magia de las recreativas clásicas adaptadas a cualquier dispositivo:
+                </p>
+              </div>
+
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem;">
+                <div style="padding:1.25rem; background:rgba(255, 255, 255, 0.03); border-radius:var(--radius-md); border:1px solid rgba(168, 85, 247, 0.25);">
+                  <div style="font-size:1.5rem; margin-bottom:0.5rem;">🔤</div>
+                  <h3 style="font-size:1.05rem; font-weight:700; color:#c084fc; margin-bottom:0.4rem; font-family:var(--font-display);">Palabras & Letras</h3>
+                  <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Desafíos léxicos como El Ahorcado con temáticas oscuras, literatura fantástica y cine de culto para poner a prueba tu vocabulario.</p>
+                </div>
+
+                <div style="padding:1.25rem; background:rgba(255, 255, 255, 0.03); border-radius:var(--radius-md); border:1px solid rgba(6, 182, 212, 0.25);">
+                  <div style="font-size:1.5rem; margin-bottom:0.5rem;">🧩</div>
+                  <h3 style="font-size:1.05rem; font-weight:700; color:#38bdf8; margin-bottom:0.4rem; font-family:var(--font-display);">Lógica & Tablero</h3>
+                  <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Puzles matemáticos como 2048, Buscaminas cuántico y retos tácticos de ajedrez rápido para exprimir tu agilidad mental.</p>
+                </div>
+
+                <div style="padding:1.25rem; background:rgba(255, 255, 255, 0.03); border-radius:var(--radius-md); border:1px solid rgba(168, 85, 247, 0.25);">
+                  <div style="font-size:1.5rem; margin-bottom:0.5rem;">🕹️</div>
+                  <h3 style="font-size:1.05rem; font-weight:700; color:#34d399; margin-bottom:0.4rem; font-family:var(--font-display);">Acción Arcade</h3>
+                  <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">Reflejos rápidos y adrenalina de los 80s con versiones modernizadas de la clásica serpiente Snake y arcades retro.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- SEO FAQ Accordion -->
+            <section style="margin-top:3.5rem; padding:2.5rem 1.75rem; background:var(--bg-surface-elevated); border:1px solid var(--border-subtle); border-radius:var(--radius-lg);">
+              <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;">
+                <span style="font-size:1.5rem;">❓</span>
+                <h2 style="font-size:1.35rem; font-weight:700; color:#fff; font-family:var(--font-display);">Preguntas Frecuentes sobre Desvaríos Retro</h2>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                <details style="background:rgba(255, 255, 255, 0.03); padding:1rem 1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle); cursor:pointer;">
+                  <summary style="font-weight:600; color:#f1f5f9; font-size:0.98rem;">¿Puedo jugar con mi teclado físico o solo en pantalla táctil?</summary>
+                  <p style="margin-top:0.75rem; font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">Todos los juegos están diseñados con soporte dual: si juegas en un ordenador, puedes teclear directamente con tu teclado físico; si juegas desde un móvil o tableta, dispones de un teclado virtual cómodo y adaptado.</p>
+                </details>
+
+                <details style="background:rgba(255, 255, 255, 0.03); padding:1rem 1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle); cursor:pointer;">
+                  <summary style="font-weight:600; color:#f1f5f9; font-size:0.98rem;">¿Cómo funcionan los efectos de sonido retro?</summary>
+                  <p style="margin-top:0.75rem; font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">Utilizamos la Web Audio API del navegador para sintetizar ondas cuadradas y arpegios de 8-bit en tiempo real. No descargan archivos de audio pesados y puedes silenciarlos en cualquier instante con el botón de volumen.</p>
+                </details>
+              </div>
+            </section>
+          </div>
+        `;
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      retroApp.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

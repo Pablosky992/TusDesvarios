@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Última Guardia en el Faro de San Telmo — Crea tus Desvaríos | TusDesvarios.com</title>
+  <meta name="description" content="Eres un veterano de marina enviado a un faro aislado tras la desaparición del viejo guardián. Pronto descubres que la torre no fue construida para salvar vidas, sino para contener una pesadilla ancestral.">
+  <meta name="keywords" content="la-ultima-guardia-faro, ficcion interactiva, elige tu propia aventura, historias ramificadas, juegos de rol narrativos, tus desvarios, La Última Guardia en el Faro de San Telmo">
+  
+  <!-- Canonical & Open Graph / SEO -->
+  <link rel="canonical" href="https://tusdesvarios.com/crea-tu-historia/historia/la-ultima-guardia-faro">
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="La Última Guardia en el Faro de San Telmo — Ficción Interactiva | Tus Desvaríos">
+  <meta property="og:description" content="Eres un veterano de marina enviado a un faro aislado tras la desaparición del viejo guardián. Pronto descubres que la torre no fue construida para salvar vidas, sino para contener una pesadilla ancestral.">
+  <meta property="og:url" content="https://tusdesvarios.com/crea-tu-historia/historia/la-ultima-guardia-faro">
+  <meta property="og:image" content="images/stories/faro-san-telmo/portada.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La Última Guardia en el Faro de San Telmo">
+  <meta name="twitter:description" content="Eres un veterano de marina enviado a un faro aislado tras la desaparición del viejo guardián. Pronto descubres que la torre no fue construida para salvar vidas, sino para contener una pesadilla ancestral.">
+  <meta name="twitter:image" content="images/stories/faro-san-telmo/portada.jpg">
+
+  <!-- Schema.org Book structured data for Google Rich Results -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "La Última Guardia en el Faro de San Telmo",
+  "description": "Eres un veterano de marina enviado a un faro aislado tras la desaparición del viejo guardián. Pronto descubres que la torre no fue construida para salvar vidas, sino para contener una pesadilla ancestral.",
+  "url": "https://tusdesvarios.com/crea-tu-historia/historia/la-ultima-guardia-faro",
+  "genre": "Terror Cósmico y Suspense Psicológico",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Person",
+    "name": "Narrador de Sombras"
+  },
+  "image": "https://tusdesvarios.com/images/stories/faro-san-telmo/portada.jpg"
+}
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0a0d14;
+      --bg-surface: rgba(18, 24, 38, 0.85);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.92);
+      --bg-surface-hover: rgba(34, 45, 68, 0.95);
+      --bg-glass: rgba(12, 17, 28, 0.88);
+
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --border-focus: rgba(16, 185, 129, 0.5);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --accent-emerald: #10b981;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-rose: #ef4444;
+
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-title: 'Cinzel', Georgia, serif;
+      --font-reading: 'Crimson Pro', Georgia, serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(16, 185, 129, 0.12) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.14) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(245, 158, 11, 0.08) 0px, transparent 55%);
+      background-attachment: fixed;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5);
+    }
+
+    .main-content {
+      flex: 1;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .reader-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reader-progress-container {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .progress-bar-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981 0%, #06b6d4 100%);
+      transition: width 0.3s ease;
+    }
+
+    .reader-node-card {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .reader-image-container {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      background: #000;
+    }
+
+    @media (max-width: 600px) {
+      .reader-image-container {
+        height: 240px;
+      }
+    }
+
+    .reader-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reader-image-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--bg-surface-elevated) 0%, transparent 60%);
+    }
+
+    .reader-body {
+      padding: 2.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .reader-body {
+        padding: 1.5rem;
+      }
+    }
+
+    .reader-node-title {
+      font-family: var(--font-title);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .reader-text {
+      font-family: var(--font-reading);
+      font-size: 1.35rem;
+      line-height: 1.8;
+      color: #e2e8f0;
+      margin-bottom: 2.5rem;
+    }
+
+    .reader-text p {
+      margin-bottom: 1.25rem;
+    }
+
+    .reader-text strong {
+      color: #34d399;
+      font-weight: 600;
+    }
+
+    .reader-text em {
+      color: #f1f5f9;
+      font-style: italic;
+    }
+
+    .reader-text blockquote {
+      border-left: 3px solid var(--accent-emerald);
+      padding: 0.6rem 1rem;
+      margin: 1.25rem 0;
+      background: rgba(16, 185, 129, 0.08);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-style: italic;
+      color: #d1fae5;
+    }
+
+    .decisions-container {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1.75rem;
+    }
+
+    .decisions-heading {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-emerald);
+      margin-bottom: 1.1rem;
+    }
+
+    .decision-button {
+      width: 100%;
+      text-align: left;
+      padding: 1.15rem 1.4rem;
+      margin-bottom: 0.85rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-family: inherit;
+    }
+
+    .decision-button:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--accent-emerald);
+      color: #fff;
+      transform: translateX(6px);
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.2);
+    }
+
+    .decision-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      margin-bottom: 0.35rem;
+    }
+
+    .ending-banner {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 2rem;
+      text-align: center;
+    }
+
+    .ending-pill {
+      display: inline-block;
+      padding: 0.4rem 1.25rem;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+    }
+
+    .ending-pill.bueno {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .ending-pill.malo {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+
+    .ending-pill.neutro {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .ending-moral {
+      font-family: var(--font-reading);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .ending-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link active-crea" title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="app-root">
+      <!-- Injected via reader -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const STORY_DATA = {"slug":"la-ultima-guardia-faro","titulo":"La Última Guardia en el Faro de San Telmo","subtitulo":"La luz no guía a los barcos de los hombres... mantiene encadenado al abismo.","descripcionCorta":"Eres un veterano de marina enviado a un faro aislado tras la desaparición del viejo guardián. Pronto descubres que la torre no fue construida para salvar vidas, sino para contener una pesadilla ancestral.","genero":"Terror Cósmico y Suspense Psicológico","tiempoLecturaMin":22,"portada":"images/stories/faro-san-telmo/portada.jpg","autor":"Narrador de Sombras","nodoInicialId":"nodo_1_inicio","totalNodosEstimados":24,"nodos":{"nodo_1_inicio":{"id":"nodo_1_inicio","titulo":"Capítulo I: El Parpadeo de la Linterna","texto":"La tempestad que los viejos patrones de cabotaje llaman *La Galerna de los Difuntos* azota los cimientos de granito del peñón de San Telmo con una violencia inhumana. Eres Mateo, un antiguo contramaestre de la marina mercante que sobrevivió milagrosamente al naufragio del vapor *Santa Bárbara* hace diez años en estos mismos arrecifes. Tras una década de pesadillas recurrentes con el fondo marino, la Capitanía de Puerto te ha destinado de urgencia a este peñasco a cuarenta millas de tierra firme, con la misión oficial de cubrir la repentina e inexplicable desaparición de Evaristo, un huraño farero que custodió la torre durante más de tres décadas.\n\nTe encuentras en la sala de guardia del piso intermedio. El frío se filtra por los muros de sillería y el quejido del viento hace retumbar la estructura cilíndrica de cincuenta metros. Sobre la mesa comunal de roble, la única pertenencia dejada atrás es un cuchillo de desollar clavado con furia en la madera. Alrededor del filo, profundamente grabadas con gubia, se leen unas palabras apresuradas:\n\n> *«Si la llama titila, no bajes al agua. La luz no alumbra para los barcos de los hombres; la luz es la jaula que los ciega ahí abajo. La Capitanía lo sabe desde 1888.»*\n\nDe súbito, un chasquido eléctrico desgarra el aire. En lo alto de la torre, la colosal lente de cristal de roca sufre una caída de tensión: el haz blanco de mercurio parpadea con debilidad enfermiza, proyectando sombras alargadas y convulsas. Simultáneamente, escuchas dos estímulos aterradores: desde la escalera que desciende al sótano inundado llega un chapoteo rítmico y pesado, como de algo cubierto de algas reptando peldaño a peldaño; mientras tanto, en el pasillo lateral, el manipulador telegráfico de la cabina de radio comienza a repiquetear frenéticamente por sí solo.","imagen":"images/stories/faro-san-telmo/sala_guardia.jpg","opciones":[{"id":"opt_1_sotano","texto":"Empuñar el farol de queroseno y descender por la escalera de caracol hacia el sótano inundado","destinoId":"nodo_2_sotano","impacto":"Temerario"},{"id":"opt_1_telegrafo","texto":"Entrar a la cabina de comunicaciones de latón para interceptar el mensaje telegráfico","destinoId":"nodo_3_telegrafo","impacto":"Investigación"},{"id":"opt_1_archivo","texto":"Forzar la alacena sellada de la sala de contrapesos para buscar los registros secretos de la Capitanía","destinoId":"nodo_4_archivo","impacto":"Cauteloso"},{"id":"opt_1_cupula","texto":"Ignorar los ruidos y subir de inmediato los ciento cuarenta peldaños hacia la cúpula de la linterna","destinoId":"nodo_5_cupula","impacto":"Deber"}]},"nodo_2_sotano":{"id":"nodo_2_sotano","titulo":"Capítulo II: El Pozo de las Mareas Negras","texto":"Bajas con el pulso desbocado por los peldaños de hierro oxidado que giran hacia el corazón de la roca madre. A medida que te aproximas al nivel del mar, el aire se vuelve denso, gélido y saturado de un hedor fétido a salmuera descompuesta y sulfuro.\n\nAl pisar el sótano, el agua marina te cubre hasta las pantorrillas. La luz de tu farol dibuja un panorama perturbador: todos los sillares de piedra han sido cubiertos de glifos trazados compulsivamente con carbón vegetal y grasa negra de ballena. Son cartas náuticas de una fosa submarina kilométrica situada justo bajo el faro, flanqueadas por nombres de barcos naufragados en el último siglo... entre ellos, el *Santa Bárbara*, tu antiguo buque.\n\nSobre un banco de carpintero yace la bitácora encuadernada en piel de foca de Evaristo. Junto a ella, descubres una compuerta estanca de hierro forjado, oculta tras una falsa pared de mampostería derruida, de la que emana una tenue fosforescencia esmeralda y el eco de cánticos submarinos.","imagen":"images/stories/faro-san-telmo/sotano.jpg","opciones":[{"id":"opt_2_esclusa","texto":"Girar el volante de presión de la compuerta secreta y descender hacia el santuario sumergido","destinoId":"nodo_6_templo_sumergido","impacto":"Trascendental"},{"id":"opt_2_quemar","texto":"Vaciar el bidón de queroseno sobre las marcas rituales y prenderles fuego para purificar el sótano","destinoId":"nodo_7_quemar_glifos","impacto":"Agresivo"},{"id":"opt_2_diario","texto":"Abrir la bitácora de Evaristo y descifrar las últimas páginas antes de tomar una decisión","destinoId":"nodo_8_descifrar_diario","impacto":"Revelación"}]},"nodo_3_telegrafo":{"id":"nodo_3_telegrafo","titulo":"Capítulo II: La Frecuencia Cero","texto":"Te encierras en la cabina blindada de comunicaciones del piso intermedio, deslizando el cerrojo de hierro. El manipulador telegráfico de cobre martillea el contacto sobre la mesa con una cadencia violenta e inhumana, despidiendo diminutas chispas azuladas.\n\nAl mirar por el ventanuco hacia la tormenta, confirmas lo imposible: el mástil exterior de la antena fue arrancado por el vendaval hace horas y los cables cuelgan inertes sobre el acantilado. La corriente que alimenta el aparato procede de otra parte.\n\nLa bobina de papel escupe dos tiras impresas cubiertas de légamo negro. La primera reza en morse descarnado:\n> **« A B R I D . S O M O S . L O S . D E L . S A N . M A T E O . E L . A G U A . E S . D U L C E . E N . L A . F O S A »**\n\nPero la segunda tira contiene una frecuencia militar codificada de la Capitanía de Puerto dirigida a esta misma estación, fechada con la hora actual.","imagen":"images/stories/faro-san-telmo/telegrafo.jpg","opciones":[{"id":"opt_3_cifrado","texto":"Usar la plantilla de claves navales para decodificar la transmisión secreta de la Capitanía","destinoId":"nodo_9_radiograma_militar","impacto":"Conspiración"},{"id":"opt_3_morse_espectro","texto":"Tomar el manipulador con los dedos temblorosos y responder a la frecuencia de los ahogados","destinoId":"nodo_10_morse_ahogados","impacto":"Peligroso"},{"id":"opt_3_romper","texto":"Arrancar los cables con una palanca de hierro y huir hacia la cúpula de la torre","destinoId":"nodo_5_cupula","impacto":"Defensivo"}]},"nodo_4_archivo":{"id":"nodo_4_archivo","titulo":"Capítulo II: El Legado de los Condenados","texto":"En la sala intermedia de contrapesos, utilizas una palanca de acero para reventar el candado de la alacena blindada de la Capitanía. Dentro no hay provisiones ni repuestos convencionales, sino una serie de carpetas clasificadas selladas con lacre negro de la Armada.\n\nAl abrir el legajo principal, tus ojos no dan crédito: descubres los expedientes de todos los fareros destinados a San Telmo durante el último siglo. Cada nombramiento fue cuidadosamente calculado: todos eran únicos supervivientes de naufragios ocurridos en estas costas, hombres quebrados psicológicamente cuya mente resultaba receptiva a la vibración del peñón.\n\nJunto a los documentos, sobre un soporte de roble, reposa un invento insólito construido clandestinamente por Evaristo: un complejo mecanismo de relojería conectado a un **diapasón acústico de mercurio y latón**, diseñado para acoplarse a los engranajes de rotación del faro.","imagen":"images/stories/faro-san-telmo/sala_guardia.jpg","opciones":[{"id":"opt_4_expediente","texto":"Leer detenidamente el expediente que lleva tu propio nombre y número de matrícula naval","destinoId":"nodo_11_expediente_secreto","impacto":"Identidad"},{"id":"opt_4_diapason","texto":"Examinar el diapasón de mercurio y calibrar su frecuencia de resonancia acústica","destinoId":"nodo_12_activar_diapason","impacto":"Tecnológico"},{"id":"opt_4_subir","texto":"Cargar el mecanismo y los planos y subir inmediatamente a la cúpula de la linterna","destinoId":"nodo_5_cupula","impacto":"Urgencia"}]},"nodo_5_cupula":{"id":"nodo_5_cupula","titulo":"Capítulo III: En la Cúpula de Cristal","texto":"Subes a zancadas desesperadas los ciento cuarenta peldaños helicoidales que conducen a la cima del faro. Con cada tramo, la oscilación de la torre sobre el peñón se vuelve más pronunciada, crujiendo como la arboladura de un navío en mitad de un tifón.\n\nAl abrir la escotilla superior de latón, el viento y la lluvia aúllan contra los paneles convexos de cristal de roca. En el centro de la sala, la colosal lente escalonada de Fresnel —una masa de tres toneladas de prismas concéntricos suspendida sobre una cubeta de mercurio líquido— se encuentra totalmente agarrotada. Una brea negra, densa y tibia como sangre viscosa, obstruye los piñones del mecanismo de rotación. En el foco óptico, el quemador triple parpadea asfixiado.\n\nA través de los cristales empañados, la escena marina es sobrecogedora: allá abajo, entre los rompientes fosforescentes, decenas de criaturas humanoides y filiformes trepan por los riscos verticales, respondiendo a una marea viva que asciende hacia la torre.","imagen":"images/stories/faro-san-telmo/cupula_lente.jpg","opciones":[{"id":"opt_5_engranajes","texto":"Meter las manos desnudas en los engranajes, arrancar la brea y alimentar el quemador con queroseno a presión","destinoId":"nodo_13_batalla_fuerza_luz","impacto":"Heroico"},{"id":"opt_5_pasarela","texto":"Empujar la portezuela de tormenta y salir a la pasarela exterior con la bengala de magnesio","destinoId":"nodo_14_pasarela_exterior","impacto":"Arriesgado"},{"id":"opt_5_lente_reversa","texto":"Ajustar el espejo auxiliar de plata para reenfocar el haz óptico hacia la base misma de los acantilados","destinoId":"nodo_15_invertir_foco","impacto":"Táctico"}]},"nodo_6_templo_sumergido":{"id":"nodo_6_templo_sumergido","titulo":"Capítulo III: El Santuario Sumergido de Melqart","texto":"Giras con esfuerzo sobrehumano el volante de la compuerta estanca. El aire comprimido escapa con un silbido sordo y el paso se abre hacia una galería descendente tallada en basalto puro anterior a toda civilización conocida. Desciendes por peldaños megalíticos sumergidos bajo el nivel del océano.\n\nLlegas a una bóveda ciclópea donde el agua marina no cae gracias a un campo de presión imposible. Ante ti se alza un templo pre-romano erigido por antiguos navegantes fenicios en honor al Dios de las Mareas Negras. En el centro del santuario, incrustado en un pedestal de coral negro, reposa el mascarón de proa astillado de tu antiguo barco: el *Santa Bárbara*.\n\nUna voz atronadora y serena resuena en el agua estancada y en tu propia médula espinal:\n> *«No sobreviviste a aquel naufragio por casualidad, Mateo. La fosa te eligió hace diez años para relevar al viejo guardián. La sangre de los que dominan las mareas corre por tus venas... reclama tu trono bajo las aguas o perece con la torre.»*","imagen":"images/stories/faro-san-telmo/sotano.jpg","opciones":[{"id":"opt_6_reclamar_trono","texto":"Aceptar la herencia del abismo, arrodillarte ante el altar y asumir la regencia de las mareas","destinoId":"nodo_final_hierofante","impacto":"Trascendental"},{"id":"opt_6_dinamita","texto":"Colocar los cartuchos de pólvora marina en las columnas del templo para destruir el santuario","destinoId":"nodo_16_destruir_altar","impacto":"Desesperado"}]},"nodo_7_quemar_glifos":{"id":"nodo_7_quemar_glifos","titulo":"Capítulo III: El Fuego Purificador","texto":"Riegas las losas del sótano, el banco de carpintero y los muros con queroseno puro. Rascas una cerilla de azufre y la dejas caer.\n\nEl fuego no brota dorado, sino con un fogonazo de llamas de un azul cobalto cegador. Un chillido agudo, lacerante e inhumano, retumba a través de los poros del granito, como si la misma roca sintiera el dolor del fuego purificador. Las sombras viscosas que trepaban por los ángulos de la estancia se retuercen en espirales agónicas antes de disolverse en ceniza volcánica.\n\nEl temblor sísmico cesa en seco, pero una densa humareda tóxica asciende por el hueco de la escalera de caracol. Si permaneces aquí abajo morirás asfixiado en cuestión de segundos.","imagen":"images/stories/faro-san-telmo/fuego_azul.jpg","opciones":[{"id":"opt_7_subir","texto":"Correr escaleras arriba conteniendo la respiración hasta alcanzar la cúpula superior de la torre","destinoId":"nodo_5_cupula","impacto":"Urgente"},{"id":"opt_7_barricada","texto":"Subir solo al piso intermedio, atrancar la escotilla de hierro y preparar una barricada armada","destinoId":"nodo_17_barricada_intermedia","impacto":"Defensivo"}]},"nodo_8_descifrar_diario":{"id":"nodo_8_descifrar_diario","titulo":"Capítulo III: La Revelación del Bucle","texto":"Con manos trémulas abres la bitácora encuadernada en piel de foca. A medida que descifras la caligrafía nerviosa de las últimas entradas, un frío aterrador se apodera de tu garganta: los giros gramaticales, los errores ortográficos y el trazo de las letras son idénticos a tu propia caligrafía.\n\nEn la última página hay una fotografía descolorida fechada en 1895. En ella aparece el viejo farero Evaristo de joven: tiene exactamente tus facciones, tu estatura y la misma cicatriz sobre la ceja izquierda que te hiciste durante el naufragio del *Santa Bárbara*.\n\nEl texto final susurra:\n> *«No hay dos fareros. Solo hay uno, atrapado en la curva del tiempo de San Telmo. Cuando la torre cae, la marea te arrastra al pasado para empezar de nuevo. La única forma de salir es apagar la linterna o quemar el faro hasta los cimientos.»*","imagen":"images/stories/faro-san-telmo/sotano.jpg","opciones":[{"id":"opt_8_espejo","texto":"Aceptar la naturaleza cíclica de tu condena y fundirte con la memoria eterna del faro","destinoId":"nodo_final_bucle","impacto":"Psicológico"},{"id":"opt_8_destruir_ciclo","texto":"Rebelarte con furia contra la ilusión temporal, prender fuego a la foto y subir a la cúpula a forzar tu destino","destinoId":"nodo_5_cupula","impacto":"Rebelión"}]},"nodo_9_radiograma_militar":{"id":"nodo_9_radiograma_militar","titulo":"Capítulo III: La Traición de la Marina","texto":"Aplicas la rueda de cifrado naval sobre la tira de papel perforado. Letra a letra, la orden clasificada del Estado Mayor de la Marina se revela ante ti con aterradora frialdad:\n\n> *«OPERACIÓN VESPER — ALTO SECRETO: Si el farero suplente Mateo no emite clave de confirmación antes de las 04:00 horas, el buque artillero El Centinela tiene orden estricta de no aproximarse al muelle y abrir fuego de cañón continuo contra la torre hasta demolerla. La brea abisal de San Telmo no debe alcanzar el continente bajo ninguna circunstancia. El farero es considerado baja prescindible.»*\n\nMiras el cronómetro de mamparo: son las 03:42. La Capitanía nunca tuvo la intención de rescatarte; te utilizaron como cebo para mantener contenida la entidad mientras preparaban la flotilla de guerra.","imagen":"images/stories/faro-san-telmo/telegrafo.jpg","opciones":[{"id":"opt_9_sabotear_buque","texto":"Reorientar la maquinaria del faro para tender una trampa óptica y encallar al buque cañonero en los arrecifes","destinoId":"nodo_18_trampa_marina","impacto":"Venganza"},{"id":"opt_9_luchar_salvacion","texto":"Ignorar la traición del gobierno, subir a la cúpula y luchar por encender el foco antes de que empiece el bombardeo","destinoId":"nodo_5_cupula","impacto":"Supervivencia"}]},"nodo_10_morse_ahogados":{"id":"nodo_10_morse_ahogados","titulo":"Capítulo III: La Respuesta del Abismo","texto":"Colocas los dedos sobre la palanca telegráfica y transmites con furia: *«¿ Q U I É N . E S T Á . A H Í ?»*.\n\nAl soltar el contacto, un arco voltaico estalla desde la bobina receptora. Las bombillas de vacío estallan en una lluvia de cristal incandescente, sumiendo la cabina en una penumbra fantasmal.\n\nEn el rincón más oscuro, una silueta humana empapada se incorpora lentamente. Viste los harapos del impermeable amarillo de Evaristo, pero sus proporciones son aberrantes: sus brazos descienden hasta el suelo goteando fango y en lugar de rostro posee una cuenca bioluminiscente que pulsa al compás de las mareas profundas. La criatura alza su mano palmeada hacia ti, prometiéndote el cese de todo dolor terrenal si te entregas a las aguas.","imagen":"images/stories/faro-san-telmo/telegrafo.jpg","opciones":[{"id":"opt_10_atacar","texto":"Levantar la banqueta de hierro de la cabina, estrellarla contra el engendro y escapar escaleras arriba","destinoId":"nodo_5_cupula","impacto":"Violento"},{"id":"opt_10_rendicion","texto":"Ceder al frío magnético del abismo y permitir que la sombra te envuelva en su abrazo eterno","destinoId":"nodo_final_abismo","impacto":"Fatal"}]},"nodo_11_expediente_secreto":{"id":"nodo_11_expediente_secreto","titulo":"Capítulo III: El Sacrificio Planificado","texto":"Lees febrilmente los informes confidenciales del Ministerio de Fomento. Tu fotografía militar de hace diez años encabeza el legajo. En las notas marginales del Almirantazgo se describe con detalle forense el naufragio del *Santa Bárbara*: no fue un accidente por niebla, sino un hundimiento provocado por el propio faro para «cosechar al candidato idóneo».\n\nEl peñón de San Telmo exige periódicamente el sacrificio de un alma marinera templada en la tragedia para mantener estabilizado el vórtice submarino. Evaristo ya no resistía la carga psíquica; tú eras el sustituto diseñado desde hacía una década.\n\nDoblas los documentos y te los guardas dentro del impermeable. La indignación y la lucidez reemplazan al miedo.","imagen":"images/stories/faro-san-telmo/sala_guardia.jpg","opciones":[{"id":"opt_11_venganza","texto":"Tomar las cartas náuticas secretas y preparar una trampa para destruir al buque militar de la Capitanía","destinoId":"nodo_18_trampa_marina","impacto":"Venganza"},{"id":"opt_11_supervivencia","texto":"Conservar las pruebas para denunciar la conspiración y subir a la cúpula a salvar tu vida","destinoId":"nodo_5_cupula","impacto":"Supervivencia"}]},"nodo_12_activar_diapason":{"id":"nodo_12_activar_diapason","titulo":"Capítulo III: La Frecuencia Armónica","texto":"Montas el diapasón acústico de Evaristo sobre el eje de la maquinaria de contrapesos y golpeas la horquilla con una maza de bronce. Un zumbido puro, profundo y cristalino recorre los muros de piedra de la torre entera.\n\nEl efecto es inmediato y portentoso: el mercurio líquido de los baños de rotación vibra en patrones geométricos sagrados. Allá afuera, los aullidos de las criaturas marinas cesan abruptamente, desorientadas por la frecuencia ultrasónica que rompe su sintonía con la marea negra. La brea viscosa que atascaba los engranajes superiores comienza a licuarse y perder consistencia.","imagen":"images/stories/faro-san-telmo/sala_guardia.jpg","opciones":[{"id":"opt_12_subir_armonico","texto":"Aprovechar la distorsión sónica para subir a la cúpula y reactivar la lente de Fresnel","destinoId":"nodo_13_batalla_fuerza_luz","impacto":"Oportuno"},{"id":"opt_12_sobrecargar","texto":"Acoplar el diapasón a la caldera de vapor para sobrecargar la torre y provocar una detonación total","destinoId":"nodo_19_inmolacion_preparar","impacto":"Extremo"}]},"nodo_13_batalla_fuerza_luz":{"id":"nodo_13_batalla_fuerza_luz","titulo":"Capítulo IV: La Batalla por la Luz","texto":"Frente a la imponente estructura óptica en la cúspide de la torre, sabes que cada segundo cuenta. Te lanzas contra la maquinaria de la lente de Fresnel. Con las manos desnudas y sangrantes, arrancas los últimos terrones de brea de los piñones de bronce.\n\nEl enorme contrapeso de hierro desciende por el pozo central con un chasquido rotundo y los prismas de cristal vuelven a rotar majestuosamente sobre la cubeta de mercurio. Abres la válvula del depósito presurizado de aceite de ballena y aproximas la antorcha al mechero triple.\n\n¡Una explosión de luz blanca solar estalla en el foco de la lente! El haz de un millón de candelas atraviesa la tormenta como una espada incandescente. Abajo, en los riscos, las aberraciones marinas aúllan de dolor mientras sus cuerpos se desintegran en vapor negro bajo la mordedura del haz de luz, arrojándose de vuelta a las simas abisales.","imagen":"images/stories/faro-san-telmo/haz_blanco.jpg","opciones":[{"id":"opt_13_resistir","texto":"Atrancar la escotilla de la cúpula, mantener el bombeo de queroseno y resistir con honor hasta el alba","destinoId":"nodo_final_alba","impacto":"Victoria"},{"id":"opt_13_sobrecargar_faro","texto":"Sobrecargar intencionadamente la presión de los depósitos de gas para hacer estallar la torre","destinoId":"nodo_final_inmolacion","impacto":"Sacrificio"}]},"nodo_14_pasarela_exterior":{"id":"nodo_14_pasarela_exterior","titulo":"Capítulo IV: El Ojo de la Tempestad","texto":"Empujas la pesada puerta de hierro y sales a la pasarela circular de rejilla, suspendido a cincuenta metros sobre el mar en ebullición. El vendaval te azota con furia ciega mientras te sujetas a la barandilla con los nudillos blancos.\n\nEnciendes la bengala de magnesio. La llamarada roja ilumina un espectáculo que desafía la cordura humana: en el centro del vórtice marino que rodea el faro, un ojo colosal de cincuenta metros de diámetro, coronado por anillos de fosforescencia esmeralda, se abre en la superficie del océano y fija su pupila cósmica directamente en ti.\n\nUna calidez sedante invade tus miembros entumecidos. El pánico desaparece, sustituido por una sensación de ingravidez y un cántico melodioso que te invita a dar un paso al frente hacia el silencio eterno de la fosa.","imagen":"images/stories/faro-san-telmo/vortice_ojo.jpg","opciones":[{"id":"opt_14_saltar","texto":"Soltar la barandilla y dejarte caer en el cálido abrazo del ojo marino","destinoId":"nodo_final_abismo","impacto":"Rendición"},{"id":"opt_14_retroceder","texto":"Morderte la lengua hasta sangrar para romper la hipnosis, reingresar a la cúpula y salvar la lente","destinoId":"nodo_13_batalla_fuerza_luz","impacto":"Agónico"}]},"nodo_15_invertir_foco":{"id":"nodo_15_invertir_foco","titulo":"Capítulo IV: El Prisma Invertido","texto":"Accionas las palancas del espejo auxiliar de plata viva, inclinando la trayectoria del haz óptico cuarenta y cinco grados hacia abajo. La lente de Fresnel ya no barre el horizonte marino, sino que concentra su millón de candelas como una lupa ardiente sobre las faldas del acantilado.\n\nEl haz de luz concentrada vaporiza instantáneamente la marea negra y abrasa a las criaturas con la intensidad de un fuego estelar. Pero el calor acumulado en la base de la torre amenaza con fracturar los cristales de la linterna si mantienes el foco invertido demasiado tiempo.","imagen":"images/stories/faro-san-telmo/haz_blanco.jpg","opciones":[{"id":"opt_15_destruir_flota","texto":"Alinear el rayo concentrado hacia el buque cañonero de la Capitanía para incendiar su santabárbara","destinoId":"nodo_final_venganza","impacto":"Venganza"},{"id":"opt_15_rectificar","texto":"Devolver los prismas a su posición horizontal para iluminar la costa y cumplir tu deber de farero","destinoId":"nodo_13_batalla_fuerza_luz","impacto":"Rectitud"}]},"nodo_16_destruir_altar":{"id":"nodo_16_destruir_altar","titulo":"Capítulo IV: La Fuga del Templo","texto":"Enciendes la mecha de los cartuchos de pólvora marina y los colocas en la base de los pilares ciclópeos del templo fenicio. Corres a través de la esclusa mientras las detonaciones submarinas sacuden las entrañas de la tierra.\n\nColumnas de vapor y agua a presión revientan los corredores de piedra mientras la bóveda ancestral colapsa sobre sí misma, sepultando para siempre el santuario de las mareas negras. Emerges exhausto en la base de la torre justo cuando los cimientos crujen al reasentarse sobre la roca madre.","imagen":"images/stories/faro-san-telmo/sotano.jpg","opciones":[{"id":"opt_16_ascenso_final","texto":"Subir a toda prisa hasta la cúspide de la torre para asegurar la linterna del faro","destinoId":"nodo_13_batalla_fuerza_luz","impacto":"Determinación"}]},"nodo_17_barricada_intermedia":{"id":"nodo_17_barricada_intermedia","titulo":"Capítulo IV: La Larga Noche","texto":"Dejas caer la pesada tranca de hierro sobre los anclajes de la escotilla del sótano y refuerzas la puerta con tablones de roble y cajas de herramientas. Los impactos desde el otro lado comienzan de inmediato: golpes salvajes y desordenados que hacen vibrar el metal y saltar chispas de los remaches.\n\nTe sientas en el suelo de piedra empuñando la pistola de bengalas cargada y un hacha de bomberos. Arriba, el fuego purificador ha liberado la maquinaria y el haz de luz barre el océano con su cadencia exacta de cuatro segundos, marcando el paso del tiempo en la vigilia más solitaria y aterradora que un ser humano haya tenido que soportar jamás.","imagen":"images/stories/faro-san-telmo/sala_guardia.jpg","opciones":[{"id":"opt_17_esperar","texto":"Mantener la guardia sin parpadear hasta que el primer rayo de sol asome por el horizonte","destinoId":"nodo_final_alba","impacto":"Tenacidad"}]},"nodo_18_trampa_marina":{"id":"nodo_18_trampa_marina","titulo":"Capítulo IV: La Falsa Luz","texto":"Subes a la cúpula y modificas los obturadores de la linterna para emitir la señal codificada de canal navegable seguro sobre el traicionero arrecife de *Los Dientes del Diablo*. En la lejanía de la noche, las luces del buque artillero *El Centinela* corrigen su rumbo, confiando ciegamente en la guía del faro.\n\nA través del anteojo de larga vista, observas cómo el buque militar avanza a toda máquina hacia la trampa mortal de escollos afilados que la propia Capitanía ocultaba en sus cartas secretas.","imagen":"images/stories/faro-san-telmo/haz_blanco.jpg","opciones":[{"id":"opt_18_ejecutar","texto":"Mantener el destello falso y contemplar el naufragio de los verdugos de la Capitanía","destinoId":"nodo_final_venganza","impacto":"Venganza"}]},"nodo_19_inmolacion_preparar":{"id":"nodo_19_inmolacion_preparar","titulo":"Capítulo IV: La Última Carga","texto":"Bloqueas las válvulas de escape de la gran caldera de vapor del faro y saturas las tuberías principales con todo el queroseno y aceite de reserva de los depósitos. La aguja del manómetro supera el límite rojo y el metal vibra con un silbido estridente.\n\nEn lo alto del peñón, sabes que esta detonación borrará de la faz de la tierra tanto al faro como al túmulo sumergido, acabando con un siglo de sacrificios humanos y maldiciones marítimas.","imagen":"images/stories/faro-san-telmo/fuego_azul.jpg","opciones":[{"id":"opt_19_detonar","texto":"Apretar el percutor del detonador y convertir el peñón de San Telmo en una supernova purificadora","destinoId":"nodo_final_inmolacion","impacto":"Mártir"}]},"nodo_final_alba":{"id":"nodo_final_alba","titulo":"Epílogo I: La Luz del Alba y la Fuga","texto":"Las sombras huyen cuando el horizonte oriental se tiñe de púrpura y oro. La tormenta se aquieta y los rayos del sol naciente disuelven los últimos vestigios de brea negra que se evaporan en el aire fresco de la mañana.\n\nCon el expediente secreto de la Capitanía bien guardado en tu chaqueta y las pruebas de la conspiración a buen recaudo, desciendes al muelle antes de que atraquen las autoridades. Tomas el bote salvavidas de remos y te alejas hacia la costa continental con la marea favorable. Has salvado el faro, has vencido a la noche más oscura y ahora posees la verdad para hacer temblar a los que te enviaron a morir.","imagen":"images/stories/faro-san-telmo/alba.jpg","esFinal":true,"tipo_final":"bueno","mensaje_final":"Tu coraje inquebrantable venció a la pesadilla y escapaste con las pruebas que desenmascaran un siglo de conspiraciones marítimas."},"nodo_final_venganza":{"id":"nodo_final_venganza","titulo":"Epílogo II: La Venganza de los Naufragios","texto":"Un crujido ensordecedor de planchas de acero desgarradas resuena sobre el rugido del oleaje. El buque artillero *El Centinela* embiste de lleno el arrecife de *Los Dientes del Diablo*, partiéndose en dos bajo el impacto de las olas.\n\nDesde lo alto de la cúpula, contemplas cómo el mar engulle al navío traidor que venía a bombardearte. Has hecho justicia por el *Santa Bárbara* y por todos los marineros sacrificados en este peñón. Ahora el faro es tu fortaleza inexpugnable; ningún barco volverá a navegar estas aguas sin rendirte pleitesía.","imagen":"images/stories/faro-san-telmo/haz_blanco.jpg","esFinal":true,"tipo_final":"neutro","mensaje_final":"El cazador fue cazado. La Capitanía pagó su deuda con sangre y ahora tú eres el dueño absoluto de San Telmo."},"nodo_final_hierofante":{"id":"nodo_final_hierofante","titulo":"Epílogo III: El Hierofante de la Fosa","texto":"El pacto de sangre ha quedado consumado en el templo sumergido de Melqart. La salmuera ya no quema tus pulmones; respiras el agua como si fuera el aire más puro de las cumbres. Al contemplar tus manos, descubres escamas esmeraldas y garras de coral negro.\n\nLa tormenta se aquieta de inmediato en la superficie. Asciendes a la cima de la torre y contemplas un mar en calma absoluta, liso como espejo de obsidiana. Ya no eres un simple farero: eres el sacerdote inmortal del abismo, el carcelero de la fosa que vigilará los océanos durante los próximos mil años.","imagen":"images/stories/faro-san-telmo/guardian_eterno.jpg","esFinal":true,"tipo_final":"neutro","mensaje_final":"Renunciaste a tu humanidad, pero heredaste el dominio de los mares ancestrales. El faro nunca más se apagará."},"nodo_final_inmolacion":{"id":"nodo_final_inmolacion","titulo":"Epílogo IV: La Inmolación de San Telmo","texto":"Una columna de fuego nuclear y vapor blanco de doscientos metros de altura desgarra la noche atlántica. La explosión hace saltar por los aires el peñón de San Telmo, pulverizando la torre de granito, la lente de Fresnel y sepultando la fosa abisal bajo millones de toneladas de roca destrozada.\n\nA sesenta millas de distancia, los vigías de la costa continental observan un destello como de sol naciente en mitad de la noche. Tu sacrificio supremo erradicó la pesadilla cósmica para siempre, liberando a los mares de una condena eterna.","imagen":"images/stories/faro-san-telmo/fuego_azul.jpg","esFinal":true,"tipo_final":"bueno","mensaje_final":"Moriste como un héroe inmortal. Tu último acto destruyó la jaula y la bestia, salvando a incontables generaciones futuras."},"nodo_final_bucle":{"id":"nodo_final_bucle","titulo":"Epílogo V: El Bucle de la Eternidad","texto":"Te sientas en la mesa comunal de roble y tomas el cuchillo de desollar. Con dedos cansados y envejecidos por décadas en cuestión de segundos, comienzas a tallar sobre la madera las mismas palabras de advertencia que leíste al llegar.\n\nComprendes con resignación infinita que tú eres Evaristo y siempre lo has sido. En unos instantes, la marea del tiempo se reiniciará y un nuevo suplente llamado Mateo desembarcará en el muelle de San Telmo para vivir la misma guardia una vez más, atrapado en el engranaje perpetuo del faro.","imagen":"images/stories/faro-san-telmo/sala_guardia.jpg","esFinal":true,"tipo_final":"neutro","mensaje_final":"El tiempo en San Telmo es un círculo perfecto. La guardia nunca termina; solo cambia de nombre."},"nodo_final_abismo":{"id":"nodo_final_abismo","titulo":"Epílogo VI: Devorado por el Abismo","texto":"Tu mente y tu cuerpo se rinden ante la inmensidad de las profundidades. El impacto contra las aguas gélidas del Atlántico dura apenas un instante antes de que incontables zarcillos de sombra te envuelvan y te arrastren hacia el fondo de la fosa submarina.\n\nTu conciencia, tus recuerdos y tu nombre se disuelven en la memoria de las aguas primordiales. En lo alto del peñón, la linterna del Faro de San Telmo se extingue para siempre. La costa queda desprotegida en una noche sin fin, a merced de las criaturas que ahora reclaman su antiguo reino.","imagen":"images/stories/faro-san-telmo/abismo_muerte.jpg","esFinal":true,"tipo_final":"malo","mensaje_final":"El abismo devoró tu cordura y el mar cobró su tributo eterno. El faro quedó a oscuras."}}};
+
+    const app = {
+      currentStory: STORY_DATA,
+      currentNodeId: null,
+      historyTrail: [],
+
+      init() {
+        const initialId = this.currentStory.nodoInicialId || this.currentStory.nodo_inicial || (this.currentStory.nodos ? Object.keys(this.currentStory.nodos)[0] : null);
+        let startId = initialId;
+        let trail = [initialId];
+
+        try {
+          const raw = localStorage.getItem('tusdesvarios_progreso_' + this.currentStory.slug);
+          if (raw) {
+            const saved = JSON.parse(raw);
+            if (saved && saved.nodoActualId && this.currentStory.nodos[saved.nodoActualId]) {
+              startId = saved.nodoActualId;
+              trail = saved.historialNodos && saved.historialNodos.length ? saved.historialNodos : [startId];
+            }
+          }
+        } catch (e) {}
+
+        this.currentNodeId = startId;
+        this.historyTrail = trail;
+        this.renderNode(startId);
+      },
+
+      startStory() {
+        const initialId = this.currentStory.nodoInicialId || this.currentStory.nodo_inicial || (this.currentStory.nodos ? Object.keys(this.currentStory.nodos)[0] : null);
+        this.currentNodeId = initialId;
+        this.historyTrail = [initialId];
+        this.saveProgress();
+        this.renderNode(this.currentNodeId);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      selectOption(targetId) {
+        this.currentNodeId = targetId;
+        this.historyTrail.push(targetId);
+        this.saveProgress();
+        this.renderNode(targetId);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      goBack() {
+        if (this.historyTrail.length > 1) {
+          this.historyTrail.pop();
+          this.currentNodeId = this.historyTrail[this.historyTrail.length - 1];
+          this.saveProgress();
+          this.renderNode(this.currentNodeId);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      },
+
+      restartStory() {
+        this.startStory();
+      },
+
+      saveProgress() {
+        try {
+          const node = this.currentStory.nodos[this.currentNodeId];
+          const isEnding = node && (node.esFinal || node.es_final || !node.opciones || node.opciones.length === 0);
+          
+          let existing = {};
+          try {
+            const raw = localStorage.getItem('tusdesvarios_progreso_' + this.currentStory.slug);
+            if (raw) existing = JSON.parse(raw);
+          } catch (e) {}
+
+          const finales = existing.finalesDescubiertos || [];
+          if (isEnding && !finales.includes(this.currentNodeId)) {
+            finales.push(this.currentNodeId);
+          }
+
+          const progress = {
+            nodoActualId: this.currentNodeId,
+            historialNodos: this.historyTrail,
+            finalAlcanzado: isEnding ? (node.tipo_final || 'neutro') : null,
+            finalesDescubiertos: finales,
+            ultimoAcceso: new Date().toISOString()
+          };
+          localStorage.setItem('tusdesvarios_progreso_' + this.currentStory.slug, JSON.stringify(progress));
+        } catch (e) {}
+      },
+
+      formatText(text) {
+        if (!text) return '';
+        const paragraphs = text.split(/\n\s*\n/);
+        return paragraphs.map(p => {
+          const trimmed = p.trim();
+          let formatted = trimmed
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            .replace(/\n/g, '<br>');
+
+          if (trimmed.startsWith('>')) {
+            const quote = formatted.replace(/^>\s*/gm, '');
+            return '<blockquote>' + quote + '</blockquote>';
+          }
+          return '<p>' + formatted + '</p>';
+        }).join('');
+      },
+
+      renderNode(nodeId) {
+        const root = document.getElementById('app-root');
+        const node = this.currentStory.nodos[nodeId];
+
+        if (!node) {
+          root.innerHTML = '<div class="reader-wrapper"><p>Nodo no encontrado.</p></div>';
+          return;
+        }
+
+        const isEnding = node.esFinal || node.es_final || (!node.opciones || node.opciones.length === 0);
+        if (isEnding && window.DesvariosAuth) {
+          if (this.currentStory.id === 'la-ultima-guardia-faro') {
+            window.DesvariosAuth.unlockMedal('faro-guardian');
+          } else if (this.currentStory.id === 'el-manuscrito-de-la-abadia') {
+            window.DesvariosAuth.unlockMedal('abadia-codice');
+          }
+          try {
+            const key = 'desvarios_' + this.currentStory.id + '_endings';
+            const ends = JSON.parse(localStorage.getItem(key) || '[]');
+            if (!ends.includes(nodeId)) {
+              ends.push(nodeId);
+              localStorage.setItem(key, JSON.stringify(ends));
+            }
+            const faroEnds = JSON.parse(localStorage.getItem('desvarios_la-ultima-guardia-faro_endings') || '[]');
+            const abadiaEnds = JSON.parse(localStorage.getItem('desvarios_el-manuscrito-de-la-abadia_endings') || '[]');
+            if ((faroEnds.length + abadiaEnds.length) >= 3) {
+              window.DesvariosAuth.unlockMedal('historias-multiverso');
+            }
+          } catch(e){}
+        }
+        if (isEnding && node.tipo_final === 'bueno') {
+          this.fireConfetti();
+        }
+
+        const stepCount = this.historyTrail.length;
+        const totalSteps = Object.keys(this.currentStory.nodos).length;
+        const percentage = Math.min(100, Math.round((stepCount / Math.max(totalSteps * 0.4, 5)) * 100));
+        const nodeImage = node.imagen || this.currentStory.portada;
+
+        let optionsHtml = '';
+        if (isEnding) {
+          const endingType = node.tipo_final || 'neutro';
+          let endingLabel = 'Final Neutro — Destino Oculto';
+          if (endingType === 'bueno') endingLabel = 'Final Heroico — Victoria';
+          if (endingType === 'malo') endingLabel = 'Final Trágico — Perdición';
+
+          optionsHtml = `
+            <div class="ending-banner ${endingType}">
+              <div class="ending-pill ${endingType}">
+                <span>${endingLabel}</span>
+              </div>
+              ${node.mensaje_final ? `<p class="ending-moral">&ldquo;${node.mensaje_final}&rdquo;</p>` : ''}
+              <div class="ending-actions">
+                <button class="btn-primary" onclick="app.restartStory()">↺ Jugar de nuevo (Explorar otros caminos)</button>
+                <a href="crea-tu-historia.html" class="btn-secondary" style="padding:0.75rem 1.4rem;">📚 Ver todas las historias</a>
+              </div>
+              <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid rgba(255,255,255,0.12); display:flex; flex-direction:column; align-items:center; gap:0.65rem; text-align:center;">
+                <p style="font-size:0.88rem; color:var(--text-secondary); margin:0; max-width:480px; line-height:1.5;">
+                  ☕ <strong>¿Has disfrutado de la aventura?</strong> Apoya este proyecto independiente invitando a un café al creador para inspirar nuevas tramas y misterios.
+                </p>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=V8PZNYKGXBCLG&locale.x=es_ES"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-paypal-donate"
+                   title="Invitar a un café con PayPal"
+                   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.3rem; border-radius:9999px; background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color:#0b0f19; font-weight:800; font-size:0.85rem; text-decoration:none; box-shadow:0 4px 16px rgba(245, 158, 11, 0.35); transition:all 0.2s ease;">
+                  <span>☕ Invitar a un café</span>
+                  <span>➜</span>
+                </a>
+              </div>
+            </div>
+          `;
+        } else if (node.opciones && node.opciones.length > 0) {
+          const buttons = node.opciones.map((opt) => `
+            <button class="decision-button" onclick="app.selectOption('${opt.destinoId}')">
+              <div class="decision-button-content">
+                ${opt.impacto ? `<span class="decision-badge">${opt.impacto}</span>` : ''}
+                <div>${opt.texto}</div>
+              </div>
+              <span class="decision-arrow">➜</span>
+            </button>
+          `).join('');
+
+          optionsHtml = `
+            <div class="decisions-container">
+              <div class="decisions-heading">
+                <span>🧭 ¿Qué decides hacer?</span>
+              </div>
+              ${buttons}
+            </div>
+          `;
+        }
+
+        root.innerHTML = `
+          <div class="reader-wrapper">
+            <div style="margin-bottom:1rem;">
+              <a href="crea-tu-historia.html" class="btn-secondary" style="font-size:0.82rem;">
+                ← Volver a Todas las Historias
+              </a>
+            </div>
+
+            <div class="reader-progress-container">
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                ${this.historyTrail.length > 1 && !isEnding ? `
+                  <button class="btn-secondary" style="padding:0.3rem 0.6rem; font-size:0.78rem;" onclick="app.goBack()">
+                    <span>←</span> <span>Atrás</span>
+                  </button>
+                ` : `
+                  <span style="font-size:0.82rem; color:var(--text-muted);">🧭 Lectura</span>
+                `}
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: ${percentage}%;"></div>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span style="font-size:0.8rem; color:var(--text-muted);">
+                  ${isEnding ? 'Final alcanzado' : `Paso ${stepCount}`}
+                </span>
+                <button class="btn-secondary" style="padding:0.3rem 0.5rem; font-size:0.78rem;" title="Reiniciar" onclick="app.restartStory()">↺</button>
+              </div>
+            </div>
+
+            <div class="reader-node-card">
+              ${nodeImage ? `
+                <div class="reader-image-container">
+                  <img src="${nodeImage}" alt="${node.titulo || this.currentStory.titulo}" class="reader-image">
+                  <div class="reader-image-gradient"></div>
+                </div>
+              ` : ''}
+
+              <div class="reader-body">
+                ${node.titulo ? `<h1 class="reader-node-title">${node.titulo}</h1>` : ''}
+                <div class="reader-text">
+                  ${this.formatText(node.texto)}
+                </div>
+                ${optionsHtml}
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      fireConfetti() {
+        const canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const pieces = [];
+        const colors = ['#10b981', '#34d399', '#ffffff', '#f59e0b', '#fbbf24'];
+
+        for (let i = 0; i < 70; i++) {
+          pieces.push({
+            x: canvas.width / 2,
+            y: canvas.height * 0.6,
+            vx: (Math.random() - 0.5) * 12,
+            vy: (Math.random() - 0.8) * 14,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rotation: Math.random() * 360,
+            vRot: (Math.random() - 0.5) * 10
+          });
+        }
+
+        let animationFrame;
+        let count = 0;
+
+        function update() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          pieces.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.35;
+            p.rotation += p.vRot;
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+          });
+
+          count++;
+          if (count < 140) {
+            animationFrame = requestAnimationFrame(update);
+          } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+          }
+        }
+
+        update();
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      app.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

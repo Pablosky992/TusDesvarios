@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${test.titulo} — Desvaríos Mentales | TusDesvarios.com</title>
+  <meta name="description" content="${test.descripcionCorta}">
+  <meta name="keywords" content="${test.slug}, test, desvarios mentales, tus desvarios, ${test.titulo}, juegos mentales">
+  
+  <!-- Canonical & Open Graph / SEO -->
+  <link rel="canonical" href="https://tusdesvarios.com/desvarios-mentales/${test.slug}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${test.titulo} | Tus Desvaríos">
+  <meta property="og:description" content="${test.descripcionCorta}">
+  <meta property="og:url" content="https://tusdesvarios.com/desvarios-mentales/${test.slug}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${test.titulo}">
+  <meta name="twitter:description" content="${test.descripcionCorta}">
+
+  <!-- Schema.org Quiz structured data for Google Rich Results -->
+  <script type="application/ld+json">
+${JSON.stringify(jsonLd, null, 2)}
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-surface: rgba(18, 24, 38, 0.78);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.88);
+      --bg-surface-hover: rgba(34, 45, 68, 0.95);
+      --bg-glass: rgba(12, 17, 28, 0.85);
+
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --border-focus: rgba(6, 182, 212, 0.5);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --accent-cyan: #06b6d4;
+      --accent-purple: #a855f7;
+      --accent-amber: #f59e0b;
+      --accent-green: #10b981;
+      --accent-rose: #ec4899;
+
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-title: 'Cinzel', Georgia, serif;
+      --font-reading: 'Crimson Pro', Georgia, serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(6, 182, 212, 0.12) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(168, 85, 247, 0.14) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(245, 158, 11, 0.08) 0px, transparent 55%),
+        radial-gradient(at 90% 90%, rgba(16, 185, 129, 0.08) 0px, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+    }
+
+    .main-content {
+      flex: 1;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .runner-wrapper {
+      max-width: 740px;
+      margin: 0 auto;
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .runner-header-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .runner-progress-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .runner-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #06b6d4 0%, #a855f7 100%);
+      transition: width 0.3s ease;
+    }
+
+    .question-card {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .question-step-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-cyan);
+      margin-bottom: 0.75rem;
+    }
+
+    .question-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+    }
+
+    .question-text strong {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    .question-text em {
+      color: #f1f5f9;
+      font-style: italic;
+    }
+
+    .question-text blockquote {
+      border-left: 3px solid var(--accent-cyan);
+      padding: 0.5rem 0.85rem;
+      margin: 0.75rem 0;
+      background: rgba(6, 182, 212, 0.08);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-style: italic;
+      color: #e2e8f0;
+    }
+
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      padding: 1.1rem 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-family: inherit;
+    }
+
+    .option-btn:hover:not(:disabled) {
+      background: var(--bg-surface-hover);
+      border-color: var(--border-focus);
+      color: var(--text-primary);
+      transform: translateX(4px);
+    }
+
+    .option-indicator {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .clue-toggle-btn {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.2s;
+    }
+
+    .clue-toggle-btn:hover {
+      background: rgba(245, 158, 11, 0.22);
+    }
+
+    .clue-box {
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 3px solid #f59e0b;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      color: #fde68a;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .feedback-box {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .feedback-box.correct {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .feedback-box.incorrect {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+
+    .result-card {
+      background: var(--bg-surface-elevated);
+      border: 2px solid;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .result-icon-large {
+      font-size: 4rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .result-badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .result-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .result-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .result-desc {
+      font-family: var(--font-reading);
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      text-align: left;
+    }
+
+    .result-traits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+      .result-traits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .result-trait-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+    }
+
+    .result-trait-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .result-trait-val {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .btn-result-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 20px rgba(6, 182, 212, 0.35);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-result-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(6, 182, 212, 0.5);
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link active-mental" title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="app-root">
+      <!-- Injected via direct test runner -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const TEST_DATA = ${JSON.stringify(test)};
+
+    const mentalApp = {
+      currentTest: TEST_DATA,
+      currentStep: 0,
+      userAnswers: [],
+      revealedClues: {},
+      enigmaAnswers: {},
+
+      init() {
+        if (this.currentTest.tipo === 'enigma') {
+          this.renderEnigmaStep();
+        } else {
+          this.renderQuestionStep();
+        }
+      },
+
+      // --- Personality & Score Flow ---
+      answerQuestion(optionIndex) {
+        const q = this.currentTest.preguntas[this.currentStep];
+        const opt = q.opciones[optionIndex];
+        this.userAnswers.push(opt);
+
+        this.currentStep++;
+        if (this.currentStep < this.currentTest.preguntas.length) {
+          this.renderQuestionStep();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          this.renderResult();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      },
+
+      // --- Enigmas Flow ---
+      toggleClue(stepIdx) {
+        const currentCount = this.revealedClues[stepIdx] || 0;
+        this.revealedClues[stepIdx] = currentCount + 1;
+        this.renderEnigmaStep();
+      },
+
+      selectEnigmaOption(stepIdx, optionId) {
+        if (this.enigmaAnswers[stepIdx]) return;
+        const enigma = this.currentTest.enigmas[stepIdx];
+        const selectedOpt = enigma.opciones.find(o => o.id === optionId);
+        
+        this.enigmaAnswers[stepIdx] = {
+          selectedId: optionId,
+          isCorrect: !!(selectedOpt && selectedOpt.correcta)
+        };
+
+        if (selectedOpt && selectedOpt.correcta) {
+          this.fireConfetti();
+        }
+
+        this.renderEnigmaStep();
+      },
+
+      nextEnigma() {
+        this.currentStep++;
+        if (this.currentStep < this.currentTest.enigmas.length) {
+          this.renderEnigmaStep();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          this.renderEnigmaFinalSummary();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      },
+
+      restart() {
+        this.currentStep = 0;
+        this.userAnswers = [];
+        this.revealedClues = {};
+        this.enigmaAnswers = {};
+        if (this.currentTest.tipo === 'enigma') {
+          this.renderEnigmaStep();
+        } else {
+          this.renderQuestionStep();
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      formatMarkdown(text) {
+        if (!text) return '';
+        const blocks = text.split(/\n\s*\n/);
+        return blocks.map(block => {
+          const trimmed = block.trim();
+          let formatted = trimmed
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            .replace(/\n/g, '<br>');
+
+          if (trimmed.startsWith('>')) {
+            const quote = formatted.replace(/^>\s*/gm, '');
+            return '<blockquote>' + quote + '</blockquote>';
+          }
+          if (trimmed.startsWith('- ') || trimmed.startsWith('• ') || trimmed.startsWith('* ')) {
+            const items = trimmed.split(/\n/).map(line => {
+              const clean = line.replace(/^[-•*]\s*/, '')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>');
+              return '<li style="margin-bottom:0.4rem;">' + clean + '</li>';
+            }).join('');
+            return '<ul style="margin:0.75rem 0; padding-left:1.4rem; list-style-type:disc;">' + items + '</ul>';
+          }
+          return '<p style="margin-bottom:0.85rem;">' + formatted + '</p>';
+        }).join('');
+      },
+
+      renderQuestionStep() {
+        const root = document.getElementById('app-root');
+        const test = this.currentTest;
+        const total = test.preguntas.length;
+        const q = test.preguntas[this.currentStep];
+        const pct = Math.round(((this.currentStep + 1) / total) * 100);
+
+        const optionsHtml = q.opciones.map((opt, idx) => {
+          const letter = String.fromCharCode(65 + idx);
+          return `
+            <button class="option-btn" onclick="mentalApp.answerQuestion(${idx})">
+              <span class="option-indicator">${letter}</span>
+              <span>${opt.texto}</span>
+            </button>
+          `;
+        }).join('');
+
+        root.innerHTML = `
+          <div class="runner-wrapper">
+            <div style="margin-bottom:1rem;">
+              <a href="desvarios-mentales.html" class="btn-secondary" style="font-size:0.82rem;">
+                ← Volver a Todos los Tests
+              </a>
+            </div>
+
+            <div class="runner-header-card">
+              <span style="font-size:0.85rem; font-weight:600; color:var(--text-secondary);">${test.icono} ${test.titulo}</span>
+              <div class="runner-progress-track">
+                <div class="runner-progress-fill" style="width:${pct}%;"></div>
+              </div>
+              <span style="font-size:0.8rem; color:var(--text-muted);">${this.currentStep + 1} / ${total}</span>
+            </div>
+
+            <div class="question-card">
+              <div class="question-step-badge">Pregunta ${this.currentStep + 1} de ${total}</div>
+              <div class="question-text">${this.formatMarkdown(q.texto)}</div>
+              <div class="options-grid">
+                ${optionsHtml}
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      renderEnigmaStep() {
+        const root = document.getElementById('app-root');
+        const test = this.currentTest;
+        const total = test.enigmas.length;
+        const enigma = test.enigmas[this.currentStep];
+        const pct = Math.round(((this.currentStep + 1) / total) * 100);
+        const answered = this.enigmaAnswers[this.currentStep];
+        const clueCount = this.revealedClues[this.currentStep] || 0;
+
+        let cluesHtml = '';
+        if (enigma.pistas && enigma.pistas.length > 0) {
+          const visibleClues = enigma.pistas.slice(0, clueCount);
+          cluesHtml = `
+            <div style="margin-top:1.25rem;">
+              ${clueCount < enigma.pistas.length && !answered ? `
+                <button class="clue-toggle-btn" onclick="mentalApp.toggleClue(${this.currentStep})">
+                  <span>💡</span> <span>Revelar Pista (${clueCount + 1}/${enigma.pistas.length})</span>
+                </button>
+              ` : ''}
+              ${visibleClues.map(c => `<div class="clue-box">🔍 ${this.formatMarkdown(c)}</div>`).join('')}
+            </div>
+          `;
+        }
+
+        let feedbackHtml = '';
+        if (answered) {
+          feedbackHtml = `
+            <div class="feedback-box ${answered.isCorrect ? 'correct' : 'incorrect'}">
+              <div style="font-weight:700; font-size:1.1rem; margin-bottom:0.5rem; color:${answered.isCorrect ? '#34d399' : '#f87171'};">
+                ${answered.isCorrect ? '✨ ¡Respuesta Correcta!' : '❌ Respuesta Incorrecta'}
+              </div>
+              <div style="font-size:0.95rem; line-height:1.6;">${this.formatMarkdown(enigma.explicacion)}</div>
+              <button class="btn-result-main" style="margin-top:1.25rem;" onclick="mentalApp.nextEnigma()">
+                <span>${this.currentStep + 1 < total ? 'Siguiente Pregunta ➜' : 'Ver Puntuación Final 🏆'}</span>
+              </button>
+            </div>
+          `;
+        }
+
+        const optionsHtml = enigma.opciones.map((opt, idx) => {
+          let extraStyle = '';
+          if (answered) {
+            if (opt.correcta) {
+              extraStyle = 'border-color:#10b981; background:rgba(16,185,129,0.15);';
+            } else if (answered.selectedId === opt.id) {
+              extraStyle = 'border-color:#ef4444; background:rgba(239,68,68,0.15);';
+            } else {
+              extraStyle = 'opacity:0.5;';
+            }
+          }
+
+          return `
+            <button class="option-btn" style="${extraStyle}" onclick="mentalApp.selectEnigmaOption(${this.currentStep}, '${opt.id}')" ${answered ? 'disabled' : ''}>
+              <span class="option-indicator">${idx + 1}</span>
+              <span>${opt.texto}</span>
+            </button>
+          `;
+        }).join('');
+
+        root.innerHTML = `
+          <div class="runner-wrapper">
+            <div style="margin-bottom:1rem;">
+              <a href="desvarios-mentales.html" class="btn-secondary" style="font-size:0.82rem;">
+                ← Volver a Todos los Tests
+              </a>
+            </div>
+
+            <div class="runner-header-card">
+              <span style="font-size:0.85rem; font-weight:600; color:var(--text-secondary);">🧩 ${enigma.titulo}</span>
+              <div class="runner-progress-track">
+                <div class="runner-progress-fill" style="width:${pct}%;"></div>
+              </div>
+              <span style="font-size:0.8rem; color:var(--text-muted);">${this.currentStep + 1} / ${total}</span>
+            </div>
+
+            <div class="question-card">
+              <div class="question-text" style="font-family:var(--font-reading); font-size:1.25rem; font-weight:400; line-height:1.7; color:#e2e8f0;">
+                ${this.formatMarkdown(enigma.planteamiento)}
+              </div>
+              ${cluesHtml}
+              <div class="options-grid" style="margin-top:1rem;">
+                ${optionsHtml}
+              </div>
+              ${feedbackHtml}
+            </div>
+          </div>
+        `;
+      },
+
+      renderResult() {
+        const root = document.getElementById('app-root');
+        const test = this.currentTest;
+
+        if (window.DesvariosAuth) {
+          window.DesvariosAuth.unlockMedal('mental-arquetipo');
+          if (test && (test.slug === 'test-dilemas-morales' || test.slug === 'dilemas-morales')) {
+            window.DesvariosAuth.unlockMedal('mental-filosofo');
+          }
+        }
+
+        if (test.tipo === 'personalidad') {
+          const counts = {};
+          this.userAnswers.forEach(opt => {
+            counts[opt.arquetipo] = (counts[opt.arquetipo] || 0) + 1;
+          });
+
+          const keys = Object.keys(test.resultados);
+          let topArquetipo = keys.reduce((a, b) => (counts[a] || 0) > (counts[b] || 0) ? a : b, keys[0]);
+          const res = test.resultados[topArquetipo] || test.resultados[keys[0]];
+
+          this.fireConfetti();
+
+          root.innerHTML = `
+            <div class="runner-wrapper">
+              <div class="result-card" style="border-color:${res.color};">
+                <span class="result-icon-large">${res.icono}</span>
+                <div>
+                  <span class="result-badge" style="background:${res.color}22; color:${res.color}; border:1px solid ${res.color}55;">
+                    Tu Resultado
+                  </span>
+                </div>
+                <h1 class="result-title">${res.nombre}</h1>
+                <div class="result-subtitle">«${res.tituloCorto}»</div>
+
+                <div class="result-desc">
+                  ${this.formatMarkdown(res.descripcion)}
+                </div>
+
+                <div class="result-traits-grid">
+                  <div class="result-trait-box">
+                    <div class="result-trait-label">⚔️ Mayor Fortaleza</div>
+                    <div class="result-trait-val">${res.fortaleza}</div>
+                  </div>
+                  <div class="result-trait-box">
+                    <div class="result-trait-label">🌀 Tu Desvarío Oculto</div>
+                    <div class="result-trait-val">${res.desvario}</div>
+                  </div>
+                </div>
+
+                <div style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.5rem;">
+                  ✨ ${res.afinidad}
+                </div>
+
+                <div class="result-actions">
+                  <button class="btn-result-main" onclick="mentalApp.restart()">↺ Repetir Test</button>
+                  <a href="desvarios-mentales.html" class="btn-secondary" style="padding:0.85rem 1.4rem;">🧪 Explorar más tests</a>
+                </div>
+              </div>
+            </div>
+          `;
+        } else if (test.tipo === 'puntuacion') {
+          const totalPoints = this.userAnswers.reduce((sum, opt) => sum + (opt.puntos || 0), 0);
+          const range = test.rangos.find(r => totalPoints >= r.min && totalPoints <= r.max) || test.rangos[0];
+
+          this.fireConfetti();
+
+          root.innerHTML = `
+            <div class="runner-wrapper">
+              <div class="result-card" style="border-color:${range.color};">
+                <span class="result-icon-large">${range.icono}</span>
+                <div>
+                  <span class="result-badge" style="background:${range.color}22; color:${range.color}; border:1px solid ${range.color}55;">
+                    ${range.nivel} — ${totalPoints} Puntos
+                  </span>
+                </div>
+                <h1 class="result-title">${range.titulo}</h1>
+
+                <div class="result-desc">
+                  ${this.formatMarkdown(range.descripcion)}
+                </div>
+
+                <div class="result-traits-grid">
+                  <div class="result-trait-box" style="grid-column: 1 / -1;">
+                    <div class="result-trait-label">💡 Consejo de los Sabios</div>
+                    <div class="result-trait-val">${range.consejo}</div>
+                  </div>
+                </div>
+
+                <div class="result-actions">
+                  <button class="btn-result-main" onclick="mentalApp.restart()">↺ Volver a diagnosticar</button>
+                  <a href="desvarios-mentales.html" class="btn-secondary" style="padding:0.85rem 1.4rem;">🧪 Otros tests</a>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      },
+
+      renderEnigmaFinalSummary() {
+        const root = document.getElementById('app-root');
+        const test = this.currentTest;
+        const total = test.enigmas.length;
+        let correctCount = 0;
+        for (let i = 0; i < total; i++) {
+          if (this.enigmaAnswers[i] && this.enigmaAnswers[i].isCorrect) {
+            correctCount++;
+          }
+        }
+
+        let rankTitle = 'Mente Curiosa';
+        let rankIcon = '🧐';
+        let rankColor = '#f59e0b';
+        let rankDesc = 'Has superado varios retos, aunque algunas trampas han conseguido despistarte.';
+
+        const pctScore = Math.round((correctCount / total) * 100);
+        if (pctScore === 100) {
+          rankTitle = 'Gran Maestro de la Sabiduría';
+          rankIcon = '👑';
+          rankColor = '#10b981';
+          rankDesc = `¡Puntuación perfecta! Has resuelto los ${total} retos sin caer en ninguna trampa. Tu agudeza mental es prodigiosa.`;
+        } else if (pctScore >= 60) {
+          rankTitle = 'Erudito Sagaz';
+          rankIcon = '⚡';
+          rankColor = '#06b6d4';
+          rankDesc = `Muy buen desempeño analítico (${correctCount} de ${total} aciertos). Posees un pensamiento lateral agudo y gran capacidad deductiva.`;
+        }
+
+        if (correctCount >= Math.ceil(total / 2)) {
+          this.fireConfetti();
+        }
+        if (window.DesvariosAuth) {
+          window.DesvariosAuth.unlockMedal('mental-logica');
+        }
+
+        root.innerHTML = `
+          <div class="runner-wrapper">
+            <div class="result-card" style="border-color:${rankColor};">
+              <span class="result-icon-large">${rankIcon}</span>
+              <div>
+                <span class="result-badge" style="background:${rankColor}22; color:${rankColor}; border:1px solid ${rankColor}55;">
+                  Puntuación: ${correctCount} de ${total} Aciertos (${pctScore}%)
+                </span>
+              </div>
+              <h1 class="result-title">${rankTitle}</h1>
+
+              <div class="result-desc">
+                ${rankDesc}
+              </div>
+
+              <div class="result-actions">
+                <button class="btn-result-main" onclick="mentalApp.restart()">↺ Reintentar Reto</button>
+                <a href="desvarios-mentales.html" class="btn-secondary" style="padding:0.85rem 1.4rem;">🧪 Más Desvaríos Mentales</a>
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      fireConfetti() {
+        const canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const pieces = [];
+        const colors = ['#06b6d4', '#a855f7', '#10b981', '#ffffff', '#f59e0b'];
+
+        for (let i = 0; i < 70; i++) {
+          pieces.push({
+            x: canvas.width / 2,
+            y: canvas.height * 0.6,
+            vx: (Math.random() - 0.5) * 12,
+            vy: (Math.random() - 0.8) * 14,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rotation: Math.random() * 360,
+            vRot: (Math.random() - 0.5) * 10
+          });
+        }
+
+        let animationFrame;
+        let count = 0;
+
+        function update() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          pieces.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.35;
+            p.rotation += p.vRot;
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+          });
+
+          count++;
+          if (count < 140) {
+            animationFrame = requestAnimationFrame(update);
+          } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+          }
+        }
+
+        update();
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      mentalApp.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

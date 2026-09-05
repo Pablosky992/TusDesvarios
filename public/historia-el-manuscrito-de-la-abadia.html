@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Manuscrito de la Abadía Prohibida — Crea tus Desvaríos | TusDesvarios.com</title>
+  <meta name="description" content="En el crudo invierno de 1347, un antiguo inquisidor refugiado como bibliotecario en una abadía pirenaica descubre un códice maldito, una conspiración de venenos y una entidad estelar atrapada en el glaciar.">
+  <meta name="keywords" content="el-manuscrito-de-la-abadia, ficcion interactiva, elige tu propia aventura, historias ramificadas, juegos de rol narrativos, tus desvarios, El Manuscrito de la Abadía Prohibida">
+  
+  <!-- Canonical & Open Graph / SEO -->
+  <link rel="canonical" href="https://tusdesvarios.com/crea-tu-historia/historia/el-manuscrito-de-la-abadia">
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="El Manuscrito de la Abadía Prohibida — Ficción Interactiva | Tus Desvaríos">
+  <meta property="og:description" content="En el crudo invierno de 1347, un antiguo inquisidor refugiado como bibliotecario en una abadía pirenaica descubre un códice maldito, una conspiración de venenos y una entidad estelar atrapada en el glaciar.">
+  <meta property="og:url" content="https://tusdesvarios.com/crea-tu-historia/historia/el-manuscrito-de-la-abadia">
+  <meta property="og:image" content="images/stories/abadia-prohibida/portada.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Manuscrito de la Abadía Prohibida">
+  <meta name="twitter:description" content="En el crudo invierno de 1347, un antiguo inquisidor refugiado como bibliotecario en una abadía pirenaica descubre un códice maldito, una conspiración de venenos y una entidad estelar atrapada en el glaciar.">
+  <meta name="twitter:image" content="images/stories/abadia-prohibida/portada.jpg">
+
+  <!-- Schema.org Book structured data for Google Rich Results -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "El Manuscrito de la Abadía Prohibida",
+  "description": "En el crudo invierno de 1347, un antiguo inquisidor refugiado como bibliotecario en una abadía pirenaica descubre un códice maldito, una conspiración de venenos y una entidad estelar atrapada en el glaciar.",
+  "url": "https://tusdesvarios.com/crea-tu-historia/historia/el-manuscrito-de-la-abadia",
+  "genre": "Misterio Gótico, Alquimia y Suspense Histórico",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Person",
+    "name": "Fray Tomás de Aquitania"
+  },
+  "image": "https://tusdesvarios.com/images/stories/abadia-prohibida/portada.jpg"
+}
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0a0d14;
+      --bg-surface: rgba(18, 24, 38, 0.85);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.92);
+      --bg-surface-hover: rgba(34, 45, 68, 0.95);
+      --bg-glass: rgba(12, 17, 28, 0.88);
+
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --border-focus: rgba(16, 185, 129, 0.5);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --accent-emerald: #10b981;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-rose: #ef4444;
+
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-title: 'Cinzel', Georgia, serif;
+      --font-reading: 'Crimson Pro', Georgia, serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(16, 185, 129, 0.12) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.14) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(245, 158, 11, 0.08) 0px, transparent 55%);
+      background-attachment: fixed;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5);
+    }
+
+    .main-content {
+      flex: 1;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .reader-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reader-progress-container {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .progress-bar-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981 0%, #06b6d4 100%);
+      transition: width 0.3s ease;
+    }
+
+    .reader-node-card {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .reader-image-container {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      background: #000;
+    }
+
+    @media (max-width: 600px) {
+      .reader-image-container {
+        height: 240px;
+      }
+    }
+
+    .reader-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reader-image-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--bg-surface-elevated) 0%, transparent 60%);
+    }
+
+    .reader-body {
+      padding: 2.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .reader-body {
+        padding: 1.5rem;
+      }
+    }
+
+    .reader-node-title {
+      font-family: var(--font-title);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .reader-text {
+      font-family: var(--font-reading);
+      font-size: 1.35rem;
+      line-height: 1.8;
+      color: #e2e8f0;
+      margin-bottom: 2.5rem;
+    }
+
+    .reader-text p {
+      margin-bottom: 1.25rem;
+    }
+
+    .reader-text strong {
+      color: #34d399;
+      font-weight: 600;
+    }
+
+    .reader-text em {
+      color: #f1f5f9;
+      font-style: italic;
+    }
+
+    .reader-text blockquote {
+      border-left: 3px solid var(--accent-emerald);
+      padding: 0.6rem 1rem;
+      margin: 1.25rem 0;
+      background: rgba(16, 185, 129, 0.08);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-style: italic;
+      color: #d1fae5;
+    }
+
+    .decisions-container {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1.75rem;
+    }
+
+    .decisions-heading {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-emerald);
+      margin-bottom: 1.1rem;
+    }
+
+    .decision-button {
+      width: 100%;
+      text-align: left;
+      padding: 1.15rem 1.4rem;
+      margin-bottom: 0.85rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-family: inherit;
+    }
+
+    .decision-button:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--accent-emerald);
+      color: #fff;
+      transform: translateX(6px);
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.2);
+    }
+
+    .decision-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      margin-bottom: 0.35rem;
+    }
+
+    .ending-banner {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 2rem;
+      text-align: center;
+    }
+
+    .ending-pill {
+      display: inline-block;
+      padding: 0.4rem 1.25rem;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+    }
+
+    .ending-pill.bueno {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .ending-pill.malo {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+
+    .ending-pill.neutro {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .ending-moral {
+      font-family: var(--font-reading);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .ending-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link active-crea" title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="app-root">
+      <!-- Injected via reader -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const STORY_DATA = {"slug":"el-manuscrito-de-la-abadia","titulo":"El Manuscrito de la Abadía Prohibida","subtitulo":"Hay secretos tan antiguos que la misma piedra tiembla al ser leídos.","descripcionCorta":"En el crudo invierno de 1347, un antiguo inquisidor refugiado como bibliotecario en una abadía pirenaica descubre un códice maldito, una conspiración de venenos y una entidad estelar atrapada en el glaciar.","genero":"Misterio Gótico, Alquimia y Suspense Histórico","tiempoLecturaMin":30,"portada":"images/stories/abadia-prohibida/portada.jpg","autor":"Fray Tomás de Aquitania","nodoInicialId":"inicio_abadia","totalNodosEstimados":35,"nodos":{"inicio_abadia":{"id":"inicio_abadia","titulo":"Capítulo I: El Osario de Santa Eulalia","texto":"Año del Señor de 1347. El invierno más atroz que la memoria de los ancianos recuerda ha sellado los puertos de montaña de los Pirineos bajo ventisqueros infranqueables. En los valles de abajo, la Peste Negra avanza devorando reinos enteros; pero en la cumbre de la Abadía de Santa Eulalia de los Riscos, los monjes mueren por causas que desafían la teología y la naturaleza: lenguas ennegrecidas por vitriolo, ojos reventados en sangre y delirios nocturnos en dialectos antediluvianos.\n\nEres fray Tomás de Aquitania, un antiguo inquisidor dominico desencantado que, tras renegar de los tormentos y las piras de la fe, se refugió en este nido de águilas como bibliotecario mayor y traductor del *scriptorium*. Esta medianoche, tras la repentina y brutal muerte del anciano Abad Bernardo —hallado congelado, ciego y con una mueca de espanto ante el facistol del coro—, has descendido a solas al osario subterráneo con la pesada llave de hierro forjado que heredaste en secreto.\n\nTras el fresco desconchado del Juicio Final, en una hornacina oculta entre calaveras de monjes del siglo X, descubres un cofre de bronce bizantino sellado con tres candados de plomo. Dentro reposa el legendario *Codex Umbrarum*: un grueso palimpsesto encuadernado en cuero negruzco de origen no humano, sellado con cera carmesí que desprende un tenue fulgor esmeralda y un inconfundible olor a almendras amargas. Una inscripción en latín templario grabada en la tapa advierte:\n\n> *«La tinta es veneno para la carne y luz para el ciego. Quien posea el Lapis Niger de Antioquía proyectará los nombres de los que han de morir.»*","imagen":"images/stories/abadia-prohibida/cripta.jpg","opciones":[{"id":"opt_1_lapis","texto":"Subir sigilosamente a la sacristía mayor para buscar la gema de obsidiana 'Lapis Niger' oculta tras el altar","destinoId":"nodo_2_sacristia_lapis","impacto":"Investigación"},{"id":"opt_1_botica","texto":"Llevar muestras del veneno y el cofre al laboratorio de Fray Severino el Boticario para un análisis químico","destinoId":"nodo_3_botica_alquimia","impacto":"Científico"},{"id":"opt_1_scriptorium","texto":"Acudir al scriptorium en busca de Guillermo, el novicio mudo que conoce los secretos del abad","destinoId":"nodo_4_scriptorium_guillermo","impacto":"Alianza"},{"id":"opt_1_celda","texto":"Ocultar el códice bajo el sayal y llevarlo a tu celda privada para estudiar las anotaciones marginales","destinoId":"nodo_5_celda_mapa","impacto":"Prudente"}]},"nodo_2_sacristia_lapis":{"id":"nodo_2_sacristia_lapis","titulo":"Capítulo II: El Lapis Niger de Antioquía","texto":"Te deslizas por las sombras de la basílica hasta la sacristía mayor. Tras el retablo gótico de la Asunción, retiras un sillar hueco y encuentras una caja de plata que contiene el *Lapis Niger*: una gema de obsidiana estelar facetada con geometrías que ningún orfebre humano podría haber tallado.\n\nAl interponer la piedra negra entre la llama de una vela de cera virgen y las páginas del códice, ocurre un prodigio aterrador: la luz se refracta proyectando sobre las paredes de granito una carta celeste en relieve y la lista en bermellón de todos los monjes de Santa Eulalia, señalando la hora exacta en que cada uno perecerá. Tu propio nombre aparece marcado para la cuarta vigilia de esta misma noche.\n\nUn crujido de pasos acorazados en el pasillo exterior anuncia la llegada de los guardias del Prior Rodrigo.","imagen":"images/stories/abadia-prohibida/cripta.jpg","opciones":[{"id":"opt_2_proyectar_coro","texto":"Escabullirte por la puerta del sagrario hacia el coro para proyectar la carta estelar en la cúpula","destinoId":"nodo_6_proyeccion_coro","impacto":"Místico"},{"id":"opt_2_emboscada_sacristia","texto":"Trepar por los tirantes de hierro del retablo y ocultarte en la galería alta del triforio","destinoId":"nodo_7_triforio_escape","impacto":"Agilidad"},{"id":"opt_2_botica","texto":"Bajar por la escalera de servicio hacia la botica para reunir la gema con los reactivos de Severino","destinoId":"nodo_3_botica_alquimia","impacto":"Prudente"}]},"nodo_3_botica_alquimia":{"id":"nodo_3_botica_alquimia","titulo":"Capítulo II: El Laboratorio Alquímico de Severino","texto":"Cruzas los claustros cubiertos de escarcha y entras en la botica monacal. Entre alambiques de cobre, retortas sibilantes y ristras de mandrágora, fray Severino te recibe con una lámpara de aceite en la mano temblorosa.\n\nSobre una losa de mármol yace el cuerpo amortajado del abad Bernardo. Severino aparta el lino para mostrarte sus labios amoratados y sus cuerdas vocales calcinadas por un ácido frío y desconocido:\n\n—*Tomás, mira esto* —susurra el boticario aplicando una gota de vitriolo blanco sobre la lengua del difunto—. *No es una peste ni un castigo divino. Las hojas del códice fueron bañadas en la tintura destilada de la 'Mycena noctiluca', un hongo bioluminiscente que crece exclusivamente en la sima glacial bajo los cimientos de la abadía. Quien pasa las páginas humedeciendo sus dedos con saliva absorbe el alcaloide: produce clarividencia absoluta durante unos minutos y luego fulmina el corazón.*","imagen":"images/stories/abadia-prohibida/botica.jpg","opciones":[{"id":"opt_3_antidoto","texto":"Ayudar a Severino a destilar un contra-veneno con sales de plata, belladona y vinagre destilado","destinoId":"nodo_8_destilacion_antidoto","impacto":"Científico"},{"id":"opt_3_autopsia","texto":"Practicar una incisión forense en el estómago del abad para averiguar cómo le administraron el veneno","destinoId":"nodo_9_autopsia_veneno","impacto":"Forense"},{"id":"opt_3_inhalar","texto":"Inhalar una brizna infinitesimal del vapor purificado para inducir una visión controlada del códice","destinoId":"nodo_10_trance_alquimico","impacto":"Arriesgado"}]},"nodo_4_scriptorium_guillermo":{"id":"nodo_4_scriptorium_guillermo","titulo":"Capítulo II: El Silencio de Guillermo","texto":"Subes a la inmensa nave gótica del *scriptorium*. Las hileras de pupitres de roble yacen mudas bajo la luz azulada de la ventisca que castiga las vidrieras ojivales. Entre las sombras del atril mayor descubres a Guillermo, el joven novicio al que el abad protegió durante años.\n\nGuillermo, incapaz de hablar, abre con dedos nerviosos un cuaderno de bocetos a carboncillo. Sus dibujos son revelaciones estremecedoras: retratan al Prior Rodrigo entregando bolsas de florines a mercenarios de la Inquisición en el molino subterráneo, mapas milimétricos de pasadizos ocultos entre los muros de sillería y el plano del gran espejo de bronce de la torre prohibida, construido según la geometría del sabio persa Alhazen.","imagen":"images/stories/abadia-prohibida/scriptorium.jpg","opciones":[{"id":"opt_4_laberinto_espejos","texto":"Seguir el dibujo de Guillermo y presionar el relieve del espejo para entrar al laberinto de la torre","destinoId":"nodo_11_laberinto_alhazen","impacto":"Exploración"},{"id":"opt_4_muros_pasadizo","texto":"Guiarte por los conductos estrechos entre los muros dobles para espiar las reuniones de Rodrigo","destinoId":"nodo_12_pasadizos_muro","impacto":"Sigilo"},{"id":"opt_4_celada_librero","texto":"Preparar un manuscrito señuelo con tinte de nuez de agallas y vitriolo para tender una trampa a los espías","destinoId":"nodo_13_celada_biblioteca","impacto":"Estratégico"}]},"nodo_5_celda_mapa":{"id":"nodo_5_celda_mapa","titulo":"Capítulo II: La Herejía de los Perfectos","texto":"Te encierras en tu celda monacal, atrancando la pesada puerta de roble con el cerrojo de hierro. Al calor de las brasas de la chimenea, acercas el pergamino al fuego. Al subir la temperatura, las anotaciones invisibles trazadas con tinta simpática despiertan en el margen de la vitela:\n\n> *«No hay infierno más allá de esta carne. La abadía fue construida sobre la fortaleza de los cátaros de Montségur para custodiar al Durmiente del Hielo. El Prior planea purgar la orden con veneno para que la Inquisición papal recupere el trono subterráneo. Tomás: en el molino harinero están las esclusas de agua romana; ábrelas o la noche eterna devorará el mundo.»*\n\nEl reloj de agua de tu celda gotea con regularidad implacable. La hora de la colación nocturna en el refectorio está a punto de comenzar.","imagen":"images/stories/abadia-prohibida/cripta.jpg","opciones":[{"id":"opt_5_esclusas_molino","texto":"Descender de inmediato al sótano del molino para inspeccionar las compuertas hidráulicas romanas","destinoId":"nodo_15_esclusas_romanas","impacto":"Audaz"},{"id":"opt_5_sima_directa","texto":"Seguir las coordenadas del mapa y bajar por el pozo kárstico hacia la sima glacial del Durmiente","destinoId":"nodo_20_glaciar_durmiente","impacto":"Trascendental"},{"id":"opt_5_refectorio_alerta","texto":"Acudir al refectorio para vigilar a los monjes durante la cena comunal y evitar un envenenamiento masivo","destinoId":"nodo_17_refectorio_tension","impacto":"Humanitario"}]},"nodo_6_proyeccion_coro":{"id":"nodo_6_proyeccion_coro","titulo":"Capítulo III: Los Glifos del Juicio","texto":"Llegas al coro alto de la iglesia. Colocas el *Lapis Niger* en el atril de nogal y proyectas la luz hacia la cúpula central. El techo de piedra se transforma en un mapa estelar fosforescente donde las constelaciones giran con precisión matemática.\n\nComprendes la verdad astronómica: la constelación del Cisne alcanzará su cenit exactamente a las cuatro de la madrugada. Si el cántico primordial no es pronunciado o neutralizado antes de esa hora, la energía del meteorito kárstico despertará a la entidad congelada bajo la abadía.","imagen":"images/stories/abadia-prohibida/scriptorium.jpg","opciones":[{"id":"opt_6_campanario","texto":"Subir a toda prisa al observatorio del campanario para alinear los telescopios de bronce","destinoId":"nodo_16_observatorio_campanario","impacto":"Cosmología"},{"id":"opt_6_alerta_hermanos","texto":"Reunir a los frailes ancianos del cabildo para mostrarles la proyección en la cúpula","destinoId":"nodo_18_debate_capitulo","impacto":"Persuasión"}]},"nodo_7_triforio_escape":{"id":"nodo_7_triforio_escape","titulo":"Capítulo III: La Huida por las Alturas","texto":"Avanzas por la estrecha cornisa del triforio a treinta metros sobre las baldosas de la nave mayor. Abajo, los guardias del Prior registran las capillas con antorchas y perros de presa que gruñen olisqueando el rastro de la tinta.\n\nUna ráfaga de viento helado entra por un rosetón quebrado, cubriendo las losas de nieve resbaladiza. Si das un paso en falso, te precipitarás al vacío sobre el altar de piedra.","imagen":"images/stories/abadia-prohibida/portada.jpg","opciones":[{"id":"opt_7_scriptorium","texto":"Saltar hacia el tejadillo anexo del scriptorium y deslizarte por la claraboya","destinoId":"nodo_4_scriptorium_guillermo","impacto":"Temerario"},{"id":"opt_7_campanario","texto":"Subir por la escalera de caracol exterior hacia la torre del campanario y atrancar la puerta","destinoId":"nodo_16_observatorio_campanario","impacto":"Defensivo"}]},"nodo_8_destilacion_antidoto":{"id":"nodo_8_destilacion_antidoto","titulo":"Capítulo III: El Triunfo de la Medicina","texto":"Trabajando codo con codo con fray Severino sobre el hornillo alquímico, logras destilar tres ampollas de vidrio verde selladas con cera de laurel: un contra-veneno purificado a base de sales de plata, extracto de sauce y vinagre destilado.\n\nBebes una dosis preventiva: una oleada de calor reconfortante recorre tus venas y tu mente se vuelve completamente inmune a las esporas alucinógenas del códice. Ahora eres el único hombre en Santa Eulalia capaz de manipular las páginas y salvar a los hermanos.","imagen":"images/stories/abadia-prohibida/botica.jpg","opciones":[{"id":"opt_8_refectorio","texto":"Llevar el antídoto al refectorio antes de que los monjes beban el vino envenenado de la cena","destinoId":"nodo_17_refectorio_tension","impacto":"Salvación"},{"id":"opt_8_esclusas","texto":"Bajar protegido con Severino al molino subterráneo para asegurar las compuertas de agua","destinoId":"nodo_15_esclusas_romanas","impacto":"Estratégico"},{"id":"opt_8_sima","texto":"Descender inmune a la sima glacial para erradicar el foco de los hongos con vitriolo cáustico","destinoId":"nodo_20_glaciar_durmiente","impacto":"Erradicación"}]},"nodo_9_autopsia_veneno":{"id":"nodo_9_autopsia_veneno","titulo":"Capítulo III: El Cáliz de la Traición","texto":"Con el escalpelo de plata realizas la disección estomacal del abad Bernardo. En su interior hallas restos de vino aromatizado con canela y posos densos de *Mycena noctiluca*.\n\n—*El cáliz de la misa mayor...* —exclama Severino con horror—. *Rodrigo no solo envenenó el códice; ha vertido el extracto en la tinaja de vino de la bodega capitular. Esta noche, durante la colación del refectorio, todos los frailes que no se sometan a su mandato serán envenenados.*","imagen":"images/stories/abadia-prohibida/botica.jpg","opciones":[{"id":"opt_9_refectorio_denuncia","texto":"Correr al refectorio empuñando el cáliz y el informe forense para detener la cena ante todos","destinoId":"nodo_17_refectorio_tension","impacto":"Confrontación"},{"id":"opt_9_capitulo","texto":"Convocar formalmente a los decanos en la Sala Capitular apelando al derecho canónico de la orden","destinoId":"nodo_18_debate_capitulo","impacto":"Legalidad"}]},"nodo_10_trance_alquimico":{"id":"nodo_10_trance_alquimico","titulo":"Capítulo III: El Vuelo Sobre el Abismo","texto":"Inhalas una brizna del vapor esmeralda purificado por el alambique. De golpe, los muros de piedra se vuelven translúcidos como agua clara. Tu consciencia se eleva a miles de metros sobre los Pirineos.\n\nVes el impacto estelar ocurrido hace diez milenios, la cueva de hielo donde duerme el corazón de la criatura cósmica y las líneas de fuerza electromagnética que conectan el telescopio árabe del campanario con las entrañas de la montaña. Comprendes cómo funciona la máquina milenaria del monasterio.","imagen":"images/stories/abadia-prohibida/sima.jpg","opciones":[{"id":"opt_10_observatorio","texto":"Regresar del trance con lucidez absoluta y subir al campanario a operar el astrolabio","destinoId":"nodo_16_observatorio_campanario","impacto":"Maestría"},{"id":"opt_10_sima","texto":"Guiarte por la visión y caminar en trance directo hacia la caverna del glaciar","destinoId":"nodo_20_glaciar_durmiente","impacto":"Místico"}]},"nodo_11_laberinto_alhazen":{"id":"nodo_11_laberinto_alhazen","titulo":"Capítulo III: El Espejo de las Sombras","texto":"El marco de bronce gira sobre sus goznes y entras en el laberinto hexagonal de la torre prohibida. Decenas de espejos curvos reflejan tu silueta en infinitos ángulos, desafiando toda noción de perspectiva euclidiana.\n\nEn la cámara central descubres el observatorio secreto del sabio persa Alhazen: un astrolabio monumental de latón con engranajes planetarios que giran impulsados por un péndulo de mercurio. El *Codex Umbrarum* encaja en una hendidura sobre el pedestal de piedra.","imagen":"images/stories/abadia-prohibida/laberinto.jpg","opciones":[{"id":"opt_11_astrolabio_siete","texto":"Alinear los discos del astrolabio con las coordenadas de la constelación del Cisne","destinoId":"nodo_19_astrolabio_ritual","impacto":"Astral"},{"id":"opt_11_destruir_mecanismo","texto":"Introducir una barra de hierro entre los engranajes de bronce para destruir el mecanismo para siempre","destinoId":"nodo_22_sabotaje_torre","impacto":"Destructivo"}]},"nodo_12_pasadizos_muro":{"id":"nodo_12_pasadizos_muro","titulo":"Capítulo III: Los Ojos en la Piedra","texto":"Avanzas agazapado por el pasadizo interior de los muros dobles. A través de una mirilla tallada en la sillería del coro, observas al Prior Rodrigo reunido con tres emisarios encapuchados de la Inquisición papal.\n\n—*El códice será destruido junto con la biblioteca* —dice Rodrigo con voz gélida—. *Diremos que los frailes murieron de peste y que el fuego fue necesario para purificar el pecado. A cambio, el Santo Padre me nombrará obispo de Toulouse.*","imagen":"images/stories/abadia-prohibida/scriptorium.jpg","opciones":[{"id":"opt_12_emboscada_rodrigo","texto":"Esperar a que Rodrigo se quede solo en el claustro para emboscarlo con la ayuda de Guillermo","destinoId":"nodo_23_confrontacion_directa","impacto":"Ataque"},{"id":"opt_12_abrir_establos","texto":"Escabullirte hacia las caballerizas para preparar mulas y alforjas para una fuga general de los textos","destinoId":"nodo_24_preparar_exodo","impacto":"Rescate"}]},"nodo_13_celada_biblioteca":{"id":"nodo_13_celada_biblioteca","titulo":"Capítulo III: La Trampa del Manuscrito","texto":"Colocas un libro señuelo en el atril mayor, untado con una mezcla paralizante de belladona preparada por Severino. A las tres de la madrugada, los dos esbirros armados de Rodrigo entran sigilosamente al scriptorium.\n\nAl abalanzarse sobre el tomo y pasar las hojas con avidez, el alcaloide penetra en sus yemas de los dedos. En segundos caen desplomados sobre los pupitres de roble, conscientes pero incapaces de mover un solo músculo.","imagen":"images/stories/abadia-prohibida/scriptorium.jpg","opciones":[{"id":"opt_13_interrogar","texto":"Obligar a los secuaces paralizados a firmar una confesión por escrito ante el crucifijo","destinoId":"nodo_18_debate_capitulo","impacto":"Justicia"},{"id":"opt_13_encerrar","texto":"Atar a los sicarios en el calabozo del abad y marchar de inmediato al refectorio","destinoId":"nodo_17_refectorio_tension","impacto":"Prudente"}]},"nodo_15_esclusas_romanas":{"id":"nodo_15_esclusas_romanas","titulo":"Capítulo III: El Corazón de las Aguas Negras","texto":"Desciendes a la bóveda ciclópea del molino harinero. El rugido atronador del río subterráneo hace vibrar el suelo de granito. Ante ti se alzan las compuertas hidráulicas construidas por los ingenieros romanos hace mil trescientos años: gigantescas ruedas de roble, engranajes de bronce fosforoso y cadenas de hierro forjado.\n\nEstas compuertas controlan el curso del torrente que alimenta el lago de la sima glacial. Con las palancas de presión puedes desviar millones de litros de agua para anegar las cavernas de los hongos o drenar el santuario del hielo.","imagen":"images/stories/abadia-prohibida/esclusas.jpg","opciones":[{"id":"opt_15_inundar","texto":"Girar las ruedas de presión para anegar las cavernas inferiores y erradicar los hongos venenosos","destinoId":"nodo_21_inundacion_cataclismo","impacto":"Purificación"},{"id":"opt_15_drenar","texto":"Invertir el flujo hacia el río exterior para secar el paso hacia el núcleo del glaciar","destinoId":"nodo_20_glaciar_durmiente","impacto":"Exploración"}]},"nodo_16_observatorio_campanario":{"id":"nodo_16_observatorio_campanario","titulo":"Capítulo IV: En la Cúspide de la Tempestad","texto":"Asciendes a la plataforma exterior del campanario, suspendido a cincuenta metros sobre el abismo nevado. La ventisca aúlla con ferocidad salvaje entre las gárgolas de piedra, pero sobre tu cabeza la bóveda celeste resplandece con una claridad diamantina.\n\nAlineas el gran telescopio árabe con el cenit de la constelación del Cisne e incrustas el *Lapis Niger* en el ocular de bronce. Un haz de luz plateada concentrada atraviesa la lente, proyectando un círculo incandescente sobre el *Codex Umbrarum*.","imagen":"images/stories/abadia-prohibida/portada.jpg","opciones":[{"id":"opt_16_invocar_luz","texto":"Entonar las siete estrofas del manuscrito y abrir tu mente a la presencia cósmica","destinoId":"nodo_final_patriarca","impacto":"Trascendental"},{"id":"opt_16_disolver_tomo","texto":"Utilizar el rayo de luz concentrada como una lente solar para reducir el códice a cenizas inofensivas","destinoId":"nodo_final_renacimiento","impacto":"Victoria"}]},"nodo_17_refectorio_tension":{"id":"nodo_17_refectorio_tension","titulo":"Capítulo IV: El Juicio del Pan y el Vino","texto":"Irrumpes en el refectorio mayor durante la cena comunal. Cuarenta monjes vestidos con sus sayales pardos mastican en tenso silencio bajo la mirada inquisitorial del Prior Rodrigo, sentado en la cabecera junto al tonel de vino especiado.\n\nDe pronto, dos frailes ancianos se desploman sobre la mesa de roble entre convulsiones agónicas, con los labios negros y los ojos inyectados en sangre. El pánico estalla en la sala mientras Rodrigo se pone en pie señalándote con su báculo:\n\n—*¡Miradlo! ¡Es Tomás el hereje, que ha traído la peste demoníaca a nuestra mesa!* —grita el Prior alzando a sus guardias.","imagen":"images/stories/abadia-prohibida/refectorio.jpg","opciones":[{"id":"opt_17_suministrar_antidoto","texto":"Correr hacia los monjes agonizantes y suministrarles el antídoto de Severino ante los ojos de toda la orden","destinoId":"nodo_18_debate_capitulo","impacto":"Heroico"},{"id":"opt_17_rebelion_popular","texto":"Alzar el cáliz envenenado y exigir al Prior que beba de su propio vino para demostrar su inocencia","destinoId":"nodo_23_confrontacion_directa","impacto":"Desafío"}]},"nodo_18_debate_capitulo":{"id":"nodo_18_debate_capitulo","titulo":"Capítulo IV: El Gran Juicio Teológico","texto":"La asamblea plenaria de la orden se congrega en la solemne Sala Capitular bajo el crucifijo de marfil. Frente a todos los decanos, expones las pruebas irrefutables: el análisis químico del veneno, las notas en griego del abad asesinado y los documentos mercenarios interceptados.\n\nSe inicia un combate dialéctico feroz entre la lógica tomista y aristotélica que defiendes y el fanatismo apocalíptico de Rodrigo. La comunidad contiene el aliento mientras los ancianos se preparan para emitir su voto de fe.","imagen":"images/stories/abadia-prohibida/refectorio.jpg","opciones":[{"id":"opt_18_victoria_humanista","texto":"Ganar la votación unánime del cabildo, destituir a Rodrigo y refundar la abadía bajo la luz de la razón","destinoId":"nodo_final_renacimiento","impacto":"Victoria"},{"id":"opt_18_asumir_poder_oculto","texto":"Reclamar el báculo abacial y jurar gobernar Santa Eulalia como custodio perpetuo del conocimiento secreto","destinoId":"nodo_final_baculo","impacto":"Autoridad"},{"id":"opt_18_fanatismo_inquisitorial","texto":"Rodrigo pierde el control, desenvaina su puñal y sus mercenarios prenden fuego a la sala","destinoId":"nodo_final_holocausto","impacto":"Tragedia"}]},"nodo_19_astrolabio_ritual":{"id":"nodo_19_astrolabio_ritual","titulo":"Capítulo IV: El Cántico de la Eternidad","texto":"Los engranajes del astrolabio giran con un zumbido armonioso. Las páginas del *Codex Umbrarum* levitan sobre el atril mientras la tinta negra se desprende en volutas suspendidas en el aire, envolviendo tu cuerpo en un manto de luz fría estelar.\n\nSientes cómo todos los misterios del universo físico se abren en tu cerebro: la estructura de los planetas, la cura de todas las enfermedades y el destino final de las estrellas.","imagen":"images/stories/abadia-prohibida/laberinto.jpg","opciones":[{"id":"opt_19_sucumbir","texto":"Ceder a la atracción del cosmos y permitir que tu ser se disuelva en las páginas del palimpsesto","destinoId":"nodo_final_tinta","impacto":"Maldición"},{"id":"opt_19_canalizar_luz","texto":"Canalizar la energía hacia la roca madre para sellar las grietas y fundar una orden secreta de guardianes","destinoId":"nodo_final_sepulcro","impacto":"Trascendental"}]},"nodo_20_glaciar_durmiente":{"id":"nodo_20_glaciar_durmiente","titulo":"Capítulo IV: En el Altar del Hielo Cósmico","texto":"Desciendes a la inmensa caverna kárstica bajo los cimientos de la abadía. Murallas de hielo azul de cien metros de altura sostienen el peso de los Pirineos. En el centro de una catedral de estalactitas, atrapada en un bloque de hielo puro como diamante, yace la entidad estelar: el Durmiente del Hielo.\n\nSu pulso cósmico resuena en tu pecho como un trueno silencioso. Frente al bloque de hielo se alza el altar de piedra donde los sabios cátaros oraban hace siglos.","imagen":"images/stories/abadia-prohibida/sima.jpg","opciones":[{"id":"opt_20_pacto_eterno","texto":"Depositar el Lapis Niger en el altar y consagrar tu consciencia al Durmiente de la montaña","destinoId":"nodo_final_patriarca","impacto":"Comunión"},{"id":"opt_20_fundar_custodia","texto":"Realizar un voto solemne de guardia perpetua para que nadie jamás perturbe el sueño de la entidad","destinoId":"nodo_final_sepulcro","impacto":"Devoción"},{"id":"opt_20_destruir_sima","texto":"Prender fuego a los depósitos de brea marina para derribar las columnas y sepultar la sima","destinoId":"nodo_21_inundacion_cataclismo","impacto":"Sacrificio"}]},"nodo_21_inundacion_cataclismo":{"id":"nodo_21_inundacion_cataclismo","titulo":"Capítulo IV: La Furia de las Aguas","texto":"Accionas las compuertas maestras del molino harinero. Millones de toneladas de agua gélida se precipitan por las galerías kársticas como un diluvio subterráneo. El torrente arrastra las colonias de hongos venenosos y purifica las entrañas de la roca.\n\nLa presión hidráulica hace temblar los claustros superiores mientras los cimientos de la abadía crujen reasentándose sobre el lecho de piedra.","imagen":"images/stories/abadia-prohibida/esclusas.jpg","opciones":[{"id":"opt_21_salvar_abadia","texto":"Cerrar las compuertas de alivio a tiempo para estabilizar la montaña y salvar la abadía","destinoId":"nodo_final_renacimiento","impacto":"Victoria"},{"id":"opt_21_colapso_total","texto":"Dejar abiertas las esclusas y evacuar a todos los monjes antes de que la montaña colapse","destinoId":"nodo_final_diluvio","impacto":"Cataclismo"}]},"nodo_22_sabotaje_torre":{"id":"nodo_22_sabotaje_torre","titulo":"Capítulo IV: La Ruptura del Espejo","texto":"Con una maza de hierro golpeas el corazón del astrolabio damasquinado y los espejos curvos de Alhazen. Una lluvia de esquirlas de bronce y cristal repiquetea por el suelo de piedra mientras el péndulo de mercurio se detiene para siempre.\n\nLa conexión cósmica queda rota. La magia y la pesadilla han desaparecido, dejando únicamente libros de sabiduría humana en las estanterías.","imagen":"images/stories/abadia-prohibida/laberinto.jpg","opciones":[{"id":"opt_22_amanecer","texto":"Bajar al claustro a recibir la bendición de la primera luz del alba entre tus hermanos","destinoId":"nodo_final_renacimiento","impacto":"Paz"}]},"nodo_23_confrontacion_directa":{"id":"nodo_23_confrontacion_directa","titulo":"Capítulo IV: El Duelo en el Claustro","texto":"En el patio de armas nevado, rodeado por las antorchas de los novicios, te encaras con el Prior Rodrigo. Desarmado por la fuerza moral de la comunidad y las pruebas mostradas, el fanático se rinde arrojando su puñal a la nieve.\n\nSin embargo, a lo lejos, el toque de cuernos de caza en el desfiladero anuncia que la comitiva de la Inquisición papal se aproxima a la abadía.","imagen":"images/stories/abadia-prohibida/pira.jpg","opciones":[{"id":"opt_23_justicia_monacal","texto":"Atrancar las puertas de la abadía y resistir como una orden soberana frente a Roma","destinoId":"nodo_final_renacimiento","impacto":"Soberanía"},{"id":"opt_23_fuga_caballos","texto":"Montar a caballo con Guillermo y los libros prohibidos para huir hacia la corte de Toulouse","destinoId":"nodo_final_exodo","impacto":"Fuga"}]},"nodo_24_preparar_exodo":{"id":"nodo_24_preparar_exodo","titulo":"Capítulo IV: La Caravana de la Sabiduría","texto":"En las caballerizas, tú y Guillermo cargáis diez mulas con los tratados más valiosos de medicina, filosofía árabe, geometría y el *Codex Umbrarum* protegido en un cofre de plomo.\n\nEl portón exterior de la abadía se abre de par en par hacia el desfiladero nevado mientras la tormenta amaina en el horizonte oriental.","imagen":"images/stories/abadia-prohibida/portada.jpg","opciones":[{"id":"opt_24_partir_inmediato","texto":"Emprender la marcha a través de los Pirineos para llevar la luz del saber a las universidades europeas","destinoId":"nodo_final_exodo","impacto":"Libertad"}]},"nodo_final_renacimiento":{"id":"nodo_final_renacimiento","titulo":"Epílogo I: El Renacimiento de Santa Eulalia","texto":"El sol del alba baña de oro y púrpura las cumbres nevadas de los Pirineos. La ventisca cesa por completo y las campanas de Santa Eulalia doblan con júbilo. El veneno ha sido neutralizado, los monjes salvados y la conspiración inquisitorial desenmascarada.\n\nBajo tu liderazgo como bibliotecario mayor y el nuevo abad electo, Santa Eulalia abre sus puertas a la medicina, la filosofía y la ciencia, convirtiéndose en el faro de luz que guiará a Europa hacia un nuevo renacimiento del espíritu humano.","imagen":"images/stories/abadia-prohibida/amanecer.jpg","esFinal":true,"tipo_final":"bueno","mensaje_final":"La razón, la medicina y la compasión vencieron al fanatismo y a las sombras. La abadía renace en gloria."},"nodo_final_holocausto":{"id":"nodo_final_holocausto","titulo":"Epílogo II: El Holocausto de los Sabios","texto":"Las llamas de la hoguera inquisitorial devoran el patio de armas del monasterio. El Prior Rodrigo contempla con frenesí cómo el fuego reduce a cenizas los manuscritos griegos, los tratados árabes y a los frailes que osaron defenderlos.\n\nEl humo negro se eleva sobre las cumbres nevadas. Mil años de sabiduría acumulada se extinguen en una sola noche de odio ciego, sumiendo a la montaña en el silencio de la ignorancia eterna.","imagen":"images/stories/abadia-prohibida/pira.jpg","esFinal":true,"tipo_final":"malo","mensaje_final":"El fanatismo devoró el conocimiento humano. La abadía quedó reducida a ruinas y cenizas."},"nodo_final_patriarca":{"id":"nodo_final_patriarca","titulo":"Epílogo III: El Patriarca de las Nieves","texto":"Tu consciencia mortal se funde con el Durmiente del Hielo en el corazón del glaciar pirenaico. Tu cuerpo descansa en el coro como una escultura de mármol dormida, pero tu mente viaja entre las constelaciones lejanas del firmamento.\n\nEres el señor cósmico de los Pirineos, la presencia inmortal que velará por las montañas y los valles a lo largo de los siglos venideros.","imagen":"images/stories/abadia-prohibida/sima.jpg","esFinal":true,"tipo_final":"neutro","mensaje_final":"Trascendiste la carne para convertirte en la mente eterna de la cordillera."},"nodo_final_tinta":{"id":"nodo_final_tinta","titulo":"Epílogo IV: La Condena de la Tinta Eterna","texto":"La energía astral resulta incontenible para tu cuerpo humano. La tinta del *Codex Umbrarum* penetra en tus venas mientras tus pensamientos se graban letra a letra en los folios de vitela.\n\nAl amanecer, los hermanos encuentran tu hábito vacío sobre el atril del scriptorium. En la última página del códice, una miniatura gótica iluminada en oro y sepia muestra a un monje de mirada sabia atrapado para siempre en los márgenes.","imagen":"images/stories/abadia-prohibida/cripta.jpg","esFinal":true,"tipo_final":"malo","mensaje_final":"Tu alma quedó prisionera en el pergamino, como una advertencia para los futuros eruditos."},"nodo_final_baculo":{"id":"nodo_final_baculo","titulo":"Epílogo V: El Báculo de las Sombras","texto":"Empuñas el báculo abacial de plata y el anillo de zafiro de Santa Eulalia. El Prior Rodrigo ha sido desterrado y el *Codex Umbrarum* descansa bajo siete llaves en tu cámara secreta, donde solo tú posees el antídoto y el saber para interpretarlo.\n\nBajo tu gobierno sabio y hermético, la abadía se transforma en la fortaleza más impenetrable del saber esotérico de la Cristiandad.","imagen":"images/stories/abadia-prohibida/scriptorium.jpg","esFinal":true,"tipo_final":"neutro","mensaje_final":"Asumiste el poder absoluto y te convertiste en el celoso custodio de los secretos arcanos."},"nodo_final_exodo":{"id":"nodo_final_exodo","titulo":"Epílogo VI: El Éxodo de los Pirineos","texto":"Cabalgan por los valles de Occitania mientras la primavera comienza a fundir las nieves. En las alforjas de tus mulas viajan los textos de medicina, alquimia y filosofía que sembrarán la semilla de las futuras universidades europeas.\n\nA tus espaldas, Santa Eulalia queda como un recuerdo en la bruma. Has salvado el alma de la civilización antes de la llegada de la inquisición.","imagen":"images/stories/abadia-prohibida/portada.jpg","esFinal":true,"tipo_final":"bueno","mensaje_final":"El saber huyó de la jaula de piedra y se esparció por el mundo libre."},"nodo_final_diluvio":{"id":"nodo_final_diluvio","titulo":"Epílogo VII: El Diluvio Subterráneo","texto":"Las aguas romanas arrastran los cimientos milenarios del monasterio en un estruendo que sacude los valles. La Abadía de Santa Eulalia se hunde en la fosa kárstica, sepultando para siempre el códice, el veneno y la presencia estelar bajo un lago de aguas cristalinas.\n\nLos monjes contemplan desde el monte cómo la montaña devoró el peligro, dejando la tierra limpia y en paz.","imagen":"images/stories/abadia-prohibida/esclusas.jpg","esFinal":true,"tipo_final":"neutro","mensaje_final":"El agua purificó el pecado de la montaña. La pesadilla ha quedado sellada para siempre."},"nodo_final_sepulcro":{"id":"nodo_final_sepulcro","titulo":"Epílogo VIII: La Hermandad del Santo Sepulcro Oculto","texto":"En la cripta sellada con plomo y fuego sagrado, tú y los doce monjes más sabios pronunciáis el juramento de la Orden del Silencio. No revelaréis al mundo exterior lo que descansa en la montaña, pero dedicaréis vuestras vidas a estudiar la armonía entre la fe, la ciencia y el cosmos.\n\nSanta Eulalia continuará siendo un misterio para el mundo, un guardián silencioso en la cima de los Pirineos.","imagen":"images/stories/abadia-prohibida/amanecer.jpg","esFinal":true,"tipo_final":"bueno","mensaje_final":"Fundaste una sociedad secreta de monjes guardianes para proteger el equilibrio del mundo."}}};
+
+    const app = {
+      currentStory: STORY_DATA,
+      currentNodeId: null,
+      historyTrail: [],
+
+      init() {
+        const initialId = this.currentStory.nodoInicialId || this.currentStory.nodo_inicial || (this.currentStory.nodos ? Object.keys(this.currentStory.nodos)[0] : null);
+        let startId = initialId;
+        let trail = [initialId];
+
+        try {
+          const raw = localStorage.getItem('tusdesvarios_progreso_' + this.currentStory.slug);
+          if (raw) {
+            const saved = JSON.parse(raw);
+            if (saved && saved.nodoActualId && this.currentStory.nodos[saved.nodoActualId]) {
+              startId = saved.nodoActualId;
+              trail = saved.historialNodos && saved.historialNodos.length ? saved.historialNodos : [startId];
+            }
+          }
+        } catch (e) {}
+
+        this.currentNodeId = startId;
+        this.historyTrail = trail;
+        this.renderNode(startId);
+      },
+
+      startStory() {
+        const initialId = this.currentStory.nodoInicialId || this.currentStory.nodo_inicial || (this.currentStory.nodos ? Object.keys(this.currentStory.nodos)[0] : null);
+        this.currentNodeId = initialId;
+        this.historyTrail = [initialId];
+        this.saveProgress();
+        this.renderNode(this.currentNodeId);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      selectOption(targetId) {
+        this.currentNodeId = targetId;
+        this.historyTrail.push(targetId);
+        this.saveProgress();
+        this.renderNode(targetId);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      goBack() {
+        if (this.historyTrail.length > 1) {
+          this.historyTrail.pop();
+          this.currentNodeId = this.historyTrail[this.historyTrail.length - 1];
+          this.saveProgress();
+          this.renderNode(this.currentNodeId);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      },
+
+      restartStory() {
+        this.startStory();
+      },
+
+      saveProgress() {
+        try {
+          const node = this.currentStory.nodos[this.currentNodeId];
+          const isEnding = node && (node.esFinal || node.es_final || !node.opciones || node.opciones.length === 0);
+          
+          let existing = {};
+          try {
+            const raw = localStorage.getItem('tusdesvarios_progreso_' + this.currentStory.slug);
+            if (raw) existing = JSON.parse(raw);
+          } catch (e) {}
+
+          const finales = existing.finalesDescubiertos || [];
+          if (isEnding && !finales.includes(this.currentNodeId)) {
+            finales.push(this.currentNodeId);
+          }
+
+          const progress = {
+            nodoActualId: this.currentNodeId,
+            historialNodos: this.historyTrail,
+            finalAlcanzado: isEnding ? (node.tipo_final || 'neutro') : null,
+            finalesDescubiertos: finales,
+            ultimoAcceso: new Date().toISOString()
+          };
+          localStorage.setItem('tusdesvarios_progreso_' + this.currentStory.slug, JSON.stringify(progress));
+        } catch (e) {}
+      },
+
+      formatText(text) {
+        if (!text) return '';
+        const paragraphs = text.split(/\n\s*\n/);
+        return paragraphs.map(p => {
+          const trimmed = p.trim();
+          let formatted = trimmed
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            .replace(/\n/g, '<br>');
+
+          if (trimmed.startsWith('>')) {
+            const quote = formatted.replace(/^>\s*/gm, '');
+            return '<blockquote>' + quote + '</blockquote>';
+          }
+          return '<p>' + formatted + '</p>';
+        }).join('');
+      },
+
+      renderNode(nodeId) {
+        const root = document.getElementById('app-root');
+        const node = this.currentStory.nodos[nodeId];
+
+        if (!node) {
+          root.innerHTML = '<div class="reader-wrapper"><p>Nodo no encontrado.</p></div>';
+          return;
+        }
+
+        const isEnding = node.esFinal || node.es_final || (!node.opciones || node.opciones.length === 0);
+        if (isEnding && window.DesvariosAuth) {
+          if (this.currentStory.id === 'la-ultima-guardia-faro') {
+            window.DesvariosAuth.unlockMedal('faro-guardian');
+          } else if (this.currentStory.id === 'el-manuscrito-de-la-abadia') {
+            window.DesvariosAuth.unlockMedal('abadia-codice');
+          }
+          try {
+            const key = 'desvarios_' + this.currentStory.id + '_endings';
+            const ends = JSON.parse(localStorage.getItem(key) || '[]');
+            if (!ends.includes(nodeId)) {
+              ends.push(nodeId);
+              localStorage.setItem(key, JSON.stringify(ends));
+            }
+            const faroEnds = JSON.parse(localStorage.getItem('desvarios_la-ultima-guardia-faro_endings') || '[]');
+            const abadiaEnds = JSON.parse(localStorage.getItem('desvarios_el-manuscrito-de-la-abadia_endings') || '[]');
+            if ((faroEnds.length + abadiaEnds.length) >= 3) {
+              window.DesvariosAuth.unlockMedal('historias-multiverso');
+            }
+          } catch(e){}
+        }
+        if (isEnding && node.tipo_final === 'bueno') {
+          this.fireConfetti();
+        }
+
+        const stepCount = this.historyTrail.length;
+        const totalSteps = Object.keys(this.currentStory.nodos).length;
+        const percentage = Math.min(100, Math.round((stepCount / Math.max(totalSteps * 0.4, 5)) * 100));
+        const nodeImage = node.imagen || this.currentStory.portada;
+
+        let optionsHtml = '';
+        if (isEnding) {
+          const endingType = node.tipo_final || 'neutro';
+          let endingLabel = 'Final Neutro — Destino Oculto';
+          if (endingType === 'bueno') endingLabel = 'Final Heroico — Victoria';
+          if (endingType === 'malo') endingLabel = 'Final Trágico — Perdición';
+
+          optionsHtml = `
+            <div class="ending-banner ${endingType}">
+              <div class="ending-pill ${endingType}">
+                <span>${endingLabel}</span>
+              </div>
+              ${node.mensaje_final ? `<p class="ending-moral">&ldquo;${node.mensaje_final}&rdquo;</p>` : ''}
+              <div class="ending-actions">
+                <button class="btn-primary" onclick="app.restartStory()">↺ Jugar de nuevo (Explorar otros caminos)</button>
+                <a href="crea-tu-historia.html" class="btn-secondary" style="padding:0.75rem 1.4rem;">📚 Ver todas las historias</a>
+              </div>
+              <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid rgba(255,255,255,0.12); display:flex; flex-direction:column; align-items:center; gap:0.65rem; text-align:center;">
+                <p style="font-size:0.88rem; color:var(--text-secondary); margin:0; max-width:480px; line-height:1.5;">
+                  ☕ <strong>¿Has disfrutado de la aventura?</strong> Apoya este proyecto independiente invitando a un café al creador para inspirar nuevas tramas y misterios.
+                </p>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=V8PZNYKGXBCLG&locale.x=es_ES"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-paypal-donate"
+                   title="Invitar a un café con PayPal"
+                   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.3rem; border-radius:9999px; background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color:#0b0f19; font-weight:800; font-size:0.85rem; text-decoration:none; box-shadow:0 4px 16px rgba(245, 158, 11, 0.35); transition:all 0.2s ease;">
+                  <span>☕ Invitar a un café</span>
+                  <span>➜</span>
+                </a>
+              </div>
+            </div>
+          `;
+        } else if (node.opciones && node.opciones.length > 0) {
+          const buttons = node.opciones.map((opt) => `
+            <button class="decision-button" onclick="app.selectOption('${opt.destinoId}')">
+              <div class="decision-button-content">
+                ${opt.impacto ? `<span class="decision-badge">${opt.impacto}</span>` : ''}
+                <div>${opt.texto}</div>
+              </div>
+              <span class="decision-arrow">➜</span>
+            </button>
+          `).join('');
+
+          optionsHtml = `
+            <div class="decisions-container">
+              <div class="decisions-heading">
+                <span>🧭 ¿Qué decides hacer?</span>
+              </div>
+              ${buttons}
+            </div>
+          `;
+        }
+
+        root.innerHTML = `
+          <div class="reader-wrapper">
+            <div style="margin-bottom:1rem;">
+              <a href="crea-tu-historia.html" class="btn-secondary" style="font-size:0.82rem;">
+                ← Volver a Todas las Historias
+              </a>
+            </div>
+
+            <div class="reader-progress-container">
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                ${this.historyTrail.length > 1 && !isEnding ? `
+                  <button class="btn-secondary" style="padding:0.3rem 0.6rem; font-size:0.78rem;" onclick="app.goBack()">
+                    <span>←</span> <span>Atrás</span>
+                  </button>
+                ` : `
+                  <span style="font-size:0.82rem; color:var(--text-muted);">🧭 Lectura</span>
+                `}
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: ${percentage}%;"></div>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span style="font-size:0.8rem; color:var(--text-muted);">
+                  ${isEnding ? 'Final alcanzado' : `Paso ${stepCount}`}
+                </span>
+                <button class="btn-secondary" style="padding:0.3rem 0.5rem; font-size:0.78rem;" title="Reiniciar" onclick="app.restartStory()">↺</button>
+              </div>
+            </div>
+
+            <div class="reader-node-card">
+              ${nodeImage ? `
+                <div class="reader-image-container">
+                  <img src="${nodeImage}" alt="${node.titulo || this.currentStory.titulo}" class="reader-image">
+                  <div class="reader-image-gradient"></div>
+                </div>
+              ` : ''}
+
+              <div class="reader-body">
+                ${node.titulo ? `<h1 class="reader-node-title">${node.titulo}</h1>` : ''}
+                <div class="reader-text">
+                  ${this.formatText(node.texto)}
+                </div>
+                ${optionsHtml}
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      fireConfetti() {
+        const canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const pieces = [];
+        const colors = ['#10b981', '#34d399', '#ffffff', '#f59e0b', '#fbbf24'];
+
+        for (let i = 0; i < 70; i++) {
+          pieces.push({
+            x: canvas.width / 2,
+            y: canvas.height * 0.6,
+            vx: (Math.random() - 0.5) * 12,
+            vy: (Math.random() - 0.8) * 14,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rotation: Math.random() * 360,
+            vRot: (Math.random() - 0.5) * 10
+          });
+        }
+
+        let animationFrame;
+        let count = 0;
+
+        function update() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          pieces.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.35;
+            p.rotation += p.vRot;
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+          });
+
+          count++;
+          if (count < 140) {
+            animationFrame = requestAnimationFrame(update);
+          } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+          }
+        }
+
+        update();
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      app.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>
