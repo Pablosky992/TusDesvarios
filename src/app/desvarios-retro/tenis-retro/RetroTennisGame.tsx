@@ -619,118 +619,462 @@ export default function RetroTennisGame() {
   }, [palette, gameMode, difficulty, targetScore, playSound, resetBall, createSparks]);
 
   return (
-    <div className="w-full flex flex-col items-center select-none">
-      {/* Barra de Herramientas y Estado */}
-      <header className="w-full max-w-[640px] flex flex-wrap items-center justify-between gap-3 bg-slate-900/90 border border-slate-700/80 backdrop-blur-md rounded-xl px-4 py-3 mb-4 shadow-xl">
-        <div className="flex items-center gap-2">
-          <Link
-            href="/desvarios-retro"
-            className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1.5 rounded-lg transition-colors"
-          >
-            <ArrowLeft size={14} /> Arcade
-          </Link>
-          <span className="text-xs font-bold text-slate-400 hidden sm:inline">|</span>
-          <span className="text-xs font-mono font-bold text-emerald-400">
-            PELOTEO: {rallyCount}
-          </span>
-          <span className="text-xs font-mono text-slate-400">
-            (RÉCORD: {maxRally})
-          </span>
-        </div>
+    <div
+      style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(180deg, #05070d 0%, #0b1120 100%)',
+        color: '#f8fafc',
+        fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
+        padding: '1.25rem 1rem 3.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        userSelect: 'none',
+      }}
+    >
+      {/* 1. Barra Superior de Navegación y Acciones Rápidas */}
+      <div
+        style={{
+          width: '100%',
+          maxWidth: '640px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '0.85rem',
+        }}
+      >
+        <Link
+          href="/desvarios-retro"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.45rem',
+            color: '#94a3b8',
+            textDecoration: 'none',
+            fontSize: '0.85rem',
+            fontWeight: 700,
+            padding: '0.45rem 0.85rem',
+            borderRadius: '10px',
+            background: 'rgba(255, 255, 255, 0.05)',
+            border: '1px solid rgba(255, 255, 255, 0.12)',
+            transition: 'all 0.2s',
+          }}
+        >
+          <ArrowLeft size={16} /> Volver a Arcade
+        </Link>
 
-        <div className="flex items-center gap-2">
-          {/* Selector 1P / 2P */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          {/* Botón Silenciar/Sonido */}
           <button
-            onClick={() => {
-              setGameMode((m) => (m === '1P' ? '2P' : '1P'));
-              restartGame();
+            onClick={() => setSoundEnabled((s) => !s)}
+            style={{
+              background: 'rgba(255, 255, 255, 0.06)',
+              border: '1px solid rgba(255, 255, 255, 0.14)',
+              color: soundEnabled ? '#38bdf8' : '#64748b',
+              padding: '0.45rem 0.6rem',
+              borderRadius: '9px',
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
-            className="flex items-center gap-1 text-xs font-bold px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600/60 transition-colors"
-            title="Cambiar modo de juego"
-          >
-            {gameMode === '1P' ? <User size={13} /> : <Users size={13} />}
-            <span>{gameMode}</span>
-          </button>
-
-          {/* Dificultad (si 1P) */}
-          {gameMode === '1P' && (
-            <button
-              onClick={() => {
-                setDifficulty((d) =>
-                  d === 'novato' ? 'arcade' : d === 'arcade' ? 'maestro' : 'novato'
-                );
-              }}
-              className="text-xs font-bold px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/30 transition-colors capitalize"
-              title="Dificultad IA"
-            >
-              {difficulty}
-            </button>
-          )}
-
-          {/* Selector de Paleta */}
-          <button
-            onClick={() => {
-              const keys = Object.keys(PALETTES) as Palette[];
-              const nextIdx = (keys.indexOf(palette) + 1) % keys.length;
-              setPalette(keys[nextIdx]);
-            }}
-            className="flex items-center gap-1 text-xs font-bold px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 transition-colors"
-            title="Cambiar monitor CRT retro"
-          >
-            <Monitor size={13} />
-            <span className="hidden md:inline">{PALETTES[palette].label}</span>
-          </button>
-
-          {/* Audio */}
-          <button
-            onClick={() => setSoundEnabled(!soundEnabled)}
-            className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
             title={soundEnabled ? 'Silenciar sonido' : 'Activar sonido'}
           >
-            {soundEnabled ? <Volume2 size={16} /> : <VolumeX size={16} />}
+            {soundEnabled ? <Volume2 size={18} /> : <VolumeX size={18} />}
           </button>
 
-          {/* Pausa */}
+          {/* Botón Pausa */}
           <button
-            onClick={() => setIsPaused(!isPaused)}
-            className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
-            title="Pausa"
+            onClick={() => setIsPaused((p) => !p)}
+            style={{
+              background: isPaused ? 'rgba(245, 158, 11, 0.2)' : 'rgba(255, 255, 255, 0.06)',
+              border: isPaused ? '1px solid #f59e0b' : '1px solid rgba(255, 255, 255, 0.14)',
+              color: isPaused ? '#facc15' : '#cbd5e1',
+              padding: '0.45rem 0.75rem',
+              borderRadius: '9px',
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              fontSize: '0.82rem',
+              fontWeight: 700,
+            }}
+            title="Pausar partida"
           >
             {isPaused ? <Play size={16} /> : <Pause size={16} />}
+            <span>{isPaused ? 'Reanudar' : 'Pausa'}</span>
           </button>
 
-          {/* Ayuda */}
+          {/* Botón Ayuda */}
           <button
             onClick={() => setShowHelp(true)}
-            className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
-            title="Reglas"
+            style={{
+              background: 'rgba(255, 255, 255, 0.06)',
+              border: '1px solid rgba(255, 255, 255, 0.14)',
+              color: '#94a3b8',
+              padding: '0.45rem 0.6rem',
+              borderRadius: '9px',
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            title="Reglas del juego"
           >
-            <HelpCircle size={16} />
+            <HelpCircle size={18} />
           </button>
         </div>
-      </header>
+      </div>
 
-      {/* Contenedor del Canvas de Juego */}
-      <main className="relative w-full max-w-[640px] aspect-[16/10] bg-[#05070d] rounded-2xl border-2 border-slate-700 shadow-2xl overflow-hidden touch-none cursor-ns-resize">
+      {/* 2. Cabecera del Juego */}
+      <div style={{ textAlign: 'center', marginBottom: '0.85rem' }}>
+        <h1
+          style={{
+            fontFamily: "'Cinzel', serif",
+            fontSize: 'clamp(1.6rem, 3.8vw, 2.2rem)',
+            fontWeight: 900,
+            color: '#f8fafc',
+            letterSpacing: '1px',
+            marginBottom: '0.2rem',
+            textShadow: '0 2px 14px rgba(255, 255, 255, 0.25)',
+          }}
+        >
+          Tenis Retro 1972
+        </h1>
+        <p style={{ color: '#94a3b8', fontSize: '0.82rem' }}>
+          Duelo de Palas y Pelota a 60 FPS · Física Angular · Sonido Procedural 8-bit
+        </p>
+      </div>
+
+      {/* 3. Panel de Control y Configuración de Partida */}
+      <div
+        style={{
+          width: '100%',
+          maxWidth: '640px',
+          background: 'rgba(15, 23, 42, 0.85)',
+          border: '1px solid rgba(148, 163, 184, 0.22)',
+          borderRadius: '14px',
+          padding: '0.85rem 1rem',
+          marginBottom: '0.85rem',
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.45)',
+          backdropFilter: 'blur(8px)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.75rem',
+        }}
+      >
+        {/* Fila A: Marcador de Peloteo y Récord + Botón Reiniciar */}
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: '0.5rem',
+            paddingBottom: '0.65rem',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+            <span
+              style={{
+                fontFamily: 'monospace',
+                fontSize: '0.88rem',
+                fontWeight: 800,
+                color: '#4ade80',
+                background: 'rgba(34, 197, 94, 0.12)',
+                border: '1px solid rgba(34, 197, 94, 0.3)',
+                padding: '0.25rem 0.6rem',
+                borderRadius: '8px',
+                letterSpacing: '0.5px',
+              }}
+            >
+              PELOTEO: {rallyCount}
+            </span>
+            <span
+              style={{
+                fontFamily: 'monospace',
+                fontSize: '0.82rem',
+                fontWeight: 700,
+                color: '#fbbf24',
+                background: 'rgba(245, 158, 11, 0.12)',
+                border: '1px solid rgba(245, 158, 11, 0.3)',
+                padding: '0.25rem 0.55rem',
+                borderRadius: '8px',
+              }}
+            >
+              RÉCORD: {maxRally}
+            </span>
+          </div>
+
+          <button
+            onClick={restartGame}
+            style={{
+              background: 'rgba(255, 255, 255, 0.08)',
+              border: '1px solid rgba(255, 255, 255, 0.18)',
+              color: '#f8fafc',
+              fontSize: '0.78rem',
+              fontWeight: 700,
+              padding: '0.35rem 0.75rem',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              transition: 'all 0.15s',
+            }}
+            title="Reiniciar saque y partida"
+          >
+            <RotateCcw size={13} /> Reiniciar
+          </button>
+        </div>
+
+        {/* Fila B: Selectores de Modo (1P / 2P) y Dificultad (Novato / Arcade / Maestro) */}
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: '0.65rem',
+          }}
+        >
+          {/* Selector de Modo */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <span style={{ fontSize: '0.76rem', color: '#94a3b8', fontWeight: 700 }}>Modo:</span>
+            <button
+              onClick={() => {
+                setGameMode('1P');
+                restartGame();
+              }}
+              style={{
+                background: gameMode === '1P' ? '#2563eb' : 'rgba(255, 255, 255, 0.06)',
+                border: gameMode === '1P' ? '1px solid #60a5fa' : '1px solid rgba(255, 255, 255, 0.12)',
+                color: gameMode === '1P' ? '#ffffff' : '#94a3b8',
+                padding: '0.35rem 0.7rem',
+                borderRadius: '8px',
+                fontSize: '0.78rem',
+                fontWeight: 800,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.35rem',
+                boxShadow: gameMode === '1P' ? '0 0 12px rgba(37, 99, 235, 0.4)' : 'none',
+                transition: 'all 0.15s',
+              }}
+            >
+              <User size={13} /> 1 Jugador
+            </button>
+            <button
+              onClick={() => {
+                setGameMode('2P');
+                restartGame();
+              }}
+              style={{
+                background: gameMode === '2P' ? '#9333ea' : 'rgba(255, 255, 255, 0.06)',
+                border: gameMode === '2P' ? '1px solid #c084fc' : '1px solid rgba(255, 255, 255, 0.12)',
+                color: gameMode === '2P' ? '#ffffff' : '#94a3b8',
+                padding: '0.35rem 0.7rem',
+                borderRadius: '8px',
+                fontSize: '0.78rem',
+                fontWeight: 800,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.35rem',
+                boxShadow: gameMode === '2P' ? '0 0 12px rgba(147, 51, 234, 0.4)' : 'none',
+                transition: 'all 0.15s',
+              }}
+            >
+              <Users size={13} /> 2 Jugadores
+            </button>
+          </div>
+
+          {/* Selector de Dificultad (Solo en 1P) */}
+          {gameMode === '1P' && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+              <span style={{ fontSize: '0.76rem', color: '#94a3b8', fontWeight: 700 }}>IA:</span>
+              {(['novato', 'arcade', 'maestro'] as Difficulty[]).map((d) => {
+                const isActive = difficulty === d;
+                const colors = {
+                  novato: { bg: '#15803d', border: '#4ade80', text: '#ffffff' },
+                  arcade: { bg: '#d97706', border: '#fde047', text: '#ffffff' },
+                  maestro: { bg: '#dc2626', border: '#f87171', text: '#ffffff' },
+                }[d];
+
+                return (
+                  <button
+                    key={d}
+                    onClick={() => setDifficulty(d)}
+                    style={{
+                      background: isActive ? colors.bg : 'rgba(255, 255, 255, 0.05)',
+                      border: isActive ? `1px solid ${colors.border}` : '1px solid rgba(255, 255, 255, 0.1)',
+                      color: isActive ? colors.text : '#94a3b8',
+                      padding: '0.3rem 0.6rem',
+                      borderRadius: '8px',
+                      fontSize: '0.75rem',
+                      fontWeight: 800,
+                      cursor: 'pointer',
+                      textTransform: 'capitalize',
+                      boxShadow: isActive ? `0 0 10px ${colors.border}44` : 'none',
+                      transition: 'all 0.15s',
+                    }}
+                  >
+                    {d}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* Fila C: Monitor CRT y Objetivo de Puntos */}
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: '0.65rem',
+            paddingTop: '0.4rem',
+            borderTop: '1px solid rgba(255, 255, 255, 0.06)',
+          }}
+        >
+          {/* Selector de Monitor CRT */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <span style={{ fontSize: '0.76rem', color: '#94a3b8', fontWeight: 700 }}>Pantalla:</span>
+            <button
+              onClick={() => {
+                const keys = Object.keys(PALETTES) as Palette[];
+                const nextIdx = (keys.indexOf(palette) + 1) % keys.length;
+                setPalette(keys[nextIdx]);
+              }}
+              style={{
+                background: 'rgba(255, 255, 255, 0.07)',
+                border: '1px solid rgba(56, 189, 248, 0.4)',
+                color: '#38bdf8',
+                padding: '0.35rem 0.75rem',
+                borderRadius: '8px',
+                fontSize: '0.78rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.35rem',
+                transition: 'all 0.15s',
+              }}
+              title="Cambiar monitor CRT retro"
+            >
+              <Monitor size={14} />
+              <span>{PALETTES[palette].label}</span>
+            </button>
+          </div>
+
+          {/* Selector de Puntos Objetivo */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            <span style={{ fontSize: '0.76rem', color: '#94a3b8', fontWeight: 700 }}>Meta:</span>
+            {[5, 7, 11].map((pts) => {
+              const isActive = targetScore === pts;
+              return (
+                <button
+                  key={pts}
+                  onClick={() => {
+                    setTargetScore(pts);
+                    restartGame();
+                  }}
+                  style={{
+                    background: isActive ? '#f8fafc' : 'rgba(255, 255, 255, 0.06)',
+                    border: isActive ? '1px solid #ffffff' : '1px solid rgba(255, 255, 255, 0.12)',
+                    color: isActive ? '#020617' : '#94a3b8',
+                    padding: '0.28rem 0.55rem',
+                    borderRadius: '7px',
+                    fontSize: '0.75rem',
+                    fontWeight: 800,
+                    cursor: 'pointer',
+                    boxShadow: isActive ? '0 0 10px rgba(255, 255, 255, 0.4)' : 'none',
+                    transition: 'all 0.15s',
+                  }}
+                >
+                  {pts} pts
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* 4. Marco del Canvas de Juego */}
+      <main
+        style={{
+          position: 'relative',
+          width: '100%',
+          maxWidth: '640px',
+          aspectRatio: '16 / 10',
+          background: PALETTES[palette].bg,
+          borderRadius: '16px',
+          border: '2px solid rgba(148, 163, 184, 0.3)',
+          boxShadow: '0 16px 40px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(0, 0, 0, 0.6)',
+          overflow: 'hidden',
+          touchAction: 'none',
+          cursor: 'ns-resize',
+        }}
+      >
         <canvas
           ref={canvasRef}
           width={WIDTH}
           height={HEIGHT}
           onMouseMove={handleMouseMove}
           onTouchMove={handleTouchMove}
-          className="w-full h-full block"
+          style={{ width: '100%', height: '100%', display: 'block' }}
         />
 
         {/* Modal de Pausa */}
         {isPaused && !isGameOver && (
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center gap-3 z-20">
-            <h2 className="text-2xl font-black text-amber-400 font-mono tracking-wider">
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'rgba(0, 0, 0, 0.82)',
+              backdropFilter: 'blur(5px)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.75rem',
+              zIndex: 20,
+              padding: '1.5rem',
+              textAlign: 'center',
+            }}
+          >
+            <h2
+              style={{
+                fontSize: '1.8rem',
+                fontWeight: 900,
+                color: '#facc15',
+                fontFamily: 'monospace',
+                letterSpacing: '2px',
+              }}
+            >
               PARTIDA EN PAUSA
             </h2>
-            <p className="text-xs text-slate-300">Presiona [P] o [Espacio] para reanudar</p>
+            <p style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>
+              Presiona <strong>[P]</strong> o <strong>[Espacio]</strong> para reanudar
+            </p>
             <button
               onClick={() => setIsPaused(false)}
-              className="mt-2 px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-sm shadow-lg transition-all"
+              style={{
+                marginTop: '0.5rem',
+                background: '#f59e0b',
+                color: '#000000',
+                fontWeight: 900,
+                fontSize: '0.92rem',
+                padding: '0.65rem 1.6rem',
+                borderRadius: '12px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 4px 18px rgba(245, 158, 11, 0.5)',
+                transition: 'all 0.2s',
+              }}
             >
               Reanudar
             </button>
@@ -739,9 +1083,32 @@ export default function RetroTennisGame() {
 
         {/* Modal de Fin de Partida */}
         {isGameOver && (
-          <div className="absolute inset-0 bg-black/85 backdrop-blur-md flex flex-col items-center justify-center gap-3 z-30 animate-in fade-in">
-            <Trophy size={42} className="text-amber-400 animate-bounce" />
-            <h2 className="text-2xl font-black font-mono tracking-widest text-white">
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'rgba(0, 0, 0, 0.88)',
+              backdropFilter: 'blur(6px)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.65rem',
+              zIndex: 30,
+              padding: '1.5rem',
+              textAlign: 'center',
+            }}
+          >
+            <Trophy size={46} color="#fbbf24" style={{ marginBottom: '0.2rem' }} />
+            <h2
+              style={{
+                fontSize: '1.6rem',
+                fontWeight: 900,
+                fontFamily: 'monospace',
+                letterSpacing: '1px',
+                color: winner === 'p1' ? '#4ade80' : '#f87171',
+              }}
+            >
               {gameMode === '1P'
                 ? winner === 'p1'
                   ? '¡VICTORIA ARROLLADORA!'
@@ -750,89 +1117,155 @@ export default function RetroTennisGame() {
                 ? '¡JUGADOR 1 GANA!'
                 : '¡JUGADOR 2 GANA!'}
             </h2>
-            <p className="text-slate-300 text-sm font-mono">
-              Resultado final: <strong className="text-white text-lg">{score1}</strong> —{' '}
-              <strong className="text-white text-lg">{score2}</strong>
+            <p
+              style={{
+                fontSize: '1.3rem',
+                fontWeight: 900,
+                fontFamily: 'monospace',
+                color: '#f8fafc',
+              }}
+            >
+              Marcador Final: {score1} — {score2}
             </p>
-            <p className="text-xs text-emerald-400 font-mono">
+            <p
+              style={{
+                fontSize: '0.85rem',
+                fontFamily: 'monospace',
+                color: '#4ade80',
+              }}
+            >
               Peloteo más largo de la partida: {maxRally} golpes
             </p>
             <button
               onClick={restartGame}
-              className="mt-3 flex items-center gap-2 px-6 py-2.5 rounded-xl bg-white hover:bg-slate-200 text-black font-black text-sm shadow-xl transition-all"
+              style={{
+                marginTop: '0.8rem',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                background: '#ffffff',
+                color: '#000000',
+                fontWeight: 900,
+                fontSize: '0.92rem',
+                padding: '0.7rem 1.6rem',
+                borderRadius: '12px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4)',
+                transition: 'all 0.2s',
+              }}
             >
-              <RotateCcw size={15} /> Jugar Otra Partida
+              <RotateCcw size={16} /> Jugar Otra Partida
             </button>
           </div>
         )}
       </main>
 
-      {/* Controles Auxiliares para Móviles */}
-      <div className="w-full max-w-[640px] flex items-center justify-between gap-4 mt-3 px-2">
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-bold text-slate-400">Objetivo:</span>
-          {[5, 7, 11].map((pts) => (
-            <button
-              key={pts}
-              onClick={() => {
-                setTargetScore(pts);
-                restartGame();
-              }}
-              className={`text-xs font-bold px-2 py-1 rounded ${
-                targetScore === pts
-                  ? 'bg-slate-200 text-black'
-                  : 'bg-slate-800 text-slate-400 hover:text-white'
-              }`}
-            >
-              {pts} pts
-            </button>
-          ))}
+      {/* 5. Instrucciones de Control */}
+      <footer
+        style={{
+          width: '100%',
+          maxWidth: '640px',
+          marginTop: '0.85rem',
+          padding: '0.65rem 0.85rem',
+          background: 'rgba(15, 23, 42, 0.65)',
+          border: '1px solid rgba(148, 163, 184, 0.15)',
+          borderRadius: '10px',
+          fontSize: '0.76rem',
+          color: '#94a3b8',
+          lineHeight: '1.6',
+          textAlign: 'center',
+        }}
+      >
+        <div>
+          ⌨️ <strong>Teclado:</strong> J1: <code style={{ color: '#38bdf8' }}>[W / S]</code> · J2 (2P): <code style={{ color: '#f43f5e' }}>[↑ / ↓]</code> · <code style={{ color: '#fbbf24' }}>[Espacio / P]</code>: Pausa
         </div>
-
-        {/* Botón de reinicio rápido */}
-        <button
-          onClick={restartGame}
-          className="flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded-lg transition-colors"
-        >
-          <RotateCcw size={13} /> Reiniciar
-        </button>
-      </div>
-
-      {/* Instrucciones de control */}
-      <footer className="w-full max-w-[640px] text-center text-[11px] text-slate-400 mt-2.5 leading-relaxed">
-        ⌨️ <strong>Teclado:</strong> J1: [W / S] · J2 (2P): [Flecha Arriba / Abajo] · [Espacio/P]: Pausa · 🖱️ <strong>Ratón:</strong> Mueve el cursor arriba/abajo sobre la pantalla · 📱 <strong>Táctil:</strong> Desliza el dedo verticalmente.
+        <div style={{ marginTop: '0.2rem' }}>
+          🖱️ <strong>Ratón:</strong> Desplaza el cursor verticalmente sobre la pantalla · 📱 <strong>Táctil:</strong> Desliza el dedo arriba y abajo
+        </div>
       </footer>
 
-      {/* Modal de Reglas */}
+      {/* 6. Modal de Ayuda y Reglas */}
       {showHelp && (
         <div
-          className="fixed inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 z-50"
           onClick={() => setShowHelp(false)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(0, 0, 0, 0.78)',
+            backdropFilter: 'blur(5px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '1rem',
+            zIndex: 100,
+          }}
         >
           <div
-            className="bg-slate-900 border border-slate-700 rounded-2xl max-w-md w-full p-6 shadow-2xl text-slate-200"
             onClick={(e) => e.stopPropagation()}
+            style={{
+              background: '#0f172a',
+              border: '1px solid #334155',
+              borderRadius: '16px',
+              maxWidth: '460px',
+              width: '100%',
+              padding: '1.5rem',
+              boxShadow: '0 12px 40px rgba(0, 0, 0, 0.8)',
+              color: '#cbd5e1',
+            }}
           >
-            <h3 className="text-lg font-black text-white mb-2 font-mono flex items-center gap-2">
+            <h3
+              style={{
+                fontSize: '1.2rem',
+                fontWeight: 900,
+                color: '#ffffff',
+                marginBottom: '0.8rem',
+                fontFamily: 'monospace',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+              }}
+            >
               🏓 Reglas de Tenis Retro 1972
             </h3>
-            <ul className="text-xs space-y-2 text-slate-300 list-disc pl-4 mb-5 leading-relaxed">
+            <ul
+              style={{
+                fontSize: '0.82rem',
+                lineHeight: '1.6',
+                paddingLeft: '1.2rem',
+                marginBottom: '1.2rem',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.45rem',
+              }}
+            >
               <li>
-                <strong>Física Angular:</strong> La pelota rebota con mayor ángulo hacia arriba o abajo si impacta en los extremos de la pala. Golpear en el centro produce un tiro directo y rápido.
+                <strong style={{ color: '#f8fafc' }}>Física Angular:</strong> Golpear con los extremos de la pala desvía la bola en ángulo agudo; el centro produce un tiro directo y veloz.
               </li>
               <li>
-                <strong>Aceleración por Peloteo:</strong> Cada devolución incrementa ligeramente la velocidad de la bola, aumentando la tensión dramática del punto.
+                <strong style={{ color: '#f8fafc' }}>Aceleración por Peloteo:</strong> Cada devolución exitosa aumenta la velocidad de la bola hasta un tope de 13 px/frame.
               </li>
               <li>
-                <strong>Modos:</strong> Juega en solitario contra la IA (3 dificultades) o reta a un amigo en local compartiendo teclado o pantalla táctil.
+                <strong style={{ color: '#f8fafc' }}>Modos:</strong> Juega contra la IA (3 dificultades ajustables) o reta a un amigo en local compartiendo teclado o táctil.
               </li>
               <li>
-                <strong>Paletas Retro:</strong> Alterna entre el clásico blanco y negro de 1972, fósforo verde, fósforo ámbar o ciber neón.
+                <strong style={{ color: '#f8fafc' }}>Monitores CRT:</strong> Elige entre Blanco y Negro 1972, Fósforo Verde, Fósforo Ámbar y Ciber Neón.
               </li>
             </ul>
             <button
               onClick={() => setShowHelp(false)}
-              className="w-full py-2.5 rounded-xl bg-white hover:bg-slate-200 text-black font-extrabold text-xs transition-colors"
+              style={{
+                width: '100%',
+                padding: '0.65rem',
+                borderRadius: '10px',
+                background: '#ffffff',
+                color: '#000000',
+                fontWeight: 800,
+                fontSize: '0.88rem',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+              }}
             >
               ¡Entendido, a jugar!
             </button>
