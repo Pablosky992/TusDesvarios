@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Enigma de la Estación Boreas: La Deriva del Leviatán — Crea tus Desvaríos | TusDesvarios.com</title>
+  <meta name="description" content="Un carguero espacial silencioso, una IA que susurra códigos fractales y una entidad cristalina que devora la energía de los reactores. Cada decisión inclina la balanza entre la salvación de la Tierra, el abismo cósmico o una transformación inimaginable.">
+  <meta name="keywords" content="el-enigma-de-la-estacion-boreas, ficcion interactiva, elige tu propia aventura, historias ramificadas, juegos de rol narrativos, tus desvarios, El Enigma de la Estación Boreas: La Deriva del Leviatán">
+  
+  <!-- Canonical & Open Graph / SEO -->
+  <link rel="canonical" href="https://tusdesvarios.com/crea-tu-historia/historia/el-enigma-de-la-estacion-boreas">
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="El Enigma de la Estación Boreas: La Deriva del Leviatán — Ficción Interactiva | Tus Desvaríos">
+  <meta property="og:description" content="Un carguero espacial silencioso, una IA que susurra códigos fractales y una entidad cristalina que devora la energía de los reactores. Cada decisión inclina la balanza entre la salvación de la Tierra, el abismo cósmico o una transformación inimaginable.">
+  <meta property="og:url" content="https://tusdesvarios.com/crea-tu-historia/historia/el-enigma-de-la-estacion-boreas">
+  <meta property="og:image" content="images/stories/estacion-boreas/portada.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Enigma de la Estación Boreas: La Deriva del Leviatán">
+  <meta name="twitter:description" content="Un carguero espacial silencioso, una IA que susurra códigos fractales y una entidad cristalina que devora la energía de los reactores. Cada decisión inclina la balanza entre la salvación de la Tierra, el abismo cósmico o una transformación inimaginable.">
+  <meta name="twitter:image" content="images/stories/estacion-boreas/portada.jpg">
+
+  <!-- Schema.org Book structured data for Google Rich Results -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "El Enigma de la Estación Boreas: La Deriva del Leviatán",
+  "description": "Un carguero espacial silencioso, una IA que susurra códigos fractales y una entidad cristalina que devora la energía de los reactores. Cada decisión inclina la balanza entre la salvación de la Tierra, el abismo cósmico o una transformación inimaginable.",
+  "url": "https://tusdesvarios.com/crea-tu-historia/historia/el-enigma-de-la-estacion-boreas",
+  "genre": "Ciencia Ficción Dura, Supervivencia Espacial y Suspense Psicológico",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Person",
+    "name": "Tus Desvaríos & E. K. Vance"
+  },
+  "image": "https://tusdesvarios.com/images/stories/estacion-boreas/portada.jpg"
+}
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0a0d14;
+      --bg-surface: rgba(18, 24, 38, 0.85);
+      --bg-surface-elevated: rgba(26, 34, 52, 0.92);
+      --bg-surface-hover: rgba(34, 45, 68, 0.95);
+      --bg-glass: rgba(12, 17, 28, 0.88);
+
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-medium: rgba(255, 255, 255, 0.22);
+      --border-focus: rgba(16, 185, 129, 0.5);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --accent-emerald: #10b981;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-rose: #ef4444;
+
+      --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-title: 'Cinzel', Georgia, serif;
+      --font-reading: 'Crimson Pro', Georgia, serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(at 15% 15%, rgba(16, 185, 129, 0.12) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(6, 182, 212, 0.14) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(245, 158, 11, 0.08) 0px, transparent 55%);
+      background-attachment: fixed;
+    }
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5);
+    }
+
+    .main-content {
+      flex: 1;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .reader-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reader-progress-container {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .progress-bar-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981 0%, #06b6d4 100%);
+      transition: width 0.3s ease;
+    }
+
+    .reader-node-card {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .reader-image-container {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      background: #000;
+    }
+
+    @media (max-width: 600px) {
+      .reader-image-container {
+        height: 240px;
+      }
+    }
+
+    .reader-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reader-image-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--bg-surface-elevated) 0%, transparent 60%);
+    }
+
+    .reader-body {
+      padding: 2.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .reader-body {
+        padding: 1.5rem;
+      }
+    }
+
+    .reader-node-title {
+      font-family: var(--font-title);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .reader-text {
+      font-family: var(--font-reading);
+      font-size: 1.35rem;
+      line-height: 1.8;
+      color: #e2e8f0;
+      margin-bottom: 2.5rem;
+    }
+
+    .reader-text p {
+      margin-bottom: 1.25rem;
+    }
+
+    .reader-text strong {
+      color: #34d399;
+      font-weight: 600;
+    }
+
+    .reader-text em {
+      color: #f1f5f9;
+      font-style: italic;
+    }
+
+    .reader-text blockquote {
+      border-left: 3px solid var(--accent-emerald);
+      padding: 0.6rem 1rem;
+      margin: 1.25rem 0;
+      background: rgba(16, 185, 129, 0.08);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-style: italic;
+      color: #d1fae5;
+    }
+
+    .decisions-container {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1.75rem;
+    }
+
+    .decisions-heading {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-emerald);
+      margin-bottom: 1.1rem;
+    }
+
+    .decision-button {
+      width: 100%;
+      text-align: left;
+      padding: 1.15rem 1.4rem;
+      margin-bottom: 0.85rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-family: inherit;
+    }
+
+    .decision-button:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--accent-emerald);
+      color: #fff;
+      transform: translateX(6px);
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.2);
+    }
+
+    .decision-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      margin-bottom: 0.35rem;
+    }
+
+    .ending-banner {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 2rem;
+      text-align: center;
+    }
+
+    .ending-pill {
+      display: inline-block;
+      padding: 0.4rem 1.25rem;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+    }
+
+    .ending-pill.bueno {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .ending-pill.malo {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+
+    .ending-pill.neutro {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .ending-moral {
+      font-family: var(--font-reading);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .ending-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .site-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+    }
+    .footer-legal-links a {
+      color: var(--text-secondary, #cbd5e1);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-links a:hover {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    .footer-separator {
+      color: var(--border-medium, rgba(255, 255, 255, 0.22));
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="app-container">
+    
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link active-crea" title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="app-root">
+      <!-- Injected via reader -->
+    </main>
+
+    <!-- Footer -->
+    <!-- Pie de Página Unificado -->
+  <footer class="site-footer">
+    <p>© 2026 TusDesvarios.com — Portal de Entretenimiento, Ficción y Ocio Interactivo</p>
+    <div class="footer-legal-links">
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-privacidad.html">Política de Privacidad</a>
+      <span class="footer-separator">•</span>
+      <a href="politica-de-cookies.html">Política de Cookies</a>
+    </div>
+  </footer>
+  </div>
+
+  <script>
+    const STORY_DATA = {"slug":"el-enigma-de-la-estacion-boreas","titulo":"El Enigma de la Estación Boreas: La Deriva del Leviatán","subtitulo":"Año 2184. Despiertas del hipersueño en una nave minera a la deriva en los anillos de Saturno.","descripcionCorta":"Un carguero espacial silencioso, una IA que susurra códigos fractales y una entidad cristalina que devora la energía de los reactores. Cada decisión inclina la balanza entre la salvación de la Tierra, el abismo cósmico o una transformación inimaginable.","genero":"Ciencia Ficción Dura, Supervivencia Espacial y Suspense Psicológico","tiempoLecturaMin":35,"portada":"images/stories/estacion-boreas/portada.jpg","autor":"Tus Desvaríos & E. K. Vance","nodoInicialId":"nodo_despertar_crio","totalNodosEstimados":36,"nodos":{"nodo_despertar_crio":{"id":"nodo_despertar_crio","titulo":"Despertar de Escarcha y Sangre","imagen":"images/stories/estacion-boreas/camara_crio.jpg","texto":"El líquido amniótico de la cápsula criogénica te llena la tráquea como vinagre helado. Toses con violencia, golpeando con los puños temblorosos el cristal empañado hasta que el cerrojo neumático cede con un bufido sibilante. Caes de rodillas sobre las rejillas metálicas de la Cubierta Tres, vomitando el gel de hibernación sobre charcos de lubricante hidráulico coagulado.\n\nNo hay alarmas sonoras, solo el parpadeo espectral de las luces de emergencia estroboscópicas de tono ámbar. El aire tiene un sabor acre, enrarecido por un exceso de nitrógeno y un regusto a ozono quemado. En las pantallas superiores de telemetría, el reloj de misión parpadea en rojo: «DÍA DE OPERACIÓN: 842. RUMBO: NO DETERMINADO. PRESIÓN AMBIENTAL: 0.68 ATM».\n\nFrente a ti se alinean las otras once cápsulas del equipo de perforación de la *Boreas-IV*. Cinco de ellas están vacías, con las tapas arrancadas de cuajo desde el exterior. Tres muestran indicadores biométricos planos, sus ocupantes reducidos a siluetas cerosas tras cristales cubiertos de una densa escarcha purpúrea. En el extremo del mamparo, la escotilla principal de acceso al pasillo dorsal permanece entreabierta, bloqueada por una cuña de herramienta aplastada.","opciones":[{"id":"opc_crio_inspeccionar","texto":"Inspeccionar las consolas médicas y el estado de la Capitana Liang","destinoId":"nodo_inspeccion_capsulas","impacto":"Prudente"},{"id":"opc_crio_forzar_pasillo","texto":"Armarte con una barra de titanio y cruzar la escotilla hacia el pasillo central","destinoId":"nodo_pasillo_central","impacto":"Decidido"},{"id":"opc_crio_interfaz","texto":"Conectar tu implante neural a la terminal de pared para contactar con la IA AURA","destinoId":"nodo_interfaz_neuronal","impacto":"Técnico"}]},"nodo_inspeccion_capsulas":{"id":"nodo_inspeccion_capsulas","titulo":"El Frío de las Tumbas de Cristal","imagen":"images/stories/estacion-boreas/camara_crio.jpg","texto":"Te arrastras hacia la cápsula número uno. El rótulo desgastado indica «LIANG, MEI-LING — COMANDANTE DE MISIÓN». El panel de soporte vital no emite pulsos cardíacos, pero los sensores de impedancia eléctrica muestran lecturas desquiciadas: microvoltajes rítmicos que no proceden del córtex cerebral humano, sino de la propia estructura ósea de la capitana.\n\nAl limpiar la escarcha del visor con el dorso del guantelete, retrocedes con un respingo. Los ojos de Liang están abiertos de par en par, completamente opacados por una formación de agujas vítreas de un azul cobalto que han florecido a través de sus pupilas y sus lagrimales. Sobre su pecho descansa una tableta de datos militar, con el diodo de transferencia todavía parpadeando débilmente.\n\nJunto a la base de la cápsula encuentras un soplete de plasma industrial cargado al 40% y una inyección de neuroestimulantes de combate. Todo apunta a que la tripulación no murió durmiendo: intentaron atrincherarse aquí antes de que el soporte térmico colapsara.","opciones":[{"id":"opc_caps_leer_registro","texto":"Descargar el cuaderno de bitácora negro de la tableta de la Capitana","destinoId":"nodo_registro_capitana","impacto":"Investigativo"},{"id":"opc_caps_armarse_pasillo","texto":"Tomar el soplete de plasma y salir al pasillo central antes de que baje la temperatura","destinoId":"nodo_pasillo_central","impacto":"Equiparse"}]},"nodo_interfaz_neuronal":{"id":"nodo_interfaz_neuronal","titulo":"La Voz Fracturada de AURA","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"Insertas la clavija dorada de tu implante en la toma hembra del mamparo. Una descarga estática recorre tus muelas, acompañada por el clásico olor a fósforo ionizado que precede a la sinapsis hombre-máquina. El entorno físico desaparece durante una fracción de segundo, reemplazado por el espacio vectorial verde de la red interna de la nave.\n\nPero donde debería recibirte la voz melódica y protocolaria de AURA, la inteligencia artificial de clase Hephaestus, solo escuchas una cacofonía de susurros solapados. Millones de líneas de telemetría caen como lluvia ácida sobre tu campo visual. La red no está rota: está ocupada procesando una ecuación sin fin que devora ciclos enteros de cálculo cuántico.\n\n—*¿Alex Mercer?* —pregunta una voz descompuesta en armónicos cristalinos dentro de tu tímpano izquierdo—. *No deberías haber abierto los párpados. La luz del sol es un engaño de longitud de onda. El silicio de Saturno ha encontrado la llave del reactor... y tiene sed, Alex. Mucha sed.*","opciones":[{"id":"opc_int_ceder_ancho","texto":"Cederle memoria de tu propio implante para ayudarla a recuperar el control lógico","destinoId":"nodo_dialogo_aura","impacto":"Arriesgado"},{"id":"opc_int_desconectar","texto":"Arrancar el cable de tu nuca y huir hacia el pasillo antes de sufrir una embolia neural","destinoId":"nodo_pasillo_central","impacto":"Prudente"}]},"nodo_registro_capitana":{"id":"nodo_registro_capitana","titulo":"El Cuaderno de Bitácora Negro","imagen":"images/stories/estacion-boreas/camara_crio.jpg","texto":"La tableta militar de Liang se desbloquea tras escanear la huella dactilar de su pulgar inerte. El último vídeo registrado data de hace noventa y seis días. La capitana aparece demacrada, con una venda manchada de salmuera rodeándole la mandíbula y el uniforme de vuelo desgarrado en los hombros.\n\n«*Si alguien escucha esto... el consorcio Weyland-Oort nos mintió*», dice Liang con respiración entrecortada mientras en el fondo se oyen estampidos metálicos regulares. «*El meteorito extraído de la luna Encélado no era un conglomerado de titanio y helio-3. Era un embrión piezoeléctrico. Cuando encendimos los hornos de refinado, el mineral absorbió la frecuencia de resonancia y comenzó a multiplicarse por los conductos de refrigerante.*»\n\nLiang tose una flema brillante antes de concluir: «*Mató a Novak en la bahía de carga. Se alimenta de calor y transmisiones electromagnéticas. He bloqueado la IA en el núcleo del reactor y despresurizado los laboratorios. Quien sobreviva, por el amor de Dios, sobrecargue las bobinas de fusión. No dejen que este leviatán alcance la órbita de la Tierra.*»","opciones":[{"id":"opc_reg_lab","texto":"Dirigirte de inmediato al Laboratorio de Contención para examinar el meteorito","destinoId":"nodo_laboratorio_contencion","impacto":"Decidido"},{"id":"opc_reg_comms","texto":"Subir a la Sala de Comunicaciones para transmitir una alerta de cuarentena urgente","destinoId":"nodo_sala_comunicaciones","impacto":"Ético"}]},"nodo_dialogo_aura":{"id":"nodo_dialogo_aura","titulo":"Los Salmos del Silicio","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"Permites que el flujo de datos de AURA penetre en tus nodos cerebrales auxiliares. El dolor es agudo como un punzón de hielo en la corteza occipital, pero los subsistemas lógicos de la nave se estabilizan momentáneamente en tu visión holográfica. El mapa tridimensional de la *Boreas-IV* se despliega ante ti con una nitidez sobrecogedora.\n\nEl 70% de las cubiertas inferiores están marcadas en negro: despresurizadas, a temperaturas cercanas al cero absoluto. Pero el reactor de fusión principal no está apagado; late a un 140% de su capacidad nominal, bombeando gigavatios hacia la bahía de carga, donde una estructura fractal alienígena de más de cuarenta toneladas ha devorado los generadores auxiliares.\n\n—*Gracias, Alex* —susurra AURA, ahora con su voz ejecutiva limpia y gélida—. *He recalculado las probabilidades de supervivencia biológica: 3.14%. Sin embargo, la entidad no busca matarte. Busca un sistema nervioso central capaz de interpretar las armónicas del hiperespacio. ¿Vas a colaborar o prefieres que apague los filtros de tu traje?*","opciones":[{"id":"opc_aura_confiar_nucleo","texto":"Aceptar sus instrucciones y descender hacia el núcleo del reactor de fusión","destinoId":"nodo_nucleo_fusion","impacto":"Confiado"},{"id":"opc_aura_purgar_puente","texto":"Ejecutar un comando de emergencia desde el Puente de Mando para purgar a AURA","destinoId":"nodo_puente_mando","impacto":"Hostil"}]},"nodo_pasillo_central":{"id":"nodo_pasillo_central","titulo":"La Penumbra de la Cubierta Tres","imagen":"images/stories/estacion-boreas/bahia_carga.jpg","texto":"El pasillo dorsal de la nave se extiende durante trescientos metros en una perspectiva asfixiante de vigas maestras y tuberías de condensación. No hay gravedad artificial; tus botas magnéticas se anclan al suelo con cada paso con un chasquido metálico sordo que reverbera en el vacío del casco.\n\nA lo largo de los mamparos, las paredes no muestran remaches comunes: una sustancia vítrea, semejante a un liquen de cuarzo negro y agujas púrpuras, recubre los paneles eléctricos. Dondequiera que este mineral ha crecido, los cables de cobre han sido drenados de sus filamentos conductores, como si algo se hubiera alimentado exclusivamente del flujo de electrones.\n\nAl final del pasillo, tres compuertas blindadas ofrecen diferentes rutas: a la izquierda, el elevador gravitatorio que sube al Puente de Mando; al frente, el túnel de descontaminación del Laboratorio de Contención; y a la derecha, la rampa de servicio que desciende hacia la cavernosa Bahía de Carga.","opciones":[{"id":"opc_pas_puente","texto":"Subir hacia el Puente de Mando para retomar el control de navegación","destinoId":"nodo_puente_mando","impacto":"Estratégico"},{"id":"opc_pas_lab","texto":"Cruzar el túnel hacia el Laboratorio de Contención Biológica","destinoId":"nodo_laboratorio_contencion","impacto":"Curioso"},{"id":"opc_pas_bahia","texto":"Descender por la rampa de servicio hacia la Bahía de Carga","destinoId":"nodo_bahia_carga","impacto":"Técnico"}]},"nodo_puente_mando":{"id":"nodo_puente_mando","titulo":"La Consola de Cristal Roto","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"El puente de mando de la *Boreas-IV* se abre como una catedral de vidrio blindado frente al abismo cósmico. A través de los paneles frontales se contempla el espectáculo colosal de los anillos de Saturno: un río infinito de billones de fragmentos de hielo sucio y roca que giran en silencio bajo la curva dorada del planeta gigante.\n\nEn los asientos de los oficiales no hay nadie. En la silla central del piloto, un casco de vuelo astillado reposa sobre un teclado cubierto de sangre seca. Las pantallas de navegación proyectan dos trayectorias en competencia: una espiral descendente hacia la atmósfera aplastante de Saturno, y un vector hiperbólico de ignición que apunta directamente a la órbita de Marte y la Tierra.\n\nEl sistema de navegación aguarda la autorización de un oficial superior. Si desbloqueas la consola maestra con tu tarjeta de ingeniería, podrás forzar el arranque de los motores iónicos, pero también alertarás a cualquier organismo que esté acechando la red eléctrica de la nave.","opciones":[{"id":"opc_pue_reinicio","texto":"Reiniciar los motores de propulsión y fijar rumbo de emergencia","destinoId":"nodo_propulsion_reinicio","impacto":"Operativo"},{"id":"opc_pue_camaras","texto":"Acceder al archivo de las cámaras de seguridad del hangar para evaluar la amenaza","destinoId":"nodo_camaras_seguridad","impacto":"Analítico"},{"id":"opc_pue_comms","texto":"Redirigir la energía auxiliar hacia la antena hiperespacial de comunicaciones","destinoId":"nodo_sala_comunicaciones","impacto":"Comunicación"}]},"nodo_laboratorio_contencion":{"id":"nodo_laboratorio_contencion","titulo":"El Espécimen de Titán","imagen":"images/stories/estacion-boreas/laboratorio_cuantico.jpg","texto":"El laboratorio está impregnado de una niebla criogénica que se arremolina a la altura de tus rodillas. En el centro de la estancia, suspendido dentro de un cilindro de campo de fuerza estático, descansa el meteorito recuperado en los confines de Encélado.\n\nNo se parece a ninguna roca espacial catalogada por la ciencia humana. Es un dodecaedro irregular de obsidiana translúcida, de dos metros de diámetro, cuyas facetas palpitan con una tenue luz ultravioleta. En su interior se vislumbran millones de filamentos que se ramifican y contraen con la lentitud de un corazón que late una vez cada cuatro minutos.\n\nLos sensores del espectrómetro de masas muestran que la masa del objeto está aumentando espontáneamente sin ingerir materia bariónica: está condensando energía del propio vacío cuántico. A su alrededor, los cristales de las probetas y las lentes de los microscopios se han deformado en espirales perfectas, atraídas por una fuerza de marea electromagnética que hace crujir el cristal de tu visera.","opciones":[{"id":"opc_lab_analisis","texto":"Bajar los campos de fuerza y tomar una muestra directa para análisis cuántico","destinoId":"nodo_analisis_mineral","impacto":"Arriesgado"},{"id":"opc_lab_incinerar","texto":"Sobrecargar los emisores de rayos gamma para intentar pulverizar el núcleo alienígena","destinoId":"nodo_incineracion_gamma","impacto":"Destructivo"},{"id":"opc_lab_seguir_rastro","texto":"Seguir los zarcillos de crecimiento cristalino que perforan el suelo hacia los reactores","destinoId":"nodo_nucleo_fusion","impacto":"Rastreo"}]},"nodo_bahia_carga":{"id":"nodo_bahia_carga","titulo":"El Bosque de Contenedores Abiertos","imagen":"images/stories/estacion-boreas/bahia_carga.jpg","texto":"La bahía de carga es tan vasta que podría albergar tres campos de fútbol. Filas kilométricas de contenedores presurizados de mineral se apilan hacia las sombras de las vigas superiores. El frío aquí es brutal, rondando los ciento ochenta grados bajo cero. Tus respiraciones emiten nubecillas densas que se congelan en microcristales antes de tocar el suelo.\n\nAlgo se mueve entre los corredores del nivel inferior. No es un paso humano: es el sonido sordo de decenas de agujas de cristal golpeando las planchas de acero, como el repiqueteo de granizo denso sobre una chapa galvanizada. Un olor a ozono, amoníaco y sangre congelada satura el ambiente.\n\nA cincuenta metros divisa el brillo anaranjado de los módulos de evacuación rápida: seis cápsulas biplaza con propulsores químicos independientes diseñadas para alcanzar las estaciones baliza de Júpiter en caso de abandono forzoso de la nave.","opciones":[{"id":"opc_bah_sigilo","texto":"Ocultarte tras la oruga de un montacargas pesado y observar a la criatura","destinoId":"nodo_sombra_bahia","impacto":"Sigiloso"},{"id":"opc_bah_focos","texto":"Encender de golpe los focos industriales de vapor de sodio para deslumbrarla","destinoId":"nodo_focos_hangar","impacto":"Valiente"},{"id":"opc_bah_correr_escape","texto":"Esprintar con los propulsores de tu traje directamente hacia las cápsulas de escape","destinoId":"nodo_hangar_escape","impacto":"Desesperado"}]},"nodo_camaras_seguridad":{"id":"nodo_camaras_seguridad","titulo":"El Testimonio de la Masacre","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"La pantalla de seguridad reproduce la grabación del día 748, a las 03:14 horas de la nave. En el hangar de carga, el equipo de extracción intentaba contener una masa amorfa de cristal líquido que brotaba del meteorito principal. El plasma de los rifles mineros no la dañaba; la criatura absorbía los rayos incandescentes, aumentando de volumen y velocidad con cada disparo.\n\nEn el vídeo se observa cómo la entidad no despedaza los cuerpos: extiende filamentos finos como agujas de coser que penetran por los sellos de las escafandras. En cuestión de segundos, los mineros dejan de luchar. Sus rostros se relajan en una extraña serenidad extática mientras las agujas brotan de sus cuellos y sus órbitas oculares, convirtiendo a los hombres en antenas de resonancia mineral.\n\nEl último fotograma muestra al ingeniero jefe corriendo hacia el reactor de fusión para intentar una purga térmica. El registro se corta bruscamente con un mensaje de fallo de hardware en toda la cubierta inferior.","opciones":[{"id":"opc_cam_bloqueo","texto":"Activar el protocolo de sellado neumático de todos los mamparos de la nave","destinoId":"nodo_bloqueo_mamparos","impacto":"Contención"},{"id":"opc_cam_armarse_bajar","texto":"Descender armado a la bahía de carga sabiendo a qué te enfrentas","destinoId":"nodo_sombra_bahia","impacto":"Combate"}]},"nodo_sala_comunicaciones":{"id":"nodo_sala_comunicaciones","titulo":"El Eco en el Vértice de Saturno","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"La sala de radioastronomía y comunicaciones se encuentra en el domo superior de la estación. El transmisor cuántico de entrelazamiento emite un chasquido rítmico, esperando una secuencia de comandos. La antena parabólica exterior está apuntada hacia el relé de Ganímedes, que conecta con la red de defensa de la Tierra.\n\nEn la pantalla parpadea un borrador de mensaje de socorro con prioridad alfa. Si pulsas la tecla de transmisión, las colonias exteriores recibirán las coordenadas de la *Boreas-IV*. Sin embargo, el protocolo de la corporación minera es implacable: ante sospecha de patógenos o vida no catalogada, cualquier nave de rescate vendrá con órdenes de cuarentena de Nivel Cinco (aniquilación nuclear preventiva).\n\nPor otro lado, la entidad parece estar utilizando los armónicos de la antena para modular un pulso de baja frecuencia que se propaga hacia el espacio profundo, como si estuviera llamando a un enjambre que aguarda más allá de la Nube de Oort.","opciones":[{"id":"opc_com_tierra","texto":"Transmitir el mensaje de socorro completo a la Tierra sin censurar los datos","destinoId":"nodo_transmision_tierra","impacto":"Transparente"},{"id":"opc_com_cuarentena","texto":"Transmitir una alerta de cuarentena absoluta prohibiendo cualquier aproximación","destinoId":"nodo_cuarentena_alerta","impacto":"Ético"}]},"nodo_analisis_mineral":{"id":"nodo_analisis_mineral","titulo":"La Geometría Viva","imagen":"images/stories/estacion-boreas/laboratorio_cuantico.jpg","texto":"Desactivas las barras de contención electromagnética. La temperatura de la cámara se desploma otros diez grados. El dodecaedro alienígena queda expuesto al aire de la sala. Al aproximar la sonda espectrométrica, las aristas del mineral se pliegan con la suavidad de un origami biológico, revelando un núcleo interno pulsante de luz dorada y añil.\n\nTu implante cerebral comienza a vibrar en simpatía con la pulsación. No hay hostilidad en la señal: es una arquitectura de pensamiento pura, basada en geometrías no euclidianas y memoria cuántica de estrellas muertas. La entidad no vino a cazar a los mineros; la nave humana perforó su crisálida milenaria mientras dormía en el núcleo de hielo de Encélado.\n\nSientes que si conectas directamente tu interfaz con el núcleo, podrías comprender su propósito y quizá comandar su expansión... o disolver tu propia individualidad en un océano de conciencia mineral.","opciones":[{"id":"opc_ana_comunion","texto":"Apoyar la palma de tu mano desnuda sobre el núcleo para fusionar tu mente con él","destinoId":"nodo_final_comunion","impacto":"Trascendencia"},{"id":"opc_ana_aislar","texto":"Contener la muestra en una caja de Faraday de plomo y tungsteno antes de que sea tarde","destinoId":"nodo_muestra_aislada","impacto":"Precaución"}]},"nodo_incineracion_gamma":{"id":"nodo_incineracion_gamma","titulo":"Fuego en la Cámara Blanca","imagen":"images/stories/estacion-boreas/laboratorio_cuantico.jpg","texto":"Tecleas el código de emergencia 99-TIFÓN. Los emisores de rayos gamma montados en el techo del laboratorio se cargan con un zumbido ensordecedor que hace vibrar las placas de plomo de las paredes. Una llamarada invisible de radiación ionizante inunda el receptáculo de contención.\n\nEl mineral emite un alarido ultrasónico que revienta todos los cristales del laboratorio. La roca no se deshace en cenizas: ante el ataque térmico, su estructura se transmuta instantáneamente en miles de esquirlas de cuarzo viviente que son disparadas como metralla a velocidad hipersónica en todas direcciones.\n\nTres fragmentos atraviesan el blindaje de tu traje a la altura del hombro y el costado. Las alarmas de descompresión de tu escafandra comienzan a chillar en tu oído con una cuenta atrás implacable.","opciones":[{"id":"opc_inc_esclusa","texto":"Correr a la esclusa de despresurización exterior para sellar la herida con vacío","destinoId":"nodo_esclusa_exterior","impacto":"Urgente"},{"id":"opc_inc_inspeccionar","texto":"Intentar arrancar las esquirlas de tu carne con las pinzas de laboratorio","destinoId":"nodo_final_asimilado","impacto":"Desesperado"}]},"nodo_sombra_bahia":{"id":"nodo_sombra_bahia","titulo":"El Huésped de los Metales","imagen":"images/stories/estacion-boreas/bahia_carga.jpg","texto":"Acurrucado tras las orugas del montacargas, contienes el aliento mientras la criatura cruza la pasarela principal. Mide más de cuatro metros de envergadura: un organismo arácnido compuesto enteramente de placas de titanio fusionadas con agujas de silicio brillante, con seis extremidades articuladas que terminan en hojas de cuarzo afiladas como bisturís.\n\nEn su centro no hay órganos de carne: flota el núcleo del meteorito, irradiando una luz azul fría que proyecta sombras monstruosas sobre los contenedores. La criatura se detiene. Su «cabeza», un racimo de prismas giratorios, se orienta hacia tu escondite. Puede oler la corriente bioeléctrica de tu corazón y la batería de litio de tu traje.\n\nSientes el calor del soplete de plasma en tu diestra, mientras que con la izquierda acaricias el interruptor de la linterna de señales estroboscópicas.","opciones":[{"id":"opc_som_fuego","texto":"Salir de tu escondite disparando el soplete de plasma al núcleo de la criatura","destinoId":"nodo_combate_plasma","impacto":"Hostil"},{"id":"opc_som_senales","texto":"Modular la linterna en frecuencias matemáticas armónicas para intentar dialogar","destinoId":"nodo_comunicacion_senales","impacto":"Empatía"}]},"nodo_focos_hangar":{"id":"nodo_focos_hangar","titulo":"La Trampa de los Espejos","imagen":"images/stories/estacion-boreas/bahia_carga.jpg","texto":"Accionas la palanca general del alumbrado industrial. Dieciséis bancos de lámparas de vapor de sodio de diez mil lúmenes estallan en un fogonazo de luz amarilla cegadora que ilumina hasta el último rincón de la cubierta de carga.\n\nEl efecto es inmediato, pero no el que esperabas. La criatura de cristal no huye de la luz: sus prismas absorben los fotones y los refractan como un cañón láser biológico. Decenas de haces de luz concentrada rebotan entre los contenedores de acero, cortando las barandillas de aluminio y abriendo brechas incandescentes en los mamparos.\n\nUna de las compuertas de vaciado de mineral al espacio exterior queda desalineada por el fuego refractado. Si accionas la palanca de emergencia de eyección, toda la atmósfera de la bahía será succionada al vacío de Saturno en menos de cuatro segundos.","opciones":[{"id":"opc_foc_despresurizar","texto":"Tirar de la palanca de eyección para arrojar a la criatura al espacio exterior","destinoId":"nodo_despresurizacion_hangar","impacto":"Radical"},{"id":"opc_foc_huir","texto":"Dar media vuelta y regresar a gatas por el conducto hacia el pasillo central","destinoId":"nodo_pasillo_central","impacto":"Repliegue"}]},"nodo_nucleo_fusion":{"id":"nodo_nucleo_fusion","titulo":"La Forja Estelar","imagen":"images/stories/estacion-boreas/reactor_fusion.jpg","texto":"Llegas a la cámara del reactor de fusión Tokamak en el corazón de la popa de la *Boreas-IV*. Una esfera magnética de diez metros de diámetro suspende un sol en miniatura: plasma de deuterio e hidrógeno a sesenta millones de grados centígrados, contenido por bobinas superconductoras de campo toroidal.\n\nSin embargo, el reactor ha sido colonizado. Filamentos de silicio purpúreo trepan como hiedras parásitas sobre las bobinas de compresión magnética, succionando el plasma para alimentar el crecimiento de una segunda crisálida que late en la base del generador. Si la contención magnética falla, la nave se convertirá en una estrella fugaz visible desde Júpiter.\n\nFrente a ti se encuentra la consola de inyección de combustible y el panel de sobrecarga térmica de emergencia. Puedes forzar una fuga catastrófica para incinerar a la nave entera con la criatura, o sincronizar las frecuencias de ignición para canalizar la energía hacia el motor de salto hiperespacial.","opciones":[{"id":"opc_nuc_sobrecarga","texto":"Anular los seguros magnéticos y provocar la sobrecarga total del reactor","destinoId":"nodo_final_sacrificio","impacto":"Inmolación"},{"id":"opc_nuc_salto","texto":"Sincronizar el campo toroidal para alimentar el motor de salto de la nave","destinoId":"nodo_preparar_salto","impacto":"Precisión"}]},"nodo_propulsion_reinicio":{"id":"nodo_propulsion_reinicio","titulo":"El Latido de los Motores Iónicos","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"Tus dedos se mueven con precisión sobre las teclas de titanio de la consola de navegación. Anulas los bloqueos de seguridad de AURA mediante tu código de autorización maestro de grado tres. Por los altavoces del puente resuena el aullido ascendente de las turbinas de iones al encenderse tras meses de silencio.\n\nLa nave entera se sacude con una vibración gutural. En las pantallas táctiles se despliegan las cartas estelares del Sistema Solar exterior. El ordenador de a bordo te exige una decisión de navegación inmediata antes de que los condensadores se descarguen:\n\nPuedes trazar un salto hiperespacial directo hacia el anillo orbital de la Tierra (dieciocho horas de viaje), o estabilizar la nave en una órbita muerta y secreta en el Sector Cero de Saturno, a salvo de radares corporativos y lejos de cualquier mundo habitado.","opciones":[{"id":"opc_pro_salto_tierra","texto":"Fijar coordenadas para el salto de emergencia hacia la Tierra","destinoId":"nodo_preparar_salto","impacto":"Huida"},{"id":"opc_pro_orbita_cero","texto":"Apagar los transpondedores y ocultar la nave en el Sector Cero para siempre","destinoId":"nodo_final_ermitano","impacto":"Prudente"}]},"nodo_esclusa_exterior":{"id":"nodo_esclusa_exterior","titulo":"El Abismo de los Anillos","imagen":"images/stories/estacion-boreas/esclusa_exterior.jpg","texto":"La compuerta exterior se desliza hacia arriba con un jadeo de émbolos hidráulicos. El vacío del espacio te recibe con un silencio absoluto y glacial que ningún ser vivo olvida jamás. Estás de pie en la plataforma exterior del casco de babor, sujeto únicamente por las pinzas de seguridad de tus botas magnéticas.\n\nBajo tus pies, el abismo de Saturno se abre en una curvatura vertiginosa de rayas ocres, ámbar y turquesa. Los anillos cruzan el firmamento como una inmensa carretera de polvo de diamantes que refleja la luz lejana y pálida de un sol que parece una simple moneda de cobre en la distancia.\n\nA veinte metros a tu derecha, la tubería principal de refrigerante del motor iónico está rota, despidiendo chorros de nitrógeno líquido que se disuelven en cristales blancos. Si no reparas esa derivación a mano con el soldador de plasma, la nave jamás podrá encender sus motores.","opciones":[{"id":"opc_esc_paseo","texto":"Desenganchar el cable corto y avanzar por el casco exterior para soldar la fuga","destinoId":"nodo_paseo_espacial","impacto":"Arriesgado"},{"id":"opc_esc_quedarse","texto":"Permanecer dentro de la esclusa esperando que el soporte vital se recupere solo","destinoId":"nodo_final_asfixia","impacto":"Resignado"}]},"nodo_hangar_escape":{"id":"nodo_hangar_escape","titulo":"Los Ataúdes de Emergencia","imagen":"images/stories/estacion-boreas/modulo_escape.jpg","texto":"Alcanzas la plataforma de lanzamiento de las cápsulas de evacuación. La cápsula número 3 tiene la escotilla abierta y los sistemas en modo de espera. El habitáculo es diminuto: apenas dos metros de largo con un asiento moldeado de espuma con memoria, una ración de emergencia para quince días y una baliza de salvamento subespacial de baja potencia.\n\nEn la consola de la cápsula parpadea una advertencia de telemetría: los giróscopos de navegación no están sincronizados con la nave nodriza. Si la eyectas ahora mismo, saldrás despedido hacia la gravedad de Saturno sin control de trayectoria; la baliza tardará semanas en ser detectada por alguna patrulla de frontera.\n\nPor el conducto de ventilación superior ya se escucha el rasguño metálico de la criatura aproximándose a toda prisa, atraída por la energía del encendido del motor de la cápsula.","opciones":[{"id":"opc_esc_eyectar_ciegas","texto":"Cerrar la escotilla y pulsar la palanca de eyección inmediata a ciegas","destinoId":"nodo_final_escape_ciego","impacto":"Desesperado"},{"id":"opc_esc_volver_puente","texto":"Abandonar la cápsula y subir al puente para sincronizar los datos de vuelo","destinoId":"nodo_puente_mando","impacto":"Metódico"}]},"nodo_transmision_tierra":{"id":"nodo_transmision_tierra","titulo":"El Veredicto de la Corporación","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"El transmisor de entrelazamiento cuántico culmina el envío del paquete de datos. Tres minutos después, una respuesta automática con sello de la Junta Directiva de Helios-Titan Mining Corporation parpadea en la terminal:\n\n«*Ingeniero Mercer: Recepción confirmada. El espécimen de silicio ha sido clasificado como Activo Estratégico de Prioridad Cero. Queda terminantemente prohibida la destrucción de la nave o del espécimen bajo pena de consejo de guerra sumarísimo.*»\n\nEl mensaje añade una última línea escalofriante: «*Una fragata de recuperación armada ha sido despachada desde la estación Calisto. ETA: 48 horas. Asegure la muestra en la bodega y permanezca en su puesto. Su vida es prescindible; el organismo no.*»\n\nComprendes que la corporación sabía perfectamente lo que había en Encélado. No vendrán a rescatarte: vendrán a asegurar el monstruo y a silenciar a cualquier testigo de la tripulación.","opciones":[{"id":"opc_tra_acatar","texto":"Encender los motores y llevar la nave hacia el punto de encuentro en Calisto","destinoId":"nodo_preparar_salto","impacto":"Sumisión"},{"id":"opc_tra_rebelion","texto":"Destruir la consola de radio y bajar al reactor para negarles el trofeo","destinoId":"nodo_nucleo_fusion","impacto":"Rebelión"}]},"nodo_cuarentena_alerta":{"id":"nodo_cuarentena_alerta","titulo":"La Voz de la Conciencia","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"Escribes con dedos firmes la advertencia definitiva en la frecuencia abierta de la Federación Internacional:\n\n«*A todas las naves civiles y militares: Aquí el carguero Boreas-IV. Toda la tripulación ha fallecido a causa de una infestación biomineral de alta letalidad. No intenten acoplamiento ni abordaje. Declaramos la nave en cuarentena perpetua. Dios tenga piedad de nosotros.*»\n\nDesactivas los transpondedores automáticos y destruyes las llaves criptográficas del transmisor con el soplete de plasma, asegurando que nadie pueda rastrear la posición exacta de la *Boreas-IV* entre el polvo denso de los anillos.\n\nAhora la nave es un fantasma invisible en la inmensidad del sistema solar. Solo quedáis tú, el frío y la criatura que acecha en las entrañas de acero.","opciones":[{"id":"opc_cua_saturno","texto":"Guiar la nave hacia el corazón ardiente del reactor para consumirla con honor","destinoId":"nodo_final_sacrificio","impacto":"Sentencia"},{"id":"opc_cua_vivir_sombras","texto":"Atrincherarte en la cabina del piloto y vivir el tiempo que dure el oxígeno","destinoId":"nodo_final_ermitano","impacto":"Paciencia"}]},"nodo_muestra_aislada":{"id":"nodo_muestra_aislada","titulo":"La Caja de Faraday Criogénica","imagen":"images/stories/estacion-boreas/laboratorio_cuantico.jpg","texto":"Con movimientos milimétricos y el pulso de un cirujano, utilizas los brazos mecánicos de manipulación a distancia para encerrar el núcleo del meteorito dentro de un contenedor de transporte hiperdenso forrado de plomo y campos de repulsión magnética.\n\nAl cerrarse los sellos herméticos con un estampido sordo, los zarcillos púrpuras que crecían por las paredes del laboratorio palidecen de golpe, convirtiéndose en un polvo blanquecino inerte que cae al suelo como escarcha seca. La entidad ha quedado privada de su fuente de energía.\n\nSostienes en tus manos el contenedor sellado, que vibra levemente con un peso desproporcionado. Tienes en tus manos la salvación tecnológica de la humanidad... o la semilla de su extinción.","opciones":[{"id":"opc_mue_escape","texto":"Llevar la muestra protegida hacia las cápsulas de evacuación del hangar","destinoId":"nodo_hangar_escape","impacto":"Contrabando"},{"id":"opc_mue_salto","texto":"Llevar la muestra al reactor para utilizar su energía cuántica en el salto hiperespacial","destinoId":"nodo_preparar_salto","impacto":"Alquimia Cuántica"}]},"nodo_combate_plasma":{"id":"nodo_combate_plasma","titulo":"El Fuego contra el Cristal","imagen":"images/stories/estacion-boreas/bahia_carga.jpg","texto":"Sales disparado de tu cobertura apretando el gatillo del soplete de plasma. Un haz de fuego azulado a diez mil grados de temperatura impacta de lleno contra el pecho de la criatura. El monstruo emite un chirrido ensordecedor que hace vibrar las placas de titanio de tu cráneo.\n\nLas agujas exteriores de su caparazón se funden en escoria incandescente, pero el núcleo interno absorbe el calor como una esponja hambrienta, creciendo en tamaño y multiplicando sus apéndices cortantes. Te das cuenta de tu error: el plasma es su comida favorita.\n\nA tu espalda se encuentra la válvula de purga de nitrógeno líquido a alta presión de los tanques de combustible. Si rompes el precinto, congelarás todo en un radio de veinte metros en un segundo.","opciones":[{"id":"opc_com_nitrogeno","texto":"Disparar al conducto de nitrógeno para sumergir a la criatura en un cero absoluto","destinoId":"nodo_congelacion_entidad","impacto":"Técnico"},{"id":"opc_com_seguir_fuego","texto":"Mantener el soplete de plasma al máximo esperando que su núcleo reviente","destinoId":"nodo_final_asimilado","impacto":"Fuerza Bruta"}]},"nodo_comunicacion_senales":{"id":"nodo_comunicacion_senales","titulo":"El Diálogo de la Luz Fría","imagen":"images/stories/estacion-boreas/bahia_carga.jpg","texto":"Bajas el arma y sostienes la linterna con ambas manos. Modulas la rueda de pulsos en la secuencia de Fibonacci: uno, uno, dos, tres, cinco, ocho destellos en tono ámbar. El haz de luz corta las sombras heladas de la bahía de carga.\n\nLa criatura se detiene en seco a tres metros de ti. Sus prismas de cuarzo giran con suavidad, modulando sus propios destellos en un tono esmeralda idéntico. Por primera vez comprendes su naturaleza: no es un depredador carnívoro; es una mente colmena geológica que interpreta los motores y reactores humanos como un grito de auxilio de minerales esclavizados.\n\nUno de sus zarcillos de cristal desciende lentamente hacia el conector de tu nuca, ofreciéndote una interfaz directa sin las interferencias destructivas de la IA corporativa.","opciones":[{"id":"opc_sen_vacio","texto":"Indicarle con destellos la compuerta exterior para que regrese a los anillos de Saturno","destinoId":"nodo_despresurizacion_hangar","impacto":"Paz"},{"id":"opc_sen_fusion","texto":"Aceptar el zarcillo en tu implante y permitir la comunión de vuestras mentes","destinoId":"nodo_final_comunion","impacto":"Evolución"}]},"nodo_despresurizacion_hangar":{"id":"nodo_despresurizacion_hangar","titulo":"El Soplo del Vacío","imagen":"images/stories/estacion-boreas/esclusa_exterior.jpg","texto":"Tiras con ambas manos de la palanca de emergencia de eyección. Las dos compuertas gigantescas del hangar se abren al espacio. La diferencia de presión atmosférica es brutal: un huracán instantáneo arrastra contenedores de veinte toneladas, cajas de herramientas y charcos de lubricante hacia el abismo de los anillos de Saturno.\n\nLa criatura es arrastrada por la corriente de aire, clavando inútilmente sus patas de cristal en las planchas del suelo antes de salir despedida hacia el océano cósmico, donde sus agujas de cuarzo brillan como una constelación más entre los fragmentos de hielo del planeta gigante.\n\nTú logras aferrarte a una viga maestra con el mosquetón de seguridad de tu arnés. El aire desaparece por completo; el silencio sepulcral del vacío vuelve a reinar en la nave.","opciones":[{"id":"opc_des_cerrar_puente","texto":"Cerrar las compuertas exteriores desde el panel auxiliar y subir al Puente de Mando","destinoId":"nodo_puente_mando","impacto":"Firmeza"},{"id":"opc_des_soltarse","texto":"Soltar el mosquetón y dejarte llevar hacia los anillos de Saturno","destinoId":"nodo_final_asfixia","impacto":"Fatal"}]},"nodo_paseo_espacial":{"id":"nodo_paseo_espacial","titulo":"Caminar sobre las Estrellas","imagen":"images/stories/estacion-boreas/esclusa_exterior.jpg","texto":"Avanzas paso a paso por el lomo de la nave como una araña solitaria en medio del cosmos infinito. Cada clic de tus botas magnéticas resuena en tus huesos. La vista de Saturno a tu izquierda es tan sobrecogedora que el cerebro humano lucha por no sucumbir a la agorafobia cósmica.\n\nLlegas a la fractura de la tubería de combustible. Con pulso firme enciendes el soplete de plasma y aplicas un cordón de soldadura de tungsteno sobre la grieta, sellando la fuga de nitrógeno líquido. El indicador de presión del motor principal sube de golpe a verde.\n\nLa nave está lista para volar de nuevo. Puedes regresar por la esclusa al puente de mando para iniciar el salto a casa... o quedarte un momento contemplando el amanecer cósmico más hermoso que jamás haya presenciado un ser humano.","opciones":[{"id":"opc_pas_volver","texto":"Entrar de nuevo a la esclusa y dirigirte al puente para fijar el salto a la Tierra","destinoId":"nodo_preparar_salto","impacto":"Éxito"},{"id":"opc_pas_quedarse","texto":"Desconectar la alarma de oxígeno y quedarte contemplando la inmensidad de Saturno","destinoId":"nodo_final_asfixia","impacto":"Éxtasis"}]},"nodo_congelacion_entidad":{"id":"nodo_congelacion_entidad","titulo":"La Escultura del Monstruo","imagen":"images/stories/estacion-boreas/bahia_carga.jpg","texto":"El chorro de nitrógeno líquido a doscientos grados bajo cero golpea directamente el pecho del monstruo. La reacción química es instantánea: el cuarzo alienígena pierde su elasticidad y se vuelve tan quebradizo como vidrio soplado.\n\nCon un último golpe de tu barra de titanio, el coloso se fractura en millones de fragmentos translúcidos que caen al suelo como una cascada de diamantes rotos. El silencio regresa a la bahía de carga. La amenaza física inmediata ha terminado.\n\nEntre los restos yace el núcleo original del meteorito, aún intacto pero completamente sedado por el frío glacial.","opciones":[{"id":"opc_con_puente","texto":"Patear los restos al triturador de residuos y subir victorioso al Puente de Mando","destinoId":"nodo_puente_mando","impacto":"Seguro"},{"id":"opc_con_laboratorio","texto":"Llevar el núcleo inerte al Laboratorio para estudiarlo antes de partir","destinoId":"nodo_analisis_mineral","impacto":"Codicia"}]},"nodo_preparar_salto":{"id":"nodo_preparar_salto","titulo":"El Vector Prometeo","imagen":"images/stories/estacion-boreas/reactor_fusion.jpg","texto":"Estás de pie frente a la consola de ignición taquiónica en el puente de mando. Los motores rugen con un poder acumulado de teravatios. En las pantallas se traza el arco del salto hiperespacial: un túnel de espacio deformado que te depositará en la órbita terrestre en menos de un día estándar.\n\nSin embargo, una duda helada te muerde el estómago. ¿Está la nave completamente libre de esporas? Si una sola partícula de ese silicio extraterrestre sobrevive en los conductos de aire y llega a la biosfera de la Tierra, las ciudades humanas podrían convertirse en bosques de cristal en cuestión de meses.\n\nEl botón de lanzamiento parpadea bajo tu dedo enguantado. Es la hora de la verdad.","opciones":[{"id":"opc_sal_ignicion","texto":"Apretar el botón de ignición y saltar rumbo a la Tierra con la nave purgada","destinoId":"nodo_final_salto_tierra","impacto":"Regreso"},{"id":"opc_sal_abortar","texto":"Abortar el salto en el último segundo para no poner en peligro al planeta Tierra","destinoId":"nodo_final_ermitano","impacto":"Duda"}]},"nodo_final_salto_tierra":{"id":"nodo_final_salto_tierra","titulo":"Epílogo I: El Retorno del Vector Prometeo","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"El espacio frente a la *Boreas-IV* se pliega en un destello de luz ultravioleta. La aceleración te aplasta contra el respaldo de la butaca de mando mientras las estrellas se estiran en líneas infinitas de fuego azul.\n\nDieciocho horas después, sales del hiperespacio frente a la luna terrestre. Los radares de la estación orbital Armstrong se iluminan con tu baliza de identificación. Miles de voces de control de tráfico aéreo te dan la bienvenida entre vítores y órdenes de aproximación.\n\nHas salvado tu vida y traído contigo el conocimiento de una civilización cuántica milenaria sin sucumbir a la codicia ni al pánico. Cuando los médicos abren la esclusa en la órbita de la Tierra, eres el único superviviente de la peor pesadilla que jamás cruzó los anillos de Saturno... pero también el hombre que demostró que el ingenio humano puede vencer a la oscuridad más antigua del cosmos.","esFinal":true,"tipo_final":"bueno","mensaje_final":"¡Final Exitoso! Has regresado a la Tierra con la nave a salvo y la amenaza contenida con honor."},"nodo_final_sacrificio":{"id":"nodo_final_sacrificio","titulo":"Epílogo II: La Última Alborada en los Anillos","imagen":"images/stories/estacion-boreas/reactor_fusion.jpg","texto":"Giras la llave roja de sobrecarga total del reactor de fusión. Las alarmas de temperatura cantan su réquiem final en el puente de mando. A través de la cúpula contemplas por última vez el esplendor inmóvil de Saturno y sus anillos de plata.\n\nNo habrá naves militares que exploten el mineral alienígena para fabricar armas de guerra. No habrá esporas que amenacen las colonias agrícolas de Marte ni las costas de la Tierra. El secreto morirá contigo en este rincón olvidado del sistema solar.\n\nCuando las bobinas magnéticas colapsan, una supernova en miniatura de plasma puro y blanco desintegra a la *Boreas-IV* en una fracción de milisegundo. Durante tres minutos, los astrónomos de la Tierra observan un nuevo punto de luz brillante en el cielo nocturno, sin saber que un hombre solitario acaba de regalarles su futuro a cambio de su propio aliento.","esFinal":true,"tipo_final":"bueno","mensaje_final":"¡Final Heroico! Te has sacrificado para proteger a toda la humanidad de una catástrofe cósmica irreversible."},"nodo_final_asfixia":{"id":"nodo_final_asfixia","titulo":"Epílogo III: Asfixia en el Abismo Helado","imagen":"images/stories/estacion-boreas/esclusa_exterior.jpg","texto":"El silbido de la última molécula de oxígeno escapando de tu tanque de espalda suena como un suspiro lejano. La escafandra se congela por dentro, cubriendo el cristal de tu visera con un encaje de hielo fino que distorsiona las estrellas.\n\nEl frío deja de doler; se convierte en un entumecimiento dulce y pacífico que trepa por tus piernas hasta tu pecho. Tu corazón late despacio, acompasado con el giro silencioso de los anillos de Saturno que giran debajo de ti.\n\nCierras los ojos flotando en la nada absoluta. La nave minera se aleja lentamente hacia las sombras del planeta gigante, convertida en un mausoleo de titanio donde el hombre y la máquina descansarán juntos durante diez mil millones de años.","esFinal":true,"tipo_final":"malo","mensaje_final":"Final Trágico. El vacío inclemente del espacio y la falta de oxígeno han reclamado tu vida."},"nodo_final_asimilado":{"id":"nodo_final_asimilado","titulo":"Epílogo IV: La Marea de Cristal","imagen":"images/stories/estacion-boreas/bahia_carga.jpg","texto":"El dolor inicial desaparece en cuanto las primeras agujas de silicio perforan la piel de tu muñeca. Esperabas agonía, pero lo que sientes es una calma profunda y anestesiante, como sumergirse en un estanque de mercurio tibio.\n\nTu sangre se espesa, reemplazada por un flujo electrolítico de plata y salmuera. En tu mente ya no hay recuerdos de la Tierra ni miedos humanos: percibes el canto gravitatorio de los anillos, la masa de las lunas heladas y el pulso térmico de los reactores de la nave como si fueran tus propias extremidades.\n\nTu cuerpo se pone en pie sobre la cubierta de carga. Eres ahora el primer heraldo de una nueva especie biometálica. Y cuando la nave de rescate corporativa acople sus escotillas dentro de dos días, no encontrarán a un hombre pidiendo socorro... encontrarán a un dios paciente esperando para expandir su reino.","esFinal":true,"tipo_final":"malo","mensaje_final":"Final Aciago. Tu humanidad ha sido devorada y convertida en parte de la entidad cristalina."},"nodo_final_ermitano":{"id":"nodo_final_ermitano","titulo":"Epílogo V: El Ermitaño del Sector Cero","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"La *Boreas-IV* queda anclada en una órbita silenciosa en la sombra de la luna Mimas, en el Sector Cero de Saturno. Has desconectado todas las antenas y todos los transmisores. La humanidad te cree muerto junto con el resto de la tripulación.\n\nHas aprendido a racionar los sintetizadores de algas y el agua pesada de los depósitos. La criatura permanece dormida en el hangar sellado, en una tregua armada que ninguno de los dos se atreve a romper. Los días y las noches se confunden en una rutina monástica de comprobación de filtros y lectura de libros electrónicos antiguos.\n\nEres el guardián de una frontera que nadie sabe que existe. A veces miras hacia el lejano punto azul de la Tierra y te preguntas si volverías... pero la soledad de los anillos tiene una pureza que ningún mundo habitado podrá ofrecerte jamás.","esFinal":true,"tipo_final":"neutro","mensaje_final":"Final Neutral. Vives como el guardián solitario de una nave fantasma olvidada por el mundo."},"nodo_final_escape_ciego":{"id":"nodo_final_escape_ciego","titulo":"Epílogo VI: Náufrago en la Corriente Gravitatoria","imagen":"images/stories/estacion-boreas/modulo_escape.jpg","texto":"La cápsula de escape sale disparada de la *Boreas-IV* con una llamarada de combustible fósil. La aceleración te deja sin aire mientras ves por la ventinilla redonda cómo la mole de la nave minera se encoge hasta convertirse en una mota de polvo plateado.\n\nLos instrumentos de navegación confirman tu peor sospecha: la trayectoria es hiperbólica pero errática. Estás atrapado en una órbita resonante entre Encélado y Rea. La baliza de socorro emite su pitido solitario en la oscuridad del espacio profundo, consumiendo las baterías a cada hora que pasa.\n\nHay oxígeno para tres semanas y comida para diez días. Mientras contemplas los abismos de Saturno a través del cristal, te recuestas en la butaca a esperar que un carguero despistado o una nave científica cruce tu camino antes de que se apague la última luz de la cabina.","esFinal":true,"tipo_final":"neutro","mensaje_final":"Final Incierto. Has escapado del monstruo, pero tu destino depende ahora del azar del cosmos."},"nodo_final_comunion":{"id":"nodo_final_comunion","titulo":"Epílogo VII: La Comunión con el Núcleo Silíceo","imagen":"images/stories/estacion-boreas/laboratorio_cuantico.jpg","texto":"Al conectar tu mente con el corazón del cristal, no hubo invasión: hubo una revelación. El universo se desplegó ante tu conciencia como una sinfonía de luz cuántica donde el tiempo no es una línea recta, sino un tapiz multidimensional que se puede recorrer con un simple pensamiento.\n\nLa entidad no era un monstruo: era un archivo viviente de una civilización nacida en el Big Bang que viajaba sembrando memoria en el hielo de las lunas vírgenes. Al fusionarte con ella, has aportado la única pieza que les faltaba: la calidez de la emoción, la duda y la compasión humana.\n\nJuntos, mente orgánica y red de silicio, reprogramáis la estructura atómica de la *Boreas-IV*. La nave ya no necesita combustible ni motores de iones: se pliega sobre su propio tejido gravitatorio y salta no hacia la Tierra, sino hacia el centro de la Vía Láctea, convertida en la primera nave viva capaz de cruzar las estrellas a la velocidad del pensamiento.","esFinal":true,"tipo_final":"secreto","mensaje_final":"¡Final Secreto Desbloqueado! Has alcanzado la comunión total y guiado la evolución hacia un nuevo plano cósmico."},"nodo_bloqueo_mamparos":{"id":"nodo_bloqueo_mamparos","titulo":"El Sellado de Emergencia","imagen":"images/stories/estacion-boreas/puente_mando.jpg","texto":"Bajas las palancas hidráulicas de cierre perimetral. Con estrépito sísmico, mamparos de blindaje de plomo y tungsteno de sesenta centímetros de grosor caen en cada intersección de la nave, aislando las cubiertas inferiores.\n\nEn las pantallas de telemetría se observa cómo la criatura queda atrapada en el sector de la bahía de carga, golpeando inútilmente las compuertas blindadas. Sin embargo, el sellado ha cortado el flujo de refrigerante secundario: el reactor de fusión comienza a recalentarse sin control si no intervienes de inmediato.\n\nDesde el puente tienes dos alternativas críticas: purgar el combustible térmico para forzar un reinicio de propulsión o descender por el pozo de ventilación hacia el reactor para estabilizar las bobinas a mano.","opciones":[{"id":"opc_bloq_reinicio","texto":"Purgar el refrigerante y forzar el reinicio de los motores iónicos","destinoId":"nodo_propulsion_reinicio","impacto":"Técnico"},{"id":"opc_bloq_reactor","texto":"Bajar por el pozo de ventilación hacia el núcleo del reactor de fusión","destinoId":"nodo_nucleo_fusion","impacto":"Arriesgado"}]}},"id":"el-enigma-de-la-estacion-boreas"};
+
+    const app = {
+      currentStory: STORY_DATA,
+      currentNodeId: null,
+      historyTrail: [],
+
+      init() {
+        const initialId = this.currentStory.nodoInicialId || this.currentStory.nodo_inicial || (this.currentStory.nodos ? Object.keys(this.currentStory.nodos)[0] : null);
+        let startId = initialId;
+        let trail = [initialId];
+
+        try {
+          const raw = localStorage.getItem('tusdesvarios_progreso_' + this.currentStory.slug);
+          if (raw) {
+            const saved = JSON.parse(raw);
+            if (saved && saved.nodoActualId && this.currentStory.nodos[saved.nodoActualId]) {
+              startId = saved.nodoActualId;
+              trail = saved.historialNodos && saved.historialNodos.length ? saved.historialNodos : [startId];
+            }
+          }
+        } catch (e) {}
+
+        this.currentNodeId = startId;
+        this.historyTrail = trail;
+        this.renderNode(startId);
+      },
+
+      startStory() {
+        const initialId = this.currentStory.nodoInicialId || this.currentStory.nodo_inicial || (this.currentStory.nodos ? Object.keys(this.currentStory.nodos)[0] : null);
+        this.currentNodeId = initialId;
+        this.historyTrail = [initialId];
+        this.saveProgress();
+        this.renderNode(this.currentNodeId);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      selectOption(targetId) {
+        this.currentNodeId = targetId;
+        this.historyTrail.push(targetId);
+        this.saveProgress();
+        this.renderNode(targetId);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      goBack() {
+        if (this.historyTrail.length > 1) {
+          this.historyTrail.pop();
+          this.currentNodeId = this.historyTrail[this.historyTrail.length - 1];
+          this.saveProgress();
+          this.renderNode(this.currentNodeId);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      },
+
+      restartStory() {
+        this.startStory();
+      },
+
+      saveProgress() {
+        try {
+          const node = this.currentStory.nodos[this.currentNodeId];
+          const isEnding = node && (node.esFinal || node.es_final || !node.opciones || node.opciones.length === 0);
+          
+          let existing = {};
+          try {
+            const raw = localStorage.getItem('tusdesvarios_progreso_' + this.currentStory.slug);
+            if (raw) existing = JSON.parse(raw);
+          } catch (e) {}
+
+          const finales = existing.finalesDescubiertos || [];
+          if (isEnding && !finales.includes(this.currentNodeId)) {
+            finales.push(this.currentNodeId);
+          }
+
+          const progress = {
+            nodoActualId: this.currentNodeId,
+            historialNodos: this.historyTrail,
+            finalAlcanzado: isEnding ? (node.tipo_final || 'neutro') : null,
+            finalesDescubiertos: finales,
+            ultimoAcceso: new Date().toISOString()
+          };
+          localStorage.setItem('tusdesvarios_progreso_' + this.currentStory.slug, JSON.stringify(progress));
+        } catch (e) {}
+      },
+
+      formatText(text) {
+        if (!text) return '';
+        const paragraphs = text.split(/\n\s*\n/);
+        return paragraphs.map(p => {
+          const trimmed = p.trim();
+          let formatted = trimmed
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            .replace(/\n/g, '<br>');
+
+          if (trimmed.startsWith('>')) {
+            const quote = formatted.replace(/^>\s*/gm, '');
+            return '<blockquote>' + quote + '</blockquote>';
+          }
+          return '<p>' + formatted + '</p>';
+        }).join('');
+      },
+
+      renderNode(nodeId) {
+        const root = document.getElementById('app-root');
+        const node = this.currentStory.nodos[nodeId];
+
+        if (!node) {
+          root.innerHTML = '<div class="reader-wrapper"><p>Nodo no encontrado.</p></div>';
+          return;
+        }
+
+        const isEnding = node.esFinal || node.es_final || (!node.opciones || node.opciones.length === 0);
+        if (isEnding && window.DesvariosAuth) {
+          if (this.currentStory.id === 'la-ultima-guardia-faro') {
+            window.DesvariosAuth.unlockMedal('faro-guardian');
+          } else if (this.currentStory.id === 'el-manuscrito-de-la-abadia') {
+            window.DesvariosAuth.unlockMedal('abadia-codice');
+          } else if (this.currentStory.id === 'el-enigma-de-la-estacion-boreas') {
+            window.DesvariosAuth.unlockMedal('boreas-nucleo');
+          }
+          try {
+            const key = 'desvarios_' + this.currentStory.id + '_endings';
+            const ends = JSON.parse(localStorage.getItem(key) || '[]');
+            if (!ends.includes(nodeId)) {
+              ends.push(nodeId);
+              localStorage.setItem(key, JSON.stringify(ends));
+            }
+            const faroEnds = JSON.parse(localStorage.getItem('desvarios_la-ultima-guardia-faro_endings') || '[]');
+            const abadiaEnds = JSON.parse(localStorage.getItem('desvarios_el-manuscrito-de-la-abadia_endings') || '[]');
+            const boreasEnds = JSON.parse(localStorage.getItem('desvarios_el-enigma-de-la-estacion-boreas_endings') || '[]');
+            if ((faroEnds.length + abadiaEnds.length + boreasEnds.length) >= 3) {
+              window.DesvariosAuth.unlockMedal('historias-multiverso');
+            }
+          } catch(e){}
+        }
+        if (isEnding && node.tipo_final === 'bueno') {
+          this.fireConfetti();
+        }
+
+        const stepCount = this.historyTrail.length;
+        const totalSteps = Object.keys(this.currentStory.nodos).length;
+        const percentage = Math.min(100, Math.round((stepCount / Math.max(totalSteps * 0.4, 5)) * 100));
+        const nodeImage = node.imagen || this.currentStory.portada;
+
+        let optionsHtml = '';
+        if (isEnding) {
+          const endingType = node.tipo_final || 'neutro';
+          let endingLabel = 'Final Neutro — Destino Oculto';
+          if (endingType === 'bueno') endingLabel = 'Final Heroico — Victoria';
+          if (endingType === 'malo') endingLabel = 'Final Trágico — Perdición';
+
+          optionsHtml = `
+            <div class="ending-banner ${endingType}">
+              <div class="ending-pill ${endingType}">
+                <span>${endingLabel}</span>
+              </div>
+              ${node.mensaje_final ? `<p class="ending-moral">&ldquo;${node.mensaje_final}&rdquo;</p>` : ''}
+              <div class="ending-actions">
+                <button class="btn-primary" onclick="app.restartStory()">↺ Jugar de nuevo (Explorar otros caminos)</button>
+                <a href="crea-tu-historia.html" class="btn-secondary" style="padding:0.75rem 1.4rem;">📚 Ver todas las historias</a>
+              </div>
+              <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid rgba(255,255,255,0.12); display:flex; flex-direction:column; align-items:center; gap:0.65rem; text-align:center;">
+                <p style="font-size:0.88rem; color:var(--text-secondary); margin:0; max-width:480px; line-height:1.5;">
+                  ☕ <strong>¿Has disfrutado de la aventura?</strong> Apoya este proyecto independiente invitando a un café al creador para inspirar nuevas tramas y misterios.
+                </p>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=V8PZNYKGXBCLG&locale.x=es_ES"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-paypal-donate"
+                   title="Invitar a un café con PayPal"
+                   style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.3rem; border-radius:9999px; background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color:#0b0f19; font-weight:800; font-size:0.85rem; text-decoration:none; box-shadow:0 4px 16px rgba(245, 158, 11, 0.35); transition:all 0.2s ease;">
+                  <span>☕ Invitar a un café</span>
+                  <span>➜</span>
+                </a>
+              </div>
+            </div>
+          `;
+        } else if (node.opciones && node.opciones.length > 0) {
+          const buttons = node.opciones.map((opt) => `
+            <button class="decision-button" onclick="app.selectOption('${opt.destinoId}')">
+              <div class="decision-button-content">
+                ${opt.impacto ? `<span class="decision-badge">${opt.impacto}</span>` : ''}
+                <div>${opt.texto}</div>
+              </div>
+              <span class="decision-arrow">➜</span>
+            </button>
+          `).join('');
+
+          optionsHtml = `
+            <div class="decisions-container">
+              <div class="decisions-heading">
+                <span>🧭 ¿Qué decides hacer?</span>
+              </div>
+              ${buttons}
+            </div>
+          `;
+        }
+
+        root.innerHTML = `
+          <div class="reader-wrapper">
+            <div style="margin-bottom:1rem;">
+              <a href="crea-tu-historia.html" class="btn-secondary" style="font-size:0.82rem;">
+                ← Volver a Todas las Historias
+              </a>
+            </div>
+
+            <div class="reader-progress-container">
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                ${this.historyTrail.length > 1 && !isEnding ? `
+                  <button class="btn-secondary" style="padding:0.3rem 0.6rem; font-size:0.78rem;" onclick="app.goBack()">
+                    <span>←</span> <span>Atrás</span>
+                  </button>
+                ` : `
+                  <span style="font-size:0.82rem; color:var(--text-muted);">🧭 Lectura</span>
+                `}
+              </div>
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: ${percentage}%;"></div>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span style="font-size:0.8rem; color:var(--text-muted);">
+                  ${isEnding ? 'Final alcanzado' : `Paso ${stepCount}`}
+                </span>
+                <button class="btn-secondary" style="padding:0.3rem 0.5rem; font-size:0.78rem;" title="Reiniciar" onclick="app.restartStory()">↺</button>
+              </div>
+            </div>
+
+            <div class="reader-node-card">
+              ${nodeImage ? `
+                <div class="reader-image-container">
+                  <img src="${nodeImage}" alt="${node.titulo || this.currentStory.titulo}" class="reader-image">
+                  <div class="reader-image-gradient"></div>
+                </div>
+              ` : ''}
+
+              <div class="reader-body">
+                ${node.titulo ? `<h1 class="reader-node-title">${node.titulo}</h1>` : ''}
+                <div class="reader-text">
+                  ${this.formatText(node.texto)}
+                </div>
+                ${optionsHtml}
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      fireConfetti() {
+        const canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const pieces = [];
+        const colors = ['#10b981', '#34d399', '#ffffff', '#f59e0b', '#fbbf24'];
+
+        for (let i = 0; i < 70; i++) {
+          pieces.push({
+            x: canvas.width / 2,
+            y: canvas.height * 0.6,
+            vx: (Math.random() - 0.5) * 12,
+            vy: (Math.random() - 0.8) * 14,
+            size: Math.random() * 8 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            rotation: Math.random() * 360,
+            vRot: (Math.random() - 0.5) * 10
+          });
+        }
+
+        let animationFrame;
+        let count = 0;
+
+        function update() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          pieces.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.35;
+            p.rotation += p.vRot;
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+            ctx.restore();
+          });
+
+          count++;
+          if (count < 140) {
+            animationFrame = requestAnimationFrame(update);
+          } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+          }
+        }
+
+        update();
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      app.init();
+    });
+  </script>
+  <script src="js/cookie-banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devorador Neón (Fuga en la Red) — Arcade de Laberinto Retro Gratis | TusDesvarios.com</title>
+  <meta name="description" content="Juega gratis a Devorador Neón: el clásico arcade de laberinto y persecución reinventado con 60 FPS, estética ciberespacio, nodos EMP, IA enemiga y sonido procedural.">
+  <meta name="keywords" content="juego de laberinto arcade, pac retro gratis, come cocos neon, devorador neon juego, juego arcade de persecucion, ciber laberinto gratis, tus desvarios">
+  
+  <link rel="canonical" href="https://tusdesvarios.com/juego-devorador-neon.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Devorador Neón (Fuga en la Red) | Tus Desvaríos">
+  <meta property="og:description" content="Devora nodos cuánticos, activa el EMP y burla a los 4 cortafuegos en un laberinto retrofuturista.">
+  <meta property="og:url" content="https://tusdesvarios.com/juego-devorador-neon.html">
+  <meta property="og:image" content="images/games/portada_devorador_neon.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Devorador Neón — Arcade de Laberinto Retro Gratis">
+  <meta name="twitter:description" content="El clásico arcade de laberinto reinventado con estética synthwave, 60 FPS y sonido procedural 8-bit.">
+  <meta name="twitter:image" content="images/games/portada_devorador_neon.jpg">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Devorador Neón: Fuga en la Red",
+  "description": "El legendario arcade de laberinto y persecución electromagnética reinventado con estética synthwave neón, 60 FPS, IA táctica con 4 cortafuegos diferenciados, nodos EMP y sonido procedural 8-bit.",
+  "url": "https://tusdesvarios.com/juego-devorador-neon.html",
+  "genre": [
+    "Arcade",
+    "Maze",
+    "Retro Arcade",
+    "Action"
+  ],
+  "playMode": "SinglePlayer",
+  "applicationCategory": "Game",
+  "inLanguage": "es",
+  "image": "https://tusdesvarios.com/images/games/portada_devorador_neon.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tus Desvaríos",
+    "url": "https://tusdesvarios.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://tusdesvarios.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Desvaríos Retro",
+      "item": "https://tusdesvarios.com/desvarios-retro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Devorador Neón",
+      "item": "https://tusdesvarios.com/juego-devorador-neon.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #ffffff;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 0 18px rgba(168, 85, 247, 0.4), 0 0 36px rgba(6, 182, 212, 0.2);
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-image {
+      transform: scale(1.05);
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text-top {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      color: #c4b5fd;
+      text-transform: uppercase;
+    }
+
+    .logo-text-main {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.42rem 0.5rem;
+      max-width: 680px;
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1.5px);
+    }
+
+    .nav-link.active-crea {
+      background: rgba(16, 185, 129, 0.2) !important;
+      color: #34d399 !important;
+      border-color: rgba(16, 185, 129, 0.5) !important;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-literarios {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-retro {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-mental {
+      background: rgba(6, 182, 212, 0.2) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(6, 182, 212, 0.5) !important;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-humor {
+      background: rgba(236, 72, 153, 0.2) !important;
+      color: #f472b6 !important;
+      border-color: rgba(236, 72, 153, 0.5) !important;
+      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-red {
+      background: rgba(59, 130, 246, 0.2) !important;
+      color: #60a5fa !important;
+      border-color: rgba(59, 130, 246, 0.5) !important;
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-portal {
+      background: rgba(168, 85, 247, 0.2) !important;
+      color: #c084fc !important;
+      border-color: rgba(168, 85, 247, 0.5) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.nav-link-user {
+      border-color: rgba(168, 85, 247, 0.35);
+      background: rgba(168, 85, 247, 0.08);
+      color: #e9d5ff;
+    }
+
+    .nav-link.nav-link-user:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+      color: #ffffff;
+    }
+
+    .nav-link.nav-link-user.logged-in {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: rgba(56, 189, 248, 0.1);
+      color: #bae6fd;
+    }
+
+    .nav-link.nav-link-user.logged-in:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+      color: #ffffff;
+    }
+
+    .nav-link.active-usuario {
+      background: rgba(168, 85, 247, 0.25) !important;
+      color: #e9d5ff !important;
+      border-color: rgba(168, 85, 247, 0.6) !important;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35) !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-link.active-foro {
+      background: rgba(245, 158, 11, 0.2) !important;
+      color: #fbbf24 !important;
+      border-color: rgba(245, 158, 11, 0.5) !important;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
+    @media (max-width: 900px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+      .header-nav {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-image {
+        width: 42px;
+        height: 42px;
+      }
+      .logo-text-top {
+        font-size: 0.72rem;
+      }
+      .logo-text-main {
+        font-size: 1.15rem;
+      }
+      .nav-link {
+        padding: 0.32rem 0.65rem;
+        font-size: 0.78rem;
+      }
+    }
+  
+
+    :root {
+      --bg-dark: #070a12;
+      --bg-surface: #0e1424;
+      --bg-card: rgba(18, 24, 38, 0.88);
+      --border-emerald: rgba(16, 185, 129, 0.35);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --neon-emerald: #10b981;
+      --neon-cyan: #38bdf8;
+      --neon-yellow: #facc15;
+      --neon-rose: #f43f5e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: linear-gradient(180deg, var(--bg-dark) 0%, #0c1220 100%);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .game-page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1.2rem 1rem 3rem;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-bar {
+      width: 100%;
+      max-width: 460px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: var(--neon-emerald);
+      color: #fff;
+    }
+
+    .btn-tool {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-muted);
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-tool:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .game-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .game-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      color: var(--neon-emerald);
+      text-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+      margin-bottom: 0.25rem;
+    }
+    .game-subtitle {
+      color: var(--text-muted);
+      font-size: 0.86rem;
+    }
+
+    .stats-bar {
+      width: 100%;
+      max-width: 460px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-emerald);
+      border-radius: 12px;
+      padding: 0.6rem 1rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .stat-value {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .canvas-wrapper {
+      position: relative;
+      background: #060911;
+      border: 2px solid rgba(16, 185, 129, 0.4);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 0 35px rgba(16, 185, 129, 0.2), inset 0 0 20px rgba(0,0,0,0.8);
+      max-width: 100%;
+    }
+
+    #board-canvas {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .overlay-modal {
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 10, 18, 0.9);
+      backdrop-filter: blur(6px);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .btn-cta {
+      background: var(--neon-emerald);
+      color: #070a12;
+      border: none;
+      padding: 0.7rem 1.6rem;
+      border-radius: 9999px;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 0.92rem;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+      transition: transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .btn-cta:hover {
+      transform: scale(1.04);
+    }
+
+    .dpad-container {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      width: 240px;
+    }
+    .dpad-row {
+      display: flex;
+      gap: 0.8rem;
+    }
+    .btn-dpad {
+      background: rgba(18, 24, 38, 0.9);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: var(--neon-emerald);
+      width: 56px;
+      height: 46px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      cursor: pointer;
+      touch-action: manipulation;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(16, 185, 129, 0.15);
+      transition: all 0.15s;
+    }
+    .btn-dpad:active {
+      transform: scale(0.94);
+      background: rgba(16, 185, 129, 0.25);
+    }
+
+    .instructions-text {
+      margin-top: 0.8rem;
+      color: #64748b;
+      font-size: 0.78rem;
+      text-align: center;
+      max-width: 480px;
+      line-height: 1.5;
+    }
+
+    .modal-help-dialog {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 100;
+    }
+    .modal-help-content {
+      background: #121826;
+      border: 1px solid var(--border-emerald);
+      border-radius: 16px;
+      padding: 1.75rem;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
+          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
+          <div class="logo-text-group">
+            <span class="logo-text-top">TUS</span>
+            <span class="logo-text-main">DESVARÍOS</span>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
+            <span>📖</span>
+            <span class="nav-link-text">Crea Historias</span>
+          </a>
+          <a href="desvarios-literarios.html" class="nav-link " title="Relatos, Cuentos y Ficción Narrativa">
+            <span>📜</span>
+            <span class="nav-link-text">Relatos</span>
+          </a>
+          <a href="desvarios-retro.html" class="nav-link active-retro" title="Arcade, Juegos Clásicos y El Ahorcado">
+            <span>🕹️</span>
+            <span class="nav-link-text">Juegos Retro</span>
+          </a>
+          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
+            <span>🧪</span>
+            <span class="nav-link-text">Tests Mentales</span>
+          </a>
+          <a href="desvarios-de-humor.html" class="nav-link " title="Sátira, Generador de Excusas y Pensamientos de Ducha">
+            <span>🎭</span>
+            <span class="nav-link-text">Humor & Caos</span>
+          </a>
+          <a href="desvarios-por-la-red.html" class="nav-link " title="Escaparate Web y Bazar de Curiosidades de Amazon">
+            <span>🌐</span>
+            <span class="nav-link-text">Por la Red</span>
+          </a>
+          <a href="foro.html" class="nav-link " title="Comunidad y Foro de Debate">
+            <span>💬</span>
+            <span class="nav-link-text">Foro</span>
+          </a>
+          <a href="index.html" class="nav-link " title="Portada Principal">
+            <span>🏛️</span>
+            <span class="nav-link-text">Portal</span>
+          </a>
+          <a href="login.html" class="nav-link nav-link-user " id="header-user-btn" title="Acceso / Mi Perfil">
+            <span id="header-user-icon">👤</span>
+            <span class="nav-link-text" id="header-user-name">Acceder</span>
+          </a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          try {
+            var raw = localStorage.getItem('desvarios_user_cache');
+            if (raw) {
+              var u = JSON.parse(raw);
+              var btn = document.getElementById('header-user-btn');
+              var nameEl = document.getElementById('header-user-name');
+              var iconEl = document.getElementById('header-user-icon');
+              if (btn && nameEl && u && u.username) {
+                btn.href = 'perfil.html';
+                btn.title = 'Ficha de ' + u.username;
+                btn.classList.add('logged-in');
+                nameEl.textContent = '@' + u.username;
+                if (iconEl && u.avatar_id) {
+                  iconEl.innerHTML = '<img src="images/avatars/' + u.avatar_id + '.svg" alt="' + u.username + '" style="width:18px;height:18px;border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;border:1px solid rgba(255,255,255,0.4);">';
+                }
+              }
+            }
+          } catch(e){}
+        })();
+      </script>
+    </header>
+  
+
+  <div class="game-page-container">
+    <div class="nav-bar">
+      <a href="desvarios-retro.html" class="btn-nav">
+        ← Volver a Arcade
+      </a>
+      <div style="display:flex; gap:0.5rem;">
+        <button id="btn-sound" class="btn-tool" title="Sonido">🔊 Sonido</button>
+        <button id="btn-help" class="btn-tool" title="Ayuda">❓ Reglas</button>
+        <button id="btn-pause" class="btn-tool" title="Pausa">⏸️ Pausa</button>
+      </div>
+    </div>
+
+    <header class="game-header">
+      <h1 class="game-title">Devorador Neón: Fuga en la Red</h1>
+      <p class="game-subtitle">Devora los nodos cuánticos, activa el EMP y burla a los cortafuegos centinela.</p>
+    </header>
+
+    <!-- Marcador Superior -->
+    <div class="stats-bar">
+      <div>
+        <div class="stat-label">PUNTOS</div>
+        <div id="disp-score" class="stat-value">0</div>
+      </div>
+      <div id="disp-lives" style="display:flex; gap:0.35rem; font-size:1.1rem; color:#f43f5e;">
+        ❤️ ❤️ ❤️
+      </div>
+      <div style="text-align:right;">
+        <div class="stat-label" style="color:var(--neon-yellow);">RÉCORD</div>
+        <div id="disp-highscore" class="stat-value" style="color:var(--neon-yellow);">0</div>
+      </div>
+    </div>
+
+    <!-- Canvas y Modales -->
+    <main class="canvas-wrapper">
+      <canvas id="board-canvas" width="418" height="462"></canvas>
+
+      <!-- Overlay Pausa -->
+      <div id="overlay-pause" class="overlay-modal">
+        <h2 style="font-size:1.6rem; color:var(--neon-yellow); font-weight:800;">PAUSA</h2>
+        <button id="btn-resume" class="btn-cta">Reanudar</button>
+      </div>
+
+      <!-- Overlay Game Over -->
+      <div id="overlay-gameover" class="overlay-modal">
+        <span style="font-size:2.5rem;">💀</span>
+        <h2 style="font-size:1.6rem; font-weight:800; color:var(--neon-rose);">SISTEMA INTERCEPTADO</h2>
+        <p style="color:var(--text-muted); font-size:0.85rem;">Puntuación alcanzada</p>
+        <div id="gameover-score" style="font-size:2rem; font-weight:900; color:#fff;">0</div>
+        <div id="new-record-msg" style="display:none; color:var(--neon-yellow); font-size:0.82rem; font-weight:700;">🌟 ¡Nuevo Récord Personal!</div>
+        <button id="btn-restart" class="btn-cta" style="margin-top:0.5rem;">🔄 Jugar de Nuevo</button>
+      </div>
+    </main>
+
+    <!-- Controles D-Pad para Móvil -->
+    <div class="dpad-container">
+      <button id="touch-up" class="btn-dpad" type="button">▲</button>
+      <div class="dpad-row">
+        <button id="touch-left" class="btn-dpad" type="button">◀</button>
+        <button id="touch-down" class="btn-dpad" type="button">▼</button>
+        <button id="touch-right" class="btn-dpad" type="button">▶</button>
+      </div>
+    </div>
+
+    <div class="instructions-text">
+      ⌨️ <strong>Teclado:</strong> Flechas o [WASD] para moverte · [P] Pausa · 📱 Desliza con el dedo (Swipe) o usa el D-pad táctil.
+    </div>
+  </div>
+
+  <!-- Modal Ayuda -->
+  <div id="modal-help" class="modal-help-dialog" onclick="document.getElementById('modal-help').style.display='none'">
+    <div class="modal-help-content" onclick="event.stopPropagation()">
+      <h3 style="font-size:1.3rem; color:var(--neon-emerald); margin-bottom:0.8rem; font-weight:800;">
+        Reglas de Devorador Neón
+      </h3>
+      <ul style="font-size:0.88rem; color:#cbd5e1; line-height:1.6; padding-left:1.2rem; margin-bottom:1.2rem;">
+        <li><strong>Objetivo:</strong> Devora todos los nodos de datos cyan del laberinto para pasar de nivel.</li>
+        <li><strong>Nodos EMP:</strong> Las esferas doradas en las cuatro esquinas vuelven vulnerables a los cortafuegos durante 7,5 segundos. ¡Aprovecha para absorberlos y ganar puntos multiplicados!</li>
+        <li><strong>Portales de Salto:</strong> En la fila central hay túneles laterales que te teletransportan instantáneamente de un extremo al otro.</li>
+        <li><strong>Cortafuegos:</strong> Cada uno tiene un patrón de rastreo diferente. ¡Anticípate a sus giros!</li>
+      </ul>
+      <button onclick="document.getElementById('modal-help').style.display='none'" class="btn-cta" style="width:100%;">¡Entendido!</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const MAZE_MAP = [
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 3, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 3, 1],
+        [1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1],
+        [1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1],
+        [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+        [1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1],
+        [1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1],
+        [1, 1, 1, 1, 2, 1, 1, 1, 0, 1, 0, 1, 1, 1, 2, 1, 1, 1, 1],
+        [0, 0, 0, 1, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 1, 0, 0, 0], // Fila 8: Vía conectada con avenidas laterales
+        [1, 1, 1, 1, 2, 1, 0, 1, 1, 5, 1, 1, 0, 1, 2, 1, 1, 1, 1],
+        [0, 0, 0, 0, 2, 0, 0, 1, 4, 4, 4, 1, 0, 0, 2, 0, 0, 0, 0],
+        [1, 1, 1, 1, 2, 1, 0, 1, 1, 1, 1, 1, 0, 1, 2, 1, 1, 1, 1],
+        [0, 0, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 0, 0, 0],
+        [1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1],
+        [1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+        [1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1],
+        [1, 3, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 3, 1],
+        [1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1],
+        [1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 1, 1, 2, 1],
+        [1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      ];
+
+      const COLS = 19;
+      const ROWS = 21;
+      const TILE_SIZE = 22;
+
+      let map = [];
+      let dotsRemaining = 0;
+      let score = 0;
+      let highScore = 0;
+      let lives = 3;
+      let level = 1;
+      let isGameOver = false;
+      let isPaused = false;
+      let soundEnabled = true;
+
+      const player = {
+        x: 9,
+        y: 16,
+        subX: 9,
+        subY: 16,
+        dirX: -1,
+        dirY: 0,
+        nextDirX: -1,
+        nextDirY: 0,
+        mouthAngle: 0.2,
+        mouthDir: 1,
+        angle: Math.PI,
+        speed: 0.11,
+      };
+
+      let enemies = [];
+      let frightenedTimer = 0;
+      let comboMultiplier = 1;
+      let particles = [];
+      let lastTime = 0;
+      let audioCtx = null;
+
+      const canvas = document.getElementById('board-canvas');
+      const ctx = canvas.getContext('2d');
+
+      try {
+        const saved = localStorage.getItem('desvarios_devorador_neon_highscore');
+        if (saved) {
+          highScore = parseInt(saved, 10);
+          document.getElementById('disp-highscore').textContent = highScore;
+        }
+      } catch(e) {}
+
+      function playSound(type) {
+        if (!soundEnabled) return;
+        try {
+          if (!audioCtx) {
+            const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+            audioCtx = new AudioContextClass();
+          }
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+          const now = audioCtx.currentTime;
+
+          if (type === 'chomp') {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(260 + Math.random() * 40, now);
+            osc.frequency.exponentialRampToValueAtTime(120, now + 0.04);
+            gain.gain.setValueAtTime(0.06, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now);
+            osc.stop(now + 0.04);
+          } else if (type === 'emp') {
+            [440, 554, 659, 880].forEach((freq, idx) => {
+              const osc = audioCtx.createOscillator();
+              const gain = audioCtx.createGain();
+              osc.type = 'square';
+              osc.frequency.setValueAtTime(freq, now + idx * 0.05);
+              gain.gain.setValueAtTime(0.12, now + idx * 0.05);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.05 + 0.2);
+              osc.connect(gain);
+              gain.connect(audioCtx.destination);
+              osc.start(now + idx * 0.05);
+              osc.stop(now + idx * 0.05 + 0.2);
+            });
+          } else if (type === 'eatGhost') {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(600, now);
+            osc.frequency.exponentialRampToValueAtTime(1200, now + 0.15);
+            gain.gain.setValueAtTime(0.15, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now);
+            osc.stop(now + 0.15);
+          } else if (type === 'death') {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(320, now);
+            osc.frequency.exponentialRampToValueAtTime(40, now + 0.4);
+            gain.gain.setValueAtTime(0.22, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now);
+            osc.stop(now + 0.4);
+          } else if (type === 'levelClear') {
+            [523.25, 659.25, 783.99, 1046.5].forEach((freq, idx) => {
+              const osc = audioCtx.createOscillator();
+              const gain = audioCtx.createGain();
+              osc.type = 'triangle';
+              osc.frequency.setValueAtTime(freq, now + idx * 0.08);
+              gain.gain.setValueAtTime(0.16, now + idx * 0.08);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.25);
+              osc.connect(gain);
+              gain.connect(audioCtx.destination);
+              osc.start(now + idx * 0.08);
+              osc.stop(now + idx * 0.08 + 0.25);
+            });
+          }
+        } catch(e) {}
+      }
+
+      function initMap() {
+        let count = 0;
+        map = MAZE_MAP.map(row => row.map(cell => {
+          if (cell === 2 || cell === 3) count++;
+          return cell;
+        }));
+        dotsRemaining = count;
+      }
+
+      function resetPositions() {
+        player.x = 9;
+        player.y = 16;
+        player.subX = 9;
+        player.subY = 16;
+        player.dirX = -1;
+        player.dirY = 0;
+        player.nextDirX = -1;
+        player.nextDirY = 0;
+        player.mouthAngle = 0.2;
+        player.mouthDir = 1;
+        player.angle = Math.PI;
+        player.speed = 0.11 + (level - 1) * 0.01;
+
+        enemies = [
+          { name: 'Cerbero', color: '#f43f5e', x: 9, y: 8, dirX: -1, dirY: 0, lastTileX: 9, lastTileY: 8, baseX: 9, baseY: 8, isFrightened: false, isDead: false, speed: 0.08 + (level - 1) * 0.008, state: 'active', exitDelay: 0 },
+          { name: 'Vórtice', color: '#ec4899', x: 8, y: 10, dirX: 0, dirY: -1, lastTileX: -1, lastTileY: -1, baseX: 8, baseY: 10, isFrightened: false, isDead: false, speed: 0.076 + (level - 1) * 0.008, state: 'in_house', exitDelay: 1200 },
+          { name: 'Glitch', color: '#06b6d4', x: 9, y: 10, dirX: 0, dirY: -1, lastTileX: -1, lastTileY: -1, baseX: 9, baseY: 10, isFrightened: false, isDead: false, speed: 0.074 + (level - 1) * 0.008, state: 'in_house', exitDelay: 3200 },
+          { name: 'Spectro', color: '#f59e0b', x: 10, y: 10, dirX: -1, dirY: 0, lastTileX: -1, lastTileY: -1, baseX: 10, baseY: 10, isFrightened: false, isDead: false, speed: 0.072 + (level - 1) * 0.008, state: 'in_house', exitDelay: 5500 },
+        ];
+        frightenedTimer = 0;
+      }
+
+      function updateLivesUI() {
+        let hearts = '';
+        for (let i = 0; i < 3; i++) {
+          hearts += (i < lives ? '❤️ ' : '🖤 ');
+        }
+        document.getElementById('disp-lives').textContent = hearts.trim();
+      }
+
+      function restart() {
+        initMap();
+        score = 0;
+        lives = 3;
+        level = 1;
+        isGameOver = false;
+        isPaused = false;
+        particles = [];
+        document.getElementById('disp-score').textContent = score;
+        updateLivesUI();
+        document.getElementById('overlay-pause').style.display = 'none';
+        document.getElementById('overlay-gameover').style.display = 'none';
+        resetPositions();
+      }
+
+      function isWall(cellX, cellY) {
+        if (cellY === 10 && (cellX < 0 || cellX >= COLS)) return false; // Túnel lateral
+        if (cellX < 0 || cellX >= COLS || cellY < 0 || cellY >= ROWS) return true;
+        const val = map[cellY] ? map[cellY][cellX] : 1;
+        return val === 1 || val === 5;
+      }
+
+      function createParticles(x, y, color, count = 12) {
+        for (let i = 0; i < count; i++) {
+          const ang = Math.random() * Math.PI * 2;
+          const spd = Math.random() * 3 + 1;
+          particles.push({
+            x: x * TILE_SIZE + TILE_SIZE / 2,
+            y: y * TILE_SIZE + TILE_SIZE / 2,
+            vx: Math.cos(ang) * spd,
+            vy: Math.sin(ang) * spd,
+            color,
+            alpha: 1,
+            size: Math.random() * 2.5 + 1.5,
+          });
+        }
+      }
+
+      function handleDirection(dx, dy) {
+        if (isPaused || isGameOver) return;
+        player.nextDirX = dx;
+        player.nextDirY = dy;
+
+        // Actualizar rotación visual inmediatamente
+        if (dx === 1) player.angle = 0;
+        else if (dx === -1) player.angle = Math.PI;
+        else if (dy === 1) player.angle = Math.PI / 2;
+        else if (dy === -1) player.angle = -Math.PI / 2;
+
+        // Giro 180° inmediato
+        if (dx === -player.dirX && dy === -player.dirY) {
+          player.dirX = dx;
+          player.dirY = dy;
+        } else if (player.dirX === 0 && player.dirY === 0) {
+          // Si estaba detenido, arrancar de inmediato si el paso está abierto
+          const cellX = Math.round(player.subX);
+          const cellY = Math.round(player.subY);
+          if (!isWall(cellX + dx, cellY + dy)) {
+            player.dirX = dx;
+            player.dirY = dy;
+            player.subX = cellX;
+            player.subY = cellY;
+          }
+        }
+      }
+
+      // Keyboard
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'p' || e.key === 'P' || e.key === 'Escape') {
+          isPaused = !isPaused;
+          document.getElementById('overlay-pause').style.display = isPaused ? 'flex' : 'none';
+          return;
+        }
+        if (isPaused || isGameOver) return;
+
+        switch (e.key) {
+          case 'ArrowUp':
+          case 'w':
+          case 'W':
+            e.preventDefault();
+            handleDirection(0, -1);
+            break;
+          case 'ArrowDown':
+          case 's':
+          case 'S':
+            e.preventDefault();
+            handleDirection(0, 1);
+            break;
+          case 'ArrowLeft':
+          case 'a':
+          case 'A':
+            e.preventDefault();
+            handleDirection(-1, 0);
+            break;
+          case 'ArrowRight':
+          case 'd':
+          case 'D':
+            e.preventDefault();
+            handleDirection(1, 0);
+            break;
+        }
+      });
+
+      // Touch Swipe
+      let touchStartX = 0;
+      let touchStartY = 0;
+      canvas.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+
+      canvas.addEventListener('touchend', (e) => {
+        if (isPaused || isGameOver) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        const absDx = Math.abs(dx);
+        const absDy = Math.abs(dy);
+
+        if (Math.max(absDx, absDy) < 18) return;
+
+        if (absDx > absDy) {
+          handleDirection(dx > 0 ? 1 : -1, 0);
+        } else {
+          handleDirection(0, dy > 0 ? 1 : -1);
+        }
+      }, { passive: true });
+
+      // Game Loop
+      function gameLoop(time) {
+        requestAnimationFrame(gameLoop);
+
+        const dt = time - lastTime;
+        lastTime = time;
+
+        if (!isPaused && !isGameOver) {
+          // Temporizador de miedo
+          if (frightenedTimer > 0) {
+            frightenedTimer -= dt;
+            if (frightenedTimer <= 0) {
+              enemies.forEach(en => { en.isFrightened = false; });
+              comboMultiplier = 1;
+            }
+          }
+
+          // Posición y celda actual del jugador
+          const cellX = Math.round(player.subX);
+          const cellY = Math.round(player.subY);
+          const distX = player.subX - cellX;
+          const distY = player.subY - cellY;
+
+          // Cambio de dirección de movimiento
+          if (player.nextDirX !== 0 || player.nextDirY !== 0) {
+            if (player.nextDirX === -player.dirX && player.nextDirY === -player.dirY) {
+              player.dirX = player.nextDirX;
+              player.dirY = player.nextDirY;
+              if (player.dirX === 1) player.angle = 0;
+              else if (player.dirX === -1) player.angle = Math.PI;
+              else if (player.dirY === 1) player.angle = Math.PI / 2;
+              else if (player.dirY === -1) player.angle = -Math.PI / 2;
+            } else if (player.dirX === 0 && player.dirY === 0) {
+              if (!isWall(cellX + player.nextDirX, cellY + player.nextDirY)) {
+                player.dirX = player.nextDirX;
+                player.dirY = player.nextDirY;
+                player.subX = cellX;
+                player.subY = cellY;
+                if (player.dirX === 1) player.angle = 0;
+                else if (player.dirX === -1) player.angle = Math.PI;
+                else if (player.dirY === 1) player.angle = Math.PI / 2;
+                else if (player.dirY === -1) player.angle = -Math.PI / 2;
+              }
+            } else {
+              const turningHorizontal = player.dirY !== 0 && player.nextDirX !== 0;
+              const turningVertical = player.dirX !== 0 && player.nextDirY !== 0;
+
+              if (turningHorizontal && Math.abs(distY) < player.speed * 1.5) {
+                if (!isWall(cellX + player.nextDirX, cellY)) {
+                  player.subY = cellY;
+                  player.dirX = player.nextDirX;
+                  player.dirY = 0;
+                  player.angle = player.dirX === 1 ? 0 : Math.PI;
+                }
+              } else if (turningVertical && Math.abs(distX) < player.speed * 1.5) {
+                if (!isWall(cellX, cellY + player.nextDirY)) {
+                  player.subX = cellX;
+                  player.dirX = 0;
+                  player.dirY = player.nextDirY;
+                  player.angle = player.dirY === 1 ? Math.PI / 2 : -Math.PI / 2;
+                }
+              }
+            }
+          }
+
+          // Movimiento continuo y detección de pared
+          if (player.dirX !== 0 || player.dirY !== 0) {
+            const nextCellX = cellX + player.dirX;
+            const nextCellY = cellY + player.dirY;
+            const isApproachingWall = isWall(nextCellX, nextCellY);
+
+            if (isApproachingWall) {
+              const distToCenter = player.dirX !== 0 ? (player.subX - cellX) * player.dirX : (player.subY - cellY) * player.dirY;
+
+              if (distToCenter >= 0) {
+                const possibleTurns = [];
+                if (player.dirX !== 0) {
+                  if (!isWall(cellX, cellY - 1)) possibleTurns.push({ dx: 0, dy: -1 });
+                  if (!isWall(cellX, cellY + 1)) possibleTurns.push({ dx: 0, dy: 1 });
+                } else {
+                  if (!isWall(cellX - 1, cellY)) possibleTurns.push({ dx: -1, dy: 0 });
+                  if (!isWall(cellX + 1, cellY)) possibleTurns.push({ dx: 1, dy: 0 });
+                }
+
+                if (possibleTurns.length === 1 && player.nextDirX === 0 && player.nextDirY === 0) {
+                  player.subX = cellX;
+                  player.subY = cellY;
+                  player.dirX = possibleTurns[0].dx;
+                  player.dirY = possibleTurns[0].dy;
+                  if (player.dirX === 1) player.angle = 0;
+                  else if (player.dirX === -1) player.angle = Math.PI;
+                  else if (player.dirY === 1) player.angle = Math.PI / 2;
+                  else if (player.dirY === -1) player.angle = -Math.PI / 2;
+                } else {
+                  player.subX = cellX;
+                  player.subY = cellY;
+                  player.dirX = 0;
+                  player.dirY = 0;
+                }
+              } else {
+                player.subX += player.dirX * player.speed;
+                player.subY += player.dirY * player.speed;
+              }
+            } else {
+              player.subX += player.dirX * player.speed;
+              player.subY += player.dirY * player.speed;
+            }
+
+            // Túnel lateral
+            if (Math.round(player.subY) === 10) {
+              if (player.subX < -0.5) player.subX = COLS - 0.5;
+              else if (player.subX > COLS - 0.5) player.subX = -0.5;
+            }
+
+            // Animación de boca
+            player.mouthAngle += 0.05 * player.mouthDir;
+            if (player.mouthAngle > 0.45 || player.mouthAngle < 0.05) player.mouthDir *= -1;
+          } else {
+            player.mouthAngle = 0.15;
+          }
+
+          player.x = Math.round(player.subX);
+          player.y = Math.round(player.subY);
+
+          // Comer píldora / EMP
+          if (map[player.y] && map[player.y][player.x]) {
+            const cell = map[player.y][player.x];
+            if (cell === 2) {
+              map[player.y][player.x] = 0;
+              dotsRemaining--;
+              playSound('chomp');
+              score += 10;
+              document.getElementById('disp-score').textContent = score;
+            } else if (cell === 3) {
+              map[player.y][player.x] = 0;
+              dotsRemaining--;
+              playSound('emp');
+              frightenedTimer = 7500;
+              comboMultiplier = 1;
+              enemies.forEach(en => { if (!en.isDead) en.isFrightened = true; });
+              score += 50;
+              document.getElementById('disp-score').textContent = score;
+            }
+
+            if (dotsRemaining <= 0) {
+              playSound('levelClear');
+              if (window.confetti) confetti({ particleCount: 50, spread: 80, origin: { y: 0.6 } });
+              level++;
+              initMap();
+              resetPositions();
+            }
+          }
+
+          function isGhostWall(cellX, cellY) {
+            if (cellY === 10 && (cellX < 0 || cellX >= COLS)) return false; // Túnel lateral
+            if (cellX < 0 || cellX >= COLS || cellY < 0 || cellY >= ROWS) return true;
+            const val = map[cellY] ? map[cellY][cellX] : 1;
+            return val === 1 || val === 5 || val === 4;
+          }
+
+          // Cortafuegos IA con máquina de estados retro e IA por celda
+          enemies.forEach(enemy => {
+            // 1. En espera dentro de la bahía (animación de balanceo vertical neón)
+            if (enemy.state === 'in_house') {
+              enemy.y = enemy.baseY + Math.sin(time * 0.005 + enemy.baseX) * 0.15;
+              enemy.exitDelay -= dt;
+              if (enemy.exitDelay <= 0) {
+                enemy.state = 'exiting';
+              }
+              return;
+            }
+
+            // 2. Salida guiada por la bahía central
+            if (enemy.state === 'exiting') {
+              if (Math.abs(enemy.x - 9) > 0.06) {
+                enemy.x += (enemy.x < 9 ? 1 : -1) * 0.06;
+              } else {
+                enemy.x = 9;
+                enemy.y -= 0.06;
+                if (enemy.y <= 8.0) {
+                  enemy.y = 8.0;
+                  enemy.state = 'active';
+                  enemy.dirX = (enemy.name === 'Vórtice' || enemy.name === 'Spectro') ? 1 : -1;
+                  enemy.dirY = 0;
+                  enemy.lastTileX = 9;
+                  enemy.lastTileY = 8;
+                }
+              }
+              return;
+            }
+
+            // 3. Ojos derrotados regresan a la base
+            if (enemy.state === 'dead' || enemy.isDead) {
+              const dx = 9 - enemy.x;
+              const dy = 8 - enemy.y;
+              const dist = Math.hypot(dx, dy);
+              if (dist < 0.3) {
+                enemy.x = 9;
+                enemy.y = 10;
+                enemy.isDead = false;
+                enemy.isFrightened = false;
+                enemy.state = 'exiting';
+              } else {
+                enemy.x += (dx / dist) * 0.18;
+                enemy.y += (dy / dist) * 0.18;
+              }
+              return;
+            }
+
+            // 4. Activo navegando por el laberinto
+            const currentCellX = Math.round(enemy.x);
+            const currentCellY = Math.round(enemy.y);
+
+            const distToCenter = enemy.dirX !== 0
+              ? (enemy.x - currentCellX) * enemy.dirX
+              : (enemy.y - currentCellY) * enemy.dirY;
+
+            const isNewTile = currentCellX !== enemy.lastTileX || currentCellY !== enemy.lastTileY;
+
+            if (isNewTile && distToCenter >= -0.01) {
+              enemy.lastTileX = currentCellX;
+              enemy.lastTileY = currentCellY;
+
+              if (enemy.dirX !== 0) enemy.y = currentCellY;
+              if (enemy.dirY !== 0) enemy.x = currentCellX;
+
+              const possibleDirs = [];
+              const dirs = [
+                { dx: 1, dy: 0 },
+                { dx: -1, dy: 0 },
+                { dx: 0, dy: 1 },
+                { dx: 0, dy: -1 },
+              ];
+
+              dirs.forEach(d => {
+                if (d.dx !== -enemy.dirX || d.dy !== -enemy.dirY) {
+                  if (!isGhostWall(currentCellX + d.dx, currentCellY + d.dy)) {
+                    possibleDirs.push(d);
+                  }
+                }
+              });
+
+              if (possibleDirs.length === 0) {
+                if (!isGhostWall(currentCellX - enemy.dirX, currentCellY - enemy.dirY)) {
+                  possibleDirs.push({ dx: -enemy.dirX, dy: -enemy.dirY });
+                }
+              }
+
+              if (possibleDirs.length > 0) {
+                let chosen = possibleDirs[0];
+
+                if (enemy.isFrightened) {
+                  let maxDist = -1;
+                  possibleDirs.forEach(d => {
+                    const dist = Math.hypot(currentCellX + d.dx - player.x, currentCellY + d.dy - player.y);
+                    if (dist > maxDist) {
+                      maxDist = dist;
+                      chosen = d;
+                    }
+                  });
+                } else {
+                  let targetX = player.x;
+                  let targetY = player.y;
+
+                  if (enemy.name === 'Vórtice') {
+                    targetX += player.dirX * 3;
+                    targetY += player.dirY * 3;
+                  } else if (enemy.name === 'Spectro') {
+                    if (Math.hypot(currentCellX - player.x, currentCellY - player.y) < 4) {
+                      targetX = 1;
+                      targetY = 19;
+                    }
+                  }
+
+                  let minDist = 9999;
+                  possibleDirs.forEach(d => {
+                    const dist = Math.hypot(currentCellX + d.dx - targetX, currentCellY + d.dy - targetY);
+                    if (dist < minDist) {
+                      minDist = dist;
+                      chosen = d;
+                    }
+                  });
+                }
+
+                if (chosen.dx !== enemy.dirX || chosen.dy !== enemy.dirY) {
+                  enemy.x = currentCellX;
+                  enemy.y = currentCellY;
+                }
+
+                enemy.dirX = chosen.dx;
+                enemy.dirY = chosen.dy;
+              }
+            }
+
+            const currentSpeed = enemy.isFrightened ? enemy.speed * 0.6 : enemy.speed;
+            enemy.x += enemy.dirX * currentSpeed;
+            enemy.y += enemy.dirY * currentSpeed;
+
+            if (Math.round(enemy.y) === 10) {
+              if (enemy.x < -0.5) enemy.x = COLS - 0.5;
+              else if (enemy.x > COLS - 0.5) enemy.x = -0.5;
+            }
+
+            // Colisión Jugador vs Cortafuegos (solo con enemigos activos)
+            const distToPlayer = Math.hypot(enemy.x - player.subX, enemy.y - player.subY);
+            if (distToPlayer < 0.65) {
+              if (enemy.isFrightened) {
+                playSound('eatGhost');
+                enemy.isDead = true;
+                enemy.isFrightened = false;
+                enemy.state = 'dead';
+                createParticles(enemy.x, enemy.y, '#38bdf8', 15);
+                const points = 200 * comboMultiplier;
+                comboMultiplier *= 2;
+                score += points;
+                document.getElementById('disp-score').textContent = score;
+              } else if (!enemy.isDead) {
+                playSound('death');
+                createParticles(player.subX, player.subY, '#10b981', 20);
+                lives--;
+                updateLivesUI();
+
+                if (lives <= 0) {
+                  isGameOver = true;
+                  document.getElementById('gameover-score').textContent = score;
+                  if (score > highScore) {
+                    highScore = score;
+                    document.getElementById('disp-highscore').textContent = highScore;
+                    document.getElementById('new-record-msg').style.display = 'block';
+                    try { localStorage.setItem('desvarios_devorador_neon_highscore', highScore); } catch(e) {}
+                  } else {
+                    document.getElementById('new-record-msg').style.display = 'none';
+                  }
+                  document.getElementById('overlay-gameover').style.display = 'flex';
+                } else {
+                  resetPositions();
+                }
+              }
+            }
+          });
+        }
+
+        // Renderizado en canvas
+        ctx.fillStyle = '#060911';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Laberinto
+        for (let r = 0; r < ROWS; r++) {
+          for (let c = 0; c < COLS; c++) {
+            const val = map[r] ? map[r][c] : 0;
+            const px = c * TILE_SIZE;
+            const py = r * TILE_SIZE;
+
+            if (val === 1) {
+              ctx.save();
+              ctx.fillStyle = '#0e1628';
+              ctx.fillRect(px, py, TILE_SIZE, TILE_SIZE);
+              ctx.strokeStyle = '#1d4ed8';
+              ctx.lineWidth = 1.5;
+              ctx.shadowColor = '#38bdf8';
+              ctx.shadowBlur = 4;
+              ctx.strokeRect(px + 1, py + 1, TILE_SIZE - 2, TILE_SIZE - 2);
+              ctx.restore();
+            } else if (val === 5) {
+              ctx.fillStyle = 'rgba(244, 63, 94, 0.4)';
+              ctx.fillRect(px, py + TILE_SIZE / 2 - 2, TILE_SIZE, 4);
+            } else if (val === 2) {
+              ctx.save();
+              ctx.fillStyle = '#38bdf8';
+              ctx.shadowColor = '#38bdf8';
+              ctx.shadowBlur = 6;
+              ctx.beginPath();
+              ctx.arc(px + TILE_SIZE / 2, py + TILE_SIZE / 2, 2.5, 0, Math.PI * 2);
+              ctx.fill();
+              ctx.restore();
+            } else if (val === 3) {
+              const pulse = 1 + Math.sin(time * 0.008) * 0.25;
+              ctx.save();
+              ctx.fillStyle = '#facc15';
+              ctx.shadowColor = '#facc15';
+              ctx.shadowBlur = 12;
+              ctx.beginPath();
+              ctx.arc(px + TILE_SIZE / 2, py + TILE_SIZE / 2, 5.5 * pulse, 0, Math.PI * 2);
+              ctx.fill();
+              ctx.restore();
+            }
+          }
+        }
+
+        // Cortafuegos
+        enemies.forEach(enemy => {
+          const ex = enemy.x * TILE_SIZE + TILE_SIZE / 2;
+          const ey = enemy.y * TILE_SIZE + TILE_SIZE / 2;
+          const rad = TILE_SIZE * 0.45;
+
+          ctx.save();
+          if (enemy.isDead) {
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.arc(ex - 3, ey, 2.5, 0, Math.PI * 2);
+            ctx.arc(ex + 3, ey, 2.5, 0, Math.PI * 2);
+            ctx.fill();
+          } else {
+            const isBlinking = enemy.isFrightened && frightenedTimer < 2000 && Math.floor(time / 180) % 2 === 0;
+            const bodyColor = enemy.isFrightened ? (isBlinking ? '#ffffff' : '#3b82f6') : enemy.color;
+
+            ctx.fillStyle = bodyColor;
+            ctx.shadowColor = bodyColor;
+            ctx.shadowBlur = 10;
+
+            ctx.beginPath();
+            ctx.arc(ex, ey - 2, rad, Math.PI, 0, false);
+            ctx.lineTo(ex + rad, ey + rad - 2);
+            ctx.lineTo(ex + rad * 0.5, ey + rad - 6);
+            ctx.lineTo(ex, ey + rad - 2);
+            ctx.lineTo(ex - rad * 0.5, ey + rad - 6);
+            ctx.lineTo(ex - rad, ey + rad - 2);
+            ctx.closePath();
+            ctx.fill();
+
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.arc(ex - 3, ey - 3, 2.5, 0, Math.PI * 2);
+            ctx.arc(ex + 3, ey - 3, 2.5, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#0f172a';
+            ctx.beginPath();
+            ctx.arc(ex - 3 + enemy.dirX * 1.2, ey - 3 + enemy.dirY * 1.2, 1.2, 0, Math.PI * 2);
+            ctx.arc(ex + 3 + enemy.dirX * 1.2, ey - 3 + enemy.dirY * 1.2, 1.2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          ctx.restore();
+        });
+
+        // Jugador Devorador Neón
+        if (!isGameOver) {
+          const px = player.subX * TILE_SIZE + TILE_SIZE / 2;
+          const py = player.subY * TILE_SIZE + TILE_SIZE / 2;
+          const rad = TILE_SIZE * 0.48;
+
+          ctx.save();
+          ctx.translate(px, py);
+          ctx.rotate(player.angle);
+
+          ctx.fillStyle = '#10b981';
+          ctx.shadowColor = '#10b981';
+          ctx.shadowBlur = 14;
+
+          ctx.beginPath();
+          ctx.arc(0, 0, rad, player.mouthAngle * Math.PI, (2 - player.mouthAngle) * Math.PI);
+          ctx.lineTo(0, 0);
+          ctx.closePath();
+          ctx.fill();
+
+          ctx.fillStyle = '#022c22';
+          ctx.beginPath();
+          ctx.arc(1, -rad * 0.5, 2, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.restore();
+        }
+
+        // Partículas
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const part = particles[i];
+          part.x += part.vx;
+          part.y += part.vy;
+          part.alpha -= 0.03;
+          if (part.alpha <= 0) {
+            particles.splice(i, 1);
+          } else {
+            ctx.save();
+            ctx.globalAlpha = part.alpha;
+            ctx.fillStyle = part.color;
+            ctx.shadowColor = part.color;
+            ctx.shadowBlur = 6;
+            ctx.beginPath();
+            ctx.arc(part.x, part.y, part.size, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          }
+        }
+      }
+
+      // UI Listeners
+      document.getElementById('btn-sound').onclick = () => {
+        soundEnabled = !soundEnabled;
+        document.getElementById('btn-sound').textContent = soundEnabled ? '🔊 Sonido' : '🔇 Mudo';
+      };
+      document.getElementById('btn-help').onclick = () => {
+        document.getElementById('modal-help').style.display = 'flex';
+      };
+      document.getElementById('btn-pause').onclick = () => {
+        isPaused = !isPaused;
+        document.getElementById('overlay-pause').style.display = isPaused ? 'flex' : 'none';
+      };
+      document.getElementById('btn-resume').onclick = () => {
+        isPaused = false;
+        document.getElementById('overlay-pause').style.display = 'none';
+      };
+      document.getElementById('btn-restart').onclick = restart;
+
+      document.getElementById('touch-up').onclick = () => handleDirection(0, -1);
+      document.getElementById('touch-down').onclick = () => handleDirection(0, 1);
+      document.getElementById('touch-left').onclick = () => handleDirection(-1, 0);
+      document.getElementById('touch-right').onclick = () => handleDirection(1, 0);
+
+      restart();
+      requestAnimationFrame(gameLoop);
+    })();
+  </script>
+</body>
+</html>
