@@ -5,13 +5,18 @@ const { getHeaderHtml, getHeaderCss } = require('./common_header');
 const relatosPath = path.join(__dirname, '..', 'data', 'literarios', 'relatos.json');
 const relatos = JSON.parse(fs.readFileSync(relatosPath, 'utf8'));
 
+function getRelatoImage(r) {
+  if (r.imagen) return r.imagen;
+  if (r.slug === 'el-ultimo-eco-de-andromeda') return 'el-ultimo-eco-andromeda.jpg';
+  if (r.slug === 'la-taberna-del-cuervo-ciego') return 'la-taberna-cuervo-ciego.jpg';
+  if (r.slug === 'el-coleccionista-de-silencios') return 'el-coleccionista-silencios.jpg';
+  if (r.slug === 'microrrelatos-de-impacto') return 'microrrelatos-impacto.jpg';
+  return 'el-susurro-relojes.jpg';
+}
+
 function generateCatalogHtml() {
   const cardsHtml = relatos.map(r => {
-    let imageName = 'el-susurro-relojes.jpg';
-    if (r.slug === 'el-ultimo-eco-de-andromeda') imageName = 'el-ultimo-eco-andromeda.jpg';
-    if (r.slug === 'la-taberna-del-cuervo-ciego') imageName = 'la-taberna-cuervo-ciego.jpg';
-    if (r.slug === 'el-coleccionista-de-silencios') imageName = 'el-coleccionista-silencios.jpg';
-    if (r.slug === 'microrrelatos-de-impacto') imageName = 'microrrelatos-impacto.jpg';
+    const imageName = getRelatoImage(r);
 
     return `
       <article class="story-card cat-card cat-card-active" data-slug="${r.slug}" data-genero="${r.genero}" style="--card-accent:${r.color}; --card-glow:${r.color}33; --card-border:${r.color}55; height:100%; cursor:pointer;" onclick="location.href='relato-${r.slug}.html'">
@@ -76,9 +81,9 @@ function generateCatalogHtml() {
   <meta property="og:image" content="images/categories/desvarios-literarios.jpg">
 
   <!-- Favicon & Touch Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -595,11 +600,7 @@ function generateCatalogHtml() {
 }
 
 function generateStoryReaderHtml(relato, index, all) {
-  let imageName = 'el-susurro-relojes.jpg';
-  if (relato.slug === 'el-ultimo-eco-de-andromeda') imageName = 'el-ultimo-eco-andromeda.jpg';
-  if (relato.slug === 'la-taberna-del-cuervo-ciego') imageName = 'la-taberna-cuervo-ciego.jpg';
-  if (relato.slug === 'el-coleccionista-de-silencios') imageName = 'el-coleccionista-silencios.jpg';
-  if (relato.slug === 'microrrelatos-de-impacto') imageName = 'microrrelatos-impacto.jpg';
+  const imageName = getRelatoImage(relato);
 
   const prev = index > 0 ? all[index - 1] : null;
   const next = index < all.length - 1 ? all[index + 1] : null;
@@ -651,9 +652,9 @@ function generateStoryReaderHtml(relato, index, all) {
   <meta property="og:image" content="images/literarios/${imageName}">
 
   <!-- Favicon & Touch Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,16 +1,33 @@
 const fs = require('fs');
 const path = require('path');
+const { getHeaderHtml, getHeaderCss } = require('./common_header');
 
 const excusasRaw = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'humor', 'excusas.json'), 'utf8'));
 const oraculoRaw = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'humor', 'oraculo.json'), 'utf8'));
 const leyesRaw = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'humor', 'leyes.json'), 'utf8'));
 const pildorasRaw = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'humor', 'pildoras.json'), 'utf8'));
+const chistesRaw = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'humor', 'chistes.json'), 'utf8'));
 
 function generateRobustHumorHtml() {
   const excusasJson = JSON.stringify(excusasRaw);
   const oraculoJson = JSON.stringify(oraculoRaw);
   const leyesJson = JSON.stringify(leyesRaw);
   const pildorasJson = JSON.stringify(pildorasRaw);
+  const chistesJson = JSON.stringify(chistesRaw);
+
+  const chisteCats = [
+    { id: 'todas', label: 'Todos los Chistes', icono: '🃏', color: '#f43f5e' },
+    { id: 'friqui', label: 'Friqui & Ciencia', icono: '🔬', color: '#06b6d4' },
+    { id: 'palabras', label: 'Juegos de Palabras', icono: '✨', color: '#f59e0b' },
+    { id: 'absurdo', label: 'Humor Absurdo', icono: '🦆', color: '#ec4899' },
+    { id: 'cotidiano', label: 'Sátira Cotidiana', icono: '☕', color: '#10b981' },
+    { id: 'filosofico', label: 'Filosofía', icono: '🌌', color: '#a855f7' }
+  ];
+  let chisteCatsHtml = '';
+  chisteCats.forEach((c, i) => {
+    const cnt = c.id === 'todas' ? chistesRaw.chistes.length : chistesRaw.chistes.filter(ch => ch.categoria === c.id).length;
+    chisteCatsHtml += `<button id="chiste-cat-btn-${c.id}" onclick="setChisteCat('${c.id}')" style="padding:0.45rem 1rem; border-radius:var(--radius-full); border:1.5px solid ${i === 0 ? c.color : 'rgba(255,255,255,0.12)'}; background:${i === 0 ? c.color + '25' : 'rgba(255,255,255,0.03)'}; color:${i === 0 ? '#ffffff' : 'var(--text-secondary)'}; font-weight:${i === 0 ? '700' : '500'}; font-size:0.88rem; cursor:pointer; display:inline-flex; align-items:center; gap:0.45rem; box-shadow:${i === 0 ? '0 0 14px ' + c.color + '40' : 'none'}; transition:all 0.18s ease;"><span>${c.icono}</span> <span>${c.label}</span> <span style="font-size:0.75rem; opacity:0.75;">(${cnt})</span></button>`;
+  });
 
   // 1. Pre-render Excusas buttons (Single column, full width, readable font)
   let ambitosHtml = '';
@@ -148,9 +165,9 @@ function generateRobustHumorHtml() {
   </script>
 
   <!-- Favicon & Touch Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -205,121 +222,7 @@ function generateRobustHumorHtml() {
       width: 100%;
     }
 
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(11, 15, 25, 0.85);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .site-header-inner {
-      max-width: 1280px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0.85rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .logo-link {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      text-decoration: none;
-      color: var(--text-primary);
-      font-family: var(--font-display, 'Cinzel', serif);
-      font-size: 1.2rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .logo-image {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1.5px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 0 14px rgba(168, 85, 247, 0.35);
-    }
-    .header-nav {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      padding-bottom: 2px;
-    }
-    .nav-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.45rem 0.85rem;
-      border-radius: var(--radius-full, 9999px);
-      font-size: 0.84rem;
-      font-weight: 600;
-      color: var(--text-muted, #94a3b8);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      text-decoration: none;
-      transition: all 0.18s ease;
-      white-space: nowrap;
-    }
-    .nav-link:hover {
-      color: var(--text-primary, #f8fafc);
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.22);
-    }
-    .active-portal {
-      color: #c084fc !important;
-      background: rgba(168, 85, 247, 0.15) !important;
-      border-color: rgba(168, 85, 247, 0.45) !important;
-      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25);
-      font-weight: 700 !important;
-    }
-    .active-crea {
-      color: #34d399 !important;
-      background: rgba(16, 185, 129, 0.15) !important;
-      border-color: rgba(16, 185, 129, 0.45) !important;
-      box-shadow: 0 0 14px rgba(16, 185, 129, 0.25);
-      font-weight: 700 !important;
-    }
-    .active-retro {
-      color: #fbbf24 !important;
-      background: rgba(245, 158, 11, 0.15) !important;
-      border-color: rgba(245, 158, 11, 0.45) !important;
-      box-shadow: 0 0 14px rgba(245, 158, 11, 0.25);
-      font-weight: 700 !important;
-    }
-    .active-mental {
-      color: #38bdf8 !important;
-      background: rgba(6, 182, 212, 0.15) !important;
-      border-color: rgba(6, 182, 212, 0.45) !important;
-      box-shadow: 0 0 14px rgba(6, 182, 212, 0.25);
-      font-weight: 700 !important;
-    }
-    .active-humor {
-      color: #f472b6 !important;
-      background: rgba(236, 72, 153, 0.15) !important;
-      border-color: rgba(236, 72, 153, 0.45) !important;
-      box-shadow: 0 0 14px rgba(236, 72, 153, 0.25);
-      font-weight: 700 !important;
-    }
-    @media (max-width: 768px) {
-      .site-header-inner {
-        padding: 0.65rem 0.85rem;
-      }
-      .header-nav {
-        gap: 0.3rem;
-      }
-      .nav-link {
-        padding: 0.38rem 0.65rem;
-        font-size: 0.78rem;
-      }
-    }
+${getHeaderCss()}
 
     /* Main Content Container & Layout Margins */
     .main-content {
@@ -445,40 +348,13 @@ function generateRobustHumorHtml() {
     }
 
   </style>
+  <!-- Supabase SDK v2 & Desvarios Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
 </head>
 <body>
   <div class="app-container">
-    <!-- Header -->
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="index.html" class="logo-link" title="Ir a la portada de Tus Desvaríos">
-          <img src="images/logo-icon.png" alt="Tus Desvaríos Logo" class="logo-image">
-          <span>Tus Desvaríos</span>
-        </a>
-        <nav class="header-nav">
-          <a href="crea-tu-historia.html" class="nav-link " title="Novelas y Ficción Interactiva">
-            <span>📖</span>
-            <span class="nav-link-text">Crea tus Desvaríos</span>
-          </a>
-          <a href="desvarios-retro.html" class="nav-link " title="Arcade, Juegos Clásicos y El Ahorcado">
-            <span>🕹️</span>
-            <span class="nav-link-text">Desvaríos Retro</span>
-          </a>
-          <a href="desvarios-mentales.html" class="nav-link " title="Tests, Enigmas y Retos Psicológicos">
-            <span>🧪</span>
-            <span class="nav-link-text">Desvaríos Mentales</span>
-          </a>
-          <a href="desvarios-de-humor.html" class="nav-link active-humor" title="Sátira, Generador de Excusas y Pensamientos de Ducha">
-            <span>🎭</span>
-            <span class="nav-link-text">Desvaríos de Humor</span>
-          </a>
-          <a href="index.html" class="nav-link " title="Portada Principal">
-            <span>🏛️</span>
-            <span class="nav-link-text">Portal</span>
-          </a>
-        </nav>
-      </div>
-    </header>
+    ${getHeaderHtml('humor')}
 
     <!-- Main Content -->
     <main class="main-content">
@@ -498,6 +374,9 @@ function generateRobustHumorHtml() {
         <div id="machine-tabs" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.65rem; margin-top:1rem;">
           <button onclick="switchHumorTab('excusas')" id="tab-btn-excusas" style="padding:0.65rem 1.3rem; border-radius:var(--radius-full); border:2px solid #ec4899; background:rgba(236,72,153,0.25); color:#fff; font-weight:800; font-size:0.95rem; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; box-shadow:0 0 20px rgba(236,72,153,0.4); transform:scale(1.02); transition:all 0.18s ease;">
             <span style="font-size:1.2rem;">🎩</span> <span>Máquina de Excusas</span>
+          </button>
+          <button onclick="switchHumorTab('chistes')" id="tab-btn-chistes" style="padding:0.65rem 1.3rem; border-radius:var(--radius-full); border:1.5px solid var(--border-subtle); background:rgba(255,255,255,0.04); color:var(--text-secondary); font-weight:600; font-size:0.95rem; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; transition:all 0.18s ease;">
+            <span style="font-size:1.2rem;">🃏</span> <span>Chistes del Desvarío</span>
           </button>
           <button onclick="switchHumorTab('oraculo')" id="tab-btn-oraculo" style="padding:0.65rem 1.3rem; border-radius:var(--radius-full); border:1.5px solid var(--border-subtle); background:rgba(255,255,255,0.04); color:var(--text-secondary); font-weight:600; font-size:0.95rem; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; transition:all 0.18s ease;">
             <span style="font-size:1.2rem;">🔮</span> <span>Oráculo del Desvarío</span>
@@ -721,6 +600,51 @@ function generateRobustHumorHtml() {
           <p id="pens-contenido" style="font-size:1.15rem; font-style:italic; color:#ffffff; line-height:1.7; margin:0;"></p>
         </div>
       </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+          MÁQUINA 5: CHISTES DEL DESVARÍO
+      ═══════════════════════════════════════════════════════════ -->
+      <section id="sec-chistes" class="machine-section" style="display:none; padding:2.5rem 2rem; background:linear-gradient(180deg, rgba(38, 12, 22, 0.94) 0%, rgba(18, 12, 24, 0.96) 100%); border:1.5px solid rgba(244,63,94,0.4); border-radius:var(--radius-lg); box-shadow:0 16px 50px rgba(0,0,0,0.6), 0 0 35px rgba(244,63,94,0.18); text-align:center;">
+        <div style="display:inline-flex; align-items:center; justify-content:center; width:80px; height:80px; border-radius:50%; background:rgba(244, 63, 94, 0.15); border:2px solid rgba(244, 63, 94, 0.5); box-shadow:0 0 25px rgba(244,63,94,0.4); margin-bottom:1.25rem;">
+          <span style="font-size:2.8rem;">🃏</span>
+        </div>
+        <h2 style="font-size:1.85rem; font-weight:900; color:#ffffff; margin:0 0 0.5rem; letter-spacing:-0.01em;">Chistes del Desvarío & Humor Absurdo</h2>
+        <p style="font-size:1.02rem; color:var(--text-secondary); max-width:640px; margin:0 auto 1.75rem;">
+          Una selecta dosis de humor inteligente, ciencia friqui, juegos de palabras y comedia cotidiana. Filtra por categoría o pulsa el botón para revelar un chiste aleatorio.
+        </p>
+
+        <!-- Categorías Filter Pills -->
+        <div id="chiste-cat-filters" style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem; margin-bottom:2rem; max-width:850px; margin-left:auto; margin-right:auto;">
+          ${chisteCatsHtml}
+        </div>
+
+        <button onclick="revelarChiste()" style="padding:0.95rem 3rem; border-radius:var(--radius-full); border:none; background:linear-gradient(135deg, #f43f5e 0%, #be123c 100%); color:#ffffff; font-size:1.15rem; font-weight:900; cursor:pointer; display:inline-flex; align-items:center; gap:0.75rem; box-shadow:0 8px 30px rgba(244,63,94,0.5); transition:all 0.2s ease;">
+          <span style="font-size:1.3rem;">🃏</span> <span>Revelar Chiste Aleatorio</span>
+        </button>
+
+        <div id="chiste-result-box" style="display:none; text-align:left; max-width:780px; margin:2.5rem auto 0; padding:2rem 1.75rem; border-radius:var(--radius-md); background:linear-gradient(135deg, rgba(244,63,94,0.12) 0%, rgba(18,12,24,0.96) 100%); border:1.5px solid rgba(244,63,94,0.45); box-shadow:0 10px 35px rgba(0,0,0,0.5);">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem; margin-bottom:1.25rem;">
+            <span id="chiste-cat-badge" style="font-size:0.85rem; color:#fb7185; text-transform:uppercase; font-weight:800; background:rgba(244,63,94,0.18); border:1px solid rgba(244,63,94,0.35); padding:0.25rem 0.75rem; border-radius:var(--radius-full);"></span>
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <span id="chiste-counter" style="font-size:0.85rem; color:var(--text-muted); font-weight:600;"></span>
+              <button onclick="copyChiste()" class="btn-secondary" id="btn-copy-chiste" style="font-size:0.82rem; padding:0.35rem 0.75rem; gap:0.35rem; color:#fb7185;">
+                <span>📋</span> <span>Copiar</span>
+              </button>
+            </div>
+          </div>
+          <h3 id="chiste-titulo" style="font-size:1.45rem; font-weight:800; color:#ffffff; margin:0 0 1rem; line-height:1.4;"></h3>
+          <div id="chiste-planteamiento" style="font-size:1.15rem; color:#e2e8f0; line-height:1.75; margin-bottom:1.25rem; padding:1rem 1.25rem; background:rgba(255,255,255,0.03); border-left:4px solid #f43f5e; border-radius:0 var(--radius-sm) var(--radius-sm) 0;"></div>
+          <div id="chiste-remate-box" style="padding:1.25rem 1.5rem; background:rgba(244,63,94,0.12); border:1.5px solid #f43f5e; border-radius:var(--radius-md); box-shadow:0 0 20px rgba(244,63,94,0.2);">
+            <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:#fb7185; margin-bottom:0.35rem;">⚡ Remate del Desvarío</div>
+            <p id="chiste-remate" style="font-size:1.25rem; font-weight:800; color:#ffffff; line-height:1.55; margin:0;"></p>
+          </div>
+          <div style="display:flex; justify-content:flex-end; margin-top:1.5rem;">
+            <button onclick="revelarChiste()" class="btn-secondary" style="font-size:0.88rem; padding:0.5rem 1.15rem; gap:0.45rem;">
+              <span>🔄</span> <span>Otro Chiste</span>
+            </button>
+          </div>
+        </div>
+      </section>
       <!-- ═══════════════════════════════════════════════════════════
           SECCIÓN EDITORIAL SEO & GUÍA DE SÁTIRA COTIDIANA
       ═══════════════════════════════════════════════════════════ -->
@@ -767,6 +691,14 @@ function generateRobustHumorHtml() {
             <h3 style="font-size:1.1rem; font-weight:700; color:#34d399; margin-bottom:0.45rem; font-family:var(--font-display, 'Cinzel', serif);">Pensamientos de Ducha</h3>
             <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
               Reflexiones lúcidas y verdades incómodas generadas en el único templo de paz mental que le queda a la humanidad contemporánea: la ducha de agua caliente.
+            </p>
+          </div>
+
+          <div style="padding:1.35rem; background:rgba(255,255,255,0.03); border-radius:var(--radius-md); border:1px solid rgba(244,63,94,0.25);">
+            <div style="font-size:1.6rem; margin-bottom:0.5rem;">🃏</div>
+            <h3 style="font-size:1.1rem; font-weight:700; color:#fb7185; margin-bottom:0.45rem; font-family:var(--font-display, 'Cinzel', serif);">Chistes del Desvarío</h3>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+              Repertorio exclusivo de más de 60 chistes inteligentes clasificados en ciencia friqui, juegos de palabras, absurdo cósmico, sátira cotidiana y filosofía cómica para compartir o reír sin culpa.
             </p>
           </div>
         </div>
@@ -859,6 +791,7 @@ function generateRobustHumorHtml() {
     const oraculoData = ${oraculoJson};
     const leyesData = ${leyesJson};
     const pildorasData = ${pildorasJson};
+    const chistesData = ${chistesJson};
 
     let curAmbito = excusasData.ambitos[0].id;
     let curGravedad = excusasData.gravedades[0].id;
@@ -867,8 +800,8 @@ function generateRobustHumorHtml() {
     let curExcusa = null;
 
     function switchHumorTab(tabId) {
-      const tabs = ['excusas', 'oraculo', 'leyes', 'pensamientos'];
-      const colors = { excusas: '#ec4899', oraculo: '#a855f7', leyes: '#f59e0b', pensamientos: '#10b981' };
+      const tabs = ['excusas', 'chistes', 'oraculo', 'leyes', 'pensamientos'];
+      const colors = { excusas: '#ec4899', chistes: '#f43f5e', oraculo: '#a855f7', leyes: '#f59e0b', pensamientos: '#10b981' };
       
       tabs.forEach(t => {
         const sec = document.getElementById('sec-' + t);
@@ -1040,6 +973,67 @@ function generateRobustHumorHtml() {
       box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
+    let curChisteCat = 'todas';
+    let curChiste = null;
+    let curChisteIdx = 0;
+
+    function setChisteCat(catId) {
+      curChisteCat = catId;
+      const cats = ['todas', 'friqui', 'palabras', 'absurdo', 'cotidiano', 'filosofico'];
+      const catColors = { todas: '#f43f5e', friqui: '#06b6d4', palabras: '#f59e0b', absurdo: '#ec4899', cotidiano: '#10b981', filosofico: '#a855f7' };
+      cats.forEach(c => {
+        const btn = document.getElementById('chiste-cat-btn-' + c);
+        if (btn) {
+          const isAct = c === catId;
+          btn.style.background = isAct ? catColors[c] + '25' : 'rgba(255,255,255,0.03)';
+          btn.style.border = isAct ? '1.5px solid ' + catColors[c] : '1.5px solid rgba(255,255,255,0.12)';
+          btn.style.color = isAct ? '#ffffff' : 'var(--text-secondary)';
+          btn.style.fontWeight = isAct ? '700' : '500';
+          btn.style.boxShadow = isAct ? '0 0 14px ' + catColors[c] + '40' : 'none';
+        }
+      });
+      curChisteIdx = 0;
+    }
+
+    function revelarChiste() {
+      const pool = curChisteCat === 'todas'
+        ? chistesData.chistes
+        : chistesData.chistes.filter(c => c.categoria === curChisteCat);
+      const safePool = pool.length > 0 ? pool : chistesData.chistes;
+      const nextIdx = Math.floor(Math.random() * safePool.length);
+      curChisteIdx = nextIdx === curChisteIdx ? (nextIdx + 1) % safePool.length : nextIdx;
+      curChiste = safePool[curChisteIdx];
+
+      const badge = document.getElementById('chiste-cat-badge');
+      badge.textContent = (curChiste.icono || '🃏') + ' ' + curChiste.categoriaLabel;
+      badge.style.color = curChiste.color || '#fb7185';
+      badge.style.borderColor = (curChiste.color || '#f43f5e') + '60';
+      badge.style.background = (curChiste.color || '#f43f5e') + '22';
+
+      document.getElementById('chiste-counter').textContent = (curChisteIdx + 1) + ' / ' + safePool.length;
+      document.getElementById('chiste-titulo').textContent = curChiste.titulo;
+      document.getElementById('chiste-planteamiento').textContent = curChiste.planteamiento;
+      document.getElementById('chiste-planteamiento').style.borderLeftColor = curChiste.color || '#f43f5e';
+      document.getElementById('chiste-remate').textContent = curChiste.remate;
+      document.getElementById('chiste-remate-box').style.borderColor = curChiste.color || '#f43f5e';
+
+      const box = document.getElementById('chiste-result-box');
+      box.style.display = 'block';
+      box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function copyChiste() {
+      if (!curChiste) return;
+      const textToCopy = '🃏 ' + curChiste.titulo + '\\n\\n' + curChiste.planteamiento + '\\n\\n👉 ' + curChiste.remate + '\\n\\n(Vía Tus Desvaríos - tusdesvarios.com/desvarios-de-humor)';
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const btn = document.getElementById('btn-copy-chiste');
+        btn.innerHTML = '<span>✅</span> <span>¡Copiado!</span>';
+        setTimeout(() => {
+          btn.innerHTML = '<span>📋</span> <span>Copiar</span>';
+        }, 2000);
+      });
+    }
+
     function copyPensamiento() {
       if (!curPens) return;
       navigator.clipboard.writeText(curPens.contenido).then(() => {
@@ -1061,5 +1055,6 @@ module.exports = { generateRobustHumorHtml };
 if (require.main === module) {
   const output = generateRobustHumorHtml();
   fs.writeFileSync(path.join(__dirname, "..", "desvarios-de-humor.html"), output, "utf8");
+  fs.writeFileSync(path.join(__dirname, "..", "public", "desvarios-de-humor.html"), output, "utf8");
   console.log("Successfully wrote clean and balanced desvarios-de-humor.html!");
 }
