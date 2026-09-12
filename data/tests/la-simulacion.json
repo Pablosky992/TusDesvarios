@@ -1,0 +1,233 @@
+{
+  "id": "la-simulacion",
+  "slug": "la-simulacion",
+  "titulo": "El Test de la Simulación: ¿Vives en Matrix o en la Realidad?",
+  "subtitulo": "Un diagnóstico ontológico para medir tu nivel de sospecha frente al código fuente del universo.",
+  "descripcionCorta": "8 dilemas cotidianos y sincronicidades para evaluar si percibes el mundo como una realidad física u holográfica.",
+  "tipo": "puntuacion",
+  "categoria": "curiosidades",
+  "categoriaLabel": "Curiosidades & Trivia",
+  "icono": "🌐",
+  "tiempoMin": 3,
+  "color": "#06b6d4",
+  "preguntas": [
+    {
+      "id": "sim1",
+      "texto": "Caminas por la calle y experimentas un *déjà vu* extremadamente intenso: una persona pasa con un paraguas amarillo y un perro ladra exactamente igual que hace 10 segundos. ¿Qué piensas?",
+      "opciones": [
+        {
+          "texto": "Un simple desajuste neuroquímico entre mis dos hemisferios cerebrales; nada de qué preocuparse.",
+          "puntos": 0
+        },
+        {
+          "texto": "Una extraña coincidencia estadística, curiosa pero intrascendente.",
+          "puntos": 5
+        },
+        {
+          "texto": "Me detengo y miro alrededor buscando una cámara o un fallo en el renderizado de la escena.",
+          "puntos": 10
+        },
+        {
+          "texto": "«Han modificado algo en el servidor central». Mantengo la calma y no miro fijamente a nadie.",
+          "puntos": 15
+        }
+      ]
+    },
+    {
+      "id": "sim2",
+      "texto": "La física cuántica moderna demuestra que las partículas subatómicas no tienen una posición definida hasta que son observadas por un medidor consciente. ¿Cómo interpretas este hecho?",
+      "opciones": [
+        {
+          "texto": "Es una propiedad matemática de la mecánica de ondas cuánticas, sin implicaciones filosóficas sobre la realidad.",
+          "puntos": 0
+        },
+        {
+          "texto": "Demuestra que la conciencia y la materia tienen un vínculo más misterioso de lo que creemos.",
+          "puntos": 8
+        },
+        {
+          "texto": "Es exactamente como la oclusión ambiental en los videojuegos 3D: el motor solo renderiza lo que el jugador está mirando para ahorrar memoria RAM.",
+          "puntos": 15
+        },
+        {
+          "texto": "Una prueba clara de que los desarrolladores de esta simulación tienen limitaciones de procesamiento.",
+          "puntos": 12
+        }
+      ]
+    },
+    {
+      "id": "sim3",
+      "texto": "Pierdes las llaves de tu casa. Las buscas durante 20 minutos por cada rincón. Te rindes, vuelves al salón y aparecen sobre la mesa despejada donde jurarías que ya habías mirado 5 veces. ¿Cuál es tu conclusión?",
+      "opciones": [
+        {
+          "texto": "Ceguera por falta de atención: mi cerebro filtró el objeto por estrés.",
+          "puntos": 0
+        },
+        {
+          "texto": "Un duendecillo doméstico o despiste simpático.",
+          "puntos": 5
+        },
+        {
+          "texto": "Un retraso en la carga de texturas o respawn de objetos en el inventario del mapa.",
+          "puntos": 12
+        },
+        {
+          "texto": "Un parche rápido del sistema que detectó que un elemento clave había desaparecido de mi inventario.",
+          "puntos": 15
+        }
+      ]
+    },
+    {
+      "id": "sim4",
+      "texto": "Si te encontraras cara a cara con el creador o programador de este universo y te ofreciera revelarte el código fuente completo a cambio de no poder volver jamás, ¿qué harías?",
+      "opciones": [
+        {
+          "texto": "Rechazarlo: prefiero mis afectos, mi familia y la experiencia cálida de la vida humana imperfecta.",
+          "puntos": 0
+        },
+        {
+          "texto": "Pedirle primero que arregle la economía, las enfermedades y los mosquitos antes de contestar.",
+          "puntos": 5
+        },
+        {
+          "texto": "Aceptar solo si me deja una consola de comandos con permisos de administrador en modo incógnito.",
+          "puntos": 10
+        },
+        {
+          "texto": "Aceptar de inmediato: la verdad absoluta sobre la naturaleza del cosmos vale cualquier sacrificio.",
+          "puntos": 15
+        }
+      ]
+    },
+    {
+      "id": "sim5",
+      "texto": "Piensas en un amigo de la infancia del que no sabías nada hace 8 años y, exactamente tres minutos después, te llega un mensaje suyo al móvil. ¿Qué sientes?",
+      "opciones": [
+        {
+          "texto": "Azar puro: pensamos en cientos de personas al mes, alguna vez tenía que coincidir matemáticamente.",
+          "puntos": 0
+        },
+        {
+          "texto": "Una sincronicidad junguiana fascinante que demuestra la conexión del inconsciente colectivo.",
+          "puntos": 8
+        },
+        {
+          "texto": "El algoritmo de recomendación predictivo de la simulación ha cruzado nuestros metadatos en caché.",
+          "puntos": 12
+        },
+        {
+          "texto": "Una llamada de función RPC evidente ejecutada por el script de eventos aleatorios de la simulación.",
+          "puntos": 15
+        }
+      ]
+    },
+    {
+      "id": "sim6",
+      "texto": "Observas el cielo nocturno despejado con miles de millones de galaxias y planetas, pero no hay ni una sola señal de vida extraterrestre inteligente (Paradoja de Fermi). ¿Cuál es tu teoría?",
+      "opciones": [
+        {
+          "texto": "Las distancias interestelares son inmensas y la vida compleja es extremadamente rara en el cosmos.",
+          "puntos": 0
+        },
+        {
+          "texto": "Civilizaciones avanzadas se ocultan voluntariamente para no interferir con nuestra evolución.",
+          "puntos": 5
+        },
+        {
+          "texto": "No hay extraterrestres porque esta simulación es un entorno monousuario para un solo planeta; generar vida en otras galaxias consumiría demasiados recursos.",
+          "puntos": 15
+        },
+        {
+          "texto": "Las estrellas son simplemente un fondo de cielo estático (skybox) de alta resolución proyectado en la cúpula celeste.",
+          "puntos": 10
+        }
+      ]
+    },
+    {
+      "id": "sim7",
+      "texto": "¿Qué probabilidad real le otorgas a la hipótesis del filósofo Nick Bostrom de que la humanidad viva en una simulación informática de ancestros?",
+      "opciones": [
+        {
+          "texto": "Menos del 5%: una ocurrencia divertida de ciencia ficción sin base empírica.",
+          "puntos": 0
+        },
+        {
+          "texto": "Entre un 20% y un 40%: un argumento lógico sólido que no podemos descartar.",
+          "puntos": 8
+        },
+        {
+          "texto": "Más del 50%: matemáticamente, si las simulaciones son posibles, las simuladas superarán por millones a la original.",
+          "puntos": 12
+        },
+        {
+          "texto": "99.9%: los indicios están por todas partes, solo hay que saber leer los píxeles de la realidad.",
+          "puntos": 15
+        }
+      ]
+    },
+    {
+      "id": "sim8",
+      "texto": "Al final del día, cuando te vas a dormir en penumbra absoluta y cierras los ojos, ¿cuál es tu sensación íntima sobre tu propia existencia?",
+      "opciones": [
+        {
+          "texto": "Paz biológica: un organismo vivo que descansa para recargar energía metabólica.",
+          "puntos": 0
+        },
+        {
+          "texto": "Asombro místico por el milagro inexplicable de estar consciente en este mundo.",
+          "puntos": 5
+        },
+        {
+          "texto": "La sensación de que al dormir el universo entra en modo suspensión para ahorrar ciclos de CPU.",
+          "puntos": 12
+        },
+        {
+          "texto": "Un usuario que se desconecta temporalmente del terminal a la espera del reinicio matutino.",
+          "puntos": 15
+        }
+      ]
+    }
+  ],
+  "rangos": [
+    {
+      "min": 0,
+      "max": 30,
+      "nivel": "Ancla Orgánica (Fiel a la Realidad Física)",
+      "titulo": "El Terrícola Inquebrantable",
+      "icono": "🌲",
+      "color": "#10b981",
+      "descripcion": "Tu percepción está firmemente enraizada en el mundo tangible. Para ti los árboles huelen a madera, la lluvia moja y el café quema porque la biología y la física newtoniana son sólidas como una roca. Rara vez pierdes el tiempo buscando fantasmas en el código, lo que te permite disfrutar de la vida terrenal con plenitud y calma envidiables.",
+      "consejo": "Sigue disfrutando del barro y del sol; si esto es una simulación, tú eres de los pocos que le sacan verdadero provecho emocional."
+    },
+    {
+      "min": 31,
+      "max": 65,
+      "nivel": "Curioso Escéptico (Observador de Sincronicidades)",
+      "titulo": "El Filósofo de la Grieta",
+      "icono": "🔎",
+      "color": "#3b82f6",
+      "descripcion": "No afirmas con soberbia que vivamos en un ordenador cuántico, pero tampoco te tragas que el universo sea tan simple como nos contaron en la escuela. Te fascinan las coincidencias asombrosas, las paradojas de la física cuántica y esa extraña sensación de que hay algo detrás del telón que se nos escapa por una fracción de segundo.",
+      "consejo": "Mantén esa curiosidad abierta y analítica: el límite entre la ciencia de vanguardia y la especulación filosófica es donde surgen los grandes descubrimientos."
+    },
+    {
+      "min": 66,
+      "max": 95,
+      "nivel": "Hacker Ontológico (Cuestionador del Código)",
+      "titulo": "El Cazador de Glitches",
+      "icono": "⚡",
+      "color": "#a855f7",
+      "descripcion": "Tienes un ojo entrenado para detectar las costuras del tapiz cósmico. Cada vez que experimentas un déjà vu, una coincidencia imposible o lees sobre el principio holográfico del espaciotiempo, una voz en tu nuca te susurra que este escenario tiene fecha de compilación y servidores dedicados. No te asusta: te divierte desafiar sus límites.",
+      "consejo": "Ten cuidado de no obsesionarte con los píxeles; aunque el juego sea simulado, las victorias y los abrazos siguen sintiéndose 100% reales."
+    },
+    {
+      "min": 96,
+      "max": 120,
+      "nivel": "Neófilo Despierto (El Algoritmo te Teme)",
+      "titulo": "El Neo de la Calle Real",
+      "icono": "🕶️",
+      "color": "#06b6d4",
+      "descripcion": "Para ti no hay duda: la cuchara no existe. Vives con la serena certeza de que la realidad física es una elegante interfaz gráfica construida para contener tu consciencia. Desafías las probabilidades estadísticas a diario y casi puedes escuchar el zumbido de los ventiladores de la máquina universal cuando hay silencio absoluto.",
+      "consejo": "Usa tus poderes con responsabilidad: no intentes atravesar paredes de hormigón un lunes por la mañana antes del primer café."
+    }
+  ]
+}

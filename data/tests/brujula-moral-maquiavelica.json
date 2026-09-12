@@ -1,0 +1,233 @@
+{
+  "id": "brujula-moral-maquiavelica",
+  "slug": "brujula-moral-maquiavelica",
+  "titulo": "La Brújula Maquiavélica: ¿Estratega Frío o Idealista Puro?",
+  "subtitulo": "Descubre qué grado de maquiavelismo, diplomacia y pragmatismo guía tus decisiones de poder y ambición.",
+  "descripcionCorta": "8 dilemas éticos y tácticos para desentrañar cómo navegas la ambición, las alianzas, las traiciones y la lucha por el poder.",
+  "tipo": "personalidad",
+  "categoria": "personalidad",
+  "categoriaLabel": "Personalidad & Psicología",
+  "icono": "♟️",
+  "tiempoMin": 4,
+  "color": "#e11d48",
+  "preguntas": [
+    {
+      "id": "bm1",
+      "texto": "Un rival competitivo pero respetable comete un error administrativo grave que nadie ha notado aún. Si lo denuncias en secreto, obtendrás su puesto de inmediato. ¿Qué haces?",
+      "opciones": [
+        {
+          "texto": "Filtro la información de forma anónima y quirúrgica. En el juego del poder, los descuidos se pagan.",
+          "arquetipo": "arquitecto"
+        },
+        {
+          "texto": "Me acerco a él en privado, le advierto del error y me gano una deuda de gratitud perpetua que cobraré más adelante.",
+          "arquetipo": "diplomatico"
+        },
+        {
+          "texto": "No intervengo ni me aprovecho de su desgracia; prefiero ascender únicamente por mis propios méritos y esfuerzo limpio.",
+          "arquetipo": "idealista"
+        },
+        {
+          "texto": "Modifico las reglas del departamento para que ese error deje en evidencia la hipocresía de todo el sistema de ascensos.",
+          "arquetipo": "anarquista"
+        }
+      ]
+    },
+    {
+      "id": "bm2",
+      "texto": "Para lograr un proyecto que beneficiará a cientos de personas vulnerables, es estrictamente necesario prometer favores a un magnate corrupto. ¿Cómo procedes?",
+      "opciones": [
+        {
+          "texto": "Le prometo lo que pida; una vez cumplido el proyecto social, buscaré una cláusula legal o resquicio para neutralizar su exigencia.",
+          "arquetipo": "arquitecto"
+        },
+        {
+          "texto": "Negocio un pacto ambiguo donde él sienta que gana estatus público mientras limito al máximo sus contrapartidas reales.",
+          "arquetipo": "diplomatico"
+        },
+        {
+          "texto": "Me niego categóricamente. El fin noble no justifica pactar con la podredumbre moral; buscaré otra vía ética aunque tarde más.",
+          "arquetipo": "idealista"
+        },
+        {
+          "texto": "Acepto la reunión, grabo en secreto sus peticiones ilícitas y las publico en redes para dinamitar su impunidad.",
+          "arquetipo": "anarquista"
+        }
+      ]
+    },
+    {
+      "id": "bm3",
+      "texto": "Descubres que un aliado cercano y leal tiene debilidades evidentes que amenazan con hundir un plan estratégico crucial. ¿Qué decisión tomas?",
+      "opciones": [
+        {
+          "texto": "Lo aparto fríamente a un puesto decorativo sin acceso a decisiones clave. La lealtad no compensa la incompetencia.",
+          "arquetipo": "arquitecto"
+        },
+        {
+          "texto": "Hablo con él con tacto exquisito, elogiando sus virtudes y convenciéndole de que dar un paso al costado es idea suya.",
+          "arquetipo": "diplomatico"
+        },
+        {
+          "texto": "Asumo el riesgo, permanezco a su lado e intento formar y blindar sus puntos débiles. La lealtad es innegociable.",
+          "arquetipo": "idealista"
+        },
+        {
+          "texto": "Permito que el plan colapse si es necesario: el fracaso forzará a todos a reinventarse desde cero sin jerarquías rígidas.",
+          "arquetipo": "anarquista"
+        }
+      ]
+    },
+    {
+      "id": "bm4",
+      "texto": "En una mesa de negociación tensa, ¿cuál es tu principal arma psicológica?",
+      "opciones": [
+        {
+          "texto": "Tener tres planes de contingencia ocultos y saber exactamente el punto de quiebre financiero del interlocutor.",
+          "arquetipo": "arquitecto"
+        },
+        {
+          "texto": "La sonrisa empática, escuchar el 80% del tiempo y hacer que la otra parte crea que ha ganado mientras cede en lo esencial.",
+          "arquetipo": "diplomatico"
+        },
+        {
+          "texto": "La transparencia absoluta, los datos honestos y la coherencia moral irreprochable.",
+          "arquetipo": "idealista"
+        },
+        {
+          "texto": "La imprevisibilidad radical: descolocar a todos diciendo verdades incómodas que nadie se atreve a pronunciar.",
+          "arquetipo": "anarquista"
+        }
+      ]
+    },
+    {
+      "id": "bm5",
+      "texto": "¿Qué opinión te merece la célebre máxima maquiavélica: «Vale más ser temido que amado, si no se puede ser ambas cosas»?",
+      "opciones": [
+        {
+          "texto": "Es una verdad sociológica indiscutible: el amor es volátil y depende del súbdito; el temor depende del soberano.",
+          "arquetipo": "arquitecto"
+        },
+        {
+          "texto": "Prefiero ser indispensable: si dependen de mis contactos y mediación, no necesitan amarme ni temerme para obedecer.",
+          "arquetipo": "diplomatico"
+        },
+        {
+          "texto": "Es un error destructivo a largo plazo: el respeto genuino y la admiración construyen legados duraderos; el miedo engendra rebelión.",
+          "arquetipo": "idealista"
+        },
+        {
+          "texto": "Los tiranos que buscan temor siempre terminan colgados boca abajo. El poder concentrado es una farsa patética.",
+          "arquetipo": "anarquista"
+        }
+      ]
+    },
+    {
+      "id": "bm6",
+      "texto": "Tienes la oportunidad de recibir un premio prestigioso por una investigación en la que participaste, pero sabes que el mayor mérito fue de un colega tímido que no se promociona. ¿Qué haces?",
+      "opciones": [
+        {
+          "texto": "Acepto el foco público para posicionarme como líder y luego recompenso al colega con presupuesto y recursos entre bambalinas.",
+          "arquetipo": "arquitecto"
+        },
+        {
+          "texto": "Comparto el galardón en el escenario, elogiando públicamente al colega para cultivar una imagen de líder generoso y cohesionador.",
+          "arquetipo": "diplomatico"
+        },
+        {
+          "texto": "Rechazo la autoría principal y exijo que el reconocimiento y el premio íntegro se le otorguen en solitario a él.",
+          "arquetipo": "idealista"
+        },
+        {
+          "texto": "Aprovecho el discurso de aceptación para denunciar cómo las academias premian el espectáculo antes que el talento real.",
+          "arquetipo": "anarquista"
+        }
+      ]
+    },
+    {
+      "id": "bm7",
+      "texto": "¿Cómo reaccionas ante una traición flagrante por parte de alguien en quien confiabas?",
+      "opciones": [
+        {
+          "texto": "No muestro ira. Espero pacientemente semanas o meses hasta ejecutar una respuesta fría que lo deje sin opciones.",
+          "arquetipo": "arquitecto"
+        },
+        {
+          "texto": "Mantengo una cordialidad impecable mientras construyo una red de influencia que lo aísle social y laboralmente sin aspavientos.",
+          "arquetipo": "diplomatico"
+        },
+        {
+          "texto": "Corto todo lazo de raíz, experimento el dolor, pero no busco venganza: ensuciarme con su fango me degradaría a su nivel.",
+          "arquetipo": "idealista"
+        },
+        {
+          "texto": "Hago pública su traición con pelos y señales para que todo el mundo vea con quién tratan y arda su reputación.",
+          "arquetipo": "anarquista"
+        }
+      ]
+    },
+    {
+      "id": "bm8",
+      "texto": "Al final de tu carrera o tu vida, ¿qué epitafio te llenaría de mayor satisfacción?",
+      "opciones": [
+        {
+          "texto": "«Pensó cada jugada con décadas de anticipación y construyó un imperio que sobrevivió a sus enemigos».",
+          "arquetipo": "arquitecto"
+        },
+        {
+          "texto": "«Nadie salió de su mesa con las manos vacías ni con rencor en el corazón; fue el gran tejedor de voluntades».",
+          "arquetipo": "diplomatico"
+        },
+        {
+          "texto": "«Jamás dobló la rodilla ante el poder ni vendió su conciencia por una corona».",
+          "arquetipo": "idealista"
+        },
+        {
+          "texto": "«Encendió la mecha que demolió las viejas cadenas y demostró que los reyes sangran como cualquiera».",
+          "arquetipo": "anarquista"
+        }
+      ]
+    }
+  ],
+  "resultados": {
+    "arquitecto": {
+      "nombre": "El Arquitecto Maquiavélico",
+      "tituloCorto": "Estratega Implacable a Largo Plazo",
+      "icono": "♟️",
+      "color": "#e11d48",
+      "descripcion": "Tu mente opera como un tablero de ajedrez tridimensional. No te mueves por impulsos viscerales ni por romanticismos morales: analizas relaciones de fuerzas, costes de oportunidad y consecuencias a tres jugadas vista. Entiendes que el poder no se mendiga ni se promete, sino que se administra con frialdad matemática.",
+      "fortaleza": "Visión estratégica panorámica, dominio absoluto del autocontrol emocional y ejecución calculada.",
+      "desvario": "Riesgo de paranoia táctica, deshumanizar los vínculos y terminar rodeado de peones en lugar de amigos.",
+      "afinidad": "94% Afinidad con el liderazgo estratégico, la geopolítica y la alta dirección."
+    },
+    "diplomatico": {
+      "nombre": "El Diplomático Camaleónico",
+      "tituloCorto": "Tejedor Invisible de Voluntades",
+      "icono": "🎭",
+      "color": "#f59e0b",
+      "descripcion": "Has dominado el arte supremo de Sun Tzu: vencer al enemigo sin necesidad de desenvainar la espada. Tu habilidad social, carisma adaptativo y capacidad para leer entre líneas te permiten alinear intereses opuestos haciéndoles creer que la idea fue de ellos.",
+      "fortaleza": "Persuasión empática, negociación de alto nivel y red de contactos inquebrantable.",
+      "desvario": "Dificultad para mostrar tu verdadero rostro y tendencia a sobre-adaptarte para evitar fricciones directas.",
+      "afinidad": "91% Afinidad con las relaciones públicas, la mediación de conflictos y el poder blando."
+    },
+    "idealista": {
+      "nombre": "El Idealista Incorruptible",
+      "tituloCorto": "Faro Ético en Tiempos Cínicos",
+      "icono": "⚖️",
+      "color": "#10b981",
+      "descripcion": "Perteneces a esa rara estirpe que valora más dormir con la conciencia tranquila que sentarse en un trono forjado con mentiras. Tu fortaleza emana de una integridad de hierro: tus aliados saben que jamás los venderás y tus adversarios temen tu incorruptibilidad.",
+      "fortaleza": "Coherencia moral admirable, lealtad a prueba de fuego y magnetismo ético natural.",
+      "desvario": "Vulnerabilidad ante rivales despiadados que no respetan las reglas y rigidez ante compromisos pragmáticos necesarios.",
+      "afinidad": "89% Afinidad con la defensa de derechos, la justicia social y el liderazgo transformacional."
+    },
+    "anarquista": {
+      "nombre": "El Disruptor del Caos",
+      "tituloCorto": "Dinamitero de Falsos Templos",
+      "icono": "🔥",
+      "color": "#8b5cf6",
+      "descripcion": "Te niegas a jugar bajo las reglas de un sistema que consideras podrido o artificial. Si el tablero está trucado, tu respuesta es patear la mesa. Eres temido porque no tienes precio: el dinero, el estatus y las condecoraciones institucionales no te seducen.",
+      "fortaleza": "Valentía suicida ante la autoridad, pensamiento lateral fuera de caja y desparpajo para decir la verdad.",
+      "desvario": "Tendencia a dinamitar puentes que aún necesitabas cruzar y dificultad para construir estructuras sostenibles.",
+      "afinidad": "93% Afinidad con la innovación radical, el periodismo de investigación y la rebelión cultural."
+    }
+  }
+}

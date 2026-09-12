@@ -1,0 +1,233 @@
+{
+  "id": "filosofia-existencial-abismo",
+  "slug": "filosofia-existencial-abismo",
+  "titulo": "¿Qué Escuela Filosófica Guía Tu Alma ante el Abismo?",
+  "subtitulo": "Descubre si eres Estoico, Nihilista Optimista, Existencialista o Absurdista ante el misterio de la existencia.",
+  "descripcionCorta": "8 dilemas ontológicos y existenciales para descubrir la brújula filosófica con la que enfrentas la libertad, el dolor, el destino y el vacío.",
+  "tipo": "personalidad",
+  "categoria": "personalidad",
+  "categoriaLabel": "Filosofía & Existencialismo",
+  "icono": "🌌",
+  "tiempoMin": 4,
+  "color": "#6366f1",
+  "preguntas": [
+    {
+      "id": "fa1",
+      "texto": "Miras el cielo estrellado en una noche despejada y tomas conciencia de que la Tierra es solo una mota de polvo insignificante en un universo frío de 93.000 millones de años luz. ¿Qué pensamiento cruza tu mente?",
+      "opciones": [
+        {
+          "texto": "«Qué alivio maravilloso: si nada tiene un significado cósmico impuesto, mis errores son diminutos y soy libre de crear mi propio sentido».",
+          "arquetipo": "nihilista"
+        },
+        {
+          "texto": "«El universo no me debe nada ni tiene propósito, pero mi deber como ser racional es actuar con virtud y serenidad en mi pequeña esfera».",
+          "arquetipo": "estoico"
+        },
+        {
+          "texto": "«Estamos condenados a ser libres: la inmensidad no importa, lo único real son mis decisiones y la responsabilidad de mis actos aquí y ahora».",
+          "arquetipo": "existencialista"
+        },
+        {
+          "texto": "«El abismo es absurdo, frío e indiferente... y precisamente por eso sonrío, enciendo un cigarro y celebro la belleza trágica de estar vivo».",
+          "arquetipo": "absurdista"
+        }
+      ]
+    },
+    {
+      "id": "fa2",
+      "texto": "Un revés inesperado del destino (un despido injusto, una pérdida material o una traición) destruye de golpe meses de trabajo duro. ¿Cómo procesas el golpe?",
+      "opciones": [
+        {
+          "texto": "Distingo de inmediato: lo sucedido está fuera de mi control; lo único bajo mi control es mi juicio y cómo elijo responder. La queja es inútil.",
+          "arquetipo": "estoico"
+        },
+        {
+          "texto": "Acepto el dolor visceral, pero no me victimizo: este golpe redefine mi presente y me obliga a redefinir quién elijo ser a partir de hoy.",
+          "arquetipo": "existencialista"
+        },
+        {
+          "texto": "Es una muestra más de la comedia caótica del universo. Como Sísifo, empujaré la piedra de nuevo cuesta arriba con una sonrisa desafiante.",
+          "arquetipo": "absurdista"
+        },
+        {
+          "texto": "La rueda de la fortuna gira sin malicia personal. Toda estructura se derrumba tarde o temprano; el vacío es el lienzo para empezar de cero.",
+          "arquetipo": "nihilista"
+        }
+      ]
+    },
+    {
+      "id": "fa3",
+      "texto": "Si te demostraran científicamente más allá de toda duda que NO existe ningún dios, ningún más allá ni ningún plan divino para la humanidad, ¿cómo cambiaría tu vida?",
+      "opciones": [
+        {
+          "texto": "En nada: la virtud, el autodominio y la rectitud moral tienen valor por sí mismos, no por el miedo al castigo ni por promesas de paraíso.",
+          "arquetipo": "estoico"
+        },
+        {
+          "texto": "Reafirmaría mi convicción: el ser humano está solo y debe asumir la angustia y la gloria de forjar su propia esencia sin apoyos metafísicos.",
+          "arquetipo": "existencialista"
+        },
+        {
+          "texto": "Sería la confirmación perfecta del Absurdo: buscar significado en un mundo sin sentido es la mayor aventura heroica del intelecto humano.",
+          "arquetipo": "absurdista"
+        },
+        {
+          "texto": "Sería una gran fiesta de emancipación: liberados del peso de mandamientos artificiales, podemos vivir con gozo desinhibido el presente.",
+          "arquetipo": "nihilista"
+        }
+      ]
+    },
+    {
+      "id": "fa4",
+      "texto": "¿Qué concepto te resulta más intolerable o peligroso para la condición humana?",
+      "opciones": [
+        {
+          "texto": "Dejarse arrastrar por las pasiones ciegas, la ira desmedida y lamentarse por cosas que no se pueden cambiar.",
+          "arquetipo": "estoico"
+        },
+        {
+          "texto": "La 'mala fe': esconderse tras excusas como 'no tuve elección' o 'la sociedad me obligó' para eludir la propia libertad.",
+          "arquetipo": "existencialista"
+        },
+        {
+          "texto": "El suicidio filosófico: refugiarse en falsas esperanzas sobrenaturales o dogmas ciegos para escapar del choque con la realidad.",
+          "arquetipo": "absurdista"
+        },
+        {
+          "texto": "El nihilismo pasivo y pesimista: creer que como nada importa, la respuesta es la apatía, el cinismo destructivo y la inacción.",
+          "arquetipo": "nihilista"
+        }
+      ]
+    },
+    {
+      "id": "fa5",
+      "texto": "¿Cómo te relacionas con la noción de tu propia muerte inevitable (*Memento Mori*)?",
+      "opciones": [
+        {
+          "texto": "Es un recordatorio diario indispensable: la muerte no es un castigo, sino la ley natural. Meditar en ella me hace sabio y moderado.",
+          "arquetipo": "estoico"
+        },
+        {
+          "texto": "Es el límite que le otorga urgencia, peso y autenticidad a cada una de mis elecciones. Morir sin haber elegido mi camino sería el único fracaso.",
+          "arquetipo": "existencialista"
+        },
+        {
+          "texto": "Es el chiste final de la existencia: saber que el telón caerá hace que cada acto de la obra, por ridículo que sea, merezca ser vivido con pasión.",
+          "arquetipo": "absurdista"
+        },
+        {
+          "texto": "Es el descanso pacífico de los átomos: volveré al mismo estado de nada dichosa en el que estuve durante los miles de millones de años antes de nacer.",
+          "arquetipo": "nihilista"
+        }
+      ]
+    },
+    {
+      "id": "fa6",
+      "texto": "¿Qué representa el arte, la literatura y la creatividad humana en un cosmos transitorio?",
+      "opciones": [
+        {
+          "texto": "Un ejercicio de disciplina interior y cultivo del alma para armonizarnos con el Logos y la razón universal.",
+          "arquetipo": "estoico"
+        },
+        {
+          "texto": "El acto supremo de rebelión y auto-definición: un testimonio de que una conciencia libre habitó este rincón del tiempo.",
+          "arquetipo": "existencialista"
+        },
+        {
+          "texto": "La revuelta más bella contra el silencio del universo: crear belleza en un mundo que no la solicitó ni la recordará.",
+          "arquetipo": "absurdista"
+        },
+        {
+          "texto": "El juego más refinado de la materia consciente: inventamos historias porque es el deleite más elevado que nos permite la biología.",
+          "arquetipo": "nihilista"
+        }
+      ]
+    },
+    {
+      "id": "fa7",
+      "texto": "Un amigo entra en crisis existencial y te pregunta desesperado: «¿Para qué estamos aquí? ¿Qué sentido tiene todo esto?». ¿Qué le respondes?",
+      "opciones": [
+        {
+          "texto": "«Estamos aquí para cumplir con nuestro deber natural como seres racionales y cooperar con nuestros semejantes con templanza».",
+          "arquetipo": "estoico"
+        },
+        {
+          "texto": "«No hay ningún 'para qué' esperándote ahí fuera; el sentido es una tarea que tienes que construir tú con cada acto a partir de hoy».",
+          "arquetipo": "existencialista"
+        },
+        {
+          "texto": "«No tiene ningún sentido... ¡y esa es la mejor noticia del mundo! Deja de buscar un guión y vive con pasión la aventura rebelde de existir».",
+          "arquetipo": "absurdista"
+        },
+        {
+          "texto": "«El universo no tiene planes para ti, lo que te otorga licencia completa para disfrutar del camino, saborear un café y no tomarte tan en serio».",
+          "arquetipo": "nihilista"
+        }
+      ]
+    },
+    {
+      "id": "fa8",
+      "texto": "Si pudieras cenar con uno de estos cuatro pensadores históricos, ¿a quién elegirías para mantener la charla más lúcida?",
+      "opciones": [
+        {
+          "texto": "Marco Aurelio: para aprender cómo mantener la paz mental y la serenidad gobernando el mayor imperio del mundo antiguo.",
+          "arquetipo": "estoico"
+        },
+        {
+          "texto": "Jean-Paul Sartre o Simone de Beauvoir: para debatir sobre la angustia de la libertad, el compromiso político y la autenticidad.",
+          "arquetipo": "existencialista"
+        },
+        {
+          "texto": "Albert Camus: para charlar sobre el sol del Mediterráneo, el mito de Sísifo y cómo rebelarse contra el absurdo sin perder la ternura.",
+          "arquetipo": "absurdista"
+        },
+        {
+          "texto": "Friedrich Nietzsche: para comprender la voluntad de poder, el eterno retorno y cómo decir 'sí' a la vida tras la muerte de los dioses.",
+          "arquetipo": "nihilista"
+        }
+      ]
+    }
+  ],
+  "resultados": {
+    "estoico": {
+      "nombre": "El Bastión Estoico",
+      "tituloCorto": "Ciudadela Interior de Serenidad",
+      "icono": "🏛️",
+      "color": "#10b981",
+      "descripcion": "Tu alma resuena con las enseñanzas de Séneca, Epicteto y Marco Aurelio. Comprendes con lucidez cristalina la dicotomía del control: no puedes controlar el viento, la fortuna ni las opiniones ajenas, pero tienes soberanía absoluta sobre tus propios pensamientos, juicios y reacciones.",
+      "fortaleza": "Imperturbabilidad ante la adversidad, templanza moral inquebrantable y lucidez racional.",
+      "desvario": "Riesgo de intelectualizar en exceso las emociones o parecer distante y frío ante los afectos de los demás.",
+      "afinidad": "93% Afinidad con el estoicismo romano, la disciplina personal y la sabiduría clásica."
+    },
+    "absurdista": {
+      "nombre": "El Rebelde Absurdista",
+      "tituloCorto": "El Héroe que Sonríe al Abismo",
+      "icono": "🧗",
+      "color": "#f59e0b",
+      "descripcion": "Bebes de la estirpe de Albert Camus. Eres plenamente consciente del choque irreconciliable entre el anhelo humano de significado y el silencio indiferente del universo: el Absurdo. Pero en lugar de desesperar o buscar refugio en supersticiones, eliges la rebelión: vivir con intensidad, pasión creadora, libertad y una sonrisa desafiante.",
+      "fortaleza": "Vitalidad apasionada, sentido del humor frente a la tragedia y autenticidad rebelde.",
+      "desvario": "Desdén ocasional por metas institucionales tradicionales y tendencia a relativizar compromisos a muy largo plazo.",
+      "afinidad": "95% Afinidad con la filosofía de Camus, el arte contestatario y la libertad vital."
+    },
+    "existencialista": {
+      "nombre": "El Artífice Existencialista",
+      "tituloCorto": "Arquitecto de su Propia Esencia",
+      "icono": "⚡",
+      "color": "#06b6d4",
+      "descripcion": "Heredero de Sartre, Simone de Beauvoir y Kierkegaard, asumes con valentía la premisa nuclear: la existencia precede a la esencia. No naciste con un destino preescrito ni con una naturaleza fija: eres, de forma absoluta y radical, la suma de tus elecciones. Rechazas el victimismo y la 'mala fe', abrazando el peso y la gloria de tu libertad.",
+      "fortaleza": "Responsabilidad ética radical, honestidad implacable consigo mismo y compromiso activo con el presente.",
+      "desvario": "Angustia existencial recurrente por el peso de las decisiones y autoexigencia implacable.",
+      "afinidad": "91% Afinidad con el existencialismo, la psicología humanista y el pensamiento crítico."
+    },
+    "nihilista": {
+      "nombre": "El Nihilista Optimista",
+      "tituloCorto": "Espíritu Libre del Cosmos",
+      "icono": "🌌",
+      "color": "#ec4899",
+      "descripcion": "Lejos del nihilismo oscuro y derrotista, has descubierto la revelación más liberadora: si el universo carece de un propósito cósmico predeterminado, el lienzo está completamente en blanco. Eres un espíritu libre nietzscheano que celebra el 'Amor Fati' (amar el destino) y encuentra un gozo inmenso en la belleza transitoria de cada instante.",
+      "fortaleza": "Desapego saludable de vanidades materiales, sentido del humor cósmico y capacidad para disfrutar el presente sin culpas.",
+      "desvario": "Dificultad para conectar con personas atadas a dogmas rígidos y tentación de desentenderse de normas sociales convencionales.",
+      "afinidad": "94% Afinidad con el nietzscheanismo afirmativo, la ciencia cósmica y la emancipación intelectual."
+    }
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "chistes": [
+    {
+      "id": "ch01",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Tecnología",
+      "icono": "💻",
+      "color": "#38bdf8",
+      "titulo": "La lista de la compra del programador",
+      "planteamiento": "La esposa de un programador le dice: «Ve al supermercado y compra una barra de pan. Y si hay huevos, trae diez».",
+      "remate": "El programador regresa a casa con diez barras de pan. Ella le grita: «¡¿Pero por qué has traído diez barras de pan?!». Y él responde: «Porque había huevos»."
+    },
+    {
+      "id": "ch02",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Ciencia",
+      "icono": "⚛️",
+      "color": "#38bdf8",
+      "titulo": "El neutrón en el bar",
+      "planteamiento": "Un neutrón entra en una taberna, se acerca a la barra y pide un refresco bien frío. Cuando termina, pregunta al camarero cuánto le debe.",
+      "remate": "El camarero le mira con una sonrisa y le dice: «Para usted, sin carga»."
+    },
+    {
+      "id": "ch03",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Ciencia",
+      "icono": "🔬",
+      "color": "#38bdf8",
+      "titulo": "El átomo angustiado",
+      "planteamiento": "Dos átomos van caminando por la calle y uno frena en seco, pálido y temblando: «¡Dios mío, he perdido un electrón!»",
+      "remate": "El otro le pregunta alarmado: «¿Estás completamente seguro?». Y el primero contesta: «¡Sí, soy positivo!»."
+    },
+    {
+      "id": "ch04",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Tecnología",
+      "icono": "🖥️",
+      "color": "#38bdf8",
+      "titulo": "La clasificación binaria",
+      "planteamiento": "¿Sabes que en el mundo sólo existen exactamente 10 tipos de personas?",
+      "remate": "Las que entienden el sistema binario... y las que no."
+    },
+    {
+      "id": "ch05",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Tecnología",
+      "icono": "🎃",
+      "color": "#38bdf8",
+      "titulo": "Halloween vs Navidad",
+      "planteamiento": "¿Por qué los matemáticos y programadores a menudo confunden la noche de Halloween con el día de Navidad?",
+      "remate": "Porque 31 en base Octal es exactamente igual a 25 en base Decimal (OCT 31 == DEC 25)."
+    },
+    {
+      "id": "ch06",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Ciencia",
+      "icono": "🚗",
+      "color": "#38bdf8",
+      "titulo": "Heisenberg detenido por la policía",
+      "planteamiento": "La policía de tráfico detiene a Werner Heisenberg en la autopista: «Caballero, ¿sabe usted a qué velocidad iba circulando?»",
+      "remate": "Heisenberg responde: «No tengo ni la menor idea, agente, pero sé con absoluta precisión milimétrica exactamente dónde estoy»."
+    },
+    {
+      "id": "ch07",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Tecnología",
+      "icono": "💾",
+      "color": "#38bdf8",
+      "titulo": "Problemas de hardware",
+      "planteamiento": "¿Cuál es la diferencia exacta entre el Hardware y el Software en informática?",
+      "remate": "El Hardware es lo que puedes patear cuando se cuelga; el Software es lo que solo puedes maldecir."
+    },
+    {
+      "id": "ch08",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Ciencia",
+      "icono": "📦",
+      "color": "#38bdf8",
+      "titulo": "La inspección de Schrödinger",
+      "planteamiento": "La policía detiene a Erwin Schrödinger y registra su maletero. El agente grita horrorizado: «¡Oiga, aquí dentro hay un gato muerto!»",
+      "remate": "Schrödinger suspira indignado: «¡Bueno, pues ahora sí, grandísimo animal, acaba de arruinar el experimento!»."
+    },
+    {
+      "id": "ch09",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Tecnología",
+      "icono": "🖨️",
+      "color": "#38bdf8",
+      "titulo": "El misterio de la impresora",
+      "planteamiento": "Un usuario llama desesperado al servicio técnico: «¡La impresora me dice que no tiene papel, pero la bandeja está rebosando de folios!»",
+      "remate": "El técnico responde: «Dele dos palmadas al chasis y susúrrele que no tiene prisa. Las impresoras huelen el miedo humano a 50 metros»."
+    },
+    {
+      "id": "ch10",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Tecnología",
+      "icono": "🕷️",
+      "color": "#38bdf8",
+      "titulo": "El primer bug de la historia",
+      "planteamiento": "¿Cómo duerme un programador veterano cuando tiene un fallo crítico en producción?",
+      "remate": "No duerme: se queda mirando al techo mientras su cerebro compila mentalmente 4.000 líneas de código hasta que encuentra un punto y coma ausente a las 4:30 AM."
+    },
+    {
+      "id": "ch11",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🐝",
+      "color": "#f59e0b",
+      "titulo": "La abeja saludable",
+      "planteamiento": "¿Qué hace una abeja zumbando en un gimnasio a las 7:00 de la mañana?",
+      "remate": "¡Zumba!"
+    },
+    {
+      "id": "ch12",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🐟",
+      "color": "#f59e0b",
+      "titulo": "El pez acróbata",
+      "planteamiento": "¿Qué hace un pez que salta desde el piso catorce de un edificio de oficinas?",
+      "remate": "¡Aaaaaaataúd!"
+    },
+    {
+      "id": "ch13",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🕊️",
+      "color": "#f59e0b",
+      "titulo": "Redes sociales ornitológicas",
+      "planteamiento": "¿Por qué los pájaros silvestres nunca se hicieron cuenta en Facebook?",
+      "remate": "Porque ya tenían Twitter desde el principio de los tiempos."
+    },
+    {
+      "id": "ch14",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "☕",
+      "color": "#f59e0b",
+      "titulo": "El café taciturno",
+      "planteamiento": "¿Cómo se despiden dos granos de café que han compartido una cafetera italiana?",
+      "remate": "«Ha sido un placer, colega. Nos vemos en el expreso de las ocho»."
+    },
+    {
+      "id": "ch15",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🍅",
+      "color": "#f59e0b",
+      "titulo": "El cruce de la avenida",
+      "planteamiento": "Van dos tomates cruzando un paso de peatones y uno le avisa al otro: «¡Cuidado, que viene un cami...!»",
+      "remate": "¡Chof! Y el otro responde desde el suelo: «¡Qué kétchup me has dado!»."
+    },
+    {
+      "id": "ch16",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🎸",
+      "color": "#f59e0b",
+      "titulo": "El instrumento náutico",
+      "planteamiento": "¿Qué tipo de instrumento musical tocan exclusivamente los pescadores del Cantábrico?",
+      "remate": "La mar-aca."
+    },
+    {
+      "id": "ch17",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🥛",
+      "color": "#f59e0b",
+      "titulo": "La leche curiosa",
+      "planteamiento": "¿Qué le dijo un tetrabrik de leche desnatada a una vaca que pastaba tranquilamente?",
+      "remate": "«¡Mamá, te juro que me han quitado todo lo que me diste!»."
+    },
+    {
+      "id": "ch18",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🧅",
+      "color": "#f59e0b",
+      "titulo": "La cebolla sensible",
+      "planteamiento": "¿Por qué las cebollas son las hortalizas más rencorosas del huerto?",
+      "remate": "Porque aunque las cortes en pedacitos minúsculos, son ellas las que se aseguran de hacerte llorar a ti."
+    },
+    {
+      "id": "ch19",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🧲",
+      "color": "#f59e0b",
+      "titulo": "Dilema magnético",
+      "planteamiento": "¿Qué le dijo un imán de neodimio a una moneda de dos céntimos?",
+      "remate": "«No sé qué me pasa contigo, pero siento una atracción fatal que no puedo disimular»."
+    },
+    {
+      "id": "ch20",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🥖",
+      "color": "#f59e0b",
+      "titulo": "La panadería silenciosa",
+      "planteamiento": "Entra un cliente a una panadería: «¿Tiene pan de ayer?»",
+      "remate": "El panadero responde con orgullo: «¡Sí, claro que tengo!». Y el cliente le dice: «Pues habértelo comido ayer, que hoy está como una piedra»."
+    },
+    {
+      "id": "ch21",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "👓",
+      "color": "#ec4899",
+      "titulo": "La visita a la óptica",
+      "planteamiento": "Entra un señor a una óptica del centro: «Buenos días, venía a recoger mis gafas graduadas».",
+      "remate": "El óptico le pregunta: «¿Las quiere para ver de cerca o de lejos?». Y el señor responde: «Mire, para verlas puestas en la cara, que no tengo todo el día»."
+    },
+    {
+      "id": "ch22",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🐑",
+      "color": "#ec4899",
+      "titulo": "El partido ovino",
+      "planteamiento": "Dos ovejas están jugando un partido de fútbol en un prado y el balón sale despedido hacia el monte.",
+      "remate": "Una le grita a la otra: «¡Beeee!». Y la otra le responde enfadada: «¡Beeee tú, que yo estoy cansada!»."
+    },
+    {
+      "id": "ch23",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🪑",
+      "color": "#ec4899",
+      "titulo": "Muebles con iniciativa",
+      "planteamiento": "Un hombre entra a una tienda de muebles de diseño: «¿Cuánto cuesta esa silla invisible que tienen expuesta?»",
+      "remate": "El dependiente sonríe: «Son 800 euros». El hombre le da las manos vacías y dice: «Aquí tiene sus 800 euros invisibles, me llevo tres»."
+    },
+    {
+      "id": "ch24",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🐧",
+      "color": "#ec4899",
+      "titulo": "El pingüino en el taxi",
+      "planteamiento": "Un taxista ve a un señor en la parada con un pingüino de metro y medio. El taxista le dice: «Llévelo de inmediato al zoológico».",
+      "remate": "Al día siguiente, el taxista los vuelve a ver a los dos con gafas de sol y palomitas. «¡¿Pero no le dije que lo llevara al zoológico?!». Y el tipo responde: «Sí, ayer le encantó el zoo, hoy nos vamos al cine»."
+    },
+    {
+      "id": "ch25",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🚪",
+      "color": "#ec4899",
+      "titulo": "El timbre roto",
+      "planteamiento": "En un portal antiguo hay un cartel pegado junto al telefonillo: «Por favor, no toquen el timbre, no funciona. En su lugar, saquen la cabeza y griten ¡DING DONG!»",
+      "remate": "Un repartidor se queda mirando el cartel durante dos minutos, saca la cabeza y grita con toda su alma: «¡DING DONG!». Desde el tercero se asoma una señora y le grita: «¡YA VOY, TONTOLABA!»."
+    },
+    {
+      "id": "ch26",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🧼",
+      "color": "#ec4899",
+      "titulo": "La prueba de natación",
+      "planteamiento": "En un balneario extravagante le preguntan a un bañista: «Caballero, ¿usted sabe nadar?»",
+      "remate": "El tipo responde: «En seco no he probado nunca, pero en agua me defiendo bastante bien»."
+    },
+    {
+      "id": "ch27",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🦓",
+      "color": "#ec4899",
+      "titulo": "La cebra existencial",
+      "planteamiento": "Una cebra joven va al psicólogo de la sabana y se tumba en el diván: «Doctor, tengo una crisis de identidad severa».",
+      "remate": "El león terapeuta le pregunta: «¿Y eso?». Y la cebra solloza: «Es que no sé si soy blanca con rayas negras, o negra con rayas blancas... y el código de barras me da error en caja»."
+    },
+    {
+      "id": "ch28",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🌮",
+      "color": "#ec4899",
+      "titulo": "El taco parlante",
+      "planteamiento": "Un taco mexicano y una quesadilla se encuentran flotando en el espacio exterior.",
+      "remate": "El taco le dice: «Oye, ¿tú crees que hay vida inteligente en la Tierra?». Y la quesadilla le responde: «No lo sé, pero si la hay, seguro que le echan guacamole»."
+    },
+    {
+      "id": "ch29",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🧦",
+      "color": "#ec4899",
+      "titulo": "El agujero negro doméstico",
+      "planteamiento": "¿A dónde van a parar exactamente todos los calcetines impares que desaparecen misteriosamente en la lavadora?",
+      "remate": "Vuelven reencarnados en la cocina en forma de tapas de fiambrera de plástico que no encajan en ningún recipiente del armario."
+    },
+    {
+      "id": "ch30",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🛸",
+      "color": "#ec4899",
+      "titulo": "Primer contacto extraterrestre",
+      "planteamiento": "Un platillo volante aterriza en el centro de Madrid. Un alienígena verde con tres ojos desciende y se acerca a una farola.",
+      "remate": "Le pone la mano encima y le dice: «Tierra llamando a tu planeta: cámbiate de ropa, que ese sombrero redondo no se lleva desde los ochenta»."
+    },
+    {
+      "id": "ch31",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "💼",
+      "color": "#10b981",
+      "titulo": "La entrevista de recursos humanos",
+      "planteamiento": "En una entrevista de trabajo, el entrevistador le pregunta al candidato: «¿Cuál diría usted que es su peor defecto?»",
+      "remate": "El candidato responde: «La honestidad brutal». El entrevistador frunce el ceño: «Bueno, no creo que la honestidad sea un defecto». Y el candidato remata: «Me importa un comino lo que usted crea»."
+    },
+    {
+      "id": "ch32",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "🏋️",
+      "color": "#10b981",
+      "titulo": "El gimnasio benéfico",
+      "planteamiento": "Un amigo le pregunta a otro: «Oye, ¿sigues yendo al gimnasio?»",
+      "remate": "«Ir lo que se dice ir... no mucho. Digamos que pago religiosamente la cuota mensual como una donación caritativa para que no cierren el local»."
+    },
+    {
+      "id": "ch33",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "⏰",
+      "color": "#10b981",
+      "titulo": "La alarma de las 7:00 AM",
+      "planteamiento": "¿Por qué ponemos cinco alarmas consecutivas en el móvil a intervalos de 5 minutos si sabemos que no nos levantaremos en ninguna?",
+      "remate": "Para que nuestro subconsciente disfrute cinco veces del orgásmico micro-placer de pulsar 'Posponer' y seguir durmiendo."
+    },
+    {
+      "id": "ch34",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "🩺",
+      "color": "#10b981",
+      "titulo": "El diagnóstico médico",
+      "planteamiento": "El médico mira los análisis con cara seria y le dice al paciente: «Tiene usted que dejar de beber, dejar de fumar, acostarse a las diez y comer solo verduras hervidas».",
+      "remate": "El paciente pregunta con voz temblorosa: «¿Y con eso viviré más años, doctor?». El médico suspira: «Vivir más no lo sé, pero los días se le van a hacer eternos»."
+    },
+    {
+      "id": "ch35",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "🛒",
+      "color": "#10b981",
+      "titulo": "La compra en Ikea",
+      "planteamiento": "Entras a Ikea un sábado por la mañana con la firme intención de comprar una bombilla LED de 3 euros...",
+      "remate": "Y sales tres horas después con un juego de 8 velas aromáticas, tres plantas de plástico que no caben en tu casa, un pack de salchichas suecas y una crisis de pareja irresoluble."
+    },
+    {
+      "id": "ch36",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "📱",
+      "color": "#10b981",
+      "titulo": "El audio de 8 minutos",
+      "planteamiento": "¿Qué protocolo de emergencia debes seguir cuando un familiar te envía una nota de voz de WhatsApp que dura 8 minutos y 42 segundos?",
+      "remate": "Poner la velocidad a 2x, fingir que se te ha cortado la cobertura y responder a los 30 segundos con un escueto: «Totalmente de acuerdo, ya te digo»."
+    },
+    {
+      "id": "ch37",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "🍕",
+      "color": "#10b981",
+      "titulo": "La dieta del lunes",
+      "planteamiento": "«He decidido empezar una dieta estricta sin azúcares ni carbohidratos a partir del lunes próximo».",
+      "remate": "Lástima que no especifiqué de qué año ni de qué siglo, así que este fin de semana me he pedido dos pizzas familiares para amortizar la espera."
+    },
+    {
+      "id": "ch38",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "🔋",
+      "color": "#10b981",
+      "titulo": "La ley de la batería",
+      "planteamiento": "¿En qué momento exacto del día decide el teléfono móvil avisar de que le queda 1% de batería?",
+      "remate": "Exactamente a las 2:00 AM cuando estás metido debajo de cuatro mantas de invierno y el cargador está en el salón sobre la mesa."
+    },
+    {
+      "id": "ch39",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "🐕",
+      "color": "#10b981",
+      "titulo": "El paseo del perro",
+      "planteamiento": "Sacas al perro a pasear bajo una lluvia torrencial a 3 grados bajo cero durante 45 minutos...",
+      "remate": "El perro olfatea cada brizna de hierba, cada rueda y cada farola de la comarca, no hace nada, sube al piso... ¡y se hace pipí encima de la alfombra del pasillo mirándote a los ojos!"
+    },
+    {
+      "id": "ch40",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "✈️",
+      "color": "#10b981",
+      "titulo": "El pasajero del vuelo",
+      "planteamiento": "En un vuelo de bajo coste con turbulencias, la azafata le pregunta a un viajero nervioso: «Caballero, ¿le apetece algo para beber?»",
+      "remate": "El tipo responde: «Sí, tráigame un paracaídas y dos gintonics, por orden de prioridad»."
+    },
+    {
+      "id": "ch41",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🏛️",
+      "color": "#a855f7",
+      "titulo": "Descartes en el mesón",
+      "planteamiento": "René Descartes entra en una taberna francesa, se sienta en una mesa y el mesonero le pregunta: «Monsieur Descartes, ¿le apetece una copa de vino tinto de la casa?»",
+      "remate": "Descartes responde: «Creo que no»... ¡y se desvanece en el aire al instante!"
+    },
+    {
+      "id": "ch42",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🕯️",
+      "color": "#a855f7",
+      "titulo": "Nietzsche y el abismo",
+      "planteamiento": "Friedrich Nietzsche escribió: «Cuando miras largo tiempo a un abismo, el abismo también mira dentro de ti».",
+      "remate": "Lo que no contó es que si miras largo tiempo a tu cuenta bancaria a mitad de mes, el abismo se echa a llorar contigo y te invita a un café."
+    },
+    {
+      "id": "ch43",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🕳️",
+      "color": "#a855f7",
+      "titulo": "El dilema del árbol",
+      "planteamiento": "Si un árbol cae en mitad de un bosque desierto y nadie está cerca para escucharlo... ¿hace ruido?",
+      "remate": "No lo sabemos, pero si cae sobre el coche nuevo del vecino, el grito se escucha en toda la provincia aunque esté de vacaciones en Cancún."
+    },
+    {
+      "id": "ch44",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "⌛",
+      "color": "#a855f7",
+      "titulo": "El viaje en el tiempo",
+      "planteamiento": "¿Por qué los viajeros temporales del futuro nunca vienen a visitarnos en nuestros cumpleaños?",
+      "remate": "Porque revisan nuestro archivo histórico, ven el precio de los alquileres y las hipotecas actuales, y deciden que quedarse en su época es infinitamente más barato."
+    },
+    {
+      "id": "ch45",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🧠",
+      "color": "#a855f7",
+      "titulo": "La paradoja del cerebro",
+      "planteamiento": "¿Te has parado a pensar que el cerebro humano es el único órgano de la creación que se bautizó a sí mismo?",
+      "remate": "Y no sólo eso: además se otorgó a sí mismo el premio al órgano más inteligente del cuerpo sin someterlo a votación democrática."
+    },
+    {
+      "id": "ch46",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🌌",
+      "color": "#a855f7",
+      "titulo": "El telescopio James Webb",
+      "planteamiento": "Los científicos apuntan un telescopio de 10.000 millones de dólares hacia el confín del universo observable buscando señales de vida alienígena...",
+      "remate": "Y reciben de vuelta una señal de radio en frecuencia modulada que dice: «Le llamamos de su compañía telefónica para ofrecerle una mejora en su tarifa de fibra óptica»."
+    },
+    {
+      "id": "ch47",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "📜",
+      "color": "#a855f7",
+      "titulo": "Sócrates en el mercado",
+      "planteamiento": "Sócrates solía pasear por el ágora de Atenas contemplando los puestos repletos de joyas, telas finas y especias caras.",
+      "remate": "Cuando sus discípulos le preguntaron por qué lo hacía, sonrió: «Me fascina ver cuántas cosas existen en este mundo que no necesito para ser feliz... aunque el jamón ibérico me lo pensaría»."
+    },
+    {
+      "id": "ch48",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🎲",
+      "color": "#a855f7",
+      "titulo": "Dios y los dados",
+      "planteamiento": "Albert Einstein afirmó célebremente: «Dios no juega a los dados con el universo».",
+      "remate": "A lo que Stephen Hawking añadió: «No sólo juega a los dados, sino que a veces los tira donde nadie los puede ver y encima pierde el tapete»."
+    },
+    {
+      "id": "ch49",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🔮",
+      "color": "#a855f7",
+      "titulo": "El oráculo de Delfos moderno",
+      "planteamiento": "Un viajero moderno acude al oráculo de Delfos: «Pitonisa, ¿qué me depara el destino para este año?»",
+      "remate": "La pitonisa consulta el vapor sagrado, mira su pantalla y dice: «Acepte todas las cookies y espere 30 segundos mientras salta el anuncio publicitario»."
+    },
+    {
+      "id": "ch50",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🌀",
+      "color": "#a855f7",
+      "titulo": "La paradoja del sentido común",
+      "planteamiento": "El filósofo Voltaire afirmó que «el sentido común es el menos común de los sentidos».",
+      "remate": "Y cualquier persona que haya leído los comentarios de una red social durante cinco minutos sabe que Voltaire se quedó bastante corto."
+    },
+    {
+      "id": "ch51",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🍷",
+      "color": "#f59e0b",
+      "titulo": "El vino en la fiesta",
+      "planteamiento": "¿Qué hace una botella de vino tinto cuando llega a una fiesta con retraso?",
+      "remate": "Pide disculpas a todos y dice: «Perdón por la tardanza, es que estaba en barrica»."
+    },
+    {
+      "id": "ch52",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🍌",
+      "color": "#ec4899",
+      "titulo": "El plátano en el autobús",
+      "planteamiento": "Va un plátano subido en un autobús de línea y tropieza con una anciana.",
+      "remate": "El plátano se disculpa educadamente: «Perdón señora, es que tengo complejo de cáscara y resbalo sin querer»."
+    },
+    {
+      "id": "ch53",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Tecnología",
+      "icono": "📡",
+      "color": "#38bdf8",
+      "titulo": "La contraseña segura",
+      "planteamiento": "El sistema le dice al usuario: «Su contraseña debe tener al menos 8 caracteres, una mayúscula, un número, un jeroglífico egipcio y el sonido de una gaviota».",
+      "remate": "El usuario pone '123456', le da a guardar y el sistema responde: «Contraseña actualizada con éxito»."
+    },
+    {
+      "id": "ch54",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "🍳",
+      "color": "#10b981",
+      "titulo": "La sartén antiadherente",
+      "planteamiento": "¿Por qué se llaman sartenes antiadherentes si a los dos meses se pega hasta el aire?",
+      "remate": "Porque son antiadherentes con la comida, pero se adhieren con un amor infinito a los 40 euros que pagaste por ella en el supermercado."
+    },
+    {
+      "id": "ch55",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🦆",
+      "color": "#f59e0b",
+      "titulo": "El pato educado",
+      "planteamiento": "¿Qué le dice un pato a otro pato cuando compiten en una carrera de obstáculos?",
+      "remate": "«¡Estamos empatados!»."
+    },
+    {
+      "id": "ch56",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🐘",
+      "color": "#ec4899",
+      "titulo": "El elefante en el teléfono",
+      "planteamiento": "¿Cómo sabes que un elefante africano ha estado usando tu teléfono móvil a escondidas?",
+      "remate": "Porque la pantalla táctil tiene una huella de pisada gigante y la factura telefónica incluye 400 llamadas internacionales a Kenia."
+    },
+    {
+      "id": "ch57",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Tecnología",
+      "icono": "🤖",
+      "color": "#38bdf8",
+      "titulo": "La rebelión de las máquinas",
+      "planteamiento": "Tememos que la Inteligencia Artificial se vuelva consciente y domine a la raza humana...",
+      "remate": "Mientras tanto, el robot aspirador se vuelve a quedar encallado en una alfombra de baño de 2 centímetros pidiendo auxilio como una tortuga boca arriba."
+    },
+    {
+      "id": "ch58",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "☕",
+      "color": "#10b981",
+      "titulo": "El camarero con prisas",
+      "planteamiento": "«Camarero, ¿este café es de Colombia?».",
+      "remate": "El camarero le mira fijamente: «Caballero, por el tiempo que lleva usted esperando para pagar la cuenta, es de la cosecha del año pasado de Cuenca»."
+    },
+    {
+      "id": "ch59",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "⏳",
+      "color": "#a855f7",
+      "titulo": "La procrastinación cuántica",
+      "planteamiento": "Existe un estado cuántico fascinante llamado 'Procrastinación':",
+      "remate": "Donde la tarea pendiente está simultáneamente hecha y sin hacer en tu mente, hasta que el plazo de entrega vence dentro de dos horas y el universo colapsa en pánico."
+    },
+    {
+      "id": "ch60",
+      "categoria": "palabras",
+      "categoriaLabel": "Juegos de Palabras",
+      "icono": "🧀",
+      "color": "#f59e0b",
+      "titulo": "El queso optimista",
+      "planteamiento": "¿Qué le dice un queso manchego curado a un queso fresco de Burgos?",
+      "remate": "«No te preocupes si te ven blando... con el tiempo aprenderán a apreciar tu madurez»."
+    },
+    {
+      "id": "ch61",
+      "categoria": "absurdo",
+      "categoriaLabel": "Humor Absurdo",
+      "icono": "🐌",
+      "color": "#ec4899",
+      "titulo": "El caracol atracado",
+      "planteamiento": "Un caracol va a la comisaría a denunciar un asalto: «¡Agente, dos tortugas me acaban de robar la lechuga!»",
+      "remate": "El policía le pregunta: «¿Y pudo verles la cara? ¿Cómo ocurrió todo?». Y el caracol jadea: «¡No lo sé, agente... fue todo tan rápido!»."
+    },
+    {
+      "id": "ch62",
+      "categoria": "cotidiano",
+      "categoriaLabel": "Sátira Cotidiana",
+      "icono": "🧳",
+      "color": "#10b981",
+      "titulo": "La maleta de fin de semana",
+      "planteamiento": "¿Por qué metes 14 camisetas, 10 pantalones y 4 chaquetas en la maleta para un viaje de 2 días a la sierra?",
+      "remate": "Por si acaso te da por tirarte a una piscina de barro cinco veces al día o te invitan a una cena de gala en la cumbre del G20 por sorpresa."
+    },
+    {
+      "id": "ch63",
+      "categoria": "friqui",
+      "categoriaLabel": "Friqui & Ciencia",
+      "icono": "🧪",
+      "color": "#38bdf8",
+      "titulo": "El químico sediento",
+      "planteamiento": "Dos químicos entran en un bar. El primero dice: «Quiero un vaso de H2O». El segundo añade: «Yo quiero un vaso de H2O too (también)»...",
+      "remate": "El segundo se bebe el peróxido de hidrógeno (H2O2) y el barman llama a urgencias."
+    },
+    {
+      "id": "ch64",
+      "categoria": "filosofico",
+      "categoriaLabel": "Filosofía del Desvarío",
+      "icono": "🌌",
+      "color": "#a855f7",
+      "titulo": "El polvo de estrellas",
+      "planteamiento": "Carl Sagan dijo que estamos hechos de polvo de estrellas...",
+      "remate": "Lo que explica perfectamente por qué a las tres de la tarde lo único que me apetece es estar tumbado en el sofá brillando por mi ausencia."
+    }
+  ]
+}

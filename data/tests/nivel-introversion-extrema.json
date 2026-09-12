@@ -1,0 +1,211 @@
+{
+  "id": "nivel-introversion-extrema",
+  "slug": "nivel-introversion-extrema",
+  "titulo": "El Medidor de Introversión: ¿Ermitaño Filosófico o Bicho Social?",
+  "subtitulo": "Un diagnóstico perspicaz y divertido sobre tu verdadera batería social y tu relación con el aislamiento.",
+  "descripcionCorta": "Responde a 7 situaciones cotidianas y mordaces sobre cancelaciones de planes, llamadas inesperadas y el sublime placer de no salir de casa.",
+  "tipo": "puntuacion",
+  "categoria": "humor",
+  "categoriaLabel": "Psicología & Humor",
+  "icono": "🕯️",
+  "tiempoMin": 3,
+  "color": "#8b5cf6",
+  "preguntas": [
+    {
+      "id": "ie1",
+      "texto": "Viernes por la tarde, 19:30. Te llega un mensaje de WhatsApp al grupo: «Chicos, se cancela la cena de hoy que varios estamos cansados». ¿Cuál es tu reacción física instantánea?",
+      "opciones": [
+        {
+          "texto": "Me invade una profunda decepción; ya me estaba vistiendo y busco plan alternativo de inmediato.",
+          "puntos": 0
+        },
+        {
+          "texto": "Me da cierta pereza haberme arreglado a medias, pero aprovecho para ver una serie.",
+          "puntos": 10
+        },
+        {
+          "texto": "Siento una oleada de dopamina, júbilo y paz celestial recorriendo mi columna vertebral.",
+          "puntos": 25
+        },
+        {
+          "texto": "Me arrodillo a dar gracias a los dioses mientras me pongo el pijama a la velocidad del rayo.",
+          "puntos": 35
+        }
+      ]
+    },
+    {
+      "id": "ie2",
+      "texto": "Tu teléfono móvil empieza a vibrar con una llamada de voz de un número que NO tienes guardado en la agenda. ¿Qué haces?",
+      "opciones": [
+        {
+          "texto": "Descuelgo con normalidad: «¿Sí, dígame?». Podría ser un paquete o un asunto urgente.",
+          "puntos": 0
+        },
+        {
+          "texto": "Espero a que termine de sonar y busco el número en Google por si es spam.",
+          "puntos": 15
+        },
+        {
+          "texto": "Pongo el móvil boca abajo, contengo la respiración y me quedo inmóvil como si el aparato pudiera verme.",
+          "puntos": 25
+        },
+        {
+          "texto": "Considero seriamente cambiar de identidad, arrojar el teléfono al mar y mudarme a un monasterio tibetano.",
+          "puntos": 35
+        }
+      ]
+    },
+    {
+      "id": "ie3",
+      "texto": "Sales al rellano de tu casa para tirar la basura y escuchas que la puerta del vecino de enfrente se está abriendo. ¿Cuál es tu maniobra?",
+      "opciones": [
+        {
+          "texto": "Salgo con alegría y aprovecho para saludarlo y preguntarle qué tal la semana.",
+          "puntos": 0
+        },
+        {
+          "texto": "Mantengo el paso normal, suelto un «hola buenas» educado y continúo hacia el ascensor.",
+          "puntos": 10
+        },
+        {
+          "texto": "Me congelo en la mirilla durante 45 segundos hasta que oigo el clic del ascensor cerrándose en su planta.",
+          "puntos": 25
+        },
+        {
+          "texto": "Finjo que se me han olvidado las llaves dentro, doy media vuelta y me encierro en casa hasta que haya silencio sepulcral.",
+          "puntos": 35
+        }
+      ]
+    },
+    {
+      "id": "ie4",
+      "texto": "Asistes a una fiesta o evento social grande donde solo conoces a la persona que te invitó. Esa persona desaparece 20 minutos a saludar a otros. ¿Dónde te encuentras?",
+      "opciones": [
+        {
+          "texto": "Charloteando animadamente con un grupo de desconocidos junto a la barra.",
+          "puntos": 0
+        },
+        {
+          "texto": "Revisando el móvil de forma casual cerca de la comida para no parecer desubicado.",
+          "puntos": 15
+        },
+        {
+          "texto": "Acariciando al perro o al gato de la casa como si fuera mi mejor amigo de toda la vida.",
+          "puntos": 25
+        },
+        {
+          "texto": "Escondido en el baño inspeccionando las marcas del champú del anfitrión para ganar tiempo.",
+          "puntos": 35
+        }
+      ]
+    },
+    {
+      "id": "ie5",
+      "texto": "Sábado noche. Has pasado 36 horas seguidas en casa sin hablar con ningún ser humano cara a cara. ¿Cómo te sientes?",
+      "opciones": [
+        {
+          "texto": "Asfixiado, deprimido y con necesidad imperiosa de salir a que me dé el aire y ver gente.",
+          "puntos": 0
+        },
+        {
+          "texto": "Bien, descansado, pero listo para quedar con alguien el domingo por la tarde.",
+          "puntos": 10
+        },
+        {
+          "texto": "En mi auténtico estado de gracia zen: productivo, en paz y con la mente regenerada.",
+          "puntos": 25
+        },
+        {
+          "texto": "¿36 horas? Eso son números de principiante. Podría estar 3 meses así y alcanzar la iluminación mística.",
+          "puntos": 35
+        }
+      ]
+    },
+    {
+      "id": "ie6",
+      "texto": "Entras a una tienda de ropa y un dependiente sonriente se te acerca a dos palmos diciendo: «¡Hola! ¿Buscabas algo en especial o te puedo ayudar?». ¿Qué piensas?",
+      "opciones": [
+        {
+          "texto": "«¡Qué atento! Le pregunto directamente por tallas y consejos».",
+          "puntos": 0
+        },
+        {
+          "texto": "«Solo estoy mirando, gracias», y sigo ojeando sin agobios.",
+          "puntos": 10
+        },
+        {
+          "texto": "«Por favor, mantén tu aura a cinco metros de mí o dejaré la prenda que tengo en la mano».",
+          "puntos": 25
+        },
+        {
+          "texto": "Suelto la camiseta de inmediato, digo «gracias» mirando al suelo y huyo de la tienda como si me persiguiera la Interpol.",
+          "puntos": 35
+        }
+      ]
+    },
+    {
+      "id": "ie7",
+      "texto": "¿Qué frase resume con mayor precisión tu filosofía de recarga energética?",
+      "opciones": [
+        {
+          "texto": "«La soledad prolongada me marchita; la energía me la dan las risas y la vida compartida».",
+          "puntos": 0
+        },
+        {
+          "texto": "«Disfruto tanto de una buena fiesta con amigos como de una tarde tranquila de lectura en el sofá».",
+          "puntos": 10
+        },
+        {
+          "texto": "«Mi batería social dura exactamente dos horas; a partir de ahí, solo soy un holograma educado pero ausente».",
+          "puntos": 25
+        },
+        {
+          "texto": "«El infierno son los otros... sobre todo si te piden que pongas la cámara en una videollamada de trabajo».",
+          "puntos": 35
+        }
+      ]
+    }
+  ],
+  "rangos": [
+    {
+      "min": 0,
+      "max": 40,
+      "nivel": "Nivel 1",
+      "titulo": "Mariposa Social Extrovertida",
+      "icono": "🦋",
+      "color": "#10b981",
+      "descripcion": "Tu ecosistema natural es la multitud, el bullicio y la interacción continua. Las cancelaciones de planes te arruinan el día y tu batería social parece alimentada por un reactor nuclear. Posees don de gentes, soltura conversacional y eres incapaz de pasar un fin de semana entero sin intercambiar palabras con alguien.",
+      "consejo": "Intenta dedicar de vez en cuando un par de horas a la introspección en soledad: descubrirás que tu propio diálogo interior también es una compañía fascinante."
+    },
+    {
+      "min": 41,
+      "max": 85,
+      "nivel": "Nivel 2",
+      "titulo": "Ambivertido con Filtro Selectivo",
+      "icono": "⚖️",
+      "color": "#06b6d4",
+      "descripcion": "Has alcanzado el equilibrio aristotélico entre la vida social y el recogimiento personal. Sabes brillar en reuniones y pasártelo en grande cuando el grupo vale la pena, pero valoras enormemente tus horas de silencio, series y café en calma para reiniciar el sistema operativo de tu cabeza.",
+      "consejo": "Sigue protegiendo tus límites sin sentir culpa: decir 'no me apetece hoy' es el mayor superpoder del bienestar mental moderno."
+    },
+    {
+      "min": 86,
+      "max": 130,
+      "nivel": "Nivel 3",
+      "titulo": "Introvertido de Cueva Sagrada",
+      "icono": "🕯️",
+      "color": "#8b5cf6",
+      "descripcion": "Tu hogar es tu templo inexpugnable. Tu batería social es de litio de gama baja: tras dos horas de exposición a grupos humanos entras en modo 'ahorro de energía'. Odias las llamadas imprevistas por encima de todas las cosas y consideras que una cancelación de planes a última hora es el mejor regalo que el universo te puede brindar.",
+      "consejo": "No te aísles tanto que termines perdiendo contacto con esos 2 o 3 amigos leales que respetan tus silencios. Una pequeña dosis de mundo exterior de vez en cuando previene el anquilosamiento."
+    },
+    {
+      "min": 131,
+      "max": 245,
+      "nivel": "Nivel 4",
+      "titulo": "Ermitaño Cuántico de Otra Galaxia",
+      "icono": "🌌",
+      "color": "#ec4899",
+      "descripcion": "Si el filósofo Diógenes de Sínope viviese en el siglo XXI, te pediría asesoría sobre cómo aislarse del género humano. La interacción no programada te produce alergia metafísica y sospechas que la humanidad en general habla demasiado para lo poco que tiene que decir. Te bastan tus libros, tus proyectos y el gato.",
+      "consejo": "Asegúrate de comprobar de vez en cuando que el sol sigue existiendo y que recuerdas cómo pronunciar consonantes en voz alta. Por lo demás, tu paz mental es envidiable."
+    }
+  ]
+}

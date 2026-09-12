@@ -1,0 +1,233 @@
+{
+  "id": "supervillano",
+  "slug": "supervillano",
+  "titulo": "¿Qué Tipo de Supervillano de Cómic Serías?",
+  "subtitulo": "Guaridas en volcanes, planes a 50 años y risas malévolas: descubre tu verdadero estilo de dominación mundial.",
+  "descripcionCorta": "8 situaciones límite para descubrir tu perfil antagonista de cómic: ¿Mente Maestra, Agente del Caos, Científico Loco o Burócrata Malvado?",
+  "tipo": "personalidad",
+  "categoria": "humor",
+  "categoriaLabel": "Humor & Diagnósticos",
+  "icono": "🦹",
+  "tiempoMin": 3,
+  "color": "#db2777",
+  "preguntas": [
+    {
+      "id": "vil1",
+      "texto": "Tienes que elegir la ubicación secreta de tu cuartel general supremo. ¿Dónde estableces tu base de operaciones?",
+      "opciones": [
+        {
+          "texto": "En una estación espacial orbital invisible que monitoriza todas las bolsas financieras del planeta.",
+          "arquetipo": "mentemaestra"
+        },
+        {
+          "texto": "En una feria de atracciones abandonada llena de espejos deformantes, trampas absurdas y música de circo al revés.",
+          "arquetipo": "caotico"
+        },
+        {
+          "texto": "En el cráter de un volcán extinto, repleto de bobinas de Tesla gigantes y robots con brazos hidráulicos.",
+          "arquetipo": "cientifico"
+        },
+        {
+          "texto": "En la planta 42 de un rascacielos de cristal en el centro financiero: con seguridad privada, cafetería y todo 100% legal.",
+          "arquetipo": "burocrata"
+        }
+      ]
+    },
+    {
+      "id": "vil2",
+      "texto": "El superhéroe de turno cae finalmente en una de tus trampas y queda suspendido boca abajo sobre un foso peligroso. ¿Qué haces?",
+      "opciones": [
+        {
+          "texto": "No pierdo un segundo en monólogos: un disparo silenciado certero y me voy a ejecutar la fase 4 de mi plan.",
+          "arquetipo": "mentemaestra"
+        },
+        {
+          "texto": "Le lanzo tartas de nata mientras toco la corneta y le pregunto si prefiere ser rescatado por un patito de goma gigante.",
+          "arquetipo": "caotico"
+        },
+        {
+          "texto": "Le explico durante 45 minutos los principios termodinámicos del rayo desintegrador que tardé tres años en calibrar.",
+          "arquetipo": "cientifico"
+        },
+        {
+          "texto": "Le entrego una notificación de desalojo inmediato de su guarida por carecer de licencia municipal de obras.",
+          "arquetipo": "burocrata"
+        }
+      ]
+    },
+    {
+      "id": "vil3",
+      "texto": "¿Cuál es tu vestimenta de trabajo ideal cuando sales a sembrar el pánico o hacer declaraciones a la prensa?",
+      "opciones": [
+        {
+          "texto": "Un traje a medida impecable de corte italiano color carbón, guantes de cuero fino y un bastón con punta de titanio.",
+          "arquetipo": "mentemaestra"
+        },
+        {
+          "texto": "Un mono chillón de colores imposibles, maquillaje corrido y unas botas militares que no combinan con nada.",
+          "arquetipo": "caotico"
+        },
+        {
+          "texto": "Una bata blanca chamuscada por el ácido, gafas protectoras con 6 lentes intercambiables y guantes de goma aislante.",
+          "arquetipo": "cientifico"
+        },
+        {
+          "texto": "Camisa azul celeste, corbata sobria y un maletín de piel auténtica donde guardo los acuerdos de confidencialidad.",
+          "arquetipo": "burocrata"
+        }
+      ]
+    },
+    {
+      "id": "vil4",
+      "texto": "¿Qué motivo primordial te empujó a la senda de la villanía y el conflicto mundial?",
+      "opciones": [
+        {
+          "texto": "El mundo está gobernado por incompetentes; la humanidad necesita un arquitecto superior que imponga orden absoluto.",
+          "arquetipo": "mentemaestra"
+        },
+        {
+          "texto": "La gente se toma la vida demasiado en serio. Un poco de anarquía purifica el espíritu y hace la rutina mucho más divertida.",
+          "arquetipo": "caotico"
+        },
+        {
+          "texto": "Me rechazaron la tesis doctoral sobre generadores de agujeros de gusano domésticos. Ahora pagarán las consecuencias.",
+          "arquetipo": "cientifico"
+        },
+        {
+          "texto": "El dinero y la rentabilidad neta anual: rescatar gatitos no paga las acciones preferentes ni los dividendos del consejo.",
+          "arquetipo": "burocrata"
+        }
+      ]
+    },
+    {
+      "id": "vil5",
+      "texto": "Tus esbirros han fallado en una misión sencilla y han dejado escapar una pieza clave. ¿Cómo gestionas el error?",
+      "opciones": [
+        {
+          "texto": "Lo tenía previsto como señuelo en la contingencia C-12. El fallo del esbirro ya forma parte de mi emboscada mayor.",
+          "arquetipo": "mentemaestra"
+        },
+        {
+          "texto": "Nombro al esbirro 'Empleado del Mes', le regalo un ramo de flores explosivas y me río durante media hora.",
+          "arquetipo": "caotico"
+        },
+        {
+          "texto": "Le conecto unos electrodos en el casco para 'optimizar' su capacidad sináptica mediante descargas moderadas.",
+          "arquetipo": "cientifico"
+        },
+        {
+          "texto": "Le abro un expediente sancionador, le retiro el ticket restaurante y le obligo a hacer horas extras no remuneradas.",
+          "arquetipo": "burocrata"
+        }
+      ]
+    },
+    {
+      "id": "vil6",
+      "texto": "Tienes acceso a los satélites de telecomunicaciones mundiales para emitir un mensaje simultáneo a toda la Tierra. ¿Qué dices?",
+      "opciones": [
+        {
+          "texto": "«Tienen 24 horas para disolver sus ejércitos y transferir la autoridad a mi consejo. El futuro empieza hoy».",
+          "arquetipo": "mentemaestra"
+        },
+        {
+          "texto": "«He escondido 500 patos de goma con códigos secretos en cada ciudad. El primero que los junte todos... no gana nada».",
+          "arquetipo": "caotico"
+        },
+        {
+          "texto": "«Miren la Luna. En diez segundos cambiará de color gracias a mi rayo de refracción cromática. ¡Admiren mi genialidad!»",
+          "arquetipo": "cientifico"
+        },
+        {
+          "texto": "«A partir de mañana, el IVA de todos los productos de consumo sube un 14% bajo la firma de nuestra nueva filial».",
+          "arquetipo": "burocrata"
+        }
+      ]
+    },
+    {
+      "id": "vil7",
+      "texto": "¿Cuál es tu punto débil secreto que un héroe perspicaz podría utilizar para derrotarte?",
+      "opciones": [
+        {
+          "texto": "Mi desprecio por el azar: si ocurre una casualidad estúpida e improbable de 1 entre un billón, descuadra mi cálculo.",
+          "arquetipo": "mentemaestra"
+        },
+        {
+          "texto": "Que me aburro con demasiada facilidad; si el héroe no me divierte, puedo dejarlo ir y buscar otro pasatiempo.",
+          "arquetipo": "caotico"
+        },
+        {
+          "texto": "Puse un botón de auto-destrucción con luz de neón roja en la consola central porque quedaba estéticamente fantástico.",
+          "arquetipo": "cientifico"
+        },
+        {
+          "texto": "Una auditoría fiscal externa sorpresa de Hacienda realizada por un funcionario completamente incorruptible.",
+          "arquetipo": "burocrata"
+        }
+      ]
+    },
+    {
+      "id": "vil8",
+      "texto": "Si finalmente logras derrotar al héroe y conquistar el planeta, ¿qué haces al día siguiente?",
+      "opciones": [
+        {
+          "texto": "Implementar un plan quinquenal de infraestructura global, transporte supersónico y reordenación urbana impecable.",
+          "arquetipo": "mentemaestra"
+        },
+        {
+          "texto": "Pintar todos los monumentos históricos de rosa fosforito y decretar que los martes sea obligatorio caminar hacia atrás.",
+          "arquetipo": "caotico"
+        },
+        {
+          "texto": "Encerrarme en mi laboratorio definitivo con presupuesto infinito para construir un acelerador de partículas del tamaño de Europa.",
+          "arquetipo": "cientifico"
+        },
+        {
+          "texto": "Reunirme con el comité de dirección a las 9:00 AM para revisar el informe de balance trimestral de la Tierra.",
+          "arquetipo": "burocrata"
+        }
+      ]
+    }
+  ],
+  "resultados": {
+    "mentemaestra": {
+      "nombre": "La Mente Maestra Estratégica",
+      "tituloCorto": "El Ajedrecista en la Sombra",
+      "icono": "♟️",
+      "color": "#6366f1",
+      "descripcion": "Nunca te manchas las manos. Tu plan maestro tiene 14 planes de contingencia, financiación en paraísos fiscales y un monólogo impecable que solo recitas cuando el héroe ya ha perdido. Siempre vistes con elegancia impecable y consideras que la victoria sin refinamiento es pura ordinariez.",
+      "fortaleza": "Planificación a largo plazo, frialdad quirúrgica y visión global invulnerable.",
+      "desvario": "Tu excesiva arrogancia te lleva a asumir que nadie puede improvisar mejor que tus ecuaciones.",
+      "afinidad": "Desprecias el desorden; necesitas esbirros con máster universitario y puntualidad británica."
+    },
+    "caotico": {
+      "nombre": "El Agente del Caos Puro",
+      "tituloCorto": "La Risa en la Oscuridad",
+      "icono": "🃏",
+      "color": "#e11d48",
+      "descripcion": "El dinero no te importa, el poder te aburre: tú solo quieres ver el mundo desmoronarse porque encuentras fascinante la entropía. Tu guarida cambia cada noche y ni tus propios secuaces saben qué vas a hacer dentro de cinco minutos. Si hay un botón rojo que dice «PELIGRO NO PULSAR», tú lo pulsas tres veces con una sonrisa.",
+      "fortaleza": "Total imprevisibilidad, inmunidad al miedo y sentido del humor siniestramente contagioso.",
+      "desvario": "Puedes arruinar tu propia victoria solo porque se te ocurrió un chiste mejor en el último segundo.",
+      "afinidad": "Una pesadilla absoluta para cualquier superhéroe racional o detective cuadriculado."
+    },
+    "cientifico": {
+      "nombre": "El Genio Incomprendido",
+      "tituloCorto": "El Científico del Rayo Láser",
+      "icono": "⚡",
+      "color": "#14b8a6",
+      "descripcion": "Tú solo querías resolver la crisis energética del planeta, pero la junta académica te denegó una beca de investigación y se rio de tus teorías. Ahora tienes un cañón de antimateria en lo alto de un volcán inactivo y una demanda muy razonable: que te pidan perdón de rodillas por escrito.",
+      "fortaleza": "Intelecto deslumbrante, inventiva técnica insuperable y café intravenoso.",
+      "desvario": "Tus inventos siempre tienen un punto débil ridículamente accesible, como un conducto de ventilación sin rejilla.",
+      "afinidad": "Te llevas bien con robots y autómatas; los humanos te parecen demasiado ruidosos e ineficientes."
+    },
+    "burocrata": {
+      "nombre": "El Tirano Corporativo",
+      "tituloCorto": "El Mal en Letra Pequeña",
+      "icono": "💼",
+      "color": "#d97706",
+      "descripcion": "¿Por qué volar edificios si puedes comprar la compañía de aguas y triplicar las tarifas? Eres el villano más temido porque todo lo que haces es técnicamente 100% legal. Destruyes esperanzas mediante cláusulas abusivas, comisiones de mantenimiento y 45 minutos de música en espera telefónica.",
+      "fortaleza": "Poder financiero absoluto, bufetes de abogados implacables y sonrisa corporativa imperturbable.",
+      "desvario": "Careces por completo de drama heroico; tu mayor arma de destrucción masiva es un PDF protegido con contraseña.",
+      "afinidad": "Comprarías la empresa donde trabaja el superhéroe para despedirlo por reducción de plantilla."
+    }
+  }
+}

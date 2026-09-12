@@ -1,0 +1,180 @@
+{
+  "id": "paradojas-temporales",
+  "slug": "paradojas-temporales",
+  "titulo": "El Laberinto de las Paradojas: 5 Desafíos de Lógica Cuántica",
+  "subtitulo": "Pon a prueba tu intuición con acertijos contraintuitivos y dilemas reales de la física y la filosofía.",
+  "descripcionCorta": "5 enigmas cerebrales de alto nivel sobre paradojas temporales, teoría de juegos y causalidad con pistas paso a paso.",
+  "tipo": "enigma",
+  "categoria": "logica",
+  "categoriaLabel": "Lógica & Paradojas",
+  "icono": "🌀",
+  "tiempoMin": 5,
+  "color": "#0284c7",
+  "enigmas": [
+    {
+      "id": "pt1",
+      "titulo": "Enigma 1: La Paradoja de la Información Sin Origen (Bootstrap Paradox)",
+      "planteamiento": "Un viajero temporal del año 2050 viaja al año 1600 y le entrega a William Shakespeare un ejemplar encuadernado de «Hamlet». Shakespeare, asombrado por la obra maestra, la copia a mano palabra por palabra y la estrena en Londres. Siglos después, ese mismo texto impreso se vende en las librerías hasta que en 2050 el viajero compra un ejemplar y viaja al pasado para entregárselo a Shakespeare.\n\nLa pregunta fundamental de causalidad es:\n**¿Quién compuso o ideó originalmente los versos de Hamlet?**",
+      "pistas": [
+        "Pista 1: Analiza el recorrido del libro: Shakespeare no lo compuso (lo copió del libro que le dieron), y el viajero tampoco lo escribió (lo compró en una librería porque Shakespeare ya lo había publicado).",
+        "Pista 2: Se trata de un bucle de información causal cerrada (Ontological Paradox / Bootstrap Paradox).",
+        "Pista 3: En un bucle causal cerrado, la información existe sin haber sido jamás generada por un acto creativo."
+      ],
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Shakespeare en una versión previa de la línea temporal antes de que el viajero interviniera.",
+          "correcta": false
+        },
+        {
+          "id": "b",
+          "texto": "Nadie: la información existe en un bucle cerrado autorreferencial sin punto de origen creativo.",
+          "correcta": true
+        },
+        {
+          "id": "c",
+          "texto": "El viajero temporal, pues fue quien tomó la decisión física de transportarlo.",
+          "correcta": false
+        },
+        {
+          "id": "d",
+          "texto": "La imprenta del año 2050 donde se fabricaron las hojas de papel.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Magistral deducción! Es la célebre **Paradoja del Bucle Ontológico (Bootstrap Paradox)**. Shakespeare sólo copió el libro del futuro, y el viajero sólo compró el libro del pasado. La información existe en el universo pero carece por completo de un creador original: un efecto que se convierte en su propia causa."
+    },
+    {
+      "id": "pt2",
+      "titulo": "Enigma 2: El Barbero de la Aldea y la Paradoja de Russell",
+      "planteamiento": "En una aldea medieval aislada rige una ley estricta dictada por el alcalde:\n\n*«El barbero afeita a todos los hombres de la aldea que NO se afeitan a sí mismos, y ÚNICAMENTE a ellos»*.\n\nEl barbero es un habitante varón de la aldea y cumple la ley al pie de la letra.\n\nLa pregunta del tribunal es: **¿Quién afeita al barbero?**",
+      "pistas": [
+        "Pista 1: Supón primero que el barbero se afeita a sí mismo. Si se afeita a sí mismo, ¿qué dice la ley sobre quién debe afeitarle?",
+        "Pista 2: Ahora supón lo contrario: que NO se afeita a sí mismo. ¿A quién tiene la obligación de afeitar el barbero según la orden?",
+        "Pista 3: Ambos caminos lógicos colapsan en una contradicción directa irresoluble bajo esa premisa."
+      ],
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Se afeita él mismo los domingos fuera de horario laboral.",
+          "correcta": false
+        },
+        {
+          "id": "b",
+          "texto": "Le afeita su aprendiz para esquivar el decreto.",
+          "correcta": false
+        },
+        {
+          "id": "c",
+          "texto": "Es una contradicción lógica estricta: tal barbero no puede existir matemáticamente bajo esa definición.",
+          "correcta": true
+        },
+        {
+          "id": "d",
+          "texto": "El barbero no tiene barba, por lo que la regla no le aplica.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Exacto! Bertrand Russell formuló esta paradoja en 1901 para demostrar una inconsistencia en la teoría ingenua de conjuntos. Si el barbero se afeita a sí mismo, viola la regla de que *sólo* afeita a quienes no se afeitan. Pero si no se afeita, la regla le *obliga* a afeitarse. La conclusión lógica irrefutable es que **un barbero con esa descripción no puede existir**."
+    },
+    {
+      "id": "pt3",
+      "titulo": "Enigma 3: El Reloj que Atrasaba Más Cuanto Más Corría",
+      "planteamiento": "Dos astronautas gemelos idénticos tienen 30 años. Uno de ellos sube a una nave espacial que viaja a 0.99c (99% de la velocidad de la luz) durante lo que para él parecen **5 años de viaje** según el cronómetro de a bordo.\n\nAl regresar a la Tierra y reunirse con su hermano gemelo que se quedó en la base terrestre, ¿qué descubren al comparar sus edades biológicas?",
+      "pistas": [
+        "Pista 1: Recuerda la teoría de la Relatividad Especial de Einstein sobre la dilatación temporal a velocidades relativistas.",
+        "Pista 2: Para el observador que se desplaza a velocidades cercanas a la de la luz, el tiempo transcurre mucho más lento respecto al observador en reposo.",
+        "Pista 3: El gemelo que viajó tiene 35 años (30 + 5). Pero en la Tierra han pasado varias décadas."
+      ],
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Ambos tienen exactamente la misma edad biológica de 35 años.",
+          "correcta": false
+        },
+        {
+          "id": "b",
+          "texto": "El gemelo viajero tiene 35 años, mientras que su hermano en la Tierra es un anciano de más de 65 años.",
+          "correcta": true
+        },
+        {
+          "id": "c",
+          "texto": "El gemelo de la Tierra ha rejuvenecido debido a la gravedad constante del planeta.",
+          "correcta": false
+        },
+        {
+          "id": "d",
+          "texto": "El gemelo viajero envejeció más rápido debido a la radiación cósmica del vacío.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Física pura confirmada experimentalmente! La **Paradoja de los Gemelos** de Einstein no es una ilusión óptica: a 99% de la velocidad de la luz, el factor de Lorentz dilata el tiempo aproximadamente por un factor de 7. Para el astronauta pasaron 5 años (ahora tiene 35 años), pero en la Tierra pasaron unos 35 años (su gemelo terrestre tiene 65 años)."
+    },
+    {
+      "id": "pt4",
+      "titulo": "Enigma 4: La Paradoja de los Cuervos de Hempel",
+      "planteamiento": "Un ornitólogo formula la siguiente hipótesis científica: **«Todos los cuervos son negros»**.\nEn lógica proposicional, esta afirmación es matemáticamente idéntica y equivalente a: **«Todo objeto que NO sea negro, NO es un cuervo»**.\n\nEl científico está en su despacho y ve sobre su mesa una **manzana verde**.\n\nSegún las reglas formales de la lógica inductiva, ¿observar esa manzana verde sirve como prueba que confirma que todos los cuervos son negros?",
+      "pistas": [
+        "Pista 1: Una manzana verde es un objeto 'no-negro' que a la vez es 'no-cuervo'.",
+        "Pista 2: Por equivalencia contrapositiva (A implica B es idéntico a No-B implica No-A), cualquier caso que confirme una premisa confirma la otra.",
+        "Pista 3: La paradoja radica en que teóricamente sí lo confirma, aunque en la práctica el incremento de probabilidad sea infinitesimalmente absurdo."
+      ],
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "No tiene ningún valor lógico; las manzanas no tienen plumas ni relación con las aves.",
+          "correcta": false
+        },
+        {
+          "id": "b",
+          "texto": "Sí, lógicamente aporta evidencia confirmatoria positiva a la hipótesis, aunque resulte intuitivamente ridículo.",
+          "correcta": true
+        },
+        {
+          "id": "c",
+          "texto": "Refuta la hipótesis porque introduce un color que no es negro en el conjunto del universo.",
+          "correcta": false
+        },
+        {
+          "id": "d",
+          "texto": "Solo sirve si la manzana verde fue picoteada previamente por un cuervo negro.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Brillante! Carl Hempel expuso esta paradoja para evidenciar los límites de la inducción lógica: como «Todos los cuervos son negros» equivale lógicamente a «Todo lo no-negro no es cuervo», observar un calcetín blanco o una manzana verde confirma formalmente la regla. Demuestra que la lógica pura a veces desafía el sentido común humano."
+    },
+    {
+      "id": "pt5",
+      "titulo": "Enigma 5: La Paradoja del Mentiroso Cuántico",
+      "planteamiento": "Un androide con inteligencia artificial avanzada entra en un bucle cognitivo y emite por sus altavoces una sola frase:\n\n**«Esta frase que estoy diciendo en este instante es COMPLETAMENTE FALSA»**.\n\nSi analizas la frase bajo la lógica binaria clásica de verdadero o falso, ¿cuál es el estado de verdad de la afirmación del androide?",
+      "pistas": [
+        "Pista 1: Si la frase es VERDADERA, entonces lo que afirma es cierto, por lo que debe ser FALSA (contradicción).",
+        "Pista 2: Si la frase es FALSA, entonces lo que afirma no se cumple, por lo que debe ser VERDADERA (contradicción).",
+        "Pista 3: Es la célebre Paradoja de Epiménides / Paradoja del Mentiroso, que llevó a Kurt Gödel a formular su Teorema de Incompletitud."
+      ],
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Es definitivamente Verdadera porque el androide tiene prohibido mentir por sus circuitos.",
+          "correcta": false
+        },
+        {
+          "id": "b",
+          "texto": "Es definitivamente Falsa porque las máquinas no poseen consciencia semántica.",
+          "correcta": false
+        },
+        {
+          "id": "c",
+          "texto": "Es indecidible: crea una oscilación infinita de verdad que rompe los sistemas axiomáticos tradicionales.",
+          "correcta": true
+        },
+        {
+          "id": "d",
+          "texto": "Es una metáfora poética sobre la fragilidad del silicio.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Correcto! La **Paradoja del Mentiroso** es el pilar sobre el que Kurt Gödel demostró en 1931 que en cualquier sistema formal matemático suficientemente rico siempre existirán proposiciones verdaderas que no pueden ser demostradas dentro del propio sistema. Una frase autorreferencial que revienta la lógica binaria."
+    }
+  ]
+}

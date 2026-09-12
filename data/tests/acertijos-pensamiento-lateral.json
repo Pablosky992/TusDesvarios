@@ -1,0 +1,183 @@
+{
+  "id": "acertijos-pensamiento-lateral",
+  "slug": "acertijos-pensamiento-lateral",
+  "titulo": "Desafío de Pensamiento Lateral: Acertijos que Rompen la Lógica Lineal",
+  "subtitulo": "6 enigmas desconcertantes donde la deducción evidente es siempre una trampa.",
+  "descripcionCorta": "Pon a prueba tu creatividad e intuición deductiva frente a paradojas situacionales con pistas progresivas y explicaciones reveladoras.",
+  "tipo": "enigma",
+  "categoria": "logica",
+  "categoriaLabel": "Lógica & Pensamiento Lateral",
+  "icono": "🧩",
+  "tiempoMin": 5,
+  "color": "#0ea5e9",
+  "enigmas": [
+    {
+      "id": "pl1",
+      "titulo": "Enigma 1: El Hombre del Rascacielos y los Días Lluviosos",
+      "planteamiento": "Un hombre vive en el **piso 20** de un lujoso edificio residencial.\n\nCada mañana toma el ascensor en el piso 20 y baja hasta la planta baja para ir a trabajar.\n\nPor la tarde, al regresar:\n- Si ha llovido o si hay más personas en el ascensor, sube directamente hasta el **piso 20**.\n- Si hace sol y sube completamente solo, viaja en ascensor hasta el **piso 10**, sale y sube los últimos 10 pisos **a pie por las escaleras**.\n\n¿Por qué hace esto si odia hacer ejercicio?",
+      "pistas": [
+        "Pista 1: El ascensor funciona a la perfección y no tiene restricciones horarias.",
+        "Pista 2: La lluvia no afecta a la maquinaria del edificio ni a su salud física.",
+        "Pista 3: ¿Qué lleva una persona en la mano los días de lluvia que no suele llevar los días soleados?"
+      ],
+      "opciones": [
+        {
+          "id": "claustro",
+          "texto": "Sufre de una fobia rara que solo se activa a partir del piso 10 si no hay testigos.",
+          "correcta": false
+        },
+        {
+          "id": "estatura",
+          "texto": "Es una persona de muy baja estatura (o un niño) y solo llega al botón 20 con el paraguas o si alguien se lo pulsa.",
+          "correcta": true
+        },
+        {
+          "id": "electricidad",
+          "texto": "El ascensor corta la energía a partir del piso 10 los días soleados por ahorro solar.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Brillante deducción lateral! El hombre tiene una estatura muy reducida (o padece enanismo). En el panel de la botonera, sus brazos solo alcanzan hasta el botón del **piso 10**. Si sube con otros vecinos, les pide amablemente que pulsen el 20. Si llueve, utiliza la punta alargada de su **paraguas** para pulsar el botón 20. Los días soleados y en soledad, no tiene cómo alcanzarlo y se ve obligado a caminar desde el 10."
+    },
+    {
+      "id": "pl2",
+      "titulo": "Enigma 2: El Contraseña Secreta en la Puerta del Castillo",
+      "planteamiento": "Un espía intenta infiltrarse en una fortaleza custodiada por centinelas. Para entrar se requiere una contraseña verbal. Se oculta tras un arbusto para escuchar el santo y seña:\n\n1. Llega un mercader. El centinela dice: *«OCHO»*, el mercader responde *«CUATRO»* y le permiten pasar.\n2. Llega un noble. El centinela dice: *«CATORCE»*, el noble responde *«SIETE»* y le permiten pasar.\n\nEl espía sonríe creyendo haber descubierto la regla matemática: basta con responder la mitad del número. Se acerca con paso firme. El guardia le dice: *«SEIS»*. El espía responde ufano: *«TRES»*.\n\nEl guardia desenvaina su espada y lo arresta de inmediato. ¿Cuál era la respuesta correcta y por qué?",
+      "pistas": [
+        "Pista 1: Olvídate de la aritmética (dividir entre dos fue una coincidencia calculada).",
+        "Pista 2: La regla tiene que ver con las palabras en sí mismas, no con su valor numérico.",
+        "Pista 3: Cuenta las letras de la palabra «O-C-H-O» y las letras de «C-A-T-O-R-C-E»."
+      ],
+      "opciones": [
+        {
+          "id": "cuatro",
+          "texto": "«CUATRO» (Porque la palabra 'SEIS' tiene 4 letras).",
+          "correcta": true
+        },
+        {
+          "id": "cero",
+          "texto": "«CERO» (Porque 6 menos 6 es la clave de equilibrio).",
+          "correcta": false
+        },
+        {
+          "id": "dos",
+          "texto": "«DOS» (Porque la serie numérica desciende en números pares).",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Magistral! El centinela no pedía la mitad matemática, sino el **número de letras de la palabra pronunciada**:\n- «O-C-H-O» tiene **4** letras.\n- «C-A-T-O-R-C-E» tiene **7** letras.\n- «S-E-I-S» tiene **4** letras.\nEl espía cayó en la trampa del sesgo de confirmación numérico y respondió «tres» en vez de **«cuatro»**."
+    },
+    {
+      "id": "pl3",
+      "titulo": "Enigma 3: La Cabaña Helada en la Ventisca",
+      "planteamiento": "Te encuentras atrapado en un refugio de montaña en mitad de una tormenta de nieve feroz. La temperatura está bajo cero y no tienes calefacción.\n\nEn la habitación hay tres cosas apagadas que podrían darte luz y calor:\n1. Una **lámpara de aceite de ballena**.\n2. Una **chimenea de leña seca** preparada con astillas.\n3. Una **vela de cera gruesa**.\n\nEn tu mano solo te queda **una única cerilla de madera**. ¿Qué debes encender primero?",
+      "pistas": [
+        "Pista 1: Analiza la secuencia física y literal de los acontecimientos.",
+        "Pista 2: Ninguno de los tres artefactos puede prenderse por combustión espontánea.",
+        "Pista 3: ¿Qué tiene que estar ardiendo antes de que cualquier otra cosa arda?"
+      ],
+      "opciones": [
+        {
+          "id": "vela",
+          "texto": "La vela, porque es la más fácil de transportar para prender lo demás.",
+          "correcta": false
+        },
+        {
+          "id": "cerilla",
+          "texto": "La cerilla.",
+          "correcta": true
+        },
+        {
+          "id": "chimenea",
+          "texto": "La chimenea, porque el frío te matará en minutos si no calientas la estancia.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Exacto! El cerebro humano tiende a saltar directamente a evaluar las opciones complejas (la vela, el aceite o la leña) olvidando el requisito físico inicial indispensable: **lo primero que tienes que encender es la cerilla**, sin la cual no podrás prender absolutamente nada más."
+    },
+    {
+      "id": "pl4",
+      "titulo": "Enigma 4: El Naufragio en el Desierto",
+      "planteamiento": "En mitad de las dunas interminables del desierto de Atacama, a más de 300 kilómetros de cualquier rastro de civilización o de agua, se encuentra el cadáver de un hombre.\n\n- Está desnudo y no tiene marcas de violencia ni mordeduras de serpiente.\n- En su mano derecha sostiene con fuerza **medio fósforo quemado**.\n- No hay huellas de pisadas en la arena a su alrededor.\n\n¿Cómo murió y qué significa el medio fósforo?",
+      "pistas": [
+        "Pista 1: El hombre no llegó caminando por tierra.",
+        "Pista 2: Viajaba acompañado en el aire.",
+        "Pista 3: El vehículo aéreo comenzó a perder altura de forma catastrófica y tiraron todo el lastre posible, incluida la ropa."
+      ],
+      "opciones": [
+        {
+          "id": "globo",
+          "texto": "Iba en un globo aerostático averiado; echaron a suertes con fósforos quién debía saltar para salvar a los demás.",
+          "correcta": true
+        },
+        {
+          "id": "avion",
+          "texto": "Cayó de un avión comercial tras intentar incendiar los motores de emergencia.",
+          "correcta": false
+        },
+        {
+          "id": "sol",
+          "texto": "Murió por insolación tras encender una fogata nocturna para pedir auxilio.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Impecable pensamiento lateral! El hombre viajaba en un **globo aerostático** con varios tripulantes. El globo sufrió una fuga y comenzó a precipitarse. Arrojaron todo el lastre posible (equipaje, provisiones y hasta su ropa), pero no fue suficiente. Al ver que se estrellarían todos, decidieron sacar pajitas partiendo un fósforo en dos: al hombre le tocó el fósforo corto/quemado y tuvo que sacrificarse saltando al vacío para que el resto sobreviviera."
+    },
+    {
+      "id": "pl5",
+      "titulo": "Enigma 5: La Extraña Paradoja de los Dos Gemelos",
+      "planteamiento": "Dos gemelos idénticos nacieron de la misma madre biológica en el mismo parto con apenas 20 minutos de diferencia.\n\nSin embargo, el gemelo que nació **más tarde cronológicamente** celebra su cumpleaños oficial dos días antes en el calendario legal civil que su hermano mayor.\n\n¿Cómo es esto posible sin que haya ningún error burocrático?",
+      "pistas": [
+        "Pista 1: El parto tuvo lugar en un medio de transporte en movimiento constante.",
+        "Pista 2: Involucra geografía planetaria y husos horarios.",
+        "Pista 3: Piensa en la Línea Internacional de Cambio de Fecha en el Océano Pacífico."
+      ],
+      "opciones": [
+        {
+          "id": "bisiesto",
+          "texto": "Uno nació el 28 de febrero y el otro el 29 en año bisiesto.",
+          "correcta": false
+        },
+        {
+          "id": "fecha",
+          "texto": "Nacieron en un barco cruzando la Línea Internacional de Cambio de Fecha de oeste a este en Nochevieja.",
+          "correcta": true
+        },
+        {
+          "id": "adopcion",
+          "texto": "Fueron adoptados por familias en hemisferios opuestos con estaciones invertidas.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Asombrosa deducción! El parto ocurrió a bordo de un barco o avión que cruzaba la **Línea Internacional de Cambio de Fecha** justo a medianoche del 31 de diciembre al 1 de enero. El primer gemelo nació a las 23:50 del 1 de marzo en el lado oeste; el barco cruzó la línea hacia el este (donde era todavía 28 de febrero), y 20 minutos después nació el segundo hermano. Legalmente, el menor nació en una fecha anterior en el calendario."
+    },
+    {
+      "id": "pl6",
+      "titulo": "Enigma 6: El Asesinato en la Habitación Cerrada",
+      "planteamiento": "Un hombre es hallado muerto ahorcado de una viga en el centro de una habitación completamente vacía y sellada por dentro:\n\n- Las ventanas están enrejadas y la puerta tiene el cerrojo echado desde el interior.\n- No hay mesas, sillas, escaleras ni muebles en toda la estancia.\n- Los pies del hombre cuelgan a **medio metro del suelo**.\n- Justo debajo de él hay un gran charco de agua limpia en el suelo.\n\n¿Cómo logró colgarse sin ningún apoyo donde subirse?",
+      "pistas": [
+        "Pista 1: El agua del suelo no vino de ninguna gotera ni tubería.",
+        "Pista 2: La materia cambia de estado físico con el tiempo y la temperatura.",
+        "Pista 3: ¿Qué objeto sólido y alto se transforma en un charco de agua líquida al cabo de unas horas?"
+      ],
+      "opciones": [
+        {
+          "id": "hielo",
+          "texto": "Se subió sobre un gran bloque de hielo que se derritió por completo tras su muerte.",
+          "correcta": true
+        },
+        {
+          "id": "cuerda",
+          "texto": "Saltó desde la ventana y la elasticidad de la soga lo impulsó hacia el centro.",
+          "correcta": false
+        },
+        {
+          "id": "inundacion",
+          "texto": "La habitación se inundó previamente y flotó hasta colocar la soga.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Un clásico inmortal del misterio deductivo! El hombre se subió a un **gran bloque de hielo macizo**. Una vez colocada y tensada la soga al cuello, la temperatura ambiente del cuarto derritió paulatinamente el bloque de hielo con el paso de las horas, dejando el cuerpo suspendido a medio metro y solo un inocente charco de agua en el suelo."
+    }
+  ]
+}

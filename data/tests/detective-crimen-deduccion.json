@@ -1,0 +1,183 @@
+{
+  "id": "detective-crimen-deduccion",
+  "slug": "detective-crimen-deduccion",
+  "titulo": "Gabinete de Crímenes: Desafío de Deducción Sherlockiana",
+  "subtitulo": "6 escenas del crimen con pistas sutiles, coartadas contradictorias y física forense.",
+  "descripcionCorta": "Asume el rol de detective jefe: analiza los escenarios criminales, detecta inconsistencias físicas y testimoniales y desenmascara la verdad oculta.",
+  "tipo": "enigma",
+  "categoria": "logica",
+  "categoriaLabel": "Misterio & Deducción",
+  "icono": "🔍",
+  "tiempoMin": 7,
+  "color": "#6366f1",
+  "enigmas": [
+    {
+      "id": "det1",
+      "titulo": "Caso 1: El Despacho Insonorizado y la Grabadora de Cinta",
+      "planteamiento": "Un acaudalado inversor aparece sin vida con un disparo en la cabeza en su despacho blindado e insonorizado. Sobre la mesa de caoba descansa una grabadora de cinta magnetofónica analógica.\n\nEl detective de guardia se acerca y pulsa el botón de reproducción (*Play*). Inmediatamente se oye la voz nítida de la víctima diciendo: *«No puedo soportar la bancarrota que se avecina... perdónenme todos, hasta siempre»*. Tras un segundo de silencio atronador, se escucha el disparo en la cinta y un golpe sordo.\n\nLa policía local da el caso por cerrado como suicidio trágico. Sin embargo, el detective jefe sacude la cabeza y afirma: *«Es un asesinato por encargo. El asesino cometió un error fatal con el dispositivo»*.\n\n¿Qué detalle irrefutable descarta el suicidio?",
+      "pistas": [
+        "Pista 1: El mecanismo de una grabadora analógica de casete no tiene funciones digitales automatizadas.",
+        "Pista 2: Reflexiona sobre qué ocurre físicamente con la persona inmediatamente después de apretar el gatillo.",
+        "Pista 3: ¿En qué posición estaba la cinta cuando el detective pulsó Play al llegar?"
+      ],
+      "opciones": [
+        {
+          "id": "polvora",
+          "texto": "Un disparo a corta distancia siempre impregna la cinta magnética de pólvora alterando el sonido.",
+          "correcta": false
+        },
+        {
+          "id": "rebobinar",
+          "texto": "Si se hubiera suicidado mientras grababa su última nota, el muerto jamás habría podido rebobinar la cinta hasta el inicio para que el detective la escuchara desde el principio.",
+          "correcta": true
+        },
+        {
+          "id": "acustica",
+          "texto": "En un despacho insonorizado la reverberación del disparo satura el micrófono y borra el audio.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Brillante ojo clínico! Si el magnate hubiera grabado su nota suicida en tiempo real y disparado, la cinta habría continuado corriendo hasta agotarse o se habría quedado parada justo al final del audio del disparo. Un cadáver no puede pulsar el botón de 'Rewind' para rebobinar la cinta hacia atrás y dejarla lista en el segundo cero. El asesino grabó o forzó la grabación, detuvo el casete, lo rebobinó torpemente para que sonara al entrar y se delató a sí mismo."
+    },
+    {
+      "id": "det2",
+      "titulo": "Caso 2: El Envenenamiento del Café con Hielo",
+      "planteamiento": "Dos socias de una firma millonaria acuden a una terraza en una tarde de calor abrasador. Piden dos vasos idénticos de café americano helado con abundantes cubitos de hielo, servidos a la vez desde la misma jarra.\n\n- La socia **Laura**, con una sed insaciable, bebe a gran velocidad y se termina casi todo su vaso en menos de 40 segundos, dejando los cubitos en el fondo.\n- La socia **Marta** bebe con exquisita lentitud, dando pequeños sorbos mientras conversa durante más de 45 minutos.\n\nAl cabo de una hora, Marta sufre convulsiones y fallece por una dosis letal de cianuro concentrado, mientras que Laura no muestra ni el más mínimo síntoma de intoxicación.\n\nSi ambos vasos eran idénticos y venían de la misma preparación, ¿cómo logró el asesino que solo muriera quien bebía despacio?",
+      "pistas": [
+        "Pista 1: El veneno no estaba untado en los bordes del vaso ni en las pajitas.",
+        "Pista 2: Ni Laura ni Marta tenían inmunidad biológica ni tomaron antídotos.",
+        "Pista 3: Considera el estado del hielo a los 40 segundos frente al hielo tras 45 minutos."
+      ],
+      "opciones": [
+        {
+          "id": "hielo",
+          "texto": "El veneno estaba congelado dentro de los cubitos de hielo: Laura bebió antes de que se descongelaran, mientras que en el vaso de Marta el hielo se derritió disolviendo el tóxico.",
+          "correcta": true
+        },
+        {
+          "id": "velocidad",
+          "texto": "El estómago metaboliza el cianuro como glucosa si se absorbe a un ritmo superior a 100 ml por minuto.",
+          "correcta": false
+        },
+        {
+          "id": "densidad",
+          "texto": "El cianuro flota en la superficie del café y Laura bebió desde el fondo con una pajita larga.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Precisión analítica impecable! El veneno fue introducido en el agua con la que se fabricaron los cubos de hielo. Cuando Laura bebió su café en apenas unos segundos, los cubos aún estaban sólidamente congelados y la sustancia tóxica no se había mezclado con el líquido. Marta, en cambio, permitió que el hielo se licuara lentamente durante tres cuartos de hora, transformando su bebida en un cóctel letalmente envenenado."
+    },
+    {
+      "id": "det3",
+      "titulo": "Caso 3: La Coartada del Coche Nevado",
+      "planteamiento": "Durante una gélida noche de tormenta, cae una nevada ininterrumpida y uniforme entre las **20:00 y las 23:00** horas. A las 21:30 se comete un audaz asalto a un banco en el centro de la ciudad.\n\nLa policía acude a medianoche a la solitaria casa rural del sospechoso principal, situada a 20 kilómetros de la ciudad. El sospechoso sale en bata y asegura con desdén: *«No he salido de casa en toda la tarde ni en toda la noche; estuve leyendo junto a la chimenea»*.\n\nEl detective se asoma al camino exterior y observa el automóvil del sospechoso:\n- El techo, el capó y las ventanillas están cubiertos por una gruesa capa de 12 cm de nieve.\n- El detective toca el capó y el motor está frío como el hielo.\n\nA pesar de la nieve acumulada y el motor frío, el detective lo esposa de inmediato: *«Ese coche estuvo rodando a las 21:30»*. ¿Qué delató al sospechoso?",
+      "pistas": [
+        "Pista 1: La nieve caía de forma completamente perpendicular sin ráfagas de viento lateral.",
+        "Pista 2: La superficie del camino es de grava rústica.",
+        "Pista 3: ¿Qué había exactamente debajo de los bajos y ruedas del vehículo en el suelo?"
+      ],
+      "opciones": [
+        {
+          "id": "suelo",
+          "texto": "En el suelo bajo el coche había nieve acumulada: si hubiera estado aparcado desde antes de las 20:00, el suelo bajo el chasis estaría completamente seco.",
+          "correcta": true
+        },
+        {
+          "id": "cristal",
+          "texto": "El parabrisas térmico deja un patrón de descongelación visible incluso 4 horas después de apagarse.",
+          "correcta": false
+        },
+        {
+          "id": "tubo",
+          "texto": "El tubo de escape siempre retiene hollín húmedo si ha circulado con temperaturas bajo cero.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Elemental deducción física! Si el automóvil hubiese estado estacionado en ese punto desde antes de que empezara a nevar a las 20:00, el chasis y la carrocería habrían actuado como un paraguas perfecto: el suelo de grava directamente debajo del coche estaría 100% seco y limpio. Si el suelo bajo el coche tenía nieve, significa que el vehículo llegó y aparcó cuando la nevada ya llevaba una hora o más cayendo con fuerza."
+    },
+    {
+      "id": "det4",
+      "titulo": "Caso 4: El Mensaje en el Espejo Empañado del Baño Turco",
+      "planteamiento": "Un anciano magnate es hallado sin vida en el jacuzzi de su spa privado, ahogado en agua templada. En el gigantesco espejo de la pared, completamente cubierto por una densa capa de vaho caliente, aparece escrito con el dedo de forma trémula: *«Mi sobrino Bruno me empujó»*.\n\nBruno era el heredero universal provisional, pero el anciano tenía cita con el notario a la mañana siguiente para desheredarlo en favor de una fundación benéfica. Parecía la prueba definitiva para encarcelar a Bruno.\n\nSin embargo, el perito criminalista inspecciona el espejo durante unos segundos y declara: *«Bruno no lo empujó; alguien asesinó al anciano y preparó este mensaje falso antes del crimen para culpar al sobrino»*.\n\n¿Por qué el mensaje en el vaho delató la manipulación previa?",
+      "pistas": [
+        "Pista 1: ¿Qué le sucede al vaho de agua caliente cuando deslizas un dedo mojado sobre él?",
+        "Pista 2: La tensión superficial del agua y la condensación crean un efecto muy diferente si el cristal está frío y seco o si ya está lleno de vapor.",
+        "Pista 3: ¿Cómo permanecen las letras escritas en un cristal seco cuando posteriormente sube la humedad?"
+      ],
+      "opciones": [
+        {
+          "id": "vaho_goteo",
+          "texto": "Escribir sobre un espejo ya empañado hace que las gotas resbalen en chorretones verticales deformando las letras; solo cuando se escribe en seco con la grasa del dedo las letras aparecen nítidas al subir el vapor después.",
+          "correcta": true
+        },
+        {
+          "id": "altura",
+          "texto": "Los espejos de baño turco se empañan de abajo hacia arriba impidiendo escribir a la altura de los ojos.",
+          "correcta": false
+        },
+        {
+          "id": "huella",
+          "texto": "El agua caliente borra de inmediato los aminoácidos de las huellas dactilares impidiendo todo trazo.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Magistral apreciación de la física de fluidos! Si una persona al borde de la muerte escribe sobre un espejo que YA está empañado por vapor hirviente, el dedo arrastra el exceso de condensado y produce regueros de agua verticales que distorsionan y borran las letras. En cambio, si alguien escribe con el dedo sobre el cristal limpio, frío y seco horas antes, la grasa natural de la piel altera la condensación superficial: cuando el spa se enciende y el vapor sube, el texto 'invisible' se revela con una nitidez perfecta. Fue una trampa orquestada con antelación."
+    },
+    {
+      "id": "det5",
+      "titulo": "Caso 5: La Balística Inversa de la Ventana del Jardín",
+      "planteamiento": "En una lujosa villa de campo, el dueño de una galería de arte aparece desplomado en su sillón frente a la biblioteca con un impacto de bala en el pecho. En el centro del gran ventanal acristalado que da a un oscuro jardín trasero, hay un orificio de bala limpio.\n\nEl mayordomo testifica que vio una sombra entre los arbustos del jardín exterior, oyó una detonación y vio cómo el vidrio saltaba en pedazos cuando el asesino disparó desde fuera hacia el interior.\n\nEl detective forense no busca huellas ni casquillos: se agacha, examina el borde del orificio en el cristal y la dispersión de las astillas de vidrio en el suelo. Sin titubear, ordena la detención del mayordomo por falso testimonio y encubrimiento:\n*«La bala jamás entró desde el jardín. El disparo se hizo desde DENTRO de esta habitación hacia el exterior»*.\n\n¿Qué principio físico de la fractura del vidrio reveló la dirección del proyectil?",
+      "pistas": [
+        "Pista 1: Las balas a alta velocidad provocan una rotura asimétrica en láminas de vidrio plano.",
+        "Pista 2: La fuerza de compresión y cizallamiento genera una forma geométrica específica en el orificio.",
+        "Pista 3: Compara el diámetro y forma del orificio en la cara de impacto frente a la cara de salida."
+      ],
+      "opciones": [
+        {
+          "id": "temperatura",
+          "texto": "El calor de la bala funde los bordes del vidrio en el lado donde se originó el disparo.",
+          "correcta": false
+        },
+        {
+          "id": "cono_crater",
+          "texto": "Un impacto de bala crea un cráter cónico cuya base más ancha y la gran mayoría de esquirlas se proyectan siempre en la cara de salida (en este caso, hacia el césped exterior del jardín).",
+          "correcta": true
+        },
+        {
+          "id": "polvora_cristal",
+          "texto": "La onda expansiva sónica empuja el marco de la ventana en ángulo obtuso hacia el tirador.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Deducción forense de libro! En balística de impacto en vidrio, el lado por donde PENETRA el proyectil presenta un orificio cilíndrico limpio y de menor diámetro. Al atravesarlo, la onda de presión expulsa una masa cónica de material hacia adelante, formando un cráter en bisel mucho más ancho en la cara de SALIDA, donde cae la gran mayoría de las esquirlas. Al hallarse el cráter cónico y las astillas en el exterior de la casa sobre el césped, la bala viajó indiscutiblemente de adentro hacia afuera."
+    },
+    {
+      "id": "det6",
+      "titulo": "Caso 6: La Mentira del Testigo Ocular Nocturno",
+      "planteamiento": "A las 03:15 de una noche cerrada y sin luna, un disparo acaba con un transeúnte en una callejuela mal iluminada de la ciudad. A la mañana siguiente, la inquilina del primer piso de la finca contigua presta declaración solemne:\n\n*«Estaba profundamente dormida en mi dormitorio cuando escuché gritos en la calle. Me asusté, encendí de inmediato la lámpara del techo de mi habitación, corrí hacia la ventana cerrada y miré fijamente hacia la calle en penumbra. Vi a un hombre con una cazadora roja brillante y una cicatriz profunda en la mejilla derecha empuñar el arma y huir hacia el callejón»*.\n\nEl inspector deja su libreta sobre la mesa y le dice con una sonrisa severa:\n*«Señora, inventó esa descripción al milímetro. Usted no pudo ver el rostro ni la ropa de nadie desde esa ventana con su lámpara encendida»*.\n\n¿Por qué el inspector supo al instante que mentía?",
+      "pistas": [
+        "Pista 1: Leyes de reflexión y refracción en superficies transparentes con distinto nivel lumínico a cada lado.",
+        "Pista 2: Piensa en lo que experimentas tú mismo de noche cuando enciendes la luz de tu salón y miras a la ventana.",
+        "Pista 3: ¿Qué refleja el cristal cuando dentro hay mucha luz y fuera reina la oscuridad?"
+      ],
+      "opciones": [
+        {
+          "id": "iluminacion_espejo",
+          "texto": "Al encender la potente luz de su dormitorio estando el exterior en completa oscuridad, el cristal de la ventana actúa como un espejo reflector: solo podía ver el reflejo de su propia habitación, siendo incapaz de ver el exterior.",
+          "correcta": true
+        },
+        {
+          "id": "pupila",
+          "texto": "La luz artificial quema temporalmente los bastones de la retina impidiendo ver tonos rojos durante 15 minutos.",
+          "correcta": false
+        },
+        {
+          "id": "angulo",
+          "texto": "Desde un primer piso el ángulo de declinación visual oculta el 80% de la acera si la ventana está cerrada.",
+          "correcta": false
+        }
+      ],
+      "explicacion": "¡Fenómeno óptico elemental! Cuando el interior de un recinto está vivamente iluminado y el exterior está oscuro, la cantidad de luz que se refleja en la superficie del cristal hacia adentro es cientos de veces más intensa que la escasa luz que ingresa desde el exterior. El cristal se transforma en un espejo casi perfecto de la habitación. Salvo que hubiera apagado la luz o pegado el rostro al vidrio cubriendo toda iluminación con las manos, era ópticamente imposible distinguir colores o rasgos en la calle oscura."
+    }
+  ]
+}
