@@ -21,6 +21,7 @@ import {
   PrediccionOraculo,
   LeyItem,
   PensamientoItem,
+  ChisteItem,
 } from '@/lib/humor';
 
 interface HumorHubProps {
@@ -31,9 +32,10 @@ interface HumorHubProps {
   prediccionesOraculo: PrediccionOraculo[];
   leyes: LeyItem[];
   pensamientos: PensamientoItem[];
+  chistes?: ChisteItem[];
 }
 
-type MachineTab = 'excusas' | 'oraculo' | 'leyes' | 'pensamientos';
+type MachineTab = 'excusas' | 'chistes' | 'oraculo' | 'leyes' | 'pensamientos';
 
 export default function HumorHub({
   ambitos,
@@ -43,6 +45,7 @@ export default function HumorHub({
   prediccionesOraculo,
   leyes,
   pensamientos,
+  chistes = [],
 }: HumorHubProps) {
   // Main Tab Navigation
   const [activeTab, setActiveTab] = useState<MachineTab>('excusas');
@@ -189,6 +192,47 @@ export default function HumorHub({
     setTimeout(() => setCopiedThought(false), 2000);
   };
 
+  // ─── 5. CHISTES DEL DESVARÍO STATE ───────────────────────────
+  const [selectedChisteCategoria, setSelectedChisteCategoria] = useState<string>('todas');
+  const [isGeneratingChiste, setIsGeneratingChiste] = useState<boolean>(false);
+  const [hasGeneratedChiste, setHasGeneratedChiste] = useState<boolean>(false);
+  const [currentChisteIdx, setCurrentChisteIdx] = useState<number>(0);
+  const [copiedChiste, setCopiedChiste] = useState<boolean>(false);
+
+  const chisteCategorias = [
+    { id: 'todas', label: 'Todos los Chistes', icono: '🃏', color: '#f43f5e' },
+    { id: 'friqui', label: 'Friqui & Ciencia', icono: '🔬', color: '#06b6d4' },
+    { id: 'palabras', label: 'Juegos de Palabras', icono: '✨', color: '#f59e0b' },
+    { id: 'absurdo', label: 'Humor Absurdo', icono: '🦆', color: '#ec4899' },
+    { id: 'cotidiano', label: 'Sátira Cotidiana', icono: '☕', color: '#10b981' },
+    { id: 'filosofico', label: 'Filosofía del Desvarío', icono: '🌌', color: '#a855f7' },
+  ];
+
+  const poolChistes = selectedChisteCategoria === 'todas'
+    ? chistes
+    : chistes.filter((c) => c.categoria === selectedChisteCategoria);
+
+  const safeChistes = poolChistes.length > 0 ? poolChistes : chistes;
+  const activeChiste = safeChistes[currentChisteIdx % safeChistes.length] || chistes[0];
+
+  const handleRevelarChiste = () => {
+    setIsGeneratingChiste(true);
+    setTimeout(() => {
+      const next = Math.floor(Math.random() * safeChistes.length);
+      setCurrentChisteIdx(next === currentChisteIdx ? (next + 1) % safeChistes.length : next);
+      setHasGeneratedChiste(true);
+      setIsGeneratingChiste(false);
+    }, 280);
+  };
+
+  const handleCopyChiste = () => {
+    if (!activeChiste) return;
+    const textToCopy = `🃏 ${activeChiste.titulo}\n\n${activeChiste.planteamiento}\n\n👉 ${activeChiste.remate}\n\n(Vía Tus Desvaríos - tusdesvarios.com/desvarios-de-humor)`;
+    navigator.clipboard.writeText(textToCopy);
+    setCopiedChiste(true);
+    setTimeout(() => setCopiedChiste(false), 2000);
+  };
+
   return (
     <div className="home-container" style={{ maxWidth: '1220px', padding: '0 1.25rem 4rem' }}>
       {/* ─── Hero Header ─────────────────────────────────────────── */}
@@ -228,6 +272,7 @@ export default function HumorHub({
         >
           {[
             { id: 'excusas', label: 'Máquina de Excusas', icon: '🎩', color: '#ec4899' },
+            { id: 'chistes', label: 'Chistes del Desvarío', icon: '🃏', color: '#f43f5e' },
             { id: 'oraculo', label: 'Oráculo del Desvarío', icon: '🔮', color: '#a855f7' },
             { id: 'leyes', label: 'Leyes del Caos', icon: '📜', color: '#f59e0b' },
             { id: 'pensamientos', label: 'Pensamientos de Ducha', icon: '🚿', color: '#10b981' },
@@ -974,6 +1019,249 @@ export default function HumorHub({
         </section>
       )}
 
+      {/* ─── 5. CHISTES DEL DESVARÍO MACHINE ─────────────────────────── */}
+      {activeTab === 'chistes' && (
+        <section
+          style={{
+            marginTop: '1.25rem',
+            padding: '3.5rem 2.5rem',
+            background: 'linear-gradient(180deg, rgba(38, 12, 22, 0.95) 0%, rgba(18, 12, 24, 0.98) 100%)',
+            border: '2px solid rgba(244, 63, 94, 0.55)',
+            borderRadius: 'var(--radius-lg)',
+            boxShadow: '0 16px 50px rgba(0,0,0,0.65), 0 0 45px rgba(244,63,94,0.25)',
+            textAlign: 'center',
+          }}
+        >
+          {/* Joker Emblem */}
+          <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '88px', height: '88px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(244, 63, 94, 0.4) 0%, rgba(244, 63, 94, 0.05) 70%)', border: '2px solid rgba(244, 63, 94, 0.7)', boxShadow: '0 0 35px rgba(244,63,94,0.5)', marginBottom: '1.5rem' }}>
+            <span style={{ fontSize: '3rem' }}>🃏</span>
+          </div>
+
+          <h2 style={{ fontSize: '2.1rem', fontWeight: 900, color: '#ffffff', marginBottom: '0.65rem', textShadow: '0 0 30px rgba(244,63,94,0.5)', letterSpacing: '-0.01em' }}>
+            Chistes del Desvarío & Humor Absurdo
+          </h2>
+          <p style={{ fontSize: '1.12rem', color: '#cbd5e1', maxWidth: '750px', margin: '0 auto 2rem', lineHeight: 1.7 }}>
+            Una selecta dosis de humor inteligente, ciencia friqui, juegos de palabras y comedia cotidiana. Filtra por categoría o pulsa el botón para revelar un chiste aleatorio que reiniciará tus neuronas.
+          </p>
+
+          {/* Category Filter Pills */}
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '0.55rem',
+              marginBottom: '2.25rem',
+              maxWidth: '850px',
+              margin: '0 auto 2.25rem',
+            }}
+          >
+            {chisteCategorias.map((cat) => {
+              const isSelected = selectedChisteCategoria === cat.id;
+              const count = cat.id === 'todas'
+                ? chistes.length
+                : chistes.filter((c) => c.categoria === cat.id).length;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => {
+                    setSelectedChisteCategoria(cat.id);
+                    setCurrentChisteIdx(0);
+                  }}
+                  style={{
+                    padding: '0.5rem 1.1rem',
+                    borderRadius: 'var(--radius-full)',
+                    border: `1.5px solid ${isSelected ? cat.color : 'rgba(255,255,255,0.12)'}`,
+                    background: isSelected ? `${cat.color}25` : 'rgba(255,255,255,0.03)',
+                    color: isSelected ? '#ffffff' : 'var(--text-secondary)',
+                    fontWeight: isSelected ? 700 : 500,
+                    fontSize: '0.9rem',
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.45rem',
+                    boxShadow: isSelected ? `0 0 16px ${cat.color}40` : 'none',
+                    transition: 'all 0.18s ease',
+                  }}
+                >
+                  <span>{cat.icono}</span>
+                  <span>{cat.label}</span>
+                  <span style={{ fontSize: '0.78rem', opacity: 0.75, marginLeft: '0.2rem' }}>({count})</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* MAIN GENERATE CHISTE BUTTON */}
+          <div style={{ marginBottom: '2.75rem' }}>
+            <button
+              onClick={handleRevelarChiste}
+              className="btn-primary"
+              disabled={isGeneratingChiste}
+              style={{
+                fontSize: '1.2rem',
+                padding: '1rem 3rem',
+                background: 'linear-gradient(135deg, #f43f5e 0%, #be123c 100%)',
+                boxShadow: '0 8px 35px rgba(244, 63, 94, 0.65)',
+                cursor: isGeneratingChiste ? 'wait' : 'pointer',
+                borderRadius: 'var(--radius-full)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                border: 'none',
+                fontWeight: 800,
+                color: '#ffffff',
+              }}
+            >
+              <Sparkles size={22} />
+              <span>{isGeneratingChiste ? 'Barajando Chistes...' : '🃏 Revelar Chiste Aleatorio'}</span>
+            </button>
+          </div>
+
+          {/* Direct Chiste Output Card */}
+          {hasGeneratedChiste && activeChiste && (
+            <div
+              style={{
+                padding: '2.75rem 2.5rem',
+                background: 'rgba(15, 12, 22, 0.96)',
+                border: `2px solid ${activeChiste.color || '#f43f5e'}80`,
+                borderRadius: 'var(--radius-lg)',
+                boxShadow: `0 16px 50px rgba(0,0,0,0.7), 0 0 35px ${activeChiste.color || '#f43f5e'}30`,
+                textAlign: 'left',
+                animation: 'fadeIn 0.3s ease',
+                maxWidth: '960px',
+                margin: '0 auto',
+              }}
+            >
+              {/* Header Badge & Category */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.85rem', marginBottom: '1.5rem', paddingBottom: '1.15rem', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <span style={{ fontSize: '1.8rem' }}>{activeChiste.icono || '🃏'}</span>
+                  <span
+                    style={{
+                      fontSize: '0.9rem',
+                      fontWeight: 900,
+                      color: activeChiste.color || '#f43f5e',
+                      background: `${activeChiste.color || '#f43f5e'}22`,
+                      border: `1px solid ${activeChiste.color || '#f43f5e'}50`,
+                      padding: '0.3rem 0.85rem',
+                      borderRadius: 'var(--radius-full)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em',
+                    }}
+                  >
+                    {activeChiste.categoriaLabel}
+                  </span>
+                </div>
+                <div style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: 700 }}>
+                  Chiste {(currentChisteIdx % safeChistes.length) + 1} de {safeChistes.length}
+                </div>
+              </div>
+
+              {/* Chiste Title */}
+              <h3 style={{ fontSize: '1.65rem', fontWeight: 900, color: '#ffffff', marginBottom: '1.25rem', lineHeight: 1.4 }}>
+                {activeChiste.titulo}
+              </h3>
+
+              {/* Planteamiento */}
+              <div
+                style={{
+                  fontSize: '1.2rem',
+                  color: '#e2e8f0',
+                  lineHeight: 1.8,
+                  marginBottom: '1.5rem',
+                  padding: '1.1rem 1.4rem',
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  borderRadius: 'var(--radius-sm)',
+                  borderLeft: `4px solid ${activeChiste.color || '#f43f5e'}`,
+                }}
+              >
+                {activeChiste.planteamiento}
+              </div>
+
+              {/* Remate (Punchline) */}
+              <div
+                style={{
+                  padding: '1.35rem 1.65rem',
+                  background: `linear-gradient(135deg, ${activeChiste.color || '#f43f5e'}18 0%, rgba(20, 15, 28, 0.85) 100%)`,
+                  border: `2px solid ${activeChiste.color || '#f43f5e'}`,
+                  borderRadius: 'var(--radius-md)',
+                  boxShadow: `0 0 25px ${activeChiste.color || '#f43f5e'}25`,
+                  marginBottom: '2rem',
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: '0.85rem',
+                    fontWeight: 900,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    color: activeChiste.color || '#fb7185',
+                    marginBottom: '0.45rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                  }}
+                >
+                  <span>⚡</span> <span>Remate del Desvarío</span>
+                </div>
+                <p
+                  style={{
+                    fontSize: '1.3rem',
+                    fontWeight: 800,
+                    color: '#ffffff',
+                    lineHeight: 1.6,
+                    margin: 0,
+                  }}
+                >
+                  {activeChiste.remate}
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', flexWrap: 'wrap', gap: '0.85rem' }}>
+                <button
+                  onClick={handleRevelarChiste}
+                  className="btn-secondary"
+                  style={{ fontSize: '0.95rem', padding: '0.65rem 1.25rem' }}
+                >
+                  <RefreshCw size={16} />
+                  <span>🔄 Otro Chiste</span>
+                </button>
+
+                <button
+                  onClick={handleCopyChiste}
+                  className="btn-primary"
+                  style={{
+                    background: copiedChiste
+                      ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
+                      : 'linear-gradient(135deg, #f43f5e 0%, #be123c 100%)',
+                    boxShadow: copiedChiste
+                      ? '0 6px 20px rgba(16, 185, 129, 0.5)'
+                      : '0 6px 25px rgba(244, 63, 94, 0.6)',
+                    fontSize: '0.95rem',
+                    padding: '0.65rem 1.45rem',
+                    color: '#ffffff',
+                  }}
+                >
+                  {copiedChiste ? <Check size={17} /> : <Copy size={17} />}
+                  <span>{copiedChiste ? '¡Chiste Copiado!' : 'Copiar Chiste'}</span>
+                </button>
+              </div>
+            </div>
+          )}
+
+          {!hasGeneratedChiste && (
+            <div style={{ textAlign: 'center', padding: '3rem 2rem', background: 'rgba(255,255,255,0.02)', border: '2px dashed rgba(244,63,94,0.35)', borderRadius: 'var(--radius-md)', maxWidth: '720px', margin: '0 auto' }}>
+              <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '0.75rem' }}>🃏</span>
+              <p style={{ fontSize: '1.08rem', color: 'var(--text-secondary)', margin: 0, lineHeight: 1.6 }}>
+                Pulsa <strong>&ldquo;Revelar Chiste Aleatorio&rdquo;</strong> arriba para desatar una dosis inmediata de comedia y carcajadas inteligentes.
+              </p>
+            </div>
+          )}
+        </section>
+      )}
+
       {/* ═══════════════════════════════════════════════════════════
           SECCIÓN EDITORIAL SEO & GUÍA DE SÁTIRA COTIDIANA
       ═══════════════════════════════════════════════════════════ */}
@@ -1112,6 +1400,31 @@ export default function HumorHub({
             </h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
               Reflexiones lúcidas y verdades incómodas generadas en el único templo de paz mental que le queda a la humanidad contemporánea: la ducha de agua caliente.
+            </p>
+          </div>
+
+          <div
+            style={{
+              padding: '1.35rem',
+              background: 'rgba(255,255,255,0.03)',
+              borderRadius: 'var(--radius-md)',
+              border: '1px solid rgba(244,63,94,0.25)',
+            }}
+          >
+            <div style={{ fontSize: '1.6rem', marginBottom: '0.5rem' }}>🃏</div>
+            <h3
+              style={{
+                fontSize: '1.1rem',
+                fontWeight: 700,
+                color: '#fb7185',
+                marginBottom: '0.45rem',
+                fontFamily: 'var(--font-display, Cinzel, serif)',
+              }}
+            >
+              Chistes del Desvarío
+            </h3>
+            <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.55 }}>
+              Repertorio exclusivo de más de 60 chistes clasificados en ciencia friqui, juegos de palabras, absurdo cósmico, sátira cotidiana y filosofía cómica para compartir o reír sin culpa.
             </p>
           </div>
         </div>

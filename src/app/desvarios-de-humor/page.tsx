@@ -8,14 +8,19 @@ import {
   getPrediccionesOraculo,
   getLeyes,
   getPensamientos,
+  getChistes,
 } from '@/lib/humor';
 
 export const metadata: Metadata = {
-  title: 'Desvaríos de Humor & Caos — Generador de Excusas, Oráculo y Pensamientos de Ducha | Tus Desvaríos',
+  title: 'Desvaríos de Humor & Caos — Generador de Excusas, Chistes, Oráculo y Pensamientos de Ducha | Tus Desvaríos',
   description:
-    'Consola interactiva de sátira y humor cotidiano: Generador de excusas infalibles con medidor de verosimilitud, Oráculo del Desvarío, Leyes del Caos y Pensamientos de Ducha. ¡Coartadas creíbles y reflexiones cómicas!',
+    'Consola interactiva de sátira y humor cotidiano: Generador de excusas infalibles con medidor de verosimilitud, Chistes del Desvarío, Oráculo, Leyes del Caos y Pensamientos de Ducha. ¡Coartadas creíbles y risas aseguradas!',
   keywords: [
     'desvarios de humor',
+    'chistes del desvario',
+    'generador de chistes',
+    'chistes graciosos e inteligentes',
+    'chistes friquis',
     'generador de excusas',
     'excusas creibles para faltar al trabajo',
     'coartadas online',
@@ -32,9 +37,9 @@ export const metadata: Metadata = {
     canonical: 'https://tusdesvarios.com/desvarios-de-humor',
   },
   openGraph: {
-    title: 'Desvaríos de Humor & Caos — Generador de Excusas y Consola del Absurdo',
+    title: 'Desvaríos de Humor & Caos — Generador de Excusas, Chistes y Consola del Absurdo',
     description:
-      'Calcula coartadas perfectas con medidor de verosimilitud, consulta el oráculo cósmico y explora las leyes del caos cotidiano.',
+      'Calcula coartadas perfectas con medidor de verosimilitud, revela chistes aleatorios ingeniosos, consulta el oráculo cósmico y explora las leyes del caos cotidiano.',
     url: 'https://tusdesvarios.com/desvarios-de-humor',
     siteName: 'Tus Desvaríos',
     locale: 'es_ES',
@@ -50,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Desvaríos de Humor & Caos — Generador de Excusas y Sátira',
+    title: 'Desvaríos de Humor & Caos — Generador de Excusas, Chistes y Sátira',
     description:
-      'Generador interactivo de excusas, oráculo cósmico y leyes de Murphy. 100% interactivo y gratuito en tu navegador.',
+      'Generador interactivo de excusas, chistes aleatorios, oráculo cósmico y leyes de Murphy. 100% interactivo y gratuito en tu navegador.',
     images: ['/images/categories/desvarios-humor.jpg'],
   },
 };
@@ -65,6 +70,7 @@ export default function DesvariosDeHumorPage() {
   const prediccionesOraculo = getPrediccionesOraculo();
   const leyes = getLeyes();
   const pensamientos = getPensamientos();
+  const chistes = getChistes();
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -174,6 +180,7 @@ export default function DesvariosDeHumorPage() {
         prediccionesOraculo={prediccionesOraculo}
         leyes={leyes}
         pensamientos={pensamientos}
+        chistes={chistes}
       />
     </>
   );

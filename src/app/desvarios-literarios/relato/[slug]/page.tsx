@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getAllRelatos, getRelatoBySlug } from '@/lib/literarios';
+import { getAllRelatos, getRelatoBySlug, getRelatoImage } from '@/lib/literarios';
 import ReaderClient from './ReaderClient';
 
 interface PageProps {
@@ -27,11 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  let imageName = 'el-susurro-relojes.jpg';
-  if (relato.slug === 'el-ultimo-eco-de-andromeda') imageName = 'el-ultimo-eco-andromeda.jpg';
-  if (relato.slug === 'la-taberna-del-cuervo-ciego') imageName = 'la-taberna-cuervo-ciego.jpg';
-  if (relato.slug === 'el-coleccionista-de-silencios') imageName = 'el-coleccionista-silencios.jpg';
-  if (relato.slug === 'microrrelatos-de-impacto') imageName = 'microrrelatos-impacto.jpg';
+  const imageName = getRelatoImage(relato);
 
   return {
     title: `${relato.titulo} — Desvaríos Literarios | Tus Desvaríos`,

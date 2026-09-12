@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Relato } from '@/lib/literarios';
+import type { Relato } from '@/lib/literarios';
+import { getRelatoImage } from '@/lib/literariosUtils';
 import { ArrowRight, Clock, Dices, Feather } from 'lucide-react';
 
 const CATEGORIES = [
@@ -297,11 +298,7 @@ export default function LiterariosClient({ relatos }: { relatos: Relato[] }) {
         }}
       >
         {filteredRelatos.map((r) => {
-          let imageName = 'el-susurro-relojes.jpg';
-          if (r.slug === 'el-ultimo-eco-de-andromeda') imageName = 'el-ultimo-eco-andromeda.jpg';
-          if (r.slug === 'la-taberna-del-cuervo-ciego') imageName = 'la-taberna-cuervo-ciego.jpg';
-          if (r.slug === 'el-coleccionista-de-silencios') imageName = 'el-coleccionista-silencios.jpg';
-          if (r.slug === 'microrrelatos-de-impacto') imageName = 'microrrelatos-impacto.jpg';
+          const imageName = getRelatoImage(r);
 
           const isRead = readSlugs.includes(r.slug);
 

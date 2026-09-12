@@ -14,10 +14,13 @@ export interface Relato {
   palabras: number;
   descripcionCorta: string;
   fecha: string;
+  imagen?: string;
   citasDestacadas: string[];
   etiquetas: string[];
   contenido: string;
 }
+
+export * from './literariosUtils';
 
 const dataFilePath = path.join(process.cwd(), 'data', 'literarios', 'relatos.json');
 

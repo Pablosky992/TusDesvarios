@@ -2,6 +2,7 @@ import excusasData from '@/../data/humor/excusas.json';
 import oraculoData from '@/../data/humor/oraculo.json';
 import leyesData from '@/../data/humor/leyes.json';
 import pildorasData from '@/../data/humor/pildoras.json';
+import chistesData from '@/../data/humor/chistes.json';
 
 // --- 1. Excusas ---
 export interface AmbitoExcusa {
@@ -66,6 +67,18 @@ export interface PensamientoItem {
   autor: string;
 }
 
+// --- 5. Chistes del Desvarío ---
+export interface ChisteItem {
+  id: string;
+  categoria: string;
+  categoriaLabel: string;
+  icono: string;
+  color: string;
+  titulo: string;
+  planteamiento: string;
+  remate: string;
+}
+
 // Getters
 export function getAmbitos(): AmbitoExcusa[] {
   return excusasData.ambitos;
@@ -93,4 +106,8 @@ export function getLeyes(): LeyItem[] {
 
 export function getPensamientos(): PensamientoItem[] {
   return (pildorasData as { pensamientos: PensamientoItem[] }).pensamientos;
+}
+
+export function getChistes(): ChisteItem[] {
+  return (chistesData as { chistes: ChisteItem[] }).chistes;
 }
